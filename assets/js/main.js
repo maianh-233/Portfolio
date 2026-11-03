@@ -52,6 +52,20 @@
     });
   });
 
+  /* ---------------- Mobile menu ---------------- */
+  const nav = $('.nav'), menuBtn = $('#menu-toggle');
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menuBtn.innerHTML = `<i class="ph ph-${open ? 'x' : 'list'}" aria-hidden="true"></i>`;
+  }
+  menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
+  $('#nav-links').addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); menuBtn.focus(); } });
+  document.addEventListener('click', e => { if (!nav.contains(e.target)) setMenu(false); });
+  matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
   /* ---------------- Text scramble (decodes mono labels into place) ---------------- */
   const GLYPHS = '<>/\{}[]=+*#_01';
   function scramble(el, text = el.dataset.text || el.textContent, dur = 700) {
@@ -355,7 +369,8 @@
         y: 0, scale: 1, opacity: 1, duration: 1.2, ease: 'expo.out', clearProps: 'transform,opacity',
         scrollTrigger: { trigger: card, start: 'top 85%', once: true },
       });
-      gsap.fromTo(card.querySelector('.proj__media'), { y: 50 }, {
+      // Parallax only once text and media sit side by side; stacked, it pushes the video into the text.
+      if (innerWidth > 1024) gsap.fromTo(card.querySelector('.proj__media'), { y: 50 }, {
         y: -50, ease: 'none',
         scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: .5 },
       });

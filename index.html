@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Đỗ Mai Anh · Frontend &amp; Fullstack Developer</title>
-  <meta name="description" content="Đỗ Mai Anh, frontend and fullstack developer. React 19 and Spring Boot fashion platform, 79 shipped website themes, and an AI tool that builds websites from an SRS.">
+  <meta name="description" content="Đỗ Mai Anh, frontend and fullstack developer. React 19 and Spring Boot fashion platform, and Layout_Agent, an AI agent I built that turned 79 real client briefs into websites.">
   <meta name="theme-color" content="#f2f2ef" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f0f11" media="(prefers-color-scheme: dark)">
   <script>
@@ -27,7 +27,7 @@
     <a class="brand" href="#top" aria-label="Đỗ Mai Anh, back to top">
       <span class="brand__mark">MA</span><span class="brand__name">Đỗ Mai Anh</span>
     </a>
-    <nav class="nav__links" aria-label="Main">
+    <nav class="nav__links" id="nav-links" aria-label="Main">
       <a href="#experience"><span class="roll"><span>Experience</span></span></a>
       <a href="#work"><span class="roll"><span>Work</span></span></a>
       <a href="#themes"><span class="roll"><span>Themes</span></span></a>
@@ -41,6 +41,9 @@
       <a class="btn btn--small magnetic" href="cv/Do-Mai-Anh-CV.pdf" target="_blank" rel="noopener">
         <i class="ph-bold ph-download-simple" aria-hidden="true"></i><span>Download CV</span>
       </a>
+      <button class="icon-btn nav__menu" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+        <i class="ph ph-list" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 </header>
@@ -55,7 +58,7 @@
         <span class="line" aria-hidden="true">Đỗ Mai</span>
         <span class="line" aria-hidden="true">Anh<em>.</em></span>
       </h1>
-      <p class="hero__lead">I build products end to end: React interfaces that move, Spring Boot services behind them, 79 shipped themes.</p>
+      <p class="hero__lead">I build products end to end: React interfaces that move, Spring Boot services behind them, and an AI agent that turned 79 client briefs into websites.</p>
       <div class="hero__cta">
         <a class="btn magnetic" href="#work"><span>See work</span><i class="ph-bold ph-arrow-down-right" aria-hidden="true"></i></a>
         <a class="btn btn--ghost magnetic" href="cv/Do-Mai-Anh-CV.pdf" target="_blank" rel="noopener"><span>Download CV</span></a>
@@ -79,8 +82,8 @@
 
   <!-- NUMBERS -->
   <section class="numbers wrap" aria-label="At a glance">
-    <div class="num"><strong data-count="79">79</strong><span>website themes shipped</span></div>
-    <div class="num"><strong data-count="333">333</strong><span>responsive HTML pages</span></div>
+    <div class="num"><strong data-count="79">79</strong><span>client briefs run through my AI agent</span></div>
+    <div class="num"><strong data-count="333">333</strong><span>generated pages I reviewed</span></div>
     <div class="num"><strong data-count="11">11</strong><span>industries, from resorts to clinics</span></div>
     <div class="num"><strong data-count="13">13</strong><span>recorded product demos</span></div>
   </section>
@@ -107,7 +110,7 @@
         </div>
       </div>
       <p class="exp__lead">My first time building inside a real product team: business modules, internal tools and client-facing UI, shipped against real requirements.</p>
-      <a class="link" href="#themes">See the 79 themes from this internship <i class="ph-bold ph-arrow-down" aria-hidden="true"></i></a>
+      <a class="link" href="#themes">See the 79 sites my agent built <i class="ph-bold ph-arrow-down" aria-hidden="true"></i></a>
     </aside>
     <ol class="exp__list" id="exp-list">
       <li class="exp__line" aria-hidden="true"><span></span></li>
@@ -135,15 +138,15 @@
       <li class="exp__item">
         <i class="ph-bold ph-sparkle" aria-hidden="true"></i>
         <div>
-          <h3>AI-powered internal tools</h3>
-          <p>Helped build AI tools and AI-assisted workflows used inside the company.</p>
+          <h3>Layout_Agent: AI website builder</h3>
+          <p>Built an AI agent that turns an SRS into a multi-page responsive website, then ran it on 79 real client briefs across 11 industries: wrote the briefs, checked every site on phone, tablet and desktop, hand-fixed the output and fed each failure back into the agent.</p>
         </div>
       </li>
       <li class="exp__item" data-role="fe">
         <i class="ph-bold ph-layout" aria-hidden="true"></i>
         <div>
           <h3>Interface development</h3>
-          <p>Implemented UI components from project requirements, and delivered 79 responsive client website themes across 11 industries.</p>
+          <p>Implemented UI components from project requirements for the company's internal modules.</p>
         </div>
       </li>
     </ol>
@@ -201,7 +204,8 @@
                 <li data-role="fe">Live preview at phone, tablet, desktop and 1920px widths.</li>
                 <li data-role="fe">Plain-language change requests for a whole site or one section.</li>
                 <li data-role="be">Express + TypeScript server that runs the Claude Agent SDK and tracks long build jobs.</li>
-                <li data-role="be">Automated Playwright QA. This is the tool behind the themes below.</li>
+                <li data-role="be">Automated Playwright QA on every generated page.</li>
+                <li>Tested on 79 real client briefs at Samset: every failure I found became a fix in the agent. The results are in the gallery below.</li>
               </ul>
               <ul class="chips"><li data-role="fe">React</li><li>TypeScript</li><li data-role="fe">Vite</li><li data-role="fe">Tailwind CSS</li><li data-role="be">Express</li><li data-role="be">Claude Agent SDK</li></ul>
               <a class="link" href="https://github.com/maianh-233/Layout_Agent" target="_blank" rel="noopener">Source on GitHub <i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a>
@@ -246,9 +250,9 @@
 
   <!-- THEMES: filterable, FLIP-animated gallery -->
   <section class="themes wrap" id="themes">
-    <p class="eyebrow">Internship at Samset Solutions</p>
-    <h2 class="section-title split-words"><span id="themes-count">79</span> themes, <span id="themes-cats">11</span> industries</h2>
-    <p class="section-lead">Brand websites built from client briefs: responsive, multi-page, animated, with Vietnamese typography. Every card opens the live theme.</p>
+    <p class="eyebrow">Built with Layout_Agent at Samset Solutions</p>
+    <h2 class="section-title split-words"><span id="themes-count">79</span> sites, <span id="themes-cats">11</span> industries</h2>
+    <p class="section-lead">The test bench for my AI agent. I wrote each client brief, the agent generated the site, and I reviewed it on every screen size and hand-fixed what it got wrong. Every card opens the live site.</p>
     <div class="filters" id="filters" role="toolbar" aria-label="Filter themes by industry"></div>
     <div class="grid" id="grid" aria-live="polite"></div>
     <div class="grid__more">
@@ -263,7 +267,7 @@
     <div class="bento" id="bento">
       <div class="cell cell--bio">
         <p class="big">Final-year Software Engineering student at Saigon University. I like owning a feature from the database table to the last hover state.</p>
-        <p>At my internship I worked on business modules and shipped brand websites at volume, so I learned to keep things fast, consistent and maintainable on both sides of the API.</p>
+        <p>At my internship I worked on business modules and built an AI agent that generates client websites, so I learned to keep things fast, consistent and maintainable on both sides of the API.</p>
         <ul class="now">
           <li><i class="ph-bold ph-map-pin" aria-hidden="true"></i>Ho Chi Minh City, Vietnam</li>
           <li><i class="ph-bold ph-hourglass-medium" aria-hidden="true"></i>Final year, graduation pending</li>
