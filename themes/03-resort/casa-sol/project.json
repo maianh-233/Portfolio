@@ -1,0 +1,85 @@
+{
+  "slug": "casa-sol",
+  "name": "CASA SOL",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "CASA SOL",
+    "purpose": "Thiết kế website giới thiệu CASA SOL, một resort nghỉ dưỡng cao cấp lấy cảm hứng từ những ngôi làng ven biển Địa Trung Hải, nơi kiến trúc trắng, cửa vòm, hoa giấy, sân trong và ánh nắng mùa hè tạo nên vẻ đẹp đặc trưng.\n\nWebsite cần truyền tải cảm giác ấm áp, phóng khoáng, lãng mạn và thư thả. Mang tinh thần của một boutique resort nằm giữa làng ven biển châu Âu, nơi du khách tận hưởng kiến trúc, ẩm thực địa phương và phong cách sống chậm.\n\nĐịnh hướng: Mediterranean Boutique Luxury — sang trọng tự nhiên, giàu chất nghệ thuật, có nét cổ điển nhưng không cũ kỹ.\n\nKhông thiết kế giống resort nhiệt đới, khách sạn hiện đại hoặc website thương mại điện tử.",
+    "audience": "Khách hàng du lịch muốn lưu trú",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. ART DIRECTION\n\nBảng màu:\n\nChalk White #F7F3E9: màu nền chủ đạo, tạo cảm giác sáng và tự nhiên.\n\nTerracotta #C66B4E: màu nhấn đặc trưng, gợi mái ngói đất nung và ánh nắng ấm.\n\nSea Blue #537B91: màu phụ gợi mặt biển Địa Trung Hải.\n\nOlive #7B8060: sử dụng cho các chi tiết liên quan đến cây cối và thiên nhiên.\n\nWarm Sand #D8C4A7: tạo sự chuyển tiếp ấm áp giữa các section.\n\nChalk White và Warm Sand chiếm phần lớn diện tích. Terracotta được dùng cho nút, tiêu đề phụ hoặc section nổi bật. Sea Blue và Olive tạo điểm cân bằng, tránh để website quá nóng hoặc đơn điệu.\n\nTypography:\n\nTiêu đề sử dụng serif giàu cá tính, có nét cổ điển và thanh lịch.\n\nNội dung sử dụng sans-serif dễ đọc.\n\nCó thể sử dụng Cormorant Garamond cho tiêu đề và Be Vietnam Pro cho nội dung, đảm bảo hỗ trợ tiếng Việt.\n\nKết hợp tiêu đề lớn, nhãn section in hoa và chú thích ảnh ngắn theo phong cách tạp chí du lịch.\n\nBố cục:\n\nƯu tiên bố cục lệch trục, khoảng trắng rộng và hình ảnh lớn.\n\nKết hợp khung ảnh chữ nhật, ảnh dọc và các khung hình gợi postcard.\n\nSử dụng đường cong, chi tiết vòm cửa và đường viền mảnh để gợi kiến trúc Địa Trung Hải.\n\nCó thể dùng các mảng nền Terracotta, Olive hoặc Warm Sand để tạo nhịp điệu giữa các section.\n\nKhông lạm dụng card bo góc hoặc bố cục dạng lưới đồng nhất.\n\nHình ảnh chủ đạo:\nKiến trúc trắng, cửa vòm, ban công đá, hoa giấy, sân trong, hồ bơi xanh, bàn ăn ngoài trời, ô liu và cảnh biển Địa Trung Hải.\n\nƯu tiên ảnh chụp thực tế với ánh sáng tự nhiên, màu sắc ấm và cảm giác mùa hè. Tránh hình ảnh rừng cọ nhiệt đới, bãi biển kiểu Maldives hoặc kiến trúc kính hiện đại.\n\n3. TRANG CHỦ — HOME\n\nHeader\n\nNền Chalk White, logo CASA SOL đặt bên trái.\n\nMenu gồm: Trang chủ, Giới thiệu, Lưu trú, Trải nghiệm.\n\nCông tắc ngôn ngữ VI / EN đặt bên phải.\n\nHeader gọn gàng, có thể chuyển sang trạng thái cố định khi cuộn trang.\n\nMenu có hiệu ứng hover nhẹ, không sử dụng hiệu ứng công nghệ phức tạp.\n\nHero\nSử dụng bố cục chia giữa phần chữ và hình ảnh, không bắt buộc dùng ảnh toàn màn hình.\n\nTiêu đề lớn: “A Summer State of Mind”.\n\nMô tả ngắn về phong cách sống chậm, kiến trúc ven biển và những ngày nghỉ đầy nắng.\n\nNút “Discover CASA SOL” dẫn đến phần giới thiệu.\n\nẢnh chính thể hiện resort với kiến trúc trắng, cửa vòm hoặc sân hiên nhìn ra biển.\n\nCó thể thêm một ảnh nhỏ dạng postcard chồng nhẹ lên ảnh chính.\n\nHero phải tạo cảm giác như trang mở đầu của một tạp chí du lịch cao cấp.\n\nGiới thiệu resort\n\nNền Chalk White.\n\nMột tiêu đề lớn kết hợp đoạn giới thiệu ngắn.\n\nBố cục lệch trục với ảnh kiến trúc hoặc sân trong.\n\nNhấn mạnh sự giao hòa giữa kiến trúc, thiên nhiên và phong cách sống Địa Trung Hải.\n\nPhòng nghỉ\n\nGiới thiệu khái quát các không gian lưu trú.\n\nSử dụng ảnh như những tấm postcard du lịch với tỷ lệ đa dạng.\n\nMỗi khu vực có tên, mô tả ngắn và liên kết đến trang Lưu trú.\n\nKết hợp ảnh phòng nghỉ, cửa sổ nhìn ra biển và sân hiên ngập nắng.\n\nKiến trúc đặc trưng\n\nMột ảnh lớn về cửa vòm, sân trong hoặc hành lang trắng.\n\nTiêu đề: “The Beauty of Mediterranean Living”.\n\nĐoạn mô tả ngắn về vật liệu tự nhiên, ánh sáng và những chi tiết kiến trúc truyền thống.\n\nẨm thực, hồ bơi và khu vườn\nGiới thiệu ba khía cạnh của cuộc sống tại CASA SOL:\n\nDining Under the Sun.\n\nPoolside Afternoons.\n\nGardens in Bloom.\n\nMỗi nội dung có hình ảnh riêng và mô tả ngắn. Bố cục xen kẽ ảnh ngang và ảnh dọc, không sử dụng ba card giống hệt nhau.\n\nGallery mùa hè\n\nBố cục ảnh tự do như album du lịch.\n\nKết hợp ảnh bàn ăn ngoài trời, hoa giấy, hồ bơi, sân hiên và cảnh biển.\n\nCó thể thêm chú thích nhỏ mang tính kể chuyện.\n\nHạn chế chữ đè lên ảnh.\n\nFooter\nSử dụng nền Terracotta hoặc Olive, chữ Chalk White.\n\nBao gồm logo, câu giới thiệu ngắn, liên kết bốn trang, thông tin liên hệ mẫu và bản quyền.\n\n4. TRANG GIỚI THIỆU — ABOUT\n\nHero\nẢnh sân trong với tường trắng, cửa vòm và hoa giấy.\n\nTiêu đề: “A Place Shaped by the Mediterranean”.\n\nMô tả ngắn về cảm hứng hình thành CASA SOL và tinh thần nghỉ dưỡng ven biển.\n\nCâu chuyện thương hiệu\nBố cục hai cột bất đối xứng:\n\nMột bên là nội dung giới thiệu.\n\nMột bên là ảnh kiến trúc hoặc không gian sân trong.\n\nNội dung tập trung vào sự hiếu khách, vẻ đẹp giản dị, ánh nắng và phong cách sống chậm. Không tự tạo các thông tin lịch sử hoặc giải thưởng chưa được xác thực.\n\nKiến trúc và vật liệu\nSử dụng ảnh lớn kết hợp chú thích ngắn về:\n\nTường trắng và cửa vòm.\n\nĐá tự nhiên và gỗ.\n\nGạch đất nung.\n\nÁnh sáng tự nhiên.\n\nKhu vườn và sân trong.\n\nTrình bày theo phong cách tạp chí kiến trúc, tạo khoảng nghỉ giữa các nội dung.\n\nTinh thần Địa Trung Hải\nGiới thiệu ba giá trị:\n\nWarm Hospitality: Sự hiếu khách chân thành.\n\nLocal Flavours: Hương vị và nguyên liệu địa phương.\n\nSlow Living: Tận hưởng cuộc sống theo nhịp điệu thư thả.\n\nMỗi giá trị có mô tả ngắn, hình ảnh phù hợp hoặc chi tiết trang trí tinh tế.\n\nGallery kiến trúc\nKết hợp ảnh vòm cửa, ban công, sân trong và những góc vườn. Thêm chú thích ảnh ngắn, tránh biến section thành một danh sách ảnh đơn điệu.\n\nSection kết thúc\nTiêu đề: “The Art of Living Slowly”.\n\nNền Warm Sand hoặc Chalk White, kết hợp một ảnh kiến trúc đặc trưng và nút dẫn đến trang Trải nghiệm.\n\n5. TRANG PHÒNG, VILLA & TIỆN ÍCH — STAYS\n\nHero\nẢnh phòng nghỉ có cửa vòm nhìn ra biển hoặc sân hiên ngập nắng.\n\nTiêu đề: “Rooms with a Mediterranean Soul”.\n\nMô tả ngắn về không gian nghỉ dưỡng, vật liệu tự nhiên và sự kết nối với cảnh quan.\n\nCoastal Suite\n\nẢnh lớn về phòng nghỉ có tầm nhìn hướng biển.\n\nMô tả về ánh sáng, màu sắc nhẹ nhàng và không gian thư giãn.\n\nGiới thiệu các tiện nghi nổi bật bằng danh sách ngắn.\n\nBố cục ảnh và chữ cân đối, nhiều khoảng trắng.\n\nCourtyard Room\n\nẢnh phòng nghỉ nhìn ra sân trong hoặc khu vườn.\n\nMô tả về kiến trúc vòm, vật liệu tự nhiên và không khí riêng tư.\n\nSử dụng mảng nền Warm Sand hoặc chi tiết Terracotta để tạo điểm nhấn.\n\nPrivate Villa\n\nẢnh kiến trúc villa hoặc sân hiên riêng.\n\nMô tả về không gian rộng rãi, khu vực thư giãn và sự riêng tư.\n\nCó thể sử dụng ảnh ngang lớn kết hợp một ảnh chi tiết dọc.\n\nBa loại lưu trú phải có cách sắp xếp hình ảnh khác nhau nhưng vẫn đồng nhất về phong cách.\n\nTiện ích resort\nGiới thiệu:\n\nHồ bơi ngoài trời.\n\nNhà hàng ngoài trời.\n\nKhu vườn Địa Trung Hải.\n\nLounge và sân hiên thư giãn.\n\nSử dụng bố cục ảnh xen kẽ, kết hợp các mảng màu Chalk White, Sea Blue và Terracotta.\n\nChi tiết tạo nên trải nghiệm\nMột section hình ảnh cận cảnh về vải linen, gốm thủ công, bàn ăn ngoài trời, vật liệu đá và những góc kiến trúc đặc trưng.\n\nSection kết thúc\nTiêu đề: “A Stay Made for Slow Days”.\n\nNút điều hướng về trang chủ hoặc trang Giới thiệu.\n\nKhông hiển thị giá phòng, tình trạng phòng trống hoặc nút đặt phòng.\n\n6. TRANG TRẢI NGHIỆM & KHÁM PHÁ — EXPERIENCES\n\nHero\nẢnh bàn ăn ngoài trời lúc hoàng hôn, với ánh sáng ấm và kiến trúc ven biển ở hậu cảnh.\n\nTiêu đề: “Savour Every Moment”.\n\nMô tả ngắn về những trải nghiệm ẩm thực, thiên nhiên và phong cách sống Địa Trung Hải.\n\nẨm thực địa phương\n\nHình ảnh bàn ăn ngoài trời, món ăn tươi và nguyên liệu theo mùa.\n\nNội dung giới thiệu trải nghiệm thưởng thức ẩm thực trong không gian mở.\n\nBố cục kết hợp ảnh ngang và đoạn văn ngắn.\n\nKhông tạo menu đặt món hoặc chức năng đặt bàn.\n\nKhám phá làng ven biển\n\nẢnh đường phố nhỏ, kiến trúc trắng, ban công và cửa vòm.\n\nMô tả về vẻ đẹp của những ngôi làng ven biển Địa Trung Hải.\n\nCó thể trình bày như một hành trình khám phá qua các khung ảnh postcard.\n\nNhững buổi chiều bên hồ\n\nẢnh hồ bơi, ghế thư giãn và ánh nắng.\n\nNội dung tập trung vào cảm giác nghỉ ngơi, đọc sách và tận hưởng thời gian riêng.\n\nCó thể dùng nền Sea Blue hoặc Chalk White để tạo cảm giác mát mẻ.\n\nKhu vườn và thiên nhiên\n\nẢnh hoa giấy, cây ô liu, lối đi lát đá và sân trong.\n\nMô tả ngắn về sự kết nối với thiên nhiên.\n\nSử dụng bố cục bất đối xứng và chú thích ảnh nhỏ.\n\nGallery dạng postcard\n\nCác khung ảnh có tỷ lệ đa dạng, khoảng cách tự nhiên.\n\nKết hợp ảnh kiến trúc, ẩm thực, khu vườn và cảnh biển.\n\nHiệu ứng hover phóng to nhẹ, không xoay hoặc chuyển động quá mức.\n\nSection kết thúc\nSử dụng ảnh hoàng hôn với tông màu đất nung và xanh biển.\n\nTiêu đề: “Let the Days Unfold Slowly”.\n\nMột đoạn văn ngắn khép lại câu chuyện về những ngày nghỉ thư thả tại CASA SOL.\n\nNút “Return to CASA SOL” dẫn về trang chủ.\n\n7. INTERACTION & MOTION\n\nSử dụng hiệu ứng nhẹ, phù hợp với phong cách boutique luxury:\n\nHover ảnh với hiệu ứng phóng to rất nhẹ.\n\nFade-in hoặc reveal tinh tế khi cuộn trang.\n\nChuyển màu nền mềm giữa các section.\n\nMenu có hiệu ứng underline.\n\nChuyển tiếp nhẹ giữa các trạng thái tương tác.\n\nGallery có thể mở ảnh lớn nếu triển khai đầy đủ chức năng.\n\nKhông sử dụng hiệu ứng neon, hạt sáng, parallax mạnh, animation phức tạp hoặc chuyển động kiểu công nghệ.\n\nĐảm bảo animation không làm chậm website và tôn trọng cài đặt giảm chuyển động của người dùng.\n\n8. TECHNICAL REQUIREMENTS\n\nCấu trúc trang:\n\nindex.html — Trang chủ.\n\nabout.html — Giới thiệu.\n\nstays.html — Phòng, villa & tiện ích.\n\nexperiences.html — Trải nghiệm & khám phá.\n\nSử dụng HTML, CSS và JavaScript thuần. Tổ chức CSS, JavaScript và hình ảnh trong các thư mục dùng chung; tránh lặp lại mã không cần thiết giữa các trang.\n\nĐiều hướng:\n\nHeader và footer thống nhất trên cả bốn trang.\n\nLogo dẫn về trang chủ.\n\nCác liên kết và nút điều hướng hoạt động chính xác.\n\nMenu mobile có thể mở và đóng.\n\nKhông để nút giả hoặc liên kết không có chức năng.\n\nChuyển đổi ngôn ngữ VI / EN:\n\nTất cả bốn trang đều có công tắc VI / EN.\n\nDịch đầy đủ menu, tiêu đề, mô tả, nút, chú thích ảnh và footer.\n\nChuyển ngôn ngữ không làm thay đổi trang hiện tại.\n\nGhi nhớ ngôn ngữ đã chọn khi chuyển giữa các trang.\n\nĐảm bảo tiếng Việt hiển thị đúng dấu và font chữ.\n\nCó thể sử dụng data-vi, data-en và JavaScript để quản lý nội dung song ngữ.\n\nResponsive:\n\nDesktop: bố cục rộng, hình ảnh lớn và lệch trục.\n\nTablet: điều chỉnh tỷ lệ ảnh và khoảng cách.\n\nMobile: chuyển sang bố cục một cột, menu thu gọn và nút dễ thao tác.\n\nĐảm bảo hình ảnh không méo, chữ không tràn và không xuất hiện cuộn ngang ngoài ý muốn.\n\nHình ảnh và hiệu năng:\n\nƯu tiên ảnh chất lượng cao, đúng chủ đề và có URL tải ổn định.\n\nSử dụng ảnh dự phòng nếu ảnh chính không tải được.\n\nKhông để ảnh lỗi hoặc vùng nội dung trống.\n\nLazy-load hình ảnh bên dưới hero.\n\nBổ sung alt text phù hợp cho ảnh.\n\n9. GIỚI HẠN CHỨC NĂNG\n\nWebsite chỉ dùng để giới thiệu CASA SOL và các trải nghiệm nghỉ dưỡng.\n\nKhông triển khai:\n\nĐặt phòng.\n\nĐặt lịch hoặc đặt dịch vụ.\n\nĐặt bàn hoặc đặt món.\n\nGiỏ hàng.\n\nThanh toán.\n\nGiao dịch trực tuyến.\n\nCác nút CTA chỉ dùng để khám phá nội dung hoặc điều hướng giữa các trang.\n\n10. TIÊU CHÍ HOÀN THÀNH\n\nCó đủ bốn trang HTML riêng biệt.\n\nMỗi trang có bố cục riêng, tránh lặp lại cùng một template.\n\nPhong cách Mediterranean Boutique Luxury thể hiện rõ qua kiến trúc, màu sắc và hình ảnh.\n\nBảng màu được sử dụng nhất quán.\n\nĐiều hướng giữa các trang hoạt động chính xác.\n\nChuyển đổi VI / EN hoàn chỉnh.\n\nWebsite responsive trên desktop, tablet và mobile.\n\nHiệu ứng nhẹ nhàng, không gây phân tâm.\n\nKhông có chức năng đặt phòng, mua hàng hoặc thanh toán.\n\nYêu cầu cuối cùng: Tạo một website giới thiệu resort có cảm giác như một tạp chí du lịch Địa Trung Hải cao cấp, giàu hình ảnh, ấm áp và thư thả. Ưu tiên kiến trúc đặc trưng, bố cục sáng tạo và trải nghiệm thị giác hơn các hiệu ứng trang trí không cần thiết.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-29T02:21:52.362Z",
+  "updatedAt": "2026-10-29T02:59:22.099Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\casa-sol\\web",
+    "builtAt": "2026-10-29T02:58:59.024Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/experiences.html",
+      "pages/stays.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/experiences.html": [],
+      "pages/stays.html": []
+    }
+  },
+  "job": {
+    "id": "005bdde8-ea5e-4d20-a2bb-44b7e77698d6",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\casa-sol\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 177020,
+      "outputTokens": 94946,
+      "cacheReadTokens": 3995199,
+      "cacheCreationTokens": 193943,
+      "costUsd": 3.9204081000000004,
+      "numTurns": 99,
+      "durationMs": 855042
+    }
+  },
+  "external": null,
+  "qa": {
+    "createdAt": "2026-10-29T02:59:18.191Z",
+    "critical": 0,
+    "major": 60,
+    "minor": 1,
+    "screenshots": 12
+  }
+}

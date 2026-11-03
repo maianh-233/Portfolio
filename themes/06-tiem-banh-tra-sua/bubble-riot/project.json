@@ -1,0 +1,53 @@
+{
+  "slug": "bubble-riot",
+  "name": "BUBBLE RIOT,",
+  "projectType": "website",
+  "concept": {
+    "topic": "website tiệm bánh và trà sữa",
+    "brand": "BUBBLE RIOT",
+    "purpose": "Thiết kế website giới thiệu BUBBLE RIOT, thương hiệu trà sữa mang tinh thần đường phố, trẻ trung, cá tính và giàu năng lượng. Website phải giống một chiến dịch nhận diện thương hiệu sáng tạo, không phải template quán nước thông thường.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Art direction\n\nCam #FF5A1F, vàng #FFE83D, đỏ #F22945, đen #181818, trắng #FFFDF7.\n\nHeading dùng font condensed hoặc sans-serif đậm; chữ có thể in hoa, kích thước lớn.\n\nDùng halftone, nét viền comic, sticker, đường gạch chéo, dấu chấm than và nhãn đồ họa.\n\nHình ảnh ly trà sữa chụp trực diện, cắt ghép trên nền màu phẳng.\n\nDùng lưới bất đối xứng và các mảng màu lớn; tránh áp dụng card bo tròn cho tất cả thành phần.\n\nĐảm bảo phần chữ nội dung vẫn dễ đọc, không dùng quá nhiều hiệu ứng méo chữ.\n\n3. Trang chủ\n\nHeader gọn, nền trắng hoặc đen; logo BUBBLE RIOT nổi bật, điều hướng và VI–EN.\n\nHero dạng poster: ly trà sữa lớn chiếm một nửa màn hình, headline “SHAKE UP YOUR DAY!” ở kích thước rất lớn, các sticker và nhãn đồ họa xung quanh.\n\nDải thông điệp thương hiệu dạng chữ chạy ngang; nếu không hỗ trợ chuyển động, dùng dòng chữ tĩnh lặp có chủ đích.\n\nSection “The Riot Favorites”: 3 sản phẩm với nền màu riêng và bố cục không đồng đều.\n\nSection giới thiệu cá tính thương hiệu qua hình ảnh đường phố, đồ họa và một đoạn nội dung ngắn.\n\nFooter như phần cuối của poster, có logo lớn và liên kết.\n\n4. Trang Sản phẩm & Menu\n\nHero ngắn với headline “Pick Your Flavor”.\n\nDanh mục Milk Tea, Fruit Tea, Cream Series và Toppings.\n\nMỗi danh mục có màu nhấn riêng; ảnh sản phẩm lớn, tên món rõ và mô tả ngắn.\n\nDùng các khối nội dung xen kẽ, không trình bày như bảng dữ liệu.\n\nCó thể dùng bộ lọc danh mục đơn giản, không cần backend.\n\n5. Trang Về chúng tôi\n\nHero typography lớn, ảnh sản phẩm và họa tiết comic.\n\nGiới thiệu tinh thần sáng tạo, văn hóa trẻ và nguồn cảm hứng đường phố.\n\nBa giá trị thương hiệu thể hiện bằng hình khối đồ họa.\n\nGallery nhận diện, bao bì minh họa và sản phẩm.\n\n6. Chuyển động\n\nSticker rung hoặc xoay nhẹ khi hover, các mảng màu chuyển cảnh nhanh vừa phải. Không để chữ nhấp nháy liên tục hoặc hiệu ứng gây khó đọc.\n\n7. Ràng buộc\n\nTối đa 3 trang, song ngữ đầy đủ, responsive. Không có nút mua, đặt hàng, giỏ hàng, thanh toán hay form giao dịch. Cps nút chuyển từ tiếng anh và tiếng việt\n",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-23T04:41:32.117Z",
+  "updatedAt": "2026-10-23T06:37:07.468Z",
+  "screen": "request",
+  "request": "website tiệm bánh và trà sữa",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "d48864c9-f5bf-4c0d-a394-1e928560b53a",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\bubble-riot\\web",
+    "status": "error",
+    "error": "Đã chạm giới hạn sử dụng của tài khoản, vui lòng chờ rồi thử lại. Hạn mức sẽ được làm mới lúc 13:50 23-10.",
+    "errorCode": "usage_limit",
+    "resetsAt": 1792738200
+  }
+}

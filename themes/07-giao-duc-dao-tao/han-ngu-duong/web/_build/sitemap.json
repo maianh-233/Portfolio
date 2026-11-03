@@ -1,0 +1,123 @@
+{
+  "brand": "HÁN NGỮ ĐƯỜNG",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Bước qua cửa tròn nguyệt môn của một thư phòng cổ: nền giấy Tuyên, con dấu son 汉语堂 làm logo, ảnh đặt trong cửa tròn / khung tranh cuộn, viền hồi văn và mây tường vân trên nền đỏ trầm, chữ Hán trang trí đi kèm mỗi tiêu đề tiếng Việt",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Mở cánh cửa ngôn ngữ, khám phá Trung Hoa",
+    "description": "Giao diện trung tâm tiếng Trung và tư vấn du học Trung Quốc mang phong vị thư phòng cổ."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu trung tâm, dẫn sang chương trình học, du học và văn hóa Trung Hoa",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Ảnh mái cung điện, sương mây nhẹ (data-clouds), logo dấu son 汉语堂, 2 nút theo chú thích BA" },
+        { "id": "gioi-thieu", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Trang sách cổ kẻ cột, ảnh thư phòng trong khung tranh cuộn" },
+        { "id": "chuong-trinh", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "4 thẻ khóa học viền góc truyền thống, dẫn sang pages/chuong-trinh.html" },
+        { "id": "du-hoc", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Cánh cửa du học: ảnh trong cửa tròn, nền đỏ trầm mây tường vân" },
+        { "id": "van-hoa", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "5 khung: thư pháp, trà đạo, thư họa, lễ hội, kiến trúc; lightbox" },
+        { "id": "loi-co-nhan", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "Câu 千里之行，始于足下" },
+        { "id": "dang-ky", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn tới biểu mẫu tư vấn ở pages/ve-chung-toi.html#lien-he" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "forbidden city palace roof", "file": "assets/img/about-hero-cung-dien.webp", "status": "ok" },
+        { "slot": "gioi-thieu", "query": "chinese scholar study woodblock", "file": "assets/img/home-gioi-thieu-thu-phong.webp", "status": "ok" },
+        { "slot": "chuong-trinh-nhap-mon", "query": "chinese characters ornament", "file": "assets/img/home-ct-nhap-mon.webp", "status": "ok" },
+        { "slot": "chuong-trinh-giao-tiep", "query": "beijing hutong door", "file": "assets/img/home-ct-giao-tiep.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-hsk", "query": "stacked books", "file": "assets/img/home-ct-hsk.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-nang-cao", "query": "calligraphy fan", "file": "assets/img/home-ct-nang-cao.webp", "status": "ok" },
+        { "slot": "du-hoc", "query": "university library reading room", "file": "assets/img/home-du-hoc-khuon-vien.webp", "status": "ok" },
+        { "slot": "van-hoa-thu-phap", "query": "chinese calligraphy scroll", "file": "assets/img/home-van-hoa-thu-phap.webp", "status": "ok" },
+        { "slot": "van-hoa-tra-dao", "query": "chinese tea ceremony", "file": "assets/img/home-van-hoa-tra-dao.jpg", "status": "ok" },
+        { "slot": "van-hoa-thu-hoa", "query": "chinese ink landscape painting", "file": "assets/img/home-van-hoa-thu-hoa.jpg", "status": "ok" },
+        { "slot": "van-hoa-le-hoi", "query": "red lanterns new year", "file": "assets/img/home-van-hoa-le-hoi.jpg", "status": "ok" },
+        { "slot": "van-hoa-kien-truc", "query": "temple of heaven beijing", "file": "assets/img/home-van-hoa-kien-truc.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/chuong-trinh.html",
+      "title": "Chương trình tiếng Trung",
+      "purpose": "Giới thiệu phương pháp học, 4 chương trình (nhập môn, giao tiếp, HSK, nâng cao), trải nghiệm thanh điệu / chữ Hán / câu giao tiếp và văn hóa qua ngôn ngữ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Thư pháp trên giấy, ảnh trong khung vòm" },
+        { "id": "phuong-phap", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Chữ 永 lớn + 8 nét cơ bản + ảnh lớp học" },
+        { "id": "cac-chuong-trinh", "catalog": "services", "variant": "features-tabs", "source": "ba", "note": "data-tabs 4 chương trình: ảnh, mô tả, đối tượng, mục tiêu" },
+        { "id": "trai-nghiem", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "4 thanh điệu, chữ ghép 木 林 森, carousel câu giao tiếp" },
+        { "id": "van-hoa-ngon-ngu", "catalog": "editorial", "variant": "story-letter", "source": "ba", "note": "Thành ngữ, thơ cổ, thư pháp dạng accordion cạnh ảnh cửa tròn" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Tìm chương trình phù hợp → ve-chung-toi.html#lien-he" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "chinese calligraphy letter", "file": "assets/img/courses-hero-thu-phap.webp", "status": "ok" },
+        { "slot": "phuong-phap", "query": "chinese language class whiteboard", "file": "assets/img/courses-lop-hoc.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-nhap-mon", "query": "child chinese workbook", "file": "assets/img/courses-nhap-mon.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-giao-tiep", "query": "shanghai yuyuan teahouse", "file": "assets/img/courses-giao-tiep.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-hsk", "query": "xinhua dictionary", "file": "assets/img/courses-hsk.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-nang-cao", "query": "chinese calligraphy album leaf", "file": "assets/img/courses-sach-han-ngu.webp", "status": "ok" },
+        { "slot": "van-hoa-ngon-ngu", "query": "cursive calligraphy panels", "file": "assets/img/courses-tho-co.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/du-hoc.html",
+      "title": "Tư vấn du học Trung Quốc",
+      "purpose": "Giải thích vì sao chọn Trung Quốc, lộ trình tư vấn 5 bước, nhóm ngành, thông tin cần chuẩn bị, FAQ và CTA đăng ký tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Cổng học viện kiến trúc truyền thống, sương mỏng data-clouds" },
+        { "id": "vi-sao", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Bố cục biên tập 4 khía cạnh: học tập, ngôn ngữ, văn hóa, trải nghiệm quốc tế" },
+        { "id": "lo-trinh", "catalog": "process", "variant": "timeline", "source": "ba", "note": "5 bước theo chú thích BA, nền đỏ trầm" },
+        { "id": "nganh", "catalog": "projects", "variant": "gallery-filmstrip", "source": "ba", "note": "Nhóm ngành, kéo ngang" },
+        { "id": "chuan-bi", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Hồ sơ, năng lực tiếng Trung, giấy tờ, mốc thời gian tham khảo" },
+        { "id": "faq", "catalog": "faq", "variant": "faq-accordion", "source": "ba", "note": "5 câu hỏi theo chú thích BA" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Đăng ký tư vấn định hướng du học → ve-chung-toi.html#lien-he" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "huaqiao university gate", "file": "assets/img/duhoc-vi-sao-hoc-tap.jpg", "status": "ok" },
+        { "slot": "vi-sao-hoc-tap", "query": "library reading room students", "file": "assets/img/duhoc-vi-sao-hoc-tap.webp", "status": "ok" },
+        { "slot": "vi-sao-van-hoa", "query": "chinese temple roof dragon", "file": "assets/img/home-hero-mai-dinh.webp", "status": "ok" },
+        { "slot": "vi-sao-trai-nghiem", "query": "shanghai city skyline", "file": "assets/img/duhoc-hero-dai-hoc.webp", "status": "ok" },
+        { "slot": "nganh-ngon-ngu-van-hoa", "query": "beijing hutong street", "file": "assets/img/duhoc-nganh-van-hoa.jpg", "status": "ok" },
+        { "slot": "nganh-kinh-te", "query": "shanghai night", "file": "assets/img/duhoc-nganh-kinh-te.jpg", "status": "ok" },
+        { "slot": "nganh-cong-nghe", "query": "science research detector china", "file": "assets/img/duhoc-nganh-cong-nghe.jpg", "status": "ok" },
+        { "slot": "nganh-nghien-cuu", "query": "library books research", "file": "assets/img/duhoc-nganh-thu-vien.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/ve-chung-toi.html",
+      "title": "Về chúng tôi & Liên hệ",
+      "purpose": "Câu chuyện, triết lý giáo dục, đội ngũ, không gian học tập và liên hệ / biểu mẫu tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh Tử Cấm Thành trong cửa tròn nguyệt môn" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Sứ mệnh đào tạo tiếng Trung và hỗ trợ tìm hiểu du học" },
+        { "id": "triet-ly", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Ngôn ngữ là cầu nối giữa con người, văn hóa và tri thức" },
+        { "id": "doi-ngu", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Khối chữ cái đầu tên dạng dấu son, tiểu sử mẫu có thể thay" },
+        { "id": "khong-gian", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Lightbox: sách Hán ngữ, góc thư pháp, nghiên mực, hoạt động văn hóa" },
+        { "id": "lien-he", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Địa chỉ, điện thoại, email, mạng xã hội, bản đồ, form tư vấn (demo)" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "forbidden city palace river", "file": "assets/img/home-hero-tu-cam-thanh.webp", "status": "ok" },
+        { "slot": "khong-gian-sach", "query": "chinese dictionary page", "file": "assets/img/about-sach-han-ngu.jpg", "status": "ok" },
+        { "slot": "khong-gian-thu-phap", "query": "calligraphy fan", "file": "assets/img/about-goc-thu-phap.webp", "status": "ok" },
+        { "slot": "khong-gian-nghien-muc", "query": "inkstone chinese", "file": "assets/img/courses-nhap-mon.webp", "status": "ok" },
+        { "slot": "khong-gian-hoat-dong", "query": "making dumplings new year", "file": "assets/img/about-hoat-dong-van-hoa.jpg", "status": "ok" },
+        { "slot": "doi-ngu", "query": "chinese teacher portrait", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Giữ đúng 4 trang theo chú thích BA (Trang chủ, Chương trình, Du học, Về chúng tôi & Liên hệ); không tạo trang chi tiết riêng cho từng khóa học vì BA mô tả các chương trình nằm chung một trang",
+    "Liên hệ gộp vào pages/ve-chung-toi.html (#lien-he) theo tiêu đề 'Về chúng tôi & Liên hệ'",
+    "Màu: bỏ bảng màu preset nature (rêu, xanh) vì BA yêu cầu đỏ son, đỏ trầm, đen mực, nền giấy cổ; font: thay Fraunces/Manrope bằng Cormorant Garamond + Be Vietnam Pro (đủ tiếng Việt) và Noto Serif SC cho chữ Hán",
+    "Đội ngũ dùng khối chữ cái đầu dạng con dấu thay ảnh chân dung (chưa có ảnh thật của giáo viên); tên, vai trò, tiểu sử là nội dung mẫu",
+    "Không ghi học phí, lịch khai giảng, tên trường đối tác, tỷ lệ đỗ hay cam kết học bổng theo yêu cầu của BA",
+    "Hiệu ứng hạt / mây chỉ một section mỗi trang; bỏ hạt cánh hoa ở khối văn hóa trang chủ vì hero đã có sương mây"
+  ],
+  "limitations": [
+    "Biểu mẫu đăng ký tư vấn là bản demo, chưa có backend gửi đi",
+    "Địa chỉ, điện thoại, email, mạng xã hội và bản đồ là thông tin mẫu, cần thay bằng thông tin thật",
+    "Không có bán khóa học, giỏ hàng, thanh toán trực tuyến (đúng yêu cầu BA)",
+    "Một số ảnh đã tải nhưng không dùng vì sai chủ đề (ảnh đoàn đại biểu): duhoc-hero-dai-hoc.jpg, home-du-hoc-khuon-vien.jpg, about-goc-thu-phap.jpg"
+  ]
+}

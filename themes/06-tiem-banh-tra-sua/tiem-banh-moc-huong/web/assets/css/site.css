@@ -1,0 +1,51 @@
+:root {
+  --cream: #FFF9F4;
+  --blush: #F7D6D0;
+  --peach: #FBE3C8;
+  --mint: #D5EFE3;
+  --lilac: #E3DDF6;
+  --cocoa: #4B3A36;
+  --rose: #C25E73;
+  --rose-deep: #A3475B;
+  --font-display: 'Quicksand', system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: 'Nunito Sans', system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ui-accent: #A3475B;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--cocoa);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Khung vòm: ý tưởng thị giác xuyên suốt (miệng lò / cửa nhà cổ) */
+.arch { border-radius: 999px 999px 1.75rem 1.75rem; overflow: hidden; }
+.arch-line { border-radius: 999px 999px 1.75rem 1.75rem; }
+
+/* Viền răng cưa mềm như mép giấy gói bánh */
+.scallop-top {
+  -webkit-mask: radial-gradient(14px at 50% 0, transparent 98%, #000) 50% / 28px 100%;
+          mask: radial-gradient(14px at 50% 0, transparent 98%, #000) 50% / 28px 100%;
+}
+
+/* Header khi đã cuộn */
+#top.is-scrolled .hdr-inner { box-shadow: 0 10px 30px -18px rgba(75, 58, 54, .35); background: rgba(255, 249, 244, .94); }
+
+.input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1.5px solid #E6CFC9;
+  background: #fff;
+  padding: .8rem 1rem;
+  color: var(--cocoa);
+  font-size: 1rem;
+  transition: border-color .3s, box-shadow .3s;
+}
+.input::placeholder { color: #8C7570; }
+.input:focus { outline: none; border-color: var(--rose-deep); box-shadow: 0 0 0 4px rgba(194, 94, 115, .18); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

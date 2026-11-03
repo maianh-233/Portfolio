@@ -1,0 +1,95 @@
+{
+  "brand": "BUBBLE RIOT",
+  "language": "en",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Street pop-art poster for a Hanoi milk tea counter: flat orange / yellow / red colour blocks, halftone dots, comic ink outlines, hard offset shadows, slanted stickers and hazard stripes around front-facing cups and bakery trays.",
+  "purposeInferred": "Introduce BUBBLE RIOT as a street-culture milk tea and bakery brand, not an online shop.",
+  "theme": {
+    "tagline": "Trà sữa đường phố, lắc tung ngày dài",
+    "description": "Giao diện thương hiệu trà sữa phong cách đường phố, pop-art và poster."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "BUBBLE RIOT — Shake Up Your Day",
+      "purpose": "Poster-style brand landing: loud hero, three signature drinks, street story, bakery and a closing footer poster.",
+      "sections": [
+        { "id": "hero", "catalog": "hero-split", "variant": "poster-hero", "note": "Split poster hero; cup photo on a flat orange block, oversized headline and stickers." },
+        { "id": "riot-marquee", "catalog": "marquee-band", "variant": "brand-marquee", "note": "Running brand message band in yellow on black." },
+        { "id": "favorites", "catalog": "features-numbered", "variant": "product-triptych", "note": "Three uneven product blocks, each with its own flat colour and price." },
+        { "id": "story", "catalog": "story-editorial", "variant": "story-editorial", "note": "Street photo, short brand paragraph and three numbered facts." },
+        { "id": "bakery", "catalog": "feature-split", "variant": "bakery-block", "note": "Bakery feature on yellow with a small price list, no ordering UI." },
+        { "id": "site-footer", "catalog": "footer-big", "variant": "poster-footer", "note": "Closing poster footer with oversized wordmark, links and visit details." }
+      ],
+      "images": [
+        { "slot": "hero cup", "query": "brown sugar bubble tea front facing", "file": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Brown_sugar_boba_tea_at_Boba_Heaven%2C_downtown_Evanston%2C_IL.jpg", "status": "link" },
+        { "slot": "favourite 01 — brown sugar", "query": "brown sugar milk tea", "file": "https://live.staticflickr.com/1249/1388183411_247242ff53_b.jpg", "status": "link" },
+        { "slot": "favourite 02 — strawberry", "query": "strawberry fruit tea", "file": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Strawberry_smoothie_with_perls.jpg", "status": "link" },
+        { "slot": "favourite 03 — cream series", "query": "cream topped milk tea", "file": "https://live.staticflickr.com/1370/626245963_45390ac8ea_b.jpg", "status": "link" },
+        { "slot": "street brand photo", "query": "hanoi street drinks shop", "file": "https://live.staticflickr.com/7352/12159548535_0f8d2f9d8e_b.jpg", "status": "link" },
+        { "slot": "bakery tray", "query": "croissants bakery tray", "file": "https://live.staticflickr.com/5051/5462669620_426e05b365_b.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/menu.html",
+      "title": "Menu — BUBBLE RIOT",
+      "purpose": "Full flavour board: filterable Milk Tea, Fruit Tea, Cream Series and Toppings chapters, plus a bakery break — no data table, no cart.",
+      "sections": [
+        { "id": "menu-hero", "catalog": "page-hero", "variant": "menu-hero", "note": "Short hero with 'Pick Your Flavor' and one cup photo." },
+        { "id": "menu-board", "catalog": "menu-list", "variant": "menu-chapters", "note": "Filter + four colour-coded chapters with large category images and short descriptions." },
+        { "id": "build-strip", "catalog": "process-numbered", "variant": "build-your-cup", "note": "Three-step graphic strip: base, ice, topping." },
+        { "id": "board", "catalog": "quote-full", "variant": "menu-board-photo", "note": "Dark photo band with hand-written board and two service notes." },
+        { "id": "bakery-break", "catalog": "feature-split", "variant": "bakery-break", "note": "Bakery case on paper background; items and daily note." },
+        { "id": "site-footer", "catalog": "footer-big", "variant": "poster-footer", "note": "Shared poster footer." }
+      ],
+      "images": [
+        { "slot": "menu hero cup", "query": "brown sugar milk tea", "file": "assets/img/hero-boba.jpg", "status": "ok" },
+        { "slot": "milk tea chapter", "query": "milk tea with pearls", "file": "https://live.staticflickr.com/3604/3478078559_2e10bedc76_b.jpg", "status": "link" },
+        { "slot": "fruit tea chapter", "query": "iced fruit tea with popping boba", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Popping_boba_w_Bubble_Tea.jpg/960px-Popping_boba_w_Bubble_Tea.jpg", "status": "link" },
+        { "slot": "cream series chapter", "query": "cream foam drink", "file": "https://pd.w.org/2026/03/1869c75f6aa641f8.65571191-1510x2048.jpeg", "status": "link" },
+        { "slot": "toppings chapter", "query": "tapioca pearls close up", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Tapioca_balls_%284507369304%29.jpg/960px-Tapioca_balls_%284507369304%29.jpg", "status": "link" },
+        { "slot": "hand-written board", "query": "cafe menu board handwriting", "file": "https://live.staticflickr.com/1159/558239112_cfa6d00e44_b.jpg", "status": "link" },
+        { "slot": "bakery case", "query": "bakery pastry case", "file": "https://live.staticflickr.com/3407/3566020085_c0ffc58abf_b.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About — BUBBLE RIOT",
+      "purpose": "Brand story: loud typography, the corner-shop origin, three values and an identity gallery.",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero-split", "variant": "type-hero", "note": "Oversized typographic hero with shop photo and comic stamps." },
+        { "id": "manifesto", "catalog": "story-editorial", "variant": "manifesto", "note": "Origin story, hands-at-work photo and a pull quote." },
+        { "id": "values", "catalog": "features-numbered", "variant": "value-blocks", "note": "LOUD / HONEST / LOCAL in three graphic colour blocks." },
+        { "id": "gallery", "catalog": "gallery-lookbook", "variant": "identity-collage", "note": "Six-image asymmetric gallery with lightbox." },
+        { "id": "visit", "catalog": "contact-split", "variant": "visit-strip", "note": "Address, hours, phone and email — no form, no map." },
+        { "id": "site-footer", "catalog": "footer-big", "variant": "poster-footer", "note": "Shared poster footer." }
+      ],
+      "images": [
+        { "slot": "shop hero", "query": "small tea shop storefront", "file": "https://live.staticflickr.com/2438/3590141581_5b7ea42fab_b.jpg", "status": "link" },
+        { "slot": "hands at work", "query": "hands preparing drink", "file": "https://live.staticflickr.com/3217/3149071861_718fb98700_b.jpg", "status": "link" },
+        { "slot": "gallery 01", "query": "croissants on tray", "file": "https://live.staticflickr.com/5100/5547817042_828ceb6985_b.jpg", "status": "link" },
+        { "slot": "gallery 02", "query": "croissant on plate", "file": "https://live.staticflickr.com/3268/2604189398_162bfaca5e_b.jpg", "status": "link" },
+        { "slot": "gallery 03", "query": "street food shop facade", "file": "https://live.staticflickr.com/4105/4973073750_23cb03c512_b.jpg", "status": "link" },
+        { "slot": "gallery 04", "query": "steeped tea leaves in a bowl", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Longjing_tea_after_steeping.jpg/960px-Longjing_tea_after_steeping.jpg", "status": "link" },
+        { "slot": "gallery 05", "query": "grass jelly dessert", "file": "https://live.staticflickr.com/2411/2263243585_3206c5c678_b.jpg", "status": "link" },
+        { "slot": "gallery 06", "query": "cups under neon light", "file": "https://live.staticflickr.com/1219/1388183787_feb39bb066_b.jpg", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA yêu cầu tối đa 3 trang và song ngữ đầy đủ; concept.md mục 2 ghi 'không tạo bộ chuyển ngôn ngữ' nhưng chú thích BA (mục 7) yêu cầu nút chuyển EN–VI. Ưu tiên chú thích BA: mọi trang mặc định tiếng Anh với lang=\"en\", có nút EN/VI đổi toàn bộ chữ hiển thị và ghi nhớ lựa chọn trong localStorage.",
+    "Preset Nature/Organic/Atmospheric không khớp art direction street pop-art trong chú thích BA. Giữ Level 2 nhưng thay bảng màu bằng #FF5A1F, #FFE83D, #F22945, #181818, #FFFDF7 và font Barlow Condensed + Archivo (đều có đủ ký tự tiếng Việt).",
+    "Tiếng Việt cần giãn dòng riêng: site.css nới line-height cho .type-hero/.type-giant/.type-h2 khi html[lang=\"vi\"] và mở khung mặt nạ của hiệu ứng tách chữ để dấu không bị cắt cụt; site.js nạp sẵn subset tiếng Việt của font tiêu đề ngay khi tải trang.",
+    "BA không chọn section — AI đề xuất 6 section cho mỗi trang theo đúng 3 trang BA mô tả; không thêm trang thứ tư.",
+    "Không có form giao dịch, giỏ hàng, đặt hàng hay thanh toán. CTA chỉ dẫn tới trang nội dung, tel: hoặc mailto:.",
+    "Ảnh dùng link ngoài (status: link) vì nguồn tải về bị giới hạn; phù hợp cho prototype, cần thay bằng ảnh của thương hiệu trước khi lên web thật.",
+    "Bộ lọc menu chạy bằng ui.js (data-filter-group), không cần backend; các nhóm được lọc ở cấp chapter để giữ tiêu đề và ảnh danh mục."
+  ],
+  "limitations": [
+    "Ảnh là link ngoài từ Flickr, Wikimedia Commons và WordPress Photo Directory: cần Internet, chưa xác nhận giấy phép cho production — thay bằng ảnh thật của BUBBLE RIOT trước khi xuất bản.",
+    "Nội dung, giá, địa chỉ, giờ mở cửa và tên món là dữ liệu mẫu để dựng prototype; chủ thương hiệu cần xác nhận.",
+    "Ảnh minh hoạ không phải sản phẩm thật của BUBBLE RIOT.",
+    "Không có backend, tài khoản, đặt hàng hay thanh toán; bản dịch tiếng Việt do AI viết và cần người bản ngữ duyệt lại."
+  ]
+}

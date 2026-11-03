@@ -1,0 +1,392 @@
+[
+  {
+    "file": "assets/img/home-hero-ao-dai-hue.jpg",
+    "purpose": "index.html — ảnh hero lệch",
+    "source": "openverse",
+    "id": "openverse-33db669c-10c6-4c39-a866-f09254306438",
+    "title": "Woman wearing ao dai (traditional dress), Hue, Vietnam",
+    "creator": "Arthur Chapman",
+    "license": "CC BY-NC 2.0",
+    "page": "https://www.flickr.com/photos/32005048@N06/52703112136"
+  },
+  {
+    "file": "assets/img/home-story-ao-dai.jpg",
+    "purpose": "index.html — ảnh dọc đoạn câu chuyện",
+    "source": "openverse",
+    "id": "openverse-7643b544-42c7-4319-8f30-975356c2be0b",
+    "title": "Vietnamese ladies in ao dai - traditional dress",
+    "creator": "Arthur Chapman",
+    "license": "CC BY-NC 2.0",
+    "page": "https://www.flickr.com/photos/32005048@N06/52701697234"
+  },
+  {
+    "file": "assets/img/lookbook-01.jpg",
+    "purpose": "index.html — lookbook",
+    "source": "openverse",
+    "id": "openverse-0f165a4b-7f50-4f92-af10-ab27efc39b6d",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 31",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53573759622"
+  },
+  {
+    "file": "assets/img/lookbook-02.jpg",
+    "purpose": "index.html — lookbook",
+    "source": "openverse",
+    "id": "openverse-a4b2c220-3d63-4bd6-b015-f74356eccb99",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 59",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53574620301"
+  },
+  {
+    "file": "assets/img/lookbook-04.jpg",
+    "purpose": "collections — ảnh bộ sưu tập",
+    "source": "openverse",
+    "id": "openverse-b9866df6-f68e-408c-9860-94aa1e223296",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 39",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53574946039"
+  },
+  {
+    "file": "assets/img/lookbook-03.jpg",
+    "purpose": "ảnh áo dài cho lookbook/bộ sưu tập",
+    "source": "openverse",
+    "id": "openverse-0f9a583f-04c9-40a9-a2ca-7fb2717153fb",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 60",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53574620291"
+  },
+  {
+    "file": "assets/img/lookbook-05.jpg",
+    "purpose": "ảnh áo dài cho lookbook/bộ sưu tập",
+    "source": "openverse",
+    "id": "openverse-2c1e716e-6055-4392-a26b-c8db7e794ab8",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 56",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53574620056"
+  },
+  {
+    "file": "assets/img/lookbook-06.jpg",
+    "purpose": "ảnh áo dài cho lookbook/bộ sưu tập",
+    "source": "openverse",
+    "id": "openverse-817b8faa-1b7f-46b9-ac49-c9eaed01bd76",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 25",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53574620691"
+  },
+  {
+    "file": "assets/img/lookbook-07.jpg",
+    "purpose": "ảnh áo dài cho lookbook/bộ sưu tập",
+    "source": "openverse",
+    "id": "openverse-634db000-c3e9-4e85-9a97-b40e71f88985",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 32",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53575062140"
+  },
+  {
+    "file": "assets/img/lookbook-08.jpg",
+    "purpose": "ảnh áo dài cho lookbook/bộ sưu tập",
+    "source": "openverse",
+    "id": "openverse-8516dd51-78aa-46fc-b074-ce8786ad0746",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 43",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53574827178"
+  },
+  {
+    "file": "assets/img/lookbook-09.jpg",
+    "purpose": "ảnh áo dài cho lookbook/bộ sưu tập",
+    "source": "openverse",
+    "id": "openverse-ba5f94b7-2d6f-439c-931f-35335c633523",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 58",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53575061810"
+  },
+  {
+    "file": "assets/img/about-tiem-may.jpg",
+    "purpose": "about.html — tiệm may đo",
+    "source": "openverse",
+    "id": "openverse-731621d6-df60-48bc-9597-8be48c2f4134",
+    "title": "Custom-made Clothings",
+    "creator": "Eva Ho - Chicago Premiere Wedding and Portrait Pho",
+    "license": "CC BY-NC 2.0",
+    "page": "https://www.flickr.com/photos/73528449@N00/147334289"
+  },
+  {
+    "file": "assets/img/contact-boutique.jpg",
+    "purpose": "contact.html — cửa hàng",
+    "source": "openverse",
+    "id": "openverse-c9546803-d3fb-4d07-ac6d-8aa91995b354",
+    "title": "Boutique",
+    "creator": "Eva Ho - Chicago Premiere Wedding and Portrait Pho",
+    "license": "CC BY-NC 2.0",
+    "page": "https://www.flickr.com/photos/73528449@N00/147284026"
+  },
+  {
+    "file": "assets/img/col-trinh-nguyen-cover.jpg",
+    "purpose": "collections — bìa BST áo dài trắng",
+    "source": "openverse",
+    "id": "openverse-29277f9e-2d3a-4f87-976a-1bcd05e5d67f",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/30718937698"
+  },
+  {
+    "file": "assets/img/ao-dai-a.jpg",
+    "purpose": "ảnh áo dài cho chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-cae5bb94-e5e6-43ec-a857-193b00dfca6a",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/30718941608"
+  },
+  {
+    "file": "assets/img/ao-dai-b.jpg",
+    "purpose": "ảnh áo dài cho chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-8365bb86-0fbf-46bb-87cb-d356e0f93e40",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/30718936428"
+  },
+  {
+    "file": "assets/img/ao-dai-c.jpg",
+    "purpose": "ảnh áo dài cho chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-16855b16-6ffc-4709-9dbc-91dfe5013748",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/30718933268"
+  },
+  {
+    "file": "assets/img/ao-dai-d.jpg",
+    "purpose": "ảnh áo dài cho chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-ae5eeac8-93f6-4965-83df-250fc47e7bd5",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/29651439447"
+  },
+  {
+    "file": "assets/img/ao-dai-e.jpg",
+    "purpose": "ảnh áo dài cho chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-6203e505-8221-472b-9034-eff8f0068b38",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/43870857134"
+  },
+  {
+    "file": "assets/img/col-van-mieu.jpg",
+    "purpose": "collections — BST trắng / Văn Miếu",
+    "source": "openverse",
+    "id": "openverse-3c1fbefa-ec99-490a-b5bd-b90e2fe10dbf",
+    "title": "Vietnamese Girls in Ao Dai",
+    "creator": "HeyItsWilliam",
+    "license": "CC BY-ND 2.0",
+    "page": "https://www.flickr.com/photos/40477905@N05/8076520969"
+  },
+  {
+    "file": "assets/img/sen-ha-lotus.jpg",
+    "purpose": "collection-sen-ha.html — cảm hứng hoa sen",
+    "source": "openverse",
+    "id": "openverse-867a4121-9f66-4e4c-a3e0-c4c31ec5a504",
+    "title": "Water Lotus",
+    "creator": "Nathalie E. Julien",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/water-lotus-4CVQFLHTMH"
+  },
+  {
+    "file": "assets/img/about-hue-ngo-mon.jpg",
+    "purpose": "about.html — cảm hứng cố đô Huế",
+    "source": "openverse",
+    "id": "openverse-58f6fa55-b9a0-477c-8f68-e69f34ac19b6",
+    "title": "Hue Imperial Citadel",
+    "creator": "xiquinhosilva",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/7138083@N04/54087703624"
+  },
+  {
+    "file": "assets/img/nh-a.jpg",
+    "purpose": "collections / chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-6282e26e-9fe3-488f-872e-019e88a7cf4f",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 64",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53575061565"
+  },
+  {
+    "file": "assets/img/nh-b.jpg",
+    "purpose": "collections / chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-133dd58b-ae6d-4881-84a3-9c2d7fb51281",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 06",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53575062530"
+  },
+  {
+    "file": "assets/img/nh-c.jpg",
+    "purpose": "collections / chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-e68f11e6-353f-40ec-b4c0-b72efb29758c",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 36",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53574946084"
+  },
+  {
+    "file": "assets/img/nh-d.jpg",
+    "purpose": "collections / chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-ff314638-4ed3-4a09-a82e-f23a597a568f",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 34",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53574946089"
+  },
+  {
+    "file": "assets/img/nh-e.jpg",
+    "purpose": "collections / chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-d91152e2-1dc4-4ef2-84c6-e47e75f73c51",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 62",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53575061765"
+  },
+  {
+    "file": "assets/img/nh-f.jpg",
+    "purpose": "collections / chi tiết BST",
+    "source": "openverse",
+    "id": "openverse-b8bd495d-cc00-48c3-b987-cf3ad8226cff",
+    "title": "Ao Dai - Nguyen Hue - March 08th 2024 24",
+    "creator": "pixiduc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/24633196@N00/53575062255"
+  },
+  {
+    "file": "assets/img/ao-dai-f.jpg",
+    "purpose": "collection-hy-su.html — ảnh BST cưới",
+    "source": "openverse",
+    "id": "openverse-f3747716-23bd-4852-b071-743cce828697",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/30718938298"
+  },
+  {
+    "file": "assets/img/ao-dai-g.jpg",
+    "purpose": "collection-hy-su.html — ảnh BST cưới",
+    "source": "openverse",
+    "id": "openverse-2f784df0-91a3-41ab-92ec-f8e1dd0eb31e",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/42779257160"
+  },
+  {
+    "file": "assets/img/may-do-hero-may-khau.webp",
+    "purpose": "may-do.html — ảnh hero xưởng may",
+    "source": "openverse",
+    "id": "openverse-cd8c4363-8cf8-497f-9295-ac3101212b33",
+    "title": "Vintage Singer sewing machine, location",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/6113012/photo-image-public-domain-vintage-black"
+  },
+  {
+    "file": "assets/img/article-lua-khung-cui.jpg",
+    "purpose": "article-lua-nha-xa.html — ảnh hero khung cửi dệt lụa",
+    "source": "openverse",
+    "id": "openverse-fa581e7f-ff9f-4731-9a55-dccd0faf3c1a",
+    "title": "Luang Prabang/Laos - Craft village (Traditional Lao Saa paper, Silk work, Rice Alcohol distillation)",
+    "creator": "Robert GLOD (Bob)",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/132881542@N07/54572612049"
+  },
+  {
+    "file": "assets/img/may-do-lua.jpg",
+    "purpose": "may-do.html — ảnh chất liệu lụa",
+    "source": "openverse",
+    "id": "openverse-73735acb-0bcb-4b64-94ee-dd3bbc78a39a",
+    "title": "",
+    "creator": "Leonard Chien",
+    "license": "CC BY-NC-SA 2.0",
+    "page": "https://www.flickr.com/photos/70217866@N00/54500926944"
+  },
+  {
+    "file": "assets/img/may-do-gia-dinh.jpg",
+    "purpose": "may-do.html — dịch vụ áo gia đình / dịp lễ",
+    "source": "openverse",
+    "id": "openverse-01ce2e7f-5b8d-471e-8311-e9a64e453061",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/43870857924"
+  },
+  {
+    "file": "assets/img/article-lua-ken-tam.jpg",
+    "purpose": "article-lua-nha-xa.html — ảnh kén tằm trong bài",
+    "source": "openverse",
+    "id": "openverse-095c6666-4202-45ea-a748-89e61c22f0db",
+    "title": "Showing the clean silk cocoons at the silk store",
+    "creator": "RonParsonsflowershots",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/95453157@N02/54212742101"
+  },
+  {
+    "file": "assets/img/may-do-lua.webp",
+    "purpose": "may-do.html — thư viện vải tại xưởng",
+    "source": "openverse",
+    "id": "openverse-23d153b4-7050-4f55-bc4f-67ec078f71c1",
+    "title": "Original public domain image Wikimedia",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/3300540/free-photo-image-home-textile-silk"
+  },
+  {
+    "file": "assets/img/article-giu-ao-hero.jpg",
+    "purpose": "article-giu-ao-lua.html — ảnh hero áo dài lụa",
+    "source": "openverse",
+    "id": "openverse-c5f70972-af99-47b8-a206-c273670ffa84",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/30718939298"
+  },
+  {
+    "file": "assets/img/article-lua-ken-tam.webp",
+    "purpose": "article-lua-nha-xa.html — ảnh lụa nhuộm trong bài",
+    "source": "openverse",
+    "id": "openverse-c4d236d7-a66f-484e-a185-ae3558ae7b6c",
+    "title": "Original public domain image Wikimedia",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/3292292/free-photo-image-silk-indonesia-apparel"
+  },
+  {
+    "file": "assets/img/may-do-ca-nhan.jpg",
+    "purpose": "may-do.html — dịch vụ may đo cá nhân",
+    "source": "openverse",
+    "id": "openverse-207c994f-7661-4127-8e92-14c0c683f434",
+    "title": "Ao Dai",
+    "creator": "Ngo Quoc Photography",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/138124640@N02/30718935828"
+  }
+]

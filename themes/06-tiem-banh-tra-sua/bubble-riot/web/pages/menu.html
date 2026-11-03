@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.menu.title">Menu — BUBBLE RIOT</title>
+  <meta name="description" content="The full BUBBLE RIOT board: milk tea, fruit tea, cream series, toppings and the bakery case. Prices, notes and what is brewing this week." data-i18n-content="meta.menu.desc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-paper font-body text-ink antialiased" data-page="menu">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="sticky top-0 z-50 border-b-2 border-ink bg-ink text-paper" data-header="shrink">
+    <div class="header-inner mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <a href="../index.html" class="flex items-center gap-2.5" aria-label="BUBBLE RIOT — Home">
+        <span class="grid h-7 w-7 place-items-center border-2 border-paper bg-riot font-display text-lg font-bold leading-none text-ink">B</span>
+        <span class="font-display text-2xl font-bold uppercase leading-none tracking-tight sm:text-3xl">BUBBLE RIOT<span class="text-riot">.</span></span>
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
+        <a class="nav-link" href="../index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link" href="menu.html" aria-current="page" data-i18n="nav.menu">Menu</a>
+        <a class="nav-link" href="about.html" data-i18n="nav.about">About</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.lang">
+          <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="vi" aria-pressed="false">VI</button>
+        </div>
+        <button type="button" class="grid h-10 w-10 place-items-center border-2 border-paper lg:hidden" data-menu-toggle="#mobile-menu" aria-label="Toggle menu" data-i18n-aria="action.menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="flex w-5 flex-col gap-1.5" aria-hidden="true">
+            <span class="h-0.5 w-full bg-paper"></span>
+            <span class="h-0.5 w-full bg-paper"></span>
+            <span class="h-0.5 w-full bg-paper"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu absolute left-0 right-0 top-full border-t-2 border-paper bg-ink px-4 pb-8 pt-3 sm:px-6 lg:hidden" data-menu>
+      <a class="mobile-link" href="../index.html"><span data-i18n="nav.home">Home</span><span class="text-sm tracking-[0.2em] text-paper/50">01</span></a>
+      <a class="mobile-link" href="menu.html" aria-current="page"><span data-i18n="nav.menu">Menu</span><span class="text-sm tracking-[0.2em] text-paper/50">02</span></a>
+      <a class="mobile-link" href="about.html"><span data-i18n="nav.about">About</span><span class="text-sm tracking-[0.2em] text-paper/50">03</span></a>
+      <a class="mobile-link" href="about.html#visit"><span data-i18n="nav.visit">Visit us</span><span class="text-sm tracking-[0.2em] text-paper/50">04</span></a>
+      <p class="mt-6 font-display text-sm uppercase tracking-[0.2em] text-paper/50" data-i18n="header.hours">Open daily · 08:00 — 22:00</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="menu-hero" data-section="menu-hero" class="relative overflow-hidden border-b-2 border-ink bg-zap">
+      <div class="halftone absolute inset-0 text-ink opacity-[0.14]" aria-hidden="true"></div>
+      <div class="slash-lines absolute -left-24 bottom-0 h-full w-56 opacity-30" aria-hidden="true"></div>
+
+      <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-8 px-4 pb-12 pt-8 sm:px-6 lg:grid-cols-12 lg:items-end lg:gap-10 lg:px-10 lg:pb-16 lg:pt-12 2xl:px-16">
+        <div class="lg:col-span-7">
+          <nav class="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/60" aria-label="Breadcrumb">
+            <a href="../index.html" class="hover:text-ink" data-i18n="nav.home">Home</a>
+            <span aria-hidden="true">/</span>
+            <span class="text-ink" data-i18n="nav.menu">Menu</span>
+          </nav>
+
+          <p class="mt-6 inline-flex items-center gap-2 border-2 border-ink bg-paper px-3 py-1 font-display text-sm font-bold uppercase tracking-[0.18em]" data-i18n="menu.hero.kicker">The board · 24 flavors</p>
+
+          <h1 class="type-hero mt-4 font-display font-bold uppercase" data-split="words">
+            <span data-i18n="menu.hero.title1">Pick your</span><br>
+            <span class="outline-ink" data-i18n="menu.hero.title2">flavor</span><span class="text-cherry">.</span>
+          </h1>
+
+          <p class="mt-5 max-w-lg text-base leading-relaxed text-ink/80 sm:text-lg" data-i18n="menu.hero.lead">Four chapters, one rule: it has to hit loud. Prices are for a regular cup. Toppings are extra.</p>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="tag-pill bg-ink text-paper" data-i18n="menu.hero.tag1">No cart</span>
+            <span class="tag-pill bg-paper" data-i18n="menu.hero.tag2">No account</span>
+            <span class="tag-pill bg-paper" data-i18n="menu.hero.tag3">Order at the counter</span>
+          </div>
+        </div>
+
+        <div class="relative lg:col-span-5">
+          <div class="absolute -left-3 top-4 z-20" data-float="6">
+            <span class="sticker bg-cherry text-paper" style="--rot:-7deg" data-i18n="menu.hero.sticker">Brewed to order</span>
+          </div>
+          <figure class="photo-frame aspect-[16/11] shadow-hard-lg" data-reveal="clip">
+            <img src="../assets/img/hero-boba.jpg" alt="A brown sugar bubble tea with tapioca pearls and soft serve on top" data-i18n-alt="alt.menuHero" class="h-full w-full object-cover object-top" fetchpriority="high" decoding="async">
+            <figcaption class="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-3 border-t-2 border-ink bg-paper px-4 py-3">
+              <span class="min-w-0">
+                <span class="block font-display text-xl font-bold uppercase leading-none sm:text-2xl" data-i18n="menu.hero.cupName">Brown Sugar Riot</span>
+                <span class="mt-1 block text-[11px] uppercase tracking-[0.16em] text-ink/60" data-i18n="menu.hero.cupNote">Black tea · fresh milk · pearls</span>
+              </span>
+              <span class="price shrink-0 text-xl sm:text-2xl">65,000₫</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="hazard relative z-10 h-4 border-t-2 border-ink" aria-hidden="true"></div>
+    </section>
+
+    <section id="menu-board" data-section="menu-chapters" class="relative border-b-2 border-ink bg-paper py-14 sm:py-16 lg:py-24" data-filter-group>
+      <div class="dot-grid absolute inset-0" aria-hidden="true"></div>
+      <div class="relative mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            <h2 class="type-h2 font-display font-bold uppercase">
+              <span data-i18n="menu.board.title1">Everything</span>
+              <span class="underline-riot" data-i18n="menu.board.title2">we pour</span>
+            </h2>
+          </div>
+          <p class="max-w-md text-base leading-relaxed text-ink/75 lg:col-span-5 lg:justify-self-end" data-i18n="menu.board.intro">Filter by chapter. Every cup is brewed when you order it, never before.</p>
+        </div>
+
+        <div class="mt-8 flex gap-2 overflow-x-auto pb-2 no-scrollbar" role="group" aria-label="Menu filters">
+          <button type="button" class="filter-btn is-active" data-filter="all" data-i18n="menu.filter.all">All</button>
+          <button type="button" class="filter-btn" data-filter="milk" data-i18n="menu.filter.milk">Milk tea</button>
+          <button type="button" class="filter-btn" data-filter="fruit" data-i18n="menu.filter.fruit">Fruit tea</button>
+          <button type="button" class="filter-btn" data-filter="cream" data-i18n="menu.filter.cream">Cream series</button>
+          <button type="button" class="filter-btn" data-filter="topping" data-i18n="menu.filter.top">Toppings</button>
+        </div>
+
+        <div class="mt-10 space-y-10 lg:space-y-14">
+          <article id="milk-tea" data-category="milk" class="card-hard bg-riot" data-reveal="up">
+            <div class="grid gap-0 lg:grid-cols-12">
+              <figure class="photo-frame order-2 aspect-[4/3] border-0 border-t-2 border-ink lg:order-1 lg:col-span-5 lg:aspect-auto lg:border-r-2 lg:border-t-0">
+                <img src="https://live.staticflickr.com/3604/3478078559_2e10bedc76_b.jpg" alt="A glass of milk tea with tapioca pearls at the bottom" data-i18n-alt="alt.menuMilk" class="h-full min-h-64 w-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              </figure>
+              <div class="order-1 flex flex-col p-5 sm:p-6 lg:order-2 lg:col-span-7 lg:p-8">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="tag-pill bg-ink text-paper" data-i18n="menu.milk.label">01 / Milk tea</span>
+                  <span class="tag-pill bg-paper" data-i18n="menu.milk.note">6 flavors</span>
+                </div>
+                <h3 class="mt-3 font-display text-4xl font-bold uppercase leading-none sm:text-5xl" data-i18n="menu.milk.title">Milk tea</h3>
+                <p class="mt-3 max-w-lg text-sm leading-relaxed text-ink/80 sm:text-base" data-i18n="menu.milk.desc">Strong black tea, fresh milk, brown sugar syrup. Pearls come with the regular cup.</p>
+
+                <div class="mt-5 border-t-2 border-ink">
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.milk.i1">Brown Sugar Riot</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.milk.i1n">Caramelised sugar, fresh milk, warm pearls.</p></div>
+                    <span class="price">65,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.milk.i2">Jasmine Milk Tea</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.milk.i2n">Jasmine green tea, milk, less sweet on request.</p></div>
+                    <span class="price">55,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.milk.i3">Roasted Oolong Latte</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.milk.i3n">Deep roast, oat milk option, no sugar by default.</p></div>
+                    <span class="price">58,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.milk.i4">Thai Tea Riot</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.milk.i4n">Spiced Thai tea, condensed milk, very orange.</p></div>
+                    <span class="price">58,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.milk.i5">Taro Haze</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.milk.i5n">Taro, coconut cream, a pinch of sea salt.</p></div>
+                    <span class="price">62,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.milk.i6">Hojicha Cream</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.milk.i6n">Roasted green tea, milk, cream cap on top.</p></div>
+                    <span class="price">65,000₫</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="fruit-tea" data-category="fruit" class="card-hard bg-zap" data-reveal="up">
+            <div class="grid gap-0 lg:grid-cols-12">
+              <div class="flex flex-col p-5 sm:p-6 lg:col-span-7 lg:p-8">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="tag-pill bg-ink text-paper" data-i18n="menu.fruit.label">02 / Fruit tea</span>
+                  <span class="tag-pill bg-paper" data-i18n="menu.fruit.note">No milk</span>
+                </div>
+                <h3 class="mt-3 font-display text-4xl font-bold uppercase leading-none sm:text-5xl" data-i18n="menu.fruit.title">Fruit tea</h3>
+                <p class="mt-3 max-w-lg text-sm leading-relaxed text-ink/80 sm:text-base" data-i18n="menu.fruit.desc">Jasmine green tea base, fruit cut in the morning, lime on the side. Loud and cold.</p>
+
+                <div class="mt-5 grid gap-x-8 border-t-2 border-ink sm:grid-cols-2">
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.fruit.i1">Strawberry Static</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.fruit.i1n">Crushed strawberry, lime, popping boba.</p></div>
+                    <span class="price">69,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.fruit.i2">Passionfruit Blast</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.fruit.i2n">Passionfruit, orange, a lot of ice.</p></div>
+                    <span class="price">62,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.fruit.i3">Peach Oolong</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.fruit.i3n">Cold oolong, peach syrup, fresh peach slices.</p></div>
+                    <span class="price">65,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.fruit.i4">Lime Green Tea</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.fruit.i4n">Jasmine tea, lime, mint, barely sweet.</p></div>
+                    <span class="price">55,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.fruit.i5">Wintermelon Cooler</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.fruit.i5n">Wintermelon, lime, salt rim if you ask.</p></div>
+                    <span class="price">52,000₫</span>
+                  </div>
+                  <div class="menu-row">
+                    <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.fruit.i6">Mango Sticky</h4><p class="mt-1 text-sm text-ink/75" data-i18n="menu.fruit.i6n">Mango, coconut milk, sticky rice pearls.</p></div>
+                    <span class="price">69,000₫</span>
+                  </div>
+                </div>
+              </div>
+              <figure class="photo-frame order-first aspect-[4/3] border-0 border-b-2 border-ink lg:order-last lg:col-span-5 lg:aspect-auto lg:border-b-0 lg:border-l-2">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Popping_boba_w_Bubble_Tea.jpg/960px-Popping_boba_w_Bubble_Tea.jpg" alt="A tall glass of iced fruit tea with popping boba" data-i18n-alt="alt.menuFruit" class="h-full min-h-64 w-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              </figure>
+            </div>
+          </article>
+
+          <article id="cream-series" data-category="cream" class="card-hard overflow-hidden bg-cherry text-paper" data-reveal="up">
+            <div class="relative">
+              <figure class="photo-frame aspect-[16/9] border-0 border-b-2 border-ink sm:aspect-[21/9]">
+                <img src="https://pd.w.org/2026/03/1869c75f6aa641f8.65571191-1510x2048.jpeg" alt="A cream-topped drink in a tall cup" data-i18n-alt="alt.menuCream" class="h-full w-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              </figure>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 to-transparent p-5 sm:p-6">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="tag-pill border-paper/60 text-paper" data-i18n="menu.cream.label">03 / Cream series</span>
+                  <span class="tag-pill border-paper/60 text-paper" data-i18n="menu.cream.note">4 flavors</span>
+                </div>
+                <h3 class="mt-2 font-display text-4xl font-bold uppercase leading-none sm:text-5xl" data-i18n="menu.cream.title">Cream series</h3>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 lg:p-8">
+              <p class="max-w-xl text-sm leading-relaxed text-paper/85 sm:text-base" data-i18n="menu.cream.desc">A salted cream cap over cold tea. Drink it without a straw if you want the full argument.</p>
+              <div class="mt-5 grid gap-x-8 border-t-2 border-paper/50 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="menu-row">
+                  <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.cream.i1">Sea Salt Cream</h4><p class="mt-1 text-sm text-paper/75" data-i18n="menu.cream.i1n">Black tea, salted cream, pearls.</p></div>
+                  <span class="price">68,000₫</span>
+                </div>
+                <div class="menu-row">
+                  <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.cream.i2">Cheese Foam Oolong</h4><p class="mt-1 text-sm text-paper/75" data-i18n="menu.cream.i2n">Cold oolong, cheese foam, no sugar.</p></div>
+                  <span class="price">68,000₫</span>
+                </div>
+                <div class="menu-row">
+                  <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.cream.i3">Coconut Cloud</h4><p class="mt-1 text-sm text-paper/75" data-i18n="menu.cream.i3n">Coconut cream, taro, toasted coconut.</p></div>
+                  <span class="price">65,000₫</span>
+                </div>
+                <div class="menu-row">
+                  <div><h4 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.cream.i4">Matcha Cream</h4><p class="mt-1 text-sm text-paper/75" data-i18n="menu.cream.i4n">Ceremonial matcha, milk, cream cap.</p></div>
+                  <span class="price">72,000₫</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="toppings" data-category="topping" class="card-hard bg-ink text-paper" data-reveal="up">
+            <div class="grid gap-0 lg:grid-cols-12">
+              <div class="p-5 sm:p-6 lg:col-span-7 lg:p-8">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="tag-pill border-paper/50 text-zap" data-i18n="menu.top.label">04 / Toppings</span>
+                  <span class="tag-pill border-paper/50" data-i18n="menu.top.note">+10,000₫ each</span>
+                </div>
+                <h3 class="mt-3 font-display text-4xl font-bold uppercase leading-none sm:text-5xl" data-i18n="menu.top.title">Toppings</h3>
+                <p class="mt-3 max-w-lg text-sm leading-relaxed text-paper/75 sm:text-base" data-i18n="menu.top.desc">Chewy, crunchy or floating. Two toppings per cup is the house limit.</p>
+
+                <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div class="flex items-baseline justify-between gap-3 border-b border-paper/25 pb-2">
+                    <span class="font-display text-xl font-bold uppercase leading-none" data-i18n="menu.top.i1">Tapioca pearls</span>
+                    <span class="price text-lg text-zap">10,000₫</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-3 border-b border-paper/25 pb-2">
+                    <span class="font-display text-xl font-bold uppercase leading-none" data-i18n="menu.top.i2">Golden boba</span>
+                    <span class="price text-lg text-zap">12,000₫</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-3 border-b border-paper/25 pb-2">
+                    <span class="font-display text-xl font-bold uppercase leading-none" data-i18n="menu.top.i3">Grass jelly</span>
+                    <span class="price text-lg text-zap">10,000₫</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-3 border-b border-paper/25 pb-2">
+                    <span class="font-display text-xl font-bold uppercase leading-none" data-i18n="menu.top.i4">Pudding</span>
+                    <span class="price text-lg text-zap">12,000₫</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-3 border-b border-paper/25 pb-2">
+                    <span class="font-display text-xl font-bold uppercase leading-none" data-i18n="menu.top.i5">Popping boba</span>
+                    <span class="price text-lg text-zap">12,000₫</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-3 border-b border-paper/25 pb-2">
+                    <span class="font-display text-xl font-bold uppercase leading-none" data-i18n="menu.top.i6">Cheese foam</span>
+                    <span class="price text-lg text-zap">15,000₫</span>
+                  </div>
+                </div>
+              </div>
+              <figure class="photo-frame order-first aspect-[4/3] border-0 border-b-2 border-paper lg:order-last lg:col-span-5 lg:aspect-auto lg:border-b-0 lg:border-l-2">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Tapioca_balls_%284507369304%29.jpg/960px-Tapioca_balls_%284507369304%29.jpg" alt="A close-up of glossy tapioca pearls" data-i18n-alt="alt.menuTop" class="h-full min-h-56 w-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-8 text-xs uppercase tracking-[0.16em] text-ink/55" data-i18n="menu.board.footnote">Prices in Vietnamese dong. Cash or bank transfer at the counter.</p>
+      </div>
+    </section>
+
+    <section id="build-strip" data-section="build-your-cup" class="relative overflow-hidden border-b-2 border-ink bg-bone py-14 sm:py-16 lg:py-24">
+      <div class="bg-paper-grid absolute inset-0 opacity-60" aria-hidden="true"></div>
+      <div class="relative mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-8">
+            <h2 class="type-h2 font-display font-bold uppercase" data-i18n="menu.build.title">Build your cup</h2>
+          </div>
+          <p class="max-w-sm text-base leading-relaxed text-ink/75 lg:col-span-4 lg:justify-self-end" data-i18n="menu.build.lead">Three decisions. Say them at the counter, in any order.</p>
+        </div>
+
+        <ol class="mt-10 grid gap-4 md:grid-cols-3 md:gap-5" data-reveal-stagger="100">
+          <li class="card-hard-sm flex flex-col bg-paper p-5 sm:p-6">
+            <span class="font-display text-6xl font-bold leading-none text-riot">01</span>
+            <h3 class="mt-3 font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.build.s1t">Choose a base</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink/75" data-i18n="menu.build.s1d">Black tea, jasmine green, roasted oolong or no tea at all. Oat milk costs 8,000₫ more.</p>
+          </li>
+          <li class="card-hard-sm flex flex-col bg-paper p-5 sm:p-6">
+            <span class="font-display text-6xl font-bold leading-none text-riot">02</span>
+            <h3 class="mt-3 font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.build.s2t">Pick your temperature</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink/75" data-i18n="menu.build.s2d">Regular ice, less ice, or no ice. We will judge you quietly and pour it anyway.</p>
+          </li>
+          <li class="card-hard-sm flex flex-col bg-paper p-5 sm:p-6">
+            <span class="font-display text-6xl font-bold leading-none text-riot">03</span>
+            <h3 class="mt-3 font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.build.s3t">Add a topping</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink/75" data-i18n="menu.build.s3d">Pearls, jelly, pudding, foam. Two per cup, no exceptions, we tried.</p>
+          </li>
+        </ol>
+
+        <p class="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 border-t-2 border-ink pt-4 text-xs uppercase tracking-[0.16em] text-ink/60">
+          <span data-i18n="menu.build.note">Nothing here is a subscription.</span>
+          <span class="hidden h-1 w-1 bg-ink/40 sm:block" aria-hidden="true"></span>
+          <span data-i18n="menu.build.note2">No account, no cart, no delivery app. Walk in.</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="board" data-section="menu-board-photo" class="relative overflow-hidden border-b-2 border-ink bg-ink text-paper">
+      <div class="absolute inset-x-0 -inset-y-[12%]" data-parallax="0.12">
+        <img src="https://live.staticflickr.com/1159/558239112_cfa6d00e44_b.jpg" alt="A hand-written cafe menu board on a dark wall" data-i18n-alt="alt.menuBoard" class="h-full w-full object-cover opacity-45" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      </div>
+      <div class="absolute inset-0 bg-ink/55" aria-hidden="true"></div>
+      <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl gap-8 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-12 lg:gap-12 lg:px-10 lg:py-28 2xl:px-16">
+        <blockquote class="lg:col-span-8">
+          <p class="type-quote font-display font-bold uppercase" data-i18n="menu.board2.quote">“If it is not on the board, ask. The answer is usually yes.”</p>
+          <footer class="mt-5 text-xs uppercase tracking-[0.18em] text-paper/60" data-i18n="menu.board2.cite">Linh, counter lead · on the 4pm rush</footer>
+        </blockquote>
+        <div class="grid content-end gap-3 lg:col-span-4">
+          <p class="border-l-2 border-zap pl-3 text-sm leading-relaxed text-paper/80" data-i18n="menu.board2.n1">Cash or bank transfer. No card reader, no QR code, no app.</p>
+          <p class="border-l-2 border-zap pl-3 text-sm leading-relaxed text-paper/80" data-i18n="menu.board2.n2">Custom sugar level is fine. Custom everything is not.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="bakery-break" data-section="bakery-break" class="relative overflow-hidden border-b-2 border-ink bg-paper py-14 sm:py-16 lg:py-24">
+      <div class="relative mx-auto grid w-full max-w-screen-2xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:items-center lg:gap-14 lg:px-10 2xl:px-16">
+        <div class="lg:col-span-5">
+          <span class="tag-pill border-ink/40" data-i18n="menu.bakery.label">The bakery case</span>
+          <h2 class="type-h2 mt-4 font-display font-bold uppercase" data-i18n="menu.bakery.title">Something to chew.</h2>
+          <p class="mt-4 max-w-md text-base leading-relaxed text-ink/75" data-i18n="menu.bakery.lead">Sweet tea needs salt and butter next to it. The case is small on purpose, so it stays fresh.</p>
+
+          <div class="mt-6 grid gap-x-8 border-t-2 border-ink sm:grid-cols-2">
+            <div class="menu-row">
+              <div><h3 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.bakery.i1">Butter croissant</h3><p class="mt-1 text-sm text-ink/65" data-i18n="menu.bakery.i1n">Laminated over three days.</p></div>
+              <span class="price">45,000₫</span>
+            </div>
+            <div class="menu-row">
+              <div><h3 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.bakery.i2">Pandan coconut roll</h3><p class="mt-1 text-sm text-ink/65" data-i18n="menu.bakery.i2n">Soft, green, gone by noon.</p></div>
+              <span class="price">52,000₫</span>
+            </div>
+            <div class="menu-row">
+              <div><h3 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.bakery.i3">Miso chocolate cookie</h3><p class="mt-1 text-sm text-ink/65" data-i18n="menu.bakery.i3n">Salty edge, fudgy middle.</p></div>
+              <span class="price">38,000₫</span>
+            </div>
+            <div class="menu-row">
+              <div><h3 class="font-display text-2xl font-bold uppercase leading-none" data-i18n="menu.bakery.i4">Salted honey bun</h3><p class="mt-1 text-sm text-ink/65" data-i18n="menu.bakery.i4n">Sticky, warm, dangerous.</p></div>
+              <span class="price">42,000₫</span>
+            </div>
+          </div>
+
+          <p class="mt-4 text-xs uppercase tracking-[0.16em] text-ink/60" data-i18n="menu.bakery.note">Bakes land at 6:00 and 14:00. When they are gone, they are gone.</p>
+
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a href="tel:+842439368421" class="btn-hard bg-riot text-ink" data-i18n="menu.bakery.cta">Order a tray</a>
+            <a href="mailto:hello@bubbleriot.vn" class="btn-line" data-i18n="menu.bakery.cta2">Email the kitchen</a>
+          </div>
+        </div>
+
+        <div class="relative lg:col-span-7">
+          <figure class="photo-frame aspect-[5/4] shadow-hard-lg" data-reveal="clip">
+            <img src="https://live.staticflickr.com/3407/3566020085_c0ffc58abf_b.jpg" alt="A bakery display case filled with pastries" data-i18n-alt="alt.menuBakery" class="h-full w-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          </figure>
+          <div class="absolute -right-1 top-4 z-10 sm:right-4" data-float="6">
+            <span class="sticker bg-zap text-ink" style="--rot:6deg" data-i18n="menu.bakery.sticker">Fresh at 6AM</span>
+          </div>
+          <p class="mt-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-ink/60" data-i18n="menu.bakery.caption">Small batch, twice a day.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" data-section="poster-footer" class="relative overflow-hidden border-t-2 border-ink bg-ink text-paper">
+    <div class="hazard h-3" aria-hidden="true"></div>
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-8 pt-14 sm:px-6 lg:px-10 lg:pt-20 2xl:px-16">
+      <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
+        <div class="lg:col-span-5">
+          <p class="tag-pill border-paper/40 text-zap" data-i18n="footer.kicker">Hanoi · Milk tea &amp; bakery</p>
+          <p class="mt-5 max-w-md text-base leading-relaxed text-paper/75" data-i18n="footer.blurb">Milk tea, butter croissants and a speaker that is too loud. Find us on Trang Tien, a few doors from the old cinema.</p>
+          <a href="menu.html" class="btn-hard mt-6 bg-riot text-ink" data-i18n="footer.cta">See the menu</a>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h2 class="font-display text-lg font-bold uppercase tracking-[0.16em] text-zap" data-i18n="footer.pages">Pages</h2>
+          <ul class="mt-4 space-y-1">
+            <li><a class="footer-link" href="../index.html" data-i18n="nav.home">Home</a></li>
+            <li><a class="footer-link" href="menu.html" data-i18n="nav.menu">Menu</a></li>
+            <li><a class="footer-link" href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a class="footer-link" href="about.html#visit" data-i18n="nav.visit">Visit us</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4">
+          <h2 class="font-display text-lg font-bold uppercase tracking-[0.16em] text-zap" data-i18n="footer.visit">Visit</h2>
+          <address class="mt-4 not-italic text-base leading-relaxed text-paper/75">
+            <p>24 Trang Tien<br>Hoan Kiem, Hanoi</p>
+            <p class="mt-4"><span data-i18n="footer.hoursLabel">Open daily</span><br><span class="font-display text-2xl font-bold tracking-wide text-paper">08:00 — 22:00</span></p>
+          </address>
+          <div class="mt-4 flex flex-col items-start gap-1">
+            <a class="footer-link" href="tel:+842439368421">+84 24 3936 8421</a>
+            <a class="footer-link" href="mailto:hello@bubbleriot.vn">hello@bubbleriot.vn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 border-t border-paper/20 pt-7">
+        <div class="footer-wordmark text-paper">BUBBLE RIOT<span class="text-riot">.</span></div>
+      </div>
+
+      <div class="mt-7 flex flex-col gap-3 border-t border-paper/20 pt-5 text-[10px] uppercase tracking-[0.16em] text-paper/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 BUBBLE RIOT. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <p data-i18n="footer.credit">Made loud in Hanoi. Photos are prototype references.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="fixed bottom-5 right-5 z-40 grid h-12 w-12 place-items-center border-2 border-ink bg-zap text-xl font-bold text-ink shadow-hard-sm" data-back-to-top aria-label="Back to top" data-i18n-aria="action.top" title="Back to top">↑</button>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/motion.js"></script>
+  <script src="../assets/js/atmos.js"></script>
+</body>
+</html>

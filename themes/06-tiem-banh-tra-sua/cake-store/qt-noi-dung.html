@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nội dung | Quản lý tiệm</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-018 Nội dung và bài viết: FR-033. 6 tab: Trang chủ, Câu chuyện, Ảnh không gian, Cảm nhận khách, Bài viết, Thông tin liên hệ. ?tab=posts -->
+<body data-screen="SCR-018" data-layout="admin" data-nav="content" data-title="Nội dung" class="admin bg-[#FFFBF6] text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="lg:pl-60 pb-24 lg:pb-12">
+    <div class="mx-auto max-w-admin px-4 md:px-6 lg:px-8 pt-4 lg:pt-8">
+      <h1 class="text-[20px] lg:text-2xl font-extrabold">Nội dung</h1>
+      <div class="mt-4 hidden md:flex flex-wrap gap-2" role="tablist" aria-label="Nhóm nội dung" id="tabs"></div>
+      <div class="mt-4 md:hidden field"><label for="tab-select" class="sr-only">Nhóm nội dung</label><select id="tab-select" class="field-input"></select></div>
+      <div id="panel" class="mt-4" role="tabpanel"></div>
+    </div>
+  </main>
+
+  <script>
+    App.onReady(function () {
+      var TABS = [['home', 'Trang chủ'], ['story', 'Câu chuyện'], ['gallery', 'Ảnh không gian'], ['testi', 'Cảm nhận khách'], ['posts', 'Bài viết'], ['contact', 'Thông tin liên hệ']];
+      var tab = App.param('tab') || 'home';
+      var shop = DB.get('shop');
+      var panel = $('#panel');
+      function card(inner) { return '<section class="rounded-2xl bg-white border border-beige p-4 md:p-6">' + inner + '</section>'; }
+      function saveBtn(id, label) { return '<div class="mt-6 flex justify-end"><button type="button" id="' + id + '" class="btn btn-primary h-11 px-6">' + (label || 'Lưu') + '</button></div>'; }
+      function done(btn, msg) { FormUI.busy(btn, true, 'Đang lưu...'); setTimeout(function () { FormUI.busy(btn, false); Toast.show(msg || 'Đã lưu', 'success'); }, 450); }
+      function field(id, label, value, opts) {
+        opts = opts || {};
+        var input = opts.area ? '<textarea id="' + id + '" rows="' + (opts.rows || 3) + '" maxlength="' + (opts.max || 2000) + '" class="field-input">' + Fmt.esc(value || '') + '</textarea>' : '<input id="' + id + '" type="' + (opts.type || 'text') + '" maxlength="' + (opts.max || 255) + '" class="field-input" value="' + Fmt.esc(value || '') + '">';
+        return '<div class="field ' + (opts.cls || '') + '"><label class="field-label" for="' + id + '">' + label + (opts.req ? ' <span class="text-danger">*</span>' : '') + '</label>' + input + (opts.help ? '<p class="field-help">' + opts.help + '</p>' : '') + '</div>';
+      }
+
+      /* ---------------- Tab: Trang chủ ---------------- */
+      function tabHome() {
+        panel.innerHTML = card('<h2 class="font-extrabold">Đầu trang chủ</h2><p class="text-sm text-ink-muted">Ảnh bánh nổi bật, khẩu hiệu và mô tả ngắn hiển thị ở đầu trang chủ.</p>' +
+          '<div class="mt-4 grid lg:grid-cols-2 gap-6"><div><p class="field-label mb-2">Ảnh đầu trang</p><div id="hero-up"></div></div><div class="space-y-4">' +
+          field('slogan', 'Khẩu hiệu (VI)', shop.slogan, { req: true, max: 80 }) + field('slogan_en', 'Khẩu hiệu (EN)', shop.slogan_en, { max: 80 }) +
+          field('intro', 'Mô tả ngắn (VI)', shop.intro, { area: true, rows: 2, max: 200 }) + field('intro_en', 'Mô tả ngắn (EN)', shop.intro_en, { area: true, rows: 2, max: 200 }) + '</div></div>' + saveBtn('save'));
+        var files = [{ src: shop.heroImage, name: 'Ảnh đầu trang' }];
+        Uploader.mount($('#hero-up'), { max: 1, files: files, error: 'Ảnh phải là JPG, PNG, WEBP, tối đa 5 MB.', onChange: function (f) { files = f; } });
+        $('#save').onclick = function () {
+          var s = $('#slogan'); if (!s.value.trim()) { FormUI.setError(s, 'Vui lòng nhập đủ các trường bắt buộc.'); s.focus(); return; }
+          if (!files.length) { Toast.show('Cần 1 ảnh đầu trang.', 'error'); return; }
+          ['slogan', 'slogan_en', 'intro', 'intro_en'].forEach(function (k) { shop[k] = $('#' + k).value.trim(); });
+          shop.heroImage = files[0].src; DB.save('shop'); done(this);
+        };
+      }
+
+      /* ---------------- Tab: Câu chuyện ---------------- */
+      function tabStory() {
+        panel.innerHTML = card('<h2 class="font-extrabold">Câu chuyện của tiệm</h2><p class="text-sm text-ink-muted">Mỗi đoạn cách nhau một dòng trống.</p>' +
+          '<div class="mt-4 grid lg:grid-cols-12 gap-6"><div class="lg:col-span-8 space-y-4">' + field('story', 'Tiếng Việt', shop.story.join('\n\n'), { area: true, rows: 8, max: 4000 }) + field('story_en', 'English', (shop.story_en || []).join('\n\n'), { area: true, rows: 6, max: 4000 }) + '</div>' +
+          '<div class="lg:col-span-4"><p class="field-label mb-2">Ảnh</p><div id="story-up"></div></div></div>' + saveBtn('save'));
+        var files = [{ src: shop.storyImage, name: 'Ảnh câu chuyện' }];
+        Uploader.mount($('#story-up'), { max: 1, files: files, onChange: function (f) { files = f; } });
+        $('#save').onclick = function () {
+          shop.story = $('#story').value.split(/\n\s*\n/).map(function (x) { return x.trim(); }).filter(Boolean);
+          shop.story_en = $('#story_en').value.split(/\n\s*\n/).map(function (x) { return x.trim(); }).filter(Boolean);
+          if (files[0]) shop.storyImage = files[0].src;
+          DB.save('shop'); done(this);
+        };
+      }
+
+      /* ---------------- Tab: Ảnh không gian ---------------- */
+      function tabGallery() {
+        var g = DB.get('gallery');
+        panel.innerHTML = card('<h2 class="font-extrabold">Ảnh không gian tiệm</h2><p class="text-sm text-ink-muted mb-4">Ảnh đầu tiên hiển thị trước. Bấm ngôi sao để đưa ảnh lên đầu, thùng rác để xóa.</p><div id="g-up"></div>' + saveBtn('save'));
+        var files = g.map(function (x) { return { src: x.src, name: x.alt }; });
+        Uploader.mount($('#g-up'), { max: 12, star: true, files: files, error: 'Ảnh phải là JPG, PNG, WEBP, tối đa 5 MB.', onChange: function (f) { files = f; } });
+        $('#save').onclick = function () {
+          g.length = 0; files.forEach(function (f) { g.push({ src: f.src, alt: f.name && f.name !== 'Ảnh bánh' ? f.name.replace(/\.[a-z]+$/i, '') : 'Không gian tiệm' }); });
+          DB.save('gallery'); done(this);
+        };
+      }
+
+      /* ---------------- Tab: Cảm nhận khách ---------------- */
+      function tabTesti() {
+        var list = DB.get('testimonials');
+        panel.innerHTML = card('<div class="flex items-center justify-between gap-3"><h2 class="font-extrabold">Cảm nhận khách ở trang chủ</h2><button type="button" id="add" class="btn btn-primary h-10 px-4 text-sm"><i class="ph ph-plus" aria-hidden="true"></i>Thêm cảm nhận</button></div>' +
+          (list.length ? '<ul class="mt-4 grid md:grid-cols-2 gap-3">' + list.map(function (t, i) {
+            return '<li class="rounded-2xl border border-beige p-4 flex gap-3"><img src="' + t.avatar + '" alt="" class="w-12 h-12 rounded-full object-cover bg-beige shrink-0"><div class="flex-1 min-w-0"><div class="flex items-center justify-between gap-2"><p class="font-extrabold">' + Fmt.esc(t.name) + '</p>' +
+              '<label class="flex items-center gap-2 text-sm font-semibold"><span class="switch"><input type="checkbox" data-vis="' + i + '"' + (t.visible ? ' checked' : '') + ' aria-label="Hiển thị cảm nhận của ' + Fmt.esc(t.name) + '"><span></span></span>' + (t.visible ? 'Hiển thị' : 'Ẩn') + '</label></div>' +
+              UI.stars(t.rating) + '<p class="mt-1 text-[15px] line-clamp-3">' + Fmt.esc(t.content) + '</p><button type="button" data-edit="' + i + '" class="mt-2 text-sm font-bold text-primary-strong hover:underline">Sửa</button></div></li>';
+          }).join('') + '</ul>' : UI.empty({ icon: 'ph-chat-circle-text', title: 'Chưa có cảm nhận nào' })));
+        $all('[data-vis]').forEach(function (cb) { cb.onchange = function () { list[+cb.dataset.vis].visible = cb.checked; DB.save('testimonials'); Toast.show(cb.checked ? 'Đã hiển thị cảm nhận' : 'Đã ẩn cảm nhận', 'success'); tabTesti(); }; });
+        $all('[data-edit]').forEach(function (b) { b.onclick = function () { editTesti(list[+b.dataset.edit]); }; });
+        $('#add').onclick = function () { editTesti(null); };
+        function editTesti(t) {
+          Modal.open({ title: t ? 'Sửa cảm nhận' : 'Thêm cảm nhận',
+            body: '<div class="space-y-4">' + field('t-name', 'Tên khách', t && t.name, { req: true, max: 100 }) + field('t-content', 'Nội dung cảm nhận', t && t.content, { req: true, area: true, max: 500 }) +
+              '<div class="field"><label class="field-label" for="t-rating">Số sao</label><select id="t-rating" class="field-input">' + [5, 4, 3, 2, 1].map(function (n) { return '<option value="' + n + '"' + (t && t.rating === n ? ' selected' : '') + '>' + n + ' sao</option>'; }).join('') + '</select></div></div>',
+            actions: [{ label: 'Đóng' }, { label: 'Lưu', variant: 'primary', onClick: function (c, el) {
+              var n = $('#t-name', el), ct = $('#t-content', el), ok = true;
+              if (!n.value.trim()) { FormUI.setError(n, 'Vui lòng nhập đủ các trường bắt buộc.'); ok = false; }
+              if (!ct.value.trim()) { FormUI.setError(ct, 'Vui lòng nhập đủ các trường bắt buộc.'); ok = false; }
+              if (!ok) return false;
+              if (!t) { t = { id: Date.now(), avatar: 'https://picsum.photos/seed/khach-' + Date.now() + '/160/160', visible: true }; list.push(t); }
+              t.name = n.value.trim(); t.content = ct.value.trim(); t.rating = +$('#t-rating', el).value;
+              DB.save('testimonials'); Toast.show('Đã lưu', 'success'); tabTesti();
+            } }] });
+        }
+      }
+
+      /* ---------------- Tab: Bài viết ---------------- */
+      var PSTATUS = { published: ['Đã đăng', 'bg-mint text-mint-strong'], draft: ['Nháp', 'bg-butter text-butter-strong'], hidden: ['Đã ẩn', 'bg-stone2 text-stone2-strong'] };
+      function blocksToHtml(blocks) {
+        return (blocks || []).map(function (b) {
+          if (b[0] === 'h2') return '<h2>' + Fmt.esc(b[1]) + '</h2>';
+          if (b[0] === 'ul') return '<ul>' + b[1].map(function (x) { return '<li>' + Fmt.esc(x) + '</li>'; }).join('') + '</ul>';
+          return '<p>' + Fmt.esc(b[1]) + '</p>';
+        }).join('');
+      }
+      function tabPosts() {
+        var posts = DB.get('posts').slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+        panel.innerHTML = card('<div class="flex items-center justify-between gap-3"><h2 class="font-extrabold">Bài viết</h2><button type="button" id="add" class="btn btn-primary h-10 px-4 text-sm"><i class="ph ph-pencil-simple" aria-hidden="true"></i>Viết bài</button></div>' +
+          (posts.length ? '<ul class="mt-4 divide-y divide-beige">' + posts.map(function (p) {
+            var st = PSTATUS[p.status];
+            return '<li class="py-3 flex flex-wrap md:flex-nowrap items-center gap-3"><img src="' + p.cover + '" alt="" class="w-16 h-12 rounded-lg object-cover bg-beige shrink-0"><div class="flex-1 min-w-[180px]"><p class="font-bold line-clamp-1">' + Fmt.esc(p.title) + '</p><p class="text-sm text-ink-muted">' + (p.category === 'news' ? 'Tin tức' : 'Mẹo bảo quản') + ' · ' + (p.status === 'published' ? Fmt.date(p.date) : '-') + '</p></div>' +
+              '<span class="badge ' + st[1] + '">' + st[0] + '</span><div class="flex gap-1">' +
+              '<button type="button" class="btn btn-ghost h-9 px-3 text-sm" data-p-edit="' + p.id + '">Sửa</button>' +
+              (p.status === 'published' ? '<button type="button" class="btn btn-ghost h-9 px-3 text-sm" data-p-hide="' + p.id + '">Ẩn</button>' : '') +
+              (p.status === 'hidden' ? '<button type="button" class="btn btn-ghost h-9 px-3 text-sm" data-p-show="' + p.id + '">Hiện lại</button>' : '') +
+              (p.status === 'draft' ? '<button type="button" class="btn btn-ghost h-9 px-3 text-sm text-danger" data-p-del="' + p.id + '">Xóa</button>' : '') + '</div></li>';
+          }).join('') + '</ul>' : UI.empty({ icon: 'ph-article', title: 'Chưa có bài viết', action: '<button type="button" class="btn btn-primary h-10 px-5" onclick="document.getElementById(\'add\').click()">Viết bài đầu tiên</button>' })));
+        function byId(id) { return DB.get('posts').filter(function (p) { return p.id === +id; })[0]; }
+        $('#add').onclick = function () { editor(null); };
+        $all('[data-p-edit]').forEach(function (b) { b.onclick = function () { editor(byId(b.dataset.pEdit)); }; });
+        $all('[data-p-hide]').forEach(function (b) { b.onclick = function () { Modal.confirm({ title: 'Ẩn bài viết?', message: 'Khách sẽ không xem được bài này nữa.', confirmLabel: 'Ẩn bài', danger: true }).then(function (r) { if (r.ok) { byId(b.dataset.pHide).status = 'hidden'; DB.save('posts'); Toast.show('Đã ẩn bài viết', 'success'); tabPosts(); } }); }; });
+        $all('[data-p-show]').forEach(function (b) { b.onclick = function () { byId(b.dataset.pShow).status = 'published'; DB.save('posts'); Toast.show('Đã hiện lại bài viết', 'success'); tabPosts(); }; });
+        $all('[data-p-del]').forEach(function (b) { b.onclick = function () { Modal.confirm({ title: 'Xóa bản nháp?', message: 'Bản nháp sẽ bị xóa hẳn.', confirmLabel: 'Xóa', danger: true }).then(function (r) { if (r.ok) { var all = DB.get('posts'); all.splice(all.indexOf(byId(b.dataset.pDel)), 1); DB.save('posts'); Toast.show('Đã xóa bản nháp', 'success'); tabPosts(); } }); }; });
+      }
+      /* Trình soạn bài: định dạng cơ bản (đậm, nghiêng, danh sách, tiêu đề phụ, liên kết, ảnh) */
+      function editor(p) {
+        var lang = 'vi', html = { vi: p ? (p.html || blocksToHtml(p.body)) : '', en: p ? (p.html_en || '') : '' };
+        var cover = p ? [{ src: p.cover, name: 'Ảnh bìa' }] : [];
+        var tools = [['bold', 'ph-text-b', 'Đậm'], ['italic', 'ph-text-italic', 'Nghiêng'], ['insertUnorderedList', 'ph-list-bullets', 'Danh sách chấm'], ['insertOrderedList', 'ph-list-numbers', 'Danh sách số'], ['h2', 'ph-text-h-two', 'Tiêu đề phụ'], ['link', 'ph-link', 'Chèn liên kết'], ['image', 'ph-image', 'Chèn ảnh']];
+        Modal.open({ title: p ? 'Sửa bài viết' : 'Viết bài mới', size: 'xl',
+          body: '<div class="grid lg:grid-cols-12 gap-5"><div class="lg:col-span-8 space-y-4">' +
+            '<div class="inline-flex rounded-full bg-cream p-1" role="tablist" aria-label="Ngôn ngữ"><button type="button" data-lang="vi" class="h-8 px-4 rounded-full text-sm font-bold bg-white shadow-soft text-primary-strong">Tiếng Việt</button><button type="button" data-lang="en" class="h-8 px-4 rounded-full text-sm font-bold">English</button></div>' +
+            '<div class="field"><label class="field-label" for="p-title">Tiêu đề <span id="p-req" class="text-danger">*</span></label><input id="p-title" maxlength="200" class="field-input" value="' + Fmt.esc(p ? p.title : '') + '"></div>' +
+            '<div><p class="field-label mb-2" id="ed-label">Nội dung</p><div class="flex flex-wrap gap-1 mb-2" role="toolbar" aria-label="Định dạng">' + tools.map(function (t) { return '<button type="button" class="grid place-items-center w-10 h-10 rounded-lg border border-beige hover:bg-primary-soft text-lg" data-cmd="' + t[0] + '" aria-label="' + t[2] + '" title="' + t[2] + '"><i class="ph ' + t[1] + '" aria-hidden="true"></i></button>'; }).join('') + '</div>' +
+            '<div id="ed" class="editor article !text-base" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="ed-label">' + html.vi + '</div><p id="ed-err" class="field-error hidden"></p></div></div>' +
+            '<div class="lg:col-span-4 space-y-4"><div class="field"><label class="field-label" for="p-cat">Chuyên mục <span class="text-danger">*</span></label><select id="p-cat" class="field-input"><option value="">Chọn chuyên mục</option><option value="news">Tin tức</option><option value="tips">Mẹo bảo quản</option></select></div>' +
+            '<div><p class="field-label mb-2">Ảnh bìa</p><div id="cover-up"></div></div></div></div>',
+          actions: [{ label: 'Đóng' }, { label: 'Lưu nháp', variant: 'secondary', onClick: function (c, el) { return save(el, 'draft'); } }, { label: 'Đăng', variant: 'primary', onClick: function (c, el) { return save(el, 'published'); } }],
+          onOpen: function (el) {
+            var titles = { vi: p ? p.title : '', en: p ? (p.title_en || '') : '' };
+            if (p) $('#p-cat', el).value = p.category;
+            Uploader.mount($('#cover-up', el), { max: 1, files: cover, onChange: function (f) { cover = f; } });
+            $all('[data-lang]', el).forEach(function (b) {
+              b.onclick = function () {
+                html[lang] = $('#ed', el).innerHTML; titles[lang] = $('#p-title', el).value;
+                lang = b.dataset.lang;
+                $all('[data-lang]', el).forEach(function (x) { var on = x === b; x.className = 'h-8 px-4 rounded-full text-sm font-bold ' + (on ? 'bg-white shadow-soft text-primary-strong' : ''); });
+                $('#ed', el).innerHTML = html[lang]; $('#p-title', el).value = titles[lang]; $('#p-req', el).classList.toggle('hidden', lang === 'en');
+              };
+            });
+            $all('[data-cmd]', el).forEach(function (b) {
+              b.onmousedown = function (e) { e.preventDefault(); };
+              b.onclick = function () {
+                var cmd = b.dataset.cmd; $('#ed', el).focus();
+                if (cmd === 'h2') document.execCommand('formatBlock', false, 'h2');
+                else if (cmd === 'link') { var u = prompt('Dán đường dẫn (https://...)'); if (u) { if (!/^https?:\/\/\S+$/.test(u)) { Toast.show('Liên kết không hợp lệ.', 'error'); return; } document.execCommand('createLink', false, u); } }
+                else if (cmd === 'image') Toast.soon();
+                else document.execCommand(cmd, false, null);
+              };
+            });
+            el._getTitles = function () { titles[lang] = $('#p-title', el).value; html[lang] = $('#ed', el).innerHTML; return titles; };
+          } });
+        function save(el, status) {
+          var titles = el._getTitles();
+          var errs = false;
+          if (!titles.vi.trim()) { if (lang !== 'vi') $('[data-lang="vi"]', el).click(); FormUI.setError($('#p-title', el), 'Vui lòng nhập đủ các trường bắt buộc.'); errs = true; }
+          if (!$('#p-cat', el).value) { FormUI.setError($('#p-cat', el), 'Vui lòng nhập đủ các trường bắt buộc.'); errs = true; }
+          if (status === 'published' && !html.vi.replace(/<[^>]+>/g, '').trim()) { var e = $('#ed-err', el); e.textContent = 'Vui lòng nhập nội dung bài viết.'; e.classList.remove('hidden'); errs = true; }
+          if (errs) return false;
+          var all = DB.get('posts');
+          if (!p) { p = { id: Math.max.apply(null, all.map(function (x) { return x.id; })) + 1, body: [] }; all.push(p); }
+          p.title = titles.vi.trim(); p.title_en = titles.en.trim(); p.category = $('#p-cat', el).value;
+          p.html = html.vi; p.html_en = html.en; p.excerpt = html.vi.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 140);
+          p.slug = p.slug || Fmt.fold(p.title).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) + '-' + p.id;
+          p.cover = cover[0] ? cover[0].src : 'https://picsum.photos/seed/bai-' + p.id + '/1200/750';
+          if (status === 'published' && p.status !== 'published') p.date = MOCK.today;
+          p.status = status;
+          DB.save('posts'); Toast.show(status === 'published' ? 'Đã đăng bài viết' : 'Đã lưu nháp', 'success'); tabPosts();
+        }
+      }
+
+      /* ---------------- Tab: Thông tin liên hệ ---------------- */
+      function tabContact() {
+        panel.innerHTML = card('<h2 class="font-extrabold">Thông tin liên hệ</h2><div class="mt-4 grid md:grid-cols-2 gap-4">' +
+          field('c-address', 'Địa chỉ', shop.address, { req: true, cls: 'md:col-span-2' }) +
+          '<fieldset class="md:col-span-2"><legend class="field-label mb-2">Giờ mở cửa <span class="text-danger">*</span></legend><div class="space-y-2">' + shop.hours.map(function (h, i) {
+            return '<div class="grid grid-cols-[1fr_auto_auto] sm:grid-cols-[200px_auto_auto_1fr] gap-2 items-center"><span class="font-semibold">' + h.days + '</span><label class="sr-only" for="h-o-' + i + '">Giờ mở</label><input id="h-o-' + i + '" type="time" class="field-input !w-32" value="' + h.open + '"><label class="sr-only" for="h-c-' + i + '">Giờ đóng</label><input id="h-c-' + i + '" type="time" class="field-input !w-32" value="' + h.close + '" aria-describedby="h-c-' + i + '-err"><p id="h-c-' + i + '-err" class="field-error hidden col-span-full"></p></div>';
+          }).join('') + '</div></fieldset>' +
+          field('c-phone', 'Điện thoại', Fmt.phone(shop.phone.replace(/\s/g, '')), { req: true, type: 'tel' }) + field('c-zalo', 'Zalo', Fmt.phone(shop.zalo), { type: 'tel' }) +
+          field('c-fb', 'Facebook', shop.facebook, { type: 'url', help: 'Dán đường dẫn trang Facebook của tiệm' }) + field('c-ig', 'Instagram', shop.instagram, { type: 'url' }) + '</div>' + saveBtn('save'));
+        FormUI.phoneMask($('#c-phone')); FormUI.phoneMask($('#c-zalo'));
+        $('#save').onclick = function () {
+          var errs = [];
+          if (!$('#c-address').value.trim()) errs.push([$('#c-address'), 'Vui lòng nhập đủ các trường bắt buộc.']);
+          shop.hours.forEach(function (h, i) { if ($('#h-o-' + i).value >= $('#h-c-' + i).value) errs.push([$('#h-c-' + i), 'Giờ mở cửa không hợp lệ.']); });
+          if (!FormUI.validPhone($('#c-phone').value)) errs.push([$('#c-phone'), 'Số điện thoại không hợp lệ (10 số, bắt đầu bằng 0).']);
+          if ($('#c-zalo').value && !FormUI.validPhone($('#c-zalo').value)) errs.push([$('#c-zalo'), 'Số điện thoại không hợp lệ (10 số, bắt đầu bằng 0).']);
+          ['#c-fb', '#c-ig'].forEach(function (s) { var v = $(s).value.trim(); if (v && !/^https?:\/\/[^\s.]+\.\S+$/.test(v)) errs.push([$(s), 'Liên kết không hợp lệ.']); }); // E-QB-05
+          if (errs.length) { errs.forEach(function (e) { FormUI.setError(e[0], e[1]); }); FormUI.focusFirst(panel); return; }
+          shop.address = $('#c-address').value.trim(); shop.mapQuery = shop.address;
+          shop.hours.forEach(function (h, i) { h.open = $('#h-o-' + i).value; h.close = $('#h-c-' + i).value; });
+          shop.phone = $('#c-phone').value; shop.zalo = $('#c-zalo').value.replace(/\D/g, '');
+          shop.facebook = $('#c-fb').value.trim(); shop.instagram = $('#c-ig').value.trim();
+          DB.save('shop'); done(this);
+        };
+      }
+
+      var RENDER = { home: tabHome, story: tabStory, gallery: tabGallery, testi: tabTesti, posts: tabPosts, contact: tabContact };
+      function show(t) {
+        tab = RENDER[t] ? t : 'home';
+        $('#tabs').innerHTML = TABS.map(function (x) { return '<button type="button" role="tab" aria-selected="' + (tab === x[0]) + '" data-tab="' + x[0] + '" class="chip chip-sm">' + x[1] + '</button>'; }).join('');
+        $all('[data-tab]').forEach(function (b) { b.onclick = function () { show(b.dataset.tab); }; });
+        $('#tab-select').innerHTML = TABS.map(function (x) { return '<option value="' + x[0] + '"' + (tab === x[0] ? ' selected' : '') + '>' + x[1] + '</option>'; }).join('');
+        RENDER[tab]();
+      }
+      $('#tab-select').onchange = function () { show(this.value); };
+      show(tab);
+    });
+  </script>
+</body>
+</html>

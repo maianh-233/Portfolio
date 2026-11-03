@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mộc Hương Bakery — Bánh tươi ra lò mỗi sáng giữa phố Hội</title>
+<meta name="description" content="Mộc Hương Bakery, tiệm bánh thủ công ở Hội An: bánh mì vỏ giòn, bánh ngọt nướng mỗi ngày và bánh kem đặt trước cho sinh nhật, ngày vui của gia đình.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body>
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40">
+  <div class="hdr-inner bg-cream/85 backdrop-blur-md transition-all duration-500">
+    <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <a aria-current="page" href="index.html" class="group flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-deep">
+        <span class="arch-line grid h-10 w-8 place-items-center bg-rose-deep pt-1 font-display text-sm font-bold text-white transition-transform duration-300 group-hover:-translate-y-0.5">MH</span>
+        <span class="font-display text-xl font-bold tracking-tight text-cocoa">Mộc Hương Bakery</span>
+      </a>
+      <nav aria-label="Điều hướng chính" class="hidden items-center gap-9 lg:flex">
+        <a aria-current="page" href="index.html" class="relative py-2 font-semibold text-cocoa transition-colors duration-300 hover:text-rose-deep after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-rose after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-rose-deep aria-[current=page]:after:scale-x-100">Trang chủ</a>
+        <a href="pages/menu.html" class="relative py-2 font-semibold text-cocoa transition-colors duration-300 hover:text-rose-deep after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-rose after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-rose-deep aria-[current=page]:after:scale-x-100">Menu</a>
+        <a href="pages/contact.html" class="relative py-2 font-semibold text-cocoa transition-colors duration-300 hover:text-rose-deep after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-rose after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-rose-deep aria-[current=page]:after:scale-x-100">Liên hệ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="tel:+842353912486" class="hidden items-center gap-2 font-semibold text-cocoa transition-colors duration-300 hover:text-rose-deep xl:flex">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0235 3912 486
+        </a>
+        <a href="pages/contact.html#dat-banh-form" class="hidden min-h-[44px] items-center rounded-full bg-rose-deep px-6 font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-cocoa active:scale-[.98] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-rose/30 sm:inline-flex">Đặt bánh</a>
+        <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full bg-white text-cocoa shadow-card lg:hidden" aria-label="Mở menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-white p-6 shadow-2xl lg:hidden">
+    <nav aria-label="Điều hướng điện thoại" class="flex flex-col">
+      <a aria-current="page" href="index.html" class="rounded-2xl px-4 py-3 font-display text-2xl font-bold text-cocoa hover:bg-cream aria-[current=page]:bg-blush/60">Trang chủ</a>
+      <a href="pages/menu.html" class="rounded-2xl px-4 py-3 font-display text-2xl font-bold text-cocoa hover:bg-cream aria-[current=page]:bg-blush/60">Menu</a>
+      <a href="pages/contact.html" class="rounded-2xl px-4 py-3 font-display text-2xl font-bold text-cocoa hover:bg-cream aria-[current=page]:bg-blush/60">Liên hệ</a>
+    </nav>
+    <div class="mt-5 grid gap-3 border-t border-blush pt-5">
+      <a href="pages/contact.html#dat-banh-form" class="flex min-h-[48px] items-center justify-center rounded-full bg-rose-deep font-semibold text-white">Đặt bánh</a>
+      <a href="tel:+842353912486" class="flex min-h-[48px] items-center justify-center rounded-full bg-cream font-semibold text-cocoa">Gọi 0235 3912 486</a>
+    </div>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-split" class="relative overflow-hidden bg-cream">
+    <div aria-hidden="true" class="absolute inset-y-0 right-0 hidden w-[40%] rounded-bl-[7rem] bg-peach lg:block"></div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl items-center gap-12 px-4 py-12 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12 lg:px-10 lg:py-14 2xl:px-16">
+      <div class="lg:col-span-6">
+        <p data-reveal="up" class="text-sm font-bold uppercase tracking-[0.2em] text-rose-deep">Tiệm bánh thủ công ở Hội An</p>
+        <h1 data-split="words" class="mt-5 font-display text-[2.6rem] font-bold leading-[1.1] tracking-tight text-cocoa sm:text-5xl lg:text-6xl 2xl:text-7xl">Bánh tươi ra lò mỗi sáng giữa phố Hội</h1>
+        <p data-reveal="up" class="mt-6 max-w-xl text-lg leading-relaxed text-cocoa-soft 2xl:text-xl">Bánh mì vỏ giòn, bánh ngọt thơm bơ và bánh kem đặt riêng cho ngày vui của nhà bạn.</p>
+        <div data-reveal="up" data-reveal-delay="250" class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <a href="pages/menu.html" class="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-rose-deep px-8 font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-cocoa active:scale-[.98] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-rose/30 group">
+            Xem menu
+            <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="pages/contact.html#dat-banh-form" class="inline-flex min-h-[52px] items-center justify-center rounded-full border-2 border-cocoa/15 bg-white px-8 font-semibold text-cocoa transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-deep hover:text-rose-deep active:scale-[.98]">Đặt bánh</a>
+        </div>
+      </div>
+      <div class="relative lg:col-span-6 lg:col-start-7">
+        <div class="relative mx-auto w-full max-w-[460px] lg:mr-0 2xl:max-w-[540px]">
+          <div aria-hidden="true" class="arch-line absolute -right-4 -top-4 h-full w-full border-2 border-rose/40 sm:-right-6 sm:-top-6"></div>
+          <div data-reveal="clip" class="arch relative aspect-[4/5] bg-blush shadow-soft">
+            <img src="https://images.pexels.com/photos/29192543/pexels-photo-29192543.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" alt="Bánh kem sinh nhật trang trí kem tông pastel" class="h-full w-full object-cover" width="1200" height="1500">
+          </div>
+          <div class="absolute -left-3 bottom-10 sm:-left-10">
+            <div data-float="9" data-float-rotate="2" class="rounded-[1.5rem] bg-white px-5 py-4 shadow-card">
+              <p class="font-display text-3xl font-bold text-rose-deep">6:00</p>
+              <p class="text-sm font-semibold text-cocoa">mẻ bánh mì đầu tiên</p>
+            </div>
+          </div>
+          <div class="absolute -right-2 top-16 hidden sm:block lg:-right-8">
+            <div data-float="12" data-float-rotate="-2" class="rounded-full bg-mint px-5 py-3 text-sm font-semibold text-cocoa shadow-card">Bánh kem đặt trước 24 giờ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÂU CHUYỆN -->
+  <section id="cau-chuyen" data-section="story-letter" class="bg-white py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <figure class="lg:col-span-5">
+        <div data-reveal="clip" class="arch aspect-[3/4] bg-peach">
+          <img src="assets/img/gallery-tay-cam-banh.webp" alt="Đôi tay phủ bột đang se bột bánh mì trên mặt bàn gỗ" class="h-full w-full object-cover object-[40%_center]" loading="lazy" width="1200" height="1600">
+        </div>
+        <figcaption class="mt-4 text-sm text-cocoa-soft">Bột được chia và se bằng tay mỗi tối, ủ qua đêm cho sáng hôm sau.</figcaption>
+      </figure>
+      <div class="lg:col-span-6 lg:col-start-7 lg:pt-16">
+        <h2 data-reveal="up" class="font-display text-3xl font-bold leading-tight text-cocoa sm:text-4xl lg:text-5xl">Một căn bếp nhỏ sau dãy nhà vàng</h2>
+        <div data-reveal="up" class="mt-8 max-w-prose space-y-5 text-lg leading-relaxed text-cocoa-soft">
+          <p>Mộc Hương bắt đầu từ chiếc lò nướng cũ trong căn bếp nhà ngoại trên đường Trần Phú. Mỗi sáng, mùi bơ và bột nướng bay ra tận ngõ, hàng xóm ghé hỏi mua, thế là thành tiệm.</p>
+          <p>Tụi mình vẫn làm theo cách cũ: bột ủ chậm qua đêm, bơ và kem tươi mua mỗi ngày, trái cây lấy từ chợ Hội An. Không chất bảo quản, bánh ngon nhất trong ngày nên mỗi mẻ chỉ nướng vừa đủ.</p>
+          <p>Bánh kem thì làm riêng cho từng nhà. Bạn kể về dịp vui, tụi mình chọn vị, màu kem và lời chúc cùng bạn.</p>
+        </div>
+        <div data-reveal="up" class="mt-10 flex items-center gap-4">
+          <span class="arch-line grid h-14 w-11 place-items-center bg-blush pt-1 font-display text-lg font-bold text-rose-deep">H</span>
+          <div>
+            <p class="font-display text-xl font-bold text-cocoa">Chị Hương và anh Mộc</p>
+            <p class="text-sm text-cocoa-soft">Chủ tiệm, thợ bánh chính</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THỰC ĐƠN TÓM TẮT -->
+  <section id="thuc-don" data-section="features-bento" class="bg-peach/45 py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="max-w-2xl">
+        <h2 data-reveal="up" class="font-display text-3xl font-bold leading-tight text-cocoa sm:text-4xl lg:text-5xl">Ba ngăn tủ bánh, đổi món theo mùa</h2>
+        <p data-reveal="up" class="mt-5 text-lg leading-relaxed text-cocoa-soft">Bánh mì và bánh ngọt có sẵn mỗi ngày. Bánh kem nhận đặt trước để làm tươi đúng ngày bạn cần.</p>
+      </div>
+      <div data-reveal-stagger="90" class="mt-12 grid gap-5 lg:grid-cols-12 lg:grid-rows-2">
+        <a href="pages/menu.html" class="group flex flex-col overflow-hidden rounded-[2rem] bg-white shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-soft lg:col-span-7 lg:row-span-2">
+          <div class="relative min-h-[260px] flex-1 overflow-hidden bg-blush sm:min-h-[340px]">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Vietnamese_B%C3%A1nh_m%C3%AC_%28Banh_Mi%29_Sandwich.jpg/1920px-Vietnamese_B%C3%A1nh_m%C3%AC_%28Banh_Mi%29_Sandwich.jpg" referrerpolicy="no-referrer" alt="Ổ bánh mì Việt Nam kẹp thịt và rau thơm" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+          </div>
+          <div class="flex flex-wrap items-end justify-between gap-4 p-7 lg:p-9">
+            <div class="max-w-md">
+              <h3 class="font-display text-3xl font-bold text-cocoa">Bánh mì</h3>
+              <p class="mt-2 leading-relaxed text-cocoa-soft">Bánh mì đặc ruột vỏ giòn, bánh mì que bơ tỏi, bánh mì kẹp kiểu Hội An. Hai mẻ mỗi ngày lúc 6:00 và 15:30.</p>
+            </div>
+            <p class="font-display text-xl font-bold text-rose-deep">từ 8.000đ</p>
+          </div>
+        </a>
+        <a href="pages/menu.html" class="group grid overflow-hidden rounded-[2rem] bg-lilac shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-soft sm:grid-cols-2 lg:col-span-5">
+          <div class="relative min-h-[220px] overflow-hidden bg-blush">
+            <img src="assets/img/bento-banh-ngot.jpg" alt="Giỏ croissant và bánh mè mới nướng" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+          </div>
+          <div class="flex flex-col justify-between gap-4 p-7">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-cocoa">Bánh ngọt</h3>
+              <p class="mt-2 leading-relaxed text-cocoa-soft">Croissant bơ, su kem lá dứa, bông lan trứng muối, tart chanh dây.</p>
+            </div>
+            <p class="font-display text-lg font-bold text-rose-deep">từ 15.000đ</p>
+          </div>
+        </a>
+        <a href="pages/menu.html" class="group grid overflow-hidden rounded-[2rem] bg-mint shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-soft sm:grid-cols-2 lg:col-span-5">
+          <div class="flex flex-col justify-between gap-4 p-7 sm:order-first">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-cocoa">Bánh kem đặt trước</h3>
+              <p class="mt-2 leading-relaxed text-cocoa-soft">Kem tươi, trái cây theo mùa, trang trí theo màu bạn chọn. Đặt trước ít nhất 24 giờ.</p>
+            </div>
+            <p class="font-display text-lg font-bold text-rose-deep">từ 320.000đ</p>
+          </div>
+          <div class="relative order-first min-h-[220px] overflow-hidden bg-blush sm:order-none">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Strawberry_Cream_Cake.jpg" referrerpolicy="no-referrer" alt="Bánh kem dâu phủ kem tươi" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+          </div>
+        </a>
+      </div>
+      <div class="mt-10">
+        <a href="pages/menu.html" class="group inline-flex min-h-[48px] items-center gap-2 font-semibold text-rose-deep">
+          Xem toàn bộ menu và bảng giá
+          <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MỘT NGÀY Ở LÒ -->
+  <section id="mot-ngay" data-section="timeline" class="bg-cream py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-3xl font-bold leading-tight text-cocoa sm:text-4xl lg:text-5xl">Một ngày ở lò bánh</h2>
+          <p data-reveal="up" class="mt-5 max-w-md text-lg leading-relaxed text-cocoa-soft">Ghé đúng giờ là có bánh còn ấm. Đây là lịch ra lò quen thuộc của tiệm.</p>
+          <div data-reveal="clip" class="mt-8 aspect-[4/3] overflow-hidden rounded-[2rem] bg-peach">
+            <img src="https://images.pexels.com/photos/10481790/pexels-photo-10481790.jpeg?auto=compress&cs=tinysrgb&w=1400" referrerpolicy="no-referrer" alt="Những ổ bánh mì đang nướng vàng trong lò" class="h-full w-full object-cover" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <ol class="relative border-l-2 border-dashed border-rose/35 pl-8 sm:pl-12 lg:col-span-6 lg:col-start-7 lg:mt-4">
+        <li data-reveal="up" class="relative pb-14">
+          <span aria-hidden="true" class="absolute -left-[2.6rem] top-1 h-5 w-5 rounded-full border-4 border-cream bg-rose sm:-left-[3.6rem]"></span>
+          <p class="font-display text-4xl font-bold text-rose-deep lg:text-5xl">4:30</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-cocoa">Nhồi bột, chia ổ</h3>
+          <p class="mt-2 max-w-md leading-relaxed text-cocoa-soft">Bột ủ từ tối hôm trước được chia và tạo hình bằng tay.</p>
+        </li>
+        <li data-reveal="up" class="relative pb-14">
+          <span aria-hidden="true" class="absolute -left-[2.6rem] top-1 h-5 w-5 rounded-full border-4 border-cream bg-rose sm:-left-[3.6rem]"></span>
+          <p class="font-display text-4xl font-bold text-rose-deep lg:text-5xl">6:00</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-cocoa">Mẻ bánh mì đầu tiên</h3>
+          <p class="mt-2 max-w-md leading-relaxed text-cocoa-soft">Tiệm mở cửa. Bánh mì đặc ruột và bánh mì que ra lò, kịp bữa sáng đi học, đi làm.</p>
+        </li>
+        <li data-reveal="up" class="relative pb-14">
+          <span aria-hidden="true" class="absolute -left-[2.6rem] top-1 h-5 w-5 rounded-full border-4 border-cream bg-rose sm:-left-[3.6rem]"></span>
+          <p class="font-display text-4xl font-bold text-rose-deep lg:text-5xl">9:00</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-cocoa">Bánh ngọt lên tủ</h3>
+          <p class="mt-2 max-w-md leading-relaxed text-cocoa-soft">Croissant, su kem, bông lan trứng muối. Bánh kem đặt trước được hoàn thiện trong buổi sáng.</p>
+        </li>
+        <li data-reveal="up" class="relative">
+          <span aria-hidden="true" class="absolute -left-[2.6rem] top-1 h-5 w-5 rounded-full border-4 border-cream bg-rose sm:-left-[3.6rem]"></span>
+          <p class="font-display text-4xl font-bold text-rose-deep lg:text-5xl">15:30</p>
+          <h3 class="mt-2 font-display text-2xl font-bold text-cocoa">Mẻ bánh chiều</h3>
+          <p class="mt-2 max-w-md leading-relaxed text-cocoa-soft">Thêm một mẻ bánh mì cho bữa xế và bữa tối. Tiệm đóng cửa lúc 20:00.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GÓC TIỆM -->
+  <section id="goc-tiem" data-section="gallery-masonry" class="bg-white py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="max-w-2xl">
+        <h2 data-reveal="up" class="font-display text-3xl font-bold leading-tight text-cocoa sm:text-4xl lg:text-5xl">Góc tiệm, góc phố</h2>
+        <p data-reveal="up" class="mt-5 text-lg leading-relaxed text-cocoa-soft">Tủ bánh buổi sáng, đèn lồng buổi tối. Bấm vào ảnh để xem lớn.</p>
+      </div>
+      <div data-reveal-stagger="80" class="mt-12 columns-2 gap-3 sm:gap-5 lg:columns-3 2xl:columns-4">
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Counter_of_the_Paillard_bakery%2C_Vieux-Qu%C3%A9bec.jpg/1920px-Counter_of_the_Paillard_bakery%2C_Vieux-Qu%C3%A9bec.jpg" data-lightbox="goc-tiem" data-caption="Quầy bánh buổi sáng" class="group mb-3 block break-inside-avoid sm:mb-5 overflow-hidden rounded-[1.75rem] bg-peach">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Counter_of_the_Paillard_bakery%2C_Vieux-Qu%C3%A9bec.jpg/1920px-Counter_of_the_Paillard_bakery%2C_Vieux-Qu%C3%A9bec.jpg" referrerpolicy="no-referrer" alt="Quầy bánh với tủ kính và kệ bánh mì" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+        </a>
+        <a href="https://images.pexels.com/photos/3983710/pexels-photo-3983710.jpeg?auto=compress&cs=tinysrgb&w=1200" data-lightbox="goc-tiem" data-caption="Trang trí bánh cupcake kem hồng" class="group mb-3 block break-inside-avoid sm:mb-5 overflow-hidden rounded-[1.75rem] bg-blush">
+          <img src="https://images.pexels.com/photos/3983710/pexels-photo-3983710.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" alt="Thợ bánh bắt kem hồng lên những chiếc cupcake" class="aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+        </a>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg/1920px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg" data-lightbox="goc-tiem" data-caption="Phố cổ Hội An, cách tiệm vài bước chân" class="group mb-3 block break-inside-avoid sm:mb-5 overflow-hidden rounded-[1.75rem] bg-mint">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg/1920px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg" referrerpolicy="no-referrer" alt="Dãy nhà cổ tường vàng ở phố cổ Hội An" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+        </a>
+        <a href="https://images.pexels.com/photos/40180976/pexels-photo-40180976.jpeg?auto=compress&cs=tinysrgb&w=1200" data-lightbox="goc-tiem" data-caption="Croissant vừa ra lò" class="group mb-3 block break-inside-avoid sm:mb-5 overflow-hidden rounded-[1.75rem] bg-peach">
+          <img src="https://images.pexels.com/photos/40180976/pexels-photo-40180976.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" alt="Khay croissant và bánh ngọt vàng ươm" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+        </a>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Lanterns_in_Hoi_An_2.jpg/1920px-Lanterns_in_Hoi_An_2.jpg" data-lightbox="goc-tiem" data-caption="Đèn lồng Hội An lúc chiều tối" class="group mb-3 block break-inside-avoid sm:mb-5 overflow-hidden rounded-[1.75rem] bg-lilac">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Lanterns_in_Hoi_An_2.jpg/1920px-Lanterns_in_Hoi_An_2.jpg" referrerpolicy="no-referrer" alt="Những chiếc đèn lồng nhiều màu treo trên phố Hội An" class="aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+        </a>
+        <a href="https://images.pexels.com/photos/29445730/pexels-photo-29445730.jpeg?auto=compress&cs=tinysrgb&w=1200" data-lightbox="goc-tiem" data-caption="Muffin và croissant trên quầy" class="group mb-3 block break-inside-avoid sm:mb-5 overflow-hidden rounded-[1.75rem] bg-blush">
+          <img src="https://images.pexels.com/photos/29445730/pexels-photo-29445730.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" alt="Muffin và croissant bày trên quầy bánh" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+        </a>
+        <a href="assets/img/hero-croissant.jpg" data-lightbox="goc-tiem" data-caption="Croissant dừa và bánh cacao viên" class="group mb-3 block break-inside-avoid sm:mb-5 overflow-hidden rounded-[1.75rem] bg-peach">
+          <img src="assets/img/hero-croissant.jpg" alt="Croissant rắc dừa và bánh cacao viên trên đĩa thủy tinh" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ĐÁNH GIÁ -->
+  <section id="danh-gia" data-section="quote-full" class="bg-rose-deep py-20 text-white lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div data-carousel data-autoplay="7000">
+        <div class="flex items-end justify-between gap-6">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-white/80">Khách quen nói gì</p>
+          <div class="flex gap-3">
+            <button type="button" data-carousel-prev aria-label="Lời khách trước" class="grid h-12 w-12 place-items-center rounded-full bg-white/15 text-white transition-colors duration-300 hover:bg-white hover:text-rose-deep">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            </button>
+            <button type="button" data-carousel-next aria-label="Lời khách tiếp theo" class="grid h-12 w-12 place-items-center rounded-full bg-white/15 text-white transition-colors duration-300 hover:bg-white hover:text-rose-deep">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div data-carousel-track class="mt-10 gap-6">
+          <figure class="w-full">
+            <blockquote class="max-w-5xl font-display text-3xl font-bold leading-snug sm:text-4xl lg:text-5xl">“Bánh mì que còn ấm, vỏ giòn rụm. Sáng nào đi làm mình cũng ghé lấy hai ổ.”</blockquote>
+            <figcaption class="mt-8 text-lg"><span class="font-semibold">Trần Thu Ngân</span><span class="text-white/80">, nhân viên văn phòng ở Cẩm Phô</span></figcaption>
+          </figure>
+          <figure class="w-full">
+            <blockquote class="max-w-5xl font-display text-3xl font-bold leading-snug sm:text-4xl lg:text-5xl">“Bánh kem dâu cho sinh nhật bé Na đúng màu hồng nhạt con bé thích, kem không quá ngọt.”</blockquote>
+            <figcaption class="mt-8 text-lg"><span class="font-semibold">Lê Minh Khoa</span><span class="text-white/80">, phụ huynh ở Tân An</span></figcaption>
+          </figure>
+          <figure class="w-full">
+            <blockquote class="max-w-5xl font-display text-3xl font-bold leading-snug sm:text-4xl lg:text-5xl">“Croissant nhiều lớp, thơm bơ. Ngồi ăn sáng nhìn ra phố cổ rất dễ chịu.”</blockquote>
+            <figcaption class="mt-8 text-lg"><span class="font-semibold">Phan Bảo Vy</span><span class="text-white/80">, sinh viên ở Đà Nẵng</span></figcaption>
+          </figure>
+        </div>
+        <div data-carousel-dots class="mt-10 text-white"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CUỐI -->
+  <section id="dat-banh" data-section="cta-sky" data-particles="petals" data-particles-color="#C25E73" data-particles-density="0.6" class="relative overflow-hidden bg-gradient-to-br from-blush via-peach to-lilac py-24 lg:py-32" data-gradient-shift="18">
+    <div class="relative z-10 mx-auto flex w-full max-w-screen-2xl flex-col items-center px-4 text-center sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-split="words" class="max-w-4xl font-display text-4xl font-bold leading-[1.15] text-cocoa sm:text-5xl lg:text-6xl">Sinh nhật sắp tới? Đặt bánh trước một ngày nhé.</h2>
+      <p data-reveal="up" class="mt-6 max-w-xl text-lg leading-relaxed text-cocoa">Chọn vị, cỡ bánh và lời chúc trên trang Liên hệ, hoặc gọi thẳng cho tiệm.</p>
+      <div data-reveal="up" class="mt-10 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
+        <a href="pages/contact.html#dat-banh-form" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-rose-deep px-9 font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-cocoa active:scale-[.98]">Đặt bánh</a>
+        <a href="tel:+842353912486" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-white px-9 font-semibold text-cocoa transition-all duration-300 hover:-translate-y-0.5 hover:text-rose-deep active:scale-[.98]">Gọi 0235 3912 486</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden bg-blush/50 pb-24 pt-16 lg:pb-0">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-2xl font-bold text-cocoa">Mộc Hương Bakery</p>
+        <p class="mt-3 max-w-sm leading-relaxed text-cocoa-soft">Tiệm bánh thủ công nhỏ ở Hội An. Bánh mì, bánh ngọt nướng mỗi ngày và bánh kem đặt riêng cho từng dịp.</p>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="font-display text-lg font-bold text-cocoa">Trang</p>
+        <ul class="mt-4 space-y-2.5">
+          <li><a aria-current="page" href="index.html" class="text-cocoa-soft transition-colors duration-300 hover:text-rose-deep">Trang chủ</a></li>
+          <li><a href="pages/menu.html" class="text-cocoa-soft transition-colors duration-300 hover:text-rose-deep">Menu</a></li>
+          <li><a href="pages/contact.html" class="text-cocoa-soft transition-colors duration-300 hover:text-rose-deep">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="font-display text-lg font-bold text-cocoa">Ghé tiệm</p>
+        <p class="mt-4 leading-relaxed text-cocoa-soft">27 Trần Phú, phố cổ Hội An<br>Mở cửa 6:00 - 20:00 mỗi ngày</p>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="font-display text-lg font-bold text-cocoa">Liên hệ</p>
+        <ul class="mt-4 space-y-2.5">
+          <li><a href="tel:+842353912486" class="text-cocoa-soft transition-colors duration-300 hover:text-rose-deep">0235 3912 486</a></li>
+          <li><a href="mailto:xinchao@mochuongbakery.vn" class="break-words text-cocoa-soft transition-colors duration-300 hover:text-rose-deep">xinchao@mochuongbakery.vn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-col gap-2 border-t border-rose/20 pt-6 text-sm text-cocoa-soft sm:flex-row sm:justify-between">
+      <p>© 2026 Mộc Hương Bakery. Làm bằng tay ở Hội An.</p>
+      <a href="#top" class="font-semibold transition-colors duration-300 hover:text-rose-deep">Lên đầu trang</a>
+    </div>
+  </div>
+  <p aria-hidden="true" class="pointer-events-none mt-8 select-none whitespace-nowrap pb-6 text-center font-display text-[17vw] font-bold leading-[1.05] tracking-tight text-rose/15">Mộc Hương</p>
+</footer>
+<div class="fixed inset-x-0 bottom-0 z-30 grid grid-cols-2 gap-2 border-t border-blush bg-cream/95 p-3 backdrop-blur lg:hidden">
+  <a href="tel:+842353912486" class="flex min-h-[48px] items-center justify-center rounded-full bg-white font-semibold text-cocoa shadow-card">Gọi tiệm</a>
+  <a href="pages/contact.html#dat-banh-form" class="flex min-h-[48px] items-center justify-center rounded-full bg-rose-deep font-semibold text-white">Đặt bánh</a>
+</div>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

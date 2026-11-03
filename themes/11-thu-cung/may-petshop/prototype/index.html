@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mây Pet Spa - Tắm, tỉa lông và đồ dùng cho thú cưng tại Phú Nhuận</title>
+  <meta name="description" content="Mây Pet Spa: tắm, tỉa lông, giữ thú cưng theo giờ và cửa hàng thức ăn, đồ chơi, vật dụng cho chó mèo tại 128 Nguyễn Trọng Tuyển, Phú Nhuận.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            may: {
+              50: '#f3f9fd', 100: '#e3f1fa', 200: '#c9e4f4', 300: '#a0cfea',
+              400: '#6fb3db', 500: '#4997c7', 600: '#377ba9', 700: '#2e6389',
+              800: '#2a5170', 900: '#25445d'
+            },
+            ink: {
+              50: '#f6f8fa', 100: '#eceff3', 200: '#d6dce4', 300: '#b3bdc9',
+              400: '#8794a5', 500: '#667487', 600: '#515d6e', 700: '#424c5a',
+              800: '#2f3742', 900: '#1d232b'
+            }
+          },
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'],
+            display: ['Lexend', '"Be Vietnam Pro"', 'sans-serif']
+          },
+          borderRadius: { card: '1.5rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="bg-white font-sans text-ink-800 antialiased">
+  <div data-scroll-progress class="fixed inset-x-0 top-0 z-50 h-1 origin-left bg-may-500"></div>
+
+  <!-- HEADER -->
+  <header id="top" data-header="shrink" class="site-header sticky top-0 z-40 w-full bg-white/90 backdrop-blur transition-all duration-300">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="#top" class="flex items-center gap-2.5" aria-label="Mây Pet Spa - về đầu trang">
+        <span class="grid h-10 w-10 place-items-center rounded-full bg-may-100 text-may-700">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+        </span>
+        <span class="font-display text-lg font-semibold tracking-tight text-ink-900">Mây Pet Spa</span>
+      </a>
+
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="Menu chính">
+        <a href="#dich-vu" class="nav-link">Dịch vụ</a>
+        <a href="#bang-gia" class="nav-link">Bảng giá</a>
+        <a href="#cua-hang" class="nav-link">Cửa hàng</a>
+        <a href="#danh-gia" class="nav-link">Đánh giá</a>
+        <a href="#hoi-dap" class="nav-link">Hỏi đáp</a>
+        <a href="#dat-lich" class="nav-link">Liên hệ</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button type="button" data-cart-open class="relative grid h-11 w-11 place-items-center rounded-full text-ink-700 transition hover:bg-may-50 hover:text-may-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-may-500" aria-label="Mở giỏ hàng">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span data-cart-count class="absolute -right-0.5 -top-0.5 hidden min-w-[20px] rounded-full bg-may-600 px-1.5 text-center text-[11px] font-semibold leading-5 text-white">0</span>
+        </button>
+        <a href="#dat-lich" data-ripple class="hidden h-11 items-center rounded-full bg-may-600 px-5 text-sm font-semibold text-white transition hover:bg-may-700 active:scale-[.98] sm:inline-flex">Đặt lịch</a>
+        <button type="button" id="menuBtn" class="grid h-11 w-11 place-items-center rounded-full text-ink-800 transition hover:bg-may-50 lg:hidden" aria-label="Mở menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="drawer-root fixed inset-0 z-50 lg:hidden" aria-hidden="true">
+    <div data-menu-close class="drawer-backdrop absolute inset-0 bg-ink-900/40"></div>
+    <div class="drawer-panel absolute inset-y-0 right-0 flex w-full max-w-sm flex-col bg-white p-6 shadow-xl">
+      <div class="flex items-center justify-between">
+        <span class="font-display text-lg font-semibold text-ink-900">Mây Pet Spa</span>
+        <button type="button" data-menu-close class="grid h-11 w-11 place-items-center rounded-full hover:bg-may-50" aria-label="Đóng menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mt-8 flex flex-col gap-1 text-lg font-medium" aria-label="Menu di động">
+        <a href="#dich-vu" data-menu-link class="rounded-2xl px-4 py-3 hover:bg-may-50">Dịch vụ</a>
+        <a href="#bang-gia" data-menu-link class="rounded-2xl px-4 py-3 hover:bg-may-50">Bảng giá</a>
+        <a href="#cua-hang" data-menu-link class="rounded-2xl px-4 py-3 hover:bg-may-50">Cửa hàng</a>
+        <a href="#danh-gia" data-menu-link class="rounded-2xl px-4 py-3 hover:bg-may-50">Đánh giá</a>
+        <a href="#hoi-dap" data-menu-link class="rounded-2xl px-4 py-3 hover:bg-may-50">Hỏi đáp</a>
+        <a href="#dat-lich" data-menu-link class="rounded-2xl px-4 py-3 hover:bg-may-50">Liên hệ</a>
+      </nav>
+      <div class="mt-auto space-y-3">
+        <a href="#dat-lich" data-menu-link class="flex h-12 w-full items-center justify-center rounded-full bg-may-600 font-semibold text-white">Đặt lịch</a>
+        <a href="tel:0909368214" class="flex h-12 w-full items-center justify-center rounded-full border border-may-200 font-semibold text-may-700">Gọi 0909 368 214</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-may-50 to-white">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 pb-12 pt-10 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12 lg:items-center lg:px-10 lg:pb-16 lg:pt-12 2xl:px-16">
+        <div class="relative z-10 min-w-0 lg:col-span-6 lg:pr-8 2xl:col-span-5">
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-may-600">Spa & cửa hàng thú cưng ở Phú Nhuận</p>
+          <h1 data-split="words" class="mt-4 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink-900 sm:text-5xl lg:text-6xl 2xl:text-7xl">Tắm thơm, tỉa gọn, bé về nhà vui.</h1>
+          <p class="mt-5 max-w-[52ch] text-lg leading-relaxed text-ink-600" data-reveal="up" data-reveal-delay="200">Tắm, tỉa lông, giữ bé theo giờ và đủ thức ăn, đồ chơi cho chó mèo trong một tiệm nhỏ quen thuộc.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="up" data-reveal-delay="320">
+            <a href="#dat-lich" data-magnetic="0.25" data-ripple class="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-may-600 px-8 text-base font-semibold text-white shadow-lg shadow-may-600/20 transition hover:bg-may-700 active:scale-[.98]">
+              Đặt lịch
+              <svg class="h-5 w-5 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#cua-hang" class="inline-flex h-14 items-center justify-center rounded-full border border-may-200 bg-white px-8 text-base font-semibold text-may-700 transition hover:border-may-400 hover:bg-may-50 active:scale-[.98]">Xem cửa hàng</a>
+          </div>
+        </div>
+
+        <div class="relative min-w-0 lg:col-span-6 2xl:col-span-7">
+          <div class="relative lg:-mr-10 2xl:-mr-16 lg:pl-4" data-parallax="0.08">
+            <div class="overflow-hidden rounded-card aspect-[4/3] bg-may-100 lg:aspect-[5/4] lg:rounded-r-none 2xl:aspect-[16/11]">
+              <img src="assets/img/hero-tia-long-bichon.webp" alt="Bé chó lông trắng ngồi trên bàn tỉa lông, nhân viên đang cầm tông đơ cắt tỉa" class="h-full w-full object-cover" width="1600" height="1067">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SỐ LIỆU -->
+    <section class="border-y border-may-100 bg-white">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-2 gap-y-8 px-4 py-10 sm:px-6 lg:grid-cols-4 lg:px-10 2xl:px-16" data-reveal-stagger="90">
+        <div class="pr-4">
+          <p class="font-display text-3xl font-semibold text-ink-900 sm:text-4xl"><span data-count-to="4.9" data-decimals="1">4,9</span><span class="text-xl text-ink-400">/5</span></p>
+          <p class="mt-1 text-sm text-ink-500">từ 312 đánh giá trên Google</p>
+        </div>
+        <div class="pr-4 lg:border-l lg:border-may-100 lg:pl-8">
+          <p class="font-display text-3xl font-semibold text-ink-900 sm:text-4xl" data-count-to="2146">2146</p>
+          <p class="mt-1 text-sm text-ink-500">lượt tắm sấy trong năm 2025</p>
+        </div>
+        <div class="pr-4 lg:border-l lg:border-may-100 lg:pl-8">
+          <p class="font-display text-3xl font-semibold text-ink-900 sm:text-4xl"><span data-count-to="7">7</span> năm</p>
+          <p class="mt-1 text-sm text-ink-500">mở cửa từ tháng 3/2019</p>
+        </div>
+        <div class="pr-4 lg:border-l lg:border-may-100 lg:pl-8">
+          <p class="font-display text-3xl font-semibold text-ink-900 sm:text-4xl">8:00 - 20:00</p>
+          <p class="mt-1 text-sm text-ink-500">mở cửa tất cả các ngày</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DỊCH VỤ - BENTO -->
+    <section id="dich-vu" class="scroll-mt-20 bg-white">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+        <h2 class="max-w-[22ch] font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl lg:text-5xl" data-reveal="up">Ba dịch vụ, làm kỹ từng bé</h2>
+        <p class="mt-4 max-w-[60ch] text-lg text-ink-600" data-reveal="up" data-reveal-delay="100">Mỗi bé được một groomer phụ trách từ lúc nhận đến lúc trả, không chuyền tay.</p>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2 2xl:gap-6" data-reveal-stagger="110">
+          <!-- Tắm -->
+          <article class="group relative flex min-h-[420px] flex-col justify-end overflow-hidden rounded-card bg-may-100 md:col-span-2 lg:col-span-7 lg:row-span-2 lg:min-h-[640px]">
+            <img src="assets/img/dv-tam.jpg" alt="Bé chó lông nâu đang được tắm bằng vòi sen" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="1600" height="1064">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-ink-900/20 to-transparent"></div>
+            <div class="relative p-6 text-white sm:p-8 lg:p-10">
+              <h3 class="font-display text-2xl font-semibold sm:text-3xl">Tắm sấy thơm</h3>
+              <p class="mt-2 max-w-[48ch] text-white/85">Tắm 2 lần với sữa tắm theo loại lông, vắt tuyến hôi, sấy khô từng lớp, chải mượt. Kèm cắt móng và vệ sinh tai.</p>
+              <div class="mt-5 flex flex-wrap items-center gap-4">
+                <span class="font-display text-xl font-semibold">từ 150.000đ</span>
+                <button type="button" data-book-service="tam" data-ripple class="inline-flex h-11 items-center rounded-full bg-white px-5 text-sm font-semibold text-may-800 transition hover:bg-may-50 active:scale-[.98]">Đặt lịch</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tỉa lông -->
+          <article class="group flex flex-col overflow-hidden rounded-card bg-may-50 lg:col-span-5 sm:flex-row lg:flex-row" data-tilt="4">
+            <div class="aspect-[4/3] overflow-hidden sm:aspect-auto sm:w-2/5">
+              <img src="assets/img/dv-tia-long.webp" alt="Bé Pomeranian lông vàng bông xù sau khi tỉa gọn" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="1200" height="893">
+            </div>
+            <div class="flex flex-1 flex-col p-6 lg:p-7">
+              <h3 class="font-display text-xl font-semibold text-ink-900 sm:text-2xl">Tỉa lông tạo kiểu</h3>
+              <p class="mt-2 text-ink-600">Tỉa gọn vệ sinh, cắt kiểu teddy, Hàn Quốc, cạo mùa hè. Gửi ảnh mẫu qua Zalo trước khi làm.</p>
+              <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
+                <span class="font-display text-lg font-semibold text-may-700">từ 290.000đ</span>
+                <button type="button" data-book-service="tia" class="group/btn inline-flex h-11 items-center gap-1.5 rounded-full px-1 text-sm font-semibold text-may-700 hover:text-may-800">Đặt lịch
+                  <svg class="h-4 w-4 transition group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Giữ theo giờ -->
+          <article class="group flex flex-col overflow-hidden rounded-card bg-may-700 text-white lg:col-span-5 sm:flex-row lg:flex-row" data-tilt="4">
+            <div class="flex flex-1 flex-col p-6 lg:p-7">
+              <h3 class="font-display text-xl font-semibold sm:text-2xl">Giữ bé theo giờ</h3>
+              <p class="mt-2 text-may-100">Đi làm, đi khám hay đi chơi vài tiếng, cứ gửi bé ở tiệm. Có phòng mèo riêng, cho ăn đúng giờ, báo ảnh mỗi 2 tiếng.</p>
+              <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
+                <span class="font-display text-lg font-semibold">từ 35.000đ/giờ</span>
+                <button type="button" data-book-service="giu" class="group/btn inline-flex h-11 items-center gap-1.5 rounded-full px-1 text-sm font-semibold text-white hover:text-may-100">Đặt lịch
+                  <svg class="h-4 w-4 transition group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="order-first aspect-[4/3] overflow-hidden sm:order-none sm:aspect-auto sm:w-2/5">
+              <img src="assets/img/dv-giu-theo-gio.webp" alt="Bé mèo xám tai cụp đang chơi trên trụ cào móng" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="1200" height="800">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BẢNG GIÁ -->
+    <section id="bang-gia" class="scroll-mt-20 bg-may-50">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-24 2xl:px-16">
+        <div class="min-w-0 lg:col-span-4">
+          <h2 class="font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl lg:text-5xl" data-reveal="up">Bảng giá theo cân nặng</h2>
+          <p class="mt-4 max-w-[48ch] text-lg text-ink-600" data-reveal="up" data-reveal-delay="100">Chọn loại và cân nặng của bé để xem giá. Lông rối nhiều, cần gỡ kỹ có thể phụ thu 30.000đ - 80.000đ, báo trước khi làm.</p>
+          <div class="mt-8 rounded-card bg-white p-6" data-reveal="up" data-reveal-delay="160">
+            <p class="font-semibold text-ink-900">Thêm lẻ khi tắm</p>
+            <ul class="mt-3 space-y-2 text-ink-600">
+              <li class="flex justify-between gap-4"><span>Đánh răng, xịt thơm miệng</span><span class="font-semibold text-ink-800">40.000đ</span></li>
+              <li class="flex justify-between gap-4"><span>Dưỡng lông tinh dầu</span><span class="font-semibold text-ink-800">50.000đ</span></li>
+              <li class="flex justify-between gap-4"><span>Đón trả tận nhà (dưới 3km)</span><span class="font-semibold text-ink-800">30.000đ/lượt</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="min-w-0 lg:col-span-8" data-reveal="up" data-reveal-delay="120">
+          <div class="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0" role="tablist" aria-label="Chọn loại thú cưng" id="priceTabs"></div>
+          <div id="pricePanel" class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CỬA HÀNG -->
+    <section id="cua-hang" class="scroll-mt-20 bg-white">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 class="font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl lg:text-5xl" data-reveal="up">Mua đồ cho bé ngay tại tiệm</h2>
+            <p class="mt-4 max-w-[60ch] text-lg text-ink-600" data-reveal="up" data-reveal-delay="100">Đặt trên web, nhận tại tiệm hoặc giao trong 5km. Hàng chính hãng, còn hạn dài.</p>
+          </div>
+          <div class="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 md:mx-0 md:px-0" role="tablist" aria-label="Nhóm sản phẩm" id="shopTabs"></div>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-12 2xl:gap-8">
+          <aside class="min-w-0 lg:col-span-4 2xl:col-span-3">
+            <div class="lg:sticky lg:top-24">
+              <div class="overflow-hidden rounded-card bg-may-100 aspect-[16/10] lg:aspect-[4/5]">
+                <img id="shopImage" src="assets/img/sp-ke-thuc-an.jpg" alt="Kệ thức ăn hạt cho chó trong cửa hàng" class="h-full w-full object-cover transition duration-500" loading="lazy" width="1024" height="768">
+              </div>
+              <h3 id="shopTitle" class="mt-5 font-display text-xl font-semibold text-ink-900">Thức ăn</h3>
+              <p id="shopDesc" class="mt-1 text-ink-600">Hạt, pate, bánh thưởng và sữa cho chó mèo mọi lứa tuổi.</p>
+            </div>
+          </aside>
+          <div id="productGrid" class="grid min-w-0 gap-4 sm:grid-cols-2 lg:col-span-8 xl:grid-cols-3 2xl:col-span-9 2xl:grid-cols-4" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUY TRÌNH -->
+    <section class="bg-may-800 text-white" data-spotlight data-spotlight-color="rgba(160,207,234,.14)">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+        <h2 class="max-w-[24ch] font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl" data-reveal="up">Một buổi spa ở Mây diễn ra thế nào</h2>
+        <ol class="relative mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8" data-reveal-stagger="120">
+          <li class="relative border-t border-may-500/50 pt-6">
+            <span class="absolute -top-[7px] left-0 h-3 w-3 rounded-full bg-may-300"></span>
+            <p class="font-display text-sm font-semibold text-may-300">10 phút</p>
+            <h3 class="mt-2 font-display text-xl font-semibold">Nhận bé, xem da lông</h3>
+            <p class="mt-2 text-may-100">Kiểm tra ve rận, vết thương, tình trạng rối lông và ghi chú tính cách bé.</p>
+          </li>
+          <li class="relative border-t border-may-500/50 pt-6">
+            <span class="absolute -top-[7px] left-0 h-3 w-3 rounded-full bg-may-300"></span>
+            <p class="font-display text-sm font-semibold text-may-300">30 phút</p>
+            <h3 class="mt-2 font-display text-xl font-semibold">Tắm hai lần</h3>
+            <p class="mt-2 text-may-100">Nước ấm, sữa tắm riêng cho lông dài, lông ngắn hoặc da nhạy cảm.</p>
+          </li>
+          <li class="relative border-t border-may-500/50 pt-6">
+            <span class="absolute -top-[7px] left-0 h-3 w-3 rounded-full bg-may-300"></span>
+            <p class="font-display text-sm font-semibold text-may-300">30 - 60 phút</p>
+            <h3 class="mt-2 font-display text-xl font-semibold">Sấy, chải, tỉa</h3>
+            <p class="mt-2 text-may-100">Sấy độ ồn thấp, chải gỡ rối, tỉa theo kiểu đã chọn cùng bạn.</p>
+          </li>
+          <li class="relative border-t border-may-500/50 pt-6">
+            <span class="absolute -top-[7px] left-0 h-3 w-3 rounded-full bg-may-300"></span>
+            <p class="font-display text-sm font-semibold text-may-300">Khi xong</p>
+            <h3 class="mt-2 font-display text-xl font-semibold">Gửi ảnh, hẹn đón</h3>
+            <p class="mt-2 text-may-100">Nhắn ảnh bé qua Zalo, bạn ghé đón hoặc tiệm giao bé về tận nhà.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ĐÁNH GIÁ -->
+    <section id="danh-gia" class="scroll-mt-20 bg-white">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:items-stretch lg:px-10 lg:py-24 2xl:px-16">
+        <figure class="relative min-w-0 overflow-hidden rounded-card bg-may-100 lg:col-span-7" data-reveal="zoom">
+          <div class="aspect-[4/3] lg:aspect-auto lg:h-full">
+            <img src="assets/img/khach-hang-cun.jpg" alt="Đôi bạn trẻ ngồi trên sofa cùng bé chó Jack Russell" class="h-full w-full object-cover" loading="lazy" width="1600" height="1067">
+          </div>
+        </figure>
+        <div class="flex min-w-0 flex-col justify-between gap-8 lg:col-span-5">
+          <blockquote data-reveal="up">
+            <p class="font-display text-2xl font-medium leading-snug text-ink-900 sm:text-3xl">“Bé Bơ nhà mình sợ máy sấy lắm, nhưng ở Mây các bạn cho bé làm quen từ từ. Giờ tới tiệm là bé tự chạy vào.”</p>
+            <footer class="mt-5 text-ink-600"><span class="font-semibold text-ink-900">Chị Ngọc Hân</span>, chủ bé Corgi Bơ, khách quen từ 2021</footer>
+          </blockquote>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2" data-reveal-stagger="100">
+            <blockquote class="rounded-card bg-may-50 p-6">
+              <p class="text-ink-700">“Tỉa kiểu teddy đúng ảnh mẫu, lại gửi ảnh trước khi trả. Giá rõ ràng, không phụ thu bất ngờ.”</p>
+              <footer class="mt-4 text-sm"><span class="font-semibold text-ink-900">Chị Thảo Vy</span><br><span class="text-ink-500">chủ bé Poodle Mochi</span></footer>
+            </blockquote>
+            <blockquote class="rounded-card bg-may-50 p-6">
+              <p class="text-ink-700">“Gửi hai bé mèo 6 tiếng khi đi làm thủ tục, có phòng riêng, không ồn tiếng chó. Rất yên tâm.”</p>
+              <footer class="mt-4 text-sm"><span class="font-semibold text-ink-900">Anh Quốc Bảo</span><br><span class="text-ink-500">chủ 2 bé mèo Anh lông ngắn</span></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HỎI ĐÁP -->
+    <section id="hoi-dap" class="scroll-mt-20 bg-may-50">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-24 2xl:px-16">
+        <div class="lg:col-span-4">
+          <h2 class="font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl lg:text-5xl" data-reveal="up">Câu hỏi hay gặp</h2>
+          <p class="mt-4 text-lg text-ink-600" data-reveal="up" data-reveal-delay="100">Chưa thấy câu bạn cần? Nhắn Zalo <a href="https://zalo.me/0909368214" target="_blank" rel="noopener" class="font-semibold text-may-700 underline decoration-may-300 underline-offset-4 hover:decoration-may-600">0909 368 214</a>, tiệm trả lời trong giờ mở cửa.</p>
+        </div>
+        <div class="grid gap-3 lg:col-span-8 xl:grid-cols-2" data-reveal-stagger="70">
+          <details class="faq group rounded-card bg-white p-5 sm:p-6">
+            <summary class="flex cursor-pointer items-start justify-between gap-4 font-semibold text-ink-900">Có cần đặt lịch trước không?<span class="faq-icon"></span></summary>
+            <p class="mt-3 text-ink-600">Nên đặt trước để có groomer riêng cho bé. Khách ghé thẳng vẫn được nhận nếu còn khung giờ trống.</p>
+          </details>
+          <details class="faq group rounded-card bg-white p-5 sm:p-6">
+            <summary class="flex cursor-pointer items-start justify-between gap-4 font-semibold text-ink-900">Bé nhát hoặc hay cắn thì sao?<span class="faq-icon"></span></summary>
+            <p class="mt-3 text-ink-600">Báo trước khi đặt lịch. Tiệm xếp khung giờ vắng, làm chậm và cho bé nghỉ giữa chừng. Không dùng thuốc an thần.</p>
+          </details>
+          <details class="faq group rounded-card bg-white p-5 sm:p-6">
+            <summary class="flex cursor-pointer items-start justify-between gap-4 font-semibold text-ink-900">Tiệm có đón bé tận nhà không?<span class="faq-icon"></span></summary>
+            <p class="mt-3 text-ink-600">Có, trong bán kính 3km quanh Phú Nhuận, phí 30.000đ mỗi lượt. Xa hơn vui lòng nhắn Zalo để báo giá.</p>
+          </details>
+          <details class="faq group rounded-card bg-white p-5 sm:p-6">
+            <summary class="flex cursor-pointer items-start justify-between gap-4 font-semibold text-ink-900">Giữ theo giờ có cho bé ăn không?<span class="faq-icon"></span></summary>
+            <p class="mt-3 text-ink-600">Có. Bạn mang theo đồ ăn quen của bé, hoặc dùng hạt của tiệm (tính theo giá bán lẻ). Nước uống miễn phí.</p>
+          </details>
+          <details class="faq group rounded-card bg-white p-5 sm:p-6">
+            <summary class="flex cursor-pointer items-start justify-between gap-4 font-semibold text-ink-900">Mua hàng trên web giao thế nào?<span class="faq-icon"></span></summary>
+            <p class="mt-3 text-ink-600">Đơn đặt trước 17:00 giao trong ngày, phí 20.000đ trong 5km. Đơn từ 500.000đ được miễn phí giao.</p>
+          </details>
+          <details class="faq group rounded-card bg-white p-5 sm:p-6">
+            <summary class="flex cursor-pointer items-start justify-between gap-4 font-semibold text-ink-900">Thanh toán bằng cách nào?<span class="faq-icon"></span></summary>
+            <p class="mt-3 text-ink-600">Tiền mặt, chuyển khoản hoặc quét mã QR tại quầy. Giao hàng thì thanh toán khi nhận.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ĐẶT LỊCH + LIÊN HỆ -->
+    <section id="dat-lich" class="scroll-mt-20 bg-white">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-24 2xl:px-16">
+        <div class="min-w-0 lg:col-span-5 2xl:col-span-6">
+          <h2 class="font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl lg:text-5xl" data-reveal="up">Đặt lịch cho bé</h2>
+          <p class="mt-4 max-w-[50ch] text-lg text-ink-600" data-reveal="up" data-reveal-delay="100">Gửi thông tin, tiệm gọi xác nhận trong 15 phút (giờ mở cửa).</p>
+
+          <dl class="mt-8 grid gap-5 sm:grid-cols-2" data-reveal-stagger="80">
+            <div class="flex gap-3">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-may-100 text-may-700"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div><dt class="text-sm text-ink-500">Địa chỉ</dt><dd class="font-semibold text-ink-900">128 Nguyễn Trọng Tuyển, P.15, Phú Nhuận, TP.HCM</dd></div>
+            </div>
+            <div class="flex gap-3">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-may-100 text-may-700"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+              <div><dt class="text-sm text-ink-500">Giờ mở cửa</dt><dd class="font-semibold text-ink-900">8:00 - 20:00, cả tuần</dd></div>
+            </div>
+            <div class="flex gap-3">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-may-100 text-may-700"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <div><dt class="text-sm text-ink-500">Điện thoại</dt><dd><a href="tel:0909368214" class="font-semibold text-ink-900 hover:text-may-700">0909 368 214</a></dd></div>
+            </div>
+            <div class="flex gap-3">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-may-100 text-may-700"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+              <div><dt class="text-sm text-ink-500">Zalo / Messenger</dt><dd class="flex gap-3 font-semibold"><a href="https://zalo.me/0909368214" target="_blank" rel="noopener" class="text-may-700 hover:text-may-800">Zalo</a><a href="https://m.me/maypetspa" target="_blank" rel="noopener" class="text-may-700 hover:text-may-800">Messenger</a></dd></div>
+            </div>
+          </dl>
+
+          <div class="mt-8 overflow-hidden rounded-card border border-may-100 bg-may-50 aspect-[16/10]" data-reveal="fade">
+            <iframe title="Bản đồ Mây Pet Spa" src="https://www.google.com/maps?q=128+Nguy%E1%BB%85n+Tr%E1%BB%8Dng+Tuy%E1%BB%83n,+Ph%C3%BA+Nhu%E1%BA%ADn&output=embed" class="h-full w-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="min-w-0 lg:col-span-7 2xl:col-span-6">
+          <form id="bookingForm" novalidate class="rounded-card bg-may-50 p-5 sm:p-8 lg:p-10" data-reveal="up">
+            <div id="bookingSuccess" class="mb-6 hidden rounded-2xl border border-may-300 bg-white p-5" role="status">
+              <p class="font-semibold text-may-800">Đã nhận lịch hẹn</p>
+              <p id="bookingSuccessText" class="mt-1 text-ink-600"></p>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="flex flex-col gap-2">
+                <label for="bName" class="text-sm font-semibold text-ink-800">Tên của bạn</label>
+                <input id="bName" name="name" type="text" autocomplete="name" class="field" placeholder="Nguyễn Minh Anh">
+                <p class="field-error" data-error-for="name"></p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="bPhone" class="text-sm font-semibold text-ink-800">Số điện thoại</label>
+                <input id="bPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" class="field" placeholder="0901 234 567">
+                <p class="field-error" data-error-for="phone"></p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="bPet" class="text-sm font-semibold text-ink-800">Bé là</label>
+                <select id="bPet" name="pet" class="field">
+                  <option value="">Chọn loại thú cưng</option>
+                  <option value="Mèo">Mèo</option>
+                  <option value="Chó dưới 5kg">Chó dưới 5kg</option>
+                  <option value="Chó 5 - 15kg">Chó 5 - 15kg</option>
+                  <option value="Chó trên 15kg">Chó trên 15kg</option>
+                </select>
+                <p class="field-error" data-error-for="pet"></p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="bPetName" class="text-sm font-semibold text-ink-800">Tên bé <span class="font-normal text-ink-500">(không bắt buộc)</span></label>
+                <input id="bPetName" name="petName" type="text" class="field" placeholder="Mochi">
+              </div>
+
+              <fieldset class="sm:col-span-2">
+                <legend class="text-sm font-semibold text-ink-800">Dịch vụ</legend>
+                <div class="mt-2 grid gap-2 sm:grid-cols-3">
+                  <label class="choice"><input type="checkbox" name="service" value="tam" class="peer sr-only"><span>Tắm sấy</span></label>
+                  <label class="choice"><input type="checkbox" name="service" value="tia" class="peer sr-only"><span>Tỉa lông</span></label>
+                  <label class="choice"><input type="checkbox" name="service" value="giu" class="peer sr-only"><span>Giữ theo giờ</span></label>
+                </div>
+                <p class="field-error mt-2" data-error-for="service"></p>
+              </fieldset>
+
+              <div class="flex flex-col gap-2">
+                <label for="bDate" class="text-sm font-semibold text-ink-800">Ngày</label>
+                <input id="bDate" name="date" type="date" class="field">
+                <p class="field-error" data-error-for="date"></p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="bTime" class="text-sm font-semibold text-ink-800">Giờ đưa bé tới</label>
+                <select id="bTime" name="time" class="field">
+                  <option value="">Chọn giờ</option>
+                </select>
+                <p class="field-error" data-error-for="time"></p>
+              </div>
+              <div class="flex flex-col gap-2 sm:col-span-2">
+                <label for="bNote" class="text-sm font-semibold text-ink-800">Ghi chú <span class="font-normal text-ink-500">(kiểu tỉa, tính cách bé, cần đón tận nhà...)</span></label>
+                <textarea id="bNote" name="note" rows="3" class="field resize-y" placeholder="Bé hơi sợ máy sấy, muốn tỉa kiểu teddy"></textarea>
+              </div>
+            </div>
+            <button type="submit" data-ripple class="mt-7 inline-flex h-14 w-full items-center justify-center rounded-full bg-may-600 px-8 text-base font-semibold text-white transition hover:bg-may-700 active:scale-[.98] sm:w-auto">Gửi lịch hẹn</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-may-900 pb-24 text-may-100 lg:pb-0">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-10 2xl:px-16">
+      <div>
+        <p class="font-display text-xl font-semibold text-white">Mây Pet Spa</p>
+        <p class="mt-3 max-w-[36ch] text-may-200">Spa và cửa hàng thú cưng ở Phú Nhuận. Tắm, tỉa lông, giữ bé theo giờ.</p>
+      </div>
+      <div>
+        <p class="font-semibold text-white">Dịch vụ</p>
+        <ul class="mt-3 space-y-2">
+          <li><a href="#dich-vu" class="footer-link">Tắm sấy</a></li>
+          <li><a href="#dich-vu" class="footer-link">Tỉa lông tạo kiểu</a></li>
+          <li><a href="#dich-vu" class="footer-link">Giữ bé theo giờ</a></li>
+          <li><a href="#bang-gia" class="footer-link">Bảng giá</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold text-white">Cửa hàng</p>
+        <ul class="mt-3 space-y-2">
+          <li><a href="#cua-hang" data-shop-jump="food" class="footer-link">Thức ăn</a></li>
+          <li><a href="#cua-hang" data-shop-jump="toy" class="footer-link">Đồ chơi</a></li>
+          <li><a href="#cua-hang" data-shop-jump="gear" class="footer-link">Vật dụng</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold text-white">Liên hệ</p>
+        <ul class="mt-3 space-y-2 text-may-200">
+          <li>128 Nguyễn Trọng Tuyển, P.15, Phú Nhuận</li>
+          <li><a href="tel:0909368214" class="footer-link">0909 368 214</a></li>
+          <li><a href="https://www.facebook.com/maypetspa" target="_blank" rel="noopener" class="footer-link">Facebook</a> <span class="text-may-400">/</span> <a href="https://zalo.me/0909368214" target="_blank" rel="noopener" class="footer-link">Zalo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-may-800">
+      <p class="mx-auto w-full max-w-screen-2xl px-4 py-5 text-sm text-may-300 sm:px-6 lg:px-10 2xl:px-16">© <span id="year">2026</span> Mây Pet Spa. Hộ kinh doanh Mây Pet, MST 0317 482 915.</p>
+    </div>
+  </footer>
+
+  <!-- THANH LIÊN HỆ MOBILE -->
+  <div class="fixed inset-x-0 bottom-0 z-30 border-t border-may-100 bg-white/95 px-3 py-2 backdrop-blur lg:hidden">
+    <div class="grid grid-cols-3 gap-2">
+      <a href="tel:0909368214" class="flex h-12 flex-col items-center justify-center rounded-2xl text-xs font-semibold text-ink-700 hover:bg-may-50">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>Gọi
+      </a>
+      <a href="https://zalo.me/0909368214" target="_blank" rel="noopener" class="flex h-12 flex-col items-center justify-center rounded-2xl text-xs font-semibold text-ink-700 hover:bg-may-50">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Zalo
+      </a>
+      <a href="#dat-lich" class="flex h-12 items-center justify-center rounded-2xl bg-may-600 text-sm font-semibold text-white hover:bg-may-700">Đặt lịch</a>
+    </div>
+  </div>
+
+  <!-- GIỎ HÀNG -->
+  <div id="cartDrawer" class="drawer-root fixed inset-0 z-50" aria-hidden="true" role="dialog" aria-label="Giỏ hàng">
+    <div data-cart-close class="drawer-backdrop absolute inset-0 bg-ink-900/40"></div>
+    <div class="drawer-panel absolute inset-y-0 right-0 flex w-full max-w-md flex-col bg-white shadow-xl">
+      <div class="flex items-center justify-between border-b border-may-100 px-5 py-4">
+        <p class="font-display text-lg font-semibold text-ink-900">Giỏ hàng</p>
+        <button type="button" data-cart-close class="grid h-11 w-11 place-items-center rounded-full hover:bg-may-50" aria-label="Đóng giỏ hàng">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto px-5 py-4">
+        <div id="cartEmpty" class="py-12 text-center">
+          <p class="font-semibold text-ink-900">Giỏ hàng đang trống</p>
+          <p class="mt-1 text-ink-500">Chọn vài món cho bé ở mục Cửa hàng nhé.</p>
+          <a href="#cua-hang" data-cart-close class="mt-5 inline-flex h-11 items-center rounded-full border border-may-200 px-5 text-sm font-semibold text-may-700 hover:bg-may-50">Xem cửa hàng</a>
+        </div>
+        <ul id="cartItems" class="divide-y divide-may-100"></ul>
+
+        <form id="checkoutForm" novalidate class="mt-6 hidden space-y-4 border-t border-may-100 pt-6">
+          <p class="font-semibold text-ink-900">Thông tin nhận hàng</p>
+          <div class="flex flex-col gap-2">
+            <label for="cName" class="text-sm font-semibold text-ink-800">Tên người nhận</label>
+            <input id="cName" name="name" type="text" autocomplete="name" class="field">
+            <p class="field-error" data-error-for="name"></p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="cPhone" class="text-sm font-semibold text-ink-800">Số điện thoại</label>
+            <input id="cPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" class="field">
+            <p class="field-error" data-error-for="phone"></p>
+          </div>
+          <fieldset>
+            <legend class="text-sm font-semibold text-ink-800">Cách nhận</legend>
+            <div class="mt-2 grid grid-cols-2 gap-2">
+              <label class="choice"><input type="radio" name="ship" value="pickup" class="peer sr-only" checked><span>Nhận tại tiệm</span></label>
+              <label class="choice"><input type="radio" name="ship" value="delivery" class="peer sr-only"><span>Giao tận nơi</span></label>
+            </div>
+          </fieldset>
+          <div id="addressWrap" class="hidden flex-col gap-2">
+            <label for="cAddress" class="text-sm font-semibold text-ink-800">Địa chỉ giao (trong 5km)</label>
+            <input id="cAddress" name="address" type="text" autocomplete="street-address" class="field">
+            <p class="field-error" data-error-for="address"></p>
+          </div>
+        </form>
+        <div id="orderSuccess" class="hidden py-12 text-center" role="status">
+          <p class="font-display text-xl font-semibold text-may-800">Đặt hàng thành công</p>
+          <p id="orderSuccessText" class="mt-2 text-ink-600"></p>
+        </div>
+      </div>
+      <div id="cartFooter" class="hidden border-t border-may-100 px-5 py-4">
+        <dl class="space-y-1 text-sm">
+          <div class="flex justify-between"><dt class="text-ink-500">Tạm tính</dt><dd id="cartSubtotal" class="font-semibold text-ink-900">0đ</dd></div>
+          <div class="flex justify-between"><dt class="text-ink-500">Phí giao</dt><dd id="cartShip" class="font-semibold text-ink-900">0đ</dd></div>
+          <div class="flex justify-between pt-1 text-base"><dt class="font-semibold text-ink-900">Tổng</dt><dd id="cartTotal" class="font-display font-semibold text-may-700">0đ</dd></div>
+        </dl>
+        <button type="submit" form="checkoutForm" data-ripple class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-full bg-may-600 font-semibold text-white transition hover:bg-may-700 active:scale-[.98]">Đặt hàng</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="pointer-events-none fixed bottom-20 left-1/2 z-[60] -translate-x-1/2 translate-y-4 rounded-full bg-ink-900 px-5 py-3 text-sm font-medium text-white opacity-0 shadow-lg transition duration-300 lg:bottom-8" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

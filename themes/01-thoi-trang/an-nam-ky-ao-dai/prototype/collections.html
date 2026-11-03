@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bộ sưu tập — An Nam Ký Test</title>
+  <meta name="description" content="Các bộ sưu tập áo dài của An Nam Ký Test: Sen Hạ, Hỷ Sự, Tinh Khôi và Gấm Phố, may đo từ lụa tơ tằm Việt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-cream font-sans text-ink antialiased">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-transparent bg-cream/95">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="font-display text-xl tracking-tight text-ink sm:text-2xl">An Nam Ký <span class="italic text-wine">Test</span></a>
+    <nav aria-label="Điều hướng chính" class="hidden items-center gap-8 text-[15px] lg:flex xl:gap-10">
+      <a href="index.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Trang chủ</a>
+      <a href="about.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Câu chuyện</a>
+      <a href="collections.html" aria-current="page" class="link-run py-2 text-wine">Bộ sưu tập</a>
+      <a href="may-do.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">May đo</a>
+      <a href="journal.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Ghi chép</a>
+      <a href="contact.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Liên hệ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="contact.html#hen-may" class="hidden h-11 items-center bg-wine px-6 text-sm font-medium text-cream transition-colors duration-300 hover:bg-wine-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine active:scale-[.98] sm:inline-flex">Hẹn may đo</a>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center border border-line text-ink transition-colors duration-300 hover:border-wine hover:text-wine lg:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-line bg-cream p-6 lg:hidden">
+    <nav aria-label="Điều hướng trên điện thoại" class="flex flex-col font-display text-2xl">
+      <a href="index.html" class="border-b border-line py-3">Trang chủ</a>
+      <a href="about.html" class="border-b border-line py-3">Câu chuyện</a>
+      <a href="collections.html" aria-current="page" class="border-b border-line py-3 text-wine">Bộ sưu tập</a>
+      <a href="may-do.html" class="border-b border-line py-3">May đo</a>
+      <a href="journal.html" class="border-b border-line py-3">Ghi chép</a>
+      <a href="contact.html" class="py-3">Liên hệ</a>
+    </nav>
+    <a href="contact.html#hen-may" class="mt-6 flex h-12 items-center justify-center bg-wine text-sm font-medium text-cream">Hẹn may đo</a>
+  </div>
+</header>
+
+<main>
+  <section id="page-hero" data-section="page-hero" class="bg-cream">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-12 pt-12 sm:px-6 lg:px-10 lg:pb-16 lg:pt-16 2xl:px-16">
+      <h1 data-reveal="up" class="pb-2 font-display text-[clamp(3rem,8vw,9rem)] leading-[1.02] tracking-tight">Bộ <span class="italic text-wine">sưu tập</span></h1>
+      <p data-reveal="up" class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Mỗi bộ sưu tập bắt đầu từ một mùa, một dịp trong đời sống người Việt. Mọi mẫu đều được may đo lại theo số đo của bạn.</p>
+    </div>
+  </section>
+
+  <section id="danh-sach" data-section="list-cards" class="bg-cream">
+    <div data-filter-group class="mx-auto w-full max-w-screen-2xl px-4 pb-24 sm:px-6 lg:px-10 lg:pb-32 2xl:px-16">
+      <div role="group" aria-label="Lọc theo dịp mặc" class="stitch flex flex-wrap gap-x-2 gap-y-2 pt-6">
+        <button type="button" data-filter="all" class="is-active h-11 border border-line px-5 text-sm transition-colors duration-300 hover:border-wine [&.is-active]:border-wine [&.is-active]:bg-wine [&.is-active]:text-cream">Tất cả</button>
+        <button type="button" data-filter="thuong-nhat" class="h-11 border border-line px-5 text-sm transition-colors duration-300 hover:border-wine [&.is-active]:border-wine [&.is-active]:bg-wine [&.is-active]:text-cream">Thường nhật</button>
+        <button type="button" data-filter="le-hoi" class="h-11 border border-line px-5 text-sm transition-colors duration-300 hover:border-wine [&.is-active]:border-wine [&.is-active]:bg-wine [&.is-active]:text-cream">Lễ, Tết</button>
+        <button type="button" data-filter="cuoi-hoi" class="h-11 border border-line px-5 text-sm transition-colors duration-300 hover:border-wine [&.is-active]:border-wine [&.is-active]:bg-wine [&.is-active]:text-cream">Cưới hỏi</button>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 2xl:gap-x-16">
+        <article data-category="thuong-nhat le-hoi">
+          <a href="collection-sen-ha.html" class="group block">
+            <div class="aspect-[4/3] overflow-hidden bg-moss-soft">
+              <img src="assets/img/sen-ha-lotus.jpg" alt="Đầm sen hồng và sen trắng giữa lá xanh trên mặt nước" width="1600" height="899" loading="lazy" class="zoom-img h-full w-full object-cover">
+            </div>
+            <div class="mt-5 flex items-baseline justify-between gap-4">
+              <h2 class="font-display text-3xl lg:text-4xl">Sen Hạ</h2>
+              <p class="shrink-0 text-sm text-muted">Hè 2026, 9 mẫu</p>
+            </div>
+            <p class="mt-2 max-w-prose text-muted">Lụa vàng nghệ, xanh lá sen và trắng ngà, vẽ tay hoa sen theo từng thân áo.</p>
+            <span class="mt-4 inline-flex items-center gap-3 text-sm font-medium"><span class="link-run">Xem bộ sưu tập</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></span>
+          </a>
+        </article>
+
+        <article data-category="cuoi-hoi le-hoi" class="md:mt-28">
+          <a href="collection-hy-su.html" class="group block">
+            <div class="aspect-[4/3] overflow-hidden bg-wine-soft">
+              <img src="assets/img/ao-dai-g.jpg" alt="Cô dâu mặc áo dài hồng phấn đứng giữa bốn chị em mặc áo dài đỏ chấm bi trước cổng hoa" width="1024" height="683" loading="lazy" class="zoom-img h-full w-full object-cover">
+            </div>
+            <div class="mt-5 flex items-baseline justify-between gap-4">
+              <h2 class="font-display text-3xl lg:text-4xl">Hỷ Sự</h2>
+              <p class="shrink-0 text-sm text-muted">Mùa cưới 2026, 7 mẫu</p>
+            </div>
+            <p class="mt-2 max-w-prose text-muted">Áo dài cô dâu, áo dài đồng phục cho hội chị em bưng quả và áo cho mẹ hai bên.</p>
+            <span class="mt-4 inline-flex items-center gap-3 text-sm font-medium"><span class="link-run">Xem bộ sưu tập</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></span>
+          </a>
+        </article>
+
+        <article id="tinh-khoi" data-category="thuong-nhat">
+          <div class="flex aspect-[4/3] flex-col justify-between bg-moss p-8 text-cream lg:p-12">
+            <p class="text-sm text-cream/80">Ra mắt tháng 8, 2026</p>
+            <p class="font-display text-[clamp(2.5rem,5vw,5rem)] italic leading-none">Trắng như giấy dó</p>
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h2 class="font-display text-3xl lg:text-4xl">Tinh Khôi</h2>
+            <p class="shrink-0 text-sm text-muted">Sắp ra mắt</p>
+          </div>
+          <p class="mt-2 max-w-prose text-muted">Áo dài trắng lụa mỏng, cổ thấp, cho tuổi học trò và ngày tốt nghiệp.</p>
+        </article>
+
+        <article data-category="le-hoi" class="md:mt-28">
+          <div class="aspect-[4/3] overflow-hidden bg-moss-soft">
+            <img src="assets/img/lookbook-03.jpg" alt="Phụ nữ mặc áo dài gấm xanh rêu và áo dài đỏ thêu hoa dạo trên phố đi bộ" width="1024" height="683" loading="lazy" class="h-full w-full object-cover object-[30%_50%]">
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h2 class="font-display text-3xl lg:text-4xl">Gấm Phố</h2>
+            <p class="shrink-0 text-sm text-muted">Sắp ra mắt</p>
+          </div>
+          <p class="mt-2 max-w-prose text-muted">Gấm hoa văn chìm màu rêu, mận và lam, cho những ngày Tết và lễ hội.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="tren-pho" data-section="gallery-masonry" class="bg-cream-deep">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-4xl font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl 2xl:text-6xl">Áo dài trên phố</h2>
+      <p data-reveal="up" class="mt-5 max-w-2xl text-muted">Những khoảnh khắc chúng tôi ghi lại ở lễ hội áo dài: nơi xưởng tìm màu, tìm dáng cho mùa sau. Bấm vào ảnh để xem lớn.</p>
+      <div class="mt-12 columns-1 gap-4 sm:columns-2 lg:columns-3 2xl:columns-4 [&>a]:mb-4">
+        <a href="assets/img/nh-b.jpg" data-lightbox="tren-pho" data-caption="Áo dài đỏ, xanh và hoa dưới cổng rồng trên phố đi bộ" class="group block break-inside-avoid overflow-hidden bg-wine-soft">
+          <img src="assets/img/nh-b.jpg" alt="Những người phụ nữ mặc áo dài đỏ, xanh lục và áo dài hoa dưới cổng rồng" width="1024" height="683" loading="lazy" class="zoom-img w-full">
+        </a>
+        <a href="assets/img/lookbook-08.jpg" data-lightbox="tren-pho" data-caption="Đồng diễn áo dài vàng vẽ sen" class="group block break-inside-avoid overflow-hidden bg-wine-soft">
+          <img src="assets/img/lookbook-08.jpg" alt="Hàng người mặc áo dài vàng vẽ sen và áo dài đỏ đồng diễn dưới cổng rồng" width="1024" height="683" loading="lazy" class="zoom-img w-full">
+        </a>
+        <a href="assets/img/nh-f.jpg" data-lightbox="tren-pho" data-caption="Giàn lụa nhiều màu trên phố" class="group block break-inside-avoid overflow-hidden bg-wine-soft">
+          <img src="assets/img/nh-f.jpg" alt="Giàn tre treo những dải lụa mỏng nhiều màu, phía dưới là người mặc áo dài" width="1024" height="683" loading="lazy" class="zoom-img w-full">
+        </a>
+        <a href="assets/img/nh-d.jpg" data-lightbox="tren-pho" data-caption="Áo dài hoa đen và đỏ trong buổi đồng diễn" class="group block break-inside-avoid overflow-hidden bg-wine-soft">
+          <img src="assets/img/nh-d.jpg" alt="Phụ nữ mặc áo dài đen in hoa đỏ vàng và áo dài đỏ giơ tay múa" width="1024" height="683" loading="lazy" class="zoom-img w-full">
+        </a>
+        <a href="assets/img/lookbook-09.jpg" data-lightbox="tren-pho" data-caption="Áo dài đỏ sao vàng trước Nhà hát" class="group block break-inside-avoid overflow-hidden bg-wine-soft">
+          <img src="assets/img/lookbook-09.jpg" alt="Nhóm phụ nữ mặc áo dài đỏ in sao vàng khoác tay nhau mỉm cười" width="1024" height="683" loading="lazy" class="zoom-img w-full">
+        </a>
+        <a href="assets/img/nh-e.jpg" data-lightbox="tren-pho" data-caption="Áo dài xanh lục thêu hoa, khăn voan hồng" class="group block break-inside-avoid overflow-hidden bg-wine-soft">
+          <img src="assets/img/nh-e.jpg" alt="Người phụ nữ mặc áo dài xanh lục thêu hoa, quàng khăn voan hồng giữa đám đông đồng diễn" width="1024" height="683" loading="lazy" class="zoom-img w-full">
+        </a>
+        <a href="assets/img/lookbook-05.jpg" data-lightbox="tren-pho" data-caption="Đoàn áo dài vàng và hồng băng qua phố" class="group block break-inside-avoid overflow-hidden bg-wine-soft">
+          <img src="assets/img/lookbook-05.jpg" alt="Đoàn phụ nữ mặc áo dài vàng và hồng băng qua đường giữa các tòa nhà cao tầng" width="1024" height="683" loading="lazy" class="zoom-img w-full">
+        </a>
+        <a href="assets/img/nh-a.jpg" data-lightbox="tren-pho" data-caption="Những bàn tay cầm hoa hồng giơ cao" class="group block break-inside-avoid overflow-hidden bg-wine-soft">
+          <img src="assets/img/nh-a.jpg" alt="Những bàn tay đeo nhẫn cầm hoa hồng đỏ giơ cao trong đám đông mặc áo dài" width="1024" height="683" loading="lazy" class="zoom-img w-full">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" data-section="cta-type" class="bg-cream">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="pb-2 font-display text-[clamp(2.6rem,6.5vw,7rem)] leading-[1.05] tracking-tight">Thích một mẫu? <span class="italic text-wine">Chúng tôi may lại theo dáng bạn.</span></h2>
+      <div data-reveal="up" class="stitch mt-10 flex flex-col gap-6 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <p class="max-w-xl text-lg text-muted">Mang theo tên mẫu khi đến xưởng, hoặc ghi vào lời nhắn khi hẹn lịch.</p>
+        <a href="contact.html#hen-may" class="inline-flex h-14 items-center justify-center bg-wine px-10 text-base font-medium text-cream transition-colors duration-300 hover:bg-wine-dark active:scale-[.98]">Hẹn may đo</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" data-section="footer-big" class="bg-moss-dark text-cream">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl">An Nam Ký Test</p>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-cream/75">Áo dài may đo từ lụa Việt. Xưởng nhỏ ở Huế, may theo lịch hẹn.</p>
+      </div>
+      <nav aria-label="Liên kết cuối trang">
+        <p class="text-sm font-medium text-cream/60">Trang</p>
+        <ul class="mt-4 space-y-3">
+          <li><a href="index.html" class="link-run">Trang chủ</a></li>
+          <li><a href="about.html" class="link-run">Câu chuyện</a></li>
+          <li><a href="collections.html" class="link-run">Bộ sưu tập</a></li>
+          <li><a href="may-do.html" class="link-run">May đo</a></li>
+          <li><a href="journal.html" class="link-run">Ghi chép</a></li>
+          <li><a href="contact.html" class="link-run">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="text-sm font-medium text-cream/60">Ghé xưởng</p>
+        <address class="mt-4 not-italic leading-relaxed">68 Chi Lăng, phường Phú Hội<br>TP. Huế</address>
+        <p class="mt-3 text-sm text-cream/75">9:00 đến 19:00, Thứ Ba đến Chủ Nhật</p>
+      </div>
+      <div>
+        <p class="text-sm font-medium text-cream/60">Liên hệ</p>
+        <p class="mt-4"><a href="tel:+842343826517" class="link-run">0234 3826 517</a></p>
+        <p class="mt-3"><a href="mailto:xinchao@annamky.vn" class="link-run">xinchao@annamky.vn</a></p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="mt-20 whitespace-nowrap font-display text-[11vw] leading-[0.9] tracking-tight text-cream/90 2xl:text-[11.5rem]">An Nam Ký Test</p>
+    <div class="mt-6 flex flex-col gap-2 border-t border-cream/20 py-6 text-sm text-cream/70 sm:flex-row sm:justify-between">
+      <p>&copy; 2026 An Nam Ký Test. Bảo lưu mọi quyền.</p>
+      <a href="#top" class="link-run self-start">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

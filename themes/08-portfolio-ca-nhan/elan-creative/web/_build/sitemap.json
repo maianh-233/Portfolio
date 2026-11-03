@@ -1,0 +1,49 @@
+{
+  "brand": "ÉLAN CREATIVE",
+  "language": "en",
+  "preset": "bold",
+  "motionLevel": 2,
+  "visualIdea": "Trang như một ấn phẩm in Swiss: lưới kẻ mảnh, số thứ tự (01)–(05) và một vạch đỏ cam 'registration line' chạy qua mọi section; ảnh dự án đen trắng, hiện màu khi rê chuột",
+  "purposeInferred": "Portfolio & CV một trang của Graphic / Visual Designer, làm mẫu cho khách tham khảo",
+  "theme": {
+    "tagline": "Thiết kế có chủ đích, chữ có tiếng nói",
+    "description": "Giao diện portfolio và CV một trang cho graphic designer theo phong cách Swiss editorial."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Landing page duy nhất: giới thiệu designer, 4 dự án chọn lọc, quan điểm thiết kế, kỹ năng, CV và liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-type", "source": "ai", "note": "Tên thương hiệu chữ cực lớn, chức danh Creative Designer, 1 câu giới thiệu, ảnh lệch" },
+        { "id": "disciplines", "catalog": "editorial", "variant": "marquee-band", "source": "ai", "note": "Dải chữ chạy các lĩnh vực" },
+        { "id": "work", "catalog": "projects", "variant": "gallery-lookbook", "source": "ba", "note": "4 dự án kích thước ảnh khác nhau: identity, poster, editorial, campaign; lightbox + hover phóng ảnh" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Quan điểm thiết kế + quy trình 4 bước đánh số" },
+        { "id": "skills", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Branding, Typography, Layout Design, Art Direction + công cụ" },
+        { "id": "resume", "catalog": "process", "variant": "features-tabs", "source": "ba", "note": "Tabs: Experience / Education / Certificates / Awards" },
+        { "id": "contact", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Email (sao chép), LinkedIn, lời mời hợp tác" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ba", "note": "Tối giản, wordmark lớn + dòng chữ dấu ấn cá nhân" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "billboard advertising campaign street", "file": "assets/img/work-campaign.webp", "status": "ok" },
+        { "slot": "work-identity", "query": "packaging design branding", "file": "assets/img/work-branding.jpg", "status": "ok" },
+        { "slot": "work-poster", "query": "magazine editorial layout spread", "file": "assets/img/work-editorial.jpg", "status": "ok" },
+        { "slot": "work-editorial", "query": "magazine print typography layout", "file": "assets/img/work-magazine.webp", "status": "ok" },
+        { "slot": "work-campaign", "query": "designer portrait studio", "file": "assets/img/hero-portrait.jpg", "status": "ok" },
+        { "slot": "philosophy", "query": "design sketches desk process", "file": "assets/img/philosophy-sketch.jpg", "status": "ok" },
+        { "slot": "skills", "query": "typographic poster wall", "file": "assets/img/work-poster.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng một trang (index.html) vì BA yêu cầu rõ: 'Tất cả nội dung nằm trên một landing page duy nhất'",
+    "Phong cách theo chú thích BA (Swiss Editorial + Creative Art Direction) thay vì Neo-Brutalism thuần: giữ màu paper / ink / signal của preset (trắng ngà, đen tuyền, đỏ cam), bỏ cobalt và acid; viền mảnh, ít bóng cứng",
+    "Bỏ font nhãn Instrument Serif vì BA yêu cầu sans-serif hiện đại; dùng một family Bricolage Grotesque cho cả tiêu đề, thân và nhãn",
+    "Menu theo BA: Work, About, Resume, Contact (About trỏ tới phần Design Philosophy)",
+    "Tên file ảnh do lần tải đầu đặt khác vai trò (ví dụ work-editorial.jpg là loạt poster, hero-portrait.jpg là ảnh chiến dịch); alt và sitemap mô tả đúng nội dung"
+  ],
+  "limitations": [
+    "Không có form gửi; liên hệ qua email (mailto + nút sao chép) và link LinkedIn mẫu",
+    "Dự án, kinh nghiệm, giải thưởng là nội dung mẫu để khách tham khảo; ảnh dự án là ảnh minh họa nguồn mở, cần thay bằng tác phẩm thật"
+  ]
+}

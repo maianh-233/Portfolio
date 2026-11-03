@@ -1,0 +1,125 @@
+{
+  "brand": "BLOOM HAIR ATELIER",
+  "language": "en",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Khung ảnh hình vòm như cánh hoa / gương salon đặt trên lưới editorial kẻ mảnh, kèm dải swatch 4 màu tóc (Rose Brown, Lavender Brown, Beige Blonde, Soft Pink) lặp lại ở hero, tiêu đề và footer; lavender là màu nhận diện xuyên suốt",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nở rộ theo vẻ đẹp của riêng bạn",
+    "description": "Giao diện salon tóc nghệ thuật phong cách editorial nữ tính, nhận diện màu lavender."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu thương hiệu, dịch vụ nổi bật, câu chuyện màu nhuộm, stylist; dẫn sang Services / Gallery / About",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-type", "source": "ba", "note": "Headline Bloom Into Your Own Beauty, ảnh người mẫu trong khung vòm lệch phải, CTA dịch vụ + bộ sưu tập" },
+        { "id": "signature", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Our Signature — triết lý tôn vinh vẻ đẹp cá nhân" },
+        { "id": "services", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "Signature Services: cắt, nhuộm, chăm sóc — ảnh, mô tả, giá tham khảo; link sang pages/services.html" },
+        { "id": "color-stories", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Color Stories: Rose Brown, Lavender Brown, Beige Blonde, Soft Pink" },
+        { "id": "artists", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Meet the Artists: 3 stylist, link sang About" },
+        { "id": "quote", "catalog": "cta", "variant": "quote-full", "source": "ba", "note": "Brand Quote & CTA khám phá dịch vụ" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "woman wavy hair portrait", "file": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "services-cut", "query": "hairdresser cutting hair", "file": "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "services-color", "query": "balayage hair", "file": "https://images.unsplash.com/photo-1554519934-e32b1629d9ee?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "services-care", "query": "blow dry round brush", "file": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "color-rose-brown", "query": "brown hair close up", "file": "https://images.unsplash.com/photo-1560264641-1b5191cc63e2?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "color-lavender-brown", "query": "purple hair woman", "file": "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "color-beige-blonde", "query": "blonde hair woman", "file": "https://images.unsplash.com/photo-1605980766335-d3a41c7332a1?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "color-soft-pink", "query": "pink hair woman", "file": "https://images.unsplash.com/photo-1598897506620-c6601b3c2f12?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "artist-1", "query": "woman portrait", "file": "https://images.unsplash.com/photo-1622418131139-8549767c2670?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "artist-2", "query": "woman portrait", "file": "https://images.unsplash.com/photo-1628126929453-b519555aaabf?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "artist-3", "query": "woman portrait", "file": "https://images.unsplash.com/photo-1599148200256-649e98444ef2?w=900&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Services",
+      "purpose": "Quy trình tư vấn 4 bước, bảng dịch vụ 4 nhóm (tên, mô tả, thời lượng, giá tham khảo), Find Your Hair Mood",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "Discover, Consult, Create, Finish" },
+        { "id": "menu", "catalog": "services", "variant": "features-tabs", "source": "ba", "note": "4 nhóm dịch vụ bằng data-tabs, kèm ghi chú giá / thời lượng thay đổi theo tình trạng tóc" },
+        { "id": "hair-mood", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Soft, Romantic, Modern, Bold" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Mở modal Book a Visit (demo)" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "stylist styling woman hair", "file": "https://images.unsplash.com/photo-1634449571017-5fecfd26ad76?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-haircut", "query": "woman cutting hair", "file": "https://images.unsplash.com/photo-1700760934268-8aa0ef52ce0a?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-coloring", "query": "purple hair", "file": "https://images.unsplash.com/photo-1574773004910-1eeaabb62b55?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-perm", "query": "long curly hair woman", "file": "https://images.unsplash.com/photo-1611590027211-b954fd027b51?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-treatment", "query": "round brush blonde hair", "file": "https://images.unsplash.com/photo-1734111719430-fe4a3973f8af?w=1200&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/gallery.html",
+      "title": "Gallery",
+      "purpose": "Bộ sưu tập kiểu tóc có bộ lọc + lightbox, bảng màu tóc đặc trưng, CTA sang Services",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "A Little More Color" },
+        { "id": "looks", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "Lọc All Looks / Hair Color / Haircut / Styling, masonry 14 ảnh, lightbox" },
+        { "id": "colors", "catalog": "gallery", "variant": "stats-band", "source": "ba", "note": "The Colors We Love — swatch màu tóc" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Dẫn sang pages/services.html" }
+      ],
+      "images": [
+        { "slot": "look-1", "query": "short wavy pink hair", "file": "https://images.unsplash.com/photo-1769007783470-cf53b045bab1?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-2", "query": "pink wavy hair", "file": "https://images.unsplash.com/photo-1769006370577-d0eca8c11741?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-3", "query": "pink hair", "file": "https://images.unsplash.com/photo-1659683704761-4c1a34c8f6ec?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-4", "query": "pink hair portrait", "file": "https://images.unsplash.com/photo-1632984814154-6e07a671ae58?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-5", "query": "multicolored hair", "file": "https://images.unsplash.com/photo-1554519515-242161756769?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-6", "query": "pink hair water", "file": "https://images.unsplash.com/photo-1633165864153-5a83575b24af?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-7", "query": "haircut salon", "file": "https://images.unsplash.com/photo-1707812343087-c9ff9e5abb43?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-8", "query": "haircut mirror", "file": "https://images.unsplash.com/photo-1637308596973-231d1a9221f5?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-9", "query": "stylist hair done", "file": "https://images.unsplash.com/photo-1723879371824-dfd4bd34d1f6?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-10", "query": "woman waving hair", "file": "https://images.unsplash.com/photo-1470259078422-826894b933aa?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-11", "query": "wavy blonde brunette hair", "file": "https://images.unsplash.com/photo-1785456283212-338f5bc44d50?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-12", "query": "long wavy hair", "file": "https://images.unsplash.com/photo-1770576568718-6747e3d85de8?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-13", "query": "styling wavy blonde hair", "file": "https://images.unsplash.com/photo-1785456390070-9960e3997066?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-14", "query": "hairstylist updo", "file": "https://images.unsplash.com/photo-1774660810725-fb04e002003d?w=1000&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Không gian BLOOM, câu chuyện tên thương hiệu, 3 giá trị, hồ sơ stylist, ảnh không gian, thông tin liên hệ & ghé thăm (dữ liệu mẫu)",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Our Story" },
+        { "id": "philosophy", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Beauty, Creativity, Individuality" },
+        { "id": "artists", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Hồ sơ chi tiết stylist (cùng chân dung với trang chủ vì là cùng người)" },
+        { "id": "atelier", "catalog": "gallery", "variant": "features-bento", "source": "ba", "note": "Inside the Atelier — 5 ảnh, lightbox" },
+        { "id": "visit", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Địa chỉ, giờ, điện thoại, email — dữ liệu minh họa" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "modern hair salon interior", "file": "https://images.unsplash.com/photo-1781450090585-1a511b7066d9?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "story", "query": "woman brown hair flowers", "file": "https://images.unsplash.com/photo-1758315949140-1972ace0644e?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "artist-1", "query": "woman portrait", "file": "https://images.unsplash.com/photo-1622418131139-8549767c2670?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "artist-2", "query": "woman portrait", "file": "https://images.unsplash.com/photo-1628126929453-b519555aaabf?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "artist-3", "query": "woman portrait", "file": "https://images.unsplash.com/photo-1599148200256-649e98444ef2?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "atelier-1", "query": "salon chairs mirror counter", "file": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "atelier-2", "query": "salon pendant lamps", "file": "https://images.unsplash.com/photo-1536520002442-39764a41e987?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "atelier-3", "query": "salon products clients", "file": "https://images.unsplash.com/photo-1746723378067-83a345ff3160?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "atelier-4", "query": "salon round mirrors", "file": "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "atelier-5", "query": "hair care product shelves", "file": "https://images.unsplash.com/photo-1776105609708-3d8908ab4dc2?w=1200&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA yêu cầu song ngữ VI / EN có bộ chuyển ngôn ngữ (ưu tiên chú thích của BA hơn mục Ngôn ngữ của concept): HTML gốc viết tiếng Anh, <html lang=\"en\">; bản tiếng Việt nằm trong thuộc tính data-vi* và được site.js đổi ngay trên trang hiện tại, nhớ lựa chọn bằng localStorage",
+    "Font theo BA: Cormorant Garamond (tiêu đề) + Manrope (thân bài), đều hỗ trợ tiếng Việt, thay cho Instrument Serif / Geist của preset",
+    "Bảng màu theo BA (lavender chủ đạo) thay cho bảng màu preset Editorial",
+    "Đúng 4 trang theo BA; thông tin liên hệ đặt trong About (Contact & Visit), đặt lịch là modal dùng chung",
+    "Thư viện ảnh (openverse) quá thời gian chờ → toàn bộ ảnh dùng link Unsplash đã kiểm qua link_image",
+    "Mức chuyển động Level 1: chỉ data-reveal fade/up, header thu gọn, hover"
+  ],
+  "limitations": [
+    "Nút Book a Visit mở form đặt lịch bản demo, chưa gửi đi (không có backend / lịch thật)",
+    "Giá, thời lượng, địa chỉ, giờ mở cửa, điện thoại, email, hồ sơ stylist là dữ liệu mẫu minh họa",
+    "Liên kết mạng xã hội trỏ tới trang chủ của mạng xã hội, chưa có tài khoản thật",
+    "Ảnh dùng link ngoài (Unsplash); cần ảnh thật của salon khi triển khai"
+  ]
+}

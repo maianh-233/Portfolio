@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Điểm &amp; voucher · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-PROMO-002" data-module="PROMO" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-PROMO-002 Điểm & voucher: PointsCard + Tabs Đổi điểm (MAU_DOI_DIEM) / Voucher của tôi (VOUCHER_KHACH) / Lịch sử điểm.
+   * Lịch sử điểm ghép từ đơn đã giao (cộng) + voucher đã đổi (trừ) + giao dịch đổi điểm mới (DemoStore 'pointTxns'). */
+  (function () {
+    if (!Perm.role() || Perm.role() === 'ROLE-01') { location.replace(App.loginHref('diem-voucher')); return; }
+    Layout.mount({ title: 'Điểm & voucher', breadcrumb: [['Tài khoản', 'pages/tai-khoan.html'], ['Điểm & voucher']], account: 'points' }, function (main) {
+      var U = Perm.url, esc = UI.esc, me = App.me(), cid = App.customer().id;
+      var tabs;
+      function cus() { return DemoStore.get('customers', cid); }
+      function templates() { return DemoStore.list('vouchers').filter(function (v) { return v.loai === 'MAU_DOI_DIEM' && v.trang_thai === 'BAT'; }).sort(function (a, b) { return a.diem_can - b.diem_can; }); }
+      function mine() {
+        var now = new Date();
+        return DemoStore.list('vouchers').filter(function (v) { return v.loai === 'VOUCHER_KHACH' && v.customerId === cid; }).map(function (v) {
+          return Object.assign({}, v, { st: v.used ? 'used' : new Date(v.ket_thuc) < now ? 'expired' : 'available' });
+        }).sort(function (a, b) { return (a.st === 'available' ? 0 : 1) - (b.st === 'available' ? 0 : 1) || (a.ket_thuc > b.ket_thuc ? 1 : -1); });
+      }
+      function txns() {
+        var list = DemoStore.list('orders').filter(function (o) { return o.customerId === cid && o.loai_don === 'THUONG' && o.state === 'DELIVERED'; })
+          .map(function (o) { return { id: 't-' + o.id, at: o.thoi_diem_giao || o.tao_luc, kind: 'plus', text: 'Cộng điểm đơn ' + o.code, orderId: o.id, pts: o.diem }; });
+        DemoStore.list('vouchers').filter(function (v) { return v.loai === 'VOUCHER_KHACH' && v.customerId === cid && !v.fromTxn; }).forEach(function (v) {
+          list.push({ id: 't-' + v.id, at: v.tao_luc, kind: 'minus', text: 'Đổi voucher ' + v.ten, pts: -(v.kieu === 'SHIP' ? 300 : v.gia_tri >= 50000 ? 500 : 200) });
+        });
+        return list.concat(DemoStore.list('pointTxns').filter(function (t) { return t.customerId === cid; })).sort(function (a, b) { return a.at < b.at ? 1 : -1; });
+      }
+      function value(v) { return v.kieu === 'SHIP' ? 'Free' : v.kieu === 'PHAN_TRAM' ? v.gia_tri + '%' : UI.fmt.compact(v.gia_tri); }
+
+      main.innerHTML = UI.pageHeader({ title: 'Điểm & voucher' }) + '<div data-points>' + UI.skeletonBlock('h-40 rounded-2xl') + '</div>' +
+        '<div class="mt-4">' + UI.alert({ tone: 'info', text: 'Điểm được cộng khi đơn giao thành công.' }) + '</div>' +
+        '<div class="mt-6 rounded-xl border border-neutral-200 bg-white p-4 md:p-5" data-tabs>' + UI.skeletonCards(3, 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3') + '</div>';
+
+      function paintPoints() {
+        var c = cus();
+        var pending = DemoStore.list('orders').filter(function (o) { return o.customerId === cid && o.loai_don === 'THUONG' && ['NEW', 'CONFIRMED', 'SHIPPING'].indexOf(o.state) >= 0; }).reduce(function (s, o) { return s + (o.diem || 0); }, 0);
+        main.querySelector('[data-points]').innerHTML = UI.pointsCard({ points: c.diem, pending: pending });
+      }
+      function grid(html) { return '<div class="grid gap-4 px-2 md:grid-cols-2 xl:grid-cols-3">' + html + '</div>'; }
+
+      function tabExchange(panel) {
+        var list = templates(), pts = cus().diem;
+        if (!list.length) { panel.innerHTML = UI.emptyState({ size: 'sm', title: 'Hiện chưa có voucher đổi điểm.' }); return; }
+        panel.innerHTML = grid(list.map(function (v) {
+          var need = v.diem_can - pts;
+          var act = need > 0 ? UI.withTooltip(UI.button({ label: 'Cần thêm ' + need + ' điểm', size: 'sm', variant: 'outline', disabled: true }), 'Bạn cần thêm ' + need + ' điểm để đổi voucher này')
+            : UI.button({ label: 'Đổi', icon: 'repeat', size: 'sm', attrs: { 'data-redeem': v.id, 'data-permission': 'PROMO.POINT.UPDATE' } });
+          return UI.voucherCard({ value: value(v), unit: v.kieu === 'SHIP' ? 'ship' : 'giảm', title: v.ten, cond: (v.don_toi_thieu ? 'Đơn từ ' + UI.fmt.money(v.don_toi_thieu) : 'Mọi đơn') + ' · ' + v.diem_can + ' điểm', expires: 'Dùng trong ' + v.han_dung_ngay + ' ngày sau khi đổi', state: need > 0 ? 'locked' : 'available', action: act });
+        }).join('')) + '<p class="mt-4 text-xs text-neutral-600">Tỉ lệ quy đổi đang chờ cửa hàng xác nhận.</p>';
+      }
+      function tabMine(panel) {
+        var list = mine();
+        if (!list.length) { panel.innerHTML = UI.emptyState({ size: 'sm', title: 'Bạn chưa có voucher nào. Đổi điểm để nhận ưu đãi nhé!' }); return; }
+        panel.innerHTML = grid(list.map(function (v) {
+          var act = v.st === 'available' ? '<span class="flex gap-1">' + UI.iconButton({ icon: 'copy', label: 'Sao chép mã', size: 'sm', variant: 'outline', attrs: { 'data-copy': v.ma, 'data-copy-msg': 'Đã sao chép mã' } }) + UI.button({ label: 'Dùng ngay', size: 'sm', href: U('pages/san-pham.html') }) + '</span>' : '';
+          return UI.voucherCard({ value: value(v), unit: v.kieu === 'SHIP' ? 'ship' : 'giảm', title: v.ten, cond: v.don_toi_thieu ? 'Đơn từ ' + UI.fmt.money(v.don_toi_thieu) : 'Mọi đơn', expires: UI.fmt.date(v.ket_thuc), code: v.ma, state: v.st, action: act });
+        }).join(''));
+      }
+      function tabHistory(panel) {
+        var all = txns();
+        if (!all.length) { panel.innerHTML = UI.emptyState({ size: 'sm', title: 'Chưa có lịch sử điểm. Mua hàng để bắt đầu tích điểm.', action: UI.button({ label: 'Mua sắm ngay', size: 'sm', href: U('pages/san-pham.html') }) }); return; }
+        panel.innerHTML = '<div class="mb-4" data-kind></div><div data-tbl></div>';
+        var tbl = UI.table(panel.querySelector('[data-tbl]'), {
+          rows: all, pageSize: 20, sort: { key: 'at', dir: 'desc' },
+          columns: [
+            { key: 'at', label: 'Ngày', sortable: true, width: 'w-40', render: function (r) { return '<span class="whitespace-nowrap text-neutral-700">' + UI.fmt.datetime(r.at) + '</span>'; } },
+            { key: 'text', label: 'Nội dung', mobile: 'title', render: function (r) { return r.orderId ? '<a class="font-bold text-primary-700 hover:underline" href="' + U('pages/chi-tiet-don.html?id=' + r.orderId) + '">' + esc(r.text) + '</a>' : '<span class="font-bold text-neutral-800">' + esc(r.text) + '</span>'; } },
+            { key: 'pts', label: 'Điểm', align: 'right', mobile: 'badge', width: 'w-24', render: function (r) { return '<b class="tabular-nums ' + (r.pts >= 0 ? 'text-success-700' : 'text-danger-700') + '">' + (r.pts >= 0 ? '+' : '−') + UI.fmt.number(Math.abs(r.pts)) + '</b>'; } }
+          ],
+          empty: { title: 'Chưa có lịch sử điểm. Mua hàng để bắt đầu tích điểm.' }
+        });
+        UI.tabs(panel.querySelector('[data-kind]'), { variant: 'pill', panelCls: 'hidden', tabs: [{ id: 'all', label: 'Tất cả' }, { id: 'plus', label: 'Cộng' }, { id: 'minus', label: 'Trừ' }], onChange: function (id) { if (tbl) tbl.setRows(id === 'all' ? all : all.filter(function (t) { return t.kind === id; })); } });
+      }
+
+      function paintTabs(active) {
+        tabs = UI.tabs(main.querySelector('[data-tabs]'), { hash: true, active: active, tabs: [
+          { id: 'doi-diem', label: 'Đổi điểm', content: tabExchange },
+          { id: 'voucher-cua-toi', label: 'Voucher của tôi', count: mine().filter(function (v) { return v.st === 'available'; }).length, content: tabMine },
+          { id: 'lich-su', label: 'Lịch sử điểm', content: tabHistory }] });
+      }
+      setTimeout(function () {
+        try { paintPoints(); paintTabs(); }
+        catch (e) { main.querySelector('[data-tabs]').innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.' }); }
+      }, 400);
+
+      main.addEventListener('click', function (e) {
+        var r = e.target.closest('[data-redeem]'); if (!r) return;
+        var v = DemoStore.get('vouchers', r.getAttribute('data-redeem')), c = cus();
+        if (c.diem < v.diem_can) { UI.toast('Bạn cần thêm ' + (v.diem_can - c.diem) + ' điểm để đổi voucher này', 'error'); return; }
+        UI.confirm({ title: 'Đổi voucher?', message: 'Đổi ' + v.diem_can + ' điểm lấy voucher ' + esc(v.ten) + '?', confirmLabel: 'Đổi' }).then(function (ok) {
+          if (!ok) return;
+          var code = 'TB-' + Math.random().toString(36).slice(2, 6).toUpperCase(), now = new Date(), exp = new Date(); exp.setDate(exp.getDate() + v.han_dung_ngay);
+          DemoStore.update('customers', cid, { diem: c.diem - v.diem_can });
+          DemoStore.insert('vouchers', { id: 'vk' + Date.now(), loai: 'VOUCHER_KHACH', ma: code, ten: v.ten, kieu: v.kieu, gia_tri: v.gia_tri, don_toi_thieu: v.don_toi_thieu, ket_thuc: exp.toISOString(), customerId: cid, ownerId: me.id, trang_thai: 'BAT', used: false, tao_luc: now.toISOString(), fromTxn: true });
+          DemoStore.insert('pointTxns', { id: 'pt' + Date.now(), customerId: cid, at: now.toISOString(), kind: 'minus', text: 'Đổi voucher ' + v.ten, pts: -v.diem_can });
+          DemoStore.update('vouchers', v.id, { da_dung: (v.da_dung || 0) + 1 });
+          UI.toast('Đổi voucher thành công! Mã ' + code + ' đã nằm trong Voucher của tôi.', 'success');
+          paintPoints(); paintTabs('voucher-cua-toi');
+        });
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

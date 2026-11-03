@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-vi="THE SKIN ARCHIVE — Chăm sóc da có ghi chép rõ ràng">THE SKIN ARCHIVE — Skin care, kept on record</title>
+<meta name="description" content="THE SKIN ARCHIVE is a skin care and aesthetics studio that studies, records and cares for your skin step by step. Book a consultation." data-vi-content="THE SKIN ARCHIVE là cơ sở chăm sóc da và thẩm mỹ tìm hiểu, ghi chép và chăm sóc làn da một cách có hệ thống. Đặt lịch tư vấn.">
+<script>try{if(localStorage.getItem('tsa-lang')==='vi')document.documentElement.lang='vi'}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Work+Sans:wght@400;500;700&family=Courier+Prime:wght@400;700&family=Lora:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-paper font-sans text-base text-ink antialiased">
+<div class="film-grain" aria-hidden="true"></div>
+
+<header id="top" data-header="shrink" class="sticky top-0 z-50 border-b border-line/60 bg-paper/90">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="index.html" class="whitespace-nowrap font-display text-base tracking-wide text-ink transition-colors duration-300 hover:text-burgundy sm:text-xl">THE SKIN ARCHIVE</a>
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a href="index.html" aria-current="page" class="relative py-2 text-[15px] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-burgundy aria-[current=page]:after:scale-x-100" data-vi="Trang chủ">Home</a>
+      <a href="pages/services.html" class="relative py-2 text-[15px] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-burgundy aria-[current=page]:after:scale-x-100" data-vi="Dịch vụ &amp; Bảng giá">Services &amp; Prices</a>
+      <a href="pages/about.html" class="relative py-2 text-[15px] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-burgundy aria-[current=page]:after:scale-x-100" data-vi="Về chúng tôi">About Us</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="flex border border-ink font-mono text-xs" role="group" aria-label="Language" data-vi-aria="Ngôn ngữ">
+        <button type="button" data-lang-set="en" aria-pressed="true" class="is-active h-11 w-11 transition-colors duration-300 hover:bg-cream lg:h-9 lg:w-10 [&.is-active]:bg-ink [&.is-active]:text-paper">EN</button>
+        <button type="button" data-lang-set="vi" aria-pressed="false" class="h-11 w-11 border-l border-ink transition-colors duration-300 hover:bg-cream lg:h-9 lg:w-10 [&.is-active]:bg-ink [&.is-active]:text-paper">VI</button>
+      </div>
+      <button type="button" data-modal-open="book" class="hidden h-11 items-center border border-burgundy bg-burgundy px-5 text-sm font-medium text-paper transition-colors duration-300 hover:bg-burgundy-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burgundy sm:inline-flex" data-vi="Đặt lịch tư vấn">Book a Consultation</button>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink lg:hidden" aria-label="Open menu" data-vi-aria="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-ink bg-paper p-6 lg:hidden">
+    <p class="font-mono text-xs uppercase tracking-[0.2em] text-ink-soft" data-vi="Mục lục">Index</p>
+    <nav class="mt-4 grid divide-y divide-line border-y border-line" aria-label="Mobile">
+      <a href="index.html" aria-current="page" class="py-4 font-display text-2xl aria-[current=page]:text-burgundy" data-vi="Trang chủ">Home</a>
+      <a href="pages/services.html" class="py-4 font-display text-2xl" data-vi="Dịch vụ &amp; Bảng giá">Services &amp; Prices</a>
+      <a href="pages/about.html" class="py-4 font-display text-2xl" data-vi="Về chúng tôi">About Us</a>
+    </nav>
+    <button type="button" data-modal-open="book" class="mt-6 flex h-12 w-full items-center justify-center bg-burgundy text-[15px] font-medium text-paper" data-vi="Đặt lịch tư vấn">Book a Consultation</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO: bìa hồ sơ -->
+  <section id="hero" data-section="hero-offset" class="relative overflow-hidden bg-paper">
+    <div aria-hidden="true" class="absolute bottom-10 right-0 top-12 hidden w-[47%] border-l border-t border-line bg-cream lg:block">
+      <div class="file-tab absolute -top-9 left-10 h-9 w-56 border border-b-0 border-line bg-cream"></div>
+    </div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl gap-12 px-4 pb-16 pt-10 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-10 lg:pb-20 lg:pt-16 2xl:px-16">
+      <div class="lg:col-span-6 xl:col-span-5">
+        <dl data-reveal="up" class="grid max-w-md grid-cols-[auto,1fr] gap-x-5 gap-y-1.5 border-y-[3px] border-double border-ink py-3 font-mono text-[13px]">
+          <dt class="uppercase tracking-[0.18em] text-ink-soft" data-vi="Đối tượng">Subject</dt><dd data-vi="Làn da của bạn, theo thời gian">Your skin, over time</dd>
+          <dt class="uppercase tracking-[0.18em] text-ink-soft" data-vi="Cách làm">Method</dt><dd data-vi="Quan sát. Ghi chép. Chăm sóc.">Observe. Record. Care.</dd>
+        </dl>
+        <h1 data-split="words" class="mt-8 font-display text-[2.75rem] leading-[1.02] text-ink sm:text-6xl lg:text-[4.25rem] 2xl:text-[5.25rem]" data-vi="Chăm sóc da, có ghi chép rõ ràng.">Skin care, kept on record.</h1>
+        <p data-reveal="up" class="mt-6 max-w-[34rem] text-lg leading-relaxed text-ink-soft" data-vi="Chúng tôi tìm hiểu làn da của bạn, ghi lại những gì quan sát được và lên kế hoạch chăm sóc theo từng giai đoạn.">We study your skin, note what we see, and plan care that follows it over the months.</p>
+        <div data-reveal="up" data-reveal-delay="250" class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <button type="button" data-modal-open="book" class="inline-flex h-12 items-center justify-center border border-burgundy bg-burgundy px-7 text-[15px] font-medium text-paper transition-colors duration-300 hover:bg-burgundy-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burgundy" data-vi="Đặt lịch tư vấn">Book a Consultation</button>
+          <a href="pages/services.html" class="group inline-flex h-12 items-center justify-center gap-2 border border-ink px-7 text-[15px] font-medium transition-colors duration-300 hover:bg-ink hover:text-paper active:scale-[.98]"><span data-vi="Xem dịch vụ">See services</span><svg class="transition-transform duration-300 group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="relative lg:col-span-6 xl:col-start-7">
+        <div class="relative mx-auto max-w-[36rem] lg:mr-0 lg:ml-auto">
+          <figure data-reveal="up" class="relative ml-auto w-[82%] rotate-[-2deg] bg-[#FBF7EE] p-3 pb-10 shadow-[0_24px_50px_-24px_rgba(43,33,28,.55)] sm:p-4 sm:pb-12">
+            <div class="aspect-[4/5] overflow-hidden bg-cream">
+              <img src="assets/img/home-hero-care.jpg" alt="A woman applying a drop of facial serum below her eye" data-vi-alt="Một phụ nữ nhỏ serum chăm sóc da dưới mắt" class="photo-film h-full w-full object-cover object-[35%_50%]" width="960" height="640">
+            </div>
+            <figcaption class="mt-3 text-right font-mono text-xs text-ink-soft" data-vi="Serum, sau buổi đọc da">Serum, after a skin reading</figcaption>
+          </figure>
+          <figure data-reveal="up" data-reveal-delay="200" class="absolute -bottom-8 left-0 hidden w-[44%] rotate-[3deg] bg-[#FBF7EE] p-2.5 pb-8 shadow-[0_24px_50px_-24px_rgba(43,33,28,.6)] sm:block">
+            <div class="aspect-square overflow-hidden bg-cream">
+              <img src="assets/img/home-hero-skin.jpg" alt="A smiling woman in a towel with a dab of cream on her cheek" data-vi-alt="Một phụ nữ mỉm cười, quấn khăn, có chút kem trên má" class="photo-film h-full w-full object-cover object-[70%_40%]" width="960" height="640">
+            </div>
+          </figure>
+          <div data-float="8" data-float-rotate="2" class="absolute -top-4 left-[4%] sm:left-[8%]">
+            <div class="stamp grid h-28 w-28 rotate-[-12deg] place-items-center rounded-full bg-paper/80 text-center font-mono text-xs uppercase leading-snug tracking-[0.14em] text-burgundy sm:h-32 sm:w-32">
+              <span data-vi="Đọc<br>Ghi<br>Chăm sóc">Read<br>Record<br>Care</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIẾT LÝ: thư -->
+  <section id="philosophy" data-section="story-letter" class="relative bg-paper py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+      <figure class="lg:col-span-5 lg:col-start-1 lg:pt-24 xl:col-span-4 xl:col-start-2">
+        <div data-reveal="clip" class="aspect-[4/3] overflow-hidden border border-ink bg-cream">
+          <img src="assets/img/home-story-apothecary.webp" alt="An early 20th century storeroom lined with labelled glass bottles" data-vi-alt="Kho lưu trữ đầu thế kỷ 20 với các kệ chai thủy tinh có dán nhãn" class="photo-bw h-full w-full object-cover" loading="lazy" width="1024" height="794">
+        </div>
+        <figcaption class="mt-3 max-w-xs font-mono text-xs leading-relaxed text-ink-soft" data-vi="Ảnh tư liệu: một kho dược phẩm thời xưa, mọi thứ đều có nhãn.">Archive photograph: an old dispensary storeroom, everything labelled.</figcaption>
+      </figure>
+      <article data-reveal="up" class="ruled relative border border-line bg-[#FAF5EA] px-6 py-10 sm:px-10 lg:col-span-6 lg:col-start-7 lg:px-14 lg:py-14 xl:col-span-5 xl:col-start-7">
+        <h2 class="font-display text-3xl leading-tight sm:text-4xl 2xl:text-5xl" data-vi="Chăm sóc tốt bắt đầu từ sự quan sát kỹ.">Good care starts with paying attention.</h2>
+        <div class="mt-6 max-w-prose space-y-5 text-[17px] leading-8 text-ink-soft">
+          <p data-vi="Phần lớn vấn đề về da thay đổi chậm: theo mùa, theo giấc ngủ, theo những gì bạn dùng hằng ngày. Một lần gặp hiếm khi cho thấy toàn bộ câu chuyện.">Most skin concerns change slowly: with the seasons, with sleep, with what you use every day. A single visit rarely shows the whole picture.</p>
+          <p data-vi="Vì vậy chúng tôi ghi chép. Mỗi lần ghé là thêm một trang: làn da trông thế nào, chúng tôi đã làm gì, da phản hồi ra sao. Bước tiếp theo được lên kế hoạch từ trang đó.">So we keep notes. Each visit adds a page: how your skin looked, what we did, how it responded. Your next step is planned from that page.</p>
+          <p data-vi="Không chào mời vội vàng, không một liệu trình cho tất cả. Chỉ có sự chăm sóc đều đặn, có ghi chép.">No rushed upselling, no one-size routine. Just steady, documented care.</p>
+        </div>
+        <div class="mt-10 flex flex-wrap items-end justify-between gap-6 border-t border-line pt-6">
+          <p class="font-display text-xl italic text-burgundy" data-vi="Đội ngũ THE SKIN ARCHIVE">The Skin Archive team</p>
+          <a href="pages/about.html" class="group inline-flex items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 transition-colors duration-300 hover:text-burgundy hover:decoration-burgundy"><span data-vi="Đọc câu chuyện của chúng tôi">Read our story</span><svg class="transition-transform duration-300 group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- DẢI CHỮ -->
+  <section id="method-band" data-section="marquee-band" class="border-y-[3px] border-double border-paper bg-burgundy py-5 text-paper" aria-label="Our method" data-vi-aria="Cách làm của chúng tôi">
+    <div data-marquee="38" class="flex whitespace-nowrap font-display text-3xl sm:text-4xl lg:text-5xl">
+      <span class="px-6" data-vi="Quan sát">Observe</span><span class="px-2 text-paper/50" aria-hidden="true">/</span>
+      <span class="px-6" data-vi="Ghi chép">Record</span><span class="px-2 text-paper/50" aria-hidden="true">/</span>
+      <span class="px-6" data-vi="Chăm sóc">Care</span><span class="px-2 text-paper/50" aria-hidden="true">/</span>
+      <span class="px-6" data-vi="Theo dõi">Review</span><span class="px-2 text-paper/50" aria-hidden="true">/</span>
+      <span class="px-6" data-vi="Quan sát">Observe</span><span class="px-2 text-paper/50" aria-hidden="true">/</span>
+      <span class="px-6" data-vi="Ghi chép">Record</span><span class="px-2 text-paper/50" aria-hidden="true">/</span>
+      <span class="px-6" data-vi="Chăm sóc">Care</span><span class="px-2 text-paper/50" aria-hidden="true">/</span>
+      <span class="px-6" data-vi="Theo dõi">Review</span><span class="px-2 text-paper/50" aria-hidden="true">/</span>
+    </div>
+  </section>
+
+  <!-- NHÓM DỊCH VỤ: mục lục hồ sơ -->
+  <section id="service-index" data-section="features-numbered" class="bg-cream py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-4xl leading-tight sm:text-5xl 2xl:text-6xl" data-vi="Sáu tập hồ sơ chăm sóc">Six files of care</h2>
+          <p data-reveal="up" class="mt-5 max-w-sm text-[17px] leading-relaxed text-ink-soft" data-vi="Mỗi nhóm dịch vụ được sắp như một tập hồ sơ. Bạn không cần chọn trước, buổi tư vấn sẽ giúp tìm đúng điểm bắt đầu.">Each service group is filed like a folder. You do not need to choose in advance; the consultation finds the right starting point.</p>
+          <a href="pages/services.html" class="group mt-8 inline-flex h-12 items-center gap-2 border border-ink px-6 text-[15px] font-medium transition-colors duration-300 hover:bg-ink hover:text-paper active:scale-[.98]"><span data-vi="Dịch vụ &amp; bảng giá đầy đủ">Full services &amp; prices</span><svg class="transition-transform duration-300 group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="lg:col-span-8">
+        <ol data-reveal-stagger="80" class="border-t-[3px] border-double border-ink">
+          <li class="border-b border-line">
+            <a href="pages/services.html#reading" class="group grid grid-cols-[4.5rem,1fr,auto] items-start gap-4 px-2 py-6 transition-colors duration-300 hover:bg-paper sm:grid-cols-[6rem,1fr,auto] sm:items-center sm:px-4">
+              <span class="pt-1 font-mono text-sm text-burgundy">SA-01</span>
+              <span class="min-w-0"><span class="block font-display text-2xl sm:text-3xl" data-vi="Đọc vị làn da">Skin Reading</span><span class="mt-1.5 block max-w-xl text-[15px] leading-relaxed text-ink-soft" data-vi="Buổi quan sát đầu tiên, không vội vàng, về làn da, tiền sử và thói quen của bạn.">A first, unhurried look at your skin, history and habits.</span></span>
+              <svg class="mt-2 text-ink transition-transform duration-300 group-hover:translate-x-1 sm:mt-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <li class="border-b border-line">
+            <a href="pages/services.html#barrier" class="group grid grid-cols-[4.5rem,1fr,auto] items-start gap-4 px-2 py-6 transition-colors duration-300 hover:bg-paper sm:grid-cols-[6rem,1fr,auto] sm:items-center sm:px-4">
+              <span class="pt-1 font-mono text-sm text-burgundy">SA-02</span>
+              <span class="min-w-0"><span class="block font-display text-2xl sm:text-3xl" data-vi="Làm sạch &amp; Phục hồi hàng rào da">Cleansing &amp; Barrier</span><span class="mt-1.5 block max-w-xl text-[15px] leading-relaxed text-ink-soft" data-vi="Làm sạch sâu nhẹ nhàng và các bước làm dịu hàng rào da đang bị tổn thương.">Gentle deep cleansing and steps to calm a stressed skin barrier.</span></span>
+              <svg class="mt-2 text-ink transition-transform duration-300 group-hover:translate-x-1 sm:mt-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <li class="border-b border-line">
+            <a href="pages/services.html#hydration" class="group grid grid-cols-[4.5rem,1fr,auto] items-start gap-4 px-2 py-6 transition-colors duration-300 hover:bg-paper sm:grid-cols-[6rem,1fr,auto] sm:items-center sm:px-4">
+              <span class="pt-1 font-mono text-sm text-burgundy">SA-03</span>
+              <span class="min-w-0"><span class="block font-display text-2xl sm:text-3xl" data-vi="Cấp ẩm">Hydration</span><span class="mt-1.5 block max-w-xl text-[15px] leading-relaxed text-ink-soft" data-vi="Chăm sóc cấp ẩm nhiều lớp cho da xỉn màu, căng rát hoặc thiếu nước.">Layered moisture care for dull, tight or dehydrated skin.</span></span>
+              <svg class="mt-2 text-ink transition-transform duration-300 group-hover:translate-x-1 sm:mt-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <li class="border-b border-line">
+            <a href="pages/services.html#blemish" class="group grid grid-cols-[4.5rem,1fr,auto] items-start gap-4 px-2 py-6 transition-colors duration-300 hover:bg-paper sm:grid-cols-[6rem,1fr,auto] sm:items-center sm:px-4">
+              <span class="pt-1 font-mono text-sm text-burgundy">SA-04</span>
+              <span class="min-w-0"><span class="block font-display text-2xl sm:text-3xl" data-vi="Da mụn &amp; Da nhạy cảm">Blemish &amp; Sensitive Care</span><span class="mt-1.5 block max-w-xl text-[15px] leading-relaxed text-ink-soft" data-vi="Các buổi chăm sóc dịu nhẹ, cẩn thận cho da nổi mụn và da dễ kích ứng.">Calm, careful sessions for breakouts and reactive skin.</span></span>
+              <svg class="mt-2 text-ink transition-transform duration-300 group-hover:translate-x-1 sm:mt-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <li class="border-b border-line">
+            <a href="pages/services.html#renewal" class="group grid grid-cols-[4.5rem,1fr,auto] items-start gap-4 px-2 py-6 transition-colors duration-300 hover:bg-paper sm:grid-cols-[6rem,1fr,auto] sm:items-center sm:px-4">
+              <span class="pt-1 font-mono text-sm text-burgundy">SA-05</span>
+              <span class="min-w-0"><span class="block font-display text-2xl sm:text-3xl" data-vi="Tái tạo &amp; Bề mặt da">Renewal &amp; Texture</span><span class="mt-1.5 block max-w-xl text-[15px] leading-relaxed text-ink-soft" data-vi="Chăm sóc dựa trên tẩy tế bào chết cho da không đều màu, bề mặt sần.">Exfoliation-based care for uneven tone and rough texture.</span></span>
+              <svg class="mt-2 text-ink transition-transform duration-300 group-hover:translate-x-1 sm:mt-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <li class="border-b border-line">
+            <a href="pages/services.html#body" class="group grid grid-cols-[4.5rem,1fr,auto] items-start gap-4 px-2 py-6 transition-colors duration-300 hover:bg-paper sm:grid-cols-[6rem,1fr,auto] sm:items-center sm:px-4">
+              <span class="pt-1 font-mono text-sm text-burgundy">SA-06</span>
+              <span class="min-w-0"><span class="block font-display text-2xl sm:text-3xl" data-vi="Chăm sóc da cơ thể">Body Skin Care</span><span class="mt-1.5 block max-w-xl text-[15px] leading-relaxed text-ink-soft" data-vi="Làm sạch và cấp ẩm cho vùng lưng, vai và cánh tay.">Cleansing and moisture care for back, shoulders and arms.</span></span>
+              <svg class="mt-2 text-ink transition-transform duration-300 group-hover:translate-x-1 sm:mt-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+        </ol>
+        <p class="mt-5 font-mono text-xs text-ink-soft" data-vi="Mã SA chỉ là nhãn danh mục để dễ tra cứu, không phải số hồ sơ y tế.">SA codes are catalogue labels for easy reference, not medical record numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUY TRÌNH -->
+  <section id="process" data-section="process-steps" class="relative bg-steel py-20 text-paper lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <figure data-reveal="up" class="lg:col-span-4">
+        <div class="rotate-[-2deg] bg-[#FBF7EE] p-3 pb-10 shadow-[0_24px_50px_-24px_rgba(20,20,20,.6)]">
+          <div class="aspect-[4/5] overflow-hidden bg-cream">
+            <img src="assets/img/home-process-mirror.jpg" alt="A woman studying her skin closely in a mirror" data-vi-alt="Một phụ nữ quan sát kỹ làn da của mình trong gương" class="photo-film h-full w-full object-cover object-[30%_50%]" loading="lazy" width="960" height="640">
+          </div>
+        </div>
+      </figure>
+      <div class="lg:col-span-8 lg:pl-6">
+        <h2 data-reveal="up" class="max-w-2xl font-display text-4xl leading-tight sm:text-5xl 2xl:text-6xl" data-vi="Cách chúng tôi tìm hiểu làn da của bạn">How we get to know your skin</h2>
+        <ol data-reveal-stagger="100" class="mt-12 grid gap-px border-y border-paper/30 bg-paper/25 sm:grid-cols-2">
+          <li class="bg-steel p-6 lg:p-8">
+            <span class="font-mono text-sm text-paper/80">01</span>
+            <h3 class="mt-3 font-display text-2xl" data-vi="Trò chuyện">Conversation</h3>
+            <p class="mt-2 leading-relaxed text-paper/85" data-vi="Hỏi về thói quen chăm sóc, sản phẩm đang dùng, giấc ngủ, ánh nắng và điều bạn bận tâm nhất.">We ask about your routine, products, sleep, sun and what bothers you most.</p>
+          </li>
+          <li class="bg-steel p-6 lg:p-8">
+            <span class="font-mono text-sm text-paper/80">02</span>
+            <h3 class="mt-3 font-display text-2xl" data-vi="Quan sát">Observation</h3>
+            <p class="mt-2 leading-relaxed text-paper/85" data-vi="Quan sát da dưới ánh sáng tốt, ghi nhận bề mặt, màu da, độ dầu và mức nhạy cảm.">We look at your skin in good light and note texture, tone, oil and sensitivity.</p>
+          </li>
+          <li class="bg-steel p-6 lg:p-8">
+            <span class="font-mono text-sm text-paper/80">03</span>
+            <h3 class="mt-3 font-display text-2xl" data-vi="Kế hoạch chăm sóc">Care plan</h3>
+            <p class="mt-2 leading-relaxed text-paper/85" data-vi="Cùng bạn chọn bước khởi đầu và một quy trình đơn giản tại nhà.">Together we choose a starting point and a simple routine for home.</p>
+          </li>
+          <li class="bg-steel p-6 lg:p-8">
+            <span class="font-mono text-sm text-paper/80">04</span>
+            <h3 class="mt-3 font-display text-2xl" data-vi="Theo dõi">Review</h3>
+            <p class="mt-2 leading-relaxed text-paper/85" data-vi="Mỗi lần quay lại, chúng tôi đối chiếu ghi chép và điều chỉnh những gì chưa phù hợp.">At each return visit we compare notes and adjust what is not working.</p>
+          </li>
+        </ol>
+        <a href="pages/about.html#consultation" class="group mt-10 inline-flex items-center gap-2 text-[15px] font-medium underline decoration-paper/40 underline-offset-4 transition-colors duration-300 hover:decoration-paper"><span data-vi="Xem chi tiết buổi tư vấn">See how a consultation runs</span><svg class="transition-transform duration-300 group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" data-section="cta-fullbleed" class="relative overflow-hidden bg-ink text-paper" data-particles="dust" data-particles-color="#E9DFC8" data-particles-density="0.5">
+    <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%]">
+      <img src="assets/img/home-cta-care.jpg" alt="" class="photo-film h-full w-full object-cover object-[60%_40%] opacity-45" loading="lazy" width="960" height="640">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/20"></div>
+    <div class="relative z-10 mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-36 2xl:px-16">
+      <h2 data-split="words" class="max-w-3xl font-display text-4xl leading-[1.08] sm:text-5xl lg:text-6xl 2xl:text-7xl" data-vi="Bắt đầu hồ sơ của bạn bằng một cuộc trò chuyện.">Start your file with one conversation.</h2>
+      <p data-reveal="up" class="mt-6 max-w-xl text-lg leading-relaxed text-paper/85" data-vi="Buổi tư vấn đầu tiên kéo dài khoảng 45 phút. Chúng tôi chỉ xếp lịch chăm sóc khi bạn đã sẵn sàng.">A first consultation takes about 45 minutes. Treatment is only scheduled when you are ready.</p>
+      <button type="button" data-modal-open="book" data-reveal="up" class="mt-9 inline-flex h-12 items-center justify-center border border-paper bg-paper px-8 text-[15px] font-medium text-burgundy transition-colors duration-300 hover:bg-cream active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper" data-vi="Đặt lịch tư vấn">Book a Consultation</button>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="pb-20 lg:pb-0 border-t-[3px] border-double border-paper/40 bg-ink text-paper">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-12 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-4">
+      <a href="index.html" class="font-display text-2xl tracking-wide">THE SKIN ARCHIVE</a>
+      <p class="mt-3 max-w-xs leading-relaxed text-paper/75" data-vi="Hiểu làn da, ghi lại và chăm sóc có hệ thống.">Understanding skin, keeping notes, caring with a system.</p>
+    </div>
+    <nav class="lg:col-span-2" aria-label="Footer">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-paper/60" data-vi="Trang">Pages</p>
+      <ul class="mt-4 space-y-2.5">
+        <li><a href="index.html" class="transition-colors duration-300 hover:text-cream hover:underline" data-vi="Trang chủ">Home</a></li>
+        <li><a href="pages/services.html" class="transition-colors duration-300 hover:text-cream hover:underline" data-vi="Dịch vụ &amp; Bảng giá">Services &amp; Prices</a></li>
+        <li><a href="pages/about.html" class="transition-colors duration-300 hover:text-cream hover:underline" data-vi="Về chúng tôi">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="lg:col-span-3">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-paper/60" data-vi="Liên hệ">Contact</p>
+      <address class="mt-4 space-y-2.5 not-italic">
+        <p data-vi="28 Trần Quốc Thảo, Quận 3, TP. Hồ Chí Minh">28 Tran Quoc Thao Street, District 3, Ho Chi Minh City</p>
+        <p><a href="tel:+842839304176" class="transition-colors duration-300 hover:text-cream hover:underline">028 3930 4176</a></p>
+        <p><a href="mailto:hello@theskinarchive.vn" class="transition-colors duration-300 hover:text-cream hover:underline">hello@theskinarchive.vn</a></p>
+      </address>
+    </div>
+    <div class="lg:col-span-3">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-paper/60" data-vi="Giờ mở cửa">Opening hours</p>
+      <p class="mt-4" data-vi="Thứ Ba đến Chủ Nhật, 9:00 đến 19:00">Tuesday to Sunday, 9:00 to 19:00</p>
+      <button type="button" data-modal-open="book" class="mt-5 inline-flex h-11 items-center border border-paper px-5 text-sm font-medium transition-colors duration-300 hover:bg-paper hover:text-ink active:scale-[.98]" data-vi="Đặt lịch tư vấn">Book a Consultation</button>
+    </div>
+  </div>
+  <div class="border-t border-paper/20">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 px-4 py-6 text-sm text-paper/70 sm:px-6 md:flex-row md:justify-between lg:px-10 2xl:px-16">
+      <p data-vi="Mã số và nhãn hồ sơ trên website chỉ mang tính thiết kế, không phải hồ sơ y tế.">File codes and labels on this site are design elements only, not medical records.</p>
+      <p>© 2026 THE SKIN ARCHIVE</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Nút đặt lịch nổi trên điện thoại -->
+<button type="button" data-modal-open="book" class="fixed inset-x-4 bottom-4 z-40 flex h-12 items-center justify-center border border-paper/30 bg-burgundy text-[15px] font-medium text-paper shadow-[0_12px_30px_-10px_rgba(43,33,28,.6)] active:scale-[.98] lg:hidden" data-vi="Đặt lịch tư vấn">Book a Consultation</button>
+
+<!-- Form đặt lịch tư vấn -->
+<dialog id="book" class="w-[min(100%-2rem,46rem)] max-h-[92dvh] overflow-y-auto border border-ink bg-paper p-0 text-ink">
+  <div class="flex items-start justify-between gap-4 border-b-[3px] border-double border-ink p-5 sm:px-8">
+    <div>
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-ink-soft" data-vi="Phiếu đăng ký">Request form</p>
+      <h2 class="mt-1 font-display text-3xl" data-vi="Đặt lịch tư vấn">Book a Consultation</h2>
+    </div>
+    <button type="button" data-modal-close class="grid h-11 w-11 shrink-0 place-items-center border border-ink transition-colors duration-300 hover:bg-ink hover:text-paper" aria-label="Close" data-vi-aria="Đóng">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <form data-form="booking" class="grid gap-5 p-5 sm:grid-cols-2 sm:p-8" novalidate>
+    <p class="text-[15px] leading-relaxed text-ink-soft sm:col-span-2" data-vi="Cho chúng tôi biết đôi chút về làn da và thời gian bạn muốn ghé.">Tell us a little about your skin and when you would like to visit.</p>
+    <label class="grid gap-2 text-sm font-medium"><span data-vi="Họ và tên">Full name</span>
+      <input name="name" required minlength="2" autocomplete="name" class="h-12 border border-ink/50 bg-[#FBF7EE] px-3 text-base font-normal text-ink placeholder:text-ink-soft/80 focus:border-burgundy focus:outline-none focus:ring-2 focus:ring-burgundy/30" placeholder="Nguyen Thu Ha" data-vi-placeholder="Nguyễn Thu Hà">
+    </label>
+    <label class="grid gap-2 text-sm font-medium"><span data-vi="Số điện thoại">Phone number</span>
+      <input name="phone" type="tel" required autocomplete="tel" class="h-12 border border-ink/50 bg-[#FBF7EE] px-3 text-base font-normal text-ink placeholder:text-ink-soft/80 focus:border-burgundy focus:outline-none focus:ring-2 focus:ring-burgundy/30" placeholder="090 318 2746">
+    </label>
+    <label class="grid gap-2 text-sm font-medium"><span data-vi="Email (không bắt buộc)">Email (optional)</span>
+      <input name="email" type="email" autocomplete="email" class="h-12 border border-ink/50 bg-[#FBF7EE] px-3 text-base font-normal text-ink placeholder:text-ink-soft/80 focus:border-burgundy focus:outline-none focus:ring-2 focus:ring-burgundy/30" placeholder="you@example.com" data-vi-placeholder="ban@example.com">
+    </label>
+    <label class="grid gap-2 text-sm font-medium"><span data-vi="Ngày mong muốn">Preferred date</span>
+      <input name="date" type="date" required class="h-12 border border-ink/50 bg-[#FBF7EE] px-3 text-base font-normal text-ink focus:border-burgundy focus:outline-none focus:ring-2 focus:ring-burgundy/30">
+    </label>
+    <label class="grid gap-2 text-sm font-medium"><span data-vi="Khung giờ">Preferred time</span>
+      <select name="time" class="h-12 border border-ink/50 bg-[#FBF7EE] px-3 text-base font-normal text-ink focus:border-burgundy focus:outline-none focus:ring-2 focus:ring-burgundy/30">
+        <option data-vi="Buổi sáng (9:00 đến 12:00)">Morning (9:00 to 12:00)</option>
+        <option data-vi="Buổi chiều (13:00 đến 17:00)">Afternoon (13:00 to 17:00)</option>
+        <option data-vi="Buổi tối (17:00 đến 19:00)">Evening (17:00 to 19:00)</option>
+      </select>
+    </label>
+    <label class="grid gap-2 text-sm font-medium"><span data-vi="Điều bạn quan tâm nhất">Main concern</span>
+      <select name="concern" class="h-12 border border-ink/50 bg-[#FBF7EE] px-3 text-base font-normal text-ink focus:border-burgundy focus:outline-none focus:ring-2 focus:ring-burgundy/30">
+        <option data-vi="Chưa rõ, cần tư vấn">Not sure yet</option>
+        <option data-vi="Da khô, căng rát">Dryness or tightness</option>
+        <option data-vi="Da nổi mụn">Breakouts</option>
+        <option data-vi="Da nhạy cảm, dễ đỏ">Sensitivity or redness</option>
+        <option data-vi="Da không đều màu, bề mặt sần">Uneven tone or texture</option>
+        <option data-vi="Da cơ thể">Body skin</option>
+      </select>
+    </label>
+    <label class="grid gap-2 text-sm font-medium sm:col-span-2"><span data-vi="Ghi chú">Notes</span>
+      <textarea name="notes" rows="3" class="border border-ink/50 bg-[#FBF7EE] px-3 py-2.5 text-base font-normal text-ink placeholder:text-ink-soft/80 focus:border-burgundy focus:outline-none focus:ring-2 focus:ring-burgundy/30" placeholder="Products you use, past reactions, anything we should know" data-vi-placeholder="Sản phẩm đang dùng, từng bị kích ứng, điều chúng tôi nên biết"></textarea>
+    </label>
+    <label class="flex items-start gap-3 text-sm sm:col-span-2">
+      <input type="checkbox" name="consent" required class="mt-0.5 h-5 w-5 shrink-0 accent-[#7B2633]">
+      <span data-vi="Tôi đồng ý được liên hệ về yêu cầu này.">I agree to be contacted about this request.</span>
+    </label>
+    <div class="flex flex-col gap-3 border-t border-line pt-5 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+      <p class="font-mono text-xs text-ink-soft" data-vi="Form demo: chưa gửi dữ liệu đi.">Demo form: nothing is sent yet.</p>
+      <button type="submit" class="inline-flex h-12 items-center justify-center bg-burgundy px-8 text-[15px] font-medium text-paper transition-colors duration-300 hover:bg-burgundy-deep active:scale-[.98]" data-vi="Gửi yêu cầu">Send request</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+</body>
+</html>

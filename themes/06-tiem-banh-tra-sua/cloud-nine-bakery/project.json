@@ -1,0 +1,67 @@
+{
+  "slug": "cloud-nine-bakery",
+  "name": "CLOUD NINE BAKERY",
+  "projectType": "website",
+  "concept": {
+    "topic": "website tiệm bánh và trà sữa",
+    "brand": "CLOUD NINE BAKERY",
+    "purpose": "Thiết kế website giới thiệu tiệm bánh CLOUD NINE BAKERY, mang cảm giác mộng mơ, siêu thực và nhẹ như đang bước vào một thế giới trên mây.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Art direction: Xanh trời nhạt #C9E4F5, lavender #DCD2F4, trắng mây #FFFDFB, hồng phấn #F7DDE6. Typography thanh thoát, kết hợp serif mềm mại. Hình ảnh bánh kem, meringue, mousse và bánh trái cây được bố trí như đang lơ lửng giữa mây.\n\nTrang chủ: Hero giàu tính thị giác với chiếc bánh nổi trên nền trời, headline “A Little Dream in Every Bite”. Các khối mây, lớp nền mềm và ảnh sản phẩm tạo cảm giác phi thực nhưng vẫn tinh tế.\n\nSản phẩm & Menu: Bố cục dạng gallery với các thẻ bánh không đồng đều, hình ảnh nổi bật, tên sản phẩm và mô tả ngắn. Có nhóm bánh kem, mousse, pastry và đồ uống dùng kèm.\n\nVề chúng tôi: Giới thiệu cảm hứng sáng tạo, câu chuyện đằng sau những chiếc bánh và không gian tiệm.\n\nSong ngữ Việt – Anh, tối đa 3 trang. Sử dụng animation nhẹ như ảnh trôi chậm, fade-in và mây chuyển động tinh tế. Tránh hiệu ứng 3D nặng hoặc quá nhiều chuyển động. Không có giỏ hàng, thanh toán, form đặt bánh hay chức năng mua hàng. Responsive đầy đủ. Có nút chuyển đổi tiếng anh tiếng việt",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-23T07:55:31.649Z",
+  "updatedAt": "2026-10-23T08:12:23.000Z",
+  "screen": "done",
+  "request": "website tiệm bánh và trà sữa",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\cloud-nine-bakery\\web",
+    "builtAt": "2026-10-23T08:12:09.332Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/menu.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/menu.html": []
+    }
+  },
+  "job": {
+    "id": "a7a0e66e-9fe4-4056-9114-6c64a1b2b089",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\cloud-nine-bakery\\web",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-23T08:12:19.595Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 9
+  }
+}

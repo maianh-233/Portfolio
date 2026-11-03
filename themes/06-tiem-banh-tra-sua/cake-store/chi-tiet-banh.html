@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết bánh | Tiệm Bánh Kem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-004 Chi tiết bánh: FR-008, FR-009, FR-024, FR-036. Dùng ?slug=<slug-bánh> -->
+<body data-screen="SCR-004" data-layout="public" data-nav="cakes" data-sticky-bar class="bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="mx-auto max-w-shell px-4 md:px-6 lg:px-8 pt-5 md:pt-8">
+    <nav aria-label="Đường dẫn" class="text-sm text-ink-muted">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="index.html" class="hover:text-primary-strong" data-i18n="nav.home">Trang chủ</a></li>
+        <li aria-hidden="true"><i class="ph ph-caret-right text-xs"></i></li>
+        <li><a href="danh-sach-banh.html" class="hover:text-primary-strong" data-i18n="nav.cakes">Bánh kem</a></li>
+        <li aria-hidden="true"><i class="ph ph-caret-right text-xs"></i></li>
+        <li id="bc-name" class="font-bold text-ink" aria-current="page"></li>
+      </ol>
+    </nav>
+
+    <div id="detail" class="mt-5 grid lg:grid-cols-12 gap-8 lg:gap-12">
+      <!-- Skeleton khi tải -->
+      <div class="lg:col-span-7"><div class="skeleton aspect-[4/5] rounded-3xl"></div></div>
+      <div class="lg:col-span-5 space-y-4"><div class="skeleton h-9 w-3/4 rounded-full"></div><div class="skeleton h-5 w-1/3 rounded-full"></div><div class="skeleton h-8 w-1/2 rounded-full"></div><div class="skeleton h-24 rounded-2xl"></div><div class="skeleton h-12 rounded-full"></div></div>
+    </div>
+
+    <section id="info" class="hidden mt-14 grid lg:grid-cols-12 gap-8"></section>
+    <section id="reviews" class="hidden mt-16 scroll-mt-28" aria-labelledby="rv-title"></section>
+    <section id="related" class="hidden mt-16" aria-labelledby="rel-title"></section>
+  </main>
+
+  <!-- Thanh dính đáy (điện thoại): giá theo cỡ + nút đặt -->
+  <div id="sticky-bar" class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-t border-beige px-4 py-3 flex items-center gap-3 hidden">
+    <div class="flex-1 min-w-0"><p id="sb-size" class="text-sm text-ink-muted truncate"></p><p id="sb-price" class="font-extrabold text-lg tabular-nums"></p></div>
+    <button type="button" class="btn btn-primary h-12 px-6 btn-order" data-i18n="cta.orderThis">Đặt bánh này</button>
+  </div>
+
+  <div id="app-footer"></div>
+
+  <script>
+    /* SCR-004: chọn cỡ cập nhật giá ngay (FR-009), sang SCR-005 mang theo bánh + cỡ */
+    App.onReady(function () {
+      var slug = App.param('slug') || 'banh-dau-tay-kem-tuoi';
+      var cake = Cakes.bySlug(slug);
+      if (!cake || cake.status !== 'active' || !Cakes.sizes(cake).length) { location.replace('khong-tim-thay.html?type=cake'); return; }
+      var sizes = Cakes.sizes(cake);
+      var promo = Promo.forCake(cake);
+      var sel = sizes.slice().sort(function (a, b) { return a.price - b.price; })[0].id; // mặc định cỡ nhỏ nhất
+      var imgIdx = 0, rvLimit = 5;
+
+      function size() { return sizes.filter(function (s) { return s.id === sel; })[0]; }
+
+      function renderTop() {
+        var name = I18n.pick(cake, 'name');
+        document.title = name + ' | ' + MOCK.shop.name;
+        $('#bc-name').textContent = name;
+        var rv = Reviews.stats(cake.id);
+        var thumbs = cake.images.map(function (src, i) {
+          return '<button type="button" data-thumb="' + i + '" class="overflow-hidden rounded-xl bg-beige aspect-square border-2 ' + (i === imgIdx ? 'border-primary-strong' : 'border-transparent') + '" aria-label="Xem ảnh ' + (i + 1) + '" aria-pressed="' + (i === imgIdx) + '"><img src="' + src + '" alt="" class="w-full h-full object-cover"></button>';
+        }).join('');
+        var mobileSlides = cake.images.map(function (src, i) {
+          return '<button type="button" data-zoom="' + i + '" class="snap-center shrink-0 w-full"><img src="' + src + '" alt="' + Fmt.esc(name) + ' - ảnh ' + (i + 1) + '" class="w-full aspect-[4/5] object-cover rounded-3xl bg-beige"></button>';
+        }).join('');
+        var chips = sizes.map(function (s) {
+          return '<button type="button" role="radio" aria-checked="' + (s.id === sel) + '" data-size="' + s.id + '" class="chip">' + (s.id === sel ? '<i class="ph-bold ph-check" aria-hidden="true"></i>' : '') + s.label + ' · ' + s.servings + ' ' + I18n.t('common.people') + '</button>';
+        }).join('');
+        var s = size(), sale = Promo.apply(s.price, promo);
+        var settings = DB.get('settings');
+
+        $('#detail').innerHTML =
+          /* Bộ ảnh */
+          '<div class="lg:col-span-7">' +
+          '<div class="hidden md:block"><button type="button" data-zoom="' + imgIdx + '" class="block w-full overflow-hidden rounded-3xl bg-beige focus-ring" aria-label="Phóng to ảnh"><img id="main-img" src="' + cake.images[imgIdx] + '" alt="' + Fmt.esc(name) + ' cỡ ' + s.label + '" class="w-full aspect-[4/5] object-cover"></button>' +
+          '<div class="grid grid-cols-4 gap-3 mt-3 max-w-md">' + thumbs + '</div></div>' +
+          '<div class="md:hidden"><div id="slides" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-3">' + mobileSlides + '</div>' +
+          '<div id="slide-dots" class="flex justify-center gap-2 mt-3" aria-hidden="true">' + cake.images.map(function (x, i) { return '<span class="w-2 h-2 rounded-full ' + (i ? 'bg-beige' : 'bg-primary-strong') + '"></span>'; }).join('') + '</div></div>' +
+          '</div>' +
+          /* Thông tin + chọn cỡ */
+          '<div class="lg:col-span-5"><div class="lg:sticky lg:top-28">' +
+          '<h1 class="text-[26px] md:text-[32px] font-extrabold leading-tight">' + Fmt.esc(name) + '</h1>' +
+          '<a href="#reviews" class="mt-2 inline-flex items-center gap-2 text-ink-muted hover:text-primary-strong min-h-[32px]">' +
+          (rv.count ? UI.stars(rv.avg, 'text-base') + '<span class="font-bold tabular-nums">' + String(rv.avg).replace('.', ',') + '</span><span>(' + rv.count + ' ' + I18n.t('card.reviews') + ')</span>' : '<span>' + I18n.t('card.noReviews') + '</span>') + '</a>' +
+          '<p class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1"><span id="price" class="text-[28px] font-extrabold tabular-nums text-ink">' + Fmt.money(sale) + '</span>' +
+          (promo ? '<span class="text-lg text-ink-muted line-through tabular-nums">' + Fmt.money(s.price) + '</span><span class="badge bg-primary-strong text-white">' + Promo.label(promo) + '</span>' : '') + '</p>' +
+          (promo ? '<p class="text-sm font-semibold text-primary-strong mt-1">' + Fmt.esc(I18n.pick(promo, 'name')) + ' · ' + I18n.t('home.until') + ' ' + Fmt.date(promo.end) + '</p>' : '') +
+          '<div class="mt-6" role="radiogroup" aria-labelledby="size-label"><p id="size-label" class="font-extrabold mb-2">' + I18n.t('detail.size') + '</p><div class="flex flex-wrap gap-2">' + chips + '</div>' +
+          '<p id="size-info" class="mt-3 text-ink-muted font-semibold">' + I18n.t('detail.serves', { s: s.label, p: s.servings }) + '</p><p id="size-err" class="field-error hidden" role="alert"></p></div>' +
+          '<button type="button" class="btn btn-primary btn-order hidden lg:inline-flex w-full h-14 text-[17px] mt-6">' + I18n.t('cta.orderThis') + '</button>' +
+          '<ul class="mt-6 space-y-3 text-[15px]">' +
+          '<li class="flex items-center gap-3"><span class="grid place-items-center w-9 h-9 rounded-full bg-mint text-mint-strong text-lg"><i class="ph ph-pencil-simple-line" aria-hidden="true"></i></span><span class="font-semibold">' + I18n.t('detail.freeMsg') + '</span></li>' +
+          '<li class="flex items-center gap-3"><span class="grid place-items-center w-9 h-9 rounded-full bg-mint text-mint-strong text-lg"><i class="ph ph-clock" aria-hidden="true"></i></span><span class="font-semibold">' + I18n.t('detail.advance', { n: settings.minDays }) + '</span></li>' +
+          '</ul></div></div>';
+
+        $('#sb-size').textContent = s.label + ' · ' + s.servings + ' ' + I18n.t('common.people');
+        $('#sb-price').textContent = Fmt.money(sale);
+        $('#sticky-bar').classList.remove('hidden');
+
+        /* sự kiện */
+        $all('[data-size]').forEach(function (b) {
+          b.onclick = function () { sel = b.getAttribute('data-size'); renderTop(); var f = $('[data-size="' + sel + '"]'); f && f.focus(); };
+          b.onkeydown = function (e) { // phím mũi tên trong nhóm radio
+            if (['ArrowRight', 'ArrowLeft'].indexOf(e.key) === -1) return;
+            e.preventDefault(); var i = sizes.map(function (x) { return x.id; }).indexOf(sel);
+            sel = sizes[(i + (e.key === 'ArrowRight' ? 1 : -1) + sizes.length) % sizes.length].id; renderTop(); $('[data-size="' + sel + '"]').focus();
+          };
+        });
+        $all('[data-thumb]').forEach(function (b) { b.onclick = function () { imgIdx = +b.getAttribute('data-thumb'); renderTop(); }; });
+        $all('[data-zoom]').forEach(function (b) { b.onclick = function () { Lightbox.open(cake.images.map(function (src) { return { src: src, alt: name }; }), +b.getAttribute('data-zoom')); }; });
+        $all('.btn-order').forEach(function (b) { b.onclick = order; });
+        var slides = $('#slides');
+        if (slides && 'IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { var i = $all('#slides > button').indexOf(e.target); $all('#slide-dots span').forEach(function (d, j) { d.className = 'w-2 h-2 rounded-full ' + (j === i ? 'bg-primary-strong' : 'bg-beige'); }); } });
+          }, { root: slides, threshold: 0.6 });
+          $all('#slides > button').forEach(function (x) { io.observe(x); });
+        }
+      }
+
+      function order() {
+        var s = size();
+        var err = $('#size-err');
+        if (!s) { err.textContent = 'Vui lòng chọn kích cỡ.'; err.classList.remove('hidden'); return; }       // E-DM-03
+        var fresh = Cakes.bySlug(slug);
+        if (!fresh.sizes.filter(function (x) { return x.id === s.id && x.active; }).length) { err.textContent = 'Kích cỡ này không còn, vui lòng chọn cỡ khác.'; err.classList.remove('hidden'); return; } // E-DM-04
+        location.href = 'dat-banh.html?cake=' + cake.slug + '&size=' + s.id;
+      }
+
+      function renderInfo() {
+        var box = $('#info'); box.classList.remove('hidden');
+        box.innerHTML =
+          '<div class="lg:col-span-7 space-y-6">' +
+          '<div><h2 class="font-extrabold text-xl">' + I18n.t('detail.desc') + '</h2><p class="mt-2 text-[17px] leading-relaxed max-w-[65ch]">' + Fmt.esc(I18n.pick(cake, 'description')) + '</p></div>' +
+          '<div class="grid sm:grid-cols-2 gap-6"><div><h3 class="font-extrabold">' + I18n.t('list.flavor') + '</h3><p class="mt-1 text-ink-muted">' + Fmt.esc(I18n.pick(cake, 'flavor')) + '</p></div>' +
+          '<div><h3 class="font-extrabold">' + I18n.t('detail.ingredients') + '</h3><p class="mt-1 text-ink-muted">' + Fmt.esc(cake.ingredients) + '</p></div></div>' +
+          '<div><h3 class="font-extrabold mb-2">' + (I18n.lang === 'en' ? 'Sizes and prices' : 'Bảng kích cỡ') + '</h3><div class="overflow-hidden rounded-2xl border border-beige bg-white"><table class="w-full text-[15px]"><thead class="bg-cream text-left text-ink-muted"><tr><th class="px-4 py-2 font-bold">' + (I18n.lang === 'en' ? 'Size' : 'Kích thước') + '</th><th class="px-4 py-2 font-bold">' + (I18n.lang === 'en' ? 'Serves' : 'Số người ăn') + '</th><th class="px-4 py-2 font-bold text-right">' + (I18n.lang === 'en' ? 'Price' : 'Giá') + '</th></tr></thead><tbody>' +
+          sizes.map(function (s) { return '<tr class="border-t border-beige"><td class="px-4 py-2.5 font-bold">' + s.label + '</td><td class="px-4 py-2.5">' + s.servings + '</td><td class="px-4 py-2.5 text-right tabular-nums">' + (promo ? '<span class="line-through text-ink-muted mr-2">' + Fmt.money(s.price) + '</span><b>' + Fmt.money(Promo.apply(s.price, promo)) + '</b>' : '<b>' + Fmt.money(s.price) + '</b>') + '</td></tr>'; }).join('') +
+          '</tbody></table></div></div></div>' +
+          /* Lưu ý dị ứng: luôn hiển thị, nổi bật */
+          '<div class="lg:col-span-5"><div class="rounded-3xl bg-butter p-6" role="note" aria-labelledby="allergy-title">' +
+          '<h2 id="allergy-title" class="flex items-center gap-2 font-extrabold text-lg text-butter-strong"><i class="ph-fill ph-warning text-2xl" aria-hidden="true"></i>' + I18n.t('detail.allergy') + '</h2>' +
+          '<p class="mt-2 text-ink">' + (I18n.lang === 'en' ? 'This cake contains:' : 'Bánh có chứa:') + '</p>' +
+          '<ul class="mt-3 flex flex-wrap gap-2">' + cake.allergens.map(function (a) { return '<li class="badge bg-white text-butter-strong !h-8 !px-3 !text-sm">' + Fmt.esc(a) + '</li>'; }).join('') + '</ul>' +
+          '<p class="mt-4 text-sm text-ink-muted">' + (I18n.lang === 'en' ? 'Tell us about allergies in the order note, we will check when we call.' : 'Nếu bạn hoặc người ăn bị dị ứng, ghi chú khi đặt để tiệm kiểm tra lúc gọi xác nhận nha.') + '</p></div></div>';
+      }
+
+      function renderReviews() {
+        var list = Reviews.forCake(cake.id), rv = Reviews.stats(cake.id);
+        var box = $('#reviews'); box.classList.remove('hidden');
+        var dist = [5, 4, 3, 2, 1].map(function (n) {
+          var c = list.filter(function (r) { return r.rating === n; }).length;
+          var pct = list.length ? Math.round(c / list.length * 100) : 0;
+          return '<li class="flex items-center gap-3 text-sm"><span class="w-10 tabular-nums font-bold">' + n + ' <i class="ph-fill ph-star text-[#E0A100]" aria-hidden="true"></i></span><span class="flex-1 h-1.5 rounded-full bg-beige/60 overflow-hidden"><span class="block h-full rounded-full bg-primary" style="width:' + pct + '%"></span></span><span class="w-8 text-right tabular-nums text-ink-muted">' + c + '</span></li>';
+        }).join('');
+        var items = list.slice(0, rvLimit).map(function (r) {
+          return '<li class="rounded-2xl bg-white p-5 shadow-soft"><div class="flex flex-wrap items-center gap-x-3 gap-y-1">' + UI.stars(r.rating) + '<span class="font-extrabold">' + Fmt.esc(r.name) + '</span>' +
+            '<span class="badge bg-mint text-mint-strong"><i class="ph-bold ph-check" aria-hidden="true"></i>' + I18n.t('detail.verified') + '</span><span class="text-sm text-ink-muted ml-auto">' + Fmt.date(r.date) + ' · ' + r.sizeLabel + '</span></div>' +
+            '<p class="mt-2 leading-relaxed">' + Fmt.esc(r.content) + '</p>' +
+            (r.images.length ? '<div class="mt-3 flex gap-2">' + r.images.map(function (src) { return '<button type="button" class="rv-img w-20 h-20 rounded-xl overflow-hidden bg-beige" data-src="' + src + '" aria-label="Phóng to ảnh đánh giá"><img src="' + src + '" alt="Ảnh khách chụp bánh" class="w-full h-full object-cover"></button>'; }).join('') + '</div>' : '') + '</li>';
+        }).join('');
+        box.innerHTML = '<h2 id="rv-title" class="font-display font-bold text-[28px] md:text-[36px] leading-tight">' + I18n.t('detail.reviews') + '</h2>' +
+          (list.length ? '<div class="mt-6 grid lg:grid-cols-12 gap-8"><div class="lg:col-span-4"><div class="rounded-3xl bg-white shadow-soft p-6"><p class="flex items-end gap-2"><span class="text-5xl font-extrabold tabular-nums">' + String(rv.avg).replace('.', ',') + '</span><span class="pb-1.5 text-ink-muted">/ 5</span></p>' + UI.stars(rv.avg, 'text-xl mt-1') + '<p class="text-sm text-ink-muted mt-1">' + rv.count + ' ' + I18n.t('card.reviews') + '</p><ul class="mt-5 space-y-2">' + dist + '</ul></div></div>' +
+            '<div class="lg:col-span-8"><ul class="space-y-4">' + items + '</ul>' + (list.length > rvLimit ? '<button type="button" id="rv-more" class="btn btn-secondary h-11 px-6 mt-5">' + I18n.t('list.more') + '</button>' : '') + '</div></div>'
+            : UI.empty({ icon: 'ph-chat-circle-text', title: I18n.t('card.noReviews'), text: I18n.lang === 'en' ? 'Be the first to try it!' : 'Bạn là người đầu tiên thử bánh này nha!' }));
+        var more = $('#rv-more'); if (more) more.onclick = function () { rvLimit += 5; renderReviews(); };
+        $all('.rv-img').forEach(function (b) { b.onclick = function () { Lightbox.open([{ src: b.getAttribute('data-src'), alt: 'Ảnh khách chụp' }], 0); }; });
+      }
+
+      function renderRelated() {
+        var others = Cakes.visible().filter(function (c) { return c.id !== cake.id; });
+        var same = others.filter(function (c) { return c.flavor === cake.flavor; });
+        var rel = same.concat(others.filter(function (c) { return same.indexOf(c) === -1; }).sort(function (a, b) { return b.sold - a.sold; })).slice(0, 4);
+        var box = $('#related'); box.classList.remove('hidden');
+        box.innerHTML = '<h2 id="rel-title" class="font-display font-bold text-[28px] md:text-[36px] leading-tight mb-6">' + I18n.t('detail.related') + '</h2><div class="rail rail-desktop-grid">' + rel.map(function (c) { return UI.cakeCard(c); }).join('') + '</div>';
+      }
+
+      function renderAll() { renderTop(); renderInfo(); renderReviews(); renderRelated(); }
+      App.fakeLoad(renderAll, 350);
+      document.addEventListener('langchange', renderAll);
+    });
+  </script>
+</body>
+</html>

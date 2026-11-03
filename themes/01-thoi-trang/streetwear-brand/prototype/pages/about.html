@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | The Mission</title>
+<meta name="description" content="The story of The Mission: from a 12m² rented room in District 4 to a Saigon streetwear label with no online store.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;0,900;1,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: { 50:'#f2f2ef',100:'#e4e4e0',200:'#c8c8c3',300:'#a3a39e',400:'#7d7d79',500:'#5c5c59',600:'#40403e',700:'#2b2b2a',800:'#1b1b1a',900:'#131313',950:'#0c0c0c' },
+        bone: '#d6d3cb'
+      },
+      fontFamily: {
+        display: ['"Barlow Condensed"', 'Impact', 'sans-serif'],
+        sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<script src="../assets/js/ui.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body id="top" class="grain bg-ink-950 font-sans text-bone antialiased" data-cursor="ring">
+<div data-scroll-progress class="fixed inset-x-0 top-0 z-[70] h-0.5 bg-bone"></div>
+
+<!-- HEADER -->
+<header data-header="shrink" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-2xl uppercase leading-none tracking-tight" style="font-weight:900">The Mission</a>
+    <nav class="hidden items-center gap-9 text-sm font-semibold uppercase tracking-wider lg:flex">
+      <a href="../index.html" class="relative py-2 text-ink-300 transition hover:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">Home</a>
+      <a href="collection.html" class="relative py-2 text-ink-300 transition hover:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">Collection</a>
+      <a href="about.html" aria-current="page" class="relative py-2 text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:bg-bone">About</a>
+      <a href="../index.html#lookbook" class="relative py-2 text-ink-300 transition hover:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">Lookbook</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../index.html#lien-he" class="hidden border border-bone px-5 py-2.5 text-sm font-semibold uppercase tracking-wider transition hover:bg-bone hover:text-ink-950 active:scale-[.98] sm:inline-block">Join the list</a>
+      <button data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink-600 lg:hidden" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-ink-700 bg-ink-900 p-6 lg:hidden">
+    <nav class="flex flex-col font-display text-4xl font-extrabold uppercase">
+      <a href="../index.html" class="border-b border-ink-700 py-3 hover:text-ink-300">Home</a>
+      <a href="collection.html" class="border-b border-ink-700 py-3 hover:text-ink-300">Collection</a>
+      <a href="about.html" class="border-b border-ink-700 py-3 text-ink-300">About</a>
+      <a href="../index.html#lookbook" class="border-b border-ink-700 py-3 hover:text-ink-300">Lookbook</a>
+      <a href="../index.html#lien-he" class="mt-5 bg-bone py-3 text-center text-2xl text-ink-950">Join the list</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="hero" class="pt-24 lg:pt-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 sm:px-6 lg:min-h-[calc(100dvh-7rem)] lg:grid-cols-12 lg:gap-12 lg:px-10 2xl:px-16">
+    <div class="flex flex-col justify-end pb-4 lg:col-span-7 lg:pb-16">
+      <h1 class="font-display text-6xl uppercase leading-[.85] tracking-tight sm:text-7xl lg:text-8xl 2xl:text-[9.5rem]" style="font-weight:900" data-split="words">Two friends, one rented room, <span class="text-outline">our own rules.</span></h1>
+      <p class="mt-8 max-w-lg text-lg leading-relaxed text-ink-300" data-reveal="up">The Mission began with a few design students who left school to print tees for the street. Seven years later, the spirit hasn't changed.</p>
+    </div>
+    <div class="relative lg:col-span-5">
+      <div class="h-full overflow-hidden" data-reveal="zoom">
+        <div class="h-full" data-parallax="-0.06">
+          <img src="../assets/img/about-chan-dung.jpg" alt="Black and white portrait of one of The Mission's real-life models" class="bw aspect-[4/5] h-full w-full scale-105 object-cover lg:aspect-auto" width="1024" height="1280">
+        </div>
+      </div>
+      <div class="tape absolute -left-2 bottom-8 bg-bone px-4 py-2 font-display text-xl font-extrabold uppercase text-ink-950 sm:-left-6">Real people, no retouching</div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="hanh-trinh" class="py-20 lg:py-32">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 class="max-w-4xl font-display text-5xl uppercase leading-[.9] sm:text-6xl lg:text-7xl" style="font-weight:900" data-reveal="up">From 30 hand-printed tees to a queue around the block.</h2>
+    <ol class="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 xl:grid-cols-4" data-reveal-stagger="120">
+      <li class="border-t-2 border-bone pt-6">
+        <p class="font-display text-7xl leading-none" style="font-weight:900">2019</p>
+        <p class="mt-4 text-xl font-semibold">Drop 001</p>
+        <p class="mt-2 leading-relaxed text-ink-300">30 hand screen-printed tees made in a District 4 rented room. Sold out to friends in a single evening.</p>
+      </li>
+      <li class="border-t-2 border-bone pt-6">
+        <p class="font-display text-7xl leading-none" style="font-weight:900">2021</p>
+        <p class="mt-4 text-xl font-semibold">Closing the online store</p>
+        <p class="mt-2 leading-relaxed text-ink-300">Resellers bought up stock and sold it at three times the price. We closed the online shop and now sell only in person at pop-ups.</p>
+      </li>
+      <li class="border-t-2 border-bone pt-6">
+        <p class="font-display text-7xl leading-none" style="font-weight:900">2023</p>
+        <p class="mt-4 text-xl font-semibold">The bridge pop-up</p>
+        <p class="mt-2 leading-relaxed text-ink-300">A pop-up under Khanh Hoi Bridge, announced three hours ahead. 600 people came and everything sold out in 17 minutes.</p>
+      </li>
+      <li class="border-t-2 border-bone pt-6">
+        <p class="font-display text-7xl leading-none" style="font-weight:900">2026</p>
+        <p class="mt-4 text-xl font-semibold">Ton That Dam studio</p>
+        <p class="mt-2 leading-relaxed text-ink-300">Our own print workshop and a team of 9, still no restocks. No Signal is our 11th drop.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- WORKSHOP (full-bleed) -->
+<section id="xuong" class="relative isolate flex min-h-[85vh] items-end overflow-hidden">
+  <div class="absolute inset-0 -z-10" data-parallax="0.15">
+    <img src="../assets/img/about-in-lua.jpg" alt="Screen-printing frame and ink in the workshop" class="bw h-[115%] w-full object-cover" loading="lazy">
+  </div>
+  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink-950 via-ink-950/50 to-ink-950/10"></div>
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-8 px-4 pb-14 sm:px-6 lg:grid-cols-12 lg:px-10 lg:pb-20 2xl:px-16">
+    <h2 class="font-display text-6xl uppercase leading-[.85] sm:text-7xl lg:col-span-7 lg:text-8xl 2xl:text-9xl" style="font-weight:900" data-split="words">Every piece passes through human hands.</h2>
+    <p class="self-end text-lg leading-relaxed text-ink-200 lg:col-span-5" data-reveal="up">No heat transfers, no mass factories. Every layer of ink is pulled by hand, so no two pieces are exactly alike. A small print flaw? Consider it a signature.</p>
+  </div>
+</section>
+
+<!-- HOUSE RULES (light) -->
+<section id="luat-choi" class="bg-bone py-20 text-ink-950 lg:py-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <h2 class="font-display text-5xl uppercase leading-[.9] sm:text-6xl lg:col-span-4 lg:text-7xl" style="font-weight:900" data-reveal="up">Four rules <span class="text-outline-dark">we always keep.</span></h2>
+    <div class="grid grid-cols-1 gap-px bg-ink-300 sm:grid-cols-2 lg:col-span-8" data-reveal-stagger="100">
+      <div class="bg-bone p-6 sm:p-8">
+        <p class="font-display text-4xl uppercase leading-none" style="font-weight:900">Black. White. That's it.</p>
+        <p class="mt-4 leading-relaxed text-ink-700">No third colour. Stand out through cut and attitude.</p>
+      </div>
+      <div class="bg-ink-950 p-6 text-bone sm:p-8">
+        <p class="font-display text-4xl uppercase leading-none" style="font-weight:900">No restocks.</p>
+        <p class="mt-4 leading-relaxed text-ink-300">Each design is made exactly once. Missed it? Catch the next drop.</p>
+      </div>
+      <div class="bg-ink-950 p-6 text-bone sm:p-8">
+        <p class="font-display text-4xl uppercase leading-none" style="font-weight:900">Real people as models.</p>
+        <p class="mt-4 leading-relaxed text-ink-300">Skaters, tattoo artists, rappers. No professional models, no retouching.</p>
+      </div>
+      <div class="bg-bone p-6 sm:p-8">
+        <p class="font-display text-4xl uppercase leading-none" style="font-weight:900">No advertising.</p>
+        <p class="mt-4 leading-relaxed text-ink-700">No paid ads, no influencer deals. People wear it because they like it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEOPLE / COLLABS -->
+<section id="nguoi" class="py-20 lg:py-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-5">
+      <div class="overflow-hidden" data-reveal="zoom">
+        <img src="../assets/img/model-rapper-hoodie.jpg" alt="Rapper in a grey zip hoodie sitting in a recording studio" class="bw aspect-[4/5] w-full object-cover object-top" loading="lazy">
+      </div>
+    </div>
+    <div class="flex flex-col justify-center lg:col-span-7">
+      <blockquote class="font-display text-4xl uppercase leading-[.95] sm:text-5xl 2xl:text-6xl" style="font-weight:800" data-reveal="up">“When I wear The Mission on stage, I don't need a stylist. The clothes speak for me.”</blockquote>
+      <p class="mt-6 text-ink-300">Dat Lun, rapper with Hem 9, model for No Signal</p>
+      <div class="mt-12" data-accordion>
+        <div data-acc-item data-open class="border-t border-ink-700">
+          <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl font-extrabold uppercase sm:text-3xl">Who is behind The Mission?<span data-acc-icon class="text-3xl transition [.is-open_&]:rotate-45">+</span></button>
+          <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-ink-300">Khang leads design, Vy handles printing and visuals, supported by 7 people in the workshop. All of us skate, none of us well.</div></div>
+        </div>
+        <div data-acc-item class="border-t border-ink-700">
+          <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl font-extrabold uppercase sm:text-3xl">Who have you worked with?<span data-acc-icon class="text-3xl transition [.is-open_&]:rotate-45">+</span></button>
+          <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-ink-300">Grey Wall graffiti crew, Underpass skate shop, and several underground artists who needed merch for their tours.</div></div>
+        </div>
+        <div data-acc-item class="border-y border-ink-700">
+          <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl font-extrabold uppercase sm:text-3xl">Can I visit the studio?<span data-acc-icon class="text-3xl transition [.is-open_&]:rotate-45">+</span></button>
+          <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-ink-300">Only on pop-up days. On other days the workshop is closed for production. Message us on Instagram first if you really need to drop by.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="relative overflow-hidden border-t border-ink-800 py-20 lg:py-28" data-spotlight data-spotlight-color="rgba(214,211,203,.06)">
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10 2xl:px-16">
+    <h2 class="font-display text-6xl uppercase leading-[.85] sm:text-7xl lg:text-8xl 2xl:text-9xl" style="font-weight:900" data-split="words">See what <span class="text-outline">we make.</span></h2>
+    <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
+      <a href="collection.html" data-magnetic="0.3" data-ripple class="group inline-flex h-14 items-center justify-center gap-3 bg-bone px-8 font-display text-xl font-extrabold uppercase tracking-wide text-ink-950 transition hover:bg-ink-200 active:scale-[.98]">View collection
+        <svg class="transition group-hover:translate-x-1 group-hover:-translate-y-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+      <a href="../index.html#lien-he" class="inline-flex h-14 items-center justify-center border border-bone/60 px-8 font-display text-xl font-extrabold uppercase tracking-wide transition hover:border-bone hover:bg-bone/10 active:scale-[.98]">Join the list</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-ink-800 pt-16">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-10 2xl:px-16">
+    <div>
+      <p class="font-display text-3xl uppercase" style="font-weight:900">The Mission</p>
+      <p class="mt-3 max-w-xs text-ink-400">Saigon streetwear label. Brand showcase only, no online sales.</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Pages</p>
+      <ul class="mt-4 space-y-2">
+        <li><a href="../index.html" class="hover:underline">Home</a></li>
+        <li><a href="collection.html" class="hover:underline">Collection</a></li>
+        <li><a href="about.html" class="hover:underline">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Studio</p>
+      <p class="mt-4 text-ink-200">3rd Floor, 14 Ton That Dam St, District 1, Ho Chi Minh City<br>Open on pop-up days only</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Contact</p>
+      <ul class="mt-4 space-y-2">
+        <li><a href="https://instagram.com/themission.sgn" target="_blank" rel="noopener" class="hover:underline">Instagram @themission.sgn</a></li>
+        <li><a href="https://www.tiktok.com/@themission.sgn" target="_blank" rel="noopener" class="hover:underline">TikTok @themission.sgn</a></li>
+        <li><button data-copy="hello@themission.vn" class="hover:underline">hello@themission.vn (click to copy)</button></li>
+      </ul>
+    </div>
+  </div>
+  <p class="mt-16 select-none overflow-hidden whitespace-nowrap text-center font-display text-[18.6vw] uppercase leading-[.78] tracking-tighter text-outline" style="font-weight:900" aria-hidden="true">The Mission</p>
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 border-t border-ink-800 px-4 py-6 text-sm text-ink-400 sm:flex-row sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+    <p>© 2026 The Mission. Saigon.</p>
+    <p>Placeholder photos, to be replaced with the brand's own shoots.</p>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center border border-bone bg-ink-950 transition hover:bg-bone hover:text-ink-950" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

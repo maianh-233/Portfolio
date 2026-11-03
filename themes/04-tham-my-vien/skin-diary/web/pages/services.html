@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="svc_title">Services &amp; Prices — SKIN DIARY</title>
+  <meta name="description" content="SKIN DIARY services and reference prices: Skin Care facials, Skin Renewal peels and doctor-led Skin Treatment in Ho Chi Minh City." data-i18n-attrs="content:svc_desc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/site.js" defer></script>
+</head>
+<body class="bg-paper font-sans text-ink antialiased">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 bg-paper transition-[background-color,box-shadow] duration-300">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-[1.75rem] leading-none tracking-tight sm:text-[2rem]" aria-label="SKIN DIARY home">SKIN DIARY</a>
+    <nav class="hidden items-center gap-9 text-[13px] font-medium uppercase tracking-[0.14em] lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-i18n="home_nav">Home</a>
+      <a href="services.html" aria-current="page" class="relative py-2 text-cherry after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-current" data-i18n="svc_nav">Services &amp; Prices</a>
+      <a href="about.html" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-i18n="about_nav">About</a>
+      <a href="../index.html#journal" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-i18n="j_nav">Journal</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="flex h-11 items-center border border-ink/20" role="group" aria-label="Language" data-i18n-attrs="aria-label:group_lbl">
+        <button type="button" data-set-lang="en" aria-label="English" aria-pressed="false" class="h-full px-3 text-xs font-semibold tracking-[0.14em] transition-colors duration-300">EN</button>
+        <button type="button" data-set-lang="vi" aria-label="Tiếng Việt" aria-pressed="false" class="h-full px-3 text-xs font-semibold tracking-[0.14em] transition-colors duration-300">VI</button>
+      </div>
+      <button type="button" data-modal-open="book" data-i18n="book_btn" class="hidden h-11 items-center bg-cherry px-5 text-[13px] font-medium uppercase tracking-[0.12em] text-paper transition duration-300 hover:bg-cherry-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry active:scale-[.98] sm:inline-flex">Book a Consultation</button>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center border border-ink/20 lg:hidden" aria-label="Open menu" data-i18n-attrs="aria-label:a_menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16"><div class="h-px bg-ink/15"></div></div>
+  <div id="mnav" class="fixed inset-x-0 bottom-0 top-[72px] z-50 overflow-y-auto bg-paper px-6 pb-10 pt-8 lg:hidden">
+    <nav class="flex flex-col divide-y divide-ink/15 border-y border-ink/15" aria-label="Mobile">
+      <a href="../index.html" class="py-4 font-display text-4xl" data-i18n="home_nav">Home</a>
+      <a href="services.html" aria-current="page" class="py-4 font-display text-4xl text-cherry" data-i18n="svc_nav">Services &amp; Prices</a>
+      <a href="about.html" class="py-4 font-display text-4xl" data-i18n="about_nav">About</a>
+      <a href="../index.html#journal" class="py-4 font-display text-4xl" data-i18n="j_nav">Journal</a>
+    </nav>
+    <button type="button" data-modal-open="book" data-i18n="book_btn" class="mt-8 flex h-12 w-full items-center justify-center bg-cherry text-sm font-medium uppercase tracking-[0.12em] text-paper">Book a Consultation</button>
+    <p class="mt-6 text-sm text-muted" data-i18n="hours_panel">Tuesday to Sunday, 9:00 to 20:00<br><a href="tel:+842838224719" class="text-ink underline underline-offset-4">+84 28 3822 4719</a></p>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section id="page-hero" data-section="page-hero" class="bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-14 pt-5 sm:px-6 lg:px-10 lg:pb-20 lg:pt-6 2xl:px-16">
+      <div class="flex items-center justify-between border-b border-ink pb-3 text-xs font-medium uppercase tracking-label">
+        <span>Issue No. 14</span>
+        <span data-i18n="svc_nav">Services &amp; Prices</span>
+      </div>
+      <div class="mt-10 grid gap-8 lg:grid-cols-12 lg:items-end">
+        <h1 data-split="words" class="pb-2 font-display text-[clamp(3.4rem,9vw,10rem)] leading-[0.95] tracking-[-0.02em] lg:col-span-8" data-i18n="svc_h1">The service <em class="text-cherry">edit.</em></h1>
+        <p class="max-w-[46ch] text-lg leading-relaxed text-muted lg:col-span-4 lg:pb-6" data-reveal="up" data-i18n="svc_lede">Every treatment we offer, arranged in three chapters. Prices are for reference; your plan is confirmed after a skin consultation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapter index (sticky) -->
+  <nav data-scrollspy aria-label="Chapters" class="sticky top-[72px] z-30 border-y border-ink/15 bg-paper/95">
+    <div class="no-scrollbar mx-auto flex w-full max-w-screen-2xl gap-8 overflow-x-auto px-4 text-sm font-medium sm:px-6 lg:gap-12 lg:px-10 2xl:px-16">
+      <a href="#skin-care" class="relative shrink-0 whitespace-nowrap py-4 transition-colors duration-300 hover:text-cherry after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:scale-x-0 after:bg-cherry after:transition-transform after:duration-500 [&.is-active]:text-cherry [&.is-active]:after:scale-x-100" data-i18n="spy_care"><span class="text-cherry">01</span> Skin Care</a>
+      <a href="#skin-renewal" class="relative shrink-0 whitespace-nowrap py-4 transition-colors duration-300 hover:text-cherry after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:scale-x-0 after:bg-cherry after:transition-transform after:duration-500 [&.is-active]:text-cherry [&.is-active]:after:scale-x-100" data-i18n="spy_renewal"><span class="text-cherry">02</span> Skin Renewal</a>
+      <a href="#skin-treatment" class="relative shrink-0 whitespace-nowrap py-4 transition-colors duration-300 hover:text-cherry after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:scale-x-0 after:bg-cherry after:transition-transform after:duration-500 [&.is-active]:text-cherry [&.is-active]:after:scale-x-100" data-i18n="spy_treat"><span class="text-cherry">03</span> Skin Treatment</a>
+      <a href="#price-list" class="relative shrink-0 whitespace-nowrap py-4 transition-colors duration-300 hover:text-cherry after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:scale-x-0 after:bg-cherry after:transition-transform after:duration-500 [&.is-active]:text-cherry [&.is-active]:after:scale-x-100" data-i18n="spy_price">Price list</a>
+      <a href="#faq" class="relative shrink-0 whitespace-nowrap py-4 transition-colors duration-300 hover:text-cherry after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:scale-x-0 after:bg-cherry after:transition-transform after:duration-500 [&.is-active]:text-cherry [&.is-active]:after:scale-x-100" data-i18n="spy_faq">Questions</a>
+    </div>
+  </nav>
+
+  <!-- CHAPTER 01: SKIN CARE -->
+  <section id="skin-care" data-section="features-alternate" class="scroll-mt-[128px] bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <p class="font-display text-3xl text-cherry">No. 01</p>
+      <h2 class="font-display text-[clamp(3.2rem,8vw,8.5rem)] leading-[0.95] tracking-[-0.02em]" data-reveal="up" data-i18n="cat_care">Skin Care</h2>
+      <p class="mt-5 max-w-[60ch] text-lg leading-relaxed text-muted" data-i18n="s1_lede">Maintenance for every skin type. Facials that cleanse, calm and rebuild the moisture barrier, best repeated every four to six weeks.</p>
+
+      <article class="mt-14 grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-10">
+        <div class="aspect-[3/2] overflow-hidden bg-nude lg:col-span-7" data-reveal="clip">
+          <img src="../assets/img/svc-signature-facial.jpg" alt="Woman smoothing a dot of cream onto her cheek" width="5760" height="3840" loading="lazy" class="h-full w-full object-cover object-[30%_40%]">
+        </div>
+        <div class="min-w-0 lg:col-span-5">
+          <p class="text-xs font-medium uppercase tracking-label text-cherry" data-i18n="s1_label">Our signature</p>
+          <h3 class="mt-3 font-display text-4xl leading-[1.02] lg:text-6xl" data-i18n="svc_sig">Signature Diary Facial</h3>
+          <p class="mt-4 max-w-[52ch] text-base leading-relaxed text-muted" data-i18n="s1_desc">A double cleanse and skin reading, gentle extraction where needed, a slow lymphatic massage and a mask chosen from your skin record. The facial we recommend for a first visit.</p>
+          <dl class="mt-6 grid grid-cols-2 border-t border-ink/20 pt-4 text-sm">
+            <div><dt class="text-muted" data-i18n="dur">Duration</dt><dd class="mt-1 font-medium">75 minutes</dd></div>
+            <div><dt class="text-muted" data-i18n="ref">Reference price</dt><dd class="mt-1 font-display text-3xl text-cherry">1,450,000 ₫</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="mt-20 grid gap-8 lg:mt-28 lg:grid-cols-12 lg:items-center lg:gap-10">
+        <div class="min-w-0 lg:col-span-4 lg:col-start-2">
+          <h3 class="font-display text-4xl leading-[1.02] lg:text-5xl" data-i18n="svc_hyd">Deep Hydration Ritual</h3>
+          <p class="mt-4 max-w-[52ch] text-base leading-relaxed text-muted" data-i18n="s2_desc">Layered hyaluronic serums pressed in by hand, a cooling jade massage and a barrier cream to finish. For skin that feels tight after flights, air conditioning or a strong active.</p>
+          <dl class="mt-6 grid grid-cols-2 border-t border-ink/20 pt-4 text-sm">
+            <div><dt class="text-muted" data-i18n="dur">Duration</dt><dd class="mt-1 font-medium">60 minutes</dd></div>
+            <div><dt class="text-muted" data-i18n="ref">Reference price</dt><dd class="mt-1 font-display text-3xl text-cherry">950,000 ₫</dd></div>
+          </dl>
+        </div>
+        <div class="order-first aspect-[4/3] overflow-hidden bg-nude lg:order-none lg:col-span-6 lg:col-start-7 lg:aspect-[5/6]">
+          <img src="../assets/img/svc-hydration.jpg" alt="Woman with glowing skin holding an open jar of moisturiser" width="5760" height="3840" loading="lazy" class="h-full w-full object-cover object-[30%_50%]">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CHAPTER 02: SKIN RENEWAL -->
+  <section id="skin-renewal" data-section="editorial-two-column" class="scroll-mt-[128px] bg-nude-soft">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <p class="font-display text-3xl text-cherry">No. 02</p>
+      <h2 class="font-display text-[clamp(3.2rem,8vw,8.5rem)] leading-[0.95] tracking-[-0.02em]" data-reveal="up" data-i18n="renew_h2">Skin <em>Renewal</em></h2>
+      <p class="mt-5 max-w-[60ch] text-lg leading-relaxed text-muted" data-i18n="renew_lede">For dullness, uneven tone and rough texture. Controlled exfoliation that encourages a fresher surface, planned as a short course rather than a one-off.</p>
+
+      <div class="mt-14 grid gap-14 md:grid-cols-2 md:gap-0 md:divide-x md:divide-ink/20" data-reveal-stagger="120">
+        <article class="min-w-0 md:pr-8 lg:pr-14">
+          <div class="aspect-[4/5] overflow-hidden bg-nude lg:aspect-square">
+            <img src="../assets/img/svc-peel.jpg" alt="Smiling woman with a stroke of white cream on her cheekbone" width="5760" height="3840" loading="lazy" class="h-full w-full object-cover object-[45%_50%]">
+          </div>
+          <h3 class="mt-6 font-display text-4xl leading-[1.02] lg:text-5xl" data-i18n="svc_peel">Brightening Peel</h3>
+          <p class="mt-4 max-w-[52ch] text-base leading-relaxed text-muted" data-i18n="bp_desc">A mandelic and lactic acid blend suited to Asian skin, layered to your tolerance. Light flaking for two to three days, no time off needed.</p>
+          <dl class="mt-6 grid grid-cols-2 border-t border-ink/20 pt-4 text-sm">
+            <div><dt class="text-muted" data-i18n="dur">Duration</dt><dd class="mt-1 font-medium">45 minutes</dd></div>
+            <div><dt class="text-muted" data-i18n="ref">Reference price</dt><dd class="mt-1 font-display text-3xl text-cherry">1,350,000 ₫</dd></div>
+          </dl>
+          <p class="mt-3 text-sm text-muted" data-i18n="course4">Course of four sessions: 4,900,000 ₫</p>
+        </article>
+        <article class="min-w-0 md:pl-8 lg:pl-14 md:pt-24">
+          <div class="aspect-[4/5] overflow-hidden bg-nude lg:aspect-square">
+            <img src="../assets/img/svc-microneedling.jpg" alt="Woman holding a jar of rich cream and its golden lid" width="5760" height="3840" loading="lazy" class="h-full w-full object-cover object-[35%_50%]">
+          </div>
+          <h3 class="mt-6 font-display text-4xl leading-[1.02] lg:text-5xl" data-i18n="svc_poly">Enzyme Polish</h3>
+          <p class="mt-4 max-w-[52ch] text-base leading-relaxed text-muted" data-i18n="ep_desc">Papaya and pumpkin enzymes dissolve dead cells without acids or scrubs. Our choice for sensitive or reactive skin that cannot yet take a peel.</p>
+          <dl class="mt-6 grid grid-cols-2 border-t border-ink/20 pt-4 text-sm">
+            <div><dt class="text-muted" data-i18n="dur">Duration</dt><dd class="mt-1 font-medium">50 minutes</dd></div>
+            <div><dt class="text-muted" data-i18n="ref">Reference price</dt><dd class="mt-1 font-display text-3xl text-cherry">1,150,000 ₫</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 03: SKIN TREATMENT -->
+  <section id="skin-treatment" data-section="features-bento" class="scroll-mt-[128px] bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <p class="font-display text-3xl text-cherry">No. 03</p>
+      <h2 class="font-display text-[clamp(3.2rem,8vw,8.5rem)] leading-[0.95] tracking-[-0.02em]" data-reveal="up" data-i18n="cat_treat">Skin Treatment</h2>
+      <p class="mt-5 max-w-[60ch] text-lg leading-relaxed text-muted" data-i18n="treat_lede">Clinical care for acne, scarring and pigment. Every treatment in this chapter is assessed and supervised by our dermatologist.</p>
+
+      <div class="mt-14 grid gap-10 lg:grid-cols-12">
+        <div class="aspect-[3/4] overflow-hidden bg-nude lg:col-span-5" data-reveal="clip">
+          <img src="../assets/img/svc-laser.jpg" alt="Fractional laser handpiece treating the skin of the forehead" width="733" height="1024" loading="lazy" class="h-full w-full object-cover">
+        </div>
+        <div class="flex min-w-0 flex-col lg:col-span-7">
+          <article>
+            <h3 class="font-display text-4xl leading-[1.02] lg:text-6xl" data-i18n="svc_flr">Fractional Laser Resurfacing</h3>
+            <p class="mt-4 max-w-[58ch] text-base leading-relaxed text-muted" data-i18n="flr_desc">Thousands of micro-columns of light prompt the skin to rebuild collagen, softening acne scars and uneven texture. Performed by our doctor under numbing cream; expect redness for three to five days.</p>
+            <dl class="mt-6 grid max-w-xl grid-cols-2 border-t border-ink/20 pt-4 text-sm">
+              <div><dt class="text-muted" data-i18n="dur">Duration</dt><dd class="mt-1 font-medium">60 minutes</dd></div>
+              <div><dt class="text-muted" data-i18n="ref_per">Reference price, per session</dt><dd class="mt-1 font-display text-3xl text-cherry">4,800,000 ₫</dd></div>
+            </dl>
+            <blockquote class="mt-10 border-l-2 border-cherry pl-6 font-display text-2xl leading-snug lg:text-3xl"><span data-i18n="dr_quote">“We never laser skin we have not read first. Most clients start with two calmer visits before their first session.”</span>
+              <span class="mt-3 block font-sans text-sm text-muted" data-i18n="dr_role">Dr. Nguyen Minh Chau, founder and dermatologist</span>
+            </blockquote>
+          </article>
+          <article class="mt-14 grid gap-6 border-t border-ink/20 pt-10 sm:grid-cols-2 lg:mt-auto">
+            <div class="aspect-[4/3] overflow-hidden bg-nude">
+              <img src="../assets/img/svc-clarity.jpg" alt="Woman in a white robe and towel smelling a jar of cream" width="5760" height="3840" loading="lazy" class="h-full w-full object-cover object-[65%_40%]">
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display text-3xl leading-[1.02] lg:text-4xl" data-i18n="svc_clar2">Clarity Programme</h3>
+              <p class="mt-3 text-base leading-relaxed text-muted" data-i18n="cp_desc">Eight weeks for active acne: in-clinic blue light and extraction every two weeks, plus a home routine reviewed by our doctor.</p>
+              <p class="mt-4 text-sm"><span class="text-muted" data-i18n="cp_price">60 minutes per visit,</span> <span class="font-display text-2xl text-cherry">2,900,000 ₫</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE LIST -->
+  <section id="price-list" data-section="features-tabs" class="scroll-mt-[128px] border-t border-ink/15 bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <h2 class="font-display text-5xl leading-[1.02] lg:text-7xl" data-reveal="up" data-i18n="price_h2">Price <em class="text-cherry">list</em></h2>
+      <p class="mt-5 max-w-[60ch] text-lg leading-relaxed text-muted" data-i18n="price_lede">Reference prices in Vietnamese dong, including VAT. Your consultation confirms the exact plan and number of sessions.</p>
+
+      <div data-tabs class="mt-12">
+        <div class="relative flex gap-2 overflow-x-auto border-b border-ink/20 no-scrollbar" role="tablist">
+          <button type="button" data-tab="care" data-i18n="cat_care" class="h-12 shrink-0 px-4 text-sm font-medium uppercase tracking-[0.12em] text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-cherry">Skin Care</button>
+          <button type="button" data-tab="renewal" data-i18n="cat_renewal" class="h-12 shrink-0 px-4 text-sm font-medium uppercase tracking-[0.12em] text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-cherry">Skin Renewal</button>
+          <button type="button" data-tab="treatment" data-i18n="cat_treat" class="h-12 shrink-0 px-4 text-sm font-medium uppercase tracking-[0.12em] text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-cherry">Skin Treatment</button>
+          <span data-tab-indicator class="bottom-0 h-0.5 bg-cherry"></span>
+        </div>
+
+        <div data-tab-panel="care" class="grid lg:grid-cols-2 lg:gap-x-16">
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_sig" class="font-display text-2xl lg:text-3xl">Signature Diary Facial</p><p class="mt-1 text-sm text-muted" data-i18n="pr_c1s">75 min. Recommended first visit</p></div><p class="shrink-0 font-medium">1,450,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_hyd" class="font-display text-2xl lg:text-3xl">Deep Hydration Ritual</p><p class="mt-1 text-sm text-muted" data-i18n="pr_c2s">60 min. For dehydrated, tight skin</p></div><p class="shrink-0 font-medium">950,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_barrier" class="font-display text-2xl lg:text-3xl">Barrier Repair Facial</p><p class="mt-1 text-sm text-muted" data-i18n="pr_c3s">70 min. For redness and sensitivity</p></div><p class="shrink-0 font-medium">1,250,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_led" class="font-display text-2xl lg:text-3xl">LED Calm, add-on</p><p class="mt-1 text-sm text-muted" data-i18n="pr_c4s">20 min. Added to any facial</p></div><p class="shrink-0 font-medium">350,000 ₫</p></div>
+        </div>
+        <div data-tab-panel="renewal" class="grid lg:grid-cols-2 lg:gap-x-16">
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_peel" class="font-display text-2xl lg:text-3xl">Brightening Peel</p><p class="mt-1 text-sm text-muted" data-i18n="pr_r1s">45 min. Single session</p></div><p class="shrink-0 font-medium">1,350,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_peel4" class="font-display text-2xl lg:text-3xl">Brightening Peel, course of four</p><p class="mt-1 text-sm text-muted" data-i18n="pr_r2s">Every two weeks</p></div><p class="shrink-0 font-medium">4,900,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_poly" class="font-display text-2xl lg:text-3xl">Enzyme Polish</p><p class="mt-1 text-sm text-muted" data-i18n="pr_r3s">50 min. Acid-free, for sensitive skin</p></div><p class="shrink-0 font-medium">1,150,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_micro" class="font-display text-2xl lg:text-3xl">Collagen Microneedling</p><p class="mt-1 text-sm text-muted" data-i18n="pr_r4s">75 min. Texture and fine lines</p></div><p class="shrink-0 font-medium">2,600,000 ₫</p></div>
+        </div>
+        <div data-tab-panel="treatment" class="grid lg:grid-cols-2 lg:gap-x-16">
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_clar" class="font-display text-2xl lg:text-3xl">Clarity Programme visit</p><p class="mt-1 text-sm text-muted" data-i18n="pr_t1s">60 min. Active acne, eight-week plan</p></div><p class="shrink-0 font-medium">2,900,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_plaser" class="font-display text-2xl lg:text-3xl">Pigment Laser Toning</p><p class="mt-1 text-sm text-muted" data-i18n="pr_t2s">30 min. Melasma and sun spots</p></div><p class="shrink-0 font-medium">3,200,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_flr" class="font-display text-2xl lg:text-3xl">Fractional Laser Resurfacing</p><p class="mt-1 text-sm text-muted" data-i18n="pr_t3s">60 min. Acne scars and texture</p></div><p class="shrink-0 font-medium">4,800,000 ₫</p></div>
+          <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 py-6"><div class="min-w-0"><p data-i18n="svc_doc" class="font-display text-2xl lg:text-3xl">Doctor's skin review</p><p class="mt-1 text-sm text-muted" data-i18n="pr_t4s">20 min. Before any laser plan</p></div><p class="shrink-0 font-medium" data-i18n="incl">Included</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" data-section="accordion" class="scroll-mt-[128px] bg-nude-soft">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-28 2xl:px-16">
+      <h2 class="font-display text-5xl leading-[1.02] lg:col-span-4 lg:text-7xl" data-reveal="up" data-i18n="faq_h2">Before you <em class="text-cherry">book</em></h2>
+      <div data-accordion class="min-w-0 border-t border-ink/25 lg:col-span-7 lg:col-start-6">
+        <div data-acc-item data-open class="border-b border-ink/25">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl lg:text-3xl"><span data-i18n="faq_q1">Is the first consultation really free?</span> <span data-acc-icon class="shrink-0 text-cherry">+</span></button>
+          <div data-acc-panel><div class="max-w-[60ch] pb-6 leading-relaxed text-muted" data-i18n="faq_a1">Yes. The 30-minute consultation and your written skin record are complimentary, and there is no obligation to book a treatment afterwards.</div></div>
+        </div>
+        <div data-acc-item class="border-b border-ink/25">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl lg:text-3xl"><span data-i18n="faq_q2">How much downtime should I plan for?</span> <span data-acc-icon class="shrink-0 text-cherry">+</span></button>
+          <div data-acc-panel><div class="max-w-[60ch] pb-6 leading-relaxed text-muted" data-i18n="faq_a2">Skin Care facials have none. Peels may cause light flaking for two to three days. Fractional laser usually means three to five days of redness, so we plan it around your calendar.</div></div>
+        </div>
+        <div data-acc-item class="border-b border-ink/25">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl lg:text-3xl"><span data-i18n="faq_q3">Can I have treatments while pregnant?</span> <span data-acc-icon class="shrink-0 text-cherry">+</span></button>
+          <div data-acc-panel><div class="max-w-[60ch] pb-6 leading-relaxed text-muted" data-i18n="faq_a3">Hydration and barrier facials are fine. We pause peels, laser and most actives until after pregnancy and breastfeeding. Please tell us at your consultation.</div></div>
+        </div>
+        <div data-acc-item class="border-b border-ink/25">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl lg:text-3xl"><span data-i18n="faq_q4">Do you sell skin care products?</span> <span data-acc-icon class="shrink-0 text-cherry">+</span></button>
+          <div data-acc-panel><div class="max-w-[60ch] pb-6 leading-relaxed text-muted" data-i18n="faq_a4">No. We focus on treatments and advice. If you need home products, we write down ingredients to look for so you can choose freely.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="book-cta" data-section="cta-type" class="bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-36 2xl:px-16">
+      <h2 class="pb-2 font-display text-[clamp(3.5rem,10.5vw,12rem)] leading-[0.92] tracking-[-0.02em]" data-reveal="up" data-i18n="svc_cta_h2">Not sure where <em class="text-cherry">to start?</em></h2>
+      <div class="mt-10 grid gap-8 border-t border-ink pt-8 lg:grid-cols-12">
+        <p class="max-w-[52ch] text-lg leading-relaxed text-muted lg:col-span-6" data-i18n="svc_cta_lede">Start with a complimentary consultation. We read your skin, write your record and suggest the first chapter that makes sense.</p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6 lg:col-span-6 lg:justify-end">
+          <button type="button" data-modal-open="book" data-i18n="book_btn" class="inline-flex h-14 items-center justify-center bg-cherry px-8 text-sm font-medium uppercase tracking-[0.12em] text-paper transition duration-300 hover:bg-cherry-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry active:scale-[.98]">Book a Consultation</button>
+          <a href="tel:+842838224719" class="inline-flex h-14 items-center justify-center border border-ink px-8 text-sm font-medium tracking-wide transition duration-300 hover:bg-ink hover:text-paper">+84 28 3822 4719</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="bg-ink pb-24 text-paper lg:pb-0">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-10 border-b border-paper/15 pb-14 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl leading-tight" data-i18n="f_tag">Skin care, written around you.</p>
+        <button type="button" data-modal-open="book" data-i18n="book_btn" class="mt-6 inline-flex h-12 items-center bg-cherry px-6 text-sm font-medium uppercase tracking-[0.12em] text-paper transition duration-300 hover:bg-cherry-deep">Book a Consultation</button>
+      </div>
+      <div class="lg:col-span-2 lg:col-start-5">
+        <p class="text-xs font-medium uppercase tracking-label text-paper/60" data-i18n="f_pages">Pages</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="../index.html" class="transition-colors duration-300 hover:text-nude" data-i18n="home_nav">Home</a></li>
+          <li><a href="services.html" class="transition-colors duration-300 hover:text-nude" data-i18n="svc_nav">Services &amp; Prices</a></li>
+          <li><a href="about.html" class="transition-colors duration-300 hover:text-nude" data-i18n="about_nav">About</a></li>
+          <li><a href="../index.html#journal" class="transition-colors duration-300 hover:text-nude" data-i18n="j_nav">Journal</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-xs font-medium uppercase tracking-label text-paper/60" data-i18n="f_visit">Visit</p>
+        <p class="mt-4 text-sm leading-relaxed" data-i18n="f_addr">42 Ly Tu Trong Street, Ben Nghe Ward<br>District 1, Ho Chi Minh City</p>
+        <p class="mt-3 text-sm leading-relaxed text-paper/70" data-i18n="f_hours">Tuesday to Sunday, 9:00 to 20:00<br>Closed on Mondays</p>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-xs font-medium uppercase tracking-label text-paper/60" data-i18n="f_contact">Contact</p>
+        <p class="mt-4 text-sm"><a href="tel:+842838224719" class="transition-colors duration-300 hover:text-nude">+84 28 3822 4719</a></p>
+        <p class="mt-2 text-sm"><a href="mailto:hello@skindiary.vn" class="transition-colors duration-300 hover:text-nude">hello@skindiary.vn</a></p>
+        <button type="button" data-copy="+84 28 3822 4719" class="mt-4 inline-flex h-11 items-center border border-paper/30 px-4 text-xs font-medium uppercase tracking-[0.12em] transition duration-300 hover:border-nude hover:text-nude" data-i18n="f_copy">Copy phone number</button>
+      </div>
+    </div>
+    <p class="select-none overflow-hidden whitespace-nowrap pt-8 font-display text-[23vw] leading-[0.82] tracking-[-0.03em] text-nude 2xl:text-[21rem]" aria-hidden="true">SKIN DIARY</p>
+    <div class="flex flex-col gap-2 border-t border-paper/15 py-6 text-xs text-paper/60 sm:flex-row sm:justify-between">
+      <p data-i18n="f_copyright">© 2026 SKIN DIARY. All rights reserved.</p>
+      <p data-i18n="f_note">Prices shown are for reference. Treatment plans are confirmed after consultation.</p>
+    </div>
+  </div>
+</footer>
+
+<button type="button" data-modal-open="book" data-i18n="book_btn" class="fixed inset-x-4 bottom-4 z-30 flex h-12 items-center justify-center bg-cherry text-sm font-medium uppercase tracking-[0.12em] text-paper shadow-[0_10px_30px_rgba(142,14,36,.35)] lg:hidden">Book a Consultation</button>
+
+<dialog id="book" aria-labelledby="book-title">
+  <div class="relative p-6 sm:p-10">
+    <button type="button" data-modal-close class="absolute right-3 top-3 inline-flex h-11 w-11 items-center justify-center transition-colors duration-300 hover:text-cherry" aria-label="Close" data-i18n-attrs="aria-label:a_close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h2 id="book-title" class="pr-10 font-display text-4xl leading-none sm:text-5xl" data-i18n="m_title">Book a <em class="text-cherry">consultation</em></h2>
+    <p class="mt-3 text-sm leading-relaxed text-muted" data-i18n="m_sub">A 30-minute skin reading with our team. Complimentary, no obligation.</p>
+    <form data-form="consultation" class="mt-6 grid gap-4 sm:grid-cols-2">
+      <label class="grid gap-2 text-sm font-medium"><span data-i18n="f_name">Full name</span>
+        <input type="text" name="name" required minlength="2" autocomplete="name" class="h-12 border border-ink/30 bg-white px-4 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+      </label>
+      <label class="grid gap-2 text-sm font-medium"><span data-i18n="f_phone">Phone</span>
+        <input type="tel" name="phone" required autocomplete="tel" class="h-12 border border-ink/30 bg-white px-4 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+      </label>
+      <label class="grid gap-2 text-sm font-medium"><span data-i18n="f_email">Email</span>
+        <input type="email" name="email" autocomplete="email" class="h-12 border border-ink/30 bg-white px-4 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+      </label>
+      <label class="grid gap-2 text-sm font-medium"><span data-i18n="f_interest">Area of interest</span>
+        <select name="interest" class="h-12 border border-ink/30 bg-white px-3 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+          <option data-i18n="f_opt0">Not sure yet</option>
+          <option data-i18n="f_opt1">Skin Care</option>
+          <option data-i18n="f_opt2">Skin Renewal</option>
+          <option data-i18n="f_opt3">Skin Treatment</option>
+        </select>
+      </label>
+      <label class="grid gap-2 text-sm font-medium sm:col-span-2"><span data-i18n="f_date">Preferred date</span>
+        <input type="date" name="date" class="h-12 border border-ink/30 bg-white px-4 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+      </label>
+      <label class="grid gap-2 text-sm font-medium sm:col-span-2"><span data-i18n="f_notes">What would you like to change about your skin?</span>
+        <textarea name="notes" rows="3" class="border border-ink/30 bg-white px-4 py-3 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20"></textarea>
+      </label>
+      <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+        <button type="submit" data-i18n="f_submit" class="inline-flex h-12 items-center justify-center bg-cherry px-7 text-sm font-medium uppercase tracking-[0.12em] text-paper transition duration-300 hover:bg-cherry-deep active:scale-[.98]">Request a time</button>
+        <p class="text-xs text-muted" data-i18n="f_demo">Demo form: your details are not sent anywhere yet.</p>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

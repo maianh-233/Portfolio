@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="about_title">About — SKIN DIARY</title>
+  <meta name="description" content="The story of SKIN DIARY: a skin care clinic in District 1, Ho Chi Minh City, founded on reading skin before treating it. Meet our team and see our rooms." data-i18n-attrs="content:about_desc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/site.js" defer></script>
+</head>
+<body class="bg-paper font-sans text-ink antialiased">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 bg-paper transition-[background-color,box-shadow] duration-300">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-[1.75rem] leading-none tracking-tight sm:text-[2rem]" aria-label="SKIN DIARY home">SKIN DIARY</a>
+    <nav class="hidden items-center gap-9 text-[13px] font-medium uppercase tracking-[0.14em] lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-i18n="home_nav">Home</a>
+      <a href="services.html" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-i18n="svc_nav">Services &amp; Prices</a>
+      <a href="about.html" aria-current="page" class="relative py-2 text-cherry after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-current" data-i18n="about_nav">About</a>
+      <a href="../index.html#journal" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-i18n="j_nav">Journal</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="flex h-11 items-center border border-ink/20" role="group" aria-label="Language" data-i18n-attrs="aria-label:group_lbl">
+        <button type="button" data-set-lang="en" aria-label="English" aria-pressed="false" class="h-full px-3 text-xs font-semibold tracking-[0.14em] transition-colors duration-300">EN</button>
+        <button type="button" data-set-lang="vi" aria-label="Tiếng Việt" aria-pressed="false" class="h-full px-3 text-xs font-semibold tracking-[0.14em] transition-colors duration-300">VI</button>
+      </div>
+      <button type="button" data-modal-open="book" data-i18n="book_btn" class="hidden h-11 items-center bg-cherry px-5 text-[13px] font-medium uppercase tracking-[0.12em] text-paper transition duration-300 hover:bg-cherry-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry active:scale-[.98] sm:inline-flex">Book a Consultation</button>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center border border-ink/20 lg:hidden" aria-label="Open menu" data-i18n-attrs="aria-label:a_menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16"><div class="h-px bg-ink/15"></div></div>
+  <div id="mnav" class="fixed inset-x-0 bottom-0 top-[72px] z-50 overflow-y-auto bg-paper px-6 pb-10 pt-8 lg:hidden">
+    <nav class="flex flex-col divide-y divide-ink/15 border-y border-ink/15" aria-label="Mobile">
+      <a href="../index.html" class="py-4 font-display text-4xl" data-i18n="home_nav">Home</a>
+      <a href="services.html" class="py-4 font-display text-4xl" data-i18n="svc_nav">Services &amp; Prices</a>
+      <a href="about.html" aria-current="page" class="py-4 font-display text-4xl text-cherry" data-i18n="about_nav">About</a>
+      <a href="../index.html#journal" class="py-4 font-display text-4xl" data-i18n="j_nav">Journal</a>
+    </nav>
+    <button type="button" data-modal-open="book" data-i18n="book_btn" class="mt-8 flex h-12 w-full items-center justify-center bg-cherry text-sm font-medium uppercase tracking-[0.12em] text-paper">Book a Consultation</button>
+    <p class="mt-6 text-sm text-muted" data-i18n="hours_panel">Tuesday to Sunday, 9:00 to 20:00<br><a href="tel:+842838224719" class="text-ink underline underline-offset-4">+84 28 3822 4719</a></p>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section id="page-hero" data-section="page-hero" class="bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-14 pt-5 sm:px-6 lg:px-10 lg:pb-20 lg:pt-6 2xl:px-16">
+      <div class="flex items-center justify-between border-b border-ink pb-3 text-xs font-medium uppercase tracking-label">
+        <span>Issue No. 14</span>
+        <span data-i18n="datel_about">About us</span>
+      </div>
+      <div class="mt-10 grid gap-8 lg:grid-cols-12 lg:items-end">
+        <h1 data-split="words" class="pb-2 font-display text-[clamp(3.4rem,9vw,10rem)] leading-[0.95] tracking-[-0.02em] lg:col-span-8" data-i18n="about_h1">A diary, not a <em class="text-cherry">clinic.</em></h1>
+        <p class="max-w-[46ch] text-lg leading-relaxed text-muted lg:col-span-4 lg:pb-6" data-reveal="up" data-i18n="about_lede">How a dermatologist and two aestheticians built a quieter way to look after skin in the middle of District 1.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LETTER -->
+  <section id="letter" data-section="story-letter" class="border-t border-ink/15 bg-paper">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-32 2xl:px-16">
+      <figure class="min-w-0 lg:col-span-4 lg:col-start-2">
+        <div class="aspect-[4/5] overflow-hidden bg-nude" data-reveal="clip">
+          <img src="../assets/img/about-editorial-portrait.jpg" alt="Woman in a satin top holding a serum dropper against a nude background" width="5564" height="3709" loading="lazy" class="h-full w-full object-cover object-[72%_50%]">
+        </div>      </figure>
+      <div class="min-w-0 lg:col-span-5 lg:col-start-7 lg:pt-10">
+        <p class="font-display text-3xl italic text-cherry" data-i18n="salut">Dear reader,</p>
+        <p class="dropcap mt-6 max-w-[62ch] text-lg leading-relaxed" data-i18n="l1">I opened SKIN DIARY after twelve years in hospital dermatology, where I saw the same story again and again: good skin damaged by too many products and treatments chosen in a hurry.</p>
+        <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-muted" data-i18n="l2">So we built the opposite. Fewer treatments, done slowly. A written record for every client, updated after each visit, so that nothing is guessed. Rooms that feel more like a reading corner than a clinic.</p>
+        <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-muted" data-i18n="l3">We do not sell products and we do not chase trends. We read your skin, we tell you honestly what it needs, and we write it down.</p>
+        <div class="mt-10 border-t border-ink/20 pt-6">
+          <p class="font-display text-4xl italic" data-i18n="sign">Nguyen Minh Chau</p>
+          <p class="mt-1 text-sm text-muted" data-i18n="sign_role">Founder and dermatologist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method" data-section="process-steps" class="bg-nude-soft">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <h2 class="font-display text-5xl leading-[1.02] lg:text-7xl" data-reveal="up" data-i18n="meth_h2">How a first visit <em class="text-cherry">works</em></h2>
+      <ol class="mt-14 grid border-t border-ink/25 sm:grid-cols-2 lg:grid-cols-4" data-reveal-stagger="100">
+        <li class="border-b border-ink/25 py-8 sm:pr-8 lg:border-b-0 lg:pr-10">
+          <span class="font-display text-6xl text-cherry">01</span>
+          <h3 class="mt-4 font-display text-3xl" data-i18n="st1">Consult</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted" data-i18n="st1d">Thirty minutes about your routine, history and what you want your skin to feel like.</p>
+        </li>
+        <li class="border-b border-ink/25 py-8 sm:border-l sm:pl-8 lg:border-b-0 lg:px-10">
+          <span class="font-display text-6xl text-cherry">02</span>
+          <h3 class="mt-4 font-display text-3xl" data-i18n="st2">Read</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted" data-i18n="st2d">A magnified skin analysis and standard photos that open your personal skin record.</p>
+        </li>
+        <li class="border-b border-ink/25 py-8 sm:pr-8 lg:border-b-0 lg:border-l lg:px-10">
+          <span class="font-display text-6xl text-cherry">03</span>
+          <h3 class="mt-4 font-display text-3xl" data-i18n="st3">Plan</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted" data-i18n="st3d">A written plan with treatments, timing and a clear price before anything begins.</p>
+        </li>
+        <li class="py-8 sm:border-l sm:pl-8 lg:px-10">
+          <span class="font-display text-6xl text-cherry">04</span>
+          <h3 class="mt-4 font-display text-3xl" data-i18n="st4">Review</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted" data-i18n="st4d">A follow-up after two weeks to note how your skin responded and adjust the next step.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SPACE -->
+  <section id="space" data-section="gallery-lookbook" class="bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 class="font-display text-5xl leading-[1.02] lg:text-7xl" data-reveal="up" data-i18n="space_h2">Our <em class="text-cherry">rooms</em></h2>
+      <div class="mt-14 grid gap-10 lg:grid-cols-12">
+        <a href="../assets/img/about-treatment-room.jpg" data-lightbox="rooms" data-caption="Room one: twin beds for paired treatments" data-i18n-attrs="data-caption:cap1" class="group block min-w-0 lg:col-span-7">
+          <div class="aspect-[4/3] overflow-hidden bg-nude" data-reveal="clip">
+            <img src="../assets/img/about-treatment-room.jpg" alt="Dim treatment room with two beds, round wall lamps and dark wood panels" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+          <p class="mt-3 text-sm text-muted" data-i18n="cap1">Room one: twin beds for paired treatments.</p>
+        </a>
+        <div class="flex min-w-0 flex-col gap-10 lg:col-span-5">
+          <a href="../assets/img/about-studio-room.jpg" data-lightbox="rooms" data-caption="Room two: daylight tones for facials and peels" data-i18n-attrs="data-caption:cap2" class="group block">
+            <div class="aspect-[4/3] overflow-hidden bg-nude">
+              <img src="../assets/img/about-studio-room.jpg" alt="Calm treatment room with white towels, a round mirror, candles and a bamboo plant" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+            <p class="mt-3 text-sm text-muted" data-i18n="cap2">Room two: daylight tones for facials and peels.</p>
+          </a>
+          <div class="border-t border-ink/20 pt-6">
+            <p class="max-w-[52ch] text-lg leading-relaxed" data-i18n="sp_p1">Three private rooms on the second floor of a 1960s building on Ly Tu Trong Street. Soft lighting, filtered water for every cleanse, and no music unless you ask for it.</p>
+            <p class="mt-4 text-sm text-muted" data-i18n="sp_hint">Tap a photo to view it larger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" data-section="team-grid" class="border-t border-ink/15 bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <h2 class="max-w-[16ch] font-display text-5xl leading-[1.02] lg:text-7xl" data-reveal="up" data-i18n="team_h2">The people who <em class="text-cherry">read your skin</em></h2>
+      <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="100">
+        <article class="group min-w-0">
+          <div class="aspect-[4/5] overflow-hidden bg-nude">
+            <img src="../assets/img/about-team-founder.jpg" alt="Smiling dermatologist with short grey hair, glasses and a white coat" width="5792" height="8688" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+          <h3 class="mt-5 font-display text-3xl" data-i18n="t_n1">Dr. Nguyen Minh Chau</h3>
+          <p class="text-sm font-medium text-cherry" data-i18n="t_r1">Founder and dermatologist</p>
+          <p class="mt-2 max-w-[44ch] text-sm leading-relaxed text-muted" data-i18n="t_d1">Oversees every treatment plan and performs all laser work.</p>
+        </article>
+        <article class="min-w-0">
+          <div class="flex aspect-[4/5] items-end bg-cherry p-6">
+            <span class="font-display text-[7rem] leading-none text-paper lg:text-[9rem]" aria-hidden="true">TH</span>
+          </div>
+          <h3 class="mt-5 font-display text-3xl" data-i18n="t_n2">Tran Thu Ha</h3>
+          <p class="text-sm font-medium text-cherry" data-i18n="t_r2">Head aesthetician</p>
+          <p class="mt-2 max-w-[44ch] text-sm leading-relaxed text-muted" data-i18n="t_d2">Leads our Skin Care and Skin Renewal chapters and trains every new therapist.</p>
+        </article>
+        <article class="min-w-0">
+          <div class="flex aspect-[4/5] items-end bg-nude p-6">
+            <span class="font-display text-[7rem] leading-none text-ink lg:text-[9rem]" aria-hidden="true">AV</span>
+          </div>
+          <h3 class="mt-5 font-display text-3xl" data-i18n="t_n3">Le Anh Vy</h3>
+          <p class="text-sm font-medium text-cherry" data-i18n="t_r3">Clinical nurse, laser care</p>
+          <p class="mt-2 max-w-[44ch] text-sm leading-relaxed text-muted" data-i18n="t_d3">Prepares skin before laser sessions and handles aftercare check-ins.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="book-cta" data-section="cta-type" class="bg-nude-soft">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-36 2xl:px-16">
+      <h2 class="pb-2 font-display text-[clamp(3.5rem,10.5vw,12rem)] leading-[0.92] tracking-[-0.02em]" data-reveal="up" data-i18n="about_cta_h2">Come and <em class="text-cherry">meet us.</em></h2>
+      <div class="mt-10 grid gap-8 border-t border-ink pt-8 lg:grid-cols-12">
+        <p class="max-w-[52ch] text-lg leading-relaxed text-muted lg:col-span-6" data-i18n="about_cta_lede">Your first page starts with a complimentary 30-minute consultation at our District 1 rooms.</p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6 lg:col-span-6 lg:justify-end">
+          <button type="button" data-modal-open="book" data-i18n="book_btn" class="inline-flex h-14 items-center justify-center bg-cherry px-8 text-sm font-medium uppercase tracking-[0.12em] text-paper transition duration-300 hover:bg-cherry-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry active:scale-[.98]">Book a Consultation</button>
+          <a href="services.html" class="inline-flex h-14 items-center justify-center border border-ink px-8 text-sm font-medium uppercase tracking-[0.12em] transition duration-300 hover:bg-ink hover:text-paper" data-i18n="explore">Explore services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="bg-ink pb-24 text-paper lg:pb-0">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-10 border-b border-paper/15 pb-14 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl leading-tight" data-i18n="f_tag">Skin care, written around you.</p>
+        <button type="button" data-modal-open="book" data-i18n="book_btn" class="mt-6 inline-flex h-12 items-center bg-cherry px-6 text-sm font-medium uppercase tracking-[0.12em] text-paper transition duration-300 hover:bg-cherry-deep">Book a Consultation</button>
+      </div>
+      <div class="lg:col-span-2 lg:col-start-5">
+        <p class="text-xs font-medium uppercase tracking-label text-paper/60" data-i18n="f_pages">Pages</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="../index.html" class="transition-colors duration-300 hover:text-nude" data-i18n="home_nav">Home</a></li>
+          <li><a href="services.html" class="transition-colors duration-300 hover:text-nude" data-i18n="svc_nav">Services &amp; Prices</a></li>
+          <li><a href="about.html" class="transition-colors duration-300 hover:text-nude" data-i18n="about_nav">About</a></li>
+          <li><a href="../index.html#journal" class="transition-colors duration-300 hover:text-nude" data-i18n="j_nav">Journal</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-xs font-medium uppercase tracking-label text-paper/60" data-i18n="f_visit">Visit</p>
+        <p class="mt-4 text-sm leading-relaxed" data-i18n="f_addr">42 Ly Tu Trong Street, Ben Nghe Ward<br>District 1, Ho Chi Minh City</p>
+        <p class="mt-3 text-sm leading-relaxed text-paper/70" data-i18n="f_hours">Tuesday to Sunday, 9:00 to 20:00<br>Closed on Mondays</p>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-xs font-medium uppercase tracking-label text-paper/60" data-i18n="f_contact">Contact</p>
+        <p class="mt-4 text-sm"><a href="tel:+842838224719" class="transition-colors duration-300 hover:text-nude">+84 28 3822 4719</a></p>
+        <p class="mt-2 text-sm"><a href="mailto:hello@skindiary.vn" class="transition-colors duration-300 hover:text-nude">hello@skindiary.vn</a></p>
+        <button type="button" data-copy="+84 28 3822 4719" class="mt-4 inline-flex h-11 items-center border border-paper/30 px-4 text-xs font-medium uppercase tracking-[0.12em] transition duration-300 hover:border-nude hover:text-nude" data-i18n="f_copy">Copy phone number</button>
+      </div>
+    </div>
+    <p class="select-none overflow-hidden whitespace-nowrap pt-8 font-display text-[23vw] leading-[0.82] tracking-[-0.03em] text-nude 2xl:text-[21rem]" aria-hidden="true">SKIN DIARY</p>
+    <div class="flex flex-col gap-2 border-t border-paper/15 py-6 text-xs text-paper/60 sm:flex-row sm:justify-between">
+      <p data-i18n="f_copyright">© 2026 SKIN DIARY. All rights reserved.</p>
+      <p data-i18n="f_note">Prices shown are for reference. Treatment plans are confirmed after consultation.</p>
+    </div>
+  </div>
+</footer>
+
+<button type="button" data-modal-open="book" data-i18n="book_btn" class="fixed inset-x-4 bottom-4 z-30 flex h-12 items-center justify-center bg-cherry text-sm font-medium uppercase tracking-[0.12em] text-paper shadow-[0_10px_30px_rgba(142,14,36,.35)] lg:hidden">Book a Consultation</button>
+
+<dialog id="book" aria-labelledby="book-title">
+  <div class="relative p-6 sm:p-10">
+    <button type="button" data-modal-close class="absolute right-3 top-3 inline-flex h-11 w-11 items-center justify-center transition-colors duration-300 hover:text-cherry" aria-label="Close" data-i18n-attrs="aria-label:a_close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h2 id="book-title" class="pr-10 font-display text-4xl leading-none sm:text-5xl" data-i18n="m_title">Book a <em class="text-cherry">consultation</em></h2>
+    <p class="mt-3 text-sm leading-relaxed text-muted" data-i18n="m_sub">A 30-minute skin reading with our team. Complimentary, no obligation.</p>
+    <form data-form="consultation" class="mt-6 grid gap-4 sm:grid-cols-2">
+      <label class="grid gap-2 text-sm font-medium"><span data-i18n="f_name">Full name</span>
+        <input type="text" name="name" required minlength="2" autocomplete="name" class="h-12 border border-ink/30 bg-white px-4 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+      </label>
+      <label class="grid gap-2 text-sm font-medium"><span data-i18n="f_phone">Phone</span>
+        <input type="tel" name="phone" required autocomplete="tel" class="h-12 border border-ink/30 bg-white px-4 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+      </label>
+      <label class="grid gap-2 text-sm font-medium"><span data-i18n="f_email">Email</span>
+        <input type="email" name="email" autocomplete="email" class="h-12 border border-ink/30 bg-white px-4 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+      </label>
+      <label class="grid gap-2 text-sm font-medium"><span data-i18n="f_interest">Area of interest</span>
+        <select name="interest" class="h-12 border border-ink/30 bg-white px-3 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+          <option data-i18n="f_opt0">Not sure yet</option>
+          <option data-i18n="f_opt1">Skin Care</option>
+          <option data-i18n="f_opt2">Skin Renewal</option>
+          <option data-i18n="f_opt3">Skin Treatment</option>
+        </select>
+      </label>
+      <label class="grid gap-2 text-sm font-medium sm:col-span-2"><span data-i18n="f_date">Preferred date</span>
+        <input type="date" name="date" class="h-12 border border-ink/30 bg-white px-4 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20">
+      </label>
+      <label class="grid gap-2 text-sm font-medium sm:col-span-2"><span data-i18n="f_notes">What would you like to change about your skin?</span>
+        <textarea name="notes" rows="3" class="border border-ink/30 bg-white px-4 py-3 text-base font-normal focus:border-cherry focus:outline-none focus:ring-2 focus:ring-cherry/20"></textarea>
+      </label>
+      <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+        <button type="submit" data-i18n="f_submit" class="inline-flex h-12 items-center justify-center bg-cherry px-7 text-sm font-medium uppercase tracking-[0.12em] text-paper transition duration-300 hover:bg-cherry-deep active:scale-[.98]">Request a time</button>
+        <p class="text-xs text-muted" data-i18n="f_demo">Demo form: your details are not sent anywhere yet.</p>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

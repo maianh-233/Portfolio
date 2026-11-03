@@ -1,0 +1,130 @@
+{
+  "brand": "NOCTURNE",
+  "language": "vi",
+  "preset": "luxury",
+  "motionLevel": 2,
+  "visualIdea": "Mặt nước nửa đêm: tiêu đề lớn có bóng phản chiếu mờ như trên mặt hồ, vạch 'waterline' Silver Mist mảnh chia nhịp các section, ảnh kiến trúc tối đặt cạnh khối chữ Moonstone sáng như trang tạp chí kiến trúc",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Kiến trúc, mặt nước và ánh sáng lúc nửa đêm",
+    "description": "Giao diện thương hiệu resort nghỉ dưỡng cao cấp phong cách Midnight Teal Luxury, song ngữ Việt - Anh."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu thương hiệu NOCTURNE, dẫn sang Triết lý, Suites & Villas và Trải nghiệm",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Luxury Beyond the Ordinary, CTA cuộn tới #intro" },
+        { "id": "intro", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "An Art of Quiet Luxury, ảnh kiến trúc lớn + ảnh vật liệu, link sang pages/about.html" },
+        { "id": "light", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Designed Around Light, ảnh ngang rộng + ảnh phụ lệch trục" },
+        { "id": "stays", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "3 loại lưu trú bố cục không đều, link sang pages/stays.html" },
+        { "id": "experience", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "4 tiện ích bằng data-tabs, nền tối + khối chữ sáng" },
+        { "id": "perspective", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "A World Apart from the Ordinary, nền Midnight Teal" },
+        { "id": "gallery", "catalog": "cta", "variant": "cta-fullbleed", "source": "ba", "note": "Where the Night Finds Stillness, link sang pages/experiences.html" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "resort pool night reflection", "file": "https://images.unsplash.com/photo-1785910723802-99967d4fa265?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "intro-architecture", "query": "modern villa pool night", "file": "https://images.unsplash.com/photo-1743439895141-20db90962997?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "intro-material", "query": "stone wall light", "file": "https://images.unsplash.com/photo-1789373394273-4c1b6ca0809b?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "light-main", "query": "house pool night", "file": "https://images.unsplash.com/photo-1678889284769-b7dcbec1f082?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "light-offset", "query": "shadow stone wall", "file": "https://images.unsplash.com/photo-1769658860913-509a7d4c35a5?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "stays-signature", "query": "dark hotel bedroom", "file": "https://images.unsplash.com/photo-1574283006478-b972c6861ce9?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "stays-villa", "query": "villa pool twilight", "file": "https://images.unsplash.com/photo-1759372945658-1e9f56e751bd?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "stays-panoramic", "query": "bedroom ocean view window", "file": "https://images.unsplash.com/photo-1718942899965-4fc10607d805?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "experience-pool", "query": "pool night overhead", "file": "https://images.unsplash.com/photo-1716801408923-c2149294dad2?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "experience-dining", "query": "restaurant dim dining", "file": "https://images.unsplash.com/photo-1766832255363-c9f060ade8b0?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "experience-spa", "query": "steam room candle", "file": "https://images.unsplash.com/photo-1761470575018-135c213340eb?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "experience-lounge", "query": "lounge interior leather", "file": "https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery", "query": "house pool stars night", "file": "https://images.unsplash.com/photo-1639098376571-bdca431efaee?w=2400&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Triết lý",
+      "purpose": "Triết lý tiết chế, kiến trúc, vật liệu, ánh sáng và bốn giá trị thương hiệu",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "The Beauty of Restraint" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Typography lớn + đoạn ngắn" },
+        { "id": "material", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh tổng thể + 2 ảnh chi tiết, chú thích kiểu tạp chí" },
+        { "id": "light", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "The Language of Light" },
+        { "id": "values", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "4 giá trị, đường phân cách mảnh" },
+        { "id": "closing", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Gallery nội / ngoại thất có lightbox + ảnh kết phản chiếu" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "modern house night", "file": "https://images.unsplash.com/photo-1748063578185-3d68121b11ff?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "material-overview", "query": "concrete architecture water", "file": "https://images.unsplash.com/photo-1735303865885-f03079fd1b40?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "material-metal", "query": "sconce stone wall", "file": "https://images.unsplash.com/photo-1787880172167-d31d3231fad8?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "material-stone", "query": "dark stones", "file": "https://images.unsplash.com/photo-1591020330942-e9c3bce82096?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "light-main", "query": "stone wall shadow light", "file": "https://images.unsplash.com/photo-1762804049245-a895480b93c6?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "closing-interior", "query": "living room large window", "file": "https://images.unsplash.com/photo-1724775255163-b0f5f5241642?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "closing-bath", "query": "stone bathroom bathtub", "file": "https://images.unsplash.com/photo-1781795035627-fa93f2863bba?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "closing-reflection", "query": "pool house night reflection", "file": "https://images.unsplash.com/photo-1750271329214-a7dbce880e85?w=2400&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/stays.html",
+      "title": "Suites & Villas",
+      "purpose": "Ba loại hình lưu trú (ảnh, mô tả, tiện nghi, không giá) và các tiện ích khu nghỉ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Private Worlds of Calm" },
+        { "id": "signature", "catalog": "projects", "variant": "features-alternate", "source": "ba", "note": "Signature Suite, accordion tiện nghi" },
+        { "id": "villa", "catalog": "projects", "variant": "cta-fullbleed", "source": "ba", "note": "Private Villa, ảnh tràn viền + khối Muted Plum" },
+        { "id": "panoramic", "catalog": "projects", "variant": "story-editorial", "source": "ba", "note": "Panoramic Residence, ảnh ngang + 3 cột thông tin" },
+        { "id": "facilities", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "5 tiện ích; Reflecting Pool dạng chữ vì hết hạn mức link ảnh" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "luxury hotel room view", "file": "https://images.unsplash.com/photo-1771775529138-a7a20ba7e032?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-bedroom", "query": "lamp beside bed", "file": "https://images.unsplash.com/photo-1552858725-a19e7fcd3ac4?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-detail", "query": "black nightstand bed", "file": "https://images.unsplash.com/photo-1605346434674-a440ca4dc4c0?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "villa", "query": "villa pool night", "file": "https://images.unsplash.com/photo-1678889284805-5c86fb1dba5a?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "panoramic", "query": "bedroom ocean view window", "file": "https://images.unsplash.com/photo-1718942899965-4fc10607d805?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-pool", "query": "reflecting pool night", "file": null, "status": "none" },
+        { "slot": "facility-dining", "query": "restaurant table wine glasses", "file": "https://images.unsplash.com/photo-1751011983324-fe9d30fe9efd?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-spa", "query": "hot tub stone arch", "file": "https://images.unsplash.com/photo-1781455495578-944c2dcbd2de?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-lounge", "query": "sofa chair glass window", "file": "https://images.unsplash.com/photo-1628414233354-bec86a0e35ce?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-garden", "query": "house outdoor lighting night", "file": "https://images.unsplash.com/photo-1758612853656-def5033bccb5?w=1400&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Trải nghiệm",
+      "purpose": "Ẩm thực, nghi thức spa, khoảnh khắc riêng tư, mặt nước và giờ tĩnh lặng",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "An Experience Beyond the Ordinary" },
+        { "id": "dining", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "The Art of Dining" },
+        { "id": "rituals", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Stillwater Rituals, đảo chiều" },
+        { "id": "moments", "catalog": "cta", "variant": "cta-fullbleed", "source": "ba", "note": "Private Moments, ảnh tràn viền" },
+        { "id": "water", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Water & Reflection, ít chữ, lightbox" },
+        { "id": "quiet", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "The Quiet Hour, nền Muted Plum" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Thông điệp thương hiệu, không CTA giao dịch; dạng chữ + hạt sao vì không còn link ảnh" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "pool night lit building", "file": "https://images.unsplash.com/photo-1790737434221-e8b259499c31?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "dining-main", "query": "wine glasses dining table", "file": "https://images.unsplash.com/photo-1574966739987-65e38db0f7ce?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "dining-detail", "query": "lamps restaurant", "file": "https://images.unsplash.com/photo-1552960226-639240203497?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "rituals-main", "query": "indoor pool lounge chairs", "file": "https://images.unsplash.com/photo-1776763018829-ad685e621871?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "rituals-detail", "query": "hot stones spa", "file": "https://images.unsplash.com/photo-1745327883348-8d78cb4661b0?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "moments", "query": "living room fireplace", "file": "https://images.unsplash.com/photo-1612152598218-9acf01c968e3?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "water-1", "query": "hotel pool lights night", "file": "https://images.unsplash.com/photo-1671362962572-50cf4edca731?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "water-2", "query": "modern house pool", "file": "https://images.unsplash.com/photo-1706164971302-e30c0640cc3b?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "closing-panorama", "query": "resort panorama night", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA yêu cầu nút VI/EN và chuyển ngữ đầy đủ (chú thích bổ sung) → thêm bộ chuyển ngôn ngữ trong site.js, ghi đè dòng 'không tạo bộ chuyển ngôn ngữ' của concept; mặc định tiếng Việt (<html lang=\"vi\">), lựa chọn lưu trong localStorage",
+    "Tiêu đề tiếng Anh BA đưa (Luxury Beyond the Ordinary…) hiển thị ở chế độ EN; chế độ VI dùng bản dịch tương ứng để không trộn ngôn ngữ. Tên riêng tiện ích (Reflecting Pool, Nocturne Dining…) và loại phòng giữ nguyên",
+    "Bảng màu và font theo chú thích BA thay preset Luxury: Midnight Teal / Petrol Blue / Muted Plum / Silver Mist / Moonstone / Deep Charcoal; Cormorant Garamond + Be Vietnam Pro (đủ ký tự tiếng Việt; Bodoni Moda không có bộ ký tự tiếng Việt)",
+    "Trang con đặt trong pages/ theo chuẩn công ty: pages/about.html, pages/stays.html, pages/experiences.html",
+    "Không có form, đặt phòng, giá hay lịch phòng theo yêu cầu BA",
+    "Thư viện ảnh lỗi → dùng link ảnh Unsplash qua link_image; hết hạn mức 40 link nên Reflecting Pool (trang Suites & Villas) và Closing Panorama (trang Trải nghiệm) dựng dạng chữ",
+    "Ảnh Panoramic Residence ở trang Suites & Villas dùng lại đúng ảnh của thẻ dẫn trên trang chủ (cùng một không gian); ảnh văn phòng sáng màu ban đầu bị loại vì lệch phong cách",
+    "Sau khi tự xem: bỏ 2 ảnh nhà mái dốc kiểu ngoại ô (lệch phong cách kiến trúc đương đại) ở trang Triết lý; vài ảnh sáng màu (đá trên nền trắng, phòng khách ban ngày, Private Moments, ảnh nhà ban ngày ở Water & Reflection) được hạ sáng + phủ Midnight Teal bằng CSS (.nightgrade)"
+  ],
+  "limitations": [
+    "Ảnh dùng link ngoài Unsplash (minh họa), cần thay bằng ảnh thật của resort",
+    "Chuyển ngữ VI/EN chạy bằng JavaScript phía trình duyệt; bản EN chưa có URL riêng cho SEO",
+    "Thông tin liên hệ, địa chỉ trong footer là dữ liệu mẫu"
+  ]
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thống kê · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-RPT-001" data-module="RPT" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-RPT-001 Thống kê: chọn kỳ + loại đơn → 6 KpiCard (so với kỳ trước) + doanh thu (Bar) + số đơn (Line, mục tiêu 20 / 30) + trạng thái (Donut)
+   * + Cần xử lý + suất pate 14 ngày (CapacityBar) + Top 5 + biến thể sắp hết. Mỗi biểu đồ chuyển được "Biểu đồ | Bảng số" (q28). Số liệu ngày: MOCK.dailyStats. */
+  Layout.mount({ area: 'admin', title: 'Thống kê', active: 'stats', breadcrumb: [['Bán hàng'], ['Thống kê']] }, function (main) {
+    var U = Perm.url, esc = UI.esc, S = MOCK.settings, DAY = 864e5;
+    var MODE_KEY = 'demo.rpt.mode';
+    var st = { period: '7d', type: '', from: '', to: '' };
+    function modes() { try { return JSON.parse(localStorage.getItem(MODE_KEY) || '{}'); } catch (e) { return {}; } }
+    function setMode(k, v) { var m = modes(); m[k] = v; try { localStorage.setItem(MODE_KEY, JSON.stringify(m)); } catch (e) {} }
+    function startOf(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+    function range() {
+      var today = startOf(new Date());
+      if (st.period === 'today') return [today, today];
+      if (st.period === 'month') return [new Date(today.getFullYear(), today.getMonth(), 1), today];
+      if (st.period === 'custom') return [new Date(st.from + 'T00:00:00'), new Date(st.to + 'T00:00:00')];
+      return [new Date(today - 6 * DAY), today];
+    }
+    function days(a, b) {
+      return MOCK.dailyStats.filter(function (d) { var t = startOf(new Date(d.date)); return t >= a && t <= b; }).map(function (d) {
+        var f = st.type === 'THUONG' ? d.thuong / d.moi : st.type === 'PATE_CHAY' ? d.pate / d.moi : 1;
+        return { date: d.date, moi: st.type === 'THUONG' ? d.thuong : st.type === 'PATE_CHAY' ? d.pate : d.moi, thuong: d.thuong, pate: d.pate, da_giao: Math.round(d.da_giao * f), da_huy: st.type === 'PATE_CHAY' ? 0 : d.da_huy, doanh_thu: Math.round(d.doanh_thu * f / 1000) * 1000 };
+      });
+    }
+    function sum(l, k) { return l.reduce(function (s, d) { return s + d[k]; }, 0); }
+    function kpis(l) { var n = Math.max(1, l.length), moi = sum(l, 'moi'), huy = sum(l, 'da_huy'), rev = sum(l, 'doanh_thu'); return { rev: rev, moi: moi, perDay: moi / n, patePerDay: sum(l, 'pate') / n, aov: (moi - huy) ? rev / (moi - huy) : 0, cancel: moi ? huy / moi : 0 }; }
+    function delta(a, b) { return b ? (a - b) / b * 100 : null; }
+    function dayLabel(iso) { return UI.fmt.dm(iso) + ' (' + UI.fmt.weekday(iso) + ')'; }
+    function ordersInRange() { var r = range(); return DemoStore.list('orders').filter(function (o) { var t = startOf(new Date(o.tao_luc)); return t >= r[0] && t <= r[1] && (!st.type || o.loai_don === st.type); }); }
+
+    main.innerHTML = '<div class="mb-5 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between"><div><h1 class="text-2xl font-extrabold text-neutral-800">Thống kê</h1><p class="mt-1 text-sm text-neutral-600" data-range-label></p></div>' +
+      '<div class="flex flex-wrap items-center gap-2"><div data-period></div><div class="w-40">' + UI.field({ name: 'loai', label: '', type: 'select', options: [{ value: '', label: 'Loại đơn: Tất cả' }, { value: 'THUONG', label: 'Thường' }, { value: 'PATE_CHAY', label: 'Pate chay' }], attrs: { 'aria-label': 'Loại đơn', 'data-type': '' } }) + '</div></div></div>' +
+      '<div class="mb-4 hidden flex-wrap items-end gap-2 rounded-lg border border-neutral-200 bg-white p-3" data-custom><div class="min-w-0 flex-1 sm:flex-none sm:w-80">' + UI.field({ name: 'khoang', label: 'Khoảng ngày', type: 'date-range' }) + '</div>' + UI.button({ label: 'Áp dụng', size: 'sm', attrs: { 'data-apply-range': '' } }) + '<p class="w-full text-xs font-bold text-danger-700 hidden" data-range-err>Khoảng thời gian không hợp lệ (tối đa 1 năm)</p></div>' +
+      '<div class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6" data-kpi>' + [1, 2, 3, 4, 5, 6].map(function () { return UI.skeletonBlock('h-28 rounded-lg'); }).join('') + '</div>' +
+      '<div class="mt-4 grid gap-4 lg:grid-cols-3"><div class="flex min-w-0 flex-col gap-4 lg:col-span-2" data-left></div><div class="flex min-w-0 flex-col gap-4" data-right></div></div>';
+
+    UI.tabs(main.querySelector('[data-period]'), { variant: 'pill', panelCls: 'hidden', active: '7d', tabs: [{ id: 'today', label: 'Hôm nay' }, { id: '7d', label: '7 ngày' }, { id: 'month', label: 'Tháng này' }, { id: 'custom', label: 'Tùy chọn' }],
+      onChange: function (id) { var c = main.querySelector('[data-custom]'); c.classList.toggle('hidden', id !== 'custom'); c.classList.toggle('flex', id === 'custom'); if (id !== 'custom') { st.period = id; paint(); } } });
+
+    /* Card có nút chuyển "Biểu đồ | Bảng số" */
+    function chartCard(key, title, chartFn, tableHtml) {
+      var m = modes()[key] || 'chart';
+      var html = '<section class="min-w-0 rounded-lg border border-neutral-200 bg-white p-4 md:p-5" data-cc="' + key + '"><div class="mb-3 flex flex-wrap items-center justify-between gap-2"><h2 class="text-lg font-bold text-neutral-800">' + title + '</h2>' +
+        '<div class="inline-flex rounded-lg bg-neutral-100 p-1" role="group" aria-label="Cách hiển thị">' + [['chart', 'Biểu đồ'], ['table', 'Bảng số']].map(function (x) { return '<button type="button" data-cc-mode="' + x[0] + '" aria-pressed="' + (m === x[0]) + '" class="h-8 rounded-md px-3 text-xs font-bold ' + (m === x[0] ? 'bg-white text-neutral-800 shadow-sm' : 'text-neutral-600 hover:text-neutral-800') + '">' + x[1] + '</button>'; }).join('') + '</div></div>' +
+        '<div data-cc-body class="overflow-x-auto"></div></section>';
+      return { html: html, mount: function (root) { var body = root.querySelector('[data-cc="' + key + '"] [data-cc-body]'); if ((modes()[key] || 'chart') === 'chart') { body.innerHTML = '<div class="min-w-96"></div>'; chartFn(body.firstChild); } else body.innerHTML = tableHtml(); } };
+    }
+    function numTable(l) {
+      var rows = l.slice().reverse();
+      return '<table class="w-full text-sm"><thead class="bg-neutral-50"><tr>' + ['Ngày', 'Doanh thu', 'Đơn mới', 'Thường / Pate', 'Đã giao', 'Đã hủy'].map(function (h, i) { return '<th scope="col" class="px-3 py-2.5 text-xs font-bold text-neutral-600 ' + (i ? 'text-right' : 'text-left') + ' ' + (i >= 3 ? 'hidden md:table-cell' : '') + '">' + h + '</th>'; }).join('') + '</tr></thead><tbody class="divide-y divide-neutral-100">' +
+        rows.map(function (d) { return '<tr class="h-table-row"><td class="px-3 whitespace-nowrap">' + dayLabel(d.date) + '</td><td class="px-3 text-right tabular-nums">' + UI.fmt.money(d.doanh_thu) + '</td><td class="px-3 text-right tabular-nums">' + d.moi + '</td><td class="hidden px-3 text-right tabular-nums md:table-cell">' + d.thuong + ' / ' + d.pate + '</td><td class="hidden px-3 text-right tabular-nums md:table-cell">' + d.da_giao + '</td><td class="hidden px-3 text-right tabular-nums md:table-cell">' + d.da_huy + '</td></tr>'; }).join('') +
+        '<tr class="h-table-row bg-neutral-50 font-extrabold"><td class="px-3">Tổng</td><td class="px-3 text-right tabular-nums">' + UI.fmt.money(sum(l, 'doanh_thu')) + '</td><td class="px-3 text-right tabular-nums">' + sum(l, 'moi') + '</td><td class="hidden px-3 text-right tabular-nums md:table-cell">' + sum(l, 'thuong') + ' / ' + sum(l, 'pate') + '</td><td class="hidden px-3 text-right tabular-nums md:table-cell">' + sum(l, 'da_giao') + '</td><td class="hidden px-3 text-right tabular-nums md:table-cell">' + sum(l, 'da_huy') + '</td></tr></tbody></table>';
+    }
+
+    function paint() {
+      try {
+        var r = range(), len = Math.round((r[1] - r[0]) / DAY) + 1;
+        var cur = days(r[0], r[1]), prev = days(new Date(r[0] - len * DAY), new Date(r[0] - DAY));
+        var k = kpis(cur), p = kpis(prev);
+        main.querySelector('[data-range-label]').textContent = 'Từ ' + UI.fmt.date(r[0].toISOString()) + ' đến ' + UI.fmt.date(r[1].toISOString()) + ' · so với ' + len + ' ngày trước đó';
+        var toOrders = U('pages/admin/don-hang.html?trang-thai=tat-ca');
+        main.querySelector('[data-kpi]').innerHTML = [
+          UI.kpiCard({ label: 'Doanh thu', value: UI.fmt.compact(k.rev) + 'đ', delta: delta(k.rev, p.rev), icon: 'banknote', tone: 'primary', href: toOrders }),
+          UI.kpiCard({ label: 'Đơn mới', value: UI.fmt.number(k.moi), delta: delta(k.moi, p.moi), icon: 'receipt', tone: 'info', href: toOrders }),
+          UI.kpiCard({ label: 'Đơn / ngày TB', value: (Math.round(k.perDay * 10) / 10).toLocaleString('vi-VN'), delta: delta(k.perDay, p.perDay), icon: 'target', tone: 'secondary', target: { pct: k.perDay / 20, label: 'Mục tiêu 20 đến 30 đơn / ngày' } }),
+          UI.kpiCard({ label: 'Pate chay / ngày TB', value: (Math.round(k.patePerDay * 10) / 10).toLocaleString('vi-VN') + ' / 5', delta: delta(k.patePerDay, p.patePerDay), icon: 'calendar-heart', tone: 'mint', target: { pct: k.patePerDay / 5, label: 'Mục tiêu 5 đơn / ngày' } }),
+          UI.kpiCard({ label: 'Giá trị đơn TB', value: UI.fmt.compact(k.aov) + 'đ', delta: delta(k.aov, p.aov), icon: 'wallet', tone: 'warning' }),
+          UI.kpiCard({ label: 'Tỉ lệ hủy', value: UI.fmt.percent(k.cancel), delta: delta(k.cancel, p.cancel), goodWhenDown: true, icon: 'circle-x', tone: 'danger' })].join('');
+
+        var rev = chartCard('rev', 'Doanh thu theo ngày', function (el) { UI.chart.bar(el, { labels: cur.map(function (d) { return UI.fmt.dm(d.date); }), values: cur.map(function (d) { return d.doanh_thu; }), label: 'Doanh thu theo ngày' }); }, function () { return numTable(cur); });
+        var cnt = chartCard('cnt', 'Số đơn mới mỗi ngày', function (el) { UI.chart.line(el, { labels: cur.map(function (d) { return UI.fmt.dm(d.date); }), label: 'Số đơn mới mỗi ngày', targets: [{ value: 20, label: 'Mục tiêu 20' }, { value: 30, label: '30' }],
+          series: (st.type !== 'PATE_CHAY' ? [{ name: 'Đơn thường', values: cur.map(function (d) { return d.thuong; }) }] : []).concat(st.type !== 'THUONG' ? [{ name: 'Pate chay', values: cur.map(function (d) { return d.pate; }), cls: 'stroke-primary-600', dot: 'fill-primary-600', legend: 'bg-primary-600' }] : []) }); }, function () { return numTable(cur); });
+        var cap = (MOCK.pateCapacity || []).map(function (c) { var j = Math.max(c.jars, App.pateJars(c.date)); return { date: c.date, jars: j, orders: c.orders }; });
+        var capHtml = '<section class="min-w-0 rounded-lg border border-neutral-200 bg-white p-4 md:p-5"><h2 class="mb-3 text-lg font-bold text-neutral-800">Suất pate chay 14 ngày tới</h2><div class="overflow-x-auto"><table class="w-full text-sm"><thead class="bg-neutral-50"><tr><th scope="col" class="px-3 py-2.5 text-left text-xs font-bold text-neutral-600">Ngày giao</th><th scope="col" class="px-3 py-2.5 text-left text-xs font-bold text-neutral-600">Số hũ / ' + S.pateCap + '</th><th scope="col" class="px-3 py-2.5 text-right text-xs font-bold text-neutral-600">Số đơn</th><th scope="col" class="hidden px-3 py-2.5 text-left text-xs font-bold text-neutral-600 sm:table-cell">Tình trạng</th></tr></thead><tbody class="divide-y divide-neutral-100">' +
+          cap.map(function (c) { var left = S.pateCap - c.jars, pct = c.jars / S.pateCap; return '<tr class="h-table-row cursor-pointer hover:bg-primary-50" data-go="' + U('pages/admin/don-hang.html?trang-thai=tat-ca') + '"><td class="px-3 whitespace-nowrap font-bold">' + dayLabel(c.date) + '</td><td class="min-w-48 px-3">' + UI.capacityBar(c.jars, S.pateCap) + '</td><td class="px-3 text-right tabular-nums">' + c.orders + '</td><td class="hidden px-3 sm:table-cell">' + (pct > 1 ? UI.tag('Vượt suất', 'danger') : pct >= 0.8 ? UI.tag('Gần đủ', 'warning') : UI.tag('Còn ' + left + ' suất', 'success')) + '</td></tr>'; }).join('') + '</tbody></table></div></section>';
+        var sold = {};
+        DemoStore.list('orders').filter(function (o) { return o.state !== 'CANCELLED' && (!st.type || o.loai_don === st.type); }).forEach(function (o) { o.items.forEach(function (i) { var key = i.ten_hang + ' · ' + i.ten_bien_the; sold[key] = sold[key] || { name: i.ten_hang, v: i.ten_bien_the, qty: 0, rev: 0 }; sold[key].qty += i.so_luong; sold[key].rev += i.so_luong * i.don_gia; }); });
+        var top = Object.keys(sold).map(function (x) { return sold[x]; }).sort(function (a, b) { return b.qty - a.qty; }).slice(0, 5);
+        var topHtml = '<section class="min-w-0 rounded-lg border border-neutral-200 bg-white p-4 md:p-5"><h2 class="mb-3 text-lg font-bold text-neutral-800">Top 5 sản phẩm bán chạy</h2>' + (top.length ? '<ol class="flex flex-col divide-y divide-neutral-100">' + top.map(function (t, i) { return '<li class="flex items-center gap-3 py-2.5"><span class="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-primary-100 text-sm font-extrabold text-primary-700">' + (i + 1) + '</span><span class="min-w-0 flex-1"><span class="block truncate font-bold">' + esc(t.name) + '</span><span class="text-xs text-neutral-600">' + esc(t.v) + '</span></span><span class="text-right text-sm"><b class="block tabular-nums">' + t.qty + ' đã bán</b><span class="text-xs text-neutral-600 tabular-nums">' + UI.fmt.money(t.rev) + '</span></span></li>'; }).join('') + '</ol>' : '<p class="text-sm text-neutral-600">Chưa có dữ liệu trong kỳ này</p>') + '</section>';
+
+        var newN = DemoStore.list('orders').filter(function (o) { return o.state === 'NEW'; }).length, cancelN = DemoStore.list('orders').filter(App.cancelRequested).length,
+          retN = DemoStore.list('returns').filter(function (x) { return x.state === 'PENDING'; }).length, refN = DemoStore.list('orders').filter(App.needsRefund).length;
+        var todo = '<section class="rounded-lg border border-neutral-200 bg-white p-4 md:p-5"><h2 class="mb-2 text-lg font-bold text-neutral-800">Cần xử lý</h2><ul class="flex flex-col">' +
+          [[newN, 'đơn Mới đặt', 'pages/admin/don-hang.html?trang-thai=NEW', 'receipt', 'info'], [cancelN, 'yêu cầu hủy', 'pages/admin/don-hang.html?trang-thai=chu-y', 'circle-x', 'danger'], [retN, 'đổi trả chờ xử lý', 'pages/admin/doi-tra.html', 'rotate-ccw', 'warning'], [refN, 'đơn chờ hoàn tiền', 'pages/admin/don-hang.html?trang-thai=chu-y', 'hand-coins', 'warning']].map(function (x) {
+            return '<li><a href="' + U(x[2]) + '" class="flex items-center gap-3 rounded-lg px-2 py-2.5 hover:bg-neutral-50"><span class="inline-flex size-9 items-center justify-center rounded-lg ' + UI.TONE[x[4]][0] + ' ' + UI.TONE[x[4]][1] + '">' + UI.icon(x[3], 'size-4') + '</span><span class="flex-1 text-sm"><b class="text-base tabular-nums">' + x[0] + '</b> ' + x[1] + '</span>' + UI.icon('chevron-right', 'size-4 text-neutral-400') + '</a></li>';
+          }).join('') + '</ul></section>';
+        var inR = ordersInRange(), byState = {};
+        inR.forEach(function (o) { var n = Workflow.state(App.docOf(o), o.state).name; byState[n] = byState[n] || { n: 0, key: o.state, tone: Workflow.state(App.docOf(o), o.state).tone }; byState[n].n++; });
+        var COL = { info: ['stroke-info-500', 'bg-info-500'], warning: ['stroke-warning-500', 'bg-warning-500'], success: ['stroke-success-500', 'bg-success-500'], neutral: ['stroke-neutral-400', 'bg-neutral-400'], danger: ['stroke-danger-500', 'bg-danger-500'] };
+        var donutItems = Object.keys(byState).map(function (n, i) { var c = COL[byState[n].tone] || COL.neutral; if (n === 'Đã xác nhận' || n === 'Đã được xác nhận') c = ['stroke-secondary-500', 'bg-secondary-500']; if (n === 'Đang làm') c = ['stroke-primary-500', 'bg-primary-500']; return { label: n, value: byState[n].n, stroke: c[0], bg: c[1], onClick: function () { location.href = U('pages/admin/don-hang.html?trang-thai=tat-ca'); } }; });
+        var donut = chartCard('st', 'Đơn theo trạng thái', function (el) { UI.chart.donut(el, { items: donutItems, centerLabel: 'đơn' }); }, function () { return donutItems.length ? '<table class="w-full text-sm"><tbody class="divide-y divide-neutral-100">' + donutItems.map(function (d) { return '<tr class="h-table-row"><td class="px-3"><span class="mr-2 inline-block size-3 rounded-sm ' + d.bg + '"></span>' + esc(d.label) + '</td><td class="px-3 text-right font-bold tabular-nums">' + d.value + '</td></tr>'; }).join('') + '</tbody></table>' : '<p class="py-8 text-center text-sm text-neutral-600">Chưa có dữ liệu trong kỳ này</p>'; });
+        var low = [];
+        App.products().forEach(function (p) { if (p.la_pate) return; p.variants.forEach(function (v) { if (v.ton_kho != null && v.ton_kho <= v.nguong) low.push({ p: p, v: v }); }); });
+        var lowHtml = '<section class="rounded-lg border border-neutral-200 bg-white p-4 md:p-5"><div class="mb-2 flex items-center justify-between"><h2 class="text-lg font-bold text-neutral-800">Biến thể sắp hết</h2>' + UI.button({ label: 'Tồn kho', variant: 'link', size: 'sm', href: U('pages/admin/ton-kho.html?loc=sap-het') }) + '</div>' +
+          (low.length ? '<ul class="flex flex-col divide-y divide-neutral-100">' + low.slice(0, 8).map(function (x) { return '<li><a href="' + U('pages/admin/ton-kho.html?loc=sap-het') + '" class="flex items-center gap-3 py-2 hover:text-primary-700"><span class="min-w-0 flex-1"><span class="block truncate text-sm font-bold">' + esc(x.p.ten) + '</span><span class="text-xs text-neutral-600">' + esc(x.v.ten) + '</span></span>' + (x.v.ton_kho === 0 ? UI.statusBadge('Hết hàng', 'danger') : UI.statusBadge('Còn ' + x.v.ton_kho, 'warning')) + '</a></li>'; }).join('') + '</ul>' : '<p class="text-sm text-neutral-600">Không có biến thể nào sắp hết.</p>') + '</section>';
+
+        main.querySelector('[data-left]').innerHTML = rev.html + cnt.html + capHtml + topHtml;
+        main.querySelector('[data-right]').innerHTML = todo + donut.html + lowHtml;
+        rev.mount(main); cnt.mount(main); donut.mount(main);
+        main._cards = { rev: rev, cnt: cnt, st: donut };
+      } catch (e) { main.querySelector('[data-left]').innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.' }); if (window.console) console.error(e); }
+    }
+    main.addEventListener('click', function (e) {
+      var m = e.target.closest('[data-cc-mode]');
+      if (m) { var key = m.closest('[data-cc]').getAttribute('data-cc'); setMode(key, m.getAttribute('data-cc-mode')); var sec = m.closest('[data-cc]'); sec.querySelectorAll('[data-cc-mode]').forEach(function (b) { var on = b === m; b.setAttribute('aria-pressed', on); b.className = 'h-8 rounded-md px-3 text-xs font-bold ' + (on ? 'bg-white text-neutral-800 shadow-sm' : 'text-neutral-600 hover:text-neutral-800'); }); main._cards[key].mount(main); return; }
+      var g = e.target.closest('[data-go]'); if (g) { location.href = g.getAttribute('data-go'); return; }
+      if (e.target.closest('[data-apply-range]')) {
+        var a = main.querySelector('[name=khoang_tu]').value, b = main.querySelector('[name=khoang_den]').value, err = main.querySelector('[data-range-err]');
+        var bad = !a || !b || a > b || (new Date(b) - new Date(a)) / DAY > 366;
+        err.classList.toggle('hidden', !bad); if (bad) return;
+        st.period = 'custom'; st.from = a; st.to = b; paint();
+      }
+    });
+    main.addEventListener('change', function (e) { if (e.target.matches('[data-type]')) { st.type = e.target.value; paint(); } });
+    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { if (main._cards) ['rev', 'cnt'].forEach(function (k) { main._cards[k].mount(main); }); }, 250); });
+    setTimeout(paint, 400);
+  });
+  </script>
+</body>
+</html>

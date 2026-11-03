@@ -1,0 +1,55 @@
+{
+  "brand": "MONOCHROME",
+  "language": "vi",
+  "preset": "corporate",
+  "motionLevel": 1,
+  "visualIdea": "Trang như một ấn phẩm kiến trúc: lưới 12 cột lộ bằng đường kẻ mảnh mở rộng khi cuộn, metadata kỹ thuật bằng IBM Plex Mono như ghi chú trên bản vẽ, góc vuông tuyệt đối",
+  "purposeInferred": "Portfolio & CV cá nhân của kiến trúc sư / nhà thiết kế nội thất: trình bày dự án chọn lọc, cách tiếp cận thiết kế, năng lực và lý lịch để nhà tuyển dụng, văn phòng kiến trúc và khách hàng cá nhân liên hệ hợp tác",
+  "theme": {
+    "tagline": "Ánh sáng, vật liệu và trải nghiệm con người",
+    "description": "Giao diện portfolio và CV cá nhân cho kiến trúc sư, nhà thiết kế nội thất."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Landing page một trang: tuyên ngôn, dự án chọn lọc (case study mở bằng accordion), cách tiếp cận, năng lực, lý lịch, giới thiệu và liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ai", "note": "Tỷ lệ 40% chữ / 60% ảnh theo chú thích BA" },
+        { "id": "projects", "catalog": "projects", "variant": "gallery-lookbook", "source": "ai", "note": "4 dự án, mỗi dự án một bố cục khác nhau, accordion case study, lightbox ảnh" },
+        { "id": "approach", "catalog": "features", "variant": "features-bento", "source": "ai", "note": "Ánh sáng / Vật liệu / Không gian: một ảnh lớn + hai ảnh nhỏ" },
+        { "id": "expertise", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "Nền tối, danh sách chữ tối giản, không thanh tiến độ" },
+        { "id": "resume", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Timeline đường kẻ mảnh, nội dung placeholder" },
+        { "id": "about", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Quan điểm nghề nghiệp, không lặp hero" },
+        { "id": "contact", "catalog": "contact", "variant": "cta-fullbleed", "source": "ai", "note": "Ảnh chi tiết vật liệu làm điểm kết, email / LinkedIn dạng placeholder" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "concrete architecture shadow", "file": "assets/img/hero-be-tong-anh-sang.jpg", "status": "ok" },
+        { "slot": "projects-01", "query": "modern villa architecture", "file": "assets/img/du-an-01-nha-o.webp", "status": "ok" },
+        { "slot": "projects-02", "query": "minimalist interior natural light", "file": "assets/img/du-an-02-noi-that.jpg", "status": "ok" },
+        { "slot": "projects-03-plan", "query": "architectural floor plan drawing", "file": "assets/img/du-an-03-mat-bang.webp", "status": "ok" },
+        { "slot": "projects-03-perspective", "query": "concrete architecture shadow", "file": "assets/img/du-an-03-mo-hinh.webp", "status": "ok" },
+        { "slot": "projects-04-main", "query": "hotel lobby minimalist interior", "file": "assets/img/du-an-04-hospitality.webp", "status": "ok" },
+        { "slot": "projects-04-detail-stone", "query": "travertine stone wall interior", "file": "assets/img/du-an-04-chi-tiet-1.jpg", "status": "ok" },
+        { "slot": "projects-04-detail-wood", "query": "wood joinery detail craftsmanship", "file": "assets/img/du-an-04-chi-tiet-2.jpg", "status": "ok" },
+        { "slot": "approach-light", "query": "concrete architecture shadow", "file": "assets/img/approach-anh-sang.jpg", "status": "ok" },
+        { "slot": "approach-material", "query": "contemporary concrete house light", "file": "assets/img/hero-kien-truc-toi-gian.jpg", "status": "ok" },
+        { "slot": "approach-space", "query": "concrete architecture shadow", "file": "assets/img/approach-khong-gian.webp", "status": "ok" },
+        { "slot": "about", "query": "drafting table architect drawing", "file": "assets/img/about-mo-hinh-nghien-cuu.jpg", "status": "ok" },
+        { "slot": "contact", "query": "concrete architecture shadow", "file": "assets/img/contact-cau-thang-be-tong.webp", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng một trang (index.html) vì BA yêu cầu rõ landing page, menu cuộn tới section và không tạo trang dự án riêng",
+    "Nhãn tiếng Anh trong chú thích BA (VIEW SELECTED PROJECTS, A Way of Seeing Space, Let's Create Meaningful Spaces...) được Việt hóa vì concept.md chốt ngôn ngữ tiếng Việt, không trộn ngôn ngữ",
+    "Màu và font theo chú thích BA (#F5F5F2, #191919, #B7B7B0, #666660, #827B70; Manrope / Inter / IBM Plex Mono) thay cho bảng màu và font của preset Corporate",
+    "Không hiển thị nút Tải CV / Portfolio PDF vì chưa có file; LinkedIn để dạng chữ (không link tới hồ sơ không tồn tại)",
+    "File assets/img/contact-cau-thang-be-tong.jpg (cầu thang xoắn) tải về nhưng không dùng vì có viền đen và chữ watermark; đã thay bằng contact-cau-thang-be-tong.webp. Hai ảnh mô hình in 3D màu sắc cũng bị thay vì lệch bảng màu đơn sắc",
+    "Theo góp ý BA: thay toàn bộ placeholder bằng nội dung mẫu hư cấu (KTS Trần Minh Khang, TP.HCM, 8 năm; tên dự án, địa điểm, năm, kinh nghiệm, học vấn, liên hệ); ảnh vẫn là ảnh nguồn mở, ghi nguồn trong CREDITS.md"
+  ],
+  "limitations": [
+    "Tên, email, số điện thoại, LinkedIn, địa chỉ studio là nội dung hư cấu cho prototype; CV PDF chưa có nên ghi 'gửi theo yêu cầu'",
+    "Không có biểu mẫu liên hệ theo yêu cầu BA (tránh form không hoạt động)"
+  ]
+}

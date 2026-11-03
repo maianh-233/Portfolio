@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(localStorage.getItem('mocmien-lang')==='vi'){document.documentElement.lang='vi';}}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TIỆM BÁNH MỘC MIÊN — Yesterday's bakes, today's fond memories</title>
+<meta name="description" content="TIỆM BÁNH MỘC MIÊN is a small Vietnamese bakery of old-time baguettes, sponge cakes and butter cookies, baked every morning the way our grandmothers did.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Work+Sans:wght@400;500;600;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+</head>
+<body class="font-body text-ink antialiased" data-title-vi="TIỆM BÁNH MỘC MIÊN — Hương bánh xưa, thương nhớ hôm nay" data-desc-vi="TIỆM BÁNH MỘC MIÊN là tiệm bánh Việt nhỏ với bánh mì, bông lan, bánh quy bơ nướng mỗi sáng theo cách bà vẫn làm.">
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER (giống mọi trang) ============ -->
+<header id="top" data-header="shrink" class="sticky top-0 z-50 border-b border-wood/20 bg-paper transition-shadow duration-300">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="signboard flex items-center gap-2.5 px-3 py-1.5 text-wood transition duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick" aria-label="TIỆM BÁNH MỘC MIÊN home" data-label-vi="Trang chủ TIỆM BÁNH MỘC MIÊN">
+      <span class="flower text-brick text-xl" aria-hidden="true"></span>
+      <span class="flex flex-col leading-none"><span class="text-[12px] font-semibold tracking-[0.22em]">TIỆM BÁNH</span> <span class="font-display text-xl font-bold tracking-wide">MỘC MIÊN</span></span>
+    </a>
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a href="index.html" aria-current="page" class="relative py-2 text-[15px] font-medium text-wood transition-colors duration-300 hover:text-brick after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[2px] after:origin-right after:scale-x-0 after:bg-brick after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-brick aria-[current=page]:after:scale-x-100"><span class="en">Home</span><span class="vi">Trang chủ</span></a>
+      <a href="pages/menu.html" class="relative py-2 text-[15px] font-medium text-wood transition-colors duration-300 hover:text-brick after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[2px] after:origin-right after:scale-x-0 after:bg-brick after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-brick aria-[current=page]:after:scale-x-100"><span class="en">Menu</span><span class="vi">Thực đơn</span></a>
+      <a href="pages/about.html" class="relative py-2 text-[15px] font-medium text-wood transition-colors duration-300 hover:text-brick after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[2px] after:origin-right after:scale-x-0 after:bg-brick after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-brick aria-[current=page]:after:scale-x-100"><span class="en">Our story</span><span class="vi">Về chúng tôi</span></a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex rounded-full border border-wood/40 bg-paper-light/60 p-0.5 text-xs font-semibold" role="group" aria-label="Language" data-label-vi="Ngôn ngữ">
+        <button type="button" data-lang-set="en" aria-pressed="true" class="h-10 min-w-[2.75rem] rounded-full px-2 text-wood transition duration-300 hover:text-brick [&.is-active]:bg-wood [&.is-active]:text-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick">EN</button>
+        <button type="button" data-lang-set="vi" aria-pressed="false" class="h-10 min-w-[2.75rem] rounded-full px-2 text-wood transition duration-300 hover:text-brick [&.is-active]:bg-wood [&.is-active]:text-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick">VI</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full border border-wood/40 text-wood transition duration-300 hover:bg-wood hover:text-cream lg:hidden" aria-label="Open menu" data-label-vi="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-md border border-wood/20 bg-paper-light p-6 shadow-print lg:hidden">
+    <nav class="flex flex-col divide-y divide-wood/15 font-display text-2xl text-wood" aria-label="Mobile">
+      <a href="index.html" aria-current="page" class="flex min-h-[52px] items-center gap-3 aria-[current=page]:text-brick"><span class="en">Home</span><span class="vi">Trang chủ</span></a>
+      <a href="pages/menu.html" class="flex min-h-[52px] items-center gap-3 aria-[current=page]:text-brick"><span class="en">Menu</span><span class="vi">Thực đơn</span></a>
+      <a href="pages/about.html" class="flex min-h-[52px] items-center gap-3 aria-[current=page]:text-brick"><span class="en">Our story</span><span class="vi">Về chúng tôi</span></a>
+    </nav>
+    <p class="mt-5 font-hand text-xl text-brick"><span class="en">Fresh bread from 6:00 every morning</span><span class="vi">Bánh mới ra lò từ 6 giờ mỗi sáng</span></p>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO: bưu thiếp ============ -->
+<section id="hero" data-section="hero-offset" class="relative bg-paper-light py-8 sm:py-12 lg:py-14">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="relative grid grid-cols-1 gap-8 rounded-[6px_10px_5px_8px] bg-cream p-4 shadow-print sm:p-6 lg:grid-cols-12 lg:gap-0 lg:p-8 2xl:p-10">
+      <!-- ảnh khay bánh -->
+      <div class="relative lg:col-span-7 lg:pr-10 2xl:pr-14">
+        <div data-reveal="clip" class="relative aspect-[4/3] overflow-hidden rounded-[3px_6px_4px_5px] bg-paper-deep lg:aspect-auto lg:h-full lg:min-h-[520px]">
+          <img src="assets/img/home-hero-khay-banh.jpg" alt="Trays of golden sweet buns with crumble topping in paper cups at the bakery counter" data-alt-vi="Khay bánh mì ngọt vàng ruộm phủ vụn bơ trong cốc giấy trên quầy bánh" width="1024" height="683" class="film-img absolute inset-0 h-full w-full object-cover object-center">
+        </div>
+        <p class="mt-3 font-hand text-lg text-wood/80 lg:absolute lg:-bottom-1 lg:left-0 lg:mt-0"><span class="en">This morning's first tray, still warm.</span><span class="vi">Khay bánh đầu tiên sáng nay, còn ấm.</span></p>
+      </div>
+      <!-- mặt viết thư -->
+      <div class="relative flex flex-col justify-center lg:col-span-5 lg:border-l-2 lg:border-dashed lg:border-wood/30 lg:pl-10 2xl:pl-14">
+        <!-- tem + dấu bưu điện -->
+        <div class="mb-6 flex items-start justify-between gap-4 lg:mb-10">
+          <p class="font-hand text-2xl text-brick sm:text-[1.7rem]"><span class="en">Dear you, from a little bakery</span><span class="vi">Gửi bạn, từ một tiệm bánh nhỏ</span></p>
+          <div data-float="6" data-float-rotate="2" class="shrink-0">
+            <div class="perforated h-[112px] w-[96px] rotate-[3deg] text-cream" aria-hidden="true">
+              <div class="grid h-full w-full place-items-center bg-brick p-1.5">
+                <div class="stamp flex h-full w-full flex-col items-center justify-center gap-1.5 text-center">
+                  <span class="flower text-2xl"></span>
+                  <span class="text-[12px] font-semibold leading-tight tracking-[0.08em]">MỘC<br>MIÊN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 class="font-display text-4xl leading-[1.08] text-wood sm:text-5xl xl:text-[3.6rem] 2xl:text-[4.2rem]">
+          <span class="en block" data-split="words">Yesterday's bakes, today's fond memories</span>
+          <span class="vi block" data-split="words">Hương bánh xưa, thương nhớ hôm nay</span>
+        </h1>
+        <p class="mt-5 max-w-[34ch] text-[17px] leading-relaxed text-ink/80 2xl:text-lg" data-reveal="up">
+          <span class="en">Baguettes, sponge cakes and butter cookies, baked each morning the way our grandmothers did.</span>
+          <span class="vi">Bánh mì, bông lan, bánh quy bơ, nướng mỗi sáng theo cách bà vẫn làm.</span>
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap" data-reveal="up" data-reveal-delay="250">
+          <a href="pages/about.html" class="group inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brick px-7 text-[15px] font-semibold text-cream transition duration-300 hover:bg-brick-dark active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wood focus-visible:ring-offset-2 focus-visible:ring-offset-cream">
+            <span class="en">Visit our story</span><span class="vi">Ghé thăm câu chuyện</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="pages/menu.html" class="inline-flex min-h-[48px] items-center justify-center whitespace-nowrap rounded-full border-2 border-wood/70 px-7 text-[15px] font-semibold text-wood transition duration-300 hover:bg-wood hover:text-cream active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick">
+            <span class="en">See the menu</span><span class="vi">Xem thực đơn</span>
+          </a>
+        </div>
+        <!-- dòng địa chỉ bưu thiếp -->
+        <div class="mt-10 hidden space-y-4 lg:block" aria-hidden="true">
+          <div class="h-px bg-wood/25"></div>
+          <div class="h-px w-4/5 bg-wood/25"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DẢI GHI CHÚ SỔ TAY ============ -->
+<section id="notebook" data-section="marquee-band" class="lined border-y border-wood/20 bg-paper py-4" aria-label="Bakery notes" data-label-vi="Ghi chú của tiệm">
+  <div data-marquee="34" class="font-hand text-xl text-wood sm:text-2xl">
+    <div class="flex shrink-0 items-center gap-8 pr-8 whitespace-nowrap">
+      <span class="en">Baguettes out of the oven at 6:00</span><span class="vi">Bánh mì ra lò lúc 6 giờ</span>
+      <span class="flower text-brick text-base" aria-hidden="true"></span>
+      <span class="en">Pandan sponge on Saturdays</span><span class="vi">Bông lan lá dứa vào thứ Bảy</span>
+      <span class="flower text-moss text-base" aria-hidden="true"></span>
+      <span class="en">Butter cookies tied up in brown paper</span><span class="vi">Bánh quy bơ gói giấy nâu buộc dây</span>
+      <span class="flower text-brick text-base" aria-hidden="true"></span>
+      <span class="en">Mooncakes return in the eighth lunar month</span><span class="vi">Bánh trung thu trở lại vào tháng Tám âm lịch</span>
+      <span class="flower text-moss text-base" aria-hidden="true"></span>
+      <span class="en">Bring your own basket, we will fill it</span><span class="vi">Mang giỏ theo nhé, tiệm xếp đầy cho bạn</span>
+      <span class="flower text-brick text-base" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÓN BÁNH THÂN QUEN ============ -->
+<section id="favourites" data-section="teaser-row" class="bg-paper-light py-16 sm:py-20 lg:py-28">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <h2 class="font-display text-3xl text-wood sm:text-4xl lg:text-5xl 2xl:text-6xl" data-reveal="up">
+        <span class="en">Familiar favourites</span><span class="vi">Món bánh thân quen</span>
+      </h2>
+      <a href="pages/menu.html" class="group inline-flex min-h-[44px] items-center gap-2 self-start font-semibold text-brick transition-colors duration-300 hover:text-brick-dark sm:self-auto">
+        <span class="en">See the menu</span><span class="vi">Xem thực đơn</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="sprig mt-6 text-moss" aria-hidden="true"></div>
+
+    <div class="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-10 2xl:gap-x-14" data-reveal-stagger="110">
+      <a href="pages/menu.html#bread" class="group block sm:rotate-[-1.5deg]">
+        <figure class="film">
+          <div class="aspect-[4/5] overflow-hidden bg-paper-deep"><img src="assets/img/home-banh-mi.jpg" alt="Crusty Vietnamese baguettes cooling on a wire rack" data-alt-vi="Những ổ bánh mì vỏ giòn đang nguội trên giá" width="1024" height="683" loading="lazy" class="film-img h-full w-full object-cover"></div>
+          <figcaption class="mt-2 flex items-baseline justify-between font-hand text-lg text-wood"><span>No. 01</span><span class="en">Baguette</span><span class="vi">Bánh mì</span></figcaption>
+        </figure>
+        <h3 class="mt-5 font-display text-2xl text-wood transition-colors duration-300 group-hover:text-brick"><span class="en">Crackly baguette</span><span class="vi">Bánh mì vỏ giòn</span></h3>
+        <p class="mt-1.5 max-w-[36ch] text-[15px] leading-relaxed text-ink/75"><span class="en">Thin, crackling crust and an airy crumb, out of the oven by six.</span><span class="vi">Vỏ mỏng giòn rụm, ruột xốp nhẹ, ra lò trước sáu giờ.</span></p>
+      </a>
+      <a href="pages/menu.html#pastries" class="group block sm:mt-12 sm:rotate-[1.2deg]">
+        <figure class="film">
+          <div class="aspect-[1/1] overflow-hidden bg-paper-deep"><img src="assets/img/home-bong-lan.webp" alt="A slice of lemon sponge cake with coconut glaze on a white plate" data-alt-vi="Miếng bông lan chanh phủ nước cốt dừa trên đĩa trắng" width="683" height="1024" loading="lazy" class="film-img h-full w-full object-cover object-bottom"></div>
+          <figcaption class="mt-2 flex items-baseline justify-between font-hand text-lg text-wood"><span>No. 02</span><span class="en">Sponge cake</span><span class="vi">Bông lan</span></figcaption>
+        </figure>
+        <h3 class="mt-5 font-display text-2xl text-wood transition-colors duration-300 group-hover:text-brick"><span class="en">Butter sponge cake</span><span class="vi">Bánh bông lan bơ</span></h3>
+        <p class="mt-1.5 max-w-[36ch] text-[15px] leading-relaxed text-ink/75"><span class="en">Soft and springy with a little lemon, cut into generous slices.</span><span class="vi">Mềm xốp, thoảng vị chanh, cắt miếng thật dày.</span></p>
+      </a>
+      <a href="pages/menu.html#pastries" class="group block sm:rotate-[1deg] lg:mt-4">
+        <figure class="film">
+          <div class="aspect-[4/3] overflow-hidden bg-paper-deep"><img src="assets/img/home-banh-quy.webp" alt="Golden fork-pressed butter cookies in a white bowl on a wooden table" data-alt-vi="Bánh quy bơ vàng in vân nĩa trong chén trắng trên bàn gỗ" width="1024" height="683" loading="lazy" class="film-img h-full w-full object-cover"></div>
+          <figcaption class="mt-2 flex items-baseline justify-between font-hand text-lg text-wood"><span>No. 03</span><span class="en">Cookies</span><span class="vi">Bánh quy</span></figcaption>
+        </figure>
+        <h3 class="mt-5 font-display text-2xl text-wood transition-colors duration-300 group-hover:text-brick"><span class="en">Butter cookies</span><span class="vi">Bánh quy bơ</span></h3>
+        <p class="mt-1.5 max-w-[36ch] text-[15px] leading-relaxed text-ink/75"><span class="en">Fork-pressed and golden, wrapped by the dozen in brown paper.</span><span class="vi">In vân nĩa, vàng óng, gói từng chục trong giấy nâu.</span></p>
+      </a>
+      <a href="pages/menu.html#bread" class="group block sm:mt-12 sm:rotate-[-1deg] lg:mt-16">
+        <figure class="film">
+          <div class="aspect-[3/4] overflow-hidden bg-paper-deep"><img src="assets/img/home-banh-mi-ngot.webp" alt="Honey-glazed sweet knot buns on a baking tray" data-alt-vi="Bánh mì ngọt xoắn quét mật ong trên khay nướng" width="1024" height="683" loading="lazy" class="film-img h-full w-full object-cover"></div>
+          <figcaption class="mt-2 flex items-baseline justify-between font-hand text-lg text-wood"><span>No. 04</span><span class="en">Sweet buns</span><span class="vi">Bánh mì ngọt</span></figcaption>
+        </figure>
+        <h3 class="mt-5 font-display text-2xl text-wood transition-colors duration-300 group-hover:text-brick"><span class="en">Sweet knot buns</span><span class="vi">Bánh mì ngọt xoắn</span></h3>
+        <p class="mt-1.5 max-w-[36ch] text-[15px] leading-relaxed text-ink/75"><span class="en">Brushed with honey, the after-school treat many of us grew up on.</span><span class="vi">Quét mật ong, món quà tan trường của bao đứa trẻ.</span></p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KỂ CHUYỆN NGẮN ============ -->
+<section id="story" data-section="story-letter" class="relative overflow-hidden bg-wood py-16 text-cream sm:py-20 lg:py-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-6 xl:col-span-7">
+      <figure class="film film--even mx-auto max-w-[760px] rotate-[-1.5deg] lg:mx-0 lg:max-w-none">
+        <div data-reveal="clip" class="aspect-[3/2] overflow-hidden bg-paper-deep">
+          <img src="assets/img/home-ke-banh-go.webp" alt="Loaves of bread lined up on old wooden shelves behind glass doors" data-alt-vi="Những ổ bánh mì xếp hàng trên kệ gỗ cũ sau cửa kính" width="1024" height="681" loading="lazy" class="film-img h-full w-full object-cover">
+        </div>
+      </figure>
+    </div>
+    <div class="lg:col-span-6 xl:col-span-5">
+      <p class="font-hand text-3xl text-paper" data-reveal="up"><span class="en">Dear friend,</span><span class="vi">Bạn thân mến,</span></p>
+      <h2 class="mt-4 font-display text-3xl leading-tight text-cream sm:text-4xl lg:text-5xl" data-reveal="up">
+        <span class="en">A wooden counter, a paper bag, a warm hello</span><span class="vi">Một quầy gỗ, một túi giấy, một lời chào ấm</span>
+      </h2>
+      <div class="mt-6 max-w-prose space-y-4 text-[17px] leading-relaxed text-cream/85" data-reveal="up">
+        <p class="en">Mộc Miên began with a simple wish: to bring back the corner bakery we remember. The smell of bread drifting down the lane, cakes wrapped in thin paper, someone behind the counter who knows your name.</p>
+        <p class="vi">Mộc Miên bắt đầu từ một mong muốn giản dị: mang lại tiệm bánh đầu ngõ trong ký ức. Mùi bánh mì bay khắp con hẻm, chiếc bánh gói trong lớp giấy mỏng, và người đứng quầy nhớ tên bạn.</p>
+        <p class="en">We still bake in small batches and still wrap every order by hand.</p>
+        <p class="vi">Chúng tôi vẫn nướng từng mẻ nhỏ và vẫn tự tay gói từng phần bánh.</p>
+      </div>
+      <a href="pages/about.html" class="group mt-9 inline-flex min-h-[48px] items-center gap-2 whitespace-nowrap rounded-full bg-paper px-7 text-[15px] font-semibold text-wood transition duration-300 hover:bg-cream active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream focus-visible:ring-offset-2 focus-visible:ring-offset-wood" data-reveal="up">
+        <span class="en">Visit our story</span><span class="vi">Ghé thăm câu chuyện</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY 3 ẢNH ============ -->
+<section id="gallery" data-section="gallery-lookbook" class="bg-paper py-16 sm:py-20 lg:py-28">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 class="font-display text-3xl text-wood sm:text-4xl lg:text-5xl" data-reveal="up"><span class="en">A morning at the counter</span><span class="vi">Một buổi sáng bên quầy</span></h2>
+    <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-12 lg:gap-10">
+      <figure class="md:col-span-7 md:row-span-2">
+        <a href="assets/img/home-giay-goi.webp" data-lightbox="home-gallery" data-caption="A slice of crumb cake in brown paper, with a cup of coffee" data-caption-vi="Miếng bánh trong giấy gói nâu, bên tách cà phê" class="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick">
+          <div class="film film--even rotate-[0.6deg]">
+            <div data-reveal="clip" class="aspect-[4/3] overflow-hidden bg-paper-deep md:aspect-[5/4]"><img src="assets/img/home-giay-goi.webp" alt="A slice of crumb cake wrapped in brown paper next to a cup of coffee" data-alt-vi="Miếng bánh gói giấy nâu cạnh tách cà phê sữa" width="1024" height="683" loading="lazy" class="film-img h-full w-full object-cover"></div>
+          </div>
+        </a>
+        <figcaption class="mt-4 font-hand text-xl text-wood"><span class="en">Wrapped in brown paper, the way it always was.</span><span class="vi">Gói giấy nâu, như ngày xưa vẫn thế.</span></figcaption>
+      </figure>
+      <figure class="md:col-span-5">
+        <a href="assets/img/home-quay-banh.jpg" data-lightbox="home-gallery" data-caption="Round loaves stacked high on the counter" data-caption-vi="Những ổ bánh tròn xếp chồng trên quầy" class="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick">
+          <div class="film film--even rotate-[-1.2deg]">
+            <div data-reveal="clip" class="aspect-[16/10] overflow-hidden bg-paper-deep"><img src="assets/img/home-quay-banh.jpg" alt="Round country loaves stacked high on a busy bakery counter" data-alt-vi="Những ổ bánh tròn xếp chồng trên quầy bánh đông khách" width="1024" height="768" loading="lazy" class="film-img h-full w-full object-cover object-left"></div>
+          </div>
+        </a>
+        <figcaption class="mt-4 font-hand text-xl text-wood"><span class="en">Loaves stacked high before the morning rush.</span><span class="vi">Bánh xếp cao trước giờ đông khách.</span></figcaption>
+      </figure>
+      <figure class="md:col-span-5">
+        <a href="assets/img/about-ray-bot.webp" data-lightbox="home-gallery" data-caption="Sifting flour on the old wooden board" data-caption-vi="Rây bột trên tấm thớt gỗ cũ" class="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick">
+          <div class="film film--even rotate-[1deg]">
+            <div data-reveal="clip" class="aspect-[16/10] overflow-hidden bg-paper-deep"><img src="assets/img/about-ray-bot.webp" alt="A metal sieve of fine flour resting on a wooden board" data-alt-vi="Chiếc rây bột mịn đặt trên tấm thớt gỗ" width="1024" height="684" loading="lazy" class="film-img h-full w-full object-cover"></div>
+          </div>
+        </a>
+        <figcaption class="mt-4 font-hand text-xl text-wood"><span class="en">Flour sifted twice, so the sponge stays light.</span><span class="vi">Bột rây hai lần cho bông lan thật nhẹ.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GHÉ TIỆM ============ -->
+<section id="visit" data-section="cta-type" class="bg-brick py-16 text-cream sm:py-20 lg:py-24">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 2xl:px-16">
+    <h2 class="font-display text-4xl leading-[1.05] sm:text-5xl lg:col-span-7 lg:text-6xl 2xl:text-7xl">
+      <span class="en block" data-split="words">Come by while the bread is still warm</span>
+      <span class="vi block" data-split="words">Ghé tiệm khi bánh còn ấm</span>
+    </h2>
+    <div class="lg:col-span-5" data-reveal="up">
+      <dl class="grid grid-cols-1 gap-5 text-[16px] sm:grid-cols-2">
+        <div>
+          <dt class="font-hand text-2xl text-paper"><span class="en">Opening hours</span><span class="vi">Giờ mở cửa</span></dt>
+          <dd class="mt-1 text-cream/90"><span class="en">Every day, 6:00 to 19:00</span><span class="vi">Mỗi ngày, 6:00 đến 19:00</span></dd>
+        </div>
+        <div>
+          <dt class="font-hand text-2xl text-paper"><span class="en">Find us</span><span class="vi">Địa chỉ</span></dt>
+          <dd class="mt-1 text-cream/90"><span class="en">48 Tran Quy Cap Street, District 3, Ho Chi Minh City</span><span class="vi">48 Trần Quý Cáp, Quận 3, TP. Hồ Chí Minh</span></dd>
+        </div>
+      </dl>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="pages/menu.html" class="inline-flex min-h-[48px] items-center justify-center whitespace-nowrap rounded-full bg-cream px-7 text-[15px] font-semibold text-brick transition duration-300 hover:bg-paper active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream focus-visible:ring-offset-2 focus-visible:ring-offset-brick"><span class="en">See the menu</span><span class="vi">Xem thực đơn</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=48+Tran+Quy+Cap+District+3+Ho+Chi+Minh+City" target="_blank" rel="noopener" class="inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-full border-2 border-cream/70 px-7 text-[15px] font-semibold text-cream transition duration-300 hover:bg-cream hover:text-brick active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream"><span class="en">Get directions</span><span class="vi">Chỉ đường</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER: cuối một lá thư (giống mọi trang) ============ -->
+<footer id="footer" class="lined bg-paper-light text-wood">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-16 sm:px-6 lg:px-10 lg:pt-20 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-hand text-3xl text-brick"><span class="en">With warm regards,</span><span class="vi">Thân thương,</span></p>
+        <p class="mt-3 font-display text-3xl font-bold tracking-wide sm:text-4xl">TIỆM BÁNH MỘC MIÊN</p>
+        <p class="mt-4 max-w-[40ch] font-hand text-xl text-wood/85"><span class="en">P.S. Baguettes usually sell out by ten on Sundays. Come early.</span><span class="vi">T.B. Chủ nhật bánh mì thường hết trước mười giờ. Ghé sớm nhé.</span></p>
+      </div>
+      <nav class="lg:col-span-2" aria-label="Footer" data-label-vi="Liên kết cuối trang">
+        <p class="text-sm font-semibold tracking-wide text-moss"><span class="en">Pages</span><span class="vi">Các trang</span></p>
+        <ul class="mt-3 space-y-1">
+          <li><a href="index.html" class="inline-flex min-h-[40px] items-center transition-colors duration-300 hover:text-brick"><span class="en">Home</span><span class="vi">Trang chủ</span></a></li>
+          <li><a href="pages/menu.html" class="inline-flex min-h-[40px] items-center transition-colors duration-300 hover:text-brick"><span class="en">Menu</span><span class="vi">Thực đơn</span></a></li>
+          <li><a href="pages/about.html" class="inline-flex min-h-[40px] items-center transition-colors duration-300 hover:text-brick"><span class="en">Our story</span><span class="vi">Về chúng tôi</span></a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold tracking-wide text-moss"><span class="en">Visit</span><span class="vi">Ghé tiệm</span></p>
+        <p class="mt-3 leading-relaxed"><span class="en">48 Tran Quy Cap Street,<br>District 3, Ho Chi Minh City</span><span class="vi">48 Trần Quý Cáp,<br>Quận 3, TP. Hồ Chí Minh</span></p>
+        <p class="mt-2 leading-relaxed"><span class="en">Daily 6:00 to 19:00</span><span class="vi">Mỗi ngày 6:00 đến 19:00</span></p>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold tracking-wide text-moss"><span class="en">Say hello</span><span class="vi">Liên hệ</span></p>
+        <div class="mt-3 flex flex-wrap items-center gap-2">
+          <a href="tel:+842839301847" class="inline-flex min-h-[44px] items-center font-display text-xl transition-colors duration-300 hover:text-brick">028 3930 1847</a>
+          <button type="button" data-copy="028 3930 1847" class="inline-flex min-h-[40px] items-center gap-1.5 rounded-full border border-wood/40 px-3 text-sm font-medium transition duration-300 hover:bg-wood hover:text-cream" aria-label="Copy phone number" data-label-vi="Sao chép số điện thoại">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <span class="en">Copy</span><span class="vi">Sao chép</span>
+          </button>
+        </div>
+        <a href="mailto:hello@mocmienbakery.vn" class="mt-1 inline-flex min-h-[44px] items-center break-all transition-colors duration-300 hover:text-brick">hello@mocmienbakery.vn</a>
+      </div>
+    </div>
+    <div class="rule-double mt-14 flex flex-col gap-3 border-wood/40 pt-6 text-sm text-wood/80 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 TIỆM BÁNH MỘC MIÊN</p>
+      <p class="flex items-center gap-2"><span class="flower text-brick" aria-hidden="true"></span><span class="en">Baked by hand in small batches</span><span class="vi">Nướng tay từng mẻ nhỏ</span></p>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-5 right-5 z-40 grid h-12 w-12 place-items-center rounded-full bg-wood text-cream shadow-print transition duration-300 hover:bg-brick" aria-label="Back to top" data-label-vi="Lên đầu trang">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+</body>
+</html>

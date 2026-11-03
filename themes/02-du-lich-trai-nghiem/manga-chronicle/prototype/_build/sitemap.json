@@ -1,0 +1,79 @@
+{
+  "brand": "MANGA CHRONICLE",
+  "language": "vi",
+  "preset": "bold",
+  "motionLevel": 2,
+  "visualIdea": "Phiếu hồ sơ lưu trữ: mỗi khối là một tờ phiếu giấy ngà có mã ARCHIVE NO., đường kẻ mực và con dấu đỏ son đóng xuống khi cuộn tới",
+  "purposeInferred": "Nền tảng giới thiệu, khám phá văn hóa manga Nhật Bản theo dạng kho lưu trữ biên tập; không mua bán",
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Mở kho lưu trữ: hồ sơ nổi bật, dòng thời gian, quy trình sáng tác, địa điểm, hồ sơ mới và giới thiệu ngắn; dẫn sang Kho lưu trữ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Tiêu đề lớn + ảnh sổ phác thảo Ōyō manga tràn mép phải + nút Bắt đầu khám phá" },
+        { "id": "ho-so-noi-bat", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Thẻ tác giả, tác phẩm, câu chuyện lịch sử" },
+        { "id": "dong-thoi-gian", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Dải mốc ngang kéo được, nền mực" },
+        { "id": "phia-sau", "catalog": "process", "variant": "features-numbered", "source": "ba", "note": "Quy trình sáng tác manga" },
+        { "id": "thong-diep", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "Thông điệp thương hiệu trên nền tranh khắc gỗ" },
+        { "id": "dau-tich", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Bảo tàng, địa điểm có thật" },
+        { "id": "ho-so-moi", "catalog": "blog", "variant": "teaser-row", "source": "ba", "note": "Hồ sơ mới cập nhật, dẫn tới ho-so.html" },
+        { "id": "gioi-thieu", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Mục Giới thiệu ngắn ở cuối trang chủ (menu trỏ tới đây)" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn sang Kho lưu trữ" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "Practical Sketchbook Oyo manga", "file": "assets/img/hero-oyo-manga.webp", "status": "ok" },
+        { "slot": "ho-so-noi-bat", "query": "Hokusai Manga sketchbook page", "file": "assets/img/hoso-hokusai-manga.jpg", "status": "ok" },
+        { "slot": "ho-so-noi-bat", "query": "Kawanabe Kyosai animal circus", "file": "assets/img/hoso-kyosai-animal-circus.jpg", "status": "ok" },
+        { "slot": "phia-sau", "query": "ink pen nib drawing paper", "file": "assets/img/process-ngoi-but.webp", "status": "ok" },
+        { "slot": "thong-diep", "query": "Battle of the Frogs 1877 woodblock", "file": "assets/img/hoso-battle-of-frogs.jpg", "status": "ok" },
+        { "slot": "dau-tich", "query": "Ishinomaki manga museum", "file": "assets/img/hoso-ishinomaki-manga-museum.jpg", "status": "ok" },
+        { "slot": "ho-so-moi", "query": "Japan Punch Wirgman cartoon", "file": "assets/img/hoso-ponchi-e.jpg", "status": "ok" },
+        { "slot": "ho-so-moi", "query": "Torii Kiyonaga theatrical scene book", "file": "assets/img/hoso-kibyoshi.webp", "status": "ok" },
+        { "slot": "gioi-thieu", "query": "Frog School early 1870s", "file": "assets/img/index-frog-school.jpg", "status": "ok" },
+        { "slot": "dau-tich", "query": "Kyoto International Manga Museum", "file": null, "status": "none" },
+        { "slot": "dau-tich", "query": "Tezuka Osamu Manga Museum Takarazuka", "file": null, "status": "none" },
+        { "slot": "dau-tich", "query": "Tokiwa-so manga museum Toshima", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "kho-luu-tru.html",
+      "title": "Kho lưu trữ",
+      "purpose": "Trang khám phá tổng hợp: lọc theo Tất cả / Lịch sử / Tác giả / Tác phẩm / Nghệ thuật sáng tác / Địa điểm, tìm kiếm, trạng thái không có kết quả; thẻ mở đúng hồ sơ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Tiêu đề Kho lưu trữ manga" },
+        { "id": "kho", "catalog": "projects", "variant": "list-cards", "source": "ba", "note": "Bộ lọc + ô tìm kiếm + lưới thẻ render từ assets/js/data.js" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Quay về dòng thời gian trang chủ" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "old archive paper documents", "file": "assets/img/archive-old-paper.webp", "status": "ok" },
+        { "slot": "kho", "query": "ảnh của từng hồ sơ (dùng lại ảnh hồ sơ)", "file": "assets/img/hoso-hokusai-manga.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "ho-so.html",
+      "title": "Chi tiết hồ sơ",
+      "purpose": "Một template chung cho mọi hồ sơ (ho-so.html?id=<slug>): breadcrumb, nhãn danh mục + mã hồ sơ, tiêu đề, ảnh, giới thiệu, các mục nội dung, thông tin bối cảnh, nguồn tham khảo, hồ sơ liên quan, nút quay lại",
+      "sections": [
+        { "id": "ho-so", "catalog": "blog", "variant": "detail-article", "source": "ba", "note": "Render từ data.js theo tham số id" },
+        { "id": "lien-quan", "catalog": "blog", "variant": "teaser-row", "source": "ba", "note": "Hồ sơ liên quan + nút quay lại kho lưu trữ" }
+      ],
+      "images": [
+        { "slot": "ho-so", "query": "ảnh của hồ sơ đang xem", "file": "assets/img/hoso-hokusai-manga.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng 3 template trang theo chú thích BA; 'Giới thiệu' là khu vực #gioi-thieu cuối trang chủ.",
+    "Đường dẫn /kho-luu-tru và /ho-so/:slug được thể hiện bằng kho-luu-tru.html và ho-so.html?id=<slug> để chạy được bằng file://, không cần backend.",
+    "Màu và font theo chú thích BA (giấy ngà, đen mực, đỏ son, nâu lưu trữ; tiêu đề serif) thay cho bảng màu và font của preset Bold. Instrument Serif thiếu ký tự tiếng Việt nên dùng Playfair Display + Be Vietnam Pro.",
+    "Bỏ con trỏ tùy biến, tilt, magnetic của preset Bold vì BA yêu cầu animation nhẹ, tránh chuyển động gây rối.",
+    "Không dùng tranh manga, bìa truyện, nhân vật có bản quyền: ảnh là tranh và sách khắc gỗ thời Edo, Minh Trị (đã hết bản quyền) và ảnh công trình có giấy phép Creative Commons.",
+    "Hai ảnh đã tải nhưng không dùng: check-kyoto-sketch.jpg và hoso-tap-chi-tuan.jpg (có tranh nhân vật manga có bản quyền)."
+  ],
+  "limitations": [
+    "Dữ liệu hồ sơ là dữ liệu mẫu tách riêng ở assets/js/data.js; thông tin dựa trên nguồn công khai, cần BA đối chiếu nguồn trước khi xuất bản.",
+    "Tìm kiếm và bộ lọc chạy bằng JavaScript phía giao diện, chưa có backend / CMS.",
+    "Chưa có ảnh thật cho Kyoto International Manga Museum, Tezuka Osamu Manga Museum, Tokiwa-sō Manga Museum và các hồ sơ tác giả; đang dùng thẻ chữ."
+  ]
+}

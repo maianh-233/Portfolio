@@ -1,0 +1,87 @@
+<footer id="footer" class="bg-ink text-white">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-20 sm:px-6 lg:px-10 lg:pt-24 2xl:px-16">
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-5">
+        <p class="font-display display-tight text-5xl font-extrabold uppercase sm:text-6xl 2xl:text-7xl">FORM <span class="text-electric">&amp;</span><br>FOLLICLE</p>
+        <p class="mt-6 max-w-sm text-base leading-relaxed text-white/75" data-en="A hair studio for precise cuts, deliberate texture and fashion-forward color.">Studio tóc cho đường cắt chính xác, kết cấu có chủ đích và màu nhuộm thời trang.</p>
+        <button type="button" data-modal-open="booking" class="mt-8 inline-flex h-12 items-center gap-3 bg-cobalt px-6 text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[.98]"><span data-en="Book a Visit">Đặt lịch</span>
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+
+      <nav class="lg:col-span-2" aria-label="Liên kết chân trang" data-en-aria-label="Footer links">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Navigation">Điều hướng</p>
+        <ul class="mt-5 space-y-3 text-base">
+          <li><a href="{{root}}index.html" class="transition-colors duration-300 hover:text-electric" data-en="Home">Trang chủ</a></li>
+          <li><a href="{{root}}pages/services.html" class="transition-colors duration-300 hover:text-electric" data-en="Services &amp; pricing">Dịch vụ &amp; bảng giá</a></li>
+          <li><a href="{{root}}pages/archive.html" class="transition-colors duration-300 hover:text-electric">Style Archive</a></li>
+          <li><a href="{{root}}pages/studio.html" class="transition-colors duration-300 hover:text-electric">Studio</a></li>
+        </ul>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Contact">Liên hệ</p>
+        <ul class="mt-5 space-y-3 text-base leading-relaxed text-white/85">
+          <li data-en="24 Ton That Thiep, District 1, Ho Chi Minh City">24 Tôn Thất Thiệp, Quận 1, TP. Hồ Chí Minh</li>
+          <li data-en="Tue to Sun, 09:00 - 20:00">Thứ 3 đến Chủ nhật, 09:00 - 20:00</li>
+          <li><a href="tel:+842838224719" class="transition-colors duration-300 hover:text-electric">028 3822 4719</a></li>
+          <li><a href="mailto:hello@formandfollicle.vn" class="break-words transition-colors duration-300 hover:text-electric">hello@formandfollicle.vn</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Social">Mạng xã hội</p>
+        <ul class="mt-5 space-y-3 text-base">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">TikTok</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-3 border-t border-white/20 pt-6 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 FORM &amp; FOLLICLE</p>
+      <p data-en="Address, hours, phone, email and social links are sample data.">Địa chỉ, giờ mở cửa, điện thoại, email và mạng xã hội là dữ liệu mẫu.</p>
+    </div>
+  </div>
+
+  <dialog id="booking" class="bg-paper text-ink" aria-labelledby="booking-title">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-6 border-b border-ink pb-4">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[.16em] text-cobalt">CUT / COLOR / TEXTURE</p>
+          <h2 id="booking-title" class="mt-2 font-display text-3xl font-extrabold uppercase" data-en="Book a Visit">Đặt lịch</h2>
+        </div>
+        <button type="button" data-modal-close class="grid h-11 w-11 shrink-0 place-items-center border border-ink text-xl transition-colors duration-300 hover:bg-ink hover:text-white" aria-label="Đóng" data-en-aria-label="Close">×</button>
+      </div>
+      <form data-form="dat-lich" class="mt-6 grid gap-5 sm:grid-cols-2" novalidate>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Full name">Họ và tên</span>
+          <input type="text" name="name" required minlength="2" autocomplete="name" class="h-12 border border-graphite bg-paper px-3 text-base outline-none transition-colors focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Phone">Điện thoại</span>
+          <input type="tel" name="phone" required minlength="9" autocomplete="tel" class="h-12 border border-graphite bg-paper px-3 text-base outline-none transition-colors focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Service">Dịch vụ</span>
+          <select name="service" required class="h-12 border border-graphite bg-paper px-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+            <option value="" data-en="Choose a service">Chọn dịch vụ</option>
+            <option value="cut" data-en="01 Cut">01 Cắt</option>
+            <option value="color" data-en="02 Color">02 Nhuộm màu</option>
+            <option value="texture" data-en="03 Texture">03 Kết cấu</option>
+            <option value="treatment" data-en="04 Treatment">04 Phục hồi</option>
+            <option value="consult" data-en="Not sure yet, need advice">Chưa chắc, cần tư vấn</option>
+          </select>
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Preferred date">Ngày mong muốn</span>
+          <input type="date" name="date" required class="h-12 border border-graphite bg-paper px-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium sm:col-span-2"><span data-en="Notes (current hair, reference style)">Ghi chú (tình trạng tóc, kiểu tham khảo)</span>
+          <textarea name="note" rows="3" class="border border-graphite bg-paper p-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30"></textarea>
+        </label>
+        <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
+          <button type="submit" class="inline-flex h-12 items-center justify-center bg-cobalt px-7 text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric active:scale-[.98]" data-en="Send request">Gửi yêu cầu</button>
+          <p class="text-sm text-graphite" data-en="Demo only: this form is not connected to a booking system and sends nothing.">Bản minh họa: form chưa kết nối hệ thống đặt lịch, không gửi đi.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</footer>

@@ -1,0 +1,36 @@
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b-[3px] border-ink bg-paper text-ink">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-3 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="group flex shrink-0 items-center gap-2 font-display text-[1.6rem] font-black uppercase leading-none tracking-tight sm:text-3xl">
+      <span class="inline-block h-5 w-5 border-[3px] border-ink bg-signal transition-transform duration-300 group-hover:rotate-45"></span>FADE DISTRICT
+    </a>
+    <nav class="hidden items-center gap-7 xl:gap-10 lg:flex" aria-label="Menu chính" data-en-aria-label="Main menu">
+      <a href="{{root}}index.html" class="relative font-display text-lg font-bold uppercase tracking-wide after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-signal after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="{{root}}pages/services.html" class="relative font-display text-lg font-bold uppercase tracking-wide after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-signal after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Services">Dịch vụ</a>
+      <a href="{{root}}pages/gallery.html" class="relative font-display text-lg font-bold uppercase tracking-wide after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-signal after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Style Gallery">Thư viện kiểu tóc</a>
+      <a href="{{root}}pages/district.html" class="relative font-display text-lg font-bold uppercase tracking-wide after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-signal after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="The District">Về District</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex border-[3px] border-ink font-mono text-xs" role="group" aria-label="Chọn ngôn ngữ" data-en-aria-label="Choose language">
+        <button type="button" data-set-lang="vi" aria-pressed="true" class="h-9 w-10 transition-colors duration-200 hover:bg-signal">VI</button>
+        <button type="button" data-set-lang="en" aria-pressed="false" class="h-9 w-10 border-l-[3px] border-ink transition-colors duration-200 hover:bg-signal">EN</button>
+      </div>
+      <button type="button" data-book class="hidden items-center gap-3 border-[3px] border-ink bg-signal px-4 py-2 font-display text-lg font-extrabold uppercase tracking-wide text-ink transition-colors duration-200 hover:border-signal hover:bg-ink hover:text-signal active:translate-y-px sm:inline-flex">
+        <span data-en="Book a visit">Đặt lịch</span><span aria-hidden="true">→</span>
+      </button>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border-[3px] border-ink bg-ink text-paper transition-colors duration-200 hover:bg-signal hover:text-ink lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <span class="block h-[3px] w-5 bg-current shadow-[0_-7px_0_currentColor,0_7px_0_currentColor]"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-0 top-16 z-50 border-y-[3px] border-ink bg-ink px-4 pb-8 pt-4 text-paper lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-en-aria-label="Mobile menu">
+      <a href="{{root}}index.html" class="flex items-center justify-between border-b-2 border-paper/20 py-4 font-display text-4xl font-black uppercase aria-[current=page]:text-signal"><span data-en="Home">Trang chủ</span><span aria-hidden="true" class="text-signal">01</span></a>
+      <a href="{{root}}pages/services.html" class="flex items-center justify-between border-b-2 border-paper/20 py-4 font-display text-4xl font-black uppercase aria-[current=page]:text-signal"><span data-en="Services">Dịch vụ</span><span aria-hidden="true" class="text-signal">02</span></a>
+      <a href="{{root}}pages/gallery.html" class="flex items-center justify-between border-b-2 border-paper/20 py-4 font-display text-4xl font-black uppercase aria-[current=page]:text-signal"><span data-en="Style Gallery">Thư viện kiểu tóc</span><span aria-hidden="true" class="text-signal">03</span></a>
+      <a href="{{root}}pages/district.html" class="flex items-center justify-between border-b-2 border-paper/20 py-4 font-display text-4xl font-black uppercase aria-[current=page]:text-signal"><span data-en="The District">Về District</span><span aria-hidden="true" class="text-signal">04</span></a>
+    </nav>
+    <button type="button" data-book class="mt-6 flex h-14 w-full items-center justify-between border-[3px] border-signal bg-signal px-5 font-display text-2xl font-extrabold uppercase text-ink transition-colors duration-200 hover:bg-ink hover:text-signal">
+      <span data-en="Book a visit">Đặt lịch</span><span aria-hidden="true">→</span>
+    </button>
+  </div>
+</header>

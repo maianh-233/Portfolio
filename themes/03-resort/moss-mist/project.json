@@ -1,0 +1,84 @@
+{
+  "slug": "moss-mist",
+  "name": "MOSS & MIST",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "MOSS & MIST",
+    "purpose": "Thiết kế và xây dựng website giới thiệu thương hiệu MOSS & MIST, một khu nghỉ dưỡng sinh thái cao cấp nằm giữa rừng thông, thung lũng xanh và những triền núi phủ sương.\n\nWebsite hướng đến khách hàng yêu thích thiên nhiên, kiến trúc tối giản, không gian riêng tư và phong cách nghỉ dưỡng chậm rãi.\n\nMOSS & MIST không được thể hiện như một khách sạn thành thị hoặc resort biển. Đây phải là một thương hiệu nghỉ dưỡng có bản sắc riêng, nơi kiến trúc hòa vào cảnh quan và trải nghiệm được xây dựng quanh sự tĩnh lặng.\n\nThông điệp thương hiệu:\n\n“Find Stillness in Nature.”\n\n“Trở về với sự tĩnh tại giữa thiên nhiên.”\n\nĐịnh vị thương hiệu:\n\nPremium Forest Retreat.\n\nNature-inspired Architecture.\n\nSlow Living & Mindful Experiences.\n\nPrivate Cabins, Villas & Lodges.\n\nSustainable Hospitality.\n\nMục tiêu website\n\nGiới thiệu hình ảnh và câu chuyện thương hiệu.\n\nThể hiện triết lý kiến trúc và phong cách nghỉ dưỡng.\n\nGiới thiệu chi tiết các loại phòng, villa, lodge và tiện ích.\n\nGiới thiệu những trải nghiệm đặc trưng của resort.\n\nTạo một trải nghiệm hình ảnh cao cấp, nhất quán trên desktop và mobile.\n\nĐây là website giới thiệu thương hiệu, không phải website giao dịch.\n\nTuyệt đối không xây dựng chức năng đặt phòng, đặt lịch, đặt dịch vụ, mua hàng, giỏ hàng, thanh toán hoặc gửi yêu cầu đặt chỗ.",
+    "audience": "Khách hàng du lịch muốn lưu trú",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "MOSS & MIST — GIAO DIỆN VÀ HIỆU ỨNG\n\n1. Định hướng thiết kế\n\nThiết kế website resort nghỉ dưỡng giữa rừng thông theo phong cách Forest Minimalism kết hợp Editorial Design. Giao diện mang cảm giác yên tĩnh, tự nhiên, cao cấp và có chiều sâu thị giác.\n\nMàu chủ đạo: xanh rừng #263D32.\n\nMàu phụ: xanh rêu #71816A.\n\nMàu nền: trắng sương #F1F0EA, be đá #D5D0C5.\n\nMàu chữ: xám than #343A35.\n\nTypography: tiêu đề sử dụng serif thanh lịch; nội dung sử dụng sans-serif dễ đọc.\n\nHình ảnh: rừng thông, thung lũng phủ sương, cabin gỗ, kiến trúc tối giản và ánh sáng tự nhiên.\n\nBố cục: nhiều khoảng trắng, hình ảnh lớn, đường kẻ mảnh, bố cục bất đối xứng có chủ đích.\n\nKhông sử dụng giao diện khách sạn đại trà, các khối thẻ bo tròn dày đặc, gradient sặc sỡ hoặc hiệu ứng chuyển động quá mạnh.\n\n2. Trang chủ — Home\n\nBố cục\n\nHeader trong suốt đặt trên ảnh hero, logo bên trái, menu điều hướng ở giữa hoặc bên phải và nút chuyển ngôn ngữ VI/EN.\n\nHero chiếm gần toàn bộ chiều cao màn hình đầu tiên, sử dụng ảnh rừng thông hoặc cabin giữa thung lũng sương mù.\n\nTiêu đề lớn đặt lệch trái hoặc ở vùng trống của ảnh, kết hợp một dòng mô tả ngắn.\n\nPhần giới thiệu resort sử dụng bố cục hai cột: nội dung bên trái, ảnh kiến trúc hoặc thiên nhiên bên phải.\n\nPhần giới thiệu không gian nghỉ dưỡng sử dụng các ảnh kích thước khác nhau, bố trí theo dạng editorial grid thay vì các thẻ giống nhau.\n\nPhần trải nghiệm sử dụng ảnh lớn kết hợp tiêu đề và mô tả ngắn.\n\nGallery cuối trang trình bày ảnh thiên nhiên, kiến trúc và không gian nghỉ dưỡng theo dạng lưới bất đối xứng.\n\nFooter nền xanh rừng, bố cục gọn gàng và có khoảng cách rộng.\n\nHiệu ứng\n\nHero xuất hiện bằng hiệu ứng fade-in kết hợp dịch chuyển nhẹ cho tiêu đề và mô tả.\n\nẢnh hero có hiệu ứng slow zoom rất nhẹ, tạo chiều sâu nhưng không gây mất tập trung.\n\nHeader chuyển từ trong suốt sang nền đặc nhẹ khi cuộn trang.\n\nCác khối nội dung xuất hiện lần lượt bằng hiệu ứng fade-up khi đi vào vùng nhìn thấy.\n\nẢnh trong gallery phóng to nhẹ khi hover.\n\nCác đường kẻ trang trí có thể mở rộng dần khi cuộn đến từng khu vực.\n\n3. Trang giới thiệu — About\n\nBố cục\n\nHero sử dụng ảnh toàn chiều rộng về cảnh quan hoặc kiến trúc resort, kèm tiêu đề lớn.\n\nPhần câu chuyện thương hiệu trình bày theo bố cục hai cột: đoạn văn bên trái, ảnh lớn bên phải.\n\nPhần triết lý thiết kế sử dụng nền sáng, tiêu đề serif nổi bật và các đoạn văn ngắn có khoảng cách rộng.\n\nPhần kiến trúc và thiên nhiên sử dụng bố cục xen kẽ: một ảnh lớn bên trái, nội dung bên phải; khu vực tiếp theo đảo ngược vị trí.\n\nPhần hành trình phát triển resort được thể hiện bằng timeline tối giản, sử dụng đường kẻ mảnh và các mốc thời gian.\n\nKết thúc trang bằng một ảnh phong cảnh rộng, phủ lớp màu tối nhẹ và đặt thông điệp ở giữa.\n\nHiệu ứng\n\nẢnh hero có hiệu ứng zoom chậm khi trang tải.\n\nCác cặp ảnh và nội dung xuất hiện lần lượt bằng fade-up khi cuộn.\n\nẢnh trong bố cục xen kẽ có hiệu ứng parallax nhẹ, tạo cảm giác các lớp nội dung có chiều sâu.\n\nTimeline hiển thị từng mốc theo thứ tự khi người dùng cuộn xuống.\n\nĐường kẻ timeline được mở rộng dần theo tiến trình cuộn.\n\nHạn chế hiệu ứng bay, xoay hoặc chuyển động liên tục để giữ cảm giác thư thái.\n\n4. Trang không gian nghỉ dưỡng — Accommodation\n\nBố cục\n\nHero sử dụng ảnh cabin hoặc villa giữa rừng, kết hợp tiêu đề và đoạn giới thiệu ngắn.\n\nPhần danh sách không gian nghỉ dưỡng gồm ba loại: Forest Cabin, Valley Villa và Signature Lodge.\n\nMỗi loại phòng có bố cục riêng thay vì sử dụng ba thẻ giống hệt nhau:\n\nForest Cabin: ảnh lớn bên trái, thông tin bên phải.\n\nValley Villa: đảo ngược bố cục, ảnh bên phải và thông tin bên trái.\n\nSignature Lodge: ảnh toàn chiều rộng kết hợp nội dung đặt trên nền sáng phía dưới.\n\nThông tin mỗi loại gồm tên, mô tả, diện tích minh họa, sức chứa minh họa và các tiện nghi chính. Các thông số cần được đánh dấu là nội dung mẫu nếu chưa có dữ liệu thực tế.\n\nPhần tiện nghi sử dụng lưới tối giản gồm hình ảnh, tên tiện nghi và mô tả ngắn.\n\nPhần vật liệu kiến trúc trình bày bằng các ảnh cận cảnh gỗ, đá, vải tự nhiên và ánh sáng trong không gian.\n\nFooter thống nhất với các trang còn lại.\n\nHiệu ứng\n\nCác khu vực giới thiệu phòng xuất hiện bằng fade-up khi cuộn đến.\n\nẢnh có hiệu ứng zoom nhẹ khi hover, giới hạn trong khung ảnh để tránh làm vỡ bố cục.\n\nKhi chuyển giữa các khu vực, có thể dùng hiệu ứng đổi màu nền nhẹ từ trắng sương sang be đá.\n\nCác biểu tượng tiện nghi xuất hiện nhẹ nhàng, không sử dụng animation lặp liên tục.\n\nPhần ảnh vật liệu có thể dùng hiệu ứng reveal từ dưới lên khi đi vào vùng nhìn thấy.\n\n5. Trang trải nghiệm — Experiences\n\nBố cục\n\nHero sử dụng ảnh rừng hoặc ánh nắng xuyên qua tán cây, tiêu đề đặt trên vùng ảnh có độ tương phản tốt.\n\nPhần trải nghiệm chính gồm Forest Walk, Morning Rituals, Local Cuisine và Quiet Moments.\n\nTrình bày theo dạng editorial storytelling: ảnh lớn xen kẽ tiêu đề, mô tả và các chi tiết ngắn.\n\nMỗi trải nghiệm có cách bố trí hình ảnh riêng để tránh cảm giác lặp lại.\n\nPhần khám phá thiên nhiên theo mùa sử dụng bốn hình ảnh đại diện cho các trạng thái cảnh quan, bố trí thành lưới linh hoạt.\n\nKhu vực cuối trang là ảnh phong cảnh toàn chiều rộng, kết hợp một câu thông điệp ngắn.\n\nHiệu ứng\n\nẢnh hero xuất hiện bằng fade-in và zoom chậm.\n\nCác khối trải nghiệm lần lượt xuất hiện khi cuộn trang.\n\nẢnh có hiệu ứng parallax nhẹ ở một số khu vực, không áp dụng đồng loạt cho toàn trang.\n\nKhi hover vào ảnh, ảnh phóng to nhẹ và phần mô tả có thể dịch chuyển lên một khoảng nhỏ.\n\nCác tiêu đề xuất hiện bằng hiệu ứng fade-in kết hợp dịch chuyển nhẹ.\n\nPhần khám phá theo mùa có thể chuyển trạng thái ảnh bằng fade khi người dùng tương tác, nhưng không tự động chuyển quá nhanh.\n\n6. Quy chuẩn hiệu ứng và tương tác\n\nTất cả hiệu ứng phải mượt, nhẹ và nhất quán giữa bốn trang.\n\nThời lượng animation thông thường khoảng 300–800 ms; hiệu ứng zoom ảnh nền có thể kéo dài hơn.\n\nChỉ kích hoạt hiệu ứng xuất hiện khi phần tử đi vào vùng nhìn thấy, tránh chạy lại liên tục khi cuộn lên xuống.\n\nHover chỉ áp dụng trên thiết bị có con trỏ; trên điện thoại không phụ thuộc vào hover để hiển thị nội dung.\n\nMenu điều hướng có hiệu ứng chuyển màu hoặc gạch chân mảnh khi hover.\n\nNút chuyển ngôn ngữ VI/EN hoạt động thực tế và giữ phong cách tối giản.\n\nCác liên kết giữa bốn trang phải hoạt động chính xác.\n\nHỗ trợ prefers-reduced-motion để giảm chuyển động theo cài đặt trợ năng của người dùng.\n\nTránh hiệu ứng con trỏ tùy chỉnh, chữ chạy liên tục, hiệu ứng lật thẻ, animation nảy mạnh hoặc parallax quá sâu.\n\n7. Responsive và yêu cầu kỹ thuật\n\nDesktop: ưu tiên bố cục rộng, hình ảnh lớn và các khu vực bất đối xứng.\n\nTablet: điều chỉnh kích thước chữ, khoảng cách và số cột; không để ảnh hoặc nội dung chồng lấn.\n\nMobile: chuyển bố cục về một cột, giảm kích thước tiêu đề, tối ưu chiều cao hero và giữ menu dễ sử dụng.\n\nTối ưu ảnh để hạn chế thời gian tải; sử dụng lazy loading cho ảnh nằm ngoài màn hình đầu tiên.\n\nXây dựng bằng HTML, CSS và JavaScript thuần.\n\nTách riêng bốn trang HTML, sử dụng chung hệ thống màu sắc, typography, header, footer và quy tắc animation.\n\nĐảm bảo nội dung tiếng Việt và tiếng Anh có bố cục đẹp, không tràn chữ hoặc vỡ giao diện.\n\nKhông xây dựng chức năng đặt phòng, mua hàng, thanh toán hay biểu mẫu giao dịch.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-28T02:16:15.330Z",
+  "updatedAt": "2026-10-28T02:49:26.444Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\moss-mist\\web",
+    "builtAt": "2026-10-28T02:49:11.849Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/accommodation.html",
+      "pages/experiences.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/accommodation.html": [],
+      "pages/experiences.html": []
+    }
+  },
+  "job": {
+    "id": "57225670-0fb4-4cc4-987b-a172af65749a",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\moss-mist\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 235697,
+      "outputTokens": 199767,
+      "cacheReadTokens": 14235920,
+      "cacheCreationTokens": 319990,
+      "costUsd": 7.415965399999999,
+      "numTurns": 134,
+      "durationMs": 1448953
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-28T02:49:22.718Z",
+    "critical": 0,
+    "major": 1,
+    "minor": 1,
+    "screenshots": 12
+  }
+}

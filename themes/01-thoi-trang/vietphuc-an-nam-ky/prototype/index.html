@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AN NAM KÝ | Vietnamese Heritage, Historical Fashion</title>
+  <meta name="description" content="An Nam Ký is a Vietnamese heritage fashion house that studies Viet dress across its eras and retells those stories through contemporary design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap&subset=vietnamese" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper:    { 50:'#F8F3EA', 100:'#F1E9DA', 200:'#E6DAC3', 300:'#D6C4A4', 400:'#BFA77F' },
+            burgundy: { 50:'#F8ECEC', 100:'#EFD3D5', 200:'#DDA7AC', 300:'#C67A82', 400:'#A6525C', 500:'#8A3440', 600:'#722633', 700:'#5E1F2A', 800:'#4A1922', 900:'#36131A' },
+            earth:    { 300:'#B99878', 400:'#A07D5C', 500:'#8A6544', 600:'#735239', 700:'#5E4430' },
+            moss:     { 300:'#9AA585', 400:'#788660', 500:'#56633F', 600:'#485334', 700:'#3B4529' },
+            ink:      { 400:'#7C7368', 500:'#645C53', 600:'#4A443D', 700:'#37322D', 800:'#2A2622', 900:'#1F1C19', 950:'#171512' }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans:  ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'],
+            han:   ['"Noto Serif TC"', '"Songti TC"', '"PMingLiU"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="assets/js/ui.js"></script>
+  <style>
+    :root { --ui-accent: #722633; }
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    .vertical { writing-mode: vertical-rl; }
+    /* Collections: expanding strips on large screens */
+    @media (min-width: 1024px) {
+      .strips .strip { flex: 1 1 0%; transition: flex-grow 1.1s cubic-bezier(.16,1,.3,1); }
+      .strips:not(:hover):not(:focus-within) .strip:first-child,
+      .strips .strip:hover, .strips .strip:focus-within { flex-grow: 3.4; }
+      .strips .strip .strip-more { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .9s cubic-bezier(.16,1,.3,1); }
+      .strips:not(:hover):not(:focus-within) .strip:first-child .strip-more,
+      .strips .strip:hover .strip-more, .strips .strip:focus-within .strip-more { opacity: 1; transform: none; transition-delay: .25s; }
+      .strips .strip .strip-name-v { transition: opacity .4s ease; }
+      .strips:not(:hover):not(:focus-within) .strip:first-child .strip-name-v,
+      .strips .strip:hover .strip-name-v, .strips .strip:focus-within .strip-name-v { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .strips .strip, .strips .strip .strip-more { transition: none !important; }
+    }
+  </style>
+</head>
+<body id="top" class="bg-paper-100 font-sans text-ink-900 selection:bg-burgundy-700 selection:text-paper-50">
+
+  <!-- Film grain (fixed, decorative) -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 z-[60] opacity-[.07] mix-blend-multiply">
+    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  </div>
+
+  <div data-scroll-progress class="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-burgundy-700"></div>
+
+  <!-- HEADER -->
+  <header data-header="shrink" class="fixed inset-x-0 top-0 z-40 transition-colors duration-500 [&.is-scrolled]:border-b [&.is-scrolled]:border-ink-900/10 [&.is-scrolled]:bg-paper-100/95 [&.is-scrolled]:backdrop-blur">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="#top" class="group flex items-baseline gap-3" aria-label="An Nam Ký, back to top">
+        <span class="font-serif text-2xl font-semibold tracking-[0.18em] text-ink-900">AN NAM KÝ</span>
+        <span class="hidden font-han text-sm text-burgundy-700 sm:inline" aria-hidden="true">安南記</span>
+      </a>
+      <nav data-scrollspy class="hidden items-center gap-8 lg:flex" aria-label="Main">
+        <a href="#top" class="relative py-2 text-sm text-ink-800 transition-colors duration-300 hover:text-burgundy-700 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy-700 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-burgundy-700 [&.is-active]:after:scale-x-100">Home</a>
+        <a href="#story" class="relative py-2 text-sm text-ink-800 transition-colors duration-300 hover:text-burgundy-700 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy-700 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-burgundy-700 [&.is-active]:after:scale-x-100">Our Story</a>
+        <a href="#heritage" class="relative py-2 text-sm text-ink-800 transition-colors duration-300 hover:text-burgundy-700 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy-700 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-burgundy-700 [&.is-active]:after:scale-x-100">Viet Dress</a>
+        <a href="#lookbook" class="relative py-2 text-sm text-ink-800 transition-colors duration-300 hover:text-burgundy-700 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy-700 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-burgundy-700 [&.is-active]:after:scale-x-100">Gallery</a>
+        <a href="#journal" class="relative py-2 text-sm text-ink-800 transition-colors duration-300 hover:text-burgundy-700 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy-700 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-burgundy-700 [&.is-active]:after:scale-x-100">Journal</a>
+        <a href="#contact" class="relative py-2 text-sm text-ink-800 transition-colors duration-300 hover:text-burgundy-700 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy-700 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-burgundy-700 [&.is-active]:after:scale-x-100">Contact</a>
+      </nav>
+      <button data-menu-toggle="#mnav" class="flex h-11 w-11 items-center justify-center border border-ink-900/20 bg-paper-50/80 text-ink-900 transition-colors duration-300 hover:bg-paper-50 lg:hidden" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-ink-900/10 bg-paper-50 p-6 shadow-2xl shadow-ink-900/20 lg:hidden">
+    <nav class="flex flex-col font-serif text-2xl" aria-label="Mobile">
+      <a href="#top" class="border-b border-ink-900/10 py-3 hover:text-burgundy-700">Home</a>
+      <a href="#story" class="border-b border-ink-900/10 py-3 hover:text-burgundy-700">Our Story</a>
+      <a href="#heritage" class="border-b border-ink-900/10 py-3 hover:text-burgundy-700">Viet Dress</a>
+      <a href="#lookbook" class="border-b border-ink-900/10 py-3 hover:text-burgundy-700">Gallery</a>
+      <a href="#journal" class="border-b border-ink-900/10 py-3 hover:text-burgundy-700">Journal</a>
+      <a href="#contact" class="py-3 hover:text-burgundy-700">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative grid min-h-[100dvh] grid-cols-1 lg:grid-cols-12" aria-label="Introduction">
+      <div class="relative z-10 flex flex-col justify-end px-4 pb-12 pt-28 sm:px-6 lg:col-span-6 lg:pb-20 lg:pl-10 lg:pr-12 lg:pt-24 2xl:pl-16">
+        <p data-reveal="fade" class="mb-8 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.28em] text-burgundy-700">
+          <span class="h-px w-10 bg-burgundy-700"></span>Vietnamese heritage, historical fashion
+        </p>
+        <h1 data-split="words" class="max-w-[13ch] pb-2 font-serif text-5xl font-medium leading-[1.02] text-ink-900 sm:text-6xl xl:text-7xl 2xl:text-8xl">Traces of the past live on in every <em class="font-normal italic text-burgundy-700">fold.</em></h1>
+        <p data-reveal="up" data-reveal-delay="350" class="mt-8 max-w-[46ch] text-base leading-relaxed text-ink-600 sm:text-lg">An Nam Ký studies Vietnamese dress across its eras, then retells those stories through clothing made for today.</p>
+        <div data-reveal="up" data-reveal-delay="500" class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+          <a href="#story" data-magnetic="0.25" class="group inline-flex h-12 items-center justify-center gap-3 bg-burgundy-700 px-7 text-sm font-medium tracking-wide text-paper-50 transition duration-300 hover:bg-burgundy-800 active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">
+            Discover the story
+            <svg class="transition-transform duration-300 group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#lookbook" class="inline-flex h-12 items-center justify-center border border-ink-900/25 px-7 text-sm font-medium tracking-wide text-ink-900 transition duration-300 hover:border-ink-900 hover:bg-ink-900 hover:text-paper-50 active:scale-[.98]">View lookbook</a>
+        </div>
+      </div>
+      <div class="relative min-h-[70vh] overflow-hidden bg-paper-300 lg:col-span-6 lg:min-h-0">
+        <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%]">
+          <img src="https://64.media.tumblr.com/5b227daeb858662229012ec20530eab1/46be119424762de0-45/s2048x3072/4d84879c19c32661e63b97dec8cc732998a96166.jpg" alt="Young woman in a red brocade tunic with black sleeves and fabric knot buttons, holding a black folding fan" width="683" height="1024" class="h-full w-full object-cover object-[50%_30%]" fetchpriority="high">
+        </div>
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/25 via-transparent to-transparent"></div>
+        <span aria-hidden="true" class="vertical absolute bottom-8 left-6 font-han text-3xl tracking-[0.4em] text-paper-50/90 lg:bottom-12 lg:left-10">安南記</span>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section id="story" class="py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-x-10 lg:px-10 2xl:px-16">
+        <figure class="lg:col-span-7">
+          <div data-reveal="clip" class="group aspect-[4/3] overflow-hidden bg-paper-300">
+            <img src="assets/img/archive-ha-dong-1915.jpg" alt="Early colour photograph of a Vietnamese ancestral altar with candles, flowers and blue and white porcelain" width="1024" height="759" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+          <figcaption class="mt-3 flex gap-4 text-xs leading-relaxed text-ink-500">
+            <span class="font-serif text-sm italic text-burgundy-700">Archive</span>
+            <span>Ancestral altar, Tonkin. Early twentieth-century autochrome, plate marked A 5564. Public domain.</span>
+          </figcaption>
+        </figure>
+
+        <div class="flex flex-col justify-center lg:col-span-5 lg:pl-6">
+          <h2 data-reveal="up" class="font-serif text-4xl font-medium leading-[1.05] sm:text-5xl 2xl:text-6xl">A house of records, kept in cloth.</h2>
+          <div data-reveal="up" class="mt-8 max-w-[58ch] space-y-5 text-base leading-relaxed text-ink-600">
+            <p>An Nam Ký began as a notebook. We collected photographs, museum notes and conversations with tailors, trying to understand what our grandparents wore and why.</p>
+            <p>Every collection starts with research. We read sources, visit archives and talk to craftspeople before we cut. When we reinterpret, we say so. When we are unsure, we keep looking.</p>
+          </div>
+          <dl data-reveal="up" class="mt-10 grid grid-cols-3 gap-6 border-t border-ink-900/15 pt-6">
+            <div><dt class="text-xs text-ink-500">Research first</dt><dd class="mt-1 font-serif text-lg">Sources before sketches</dd></div>
+            <div><dt class="text-xs text-ink-500">Clear labels</dt><dd class="mt-1 font-serif text-lg">Artifact or inspiration</dd></div>
+            <div><dt class="text-xs text-ink-500">Made by hand</dt><dd class="mt-1 font-serif text-lg">With local ateliers</dd></div>
+          </dl>
+        </div>
+
+        <figure class="lg:col-span-4 lg:col-start-2 lg:-mt-6">
+          <div data-reveal="clip" class="group aspect-[3/2] overflow-hidden bg-paper-300">
+            <img src="assets/img/tailor-scissors.webp" alt="Old tailor's shears, thread spools and buttons on a worn leather surface" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+          <figcaption class="mt-3 text-xs text-ink-500">Tailor's tools: shears, thread and buttons.</figcaption>
+        </figure>
+        <blockquote data-reveal="up" class="self-center lg:col-span-6 lg:col-start-7">
+          <p class="font-serif text-3xl italic leading-snug text-burgundy-700 sm:text-4xl">&ldquo;We do not sell the past. We try to listen to it carefully, then answer in our own voice.&rdquo;</p>
+          <footer class="mt-5 text-sm text-ink-500">From the An Nam Ký founding note</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- VIETNAMESE HERITAGE -->
+    <section id="heritage" class="border-y border-ink-900/10 bg-paper-50 py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <p data-reveal="fade" class="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.28em] text-burgundy-700"><span class="h-px w-10 bg-burgundy-700"></span>Vietnamese heritage</p>
+        <h2 data-split="words" class="max-w-[18ch] font-serif text-4xl font-medium leading-[1.05] sm:text-5xl 2xl:text-6xl">Viet dress, one era at a time.</h2>
+        <p data-reveal="up" class="mt-6 max-w-[62ch] text-base leading-relaxed text-ink-600">We keep court robes apart from village clothing, artifacts apart from reconstructions, and history apart from our own designs. Every image on this page carries a label.</p>
+
+        <ul data-reveal="fade" class="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink-700" aria-label="Image labels">
+          <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 bg-ink-900"></span>Historical artifact</li>
+          <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 bg-earth-500"></span>Heritage photograph</li>
+          <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 bg-moss-500"></span>Reconstruction</li>
+          <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 bg-burgundy-700"></span>Inspired design</li>
+        </ul>
+
+        <div data-tabs class="mt-14">
+          <div class="relative flex gap-2 overflow-x-auto border-b border-ink-900/15 sm:gap-8" role="tablist">
+            <button data-tab="court" class="group shrink-0 whitespace-nowrap px-2 pb-4 pt-1 text-left text-ink-500 transition-colors duration-300 hover:text-ink-900 [&.is-active]:text-burgundy-700">
+              <span class="block font-serif text-sm italic">I</span><span class="text-sm font-medium sm:text-base">Court &amp; ceremonial</span>
+            </button>
+            <button data-tab="robe" class="group shrink-0 whitespace-nowrap px-2 pb-4 pt-1 text-left text-ink-500 transition-colors duration-300 hover:text-ink-900 [&.is-active]:text-burgundy-700">
+              <span class="block font-serif text-sm italic">II</span><span class="text-sm font-medium sm:text-base">Five-panel robe &amp; áo dài</span>
+            </button>
+            <button data-tab="everyday" class="group shrink-0 whitespace-nowrap px-2 pb-4 pt-1 text-left text-ink-500 transition-colors duration-300 hover:text-ink-900 [&.is-active]:text-burgundy-700">
+              <span class="block font-serif text-sm italic">III</span><span class="text-sm font-medium sm:text-base">Everyday dress</span>
+            </button>
+            <button data-tab="craft" class="group shrink-0 whitespace-nowrap px-2 pb-4 pt-1 text-left text-ink-500 transition-colors duration-300 hover:text-ink-900 [&.is-active]:text-burgundy-700">
+              <span class="block font-serif text-sm italic">IV</span><span class="text-sm font-medium sm:text-base">Materials &amp; craft</span>
+            </button>
+            <span data-tab-indicator class="bottom-0 h-0.5 bg-burgundy-700"></span>
+          </div>
+
+          <!-- I -->
+          <div data-tab-panel="court" class="grid grid-cols-1 gap-10 pt-12 lg:grid-cols-12 lg:gap-x-12">
+            <figure class="lg:col-span-7">
+              <div class="group aspect-[16/10] overflow-hidden bg-paper-300">
+                <img src="assets/img/hue-ngo-mon.jpg" alt="The Meridian Gate of the Hue Imperial City after rain, with yellow flowering plants lining the approach" width="1024" height="652" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+              </div>
+              <figcaption class="mt-3 flex items-center gap-2 text-xs text-ink-500"><span class="h-2 w-2 bg-earth-500"></span>Heritage photograph. Meridian Gate, Hue Imperial City.</figcaption>
+            </figure>
+            <div class="flex flex-col justify-center lg:col-span-5">
+              <h3 class="font-serif text-3xl font-medium sm:text-4xl">Court and ceremonial dress</h3>
+              <p class="mt-5 max-w-[56ch] leading-relaxed text-ink-600">Hue was the capital of the Nguyen dynasty, and its court dressed by codes of rank, colour and occasion. We study surviving garments in museum collections before drawing a line, and we never present one of our designs as a court robe.</p>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700">
+                <li>What we document: rank, colour, insignia, occasion</li>
+                <li>Where we look: museum collections and published catalogues</li>
+                <li>What we avoid: mixing dynasties in one garment</li>
+              </ul>
+              <a href="#journal" class="group mt-8 inline-flex items-center gap-2 self-start border-b border-burgundy-700 pb-1 text-sm font-medium text-burgundy-700 transition-colors duration-300 hover:text-burgundy-900">Read the research notes <svg class="transition-transform duration-300 group-hover:translate-x-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+
+          <!-- II -->
+          <div data-tab-panel="robe" class="grid grid-cols-1 gap-10 pt-12 lg:grid-cols-12 lg:gap-x-12">
+            <div class="grid grid-cols-5 gap-4 lg:col-span-7">
+              <figure class="col-span-3">
+                <div class="group aspect-[2/3] overflow-hidden bg-paper-300">
+                  <img src="assets/img/ao-dai-ladies.jpg" alt="Three women in long red, yellow and blue five-panel robes with matching turbans, talking on a tree-lined path" width="683" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+                </div>
+                <figcaption class="mt-3 flex items-center gap-2 text-xs text-ink-500"><span class="h-2 w-2 shrink-0 bg-earth-500"></span>Contemporary wearers in five-panel robes and turbans.</figcaption>
+              </figure>
+              <figure class="col-span-2 self-end">
+                <div class="group aspect-[3/4] overflow-hidden bg-paper-300">
+                  <img src="assets/img/ao-dai-van-mieu.jpg" alt="Women in floral white and red ao dai among red lacquered columns at the Temple of Literature, Hanoi" width="1024" height="761" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+                </div>
+                <figcaption class="mt-3 flex items-center gap-2 text-xs text-ink-500"><span class="h-2 w-2 shrink-0 bg-earth-500"></span>Áo dài at the Temple of Literature, Hanoi.</figcaption>
+              </figure>
+            </div>
+            <div class="flex flex-col justify-center lg:col-span-5">
+              <h3 class="font-serif text-3xl font-medium sm:text-4xl">The five-panel robe and the áo dài</h3>
+              <p class="mt-5 max-w-[56ch] leading-relaxed text-ink-600">The áo dài did not appear in a single moment. It grew out of earlier long robes, and each period changed its collar, sleeve and fit. We look at every version on its own terms, rather than as one timeless dress.</p>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700">
+                <li>What we document: panel count, collar, closure, length</li>
+                <li>Where we look: dated photographs and surviving garments</li>
+                <li>What we avoid: calling a modern cut "traditional"</li>
+              </ul>
+              <a href="#journal" class="group mt-8 inline-flex items-center gap-2 self-start border-b border-burgundy-700 pb-1 text-sm font-medium text-burgundy-700 transition-colors duration-300 hover:text-burgundy-900">Read the research notes <svg class="transition-transform duration-300 group-hover:translate-x-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+
+          <!-- III -->
+          <div data-tab-panel="everyday" class="grid grid-cols-1 gap-10 pt-12 lg:grid-cols-12 lg:gap-x-12">
+            <figure class="lg:col-span-7">
+              <div class="group aspect-[16/10] overflow-hidden bg-paper-300">
+                <img src="assets/img/dan-gian-cho-song.webp" alt="Women in conical hats and patterned shirts gathered at a riverside market" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+              </div>
+              <figcaption class="mt-3 flex items-center gap-2 text-xs text-ink-500"><span class="h-2 w-2 bg-earth-500"></span>Heritage photograph. River market, Vietnam. Date unknown, public domain.</figcaption>
+            </figure>
+            <div class="flex flex-col justify-center lg:col-span-5">
+              <h3 class="font-serif text-3xl font-medium sm:text-4xl">Everyday dress</h3>
+              <p class="mt-5 max-w-[56ch] leading-relaxed text-ink-600">Conical hats, plain shirts and working trousers tell us about weather, labour and markets. This is clothing shaped by use, and it deserves the same attention we give to ceremony.</p>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700">
+                <li>What we document: fabric weight, repairs, how garments are worn at work</li>
+                <li>Where we look: family albums, oral histories, market photographs</li>
+                <li>What we avoid: turning working clothes into costume</li>
+              </ul>
+              <a href="#journal" class="group mt-8 inline-flex items-center gap-2 self-start border-b border-burgundy-700 pb-1 text-sm font-medium text-burgundy-700 transition-colors duration-300 hover:text-burgundy-900">Read the research notes <svg class="transition-transform duration-300 group-hover:translate-x-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+
+          <!-- IV -->
+          <div data-tab-panel="craft" class="grid grid-cols-1 gap-10 pt-12 lg:grid-cols-12 lg:gap-x-12">
+            <figure class="lg:col-span-7">
+              <div class="group aspect-[16/10] overflow-hidden bg-paper-300">
+                <img src="assets/img/hoi-an-old-house.jpg" alt="Dark carved wooden panel showing a vase of flowers and scholar's objects" width="768" height="1024" loading="lazy" class="h-full w-full object-cover object-[50%_40%] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+              </div>
+              <figcaption class="mt-3 flex items-center gap-2 text-xs text-ink-500"><span class="h-2 w-2 bg-ink-900"></span>Historical artifact. Carved wooden panel in an old house, Hoi An.</figcaption>
+            </figure>
+            <div class="flex flex-col justify-center lg:col-span-5">
+              <h3 class="font-serif text-3xl font-medium sm:text-4xl">Materials, motifs and technique</h3>
+              <p class="mt-5 max-w-[56ch] leading-relaxed text-ink-600">Silk and gauze, knotted buttons, collars, carved and woven motifs. We record how a garment is made, from the cut of a panel to the knot of a fabric button, and we credit the workshops that still do this by hand.</p>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700">
+                <li>What we document: fibre, weave, dye, seam and closure</li>
+                <li>Where we look: craft villages and working ateliers</li>
+                <li>What we avoid: borrowing motifs without knowing their meaning</li>
+              </ul>
+              <a href="#journal" class="group mt-8 inline-flex items-center gap-2 self-start border-b border-burgundy-700 pb-1 text-sm font-medium text-burgundy-700 transition-colors duration-300 hover:text-burgundy-900">Read the research notes <svg class="transition-transform duration-300 group-hover:translate-x-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTIONS -->
+    <section id="collections" class="py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-serif text-4xl font-medium leading-[1.05] sm:text-5xl 2xl:text-6xl">Four collections, four stories.</h2>
+        <p data-reveal="up" class="mt-5 max-w-[60ch] text-base leading-relaxed text-ink-600">Design stories, not a catalogue. Each one names its source of inspiration, and nothing here is for sale online.</p>
+
+        <div data-reveal-stagger="90" class="strips mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:flex lg:h-[78vh] lg:min-h-[560px] lg:gap-3">
+          <!-- Nep Gam -->
+          <article tabindex="0" class="strip group relative flex flex-col outline-none lg:block lg:overflow-hidden focus-visible:ring-2 focus-visible:ring-burgundy-700">
+            <div class="aspect-[4/5] overflow-hidden bg-paper-300 lg:absolute lg:inset-0 lg:aspect-auto">
+              <img src="assets/img/look-5.jpg" alt="Close view of a red paisley brocade tunic with black sleeves, fabric knot buttons and a dangling hairpin" width="683" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+            <div class="hidden bg-gradient-to-t from-ink-950/85 via-ink-950/20 to-transparent lg:absolute lg:inset-0 lg:block"></div>
+            <span aria-hidden="true" class="strip-name-v vertical absolute bottom-8 left-1/2 hidden -translate-x-1/2 font-serif text-2xl text-paper-50 lg:block">Nếp Gấm</span>
+            <div class="pt-5 lg:absolute lg:inset-x-0 lg:bottom-0 lg:p-8 lg:text-paper-50">
+              <p class="text-xs text-burgundy-700 lg:text-paper-200">Inspired design</p>
+              <h3 class="mt-1 font-serif text-3xl font-medium">Nếp Gấm <span class="text-xl italic text-ink-500 lg:text-paper-200">Folds of Brocade</span></h3>
+              <div class="strip-more mt-3 max-w-[44ch] space-y-2 text-sm leading-relaxed text-ink-600 lg:text-paper-100">
+                <p>Patterned silk set against plain black sleeves, the way a lining shows at the cuff.</p>
+                <p><span class="font-medium">Inspiration:</span> brocade and fabric knot buttons. <span class="font-medium">Details:</span> paired knots, raglan sleeve, tasselled pin.</p>
+              </div>
+            </div>
+          </article>
+          <!-- Kinh Ky -->
+          <article tabindex="0" class="strip group relative flex flex-col outline-none lg:block lg:overflow-hidden focus-visible:ring-2 focus-visible:ring-burgundy-700">
+            <div class="aspect-[4/5] overflow-hidden bg-paper-300 lg:absolute lg:inset-0 lg:aspect-auto">
+              <img src="assets/img/hanoi-french-facade.jpg" alt="Cream colonial-era villa in Hanoi with green shutters and a wrought iron arch over the gate" width="777" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+            <div class="hidden bg-gradient-to-t from-ink-950/85 via-ink-950/20 to-transparent lg:absolute lg:inset-0 lg:block"></div>
+            <span aria-hidden="true" class="strip-name-v vertical absolute bottom-8 left-1/2 hidden -translate-x-1/2 font-serif text-2xl text-paper-50 lg:block">Kinh Kỳ</span>
+            <div class="pt-5 lg:absolute lg:inset-x-0 lg:bottom-0 lg:p-8 lg:text-paper-50">
+              <p class="text-xs text-burgundy-700 lg:text-paper-200">Inspired design</p>
+              <h3 class="mt-1 font-serif text-3xl font-medium">Kinh Kỳ <span class="text-xl italic text-ink-500 lg:text-paper-200">The Old Capital</span></h3>
+              <div class="strip-more mt-3 max-w-[44ch] space-y-2 text-sm leading-relaxed text-ink-600 lg:text-paper-100">
+                <p>Old city streets, shutters and wrought iron, translated into structured outer layers.</p>
+                <p><span class="font-medium">Inspiration:</span> Hanoi facades. <span class="font-medium">Details:</span> shutter-green lining, arched yoke seams.</p>
+              </div>
+            </div>
+          </article>
+          <!-- Mau Thoi Gian -->
+          <article tabindex="0" class="strip group relative flex flex-col outline-none lg:block lg:overflow-hidden focus-visible:ring-2 focus-visible:ring-burgundy-700">
+            <div class="aspect-[4/5] overflow-hidden bg-paper-300 lg:absolute lg:inset-0 lg:aspect-auto">
+              <img src="assets/img/hoi-an-interior.jpg" alt="Courtyard of an old timber house with carved dark wood panels and mossy stone" width="1024" height="768" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+            <div class="hidden bg-gradient-to-t from-ink-950/85 via-ink-950/20 to-transparent lg:absolute lg:inset-0 lg:block"></div>
+            <span aria-hidden="true" class="strip-name-v vertical absolute bottom-8 left-1/2 hidden -translate-x-1/2 font-serif text-2xl text-paper-50 lg:block">Màu Thời Gian</span>
+            <div class="pt-5 lg:absolute lg:inset-x-0 lg:bottom-0 lg:p-8 lg:text-paper-50">
+              <p class="text-xs text-burgundy-700 lg:text-paper-200">Inspired design</p>
+              <h3 class="mt-1 font-serif text-3xl font-medium">Màu Thời Gian <span class="text-xl italic text-ink-500 lg:text-paper-200">Colours of Time</span></h3>
+              <div class="strip-more mt-3 max-w-[44ch] space-y-2 text-sm leading-relaxed text-ink-600 lg:text-paper-100">
+                <p>Faded lacquer, tea-stained paper and the soft colours of early photographs.</p>
+                <p><span class="font-medium">Inspiration:</span> archive prints and old houses. <span class="font-medium">Details:</span> silk dyed by hand in four muted tones.</p>
+              </div>
+            </div>
+          </article>
+          <!-- Dang Xua -->
+          <article tabindex="0" class="strip group relative flex flex-col outline-none lg:block lg:overflow-hidden focus-visible:ring-2 focus-visible:ring-burgundy-700">
+            <div class="aspect-[4/5] overflow-hidden bg-paper-300 lg:absolute lg:inset-0 lg:aspect-auto">
+              <img src="assets/img/look-2.jpg" alt="Woman in a red brocade tunic with black sleeves looking to the side, wind in her hair, by a river" width="683" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+            <div class="hidden bg-gradient-to-t from-ink-950/85 via-ink-950/20 to-transparent lg:absolute lg:inset-0 lg:block"></div>
+            <span aria-hidden="true" class="strip-name-v vertical absolute bottom-8 left-1/2 hidden -translate-x-1/2 font-serif text-2xl text-paper-50 lg:block">Dáng Xưa</span>
+            <div class="pt-5 lg:absolute lg:inset-x-0 lg:bottom-0 lg:p-8 lg:text-paper-50">
+              <p class="text-xs text-burgundy-700 lg:text-paper-200">Inspired design</p>
+              <h3 class="mt-1 font-serif text-3xl font-medium">Dáng Xưa <span class="text-xl italic text-ink-500 lg:text-paper-200">Old Silhouettes</span></h3>
+              <div class="strip-more mt-3 max-w-[44ch] space-y-2 text-sm leading-relaxed text-ink-600 lg:text-paper-100">
+                <p>The long tunic line, recut for walking, cycling and working in the city today.</p>
+                <p><span class="font-medium">Inspiration:</span> the long robe. <span class="font-medium">Details:</span> shorter side slits, bell sleeve, removable collar.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSPIRATION BOARD -->
+    <section id="board" class="relative overflow-hidden bg-paper-200 py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <h2 data-reveal="up" class="font-serif text-4xl font-medium leading-[1.05] sm:text-5xl 2xl:text-6xl">The research table.</h2>
+            <p data-reveal="up" class="mt-5 max-w-[44ch] leading-relaxed text-ink-600">What sits on our desk before a collection begins: architecture, colour, notes in the margin and the sources we still need to check.</p>
+            <p data-reveal="up" class="mt-6 max-w-[44ch] border-l-2 border-burgundy-700 pl-4 text-sm leading-relaxed text-ink-700">Anything marked "to verify" is not yet confirmed. We publish it only after checking.</p>
+          </div>
+
+          <div data-reveal-stagger="110" class="grid grid-cols-2 gap-5 sm:grid-cols-6 lg:col-span-8 lg:grid-cols-8 lg:gap-6">
+            <!-- photo pinned -->
+            <figure class="col-span-2 rotate-[-1.5deg] bg-paper-50 p-3 pb-4 shadow-xl shadow-earth-700/15 transition-transform duration-700 hover:rotate-0 sm:col-span-3 lg:col-span-3 lg:row-span-2">
+              <div class="group aspect-[2/3] overflow-hidden bg-paper-300">
+                <img src="assets/img/hue-detail.jpg" alt="Ornate yellow gate with three red doors at the Hue Imperial City, reflected in a moat" width="687" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+              </div>
+              <figcaption class="mt-3 font-serif text-base italic text-ink-700">Gate, Hue Imperial City. Ochre, vermilion, lime.</figcaption>
+            </figure>
+            <!-- note -->
+            <div class="col-span-2 rotate-[1deg] self-start bg-[#F6EFD9] p-6 shadow-lg shadow-earth-700/10 sm:col-span-3 lg:col-span-3">
+              <p class="text-xs uppercase tracking-[0.2em] text-earth-600">Note, 3 Oct</p>
+              <p class="mt-3 font-serif text-xl italic leading-snug text-ink-800">Collar height differs between sources. Check museum measurements before drafting the pattern.</p>
+            </div>
+            <!-- swatches -->
+            <div class="col-span-2 self-start bg-paper-50 p-5 shadow-lg shadow-earth-700/10 sm:col-span-3 lg:col-span-2">
+              <p class="text-xs text-ink-500">Palette for winter</p>
+              <ul class="mt-4 grid grid-cols-5 gap-2 lg:grid-cols-1">
+                <li class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3"><span class="h-8 w-full bg-paper-100 ring-1 ring-ink-900/10 lg:w-8"></span><span class="text-[11px] text-ink-600 lg:text-xs">Paper</span></li>
+                <li class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3"><span class="h-8 w-full bg-burgundy-700 lg:w-8"></span><span class="text-[11px] text-ink-600 lg:text-xs">Lacquer</span></li>
+                <li class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3"><span class="h-8 w-full bg-earth-500 lg:w-8"></span><span class="text-[11px] text-ink-600 lg:text-xs">Earth</span></li>
+                <li class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3"><span class="h-8 w-full bg-moss-500 lg:w-8"></span><span class="text-[11px] text-ink-600 lg:text-xs">Moss</span></li>
+                <li class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3"><span class="h-8 w-full bg-ink-900 lg:w-8"></span><span class="text-[11px] text-ink-600 lg:text-xs">Ink</span></li>
+              </ul>
+            </div>
+            <!-- textile -->
+            <figure class="col-span-2 rotate-[1.5deg] bg-paper-50 p-3 pb-4 shadow-xl shadow-earth-700/15 transition-transform duration-700 hover:rotate-0 sm:col-span-3 lg:col-span-3">
+              <div class="group aspect-[4/3] overflow-hidden bg-paper-300">
+                <img src="assets/img/textile-panel.webp" alt="Pale green silk panel woven with gold and pink floral scrolls" width="1024" height="753" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+              </div>
+              <figcaption class="mt-3 text-xs leading-relaxed text-ink-600">Silk panel, LACMA collection. Colour reference only, not a Vietnamese textile.</figcaption>
+            </figure>
+            <!-- measurement slip -->
+            <div class="col-span-2 rotate-[-1deg] self-start border border-ink-900/15 bg-paper-50 p-5 sm:col-span-3 lg:col-span-2">
+              <p class="text-xs text-ink-500">Pattern draft, sample sizes</p>
+              <dl class="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 font-serif text-base">
+                <dt class="text-ink-500">Length</dt><dd>118 cm</dd>
+                <dt class="text-ink-500">Collar</dt><dd>4.5 cm</dd>
+                <dt class="text-ink-500">Sleeve</dt><dd>62 cm</dd>
+                <dt class="text-ink-500">Slit</dt><dd>38 cm</dd>
+              </dl>
+            </div>
+            <!-- source slip -->
+            <div class="col-span-2 self-start bg-ink-900 p-5 text-paper-100 sm:col-span-3 lg:col-span-3">
+              <p class="text-xs text-paper-300">Source to verify</p>
+              <p class="mt-2 font-serif text-lg leading-snug">Museum catalogue of Nguyen court textiles. Edition and page numbers pending.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOKBOOK -->
+    <section id="lookbook" class="bg-ink-900 py-20 text-paper-100 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="grid grid-cols-1 items-end gap-6 lg:grid-cols-12">
+          <h2 data-split="words" class="font-serif text-4xl font-medium leading-[1.05] sm:text-5xl lg:col-span-8 2xl:text-6xl">Viet dress through a contemporary lens.</h2>
+          <p data-reveal="up" class="text-sm leading-relaxed text-paper-300 lg:col-span-4">Designs inspired by heritage, photographed on the river at dusk. Photography by Chuột Lenky.</p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-6">
+          <figure class="lg:col-span-8">
+            <a href="assets/img/look-4.jpg" data-lightbox="lookbook" data-caption="Silhouette. Red brocade tunic over black trousers, riverside at dusk." data-cursor-label="View" class="group block aspect-[3/2] overflow-hidden bg-ink-800" data-reveal="clip">
+              <img src="assets/img/look-4.jpg" alt="Woman in a red and black tunic leaning on a white railing above shimmering water, holding a fan" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4 flex items-baseline gap-4"><span class="font-serif text-xl italic text-paper-50">Silhouette</span><span class="text-xs text-paper-300">The long line of the tunic, open at the side.</span></figcaption>
+          </figure>
+          <figure class="lg:col-span-4">
+            <a href="assets/img/look-3.jpg" data-lightbox="lookbook" data-caption="Folds of fabric. Brocade and black silk, the sleeve falling over the rail." class="group block aspect-[3/4] overflow-hidden bg-ink-800 lg:aspect-auto lg:h-[calc(100%-3rem)]" data-reveal="clip">
+              <img src="assets/img/look-3.jpg" alt="Smiling woman in a red and black tunic resting her arms on a white railing by the river" width="683" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4 flex items-baseline gap-4"><span class="font-serif text-xl italic text-paper-50">Folds of fabric</span><span class="text-xs text-paper-300">Brocade meets plain silk.</span></figcaption>
+          </figure>
+          <div data-reveal="up" class="flex flex-col justify-end border-t border-paper-100/20 pt-6 lg:col-span-4 lg:pb-12">
+            <p class="font-serif text-6xl italic text-burgundy-300">IV</p>
+            <h3 class="mt-3 font-serif text-3xl">Indochine Memory</h3>
+            <p class="mt-3 max-w-[40ch] text-sm leading-relaxed text-paper-300">The fourth chapter is in production, shot among old shophouses this winter.</p>
+            <a href="#contact" class="group mt-6 inline-flex items-center gap-2 self-start border-b border-paper-100/50 pb-1 text-sm text-paper-50 transition-colors duration-300 hover:border-paper-50">Ask to be notified <svg class="transition-transform duration-300 group-hover:translate-x-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <figure class="lg:col-span-8">
+            <a href="assets/img/look-1.jpg" data-lightbox="lookbook" data-caption="Shadows of the capital. City towers behind, a hairpin catching the light." class="group block aspect-[3/2] overflow-hidden bg-ink-800" data-reveal="clip">
+              <img src="assets/img/look-1.jpg" alt="Woman in a red brocade tunic touching her hair, high-rise buildings blurred behind her" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4 flex items-baseline gap-4"><span class="font-serif text-xl italic text-paper-50">Shadows of the capital</span><span class="text-xs text-paper-300">Old forms against the new skyline.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL -->
+    <section id="journal" class="py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-serif text-4xl font-medium leading-[1.05] sm:text-5xl 2xl:text-6xl">Heritage journal.</h2>
+        <div class="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-x-12">
+          <article class="group lg:col-span-7">
+            <a href="#contact" class="block" aria-label="Read: From painted cloth to pattern">
+              <div data-reveal="clip" class="aspect-[3/2] overflow-hidden bg-paper-300">
+                <img src="assets/img/fabric-collage.jpg" alt="Artisans hand-painting old Hanoi street scenes onto fabric panels at a crowded workbench" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+              </div>
+              <p class="mt-6 text-xs text-ink-500"><time datetime="2026-09-12">12 September 2026</time></p>
+              <h3 class="mt-2 font-serif text-3xl font-medium leading-tight transition-colors duration-300 group-hover:text-burgundy-700 sm:text-4xl">From painted cloth to pattern: a day in the atelier</h3>
+              <p class="mt-3 max-w-[60ch] leading-relaxed text-ink-600">We spent a day with textile painters turning old Hanoi street scenes into fabric panels. Notes on process, pigment and patience.</p>
+            </a>
+          </article>
+          <div data-reveal-stagger="90" class="flex flex-col lg:col-span-5">
+            <article class="group border-t border-ink-900/15 py-7 first:pt-0 first:border-t-0 lg:first:pt-0">
+              <a href="#contact" class="block">
+                <p class="text-xs text-ink-500"><time datetime="2026-08-28">28 August 2026</time></p>
+                <h3 class="mt-2 font-serif text-2xl font-medium leading-snug transition-colors duration-300 group-hover:text-burgundy-700">How the long robe changed shape: our reading list</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-600">Before we write about the five-panel robe, we share the books and catalogues we are reading, and what each one argues.</p>
+              </a>
+            </article>
+            <article class="group border-t border-ink-900/15 py-7">
+              <a href="#contact" class="block">
+                <p class="text-xs text-ink-500"><time datetime="2026-08-09">9 August 2026</time></p>
+                <h3 class="mt-2 font-serif text-2xl font-medium leading-snug transition-colors duration-300 group-hover:text-burgundy-700">Artifact, reconstruction, inspiration: how we label our work</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-600">Why every image on this site carries a label, and what each label promises.</p>
+              </a>
+            </article>
+            <article class="group border-t border-ink-900/15 py-7">
+              <a href="#contact" class="block">
+                <p class="text-xs text-ink-500"><time datetime="2026-07-21">21 July 2026</time></p>
+                <h3 class="mt-2 font-serif text-2xl font-medium leading-snug transition-colors duration-300 group-hover:text-burgundy-700">Questions we are bringing to craftspeople this winter</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-600">On buttons, dyes and seams: what we hope to learn from the workshops we visit next.</p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="border-t border-ink-900/10 bg-paper-50 py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-x-12 lg:px-10 2xl:px-16">
+        <div class="lg:col-span-5">
+          <p data-reveal="fade" class="mb-6 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.28em] text-burgundy-700"><span class="h-px w-10 bg-burgundy-700"></span>Collaborate</p>
+          <h2 data-reveal="up" class="font-serif text-4xl font-medium leading-[1.05] sm:text-5xl 2xl:text-6xl">Let us keep these stories together.</h2>
+          <p data-reveal="up" class="mt-6 max-w-[50ch] leading-relaxed text-ink-600">We welcome researchers, museums, curators and cultural projects. Write to us about research, exhibitions or a shared archive.</p>
+          <dl data-reveal="up" class="mt-10 space-y-6">
+            <div>
+              <dt class="text-xs text-ink-500">Email</dt>
+              <dd class="mt-1 flex flex-wrap items-center gap-3">
+                <a href="mailto:hello@annamky.vn" class="font-serif text-2xl transition-colors duration-300 hover:text-burgundy-700">hello@annamky.vn</a>
+                <button data-copy="hello@annamky.vn" class="inline-flex h-11 items-center border border-ink-900/20 px-4 text-xs font-medium transition duration-300 hover:border-ink-900 hover:bg-ink-900 hover:text-paper-50 active:scale-[.98]">Copy email</button>
+              </dd>
+            </div>
+            <div>
+              <dt class="text-xs text-ink-500">Instagram</dt>
+              <dd class="mt-1"><a href="https://www.instagram.com/annamky.archive" target="_blank" rel="noopener" class="font-serif text-2xl transition-colors duration-300 hover:text-burgundy-700">@annamky.archive</a></dd>
+            </div>
+            <div>
+              <dt class="text-xs text-ink-500">Studio</dt>
+              <dd class="mt-1 text-ink-700">Visits by appointment, Hoan Kiem, Hanoi</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div data-reveal="up" class="lg:col-span-7">
+          <form data-form="collaboration" data-success="Thank you. Your message is in our archive, and we will reply within five working days." class="border border-ink-900/15 bg-paper-100 p-6 sm:p-10" novalidate>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <label class="flex flex-col gap-2 text-sm font-medium text-ink-800">Full name
+                <input name="name" type="text" required minlength="2" autocomplete="name" placeholder="Nguyen Minh Chau" class="h-12 border border-ink-900/25 bg-paper-50 px-4 font-normal text-ink-900 placeholder:text-ink-400 focus:border-burgundy-700 focus:outline-none focus:ring-2 focus:ring-burgundy-700/30">
+              </label>
+              <label class="flex flex-col gap-2 text-sm font-medium text-ink-800">Email
+                <input name="email" type="email" required autocomplete="email" placeholder="chau@museum.vn" class="h-12 border border-ink-900/25 bg-paper-50 px-4 font-normal text-ink-900 placeholder:text-ink-400 focus:border-burgundy-700 focus:outline-none focus:ring-2 focus:ring-burgundy-700/30">
+              </label>
+              <label class="flex flex-col gap-2 text-sm font-medium text-ink-800">Organisation <span class="font-normal text-ink-500">(optional)</span>
+                <input name="organisation" type="text" autocomplete="organization" placeholder="Museum, university or studio" class="h-12 border border-ink-900/25 bg-paper-50 px-4 font-normal text-ink-900 placeholder:text-ink-400 focus:border-burgundy-700 focus:outline-none focus:ring-2 focus:ring-burgundy-700/30">
+              </label>
+              <label class="flex flex-col gap-2 text-sm font-medium text-ink-800">Type of collaboration
+                <select name="type" required class="h-12 border border-ink-900/25 bg-paper-50 px-4 font-normal text-ink-900 focus:border-burgundy-700 focus:outline-none focus:ring-2 focus:ring-burgundy-700/30">
+                  <option value="">Choose one</option>
+                  <option>Research</option>
+                  <option>Exhibition</option>
+                  <option>Cultural project</option>
+                  <option>Press</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label class="flex flex-col gap-2 text-sm font-medium text-ink-800 sm:col-span-2">Message
+                <textarea name="message" required minlength="10" rows="5" placeholder="Tell us about your project and timeline" class="border border-ink-900/25 bg-paper-50 px-4 py-3 font-normal text-ink-900 placeholder:text-ink-400 focus:border-burgundy-700 focus:outline-none focus:ring-2 focus:ring-burgundy-700/30"></textarea>
+              </label>
+            </div>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <p class="text-xs text-ink-500">We reply within five working days.</p>
+              <button type="submit" data-magnetic="0.2" class="inline-flex h-12 items-center justify-center bg-burgundy-700 px-8 text-sm font-medium tracking-wide text-paper-50 transition duration-300 hover:bg-burgundy-800 active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">Send message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink-950 text-paper-200">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+      <p data-reveal="up" class="max-w-[18ch] font-serif text-5xl italic leading-[1.05] text-paper-50 sm:text-6xl 2xl:text-7xl">Preserving one era, telling its story today.</p>
+      <div class="mt-16 grid grid-cols-2 gap-10 border-t border-paper-100/15 py-12 md:grid-cols-4">
+        <div class="col-span-2 md:col-span-1">
+          <p class="font-serif text-2xl font-semibold tracking-[0.18em] text-paper-50">AN NAM KÝ</p>
+          <p class="mt-3 max-w-[32ch] text-sm leading-relaxed text-paper-300">A Vietnamese heritage fashion house and cultural archive. No online shop.</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="text-xs text-paper-300">Explore</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#story" class="transition-colors duration-300 hover:text-paper-50">Our Story</a></li>
+            <li><a href="#heritage" class="transition-colors duration-300 hover:text-paper-50">Viet Dress</a></li>
+            <li><a href="#collections" class="transition-colors duration-300 hover:text-paper-50">Collections</a></li>
+            <li><a href="#lookbook" class="transition-colors duration-300 hover:text-paper-50">Gallery</a></li>
+            <li><a href="#journal" class="transition-colors duration-300 hover:text-paper-50">Journal</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="text-xs text-paper-300">Contact</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="mailto:hello@annamky.vn" class="transition-colors duration-300 hover:text-paper-50">hello@annamky.vn</a></li>
+            <li><a href="https://www.instagram.com/annamky.archive" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-paper-50">Instagram</a></li>
+            <li><a href="#contact" class="transition-colors duration-300 hover:text-paper-50">Collaborations</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs text-paper-300">Images</p>
+          <p class="mt-4 text-sm leading-relaxed text-paper-300">Open-licence and public domain photographs, credited in <a href="assets/img/CREDITS.md" class="underline underline-offset-4 hover:text-paper-50">image credits</a>.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 border-t border-paper-100/15 py-6 text-xs text-paper-300 sm:flex-row sm:justify-between">
+        <p>&copy; 2026 An Nam Ký. All rights reserved.</p>
+        <a href="#top" class="hover:text-paper-50">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" data-back-to-top aria-label="Back to top" class="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center bg-burgundy-700 text-paper-50 shadow-lg shadow-burgundy-900/30 transition duration-300 hover:bg-burgundy-800">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

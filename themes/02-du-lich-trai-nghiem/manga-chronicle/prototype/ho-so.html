@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết hồ sơ - MANGA CHRONICLE</title>
+  <meta name="description" content="Hồ sơ chi tiết trong kho lưu trữ MANGA CHRONICLE: bối cảnh, nội dung chính, thông tin tóm tắt và nguồn tham khảo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-paper font-body text-ink antialiased">
+  <div class="mc-grain" aria-hidden="true"></div>
+
+  <header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-ink/15 bg-paper/90 backdrop-blur-sm transition-colors duration-300 [&.is-scrolled]:bg-paper [&.is-scrolled]:shadow-[0_8px_30px_-18px_rgba(36,35,33,.45)]">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="index.html" class="group flex items-baseline gap-2 whitespace-nowrap" aria-label="MANGA CHRONICLE, về trang chủ">
+        <span class="font-display text-xl font-extrabold tracking-tight sm:text-2xl">MANGA</span>
+        <span class="text-xs font-semibold uppercase tracking-label text-vermilion transition-colors duration-300 group-hover:text-ink">Chronicle</span>
+      </a>
+      <nav aria-label="Menu chính" class="hidden items-center gap-9 lg:flex">
+        <a href="index.html" class="relative py-2 text-[0.95rem] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-vermilion aria-[current=page]:after:scale-x-100">Trang chủ</a>
+        <a href="kho-luu-tru.html" aria-current="page" class="relative py-2 text-[0.95rem] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-vermilion aria-[current=page]:after:scale-x-100">Kho lưu trữ</a>
+        <a href="index.html#gioi-thieu" class="relative py-2 text-[0.95rem] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100">Giới thiệu</a>
+      </nav>
+      <div class="flex items-center gap-1">
+        <button type="button" data-modal-open="tim-kiem" aria-label="Mở ô tìm kiếm" class="grid h-11 w-11 place-items-center rounded-full transition duration-300 hover:bg-ink hover:text-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vermilion">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20.5 20.5-4.2-4.2"/></svg>
+        </button>
+        <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center rounded-full transition duration-300 hover:bg-ink hover:text-paper lg:hidden">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-ink/20 bg-paper p-6 shadow-[0_30px_60px_-30px_rgba(36,35,33,.6)] lg:hidden">
+      <p class="text-xs font-semibold uppercase tracking-label text-archive-deep">Mục lục</p>
+      <nav aria-label="Menu điện thoại" class="mt-4 grid gap-1">
+        <a href="index.html" class="flex min-h-[48px] items-center border-b border-ink/10 font-display text-2xl aria-[current=page]:text-vermilion">Trang chủ</a>
+        <a href="kho-luu-tru.html" aria-current="page" class="flex min-h-[48px] items-center border-b border-ink/10 font-display text-2xl aria-[current=page]:text-vermilion">Kho lưu trữ</a>
+        <a href="index.html#gioi-thieu" class="flex min-h-[48px] items-center font-display text-2xl">Giới thiệu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="ho-so" data-section="detail-article" class="bg-paper">
+      <div data-hs-view>
+        <div class="mx-auto w-full max-w-screen-2xl px-4 pt-8 sm:px-6 lg:px-10 lg:pt-10 2xl:px-16">
+          <nav aria-label="Đường dẫn" class="text-sm text-archive-deep">
+            <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <li><a href="index.html" class="underline-offset-4 hover:text-vermilion hover:underline">Trang chủ</a></li>
+              <li aria-hidden="true">/</li>
+              <li><a href="kho-luu-tru.html" class="underline-offset-4 hover:text-vermilion hover:underline">Kho lưu trữ</a></li>
+              <li aria-hidden="true">/</li>
+              <li data-hs-crumb-cat>Chuyên mục</li>
+              <li aria-hidden="true">/</li>
+              <li data-hs-crumb-title aria-current="page" class="font-semibold text-ink">Hồ sơ</li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-12 lg:gap-14 lg:px-10 lg:pb-20 lg:pt-12 2xl:px-16">
+          <div class="lg:col-span-6 xl:col-span-7">
+            <div data-reveal="fade" class="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em]">
+              <span data-hs-cat class="bg-ink px-3 py-1.5 text-paper">Chuyên mục</span>
+              <span data-hs-no class="text-vermilion">Archive No.</span>
+            </div>
+            <h1 data-hs-title data-reveal="up" class="mt-6 font-display text-[2.6rem] font-bold leading-[1.05] tracking-tight sm:text-6xl 2xl:text-7xl">Đang mở hồ sơ</h1>
+            <p class="mt-4 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <span data-hs-jp class="text-2xl text-vermilion [font-family:'Yu_Mincho','Hiragino_Mincho_ProN','Noto_Serif_JP',serif]"></span>
+              <span data-hs-period class="text-base font-medium text-archive-deep"></span>
+            </p>
+            <p data-hs-intro data-reveal="up" class="mc-dropcap mt-8 max-w-[62ch] text-lg leading-relaxed text-ink/85 sm:text-xl"></p>
+          </div>
+          <div data-hs-media class="lg:col-span-6 xl:col-span-5"></div>
+        </div>
+
+        <div class="border-t border-ink/15 bg-paper-light">
+          <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:gap-14 lg:px-10 lg:py-20 2xl:px-16">
+            <aside class="lg:col-span-4">
+              <div class="lg:sticky lg:top-28">
+                <div class="mc-tab mt-3 border border-ink/25 bg-paper p-6">
+                  <h2 class="font-display text-xl font-bold">Hồ sơ tóm tắt</h2>
+                  <dl data-hs-facts class="mt-4"></dl>
+                </div>
+                <div class="mt-8 hidden lg:block">
+                  <div data-stamp data-reveal="zoom">
+                    <div class="mc-stamp"><span>Đã kiểm<b>証</b>Nguồn</span></div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <div class="min-w-0 lg:col-span-7 lg:col-start-6">
+              <div data-hs-sections class="grid max-w-[66ch] gap-12"></div>
+
+              <section aria-labelledby="nguon" class="mt-14 max-w-[66ch] border-t-2 border-ink pt-8">
+                <h2 id="nguon" class="font-display text-2xl font-bold">Nguồn tham khảo</h2>
+                <ul data-hs-sources class="mt-5 grid gap-3 text-[0.95rem] text-ink/85"></ul>
+                <p class="mt-6 text-sm leading-relaxed text-archive-deep">Dữ liệu mẫu cho bản thử nghiệm. Thông tin dựa trên nguồn công khai ở trên và cần được đối chiếu trước khi xuất bản.</p>
+              </section>
+
+              <a href="kho-luu-tru.html" class="group mt-12 inline-flex min-h-[52px] items-center gap-3 border border-ink px-6 font-semibold transition duration-300 hover:bg-ink hover:text-paper active:scale-[.98]">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:-translate-x-1" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+                Quay lại kho lưu trữ
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-hs-missing hidden class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:items-center lg:px-10 lg:py-32 2xl:px-16">
+        <div class="lg:col-span-8">
+          <p class="text-sm font-semibold text-vermilion">Không tìm thấy hồ sơ</p>
+          <h1 class="mt-4 font-display text-5xl font-bold leading-tight sm:text-6xl">Hồ sơ này chưa có trong kho.</h1>
+          <p class="mt-5 max-w-[56ch] text-lg leading-relaxed text-ink/80">Đường dẫn có thể đã cũ hoặc gõ nhầm. Hãy quay lại kho lưu trữ để tìm theo tên hoặc chuyên mục.</p>
+          <a href="kho-luu-tru.html" class="mt-8 inline-flex min-h-[52px] items-center bg-vermilion px-6 font-semibold text-paper transition duration-300 hover:bg-ink">Quay lại kho lưu trữ</a>
+        </div>
+        <div class="hidden justify-self-center lg:col-span-4 lg:block">
+          <div class="mc-stamp opacity-80"><span>Không có<b>無</b>Hồ sơ</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lien-quan" data-section="teaser-row" class="border-t border-ink/15 bg-paper py-20 lg:py-24">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">Hồ sơ liên quan</h2>
+          <a href="kho-luu-tru.html" class="group inline-flex items-center gap-2 self-start border-b border-ink pb-1 text-sm font-semibold transition-colors duration-300 hover:border-vermilion hover:text-vermilion md:self-auto">Toàn bộ kho lưu trữ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul data-hs-related data-reveal-stagger="100" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-8"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" data-section="footer-big" class="overflow-hidden bg-ink text-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 border-b border-paper/15 pb-12 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <p class="font-display text-2xl font-bold">MANGA CHRONICLE</p>
+          <p class="mt-3 max-w-[44ch] leading-relaxed text-paper/75">Mỗi trang truyện là một dấu vết lịch sử. Kho lưu trữ giới thiệu văn hóa manga Nhật Bản, không mua bán.</p>
+        </div>
+        <nav aria-label="Trang" class="lg:col-span-2">
+          <p class="text-sm font-semibold text-paper/60">Trang</p>
+          <ul class="mt-4 grid gap-2">
+            <li><a href="index.html" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Trang chủ</a></li>
+            <li><a href="kho-luu-tru.html" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Kho lưu trữ</a></li>
+            <li><a href="index.html#gioi-thieu" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Giới thiệu</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Chuyên mục" class="lg:col-span-3">
+          <p class="text-sm font-semibold text-paper/60">Chuyên mục</p>
+          <ul class="mt-4 grid gap-2">
+            <li><a href="kho-luu-tru.html?cat=lich-su" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Lịch sử</a></li>
+            <li><a href="kho-luu-tru.html?cat=tac-gia" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Tác giả</a></li>
+            <li><a href="kho-luu-tru.html?cat=tac-pham" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Tác phẩm</a></li>
+            <li><a href="kho-luu-tru.html?cat=nghe-thuat" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Nghệ thuật sáng tác</a></li>
+            <li><a href="kho-luu-tru.html?cat=dia-diem" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Địa điểm</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-paper/60">Liên hệ biên tập</p>
+          <a href="mailto:bientap@mangachronicle.vn" class="mt-4 inline-flex min-h-[32px] items-center break-words transition-colors duration-300 hover:text-vermilion-light">bientap@mangachronicle.vn</a>
+          <p class="mt-3 text-sm text-paper/60">Địa chỉ email mẫu của bản thử nghiệm.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 py-6 text-sm text-paper/60 sm:flex-row sm:justify-between">
+        <p>&copy; 2026 MANGA CHRONICLE. Dữ liệu mẫu, bản thử nghiệm.</p>
+        <p>Ảnh: tư liệu phạm vi công cộng và Creative Commons.</p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="select-none whitespace-nowrap px-2 font-display text-[9.4vw] font-extrabold leading-[0.85] tracking-tighter text-paper/[0.08]">MANGA CHRONICLE</p>
+  </footer>
+
+  <dialog id="tim-kiem" aria-labelledby="tim-kiem-title" class="w-[min(92vw,40rem)] border border-ink/30 bg-paper p-0 text-ink shadow-2xl backdrop:bg-ink/60">
+    <form action="kho-luu-tru.html" method="get" class="p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-4">
+        <p id="tim-kiem-title" class="font-display text-2xl font-bold sm:text-3xl">Tìm trong kho lưu trữ</p>
+        <button type="button" data-modal-close aria-label="Đóng ô tìm kiếm" class="grid h-11 w-11 shrink-0 place-items-center transition duration-300 hover:bg-ink hover:text-paper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <label for="q-global" class="mt-6 block text-sm font-semibold">Tên tác giả, tác phẩm hoặc chủ đề</label>
+      <div class="mt-2 flex flex-col gap-3 sm:flex-row">
+        <input id="q-global" name="q" type="search" autocomplete="off" placeholder="Ví dụ: Tezuka, Hokusai, bảo tàng" class="min-h-[52px] min-w-0 flex-1 border border-ink/40 bg-paper-light px-4 text-base text-ink placeholder:text-archive-deep focus:border-ink focus:outline-none focus:ring-2 focus:ring-vermilion">
+        <button type="submit" class="min-h-[52px] bg-vermilion px-6 font-semibold text-paper transition duration-300 hover:bg-ink">Tìm hồ sơ</button>
+      </div>
+      <p class="mt-4 text-sm text-ink/75">Gợi ý: <a href="kho-luu-tru.html?q=Tezuka" class="underline decoration-vermilion underline-offset-4 hover:text-vermilion">Tezuka</a>, <a href="kho-luu-tru.html?q=Kyoto" class="underline decoration-vermilion underline-offset-4 hover:text-vermilion">Kyoto</a>, <a href="kho-luu-tru.html?q=Hokusai" class="underline decoration-vermilion underline-offset-4 hover:text-vermilion">Hokusai</a></p>
+    </form>
+  </dialog>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

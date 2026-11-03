@@ -1,0 +1,81 @@
+{
+  "brand": "CLINIQUE 24/7",
+  "language": "en",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Phiếu hồ sơ y khoa kiểu Swiss: lưới 12 cột kẻ mảnh, số thứ tự lớn, dấu + đỏ cam đánh dấu điểm cần chú ý, xanh cobalt cho hành động",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Da liễu thẩm mỹ theo chuẩn y khoa",
+    "description": "Giao diện phòng khám thẩm mỹ và chăm sóc da theo phong cách đồ họa y khoa Thụy Sĩ."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu định hướng chuyên môn, nhóm dịch vụ, quy trình tư vấn và thông tin phòng khám; dẫn sang Dịch vụ & Bảng giá và đặt lịch tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-type", "source": "ba", "note": "Tiêu đề lớn, bố cục bất đối xứng, ảnh đặt lệch" },
+        { "id": "approach", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Định hướng chuyên môn, 3 nguyên tắc đánh số" },
+        { "id": "services", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "3 nhóm dịch vụ, link sang pages/services.html" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "Quy trình tư vấn 4 bước trên dải cobalt" },
+        { "id": "clinic", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Thông tin phòng khám: địa chỉ, giờ, điện thoại, bản đồ" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Nút Book a Consultation mở form tư vấn" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "doctor consultation patient desk", "file": "assets/img/about-intake.jpg", "status": "ok" },
+        { "slot": "approach", "query": "laser skin treatment", "file": "assets/img/home-skin-laser-forehead.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Services & Pricing",
+      "purpose": "Danh sách dịch vụ đánh số theo 3 nhóm (điều trị da, chăm sóc da chuyên sâu, thẩm mỹ không phẫu thuật) với mô tả, mục đích, lưu ý, giá tham khảo; bảng giá gọn có lọc theo nhóm; FAQ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Mục lục nhảy nhanh tới 3 nhóm" },
+        { "id": "skin-treatment", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "Nhóm 01" },
+        { "id": "intensive-care", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "Nhóm 02" },
+        { "id": "non-surgical", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "Nhóm 03" },
+        { "id": "pricing", "catalog": "pricing", "variant": "gallery-filter", "source": "ba", "note": "Bảng giá tham khảo, lọc theo nhóm (data-filter-group)" },
+        { "id": "faq", "catalog": "faq", "variant": "accordion", "source": "ai", "note": "Câu hỏi về giá và tư vấn" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "skin-treatment", "query": "laser skin treatment", "file": "assets/img/services-laser-cheek.jpg", "status": "ok" },
+        { "slot": "intensive-care", "query": "facial skin treatment clinic", "file": "assets/img/services-intensive-care.jpg", "status": "ok" },
+        { "slot": "non-surgical", "query": "facial skin treatment clinic", "file": "assets/img/services-non-surgical.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Giới thiệu phòng khám, đội ngũ, cơ sở vật chất, quy trình tiếp nhận và tiêu chuẩn chuyên môn",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Giới thiệu phòng khám" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Theo vai trò, chưa có tên / ảnh bác sĩ thật" },
+        { "id": "facilities", "catalog": "gallery", "variant": "features-bento", "source": "ba", "note": "Cơ sở vật chất" },
+        { "id": "intake", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Quy trình tiếp nhận 5 bước" },
+        { "id": "standards", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Tiêu chuẩn chuyên môn (cam kết làm việc, không phải chứng nhận)" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "story", "query": "doctor consultation patient desk", "file": "assets/img/home-hero-consultation.jpg", "status": "ok" },
+        { "slot": "facilities", "query": "clinic treatment room", "file": "assets/img/about-facility-corridor.jpg", "status": "ok" },
+        { "slot": "team", "query": "dermatologist portrait", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Dựng đúng 3 trang chính theo chú thích của BA (Trang chủ, Dịch vụ & Bảng giá, Về chúng tôi); thông tin phòng khám đặt ở trang chủ, không có trang Contact riêng",
+    "Art direction 'Swiss Medical' của BA thay cho font serif của preset editorial: dùng Geist (sans-serif) + Geist Mono cho số; bảng màu trắng / xanh cobalt / đỏ cam / xám nhạt thay cho bảng màu preset",
+    "Concept chọn ngôn ngữ chính tiếng Anh và ghi không tạo bộ chuyển ngôn ngữ, trong khi chú thích yêu cầu song ngữ Việt - Anh: website dựng bản tiếng Anh đầy đủ, công tắc EN / VI đặt sẵn trên header, bấm VI hiện thông báo bản tiếng Việt đang chuẩn bị",
+    "Không có dữ liệu bác sĩ, chứng nhận, số liệu y khoa: phần đội ngũ trình bày theo vai trò, phần tiêu chuẩn là cam kết làm việc, có ghi chú chờ phòng khám cung cấp"
+  ],
+  "limitations": [
+    "Form 'Book a Consultation' là bản demo, chưa có backend",
+    "Bản tiếng Việt chưa dựng; công tắc VI chỉ hiện thông báo",
+    "Giá tham khảo, thời lượng, địa chỉ, số điện thoại, giờ mở cửa là dữ liệu mẫu, cần phòng khám xác nhận",
+    "Cần ảnh thật từ khách: chân dung đội ngũ bác sĩ, ảnh cơ sở vật chất thực tế của phòng khám"
+  ]
+}

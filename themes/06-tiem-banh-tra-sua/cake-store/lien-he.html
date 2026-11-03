@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liên hệ | Tiệm Bánh Kem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-011 Liên hệ: FR-003. Không có form liên hệ (khách liên hệ qua gọi / Zalo / MXH). -->
+<body data-screen="SCR-011" data-layout="public" data-nav="contact" class="bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="mx-auto max-w-shell px-4 md:px-6 lg:px-8 pt-10 md:pt-14">
+    <h1 class="font-display font-bold text-[34px] md:text-[44px] leading-[1.15] text-primary-strong pb-1" data-i18n="contact.title">Ghé tiệm chơi nha</h1>
+
+    <div class="mt-8 grid lg:grid-cols-12 gap-6 items-stretch">
+      <div class="lg:col-span-5 space-y-4">
+        <section class="rounded-3xl bg-white shadow-soft p-6" aria-labelledby="addr-h">
+          <h2 id="addr-h" class="flex items-center gap-2 font-extrabold text-lg"><i class="ph ph-map-pin text-2xl text-primary-strong" aria-hidden="true"></i><span data-i18n="common.address">Địa chỉ</span></h2>
+          <p id="addr" class="mt-2 text-[17px] font-semibold"></p>
+          <a id="dir" href="#" target="_blank" rel="noopener" class="btn btn-secondary h-11 px-5 mt-4"><i class="ph ph-navigation-arrow" aria-hidden="true"></i><span data-i18n="common.directions">Chỉ đường</span></a>
+        </section>
+        <section class="rounded-3xl bg-mint/60 polka-mint p-6" aria-labelledby="hours-h">
+          <div class="flex items-center justify-between gap-2"><h2 id="hours-h" class="flex items-center gap-2 font-extrabold text-lg"><i class="ph ph-clock text-2xl text-mint-strong" aria-hidden="true"></i><span data-i18n="common.hours">Giờ mở cửa</span></h2><span id="open" class="badge"></span></div>
+          <ul id="hours" class="mt-3 space-y-1.5 text-[16px]"></ul>
+        </section>
+        <section class="rounded-3xl bg-white shadow-soft p-6" aria-labelledby="phone-h">
+          <h2 id="phone-h" class="flex items-center gap-2 font-extrabold text-lg"><i class="ph ph-phone text-2xl text-primary-strong" aria-hidden="true"></i><span data-i18n="common.phone">Điện thoại</span></h2>
+          <p id="phone" class="mt-2 text-2xl font-extrabold tabular-nums"></p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <a id="call" href="#" class="btn btn-primary h-11 px-5"><i class="ph-fill ph-phone" aria-hidden="true"></i><span data-i18n="fab.call">Gọi tiệm</span></a>
+            <a id="zalo" href="#" target="_blank" rel="noopener" class="btn btn-secondary h-11 px-5" data-i18n="fab.zalo">Nhắn Zalo</a>
+          </div>
+          <h3 class="mt-6 font-extrabold" data-i18n="common.follow">Theo dõi tiệm</h3>
+          <div class="mt-2 flex gap-2">
+            <a id="fb" href="#" target="_blank" rel="noopener" class="btn btn-ghost h-11 px-4 border border-beige"><i class="ph ph-facebook-logo text-xl" aria-hidden="true"></i>Facebook</a>
+            <a id="ig" href="#" target="_blank" rel="noopener" class="btn btn-ghost h-11 px-4 border border-beige"><i class="ph ph-instagram-logo text-xl" aria-hidden="true"></i>Instagram</a>
+          </div>
+        </section>
+      </div>
+      <div class="lg:col-span-7 relative rounded-3xl overflow-hidden bg-beige min-h-[260px] lg:min-h-0">
+        <iframe id="map" title="Bản đồ đường tới tiệm" class="absolute inset-0 w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Dự phòng khi bản đồ lỗi (E-GT-01): địa chỉ dạng chữ + liên kết -->
+        <noscript><p class="p-6">292/12 Cách Mạng Tháng 8</p></noscript>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script>
+    App.onReady(function () {
+      var s = MOCK.shop;
+      function render() {
+        $('#addr').textContent = s.address;
+        $('#dir').href = UI.mapUrl();
+        $('#hours').innerHTML = s.hours.map(function (h) { return '<li class="flex justify-between gap-4"><span>' + (I18n.lang === 'en' ? h.days_en : h.days) + '</span><span class="font-bold tabular-nums">' + h.open + ' - ' + h.close + '</span></li>'; }).join('');
+        var open = UI.isOpenNow(), b = $('#open');
+        b.textContent = I18n.t(open ? 'common.openNow' : 'common.closed');
+        b.className = 'badge bg-white ' + (open ? 'text-mint-strong' : 'text-stone2-strong');
+        $('#phone').textContent = s.phone;
+        $('#call').href = 'tel:' + s.phone.replace(/\s/g, '');
+        $('#zalo').href = 'https://zalo.me/' + s.zalo;
+        $('#fb').href = s.facebook; $('#ig').href = s.instagram;
+        var m = $('#map'); if (!m.src) m.src = UI.mapEmbed();
+      }
+      render();
+      document.addEventListener('langchange', render);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+:root {
+  --signal: #FF5A1F;
+  --ink: #171717;
+  --concrete: #B8B8B3;
+  --paper: #F4F2EC;
+  --acid: #D9FF3F;
+  --ui-accent: #FF5A1F;
+  --font-display: "Barlow Condensed", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Bricolage Grotesque", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Consolas, system-ui, Arial, sans-serif;
+}
+
+html { scroll-padding-top: 88px; }
+body { font-family: var(--font-body); background: var(--paper); color: var(--ink); }
+::selection { background: var(--signal); color: var(--ink); }
+
+/* Chữ outline cho số lớn / chữ nền */
+.outline-ink { color: transparent; -webkit-text-stroke: 2px var(--ink); }
+.outline-paper { color: transparent; -webkit-text-stroke: 2px var(--paper); }
+.outline-signal { color: transparent; -webkit-text-stroke: 2px var(--signal); }
+
+/* Tiêu đề display nhiều dòng: đủ khoảng cho dấu tiếng Việt chồng tầng */
+h1.font-display, h2.font-display { line-height: 1 !important; }
+
+/* Chữ tách từ (motion.js): chừa chỗ cho dấu tiếng Việt trên / dưới */
+[data-split] .m-split-w { padding-top: .2em !important; margin-top: -.2em !important; padding-bottom: .18em !important; margin-bottom: -.18em !important; }
+
+/* Header khi đã cuộn: giữ nền đặc */
+[data-header].is-scrolled { box-shadow: 0 4px 0 var(--ink); }
+
+/* Tem nhãn (stamp) */
+.stamp { border: 2px solid currentColor; padding: .35rem .6rem; font-family: var(--font-mono); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; line-height: 1; }
+
+/* Băng dán chéo (district tape) */
+.tape { background: repeating-linear-gradient(-45deg, var(--signal) 0 18px, var(--ink) 18px 36px); }
+
+/* Ảnh studio: tông thô đen trắng, đồng bộ chất ảnh đường phố */
+#studio img { filter: grayscale(1) contrast(1.15); }
+
+/* Ẩn mục lọc */
+[data-category].is-gone { display: none; }
+[data-category] { transition: opacity .3s ease, transform .3s ease; }
+[data-category].is-out { opacity: 0; transform: scale(.97); }
+
+/* Nút ngôn ngữ đang chọn */
+[data-set-lang][aria-pressed="true"] { background: var(--ink); color: var(--signal); }
+
+/* Marquee tạm dừng khi hover (đánh dấu bằng class) */
+.marquee-pause:hover * { animation-play-state: paused !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+  [data-category] { transition: none; }
+}

@@ -1,0 +1,54 @@
+/* BLOOM HAIR ATELIER — biến màu / font dùng chung */
+:root {
+  --bloom-lavender: #B7A1D9;
+  --soft-lavender: #E9E0F3;
+  --milky-white: #FFFDFB;
+  --petal-pink: #F2DDE5;
+  --smoky-lilac: #87768F;
+  --deep-plum: #382B3D;
+  --soft-taupe: #B9AEB7;
+  --swatch-rose: #9C6B63;
+  --swatch-lavbrown: #7E6A86;
+  --swatch-beige: #D9C2A3;
+  --swatch-pink: #E8B9C8;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, serif;
+  --font-body: Manrope, system-ui, sans-serif;
+  --ui-accent: #9F86C7;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--milky-white); color: var(--deep-plum); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--bloom-lavender); color: var(--deep-plum); }
+
+/* Khung vòm — ý tưởng thị giác xuyên suốt (cánh hoa / gương salon) */
+.arch { border-radius: 999px 999px 0 0; overflow: hidden; }
+.arch-sm { border-radius: 240px 240px 0 0; overflow: hidden; }
+
+/* Dải swatch 4 màu tóc */
+.swatch-strip { display: flex; height: 6px; width: 100%; }
+.swatch-strip > span { flex: 1; }
+
+/* Drop cap kiểu tạp chí */
+.dropcap::first-letter { font-family: var(--font-display); float: left; font-size: 4.6em; line-height: .8; padding: .08em .12em 0 0; color: var(--bloom-lavender); font-weight: 500; }
+
+/* Header thu gọn khi cuộn (motion.js gắn .is-scrolled) */
+[data-header] { transition: background-color .4s ease, box-shadow .4s ease, padding .4s ease; }
+[data-header].is-scrolled { background: rgba(255, 253, 251, .94); box-shadow: 0 1px 0 rgba(56, 43, 61, .12); backdrop-filter: saturate(140%) blur(8px); }
+[data-header].is-scrolled .hdr-inner { padding-top: .7rem; padding-bottom: .7rem; }
+
+/* Modal đặt lịch: góc vuông theo hệ editorial */
+dialog[data-ui-modal].bloom-modal { border-radius: 0; max-width: min(94vw, 640px); background: var(--milky-white); color: var(--deep-plum); }
+
+/* Lightbox / filter: mục ẩn */
+[data-category].is-out { opacity: 0; transform: scale(.97); transition: opacity .3s ease, transform .3s ease; }
+[data-category] { transition: opacity .45s cubic-bezier(.16,1,.3,1), transform .45s cubic-bezier(.16,1,.3,1); }
+[data-category].is-gone { display: none; }
+
+/* Ngôn ngữ: nút đang chọn */
+[data-lang].is-active { color: var(--deep-plum); }
+[data-lang].is-active::after { transform: scaleX(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-header], [data-category], [data-category].is-out { transition: none !important; }
+}

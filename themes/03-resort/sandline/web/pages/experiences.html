@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experiences — SANDLINE</title>
+<meta name="description" content="Stargazing, canyon walks, desert dining, quiet hours by the pool and the crafts of Almería: experiences at SANDLINE.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Jost:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var _l=localStorage.getItem('sandline-lang');if(_l)document.documentElement.setAttribute('lang',_l);}catch(e){}</script>
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-bone text-umber">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="header-in group/h fixed inset-x-0 top-0 z-40 text-bone transition-colors duration-500 [&.is-scrolled]:bg-bone/95 [&.is-scrolled]:text-umber [&.is-scrolled]:shadow-[0_1px_0_#D3C4AD] [&.is-scrolled]:backdrop-blur">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-[1.6rem] font-medium uppercase leading-none tracking-[0.22em]" aria-label="SANDLINE home">SANDLINE</a>
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 text-[15px] tracking-wide after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Home</a>
+      <a href="../pages/about.html" class="relative py-2 text-[15px] tracking-wide after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">About</a>
+      <a href="../pages/accommodation.html" class="relative py-2 text-[15px] tracking-wide after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Accommodation</a>
+      <a aria-current="page" href="../pages/experiences.html" class="relative py-2 text-[15px] tracking-wide after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Experiences</a>
+    </nav>
+    <div class="flex items-center gap-3 sm:gap-5">
+      <div class="hidden items-center font-mono text-xs sm:flex" role="group" aria-label="Language">
+        <button type="button" data-lang-toggle="en" aria-pressed="true" class="px-1.5 py-2">EN</button>
+        <span aria-hidden="true" class="opacity-50">/</span>
+        <button type="button" data-lang-toggle="vi" aria-pressed="false" class="px-1.5 py-2">VI</button>
+      </div>
+      <button type="button" data-modal-open="enquire" class="hidden min-h-[44px] border border-current px-5 text-[13px] font-medium uppercase tracking-[0.16em] transition-colors duration-300 hover:bg-umber hover:text-bone hover:border-umber active:scale-[.98] sm:inline-flex sm:items-center">Enquire</button>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center lg:hidden" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div id="mnav" class="fixed inset-x-0 top-0 z-50 bg-umber px-6 pb-10 pt-6 text-bone lg:hidden">
+  <div class="flex items-center justify-between">
+    <span class="font-display text-2xl uppercase tracking-[0.22em]">SANDLINE</span>
+    <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+  <nav class="mt-10 flex flex-col divide-y divide-bone/15 border-y border-bone/15" aria-label="Mobile">
+    <a href="../index.html" class="py-4 font-display text-3xl aria-[current=page]:text-sand">Home</a>
+    <a href="../pages/about.html" class="py-4 font-display text-3xl aria-[current=page]:text-sand">About</a>
+    <a href="../pages/accommodation.html" class="py-4 font-display text-3xl aria-[current=page]:text-sand">Accommodation</a>
+    <a aria-current="page" href="../pages/experiences.html" class="py-4 font-display text-3xl aria-[current=page]:text-sand">Experiences</a>
+  </nav>
+  <div class="mt-8 flex items-center justify-between">
+    <div class="flex items-center font-mono text-sm" role="group" aria-label="Language">
+      <button type="button" data-lang-toggle="en" aria-pressed="true" class="px-2 py-3">EN</button>
+        <span aria-hidden="true" class="opacity-50">/</span>
+        <button type="button" data-lang-toggle="vi" aria-pressed="false" class="px-2 py-3">VI</button>
+    </div>
+    <button type="button" data-modal-open="enquire" class="min-h-[48px] bg-sand px-6 text-sm font-medium uppercase tracking-[0.16em] text-umber">Enquire</button>
+  </div>
+</div>
+<!-- /@partial header -->
+<main>
+
+  <!-- PAGE HERO -->
+  <section id="exp-hero" data-section="page-hero" class="relative min-h-[85vh] overflow-hidden bg-umber text-bone">
+    <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%]">
+      <img src="https://images.unsplash.com/photo-1486314030120-d5ab85fe58cd?auto=format&fit=crop&w=2400&q=80" referrerpolicy="no-referrer" alt="Desert dunes with long shadows in low morning sun" class="hero-zoom h-full w-full object-cover" width="2400" height="1600">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-umber/85 via-umber/20 to-umber/30"></div>
+    <div class="relative z-10 mx-auto flex min-h-[85vh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-14 pt-28 sm:px-6 lg:px-10 lg:pb-20 2xl:px-16">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
+        <h1 data-split="words" class="font-display text-[clamp(2.75rem,6.5vw,6.5rem)] leading-[1.03] lg:col-span-8">Days measured by light.</h1>
+        <p data-reveal="up" data-reveal-delay="450" class="max-w-md text-lg leading-relaxed text-bone/90 lg:col-span-4">From the first line of sun on the dunes to the last star overhead, each day here follows the desert's own rhythm.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 STARGAZING -->
+  <section id="stargazing" data-section="experience-night" data-particles="stars" data-particles-color="#F4EFE5" data-particles-density="0.6" class="relative overflow-hidden bg-umber py-24 text-bone lg:py-36">
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-12 lg:gap-12 lg:px-10 2xl:px-16">
+      <div class="md:col-span-7">
+        <div data-reveal="clip" class="group aspect-[3/2] overflow-hidden bg-stone">
+          <img src="https://images.unsplash.com/photo-1654330352875-1f86a5b011cf?auto=format&fit=crop&w=1800&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Night sky full of stars above a desert landscape" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03]" width="1800" height="1200">
+        </div>
+      </div>
+      <div class="md:col-span-5 md:self-center lg:col-span-4 lg:col-start-9">
+        <p data-reveal="fade" class="num-fade font-display text-7xl leading-none text-clay lg:text-8xl">01</p>
+        <h2 data-reveal="up" class="mt-6 font-display text-4xl leading-[1.08] sm:text-5xl">Night sky, uninterrupted</h2>
+        <p data-reveal="up" class="mt-6 text-[17px] leading-relaxed text-bone/85">With no town lights for thirty kilometres, the Milky Way rises clearly over the ridge. Our astronomer leads sessions on the roof terrace with a 14-inch telescope, blankets and hot almond milk.</p>
+        <p data-reveal="up" class="mt-6 font-mono text-xs uppercase tracking-[0.16em] text-sand">Nightly / 90 minutes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 TERRAIN -->
+  <section id="terrain" data-section="experience-split" class="bg-bone py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-12 lg:gap-12 lg:px-10 2xl:px-16">
+      <div class="order-2 md:order-1 md:col-span-5 md:self-end lg:col-span-4 lg:col-start-2">
+        <p data-reveal="fade" class="num-fade font-display text-7xl leading-none text-terracotta lg:text-8xl">02</p>
+        <h2 data-reveal="up" class="mt-6 font-display text-4xl leading-[1.08] sm:text-5xl">Into the canyons</h2>
+        <p data-reveal="up" class="mt-6 text-[17px] leading-relaxed text-stone">Guided walks through the dry ravines of the Rambla de Tabernas, where layers of rock record millions of years. Routes range from a gentle hour to a full day with lunch in the shade of a cliff.</p>
+        <p data-reveal="up" class="mt-6 font-mono text-xs uppercase tracking-[0.16em] text-rust">Daily at sunrise / 2 to 7 hours</p>
+      </div>
+      <div class="order-1 md:order-2 md:col-span-6 md:col-start-7">
+        <div data-reveal="clip" class="group aspect-[4/5] overflow-hidden bg-sand">
+          <img src="https://images.unsplash.com/photo-1682695794816-7b9da18ed470?auto=format&fit=crop&w=1600&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Walker standing small between tall canyon walls" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03]" width="1600" height="2000">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 DINING -->
+  <section id="dining" data-section="experience-type" class="bg-rust py-24 text-bone lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 md:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="md:col-span-7">
+        <p data-reveal="fade" class="num-fade font-display text-7xl leading-none text-sand lg:text-8xl">03</p>
+        <h2 data-split="words" class="mt-6 font-display text-[clamp(2.4rem,5vw,5rem)] leading-[1.05]">Dinner where the road ends.</h2>
+        <p data-reveal="up" class="mt-8 max-w-xl text-[17px] leading-relaxed text-bone/90">Once a week the kitchen moves out to a long table on the dunes. Lamb slow-cooked in clay, almonds, red prawns from Garrucha and wine from the hills of Laujar, served as the sky turns from orange to violet.</p>
+      </div>
+      <div data-reveal="up" class="self-end border-t border-bone/30 md:col-span-4 md:col-start-9">
+        <dl class="divide-y divide-bone/20">
+          <div class="flex items-baseline justify-between gap-6 py-5"><dt class="font-display text-2xl">Gather</dt><dd class="font-mono text-sm">19:30</dd></div>
+          <div class="flex items-baseline justify-between gap-6 py-5"><dt class="font-display text-2xl">Sunset course</dt><dd class="font-mono text-sm">20:15</dd></div>
+          <div class="flex items-baseline justify-between gap-6 py-5"><dt class="font-display text-2xl">Fire and stars</dt><dd class="font-mono text-sm">22:00</dd></div>
+        </dl>
+        <p class="mt-5 text-sm text-bone/80">Thursdays, April to October. Twelve guests at most.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 POOLSIDE -->
+  <section id="poolside" data-section="experience-panorama" class="bg-bone py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="relative aspect-[4/3] overflow-hidden bg-sand sm:aspect-[21/9]">
+        <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[15%]">
+          <img src="https://images.unsplash.com/photo-1791720272846-ae77818a5a5b?auto=format&fit=crop&w=1600&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Pale columns reflected in a long still pool" class="h-full w-full object-cover object-right" width="1600" height="690">
+        </div>
+      </div>
+      <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-12">
+        <p data-reveal="fade" class="num-fade font-display text-7xl leading-none text-terracotta md:col-span-2 lg:text-8xl">04</p>
+        <div class="md:col-span-4 md:col-start-7">
+          <h2 data-reveal="up" class="font-display text-4xl leading-[1.08] sm:text-5xl">Slow hours by the water</h2>
+          <p data-reveal="up" class="mt-6 text-[17px] leading-relaxed text-stone">The hottest part of the day is for doing very little. Shaded loungers along the reflecting pool, cold mint tea, and a massage in the open pavilion when the breeze picks up.</p>
+          <p data-reveal="up" class="mt-6 font-mono text-xs uppercase tracking-[0.16em] text-rust">Every afternoon / 13:00 to 17:00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 LOCAL CULTURE -->
+  <section id="culture" data-section="experience-list" class="bg-dune py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div data-reveal="fade" class="line-draw h-px w-full bg-terracotta"></div>
+      <div class="mt-14 grid grid-cols-1 gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p data-reveal="fade" class="num-fade font-display text-7xl leading-none text-terracotta lg:text-8xl">05</p>
+          <h2 data-reveal="up" class="mt-6 font-display text-4xl leading-[1.08] sm:text-5xl">The makers of Almería</h2>
+          <p data-reveal="up" class="mt-6 max-w-md text-[17px] leading-relaxed text-stone">Half-day visits with the people who keep the region's crafts alive, arranged in small groups and always with time to talk.</p>
+        </div>
+        <ol data-reveal-stagger="100" class="md:col-span-6 md:col-start-7">
+          <li class="grid grid-cols-[3rem_1fr] gap-4 border-b border-line py-7 first:pt-0">
+            <span class="font-mono text-sm text-rust">a.</span>
+            <div><h3 class="font-display text-2xl lg:text-3xl">Pottery in Níjar</h3><p class="mt-2 text-[16px] leading-relaxed text-stone">Throw a bowl with a family of potters working the same clay for four generations.</p></div>
+          </li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 border-b border-line py-7">
+            <span class="font-mono text-sm text-rust">b.</span>
+            <div><h3 class="font-display text-2xl lg:text-3xl">Esparto weaving</h3><p class="mt-2 text-[16px] leading-relaxed text-stone">Learn to braid the wild grass of the hills into baskets and mats.</p></div>
+          </li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-7">
+            <span class="font-mono text-sm text-rust">c.</span>
+            <div><h3 class="font-display text-2xl lg:text-3xl">An old olive mill</h3><p class="mt-2 text-[16px] leading-relaxed text-stone">Taste the new season's oil at a stone mill in the Alpujarra foothills.</p></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section id="closing" data-section="cta-type" class="bg-bone py-28 lg:py-44">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-split="words" class="max-w-6xl font-display text-[clamp(3rem,8vw,8.5rem)] leading-[1] tracking-[-0.01em]">The horizon is the whole programme.</h2>
+      <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-12 md:items-end">
+        <p data-reveal="up" class="max-w-md text-[17px] leading-relaxed text-stone md:col-span-5">Experiences are arranged by our hosts once your stay is confirmed. Tell us what interests you and we will plan the days around the light.</p>
+        <div data-reveal="up" class="flex flex-col gap-4 sm:flex-row md:col-span-6 md:col-start-7 md:justify-end">
+          <button type="button" data-modal-open="enquire" class="inline-flex min-h-[52px] items-center justify-center bg-umber px-8 text-sm font-medium uppercase tracking-[0.16em] text-bone transition-colors duration-300 hover:bg-rust active:scale-[.98]">Enquire</button>
+          <a href="accommodation.html" class="inline-flex min-h-[52px] items-center justify-center border border-umber px-8 text-sm font-medium uppercase tracking-[0.16em] transition-colors duration-300 hover:bg-umber hover:text-bone active:scale-[.98]">View residences</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="bg-umber text-bone">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 border-b border-bone/15 pb-16 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="max-w-sm font-display text-3xl leading-tight lg:text-4xl">Architecture shaped by the land, and the light that crosses it.</p>
+        <button type="button" data-modal-open="enquire" class="mt-8 inline-flex min-h-[48px] items-center bg-sand px-7 text-sm font-medium uppercase tracking-[0.16em] text-umber transition-colors duration-300 hover:bg-bone active:scale-[.98]">Enquire</button>
+      </div>
+      <div class="md:col-span-2">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-sand">Pages</p>
+        <ul class="mt-5 space-y-3 text-[15px]">
+          <li><a href="../index.html" class="transition-colors duration-300 hover:text-sand">Home</a></li>
+          <li><a href="../pages/about.html" class="transition-colors duration-300 hover:text-sand">About</a></li>
+          <li><a href="../pages/accommodation.html" class="transition-colors duration-300 hover:text-sand">Accommodation</a></li>
+          <li><a aria-current="page" href="../pages/experiences.html" class="transition-colors duration-300 hover:text-sand">Experiences</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-sand">Visit</p>
+        <address class="mt-5 not-italic text-[15px] leading-relaxed text-bone/85">Km 14, Camino de los Llanos<br>04200 Tabernas, Almería<br>Spain</address>
+        <p class="mt-4 text-[15px] text-bone/85">Two hours by road from Málaga airport.</p>
+      </div>
+      <div class="md:col-span-2">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-sand">Contact</p>
+        <ul class="mt-5 space-y-3 text-[15px]">
+          <li><a href="tel:+34950418273" class="transition-colors duration-300 hover:text-sand">+34 950 418 273</a></li>
+          <li><a href="mailto:stay@sandline-resort.com" class="break-words transition-colors duration-300 hover:text-sand">stay@sandline-resort.com</a></li>
+          <li><button type="button" data-copy="+34 950 418 273" class="text-bone/70 underline decoration-bone/30 underline-offset-4 transition-colors duration-300 hover:text-sand">Copy number</button></li>
+        </ul>
+      </div>
+    </div>
+    <p class="select-none overflow-hidden pt-10 font-display text-[19vw] leading-[0.8] tracking-[0.04em] text-bone/[0.08] lg:text-[16.5vw] 2xl:text-[15rem]" aria-hidden="true">SANDLINE</p>
+    <div class="flex flex-col gap-3 border-t border-bone/15 py-7 text-sm text-bone/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 SANDLINE. All rights reserved.</p>
+      <p>Prototype website for presentation.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="enquire" class="w-[min(92vw,640px)] bg-bone p-0 text-umber">
+  <div class="p-6 sm:p-10">
+    <div class="flex items-start justify-between gap-6">
+      <div>
+        <p class="font-display text-3xl sm:text-4xl">Plan your stay</p>
+        <p class="mt-2 text-[15px] text-stone">Tell us when you would like to come. Our reservations team replies within one working day.</p>
+      </div>
+      <button type="button" data-modal-close aria-label="Close" class="inline-flex h-11 w-11 shrink-0 items-center justify-center border border-line transition-colors duration-300 hover:bg-umber hover:text-bone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <form data-form="enquire" class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2" novalidate>
+      <div class="flex flex-col gap-2 sm:col-span-2">
+        <label for="enq-name" class="text-sm font-medium">Full name</label>
+        <input id="enq-name" name="name" required minlength="2" autocomplete="name" class="min-h-[48px] border border-stone/50 bg-white/60 px-4 text-base text-umber placeholder:text-stone focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="enq-email" class="text-sm font-medium">Email</label>
+        <input id="enq-email" name="email" type="email" required autocomplete="email" class="min-h-[48px] border border-stone/50 bg-white/60 px-4 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="enq-stay" class="text-sm font-medium">Residence</label>
+        <select id="enq-stay" name="residence" class="min-h-[48px] border border-stone/50 bg-white/60 px-3 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+          <option>Desert Suite</option>
+          <option>Courtyard Villa</option>
+          <option>Horizon Residence</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="enq-in" class="text-sm font-medium">Arrival</label>
+        <input id="enq-in" name="arrival" type="date" required class="min-h-[48px] border border-stone/50 bg-white/60 px-4 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="enq-nights" class="text-sm font-medium">Nights</label>
+        <input id="enq-nights" name="nights" type="number" min="1" max="30" value="3" required class="min-h-[48px] border border-stone/50 bg-white/60 px-4 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+      </div>
+      <div class="flex flex-col gap-2 sm:col-span-2">
+        <label for="enq-note" class="text-sm font-medium">Anything we should know</label>
+        <textarea id="enq-note" name="note" rows="3" class="border border-stone/50 bg-white/60 px-4 py-3 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"></textarea>
+      </div>
+      <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-sm text-stone">Demo form. Nothing is sent from this prototype.</p>
+        <button type="submit" class="min-h-[48px] bg-umber px-8 text-sm font-medium uppercase tracking-[0.16em] text-bone transition-colors duration-300 hover:bg-rust active:scale-[.98]">Send enquiry</button>
+      </div>
+    </form>
+  </div>
+</dialog>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

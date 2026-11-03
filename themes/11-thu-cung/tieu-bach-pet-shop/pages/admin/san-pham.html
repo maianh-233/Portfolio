@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sản phẩm (quản trị) · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-PROD-004" data-module="PROD" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-PROD-004 Sản phẩm (quản trị): DataTable chọn nhiều + lọc nhóm / thú cưng / trạng thái / tồn kho + Ẩn / Hiện lại hàng loạt;
+   * Sửa → SCR-PROD-005; Xóa chỉ khi chưa có đơn (BR-PROD), đã có đơn chỉ được ẩn. */
+  Layout.mount({ area: 'admin', title: 'Sản phẩm', active: 'products', breadcrumb: [['Hàng hóa'], ['Sản phẩm']] }, function (main) {
+    var U = Perm.url, esc = UI.esc, tbl;
+    var cats = DemoStore.list('categories');
+    function catName(id) { var c = cats.filter(function (x) { return x.id === id; })[0]; return c ? c.ten : ''; }
+    function rows() {
+      return DemoStore.list('products').map(function (p) {
+        var prices = p.variants.map(function (v) { return v.gia; }), stock = p.la_pate ? null : p.variants.reduce(function (s, v) { return s + (v.ton_kho || 0); }, 0);
+        var ss = p.la_pate ? 'pate' : p.variants.every(function (v) { return !v.ton_kho; }) ? 'het' : p.variants.some(function (v) { return v.ton_kho <= v.nguong; }) ? 'sap-het' : 'con';
+        return Object.assign({}, p, { cat: catName(p.category_id), min: Math.min.apply(null, prices), max: Math.max.apply(null, prices), stock: stock, ss: ss, skus: p.variants.map(function (v) { return v.sku; }).join(' ') });
+      });
+    }
+    function edit(id) { return U('pages/admin/sua-san-pham.html' + (id ? '?id=' + id : '')); }
+    function setStatus(list, st) {
+      list.forEach(function (p) { DemoStore.update('products', p.id, { trang_thai: st, cap_nhat: new Date().toISOString() }); });
+      UI.toast((st === 'AN' ? 'Đã ẩn ' : 'Đã hiện lại ') + list.length + ' sản phẩm', 'success'); paint();
+    }
+    function askHide(list) { UI.confirm({ title: 'Ẩn ' + list.length + ' sản phẩm?', message: 'Khách sẽ không thấy các sản phẩm này.', confirmLabel: 'Ẩn sản phẩm', danger: true }).then(function (ok) { if (ok) setStatus(list, 'AN'); }); }
+    function paint() {
+      var l = rows();
+      main.querySelector('[data-head]').innerHTML = UI.pageHeader({ title: 'Sản phẩm', description: l.length + ' sản phẩm', actions: '<span class="hidden md:inline-flex">' + UI.button({ label: 'Thêm sản phẩm', icon: 'plus', href: edit(), attrs: { 'data-permission': 'PROD.PRODUCT.CREATE' } }) + '</span>' });
+      if (tbl) { tbl.setRows(l); return; }
+      tbl = UI.table(main.querySelector('[data-tbl]'), {
+        rows: l, pageSize: 20, selectable: true, columnToggle: true, sort: { key: 'cap_nhat', dir: 'desc' },
+        searchKeys: ['ten', 'skus'], searchPlaceholder: 'Tìm tên hoặc SKU…',
+        filters: [
+          { key: 'category_id', label: 'Nhóm', type: 'select', options: cats.map(function (c) { return { value: c.id, label: c.ten }; }) },
+          { key: 'pet', label: 'Thú cưng', type: 'select', options: MOCK.petTypes.map(function (t) { return { value: t.id, label: t.full }; }), match: function (r, v) { return r.pet_type_ids.indexOf(v) >= 0; } },
+          { key: 'trang_thai', label: 'Trạng thái', type: 'select', options: [{ value: 'DANG_BAN', label: 'Đang bán' }, { value: 'AN', label: 'Ẩn' }] },
+          { key: 'ss', label: 'Tồn kho', type: 'select', options: [{ value: 'con', label: 'Còn hàng' }, { value: 'sap-het', label: 'Sắp hết' }, { value: 'het', label: 'Hết hàng' }] }],
+        columns: [
+          { key: 'img', label: 'Ảnh', toggle: false, width: 'w-16', render: function (p) { return '<span class="block size-12 overflow-hidden rounded-md bg-neutral-100">' + UI.img({ src: p.anh[0], alt: '' }) + '</span>'; } },
+          { key: 'ten', label: 'Tên sản phẩm', sortable: true, mobile: 'title', render: function (p) { return '<a href="' + edit(p.id) + '" class="font-bold text-neutral-800 hover:text-primary-700">' + esc(p.ten) + '</a>' + (p.so_danh_gia ? '<div class="mt-0.5">' + UI.ratingStars(p.sao, { size: 'xs', count: p.so_danh_gia }) + '</div>' : ''); } },
+          { key: 'cat', label: 'Nhóm', sortable: true, render: function (p) { return UI.tag(p.cat, p.la_pate ? 'mint' : 'neutral'); } },
+          { key: 'pets', label: 'Thú cưng', hideBelow: 'lg', render: function (p) { return '<div class="flex flex-wrap gap-1">' + App.petTags(p.pet_type_ids).map(function (t) { return UI.tag(t.label.replace('Cho ', ''), t.tone); }).join('') + '</div>'; } },
+          { key: 'min', label: 'Giá', sortable: true, align: 'right', render: function (p) { return '<span class="whitespace-nowrap tabular-nums">' + UI.fmt.money(p.min) + (p.max > p.min ? ' – ' + UI.fmt.money(p.max) : '') + '</span>'; } },
+          { key: 'nv', label: 'Biến thể', align: 'center', hideBelow: 'lg', render: function (p) { return p.variants.length; } },
+          { key: 'stock', label: 'Tồn kho', sortable: true, align: 'right', sortValue: function (p) { return p.stock == null ? -1 : p.stock; }, render: function (p) { return p.stock == null ? '<span class="text-neutral-400">—</span>' : '<b class="tabular-nums">' + p.stock + '</b>' + (p.ss === 'het' ? '<div>' + UI.tag('Hết hàng', 'danger') + '</div>' : p.ss === 'sap-het' ? '<div>' + UI.tag('Sắp hết', 'warning') + '</div>' : ''); } },
+          { key: 'trang_thai', label: 'Trạng thái', mobile: 'badge', render: function (p) { return p.trang_thai === 'DANG_BAN' ? UI.statusBadge('Đang bán', 'success') : UI.statusBadge('Ẩn', 'neutral'); } }],
+        rowActions: function (p) {
+          return [{ label: 'Sửa', icon: 'pencil', primary: true, variant: 'secondary', permission: 'PROD.PRODUCT.UPDATE', onClick: function () { location.href = edit(p.id); } },
+            p.trang_thai === 'DANG_BAN' ? { label: 'Ẩn', icon: 'eye-off', permission: 'PROD.PRODUCT.UPDATE', onClick: function () { askHide([p]); } } : { label: 'Hiện lại', icon: 'eye', permission: 'PROD.PRODUCT.UPDATE', onClick: function () { setStatus([p], 'DANG_BAN'); } },
+            { label: 'Nhân bản', icon: 'copy', permission: 'PROD.PRODUCT.CREATE', onClick: function () { location.href = U('pages/admin/sua-san-pham.html?copy=' + p.id); } },
+            p.trang_thai === 'DANG_BAN' ? { label: 'Xem trên web', icon: 'external-link', href: App.productHref(p), onClick: function () { window.open(App.productHref(p), '_blank'); } } : null,
+            { label: 'Xóa', icon: 'trash-2', danger: true, permission: 'PROD.PRODUCT.DELETE', disabled: !!p.has_orders, tooltip: p.has_orders ? 'Sản phẩm đã có đơn, chỉ có thể ẩn' : '', onClick: function () {
+              if (p.has_orders) return;
+              UI.confirm({ title: 'Xóa vĩnh viễn ' + esc(p.ten) + '?', message: 'Không thể hoàn tác.', confirmLabel: 'Xóa', danger: true }).then(function (ok) { if (ok) { DemoStore.remove('products', p.id); UI.toast('Đã xóa sản phẩm', 'success'); paint(); } });
+            } }];
+        },
+        bulkActions: [{ label: 'Ẩn', icon: 'eye-off', permission: 'PROD.PRODUCT.UPDATE', onClick: function (sel, api) { askHide(sel); api.clearSelection(); } }, { label: 'Hiện lại', icon: 'eye', permission: 'PROD.PRODUCT.UPDATE', onClick: function (sel, api) { setStatus(sel, 'DANG_BAN'); api.clearSelection(); } }],
+        card: function (p, acts) {
+          return '<div class="rounded-lg border border-neutral-200 bg-white p-4"><div class="flex gap-3"><span class="size-14 shrink-0 overflow-hidden rounded-md bg-neutral-100">' + UI.img({ src: p.anh[0], alt: '' }) + '</span><div class="min-w-0 flex-1"><div class="flex items-start justify-between gap-2"><p class="font-bold">' + esc(p.ten) + '</p>' + (p.trang_thai === 'DANG_BAN' ? UI.statusBadge('Đang bán', 'success') : UI.statusBadge('Ẩn', 'neutral')) + '</div>' +
+            '<p class="mt-1 text-xs text-neutral-600">' + esc(p.cat) + ' · ' + App.petTags(p.pet_type_ids).map(function (t) { return t.label.replace('Cho ', ''); }).join(', ') + '</p><p class="mt-1 text-sm"><b class="tabular-nums">' + UI.fmt.money(p.min) + '</b> · Tồn ' + (p.stock == null ? '—' : p.stock) + '</p></div></div><div class="mt-3">' + acts + '</div></div>';
+        },
+        onRowClick: function (p) { location.href = edit(p.id); },
+        empty: { title: 'Chưa có sản phẩm nào. Thêm sản phẩm đầu tiên cho Tiểu Bạch nhé!', action: UI.button({ label: 'Thêm sản phẩm', icon: 'plus', href: edit() }) },
+        emptyFiltered: { title: 'Không tìm thấy sản phẩm phù hợp' }
+      });
+    }
+    main.innerHTML = '<div data-head></div><div data-tbl>' + UI.skeleton(5) + '</div>' +
+      '<a href="' + edit() + '" data-permission="PROD.PRODUCT.CREATE" class="fixed bottom-6 right-4 z-30 inline-flex size-14 items-center justify-center rounded-full bg-primary-500 text-neutral-800 shadow-lg md:hidden" aria-label="Thêm sản phẩm">' + UI.icon('plus', 'size-6') + '</a>';
+    setTimeout(function () { try { paint(); } catch (e) { main.querySelector('[data-tbl]').innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.' }); } }, 400);
+  });
+  </script>
+</body>
+</html>

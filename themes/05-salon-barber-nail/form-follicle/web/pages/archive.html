@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style Archive — FORM & FOLLICLE</title>
+<meta name="description" content="Style Archive của FORM & FOLLICLE: bộ sưu tập kiểu cắt, kết cấu và màu nhuộm thực hiện tại studio, lọc theo nhóm.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/site.js"></script>
+<!-- /@partial head -->
+</head>
+<body data-title-en="Style Archive | FORM & FOLLICLE">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-silver bg-paper transition-colors duration-300 [&.is-scrolled]:border-ink">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center gap-4 px-4 sm:px-6 lg:gap-8 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-base font-extrabold uppercase tracking-tight text-ink sm:text-lg" aria-label="FORM & FOLLICLE">FORM <span class="text-cobalt">&amp;</span> FOLLICLE</a>
+
+    <nav class="ml-auto hidden lg:block" aria-label="Điều hướng chính" data-en-aria-label="Main navigation">
+      <ul class="flex items-center gap-8">
+        <li><a href="../index.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">01</span><span data-en="Home">Trang chủ</span></a></li>
+        <li><a href="../pages/services.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">02</span><span data-en="Services">Dịch vụ</span></a></li>
+        <li><a aria-current="page" href="../pages/archive.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">03</span><span>Archive</span></a></li>
+        <li><a href="../pages/studio.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">04</span><span>Studio</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="ml-auto flex items-center gap-3 lg:ml-0">
+      <div class="flex border border-ink text-xs font-semibold" role="group" aria-label="Chọn ngôn ngữ" data-en-aria-label="Choose language">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="h-10 w-10 transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="h-10 w-10 border-l border-ink transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white">EN</button>
+      </div>
+      <button type="button" data-modal-open="booking" class="hidden h-11 items-center gap-2 bg-cobalt px-5 text-[13px] font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobalt active:scale-[.98] sm:inline-flex"><span data-en="Book a Visit">Đặt lịch</span>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink transition-colors duration-300 hover:bg-ink hover:text-white lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-0 top-[72px] z-50 max-h-[calc(100dvh-72px)] overflow-y-auto border-b border-ink bg-paper px-4 pb-8 pt-4 sm:px-6 lg:hidden">
+    <ul class="divide-y divide-silver border-y border-silver">
+      <li><a href="../index.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">01</span><span data-en="Home">Trang chủ</span></a></li>
+      <li><a href="../pages/services.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">02</span><span data-en="Services">Dịch vụ</span></a></li>
+      <li><a aria-current="page" href="../pages/archive.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">03</span><span>Archive</span></a></li>
+      <li><a href="../pages/studio.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">04</span><span>Studio</span></a></li>
+    </ul>
+    <button type="button" data-modal-open="booking" class="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 bg-cobalt text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric"><span data-en="Book a Visit">Đặt lịch</span></button>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- ARCHIVE HERO -->
+  <section id="archive-hero" data-section="page-hero" class="relative overflow-hidden bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-16 pt-12 sm:px-6 lg:px-10 lg:pb-20 lg:pt-14 2xl:px-16">
+      <p class="flex items-center gap-4 text-xs font-semibold uppercase tracking-[.2em]" data-reveal="fade"><span class="h-px w-10 bg-ink"></span><span>Cut <span class="text-cobalt">/</span> Color <span class="text-cobalt">/</span> Texture</span></p>
+      <h1 class="font-display display-tight mt-6 whitespace-nowrap text-[3.1rem] font-black uppercase sm:text-8xl lg:text-[9rem] 2xl:text-[12rem]" data-reveal="up">Archive<span class="text-cobalt">/</span>001</h1>
+      <div class="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-8">
+        <div class="flex flex-col justify-between gap-10 lg:col-span-4" data-reveal="up">
+          <p class="max-w-prose text-lg leading-relaxed text-graphite lg:text-xl" data-en="The first volume of the studio’s archive: cuts, textures and colors photographed after each appointment, filed by code and category.">Tập đầu tiên trong kho lưu trữ của studio: những kiểu cắt, kết cấu và màu nhuộm được chụp lại sau mỗi buổi hẹn, xếp theo mã và nhóm.</p>
+          <dl class="grid grid-cols-3 border-t border-ink pt-4">
+            <div><dt class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Looks">Kiểu tóc</dt><dd class="mt-1 font-display text-4xl font-black">12</dd></div>
+            <div><dt class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Groups">Nhóm</dt><dd class="mt-1 font-display text-4xl font-black">03</dd></div>
+            <div><dt class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Volume">Tập</dt><dd class="mt-1 font-display text-4xl font-black text-cobalt">001</dd></div>
+          </dl>
+        </div>
+        <div class="relative lg:col-span-8 lg:-mr-10 2xl:-mr-16" data-reveal="up">
+          <div class="absolute -bottom-5 -left-5 h-2/3 w-1/3 bg-cobalt" aria-hidden="true"></div>
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist sm:aspect-[16/9] lg:aspect-[21/10]">
+            <img src="https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?fm=jpg&q=70&w=1600&auto=format&fit=crop" alt="Chân dung cô gái tóc ngắn mặc áo cổ lọ đen" data-en-alt="Portrait of a short-haired woman in a black turtleneck" width="1600" height="760" referrerpolicy="no-referrer" class="h-full w-full object-cover object-[50%_30%]">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" data-section="gallery-filter" class="bg-paper">
+    <div data-filter-group class="mx-auto w-full max-w-screen-2xl px-4 pb-24 sm:px-6 lg:px-10 lg:pb-32 2xl:px-16">
+      <div class="sticky top-[72px] z-30 -mx-4 border-y border-ink bg-paper/95 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
+        <div class="flex items-center gap-2 overflow-x-auto py-3" role="toolbar" aria-label="Lọc kiểu tóc" data-en-aria-label="Filter looks">
+          <button type="button" data-filter="all" class="is-active inline-flex h-11 shrink-0 items-center gap-2 border border-ink px-5 text-sm font-semibold uppercase tracking-[.12em] transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white"><span data-en="All">Tất cả</span><span class="text-xs opacity-70">12</span></button>
+          <button type="button" data-filter="cut" class="inline-flex h-11 shrink-0 items-center gap-2 border border-ink px-5 text-sm font-semibold uppercase tracking-[.12em] transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white"><span data-en="Cut">Cắt</span><span class="text-xs opacity-70">05</span></button>
+          <button type="button" data-filter="color" class="inline-flex h-11 shrink-0 items-center gap-2 border border-ink px-5 text-sm font-semibold uppercase tracking-[.12em] transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white"><span data-en="Color">Màu</span><span class="text-xs opacity-70">04</span></button>
+          <button type="button" data-filter="texture" class="inline-flex h-11 shrink-0 items-center gap-2 border border-ink px-5 text-sm font-semibold uppercase tracking-[.12em] transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white"><span data-en="Texture">Kết cấu</span><span class="text-xs opacity-70">03</span></button>
+          <p class="ml-auto hidden shrink-0 text-sm text-graphite md:block" data-en="Tap an image to enlarge">Nhấn vào ảnh để xem lớn</p>
+        </div>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-8" data-reveal="fade">
+
+        <figure data-category="cut" class="group lg:col-span-7">
+          <a href="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A001 / Precision Bob / Cắt. Đường cắt ngang sắc, gáy gọn, độ dài chạm cằm." data-en-caption="FF-A001 / Precision Bob / Cut. A sharp horizontal line, clean nape, chin length." class="relative block aspect-[6/5] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Kiểu tóc Precision Bob ngắn, áo đen" data-en-alt="Short Precision Bob, black top" width="1200" height="1000" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="A sharp horizontal line, clean nape, chin length.">Đường cắt ngang sắc, gáy gọn, độ dài chạm cằm.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A001</span><span class="font-display text-xl font-bold uppercase">Precision Bob</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Cut">Cắt</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="A sharp horizontal line, clean nape, chin length.">Đường cắt ngang sắc, gáy gọn, độ dài chạm cằm.</p>
+        </figure>
+
+        <figure data-category="cut" class="group lg:col-span-5 lg:mt-24">
+          <a href="https://images.unsplash.com/photo-1634933591782-850b85923812?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A002 / Nape Bob / Cắt. Bob ngắn ngang gáy, đường cắt thẳng tắp, phần đuôi dày." data-en-caption="FF-A002 / Nape Bob / Cut. A nape-length bob with a dead-straight line and solid ends." class="relative block aspect-[4/5] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1634933591782-850b85923812?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Kiểu bob ngắn ngang gáy nhìn từ phía sau" data-en-alt="Nape-length bob seen from behind" width="1000" height="1250" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="A nape-length bob with a dead-straight line and solid ends.">Bob ngắn ngang gáy, đường cắt thẳng tắp, phần đuôi dày.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A002</span><span class="font-display text-xl font-bold uppercase">Nape Bob</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Cut">Cắt</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="A nape-length bob with a dead-straight line and solid ends.">Bob ngắn ngang gáy, đường cắt thẳng tắp, phần đuôi dày.</p>
+        </figure>
+
+        <figure data-category="cut" class="group lg:col-span-4">
+          <a href="https://images.unsplash.com/photo-1578390432942-d323db577792?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A003 / Modern Mullet / Cắt. Hai bên gọn, phần gáy giữ độ dài, tỉa mỏng cho nhẹ." data-en-caption="FF-A003 / Modern Mullet / Cut. Tight sides, length kept at the back, thinned out for lightness." class="relative block aspect-[3/4] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1578390432942-d323db577792?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Chân dung đen trắng chàng trai tóc mullet" data-en-alt="Black and white portrait of a young man with a mullet" width="900" height="1200" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="Tight sides, length kept at the back, thinned out for lightness.">Hai bên gọn, phần gáy giữ độ dài, tỉa mỏng cho nhẹ.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A003</span><span class="font-display text-xl font-bold uppercase">Modern Mullet</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Cut">Cắt</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="Tight sides, length kept at the back, thinned out for lightness.">Hai bên gọn, phần gáy giữ độ dài, tỉa mỏng cho nhẹ.</p>
+        </figure>
+
+        <figure data-category="texture" class="group lg:col-span-4 lg:mt-16">
+          <a href="https://images.unsplash.com/photo-1617690825153-8bb0a8e3c911?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A004 / Textured Layers / Kết cấu. Lớp tóc so le bằng dao cạo, chuyển động theo từng bước đi." data-en-caption="FF-A004 / Textured Layers / Texture. Staggered razor layers that move as you walk." class="relative block aspect-square overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1617690825153-8bb0a8e3c911?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Cô gái vuốt mái tóc tỉa layer" data-en-alt="Woman running a hand through layered hair" width="1000" height="1000" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="Staggered razor layers that move as you walk.">Lớp tóc so le bằng dao cạo, chuyển động theo từng bước đi.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A004</span><span class="font-display text-xl font-bold uppercase">Textured Layers</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Texture">Kết cấu</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="Staggered razor layers that move as you walk.">Lớp tóc so le bằng dao cạo, chuyển động theo từng bước đi.</p>
+        </figure>
+
+        <figure data-category="color" class="group lg:col-span-4">
+          <a href="https://images.unsplash.com/photo-1779406859387-5d6fd116b3ff?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A005 / Platinum Blonde / Màu. Tẩy nhiều lớp, phủ toner lạnh, giữ độ bóng." data-en-caption="FF-A005 / Platinum Blonde / Color. Multi-step lightening with a cool toner and kept shine." class="relative block aspect-[3/4] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1779406859387-5d6fd116b3ff?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Cô gái tóc bạch kim, áo cổ lọ đen trên nền tối" data-en-alt="Platinum blonde woman in a black turtleneck on a dark background" width="900" height="1200" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="Multi-step lightening with a cool toner and kept shine.">Tẩy nhiều lớp, phủ toner lạnh, giữ độ bóng.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A005</span><span class="font-display text-xl font-bold uppercase">Platinum Blonde</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Color">Màu</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="Multi-step lightening with a cool toner and kept shine.">Tẩy nhiều lớp, phủ toner lạnh, giữ độ bóng.</p>
+        </figure>
+
+        <figure data-category="color" class="group lg:col-span-5">
+          <a href="https://images.unsplash.com/photo-1785970151283-e5484bdbc5d7?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A006 / Cobalt Accent / Màu. Sắc xanh cobalt đậm, phai dần thành xanh khói." data-en-caption="FF-A006 / Cobalt Accent / Color. Deep cobalt blue that fades to a smoky blue." class="relative block aspect-[4/5] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1785970151283-e5484bdbc5d7?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Người mẫu tóc nhuộm xanh, đeo kính, áo thun đen" data-en-alt="Model with blue dyed hair, glasses and a black tee" width="1000" height="1250" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-ink p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="Deep cobalt blue that fades to a smoky blue.">Sắc xanh cobalt đậm, phai dần thành xanh khói.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A006</span><span class="font-display text-xl font-bold uppercase text-cobalt">Cobalt Accent</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Color">Màu</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="Deep cobalt blue that fades to a smoky blue.">Sắc xanh cobalt đậm, phai dần thành xanh khói.</p>
+        </figure>
+
+        <figure data-category="color" class="group lg:col-span-7 lg:mt-24">
+          <a href="https://images.unsplash.com/photo-1565898559217-715bc3c3cf1b?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A007 / Copper Red / Màu. Đỏ đồng ấm, đậm ở chân, sáng dần về ngọn." data-en-caption="FF-A007 / Copper Red / Color. Warm copper, deeper at the root, brighter towards the ends." class="relative block aspect-[6/5] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1565898559217-715bc3c3cf1b?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Mái tóc nhuộm đỏ đồng" data-en-alt="Copper red dyed hair" width="1200" height="1000" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="Warm copper, deeper at the root, brighter towards the ends.">Đỏ đồng ấm, đậm ở chân, sáng dần về ngọn.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A007</span><span class="font-display text-xl font-bold uppercase">Copper Red</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Color">Màu</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="Warm copper, deeper at the root, brighter towards the ends.">Đỏ đồng ấm, đậm ở chân, sáng dần về ngọn.</p>
+        </figure>
+
+        <figure data-category="color" class="group lg:col-span-4">
+          <a href="https://images.unsplash.com/photo-1470259078422-826894b933aa?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A008 / Rose Flow / Màu. Hồng san hô phủ toàn đầu trên nền tẩy sáng, chuyển động mạnh." data-en-caption="FF-A008 / Rose Flow / Color. All-over coral pink on pre-lightened hair, full of movement." class="relative block aspect-[3/4] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1470259078422-826894b933aa?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Cô gái hất mái tóc nhuộm hồng" data-en-alt="Woman flicking her pink dyed hair" width="900" height="1200" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="All-over coral pink on pre-lightened hair, full of movement.">Hồng san hô phủ toàn đầu trên nền tẩy sáng, chuyển động mạnh.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A008</span><span class="font-display text-xl font-bold uppercase">Rose Flow</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Color">Màu</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="All-over coral pink on pre-lightened hair, full of movement.">Hồng san hô phủ toàn đầu trên nền tẩy sáng, chuyển động mạnh.</p>
+        </figure>
+
+        <figure data-category="cut" class="group lg:col-span-4 lg:mt-16">
+          <a href="https://images.unsplash.com/photo-1519713594620-c57c92a493c0?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A009 / Cherry Bob / Cắt. Bob ngắn đỏ anh đào, đường cắt tròn ôm cằm." data-en-caption="FF-A009 / Cherry Bob / Cut. A short cherry-red bob with a rounded line hugging the jaw." class="relative block aspect-square overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1519713594620-c57c92a493c0?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Cô gái tóc bob ngắn nhuộm đỏ đeo vòng cổ đen" data-en-alt="Woman with a short red bob and a black choker" width="1000" height="1000" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="A short cherry-red bob with a rounded line hugging the jaw.">Bob ngắn đỏ anh đào, đường cắt tròn ôm cằm.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A009</span><span class="font-display text-xl font-bold uppercase">Cherry Bob</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Cut">Cắt</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="A short cherry-red bob with a rounded line hugging the jaw.">Bob ngắn đỏ anh đào, đường cắt tròn ôm cằm.</p>
+        </figure>
+
+        <figure data-category="texture" class="group lg:col-span-4">
+          <a href="https://images.unsplash.com/photo-1775322933171-372be77fbab3?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A010 / Curl Crop Men / Kết cấu. Tóc xoăn ngắn cho nam, tỉa gọn hai bên, giữ độ tơi tự nhiên trên đỉnh." data-en-caption="FF-A010 / Curl Crop Men / Texture. Short curls for men, tidy sides, natural lift on top." class="relative block aspect-[3/4] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1775322933171-372be77fbab3?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Chàng trai có râu với mái tóc xoăn ngắn" data-en-alt="Bearded man with short curly hair" width="900" height="1200" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="Short curls for men, tidy sides, natural lift on top.">Tóc xoăn ngắn cho nam, tỉa gọn hai bên, giữ độ tơi tự nhiên trên đỉnh.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A010</span><span class="font-display text-xl font-bold uppercase">Curl Crop Men</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Texture">Kết cấu</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="Short curls for men, tidy sides, natural lift on top.">Tóc xoăn ngắn cho nam, tỉa gọn hai bên, giữ độ tơi tự nhiên trên đỉnh.</p>
+        </figure>
+
+        <figure data-category="cut" class="group lg:col-span-6">
+          <a href="https://images.unsplash.com/photo-1525614686090-7a3108e3758e?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A011 / Graphic Fringe / Cắt. Mái thẳng cắt dày, viền rõ như một nét kẻ." data-en-caption="FF-A011 / Graphic Fringe / Cut. A heavy blunt fringe with an edge like a drawn line." class="relative block aspect-[5/4] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1525614686090-7a3108e3758e?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Cô gái tóc ngắn có mái, cúi nhìn xuống" data-en-alt="Short-haired woman with a fringe looking down" width="1200" height="960" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="A heavy blunt fringe with an edge like a drawn line.">Mái thẳng cắt dày, viền rõ như một nét kẻ.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A011</span><span class="font-display text-xl font-bold uppercase">Graphic Fringe</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Cut">Cắt</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="A heavy blunt fringe with an edge like a drawn line.">Mái thẳng cắt dày, viền rõ như một nét kẻ.</p>
+        </figure>
+
+        <figure data-category="texture" class="group lg:col-span-6 lg:mt-16">
+          <a href="https://images.unsplash.com/photo-1762796159022-6771e710aced?fm=jpg&q=70&w=1200&auto=format&fit=crop" data-lightbox="archive" data-caption="FF-A012 / Natural Curl / Kết cấu. Tóc xoăn tỉa tầng, giữ nguyên lọn xoăn tự nhiên." data-en-caption="FF-A012 / Natural Curl / Texture. Layered curls that keep their natural pattern." class="relative block aspect-[5/4] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1762796159022-6771e710aced?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Cô gái tóc xoăn ngắn mặc áo cổ lọ tối màu" data-en-alt="Young woman with short curls in a dark turtleneck" width="1200" height="960" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <span class="absolute inset-x-0 bottom-0 hidden translate-y-full bg-cobalt p-4 text-sm leading-relaxed text-white transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0 lg:block" data-en="Layered curls that keep their natural pattern.">Tóc xoăn tỉa tầng, giữ nguyên lọn xoăn tự nhiên.</span>
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3"><span class="text-xs font-semibold tracking-[.12em]">FF-A012</span><span class="font-display text-xl font-bold uppercase">Natural Curl</span><span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Texture">Kết cấu</span></figcaption>
+          <p class="mt-2 text-sm leading-relaxed text-graphite lg:hidden" data-en="Layered curls that keep their natural pattern.">Tóc xoăn tỉa tầng, giữ nguyên lọn xoăn tự nhiên.</p>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO HAIR DIRECTION -->
+  <section id="hair-direction" data-section="features-numbered" class="bg-ink text-white">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="flex flex-col justify-between gap-10 lg:col-span-5" data-reveal="up">
+        <div>
+          <h2 class="font-display display-tight text-5xl font-black uppercase sm:text-6xl lg:text-7xl" data-en="Studio hair<br>direction">Hướng đi<br>của studio</h2>
+          <p class="mt-8 max-w-md text-lg leading-relaxed text-white/80" data-en="Three techniques we keep refining, appointment after appointment.">Ba kỹ thuật chúng tôi theo đuổi và mài giũa qua từng buổi hẹn.</p>
+        </div>
+        <a href="services.html" class="group inline-flex h-14 w-full items-center justify-between gap-3 bg-cobalt px-6 text-sm font-semibold uppercase tracking-[.14em] text-white transition-colors duration-300 hover:bg-electric active:scale-[.98] sm:w-auto sm:max-w-xs"><span data-en="See the service index">Xem bảng dịch vụ</span>
+          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <ol class="lg:col-span-7 lg:col-start-6" data-reveal-stagger="100">
+        <li class="grid gap-4 border-t border-white/30 py-8 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl font-black text-electric">01</span>
+          <div>
+            <h3 class="font-display text-3xl font-black uppercase lg:text-4xl" data-en="Precision cutting">Cắt chính xác</h3>
+            <p class="mt-3 max-w-prose text-base leading-relaxed text-white/80" data-en="Lines measured against jaw, cheekbones and how the hair falls, never a stock template.">Đường cắt đo theo xương hàm, gò má và độ rơi của tóc, không theo khuôn có sẵn.</p>
+          </div>
+        </li>
+        <li class="grid gap-4 border-t border-white/30 py-8 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl font-black text-electric">02</span>
+          <div>
+            <h3 class="font-display text-3xl font-black uppercase lg:text-4xl" data-en="Expressive color">Màu biểu cảm</h3>
+            <p class="mt-3 max-w-prose text-base leading-relaxed text-white/80" data-en="Color as a statement: cobalt, silver, copper, or one small panel placed exactly right.">Màu như một tuyên bố: cobalt, bạc, đồng, hoặc chỉ một mảng nhỏ đặt đúng chỗ.</p>
+          </div>
+        </li>
+        <li class="grid gap-4 border-y border-white/30 py-8 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl font-black text-electric">03</span>
+          <div>
+            <h3 class="font-display text-3xl font-black uppercase lg:text-4xl" data-en="Natural texture">Kết cấu tự nhiên</h3>
+            <p class="mt-3 max-w-prose text-base leading-relaxed text-white/80" data-en="We respect the curl and wave you already have. Technique just makes them clearer.">Tôn trọng độ xoăn, độ gợn sẵn có. Kỹ thuật chỉ giúp chúng rõ ràng hơn.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="bg-ink text-white">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-20 sm:px-6 lg:px-10 lg:pt-24 2xl:px-16">
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-5">
+        <p class="font-display display-tight text-5xl font-extrabold uppercase sm:text-6xl 2xl:text-7xl">FORM <span class="text-electric">&amp;</span><br>FOLLICLE</p>
+        <p class="mt-6 max-w-sm text-base leading-relaxed text-white/75" data-en="A hair studio for precise cuts, deliberate texture and fashion-forward color.">Studio tóc cho đường cắt chính xác, kết cấu có chủ đích và màu nhuộm thời trang.</p>
+        <button type="button" data-modal-open="booking" class="mt-8 inline-flex h-12 items-center gap-3 bg-cobalt px-6 text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[.98]"><span data-en="Book a Visit">Đặt lịch</span>
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+
+      <nav class="lg:col-span-2" aria-label="Liên kết chân trang" data-en-aria-label="Footer links">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Navigation">Điều hướng</p>
+        <ul class="mt-5 space-y-3 text-base">
+          <li><a href="../index.html" class="transition-colors duration-300 hover:text-electric" data-en="Home">Trang chủ</a></li>
+          <li><a href="../pages/services.html" class="transition-colors duration-300 hover:text-electric" data-en="Services &amp; pricing">Dịch vụ &amp; bảng giá</a></li>
+          <li><a aria-current="page" href="../pages/archive.html" class="transition-colors duration-300 hover:text-electric">Style Archive</a></li>
+          <li><a href="../pages/studio.html" class="transition-colors duration-300 hover:text-electric">Studio</a></li>
+        </ul>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Contact">Liên hệ</p>
+        <ul class="mt-5 space-y-3 text-base leading-relaxed text-white/85">
+          <li data-en="24 Ton That Thiep, District 1, Ho Chi Minh City">24 Tôn Thất Thiệp, Quận 1, TP. Hồ Chí Minh</li>
+          <li data-en="Tue to Sun, 09:00 - 20:00">Thứ 3 đến Chủ nhật, 09:00 - 20:00</li>
+          <li><a href="tel:+842838224719" class="transition-colors duration-300 hover:text-electric">028 3822 4719</a></li>
+          <li><a href="mailto:hello@formandfollicle.vn" class="break-words transition-colors duration-300 hover:text-electric">hello@formandfollicle.vn</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Social">Mạng xã hội</p>
+        <ul class="mt-5 space-y-3 text-base">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">TikTok</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-3 border-t border-white/20 pt-6 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 FORM &amp; FOLLICLE</p>
+      <p data-en="Address, hours, phone, email and social links are sample data.">Địa chỉ, giờ mở cửa, điện thoại, email và mạng xã hội là dữ liệu mẫu.</p>
+    </div>
+  </div>
+
+  <dialog id="booking" class="bg-paper text-ink" aria-labelledby="booking-title">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-6 border-b border-ink pb-4">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[.16em] text-cobalt">CUT / COLOR / TEXTURE</p>
+          <h2 id="booking-title" class="mt-2 font-display text-3xl font-extrabold uppercase" data-en="Book a Visit">Đặt lịch</h2>
+        </div>
+        <button type="button" data-modal-close class="grid h-11 w-11 shrink-0 place-items-center border border-ink text-xl transition-colors duration-300 hover:bg-ink hover:text-white" aria-label="Đóng" data-en-aria-label="Close">×</button>
+      </div>
+      <form data-form="dat-lich" class="mt-6 grid gap-5 sm:grid-cols-2" novalidate>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Full name">Họ và tên</span>
+          <input type="text" name="name" required minlength="2" autocomplete="name" class="h-12 border border-graphite bg-paper px-3 text-base outline-none transition-colors focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Phone">Điện thoại</span>
+          <input type="tel" name="phone" required minlength="9" autocomplete="tel" class="h-12 border border-graphite bg-paper px-3 text-base outline-none transition-colors focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Service">Dịch vụ</span>
+          <select name="service" required class="h-12 border border-graphite bg-paper px-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+            <option value="" data-en="Choose a service">Chọn dịch vụ</option>
+            <option value="cut" data-en="01 Cut">01 Cắt</option>
+            <option value="color" data-en="02 Color">02 Nhuộm màu</option>
+            <option value="texture" data-en="03 Texture">03 Kết cấu</option>
+            <option value="treatment" data-en="04 Treatment">04 Phục hồi</option>
+            <option value="consult" data-en="Not sure yet, need advice">Chưa chắc, cần tư vấn</option>
+          </select>
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Preferred date">Ngày mong muốn</span>
+          <input type="date" name="date" required class="h-12 border border-graphite bg-paper px-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium sm:col-span-2"><span data-en="Notes (current hair, reference style)">Ghi chú (tình trạng tóc, kiểu tham khảo)</span>
+          <textarea name="note" rows="3" class="border border-graphite bg-paper p-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30"></textarea>
+        </label>
+        <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
+          <button type="submit" class="inline-flex h-12 items-center justify-center bg-cobalt px-7 text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric active:scale-[.98]" data-en="Send request">Gửi yêu cầu</button>
+          <p class="text-sm text-graphite" data-en="Demo only: this form is not connected to a booking system and sends nothing.">Bản minh họa: form chưa kết nối hệ thống đặt lịch, không gửi đi.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pate chay tự làm · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-PROD-003" data-module="PROD" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-PROD-003 Chi tiết pate chay tự làm: như trang sản phẩm nhưng nút "Đặt trước" + PatePolicyNotice + Modal bắt buộc "Tôi đã hiểu";
+   * 6 thẻ thông tin (Tabs ≥ md, Accordion < md). ?id=<pc1|pc2>&bien-the=. Pate chay không quản lý tồn (BR-PROD-005). */
+  (function () {
+    var U = Perm.url, esc = UI.esc, ic = UI.icon;
+    var p = App.product(App.param('id') || 'pc1');
+    var ok = p && p.la_pate && p.trang_thai === 'DANG_BAN';
+    Layout.mount({ title: ok ? p.ten : 'Không tìm thấy sản phẩm', active: 'products', breadcrumb: [['Sản phẩm', 'pages/san-pham.html'], ['Pate chay tự làm', 'pages/san-pham.html?nhom=pate-chay'], [ok ? p.ten : 'Không tìm thấy']] }, function (main) {
+      if (!ok) {
+        main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 py-6 md:px-6 lg:px-8"><div class="rounded-xl border border-neutral-200 bg-white">' +
+          UI.emptyState({ title: 'Ơ, Tiểu Bạch tìm mãi không thấy sản phẩm này', action: UI.button({ label: 'Xem sản phẩm khác', href: U('pages/san-pham.html') }) }) + '</div></div>');
+        return;
+      }
+      var pi = p.pate || {};
+      var sel = p.variants.filter(function (v) { return v.id === App.param('bien-the'); })[0] || p.variants[0];
+      var role = Perm.role(), isAdmin = role === 'ROLE-03';
+      var MAX = MOCK.settings.pateCap;
+
+      main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-6 pt-5 md:px-6 lg:px-8">' +
+        '<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-12 lg:gap-10"><div class="lg:col-span-7 min-w-0" data-gallery>' + UI.skeletonBlock('aspect-square rounded-xl') + '</div>' +
+        '<div class="lg:col-span-5 min-w-0"><div class="flex flex-col gap-4 lg:sticky lg:top-24" data-info>' + UI.skeleton(5) + '</div></div></div>' +
+        '<div class="mt-10 hidden md:block rounded-xl border border-neutral-200 bg-white p-5 lg:p-6" data-tabs>' + UI.skeleton(3) + '</div>' +
+        '<div class="mt-8 md:hidden rounded-xl bg-white px-4" data-acc></div></div>');
+
+      function info() {
+        var story = pi.cau_chuyen || '';
+        var btn = UI.button({ label: 'Đặt trước', icon: 'calendar-heart', size: 'lg', full: true, disabled: isAdmin, attrs: { 'data-preorder': '' } });
+        return UI.badge('Pate chay tự làm', 'mint') +
+          '<h1 class="text-2xl font-extrabold leading-tight text-neutral-800">' + esc(p.ten) + '</h1>' +
+          (p.so_danh_gia ? '<a href="#the-5" data-to-reviews class="inline-flex w-fit items-center gap-2 hover:underline">' + UI.ratingStars(p.sao, { size: 'sm', showValue: true }) + '<span class="text-sm text-neutral-600">(' + p.so_danh_gia + ' đánh giá)</span></a>' : '') +
+          (story ? '<div><p class="text-base text-neutral-700 line-clamp-2" data-story>' + esc(story) + '</p><button type="button" data-story-more class="text-sm font-bold text-primary-700 hover:underline">Đọc thêm</button></div>' : '') +
+          '<div data-price>' + UI.priceTag({ price: sel.gia, unit: '/ hũ', size: 'lg' }) + '</div>' +
+          '<div><p class="mb-2 text-sm font-bold text-neutral-800">Chọn vị <span class="text-danger-600">*</span></p><div data-tiles></div></div>' +
+          '<div class="flex items-center gap-4"><span class="text-sm font-bold text-neutral-800">Số hũ</span>' + UI.quantityStepper({ value: +App.param('so-hu') || 1, max: MAX, limitMsg: 'Số hũ phải từ 1 đến ' + MAX, label: 'Số hũ', attrs: { 'data-jars': '' } }) + '</div>' +
+          (isAdmin ? UI.withTooltip(btn, 'Dành cho khách hàng') : btn) + UI.patePolicyNotice('inline');
+      }
+      function jars() { var i = main.querySelector('[data-jars] [data-qty-input]'); return i ? parseInt(i.value, 10) || 1 : 1; }
+      function paintSticky() {
+        if (isAdmin) return;
+        UI.stickyBar('<p class="mb-2 text-xs font-semibold text-warning-700">Cọc 200.000đ · Giao sau khoảng 7 ngày · Không đổi trả</p><div class="flex items-center gap-3"><p class="min-w-0 flex-1 text-base font-extrabold tabular-nums" data-sticky-sum>' + UI.fmt.money(sel.gia) + ' × ' + jars() + ' hũ</p>' +
+          UI.button({ label: 'Đặt trước', icon: 'calendar-heart', attrs: { 'data-preorder': '' } }) + '</div>', { watch: main.querySelector('[data-info] [data-preorder]') });
+      }
+      function paintInfo() {
+        var box = main.querySelector('[data-info]'); box.innerHTML = info();
+        UI.variantTiles(box.querySelector('[data-tiles]'), {
+          label: 'Chọn vị', value: sel.id,
+          variants: p.variants.map(function (v) { return { id: v.id, label: v.ten, price: v.gia, img: v.anh || p.anh[0] }; }),
+          onChange: function (v) { sel = p.variants.filter(function (x) { return x.id === v.id; })[0]; App.setParams({ 'bien-the': sel.id }); box.querySelector('[data-price]').innerHTML = UI.priceTag({ price: sel.gia, unit: '/ hũ', size: 'lg' }); updSticky(); }
+        });
+      }
+      function updSticky() { var s = document.querySelector('[data-sticky-sum]'); if (s) s.textContent = UI.fmt.money(sel.gia) + ' × ' + jars() + ' hũ'; }
+
+      /* 6 thẻ thông tin */
+      function reviewsHtml(el) {
+        var all = DemoStore.list('reviews').filter(function (r) { return r.product_id === p.id && r.state === 'VISIBLE'; }).sort(function (a, b) { return a.tao_luc < b.tao_luc ? 1 : -1; });
+        if (!all.length && !p.so_danh_gia) { el.innerHTML = '<p class="text-sm text-neutral-600">Chưa có đánh giá nào cho pate chay này.</p>'; return; }
+        var f = 'all';
+        el.innerHTML = '<div data-sum></div><div class="mt-5 flex flex-col gap-3" data-list></div>';
+        function list() { var l = all.filter(function (r) { return f === 'all' ? true : f === 'photo' ? r.anh.length : r.so_sao === +f; }); el.querySelector('[data-list]').innerHTML = l.length ? l.map(function (r) { return UI.reviewCard({ name: App.maskName(r.ho_ten), stars: r.so_sao, date: r.tao_luc, text: r.noi_dung, photos: r.anh, variant: r.variant }); }).join('') : '<p class="rounded-lg bg-neutral-50 p-4 text-sm text-neutral-600">Chưa có đánh giá phù hợp bộ lọc.</p>'; }
+        UI.ratingSummary(el.querySelector('[data-sum]'), { avg: p.sao, count: p.so_danh_gia, dist: p.dist, photoCount: all.filter(function (r) { return r.anh.length; }).length, onFilter: function (k) { f = k; list(); } });
+        list();
+      }
+      var steps = [['Đặt trước', 'Chọn vị, số hũ và ngày muốn nhận trên website.'], ['Cửa hàng gọi xác nhận', 'Cửa hàng gọi điện xác nhận đơn và khẩu vị của Boss.'], ['Chuyển cọc 200.000đ', 'Chuyển khoản hoặc quét mã QR sau khi xác nhận.'], ['Nhận hàng sau khoảng 7 ngày', 'Pate được làm theo đơn, giao tận nơi hoặc tự lấy.']];
+      var faq = UI.accordion([
+        { title: 'Vì sao phải đặt trước?', content: 'Pate chay được nấu theo từng đơn, không làm sẵn và không chất bảo quản, nên cửa hàng cần thời gian chuẩn bị nguyên liệu.' },
+        { title: 'Cọc bằng cách nào?', content: 'Sau khi cửa hàng gọi xác nhận, bạn chuyển cọc 200.000đ bằng chuyển khoản hoặc quét mã QR hiện trong trang chi tiết đơn.' },
+        { title: 'Có hủy được không?', content: 'Bạn gửi yêu cầu hủy trong trang chi tiết đơn khi đơn chưa được giao cho shipper; cửa hàng xác nhận và hoàn cọc nếu đã cọc.' },
+        { title: 'Vì sao không đổi trả?', content: 'Pate chay là thực phẩm tươi làm theo đơn, nên cửa hàng không áp dụng đổi trả. Bạn có thể hỏi kỹ khi cửa hàng gọi xác nhận.' }
+      ]);
+      var cards = [
+        pi.giay_chung_nhan ? { id: 'the-1', label: 'Giấy chứng nhận ATTP', html: '<div class="flex flex-col gap-4 sm:flex-row sm:items-start"><button type="button" data-zoom=\'' + esc(JSON.stringify([pi.giay_chung_nhan])) + '\' data-zoom-i="0" class="h-52 w-40 shrink-0 overflow-hidden rounded-lg border border-neutral-200 focus-visible:ring-2 focus-visible:ring-primary-600" aria-label="Phóng to giấy chứng nhận">' + UI.img({ src: pi.giay_chung_nhan, alt: 'Giấy chứng nhận an toàn thực phẩm' }) + '</button>' +
+          '<div class="flex flex-col gap-2"><p class="text-base text-neutral-700">Cơ sở làm pate chay của Tiểu Bạch đã được cấp giấy chứng nhận đủ điều kiện an toàn thực phẩm.</p><div>' + UI.button({ label: 'Xem giấy chứng nhận', icon: 'external-link', variant: 'outline', href: pi.giay_chung_nhan, attrs: { target: '_blank', rel: 'noopener' } }) + '</div></div></div>' } : null,
+        { id: 'the-2', label: 'Thành phần & dinh dưỡng', html: '<p class="mb-3 text-sm font-bold text-neutral-800">Nguyên liệu</p><div class="flex flex-wrap gap-2">' + (pi.thanh_phan || []).map(function (t) { return '<span class="inline-flex h-9 items-center gap-1.5 rounded-full bg-secondary-100 px-3 text-sm font-bold text-secondary-700">' + ic('check', 'size-4') + esc(t) + '</span>'; }).join('') + '</div>' +
+          (pi.nsx_hsd ? '<p class="mt-4 text-sm font-bold text-neutral-800">Ngày sản xuất & hạn dùng</p><p class="text-base text-neutral-700">' + esc(pi.nsx_hsd) + '</p>' : '') +
+          '<div class="mt-4">' + UI.alert({ tone: 'info', text: 'Bảng thành phần dinh dưỡng (đạm, béo, xơ…) sẽ được cửa hàng bổ sung.' }) + '</div>' },
+        { id: 'the-3', label: 'Đặt trước, cọc & thời gian chờ', html: '<ol class="grid gap-3 md:grid-cols-4">' + steps.map(function (s, i) { return '<li class="relative rounded-lg border border-neutral-200 bg-white p-4"><span class="inline-flex size-8 items-center justify-center rounded-full bg-primary-500 font-extrabold text-neutral-800">' + (i + 1) + '</span><p class="mt-2 text-base font-bold text-neutral-800">' + s[0] + '</p><p class="mt-1 text-sm text-neutral-600">' + s[1] + '</p></li>'; }).join('') + '</ol>' +
+          '<p class="mt-4 text-sm text-neutral-600">Phần tiền còn lại thanh toán khi nhận hàng hoặc chuyển khoản trước khi giao (cửa hàng sẽ báo khi gọi xác nhận).</p>' },
+        { id: 'the-4', label: 'Bảo quản & cho ăn', html: (pi.cach_bao_quan ? '<p class="mb-4 text-base text-neutral-700">' + esc(pi.cach_bao_quan) + '</p>' : '') +
+          '<div class="overflow-hidden rounded-lg border border-neutral-200 md:max-w-lg"><table class="w-full text-sm"><thead class="bg-neutral-50"><tr><th scope="col" class="w-1/2 px-4 py-3 text-left text-xs font-bold text-neutral-600">Cân nặng thú cưng</th><th scope="col" class="w-1/2 px-4 py-3 text-left text-xs font-bold text-neutral-600">Lượng mỗi ngày</th></tr></thead><tbody class="divide-y divide-neutral-100 bg-white">' +
+          (pi.luong_cho_an || []).map(function (r) { return '<tr class="h-table-row"><td class="px-4">' + esc(r[0]) + '</td><td class="px-4 font-bold">' + esc(r[1]) + '</td></tr>'; }).join('') + '</tbody></table></div>' },
+        { id: 'the-5', label: 'Đánh giá', count: p.so_danh_gia, fn: reviewsHtml },
+        { id: 'the-6', label: 'Câu hỏi thường gặp', html: faq }
+      ].filter(Boolean);
+
+      setTimeout(function () {
+        UI.productGallery(main.querySelector('[data-gallery]'), { images: p.anh, alt: p.ten });
+        paintInfo(); paintSticky();
+        UI.tabs(main.querySelector('[data-tabs]'), { hash: true, tabs: cards.map(function (c) { return { id: c.id, label: c.label, count: c.count, content: c.fn ? function (panel) { panel.innerHTML = '<div></div>'; c.fn(panel.firstChild); } : c.html }; }) });
+        var acc = main.querySelector('[data-acc]');
+        acc.innerHTML = UI.accordion(cards.map(function (c, i) { return { id: 'm-' + c.id, title: c.label + (c.count ? ' (' + c.count + ')' : ''), open: i === 0, content: c.fn ? '<div data-acc-fn="' + c.id + '"></div>' : c.html }; }));
+        cards.forEach(function (c) { if (c.fn) c.fn(acc.querySelector('[data-acc-fn="' + c.id + '"]')); });
+      }, 400);
+
+      function openPolicy() {
+        var q = jars();
+        if (q < 1 || q > MAX) { UI.toast('Số hũ phải từ 1 đến ' + MAX, 'error'); return; }
+        UI.modal({
+          title: 'Trước khi đặt pate chay, bạn lưu ý nhé', size: 'md', dismissible: false,
+          body: '<div class="flex items-start gap-3"><span class="hidden sm:block">' + UI.mascot(56, 'wow') + '</span><div class="flex-1">' + UI.patePolicyNotice('alert', { title: 'Pate chay làm theo đơn' }) + '</div></div>',
+          actions: [
+            { label: 'Để mình xem lại', variant: 'ghost' },
+            { label: 'Tôi đã hiểu', onClick: function () {
+              var target = 'pages/dat-truoc-pate.html?id=' + p.id + '&bien-the=' + sel.id + '&so-hu=' + q;
+              if (Perm.role() === 'ROLE-02') { location.href = U(target); return; }
+              UI.toast('Vui lòng đăng nhập để đặt trước pate chay', 'info');
+              setTimeout(function () { location.href = App.loginHref(target); }, 700);
+            } }
+          ]
+        });
+      }
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-preorder]'); if (b && !b.disabled) { openPolicy(); return; }
+        if (e.target.closest('[data-story-more]')) { var s = main.querySelector('[data-story]'); s.classList.toggle('line-clamp-2'); e.target.closest('[data-story-more]').textContent = s.classList.contains('line-clamp-2') ? 'Đọc thêm' : 'Thu gọn'; return; }
+        if (e.target.closest('[data-to-reviews]')) {
+          e.preventDefault();
+          if (window.innerWidth >= 768) { var t = main.querySelector('[data-tab="the-5"]'); if (t) t.click(); main.querySelector('[data-tabs]').scrollIntoView({ behavior: 'smooth' }); }
+          else { var d = document.getElementById('m-the-5'); if (d) { d.open = true; d.scrollIntoView({ behavior: 'smooth' }); } }
+        }
+      });
+      main.addEventListener('qtychange', updSticky);
+    });
+  })();
+  </script>
+</body>
+</html>

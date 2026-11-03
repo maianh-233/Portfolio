@@ -1,0 +1,94 @@
+{
+  "slug": "minh-an",
+  "name": "Minh An",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website portfolio cá nhân",
+    "brand": "Minh An",
+    "purpose": "",
+    "audience": "",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Thiết kế website portfolio cá nhân cho kiến trúc sư **Minh An**, thương hiệu **FORM / SPACE**, theo phong cách **Organic Architecture × Contemporary Editorial**.\n\n### 1. Phong cách thiết kế\n- Lấy cảm hứng từ kiến trúc hữu cơ: đường cong tự nhiên, công trình hòa quyện với cảnh quan, hình khối điêu khắc và ánh sáng tự nhiên.\n- Màu sắc: trắng kem `#F3EFE6`, nâu đất `#B96F50`, xanh olive `#555B43`, nâu đậm `#292923`.\n- Typography kết hợp serif nghệ thuật với sans-serif hiện đại; hỗ trợ tiếng Việt hoàn chỉnh.\n- Bố cục bất đối xứng, hình ảnh kích thước lớn, chữ oversized, hình ảnh chồng lớp và đường viền cong có chọn lọc.\n- Tránh phong cách tối giản truyền thống, lưới card đồng nhất và giao diện công ty kiến trúc thông thường.\n\n### 2. Bố cục website\n**Hero:** Ảnh kiến trúc hữu cơ toàn màn hình, tiêu đề lớn “Architecture that belongs to the earth.”, giới thiệu Minh An và nút xem dự án.\n\n**Design Philosophy:** Trình bày triết lý kiến trúc gắn kết con người với thiên nhiên, vật liệu tự nhiên và ánh sáng.\n\n**Selected Works:** Giới thiệu 4 dự án giả lập:\n- Earth House — Nhà ở trên đồi, tường đất và đường cong tự nhiên.\n- The Silent Courtyard — Nhà sân vườn nhiệt đới tại Hội An.\n- Stone & Tide — Công trình ven biển bằng đá và bê tông điêu khắc.\n- Moss House — Nhà mái xanh hòa vào cảnh quan.\n\nMỗi dự án có ảnh riêng, tên, năm, mô tả ngắn và chức năng xem chi tiết. Không trình bày tất cả dự án bằng những card giống nhau.\n\n**Design Process:** Quy trình từ khảo sát địa hình, phát triển ý tưởng đến thiết kế không gian.\n\n**Material Studies:** Bộ sưu tập hình ảnh đất, đá, gỗ, ánh sáng và cây xanh.\n\n**About:** Giới thiệu kiến trúc sư Minh An cùng chân dung hoặc ảnh làm việc với mô hình kiến trúc.\n\n**Contact:** Thông tin liên hệ, lời mời hợp tác và nút gửi email.\n\n### 3. Yêu cầu hình ảnh\nƯu tiên ảnh kiến trúc chân thực với từ khóa:\n- `organic architecture curved earth house`\n- `sculptural architecture integrated into landscape`\n- `contemporary organic house natural materials`\n- `curved concrete architecture tropical courtyard`\n- `organic architecture green roof house`\n\nHình ảnh phải thể hiện rõ đường cong, vật liệu tự nhiên, công trình điêu khắc và sự kết nối với cảnh quan. Tránh ảnh văn phòng, chung cư thông thường, biệt thự đại trà hoặc ảnh không liên quan. Các dự án là nội dung giả lập, không được tuyên bố là công trình thực tế của kiến trúc sư.\n\n### 4. Hiệu ứng và kỹ thuật\n- Ảnh xuất hiện bằng hiệu ứng reveal mềm mại.\n- Chuyển động cuộn trang nhẹ, zoom ảnh tinh tế khi hover.\n- Chuyển cảnh mượt, không lạm dụng animation.\n- Responsive đầy đủ trên máy tính và điện thoại.\n- Sử dụng HTML, CSS, JavaScript riêng biệt.\n- Đảm bảo menu, nút xem dự án và liên hệ hoạt động.\n\n**Mục tiêu cuối cùng:** Tạo một portfolio kiến trúc giàu tính nghệ thuật, nơi đường cong, ánh sáng, chất liệu và thiên nhiên tạo nên bản sắc riêng. Website phải khác biệt rõ rệt với portfolio kiến trúc tối giản thông thường.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-26T07:49:10.254Z",
+  "updatedAt": "2026-10-26T08:06:20.647Z",
+  "screen": "done",
+  "request": "Website portfolio cá nhân",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\minh-an\\web",
+    "builtAt": "2026-10-26T08:05:55.022Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/contact.html",
+      "pages/materials.html",
+      "pages/project-earth-house.html",
+      "pages/project-moss-house.html",
+      "pages/project-silent-courtyard.html",
+      "pages/project-stone-tide.html",
+      "pages/works.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/contact.html": [],
+      "pages/materials.html": [],
+      "pages/project-earth-house.html": [],
+      "pages/project-moss-house.html": [],
+      "pages/project-silent-courtyard.html": [],
+      "pages/project-stone-tide.html": [],
+      "pages/works.html": []
+    }
+  },
+  "job": {
+    "id": "6c36261b-e32f-4851-af1c-3f0f245c6896",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\minh-an\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 64,
+      "outputTokens": 76175,
+      "cacheReadTokens": 6715501,
+      "cacheCreationTokens": 252222,
+      "costUsd": 4.8846322,
+      "numTurns": 109,
+      "durationMs": 914733
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-26T08:06:17.866Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 27
+  }
+}

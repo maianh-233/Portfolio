@@ -1,0 +1,39 @@
+{
+  "slug": "wildroute-expeditions",
+  "name": "WILDROUTE EXPEDITIONS",
+  "projectType": "website",
+  "flow": "quick",
+  "createdAt": "2026-10-16T01:51:21.671Z",
+  "updatedAt": "2026-10-16T01:51:39.448Z",
+  "screen": "request",
+  "request": "# DESIGN A CINEMATIC ADVENTURE TRAVEL LANDING PAGE\n\nThiết kế Landing Page cho thương hiệu tour phiêu lưu **WILDROUTE EXPEDITIONS**, chuyên trekking, leo núi, camping, khám phá hang động và chinh phục các cung đường thiên nhiên tại Việt Nam.\n\n## 1. Art Direction\n\nPhong cách cinematic outdoor adventure, mạnh mẽ, hoang dã và giàu cảm xúc. Website cần giống một bộ phim tài liệu khám phá thiên nhiên hơn là website bán tour thông thường.\n\nMàu sắc: xanh rừng đậm #18392E, đen than #171B18, trắng ngà #F4F1E8 và cam đất #D77B43.\n\nSử dụng ảnh núi non hùng vĩ, biển mây, rừng sâu, lều cắm trại và những nhà thám hiểm nhỏ giữa cảnh quan rộng lớn. Typography lớn, đậm, tương phản mạnh.\n\n## 2. Sections\n\n**Hero — Into the Unknown**\n- Hero toàn màn hình với ảnh núi phủ mây.\n- Headline: “GO BEYOND THE MAP.”\n- Subtitle: “Leave the ordinary behind. Find your wild.”\n- CTA: Explore Expeditions.\n- Nhãn nhỏ: Vietnam · Outdoor Adventures · Small Group Tours.\n- Có một đường line chỉ dẫn người dùng cuộn xuống.\n\n**Featured Expeditions**\n- Tour Hà Giang Loop, trekking Tà Năng, chinh phục Fansipan, khám phá hang động.\n- Mỗi tour có ảnh, độ dài hành trình, độ khó, khu vực và mô tả.\n- Nút View Expedition mở modal hoặc trang chi tiết.\n\n**Choose Your Adventure**\n- Trekking, Camping, Mountain Climbing, Cave Exploration.\n- Bố cục ảnh lớn, không dùng các card giống nhau hoàn toàn.\n\n**The Journey**\n- Timeline mô tả hành trình mẫu từ chuẩn bị, khởi hành, khám phá đến kết thúc.\n- Hiển thị lịch trình theo từng ngày.\n\n**Why Wildroute**\n- Nhóm nhỏ, hướng dẫn viên địa phương, chuẩn bị an toàn, tôn trọng thiên nhiên.\n\n**Field Notes**\n- Nhật ký khám phá, kinh nghiệm trekking, hướng dẫn chuẩn bị đồ dùng.\n\n**Final CTA**\n- “THE WILD IS CALLING.”\n- CTA: Find Your Next Expedition.\n\n**Footer**\n- Logo, liên hệ, mạng xã hội, thông tin doanh nghiệp.\n\n## 3. Animation\n\n1. Hero: ảnh nền zoom chậm từ 105% về 100%, tạo cảm giác máy quay tiến vào cảnh núi.\n2. Headline: từng dòng xuất hiện bằng hiệu ứng clip reveal từ dưới lên, có độ trễ ngắn.\n3. Scroll parallax: lớp núi tiền cảnh và hậu cảnh dịch chuyển với tốc độ khác nhau nhưng rất nhẹ.\n4. Expedition cards: ảnh zoom 1.04 lần khi hover, thông tin xuất hiện bằng fade-up.\n5. Journey timeline: đường line được vẽ dần khi người dùng cuộn đến.\n6. Section transition: nội dung fade-in và dịch chuyển khoảng 20px.\n7. CTA: mũi tên dịch chuyển nhẹ khi hover.\n8. Không dùng hiệu ứng rung, glitch hoặc particle quá nhiều.\n\n## 4. Yêu cầu triển khai\n\nResponsive desktop, tablet, mobile. Navigation rõ ràng, animation nhẹ và tối ưu hiệu suất. Tất cả nút phải có hành động thực tế. Đây là website giới thiệu và khám phá tour, không cần checkout hoặc thanh toán trực tuyến. Dùng dữ liệu tour mẫu có thể chỉnh sửa.",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "53207d47-bf43-4f5c-ab24-53d0b01374fb",
+    "kind": "quick-prototype",
+    "status": "running",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\wildroute-expeditions\\prototype"
+  },
+  "concept": {
+    "preset": "auto",
+    "motion": "auto",
+    "sections": [],
+    "mood": "",
+    "reference": ""
+  }
+}

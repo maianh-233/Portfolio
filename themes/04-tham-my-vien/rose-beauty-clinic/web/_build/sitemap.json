@@ -1,0 +1,81 @@
+{
+  "brand": "ROSÉ BEAUTY CLINIC",
+  "language": "en",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Khung vòm (arch) mềm như cánh hoa hồng xuyên suốt mọi trang: ảnh chân dung, thẻ và nền đều bo vòm, kết hợp đường cong đầu section",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Vẻ đẹp tự nhiên, chăm sóc riêng cho bạn",
+    "description": "Giao diện thẩm mỹ viện chăm sóc da phong cách nữ tính, nhẹ nhàng, chuyên nghiệp."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Hero cảm xúc, triết lý làm đẹp tự nhiên, 4 nhóm dịch vụ, trải nghiệm tại phòng khám, cảm nhận khách và lời mời tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Hero giàu cảm xúc theo chú thích BA" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Triết lý làm đẹp tự nhiên, link sang pages/about.html" },
+        { "id": "services", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "4 nhóm dịch vụ, link sang pages/services.html" },
+        { "id": "experience", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Trải nghiệm tại phòng khám" },
+        { "id": "stories", "catalog": "testimonials", "variant": "testimonials-carousel", "source": "ai", "note": "" },
+        { "id": "consult", "catalog": "cta", "variant": "cta-fullbleed", "source": "ba", "note": "Lời mời tư vấn, mở form" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "woman natural skin portrait soft light", "file": "assets/img/home-hero-portrait.jpg", "status": "ok" },
+        { "slot": "philosophy", "query": "facial treatment spa room", "file": "assets/img/home-experience-care.jpg", "status": "ok" },
+        { "slot": "experience", "query": "spa facial massage", "file": "assets/img/home-facial-massage.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Treatments & Prices",
+      "purpose": "Danh mục dịch vụ chăm sóc da, cấp ẩm, hỗ trợ trẻ hóa, chuyên sâu kèm mô tả và giá tham khảo",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "menu", "catalog": "pricing", "variant": "features-tabs", "source": "ba", "note": "Tabs 4 nhóm, mỗi dịch vụ có mô tả, thời lượng, giá tham khảo" },
+        { "id": "programs", "catalog": "pricing", "variant": "features-bento", "source": "ba", "note": "Liệu trình nhiều buổi" },
+        { "id": "faq", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "" },
+        { "id": "consult", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "menu-skincare", "query": "facial treatment spa room", "file": "assets/img/service-skincare.jpg", "status": "ok" },
+        { "slot": "menu-hydration", "query": "facial treatment spa room", "file": "assets/img/service-hydration.jpg", "status": "ok" },
+        { "slot": "menu-rejuvenation", "query": "facial treatment spa room", "file": "assets/img/service-rejuvenation.jpg", "status": "ok" },
+        { "slot": "menu-intensive", "query": "facial treatment spa room", "file": "assets/img/service-intensive.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About Us",
+      "purpose": "Câu chuyện thương hiệu, quy trình tư vấn cá nhân hóa, đội ngũ, không gian và phong cách phục vụ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Câu chuyện thương hiệu" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "Quy trình tư vấn cá nhân hóa" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Bác sĩ trưởng có ảnh, thành viên khác dùng chữ cái đầu" },
+        { "id": "space", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Không gian phòng khám" },
+        { "id": "care", "catalog": "story", "variant": "quote-full", "source": "ba", "note": "Phong cách phục vụ" },
+        { "id": "consult", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "story", "query": "woman relaxing spa towel", "file": "assets/img/about-story-portrait.jpg", "status": "ok" },
+        { "slot": "team-lead", "query": "female doctor white coat smiling", "file": "assets/img/about-team-doctor.jpg", "status": "ok" },
+        { "slot": "space-treatment", "query": "woman relaxing spa towel", "file": "assets/img/about-treatment-room.jpg", "status": "ok" },
+        { "slot": "team-others", "query": "asian dermatologist portrait", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ 3 trang chính theo chú thích của BA (Home, Treatments & Prices, About Us)",
+    "Có bộ chuyển ngôn ngữ EN/VI theo chú thích BA (ghi đè mục 2 concept.md); ngôn ngữ mặc định tiếng Anh, font Be Vietnam Pro + Cormorant Garamond hỗ trợ tiếng Việt",
+    "Màu theo mô tả BA (hồng phấn, kem sữa, trắng ấm, rose gold) thay bảng màu preset; hồng nhấn đậm vừa phải đạt tương phản AA",
+    "Chuyển động tiết chế (reveal, float nhẹ) để giữ tính chuyên nghiệp ngành y tế",
+    "Không có thương mại điện tử / giỏ hàng theo yêu cầu BA"
+  ],
+  "limitations": [
+    "Form Đặt lịch tư vấn là bản demo, chưa có backend",
+    "Thư viện ảnh không có ảnh bác sĩ / không gian phòng khám người Việt; cần ảnh thật của đội ngũ và phòng khám từ khách"
+  ]
+}

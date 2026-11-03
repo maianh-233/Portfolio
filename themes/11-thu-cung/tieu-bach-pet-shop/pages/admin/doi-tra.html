@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đổi trả · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-010" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-010 Đổi trả (quản trị): Tabs Chờ xử lý / Đã chấp nhận / Đã xong / Tất cả + DataTable. Không xử lý trên dòng (phải xem video trước) → SCR-BOOK-011. */
+  Layout.mount({ area: 'admin', title: 'Đổi trả', active: 'returns', breadcrumb: [['Bán hàng'], ['Đổi trả']] }, function (main) {
+    var U = Perm.url, esc = UI.esc;
+    var LY_DO = { GIAO_NHAM: 'Giao nhầm', HANG_LOI: 'Hàng lỗi' }, HINH_THUC = { DOI_HANG: 'Đổi hàng', TRA_HANG: 'Trả hàng' };
+    var GROUPS = [{ id: 'cho', label: 'Chờ xử lý', s: ['PENDING'] }, { id: 'chap-nhan', label: 'Đã chấp nhận', s: ['ACCEPTED'] }, { id: 'xong', label: 'Đã xong', s: ['COMPLETED', 'REJECTED'] }, { id: 'tat-ca', label: 'Tất cả', s: null }];
+    var group = 'cho', tbl;
+    function all() { return DemoStore.list('returns'); }
+    function rows(g) { var x = GROUPS.filter(function (y) { return y.id === g; })[0]; return all().filter(function (r) { return !x.s || x.s.indexOf(r.state) >= 0; }); }
+    var pending = all().filter(function (r) { return r.state === 'PENDING'; }).length;
+    main.innerHTML = UI.pageHeader({ title: 'Yêu cầu đổi trả', description: pending + ' yêu cầu chờ xử lý' }) + '<div class="mb-4" data-tabs></div><div data-tbl>' + UI.skeleton(5) + '</div>';
+    var href = function (r) { return U('pages/admin/chi-tiet-doi-tra.html?id=' + r.id); };
+    setTimeout(function () {
+      try {
+        UI.tabs(main.querySelector('[data-tabs]'), { panelCls: 'hidden', tabs: GROUPS.map(function (g) { return { id: g.id, label: g.label, count: rows(g.id).length }; }),
+          onChange: function (id) { group = id; if (!tbl) return; tbl.state.sort = { key: 'tao_luc', dir: id === 'cho' ? 'asc' : 'desc' }; tbl.setRows(rows(id)); } });
+        tbl = UI.table(main.querySelector('[data-tbl]'), {
+          rows: rows(group), pageSize: 20, sort: { key: 'tao_luc', dir: 'asc' },
+          searchKeys: ['code', 'orderCode', 'so_dien_thoai'], searchPlaceholder: 'Tìm mã yêu cầu, mã đơn, SĐT…',
+          filters: [{ key: 'ly_do', label: 'Lý do', type: 'select', options: [{ value: 'GIAO_NHAM', label: 'Giao nhầm' }, { value: 'HANG_LOI', label: 'Hàng lỗi' }] },
+            { key: 'hinh_thuc', label: 'Hình thức', type: 'select', options: [{ value: 'DOI_HANG', label: 'Đổi hàng' }, { value: 'TRA_HANG', label: 'Trả hàng' }] },
+            { key: 'tao_luc', label: 'Ngày gửi', type: 'date-range' }],
+          columns: [
+            { key: 'code', label: 'Mã yêu cầu', sortable: true, mobile: 'title', render: function (r) { return '<a href="' + href(r) + '" class="font-mono text-sm ' + (r.state === 'PENDING' ? 'font-extrabold' : 'font-bold') + ' text-neutral-800 hover:text-primary-700">' + esc(r.code) + '</a>'; } },
+            { key: 'orderCode', label: 'Đơn hàng', render: function (r) { return '<a href="' + U('pages/admin/chi-tiet-don.html?id=' + r.orderId) + '" class="font-mono text-sm text-primary-700 hover:underline" data-permission="BOOK.ORDER.VIEW">' + esc(r.orderCode) + '</a>'; } },
+            { key: 'ho_ten', label: 'Khách', render: function (r) { return '<p class="font-bold">' + esc(r.ho_ten) + '</p><a href="tel:' + esc(r.so_dien_thoai) + '" class="text-xs text-primary-700">' + esc(r.so_dien_thoai) + '</a>'; } },
+            { key: 'ly_do', label: 'Lý do', render: function (r) { return esc(LY_DO[r.ly_do]); } },
+            { key: 'hinh_thuc', label: 'Hình thức', hideBelow: 'lg', render: function (r) { return esc(HINH_THUC[r.hinh_thuc]); } },
+            { key: 'tao_luc', label: 'Gửi lúc', sortable: true, hideBelow: 'lg', render: function (r) { return '<span class="whitespace-nowrap">' + UI.fmt.dm(r.tao_luc) + ' ' + UI.fmt.time(r.tao_luc) + '</span>'; } },
+            { key: 'state', label: 'Trạng thái', sortable: true, mobile: 'badge', render: function (r) { return App.stateBadge('DOC-BOOK-RETURN', r.state); } }],
+          rowActions: function (r) { return [{ label: 'Xem & xử lý', primary: true, variant: r.state === 'PENDING' ? 'primary' : 'secondary', onClick: function () { location.href = href(r); } }]; },
+          onRowClick: function (r) { location.href = href(r); },
+          empty: { title: 'Không có yêu cầu đổi trả nào cần xử lý 🎉' }, emptyFiltered: { title: 'Không có yêu cầu phù hợp bộ lọc' }
+        });
+      } catch (e) { main.querySelector('[data-tbl]').innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.' }); }
+    }, 400);
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Sinh tự động bởi SRS & Prototype Builder từ srs/_design-tokens.json — không sửa tay. Sửa SRS rồi dựng lại prototype. */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --c-primary-50: 253 240 237; /* #FDF0ED */
+  --c-primary-100: 255 230 224; /* #FFE6E0 */
+  --c-primary-200: 255 214 204; /* #FFD6CC */
+  --c-primary-300: 255 198 185; /* #FFC6B9 */
+  --c-primary-400: 255 189 176; /* #FFBDB0 */
+  --c-primary-500: 255 181 167; /* #FFB5A7 */
+  --c-primary-600: 191 78 64; /* #BF4E40 */
+  --c-primary-700: 158 61 50; /* #9E3D32 */
+  --c-primary-800: 127 50 41; /* #7F3229 */
+  --c-primary-900: 101 42 35; /* #652A23 */
+  --c-neutral-0: 255 255 255; /* #FFFFFF */
+  --c-neutral-50: 250 247 246; /* #FAF7F6 */
+  --c-neutral-100: 243 239 238; /* #F3EFEE */
+  --c-neutral-200: 231 226 224; /* #E7E2E0 */
+  --c-neutral-300: 211 205 203; /* #D3CDCB */
+  --c-neutral-400: 168 162 160; /* #A8A2A0 */
+  --c-neutral-500: 122 117 115; /* #7A7573 */
+  --c-neutral-600: 90 86 84; /* #5A5654 */
+  --c-neutral-700: 69 72 76; /* #45484C */
+  --c-neutral-800: 52 58 64; /* #343A40 */
+  --c-neutral-900: 33 37 41; /* #212529 */
+  --c-success-50: 242 248 237; /* #F2F8ED */
+  --c-success-100: 225 239 213; /* #E1EFD5 */
+  --c-success-500: 144 190 109; /* #90BE6D */
+  --c-success-600: 79 127 46; /* #4F7F2E */
+  --c-success-700: 63 106 35; /* #3F6A23 */
+  --c-warning-50: 255 248 235; /* #FFF8EB */
+  --c-warning-100: 255 239 204; /* #FFEFCC */
+  --c-warning-500: 246 189 96; /* #F6BD60 */
+  --c-warning-600: 183 121 31; /* #B7791F */
+  --c-warning-700: 138 90 18; /* #8A5A12 */
+  --c-danger-50: 255 241 241; /* #FFF1F1 */
+  --c-danger-100: 255 224 224; /* #FFE0E0 */
+  --c-danger-500: 240 113 103; /* #F07167 */
+  --c-danger-600: 201 60 60; /* #C93C3C */
+  --c-danger-700: 161 46 46; /* #A12E2E */
+  --c-info-50: 238 246 255; /* #EEF6FF */
+  --c-info-100: 220 235 255; /* #DCEBFF */
+  --c-info-500: 127 179 245; /* #7FB3F5 */
+  --c-info-600: 47 109 181; /* #2F6DB5 */
+  --c-info-700: 36 90 150; /* #245A96 */
+  --c-secondary-50: 241 250 250; /* #F1FAFA */
+  --c-secondary-100: 224 243 243; /* #E0F3F3 */
+  --c-secondary-200: 201 234 235; /* #C9EAEB */
+  --c-secondary-300: 168 218 220; /* #A8DADC */
+  --c-secondary-400: 134 199 202; /* #86C7CA */
+  --c-secondary-500: 95 175 179; /* #5FAFB3 */
+  --c-secondary-600: 47 122 126; /* #2F7A7E */
+  --c-secondary-700: 39 100 103; /* #276467 */
+  --c-secondary-800: 33 79 82; /* #214F52 */
+  --c-secondary-900: 28 65 67; /* #1C4143 */
+  --font-sans: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --text-xs: 12px;
+  --leading-xs: 16px;
+  --text-sm: 14px;
+  --leading-sm: 20px;
+  --text-base: 16px;
+  --leading-base: 24px;
+  --text-lg: 18px;
+  --leading-lg: 28px;
+  --text-xl: 20px;
+  --leading-xl: 28px;
+  --text-2xl: 24px;
+  --leading-2xl: 32px;
+  --text-3xl: 30px;
+  --leading-3xl: 38px;
+  --text-4xl: 38px;
+  --leading-4xl: 46px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 3px rgb(52 58 64 / 0.06);
+  --shadow-md: 0 6px 16px rgb(52 58 64 / 0.08);
+  --shadow-lg: 0 16px 40px rgb(52 58 64 / 0.12);
+  --shadow-brand: 0 8px 24px rgb(255 181 167 / 0.45);
+  --layout-sidebar: 248px;
+  --layout-sidebar-collapsed: 72px;
+  --layout-topbar: 64px;
+  --layout-site-header: 72px;
+  --layout-content: 1280px;
+  --layout-table-row: 52px;
+  --layout-control: 44px;
+  --density: comfortable;
+}
+
+html { font-family: var(--font-sans); color: rgb(var(--c-neutral-800)); background: rgb(var(--c-neutral-50)); -webkit-font-smoothing: antialiased; }
+.icon { width: 1.25em; height: 1.25em; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+:focus-visible { outline: 2px solid rgb(var(--c-primary-500)); outline-offset: 2px; }
+.tabular-nums, td.num, th.num { font-variant-numeric: tabular-nums; }

@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MECHAVANCE — Precision in Every Detail</title>
+  <meta name="description" content="MECHAVANCE: gia công cơ khí chính xác, chế tạo chi tiết máy, gia công kim loại tấm và kết cấu công nghiệp theo quy trình kỹ thuật chuyên nghiệp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-void font-sans text-ink antialiased">
+
+  <!-- HEADER (giống nhau trên mọi trang) -->
+  <header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-transparent bg-void/80 backdrop-blur transition-colors duration-300 [&.is-scrolled]:border-line [&.is-scrolled]:bg-void/95">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="index.html" class="group flex items-center gap-3" aria-label="MECHAVANCE - về trang chủ">
+        <span class="grid h-9 w-9 place-items-center border border-accent font-mono text-sm font-semibold text-accent transition-colors duration-300 group-hover:bg-accent group-hover:text-void">MV</span>
+        <span class="font-display text-base font-semibold tracking-[0.08em] sm:text-lg">MECHAVANCE</span>
+      </a>
+      <nav data-scrollspy class="hidden items-center gap-8 lg:flex" aria-label="Điều hướng chính">
+        <a href="#hero" aria-current="page" class="relative py-2 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink aria-[current]:text-ink [&.is-active]:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Trang chủ</a>
+        <a href="#about" class="relative py-2 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Giới thiệu</a>
+        <a href="#capabilities" class="relative py-2 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Năng lực</a>
+        <a href="#technology" class="relative py-2 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Công nghệ</a>
+        <a href="#projects" class="relative py-2 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Dự án</a>
+        <a href="#contact" class="relative py-2 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Liên hệ</a>
+      </nav>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-line text-ink transition-colors duration-300 hover:border-accent hover:text-accent lg:hidden" aria-label="Mở menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-line bg-panel p-6 lg:hidden">
+      <nav class="flex flex-col" aria-label="Điều hướng điện thoại">
+        <a href="#hero" class="flex min-h-[48px] items-center border-b border-line text-base font-medium text-ink hover:text-accent">Trang chủ</a>
+        <a href="#about" class="flex min-h-[48px] items-center border-b border-line text-base font-medium text-ink hover:text-accent">Giới thiệu</a>
+        <a href="#capabilities" class="flex min-h-[48px] items-center border-b border-line text-base font-medium text-ink hover:text-accent">Năng lực</a>
+        <a href="#technology" class="flex min-h-[48px] items-center border-b border-line text-base font-medium text-ink hover:text-accent">Công nghệ</a>
+        <a href="#projects" class="flex min-h-[48px] items-center border-b border-line text-base font-medium text-ink hover:text-accent">Dự án</a>
+        <a href="#contact" class="flex min-h-[48px] items-center text-base font-medium text-ink hover:text-accent">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO -->
+    <section id="hero" data-section="hero-type" class="relative overflow-hidden bg-void bp-grid">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 pb-16 pt-10 sm:px-6 lg:px-10 lg:pb-20 lg:pt-14 2xl:px-16">
+        <p data-reveal="fade" class="font-mono text-sm uppercase tracking-[0.2em] text-accent">Precision in Every Detail.</p>
+        <h1 data-reveal="up" class="mt-5 font-display text-[clamp(2rem,5.4vw,6rem)] font-semibold uppercase leading-[1.04] tracking-tight text-ink">
+          Engineering Precision.<br>
+          <span class="text-steel/60">Building the Future.</span>
+        </h1>
+
+        <div class="mt-10 grid grid-cols-1 gap-10 lg:mt-14 lg:grid-cols-12 lg:gap-12">
+          <div class="flex flex-col justify-between gap-10 lg:col-span-4">
+            <div data-reveal="up" data-reveal-delay="200">
+              <p class="max-w-[46ch] text-base leading-relaxed text-muted sm:text-lg">MECHAVANCE cung cấp giải pháp gia công cơ khí chính xác, chế tạo chi tiết máy và hỗ trợ sản xuất công nghiệp bằng quy trình kỹ thuật chuyên nghiệp.</p>
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+                <a href="#capabilities" class="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-accent px-6 text-[15px] font-semibold text-void transition duration-300 hover:bg-ink active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+                  Khám phá năng lực
+                  <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <a href="#about" class="inline-flex min-h-[52px] items-center justify-center border border-line px-6 text-[15px] font-semibold text-ink transition duration-300 hover:border-steel active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Tìm hiểu doanh nghiệp</a>
+              </div>
+            </div>
+          </div>
+
+          <figure data-reveal="fade" data-reveal-delay="350" class="marks relative lg:col-span-8 lg:-mr-10 2xl:-mr-16">
+            <div class="relative aspect-[4/3] overflow-hidden bg-panel sm:aspect-[16/9] lg:aspect-[16/8.4]">
+              <img src="assets/img/hero-cnc-lathe.webp" alt="Máy tiện kim loại trong xưởng cơ khí, cận cảnh vô lăng điều khiển và mâm cặp" class="img-steel h-full w-full object-cover" width="1600" height="1067">
+              <div class="absolute inset-0 bg-gradient-to-tr from-void/70 via-void/10 to-transparent"></div>
+              <!-- Đường nét CAD minh họa -->
+              <svg class="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1600 840" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+                <g stroke="#F26A1B" stroke-width="2">
+                  <line class="cad-line" pathLength="1" x1="230" y1="90" x2="1380" y2="90" style="--d:.5s"/>
+                  <line class="cad-line" pathLength="1" x1="230" y1="70" x2="230" y2="250" style="--d:.5s"/>
+                  <line class="cad-line" pathLength="1" x1="1380" y1="70" x2="1380" y2="250" style="--d:.5s"/>
+                  <circle class="cad-line" pathLength="1" cx="1200" cy="550" r="190" stroke-dasharray="1" style="--d:.9s"/>
+                  <line class="cad-line" pathLength="1" x1="1200" y1="320" x2="1200" y2="790" stroke-opacity=".6" style="--d:1.1s"/>
+                  <line class="cad-line" pathLength="1" x1="970" y1="550" x2="1430" y2="550" stroke-opacity=".6" style="--d:1.1s"/>
+                  <line class="cad-line" pathLength="1" x1="1334" y1="416" x2="1470" y2="300" style="--d:1.3s"/>
+                  <line class="cad-line" pathLength="1" x1="1470" y1="300" x2="1560" y2="300" style="--d:1.4s"/>
+                  <line class="cad-line" pathLength="1" x1="120" y1="230" x2="340" y2="230" stroke-opacity=".6" style="--d:1s"/>
+                  <line class="cad-line" pathLength="1" x1="230" y1="120" x2="230" y2="340" stroke-opacity=".6" style="--d:1s"/>
+                </g>
+                <g fill="#F26A1B">
+                  <path class="cad-fade" d="M230 90l18-7v14z M1380 90l-18-7v14z" style="--d:1.3s"/>
+                </g>
+                <g class="cad-fade cad-text" fill="#E8EBEE" font-size="22" style="--d:1.5s">
+                  <text x="805" y="78" text-anchor="middle">DETAIL A</text>
+                  <text x="1480" y="290">Ø HANDWHEEL</text>
+                  <text x="250" y="380" fill="#A1AAB4">CL SPINDLE</text>
+                </g>
+              </svg>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section id="about" data-section="story-editorial" class="border-y border-line bg-panel py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+        <div class="self-start lg:sticky lg:top-28 lg:col-span-5">
+          <h2 data-reveal="up" class="font-display text-3xl font-semibold leading-tight sm:text-4xl 2xl:text-5xl">Một xưởng cơ khí vận hành bằng bản vẽ, số đo và kỷ luật quy trình.</h2>
+          <figure data-reveal="fade" class="group marks mt-10">
+            <div class="aspect-[4/3] overflow-hidden bg-void">
+              <img src="assets/img/about-nha-xuong.webp" alt="Không gian nhà xưởng rộng, sàn sạch, giá kệ và khu vực thao tác được bố trí ngăn nắp" class="img-steel h-full w-full object-cover" loading="lazy" width="1200" height="800">
+            </div>
+          </figure>
+        </div>
+
+        <div class="lg:col-span-7">
+          <p data-reveal="up" class="max-w-[62ch] text-lg leading-relaxed text-ink/90">MECHAVANCE hoạt động trong lĩnh vực cơ khí chính xác, gia công kim loại và chế tạo chi tiết máy công nghiệp. Chúng tôi làm việc với doanh nghiệp sản xuất và đối tác công nghiệp cần một đơn vị gia công hiểu bản vẽ, giữ đúng dung sai và giao hàng ổn định.</p>
+
+          <dl data-reveal="up" class="mt-12 grid grid-cols-1 gap-8 border-t border-line pt-10 md:grid-cols-3">
+            <div>
+              <dt class="font-mono text-sm uppercase tracking-[0.14em] text-accent">Sứ mệnh</dt>
+              <dd class="mt-3 leading-relaxed text-muted">Biến bản vẽ kỹ thuật thành chi tiết đạt yêu cầu ngay từ lần gia công đầu tiên.</dd>
+            </div>
+            <div>
+              <dt class="font-mono text-sm uppercase tracking-[0.14em] text-accent">Định hướng</dt>
+              <dd class="mt-3 leading-relaxed text-muted">Đầu tư dần vào thiết bị CNC, đo kiểm và tự động hóa để mở rộng năng lực gia công chính xác.</dd>
+            </div>
+            <div>
+              <dt class="font-mono text-sm uppercase tracking-[0.14em] text-accent">Giá trị cốt lõi</dt>
+              <dd class="mt-3 leading-relaxed text-muted">Chính xác, minh bạch, an toàn và đổi mới trong cách làm.</dd>
+            </div>
+          </dl>
+
+          <div data-reveal-stagger="90" class="mt-12 grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2">
+            <article class="bg-panel p-6 transition-colors duration-300 hover:bg-void lg:p-8">
+              <svg class="h-7 w-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+              <h3 class="mt-5 font-display text-lg font-semibold">Năng lực kỹ thuật</h3>
+              <p class="mt-2 leading-relaxed text-muted">Đội ngũ đọc hiểu bản vẽ, chọn phương án gia công và đề xuất điều chỉnh khi cần để chi tiết dễ chế tạo hơn.</p>
+            </article>
+            <article class="bg-panel p-6 transition-colors duration-300 hover:bg-void lg:p-8">
+              <svg class="h-7 w-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2M11.5 9.5l2-2M8.5 6.5l2-2M17.5 15.5l2-2"/></svg>
+              <h3 class="mt-5 font-display text-lg font-semibold">Chính xác trong gia công</h3>
+              <p class="mt-2 leading-relaxed text-muted">Kích thước, dung sai và độ nhám được theo dõi tại từng nguyên công, không chỉ kiểm ở cuối.</p>
+            </article>
+            <article class="bg-panel p-6 transition-colors duration-300 hover:bg-void lg:p-8">
+              <svg class="h-7 w-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></svg>
+              <h3 class="mt-5 font-display text-lg font-semibold">Quy trình ổn định</h3>
+              <p class="mt-2 leading-relaxed text-muted">Mỗi đơn hàng đi qua cùng một trình tự đã chuẩn hóa, giúp chất lượng lô sau giống lô trước.</p>
+            </article>
+            <article class="bg-panel p-6 transition-colors duration-300 hover:bg-void lg:p-8">
+              <svg class="h-7 w-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <h3 class="mt-5 font-display text-lg font-semibold">Chất lượng và an toàn</h3>
+              <p class="mt-2 leading-relaxed text-muted">Cam kết kiểm tra trước khi bàn giao và tuân thủ quy tắc an toàn lao động trong toàn bộ nhà xưởng.</p>
+            </article>
+          </div>
+
+          <div class="mt-12 grid grid-cols-3 border-y border-line">
+            <div class="py-6 pr-4">
+              <p class="font-display text-4xl font-semibold text-ink sm:text-5xl"><span data-count-to="5">5</span></p>
+              <p class="mt-2 text-sm text-muted sm:text-base">nhóm năng lực gia công</p>
+            </div>
+            <div class="border-l border-line py-6 pl-4 pr-4 sm:pl-6">
+              <p class="font-display text-4xl font-semibold text-ink sm:text-5xl"><span data-count-to="6">6</span></p>
+              <p class="mt-2 text-sm text-muted sm:text-base">bước quy trình kiểm soát</p>
+            </div>
+            <div class="border-l border-line py-6 pl-4 sm:pl-6">
+              <p class="font-display text-4xl font-semibold text-ink sm:text-5xl"><span data-count-to="5">5</span></p>
+              <p class="mt-2 text-sm text-muted sm:text-base">lĩnh vực ứng dụng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CAPABILITIES -->
+    <section id="capabilities" data-section="features-bento" class="bg-void py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="max-w-[22ch] font-display text-3xl font-semibold leading-tight sm:text-4xl 2xl:text-5xl">Năng lực gia công</h2>
+        <p data-reveal="up" class="mt-5 max-w-[60ch] text-lg leading-relaxed text-muted">Năm nhóm năng lực bổ trợ nhau, từ một chi tiết tiện đơn lẻ đến cụm kết cấu hoàn chỉnh.</p>
+
+        <div data-reveal-stagger="90" class="mt-12 grid grid-cols-1 gap-px border border-line bg-line md:grid-cols-6 lg:grid-cols-12">
+          <article class="group flex flex-col bg-void md:col-span-6 lg:col-span-7 lg:row-span-2">
+            <div class="relative aspect-[16/10] overflow-hidden bg-panel lg:aspect-auto lg:flex-1">
+              <img src="assets/img/cap-cnc-machining.webp" alt="Kỹ thuật viên đeo găng thao tác chi tiết trục kim loại được kẹp trên ê tô" class="img-steel h-full w-full object-cover lg:absolute lg:inset-0" loading="lazy" width="1200" height="800">
+            </div>
+            <div class="p-6 lg:p-8">
+              <p class="font-mono text-sm text-accent">CNC Machining</p>
+              <h3 class="mt-2 font-display text-xl font-semibold sm:text-2xl">Gia công CNC</h3>
+              <p class="mt-3 max-w-[52ch] leading-relaxed text-muted">Gia công phay, tiện CNC và chi tiết cơ khí chính xác theo bản vẽ, từ mẫu thử đến loạt nhỏ.</p>
+            </div>
+          </article>
+
+          <article class="group flex flex-col bg-void md:col-span-3 lg:col-span-5">
+            <div class="aspect-[16/9] overflow-hidden bg-panel">
+              <img src="assets/img/cap-sheet-metal.jpg" alt="Tấm kim loại đục lỗ dạng mảng lớn được gia công và lắp ghép" class="img-steel h-full w-full object-cover" loading="lazy" width="1024" height="683">
+            </div>
+            <div class="p-6">
+              <p class="font-mono text-sm text-accent">Sheet Metal Fabrication</p>
+              <h3 class="mt-2 font-display text-lg font-semibold sm:text-xl">Gia công kim loại tấm</h3>
+              <p class="mt-2 leading-relaxed text-muted">Gia công, cắt và tạo hình kim loại tấm.</p>
+            </div>
+          </article>
+
+          <article class="group flex flex-col bg-void md:col-span-3 lg:col-span-5">
+            <div class="aspect-[16/9] overflow-hidden bg-panel">
+              <img src="assets/img/cap-mechanical-components.jpg" alt="Các chi tiết và dụng cụ cơ khí bằng thép xếp chồng, ảnh đen trắng" class="img-steel h-full w-full object-cover" loading="lazy" width="1200" height="800">
+            </div>
+            <div class="p-6">
+              <p class="font-mono text-sm text-accent">Mechanical Components</p>
+              <h3 class="mt-2 font-display text-lg font-semibold sm:text-xl">Chi tiết và bộ phận máy</h3>
+              <p class="mt-2 leading-relaxed text-muted">Chế tạo các chi tiết và bộ phận máy.</p>
+            </div>
+          </article>
+
+          <article class="group grid grid-cols-1 bg-void sm:grid-cols-2 md:col-span-3 lg:col-span-6">
+            <div class="aspect-[16/10] overflow-hidden bg-panel sm:aspect-auto sm:min-h-[240px]">
+              <img src="assets/img/cap-industrial-fabrication.webp" alt="Thợ hàn đeo găng hàn kết cấu thép, tia lửa bắn ra" class="img-steel h-full w-full object-cover" loading="lazy" width="1200" height="800">
+            </div>
+            <div class="flex flex-col justify-end p-6">
+              <p class="font-mono text-sm text-accent">Industrial Fabrication</p>
+              <h3 class="mt-2 font-display text-lg font-semibold sm:text-xl">Kết cấu công nghiệp</h3>
+              <p class="mt-2 leading-relaxed text-muted">Gia công kết cấu và cụm chi tiết công nghiệp.</p>
+            </div>
+          </article>
+
+          <article class="group grid grid-cols-1 bg-void sm:grid-cols-2 md:col-span-3 lg:col-span-6">
+            <div class="aspect-[16/10] overflow-hidden bg-panel sm:aspect-auto sm:min-h-[240px]">
+              <img src="assets/img/cap-technical-design.webp" alt="Bản vẽ kỹ thuật cơ khí với hình chiếu và chi tiết máy" class="img-steel h-full w-full object-cover object-left" loading="lazy" width="1200" height="796">
+            </div>
+            <div class="flex flex-col justify-end p-6">
+              <p class="font-mono text-sm text-accent">Technical Design</p>
+              <h3 class="mt-2 font-display text-lg font-semibold sm:text-xl">Thiết kế kỹ thuật</h3>
+              <p class="mt-2 leading-relaxed text-muted">Thiết kế, đọc hiểu bản vẽ và hỗ trợ triển khai kỹ thuật.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TECHNOLOGY -->
+    <section id="technology" data-section="features-tabs" class="border-y border-line bg-panel py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-display text-3xl font-semibold leading-tight sm:text-4xl 2xl:text-5xl">Máy móc và công nghệ</h2>
+        <p data-reveal="up" class="mt-5 max-w-[64ch] text-lg leading-relaxed text-muted">Hệ thống thiết bị gia công, gá kẹp và tự động hóa. Thông tin bên dưới là nội dung minh họa, sẽ cập nhật theo danh mục máy thực tế.</p>
+
+        <div data-tabs class="mt-12">
+          <div class="no-scrollbar relative flex gap-2 overflow-x-auto border-b border-line" role="tablist">
+            <button type="button" data-tab="phay" class="min-h-[48px] shrink-0 px-4 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink">Phay và gá kẹp</button>
+            <button type="button" data-tab="khoan" class="min-h-[48px] shrink-0 px-4 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink">Khoan cần</button>
+            <button type="button" data-tab="robot" class="min-h-[48px] shrink-0 px-4 text-[15px] font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink">Robot công nghiệp</button>
+            <span data-tab-indicator class="bottom-0 h-0.5 bg-accent"></span>
+          </div>
+
+          <div data-tab-panel="phay" class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+            <a href="assets/img/tech-milling-gear.jpg" data-lightbox="cong-nghe" data-caption="Phay và gá kẹp phôi trên bàn máy có thước chia" class="group marks block lg:col-span-7">
+              <div class="aspect-[16/10] overflow-hidden bg-void">
+                <img src="assets/img/tech-milling-gear.jpg" alt="Phôi kim loại được kẹp trên ê tô bàn máy phay có thước chia vạch" class="img-steel h-full w-full object-cover" loading="lazy" width="1024" height="680">
+              </div>
+            </a>
+            <div class="lg:col-span-5">
+              <h3 class="font-display text-2xl font-semibold">Phay và gá kẹp chính xác</h3>
+              <p class="mt-4 leading-relaxed text-muted">Gá kẹp chắc chắn là điều kiện đầu tiên của độ chính xác. Phôi được định vị theo chuẩn trên bản vẽ trước khi phay mặt, phay rãnh hoặc khoan lỗ.</p>
+              <dl class="mt-8 grid grid-cols-2 gap-px border border-line bg-line">
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Ứng dụng</dt><dd class="mt-1 font-medium">Mặt phẳng, rãnh, bậc</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Vật liệu</dt><dd class="mt-1 font-medium">Thép, inox, nhôm</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Model máy</dt><dd class="mt-1 font-medium text-steel">Cập nhật sau</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Hành trình</dt><dd class="mt-1 font-medium text-steel">Cập nhật sau</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div data-tab-panel="khoan" class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+            <a href="assets/img/tech-radial-drill.jpg" data-lightbox="cong-nghe" data-caption="Máy khoan cần cho chi tiết khổ lớn" class="group marks block lg:col-span-7">
+              <div class="aspect-[16/10] overflow-hidden bg-void">
+                <img src="assets/img/tech-radial-drill.jpg" alt="Máy khoan cần cỡ lớn với cần ngang, bàn máy và vô lăng điều chỉnh" class="img-steel h-full w-full object-cover object-center" loading="lazy" width="683" height="1024">
+              </div>
+            </a>
+            <div class="lg:col-span-5">
+              <h3 class="font-display text-2xl font-semibold">Khoan cần cho chi tiết khổ lớn</h3>
+              <p class="mt-4 leading-relaxed text-muted">Cần khoan xoay và di chuyển được giúp gia công lỗ trên đế máy, mặt bích và tấm kết cấu mà không phải dịch chuyển phôi nhiều lần.</p>
+              <dl class="mt-8 grid grid-cols-2 gap-px border border-line bg-line">
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Ứng dụng</dt><dd class="mt-1 font-medium">Khoan, khoét, taro</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Phôi phù hợp</dt><dd class="mt-1 font-medium">Đế, bích, tấm dày</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Model máy</dt><dd class="mt-1 font-medium text-steel">Cập nhật sau</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Đường kính khoan</dt><dd class="mt-1 font-medium text-steel">Cập nhật sau</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div data-tab-panel="robot" class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+            <a href="assets/img/tech-robot-arm.webp" data-lightbox="cong-nghe" data-caption="Cánh tay robot nhiều bậc tự do" class="group marks block lg:col-span-7">
+              <div class="aspect-[16/10] overflow-hidden bg-void">
+                <img src="assets/img/tech-robot-arm.webp" alt="Cánh tay robot nhiều khớp chuyển động, chụp phơi sáng nhiều tư thế trên nền tối" class="img-steel h-full w-full object-cover object-[50%_35%]" loading="lazy" width="1000" height="1034">
+              </div>
+            </a>
+            <div class="lg:col-span-5">
+              <h3 class="font-display text-2xl font-semibold">Robot và tự động hóa</h3>
+              <p class="mt-4 leading-relaxed text-muted">Hướng đầu tư cho các công đoạn lặp lại như cấp phôi, hàn và xếp dỡ, giúp nhịp sản xuất đều và giảm thao tác nặng cho người vận hành.</p>
+              <dl class="mt-8 grid grid-cols-2 gap-px border border-line bg-line">
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Ứng dụng</dt><dd class="mt-1 font-medium">Cấp phôi, hàn, xếp dỡ</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Mục tiêu</dt><dd class="mt-1 font-medium">Nhịp sản xuất ổn định</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Model robot</dt><dd class="mt-1 font-medium text-steel">Cập nhật sau</dd></div>
+                <div class="bg-void p-5"><dt class="text-sm text-muted">Tải trọng</dt><dd class="mt-1 font-medium text-steel">Cập nhật sau</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROCESS -->
+    <section id="process" data-section="process-steps" class="relative bg-void bp-grid py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-display text-3xl font-semibold leading-tight sm:text-4xl 2xl:text-5xl">Quy trình sản xuất</h2>
+        <p data-reveal="up" class="mt-5 max-w-[60ch] text-lg leading-relaxed text-muted">Sáu bước nối tiếp, mỗi bước có đầu ra rõ ràng trước khi chuyển sang bước sau.</p>
+
+        <div class="relative mt-14">
+          <div aria-hidden="true" class="absolute bottom-6 left-[21px] top-2 w-px bg-line lg:bottom-auto lg:left-0 lg:right-0 lg:top-[22px] lg:h-px lg:w-auto"></div>
+          <ol data-reveal-stagger="100" class="relative grid grid-cols-1 gap-10 lg:grid-cols-6 lg:gap-6">
+            <li class="relative pl-16 lg:pl-0">
+              <span class="absolute left-0 top-0 grid h-11 w-11 place-items-center border border-accent bg-void text-accent lg:static">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg>
+              </span>
+              <p class="font-mono text-sm text-accent lg:mt-6">01</p>
+              <h3 class="mt-1 font-display text-base font-semibold sm:text-lg">Tiếp nhận yêu cầu kỹ thuật</h3>
+              <p class="mt-2 leading-relaxed text-muted">Nhận bản vẽ, số lượng, tiến độ và các yêu cầu đặc biệt từ khách hàng.</p>
+            </li>
+            <li class="relative pl-16 lg:pl-0">
+              <span class="absolute left-0 top-0 grid h-11 w-11 place-items-center border border-accent bg-void text-accent lg:static">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2M11.5 9.5l2-2M8.5 6.5l2-2"/></svg>
+              </span>
+              <p class="font-mono text-sm text-accent lg:mt-6">02</p>
+              <h3 class="mt-1 font-display text-base font-semibold sm:text-lg">Phân tích bản vẽ và vật liệu</h3>
+              <p class="mt-2 leading-relaxed text-muted">Rà soát dung sai, chuẩn gia công và lựa chọn vật liệu phù hợp.</p>
+            </li>
+            <li class="relative pl-16 lg:pl-0">
+              <span class="absolute left-0 top-0 grid h-11 w-11 place-items-center border border-accent bg-void text-accent lg:static">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></svg>
+              </span>
+              <p class="font-mono text-sm text-accent lg:mt-6">03</p>
+              <h3 class="mt-1 font-display text-base font-semibold sm:text-lg">Lập phương án gia công</h3>
+              <p class="mt-2 leading-relaxed text-muted">Xác định nguyên công, đồ gá, dụng cụ cắt và điểm kiểm tra.</p>
+            </li>
+            <li class="relative pl-16 lg:pl-0">
+              <span class="absolute left-0 top-0 grid h-11 w-11 place-items-center border border-accent bg-void text-accent lg:static">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+              </span>
+              <p class="font-mono text-sm text-accent lg:mt-6">04</p>
+              <h3 class="mt-1 font-display text-base font-semibold sm:text-lg">Tiến hành chế tạo</h3>
+              <p class="mt-2 leading-relaxed text-muted">Gia công theo phương án đã duyệt, kiểm tra chi tiết đầu tiên trước khi chạy loạt.</p>
+            </li>
+            <li class="relative pl-16 lg:pl-0">
+              <span class="absolute left-0 top-0 grid h-11 w-11 place-items-center border border-accent bg-void text-accent lg:static">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="m8 11 2 2 4-4"/></svg>
+              </span>
+              <p class="font-mono text-sm text-accent lg:mt-6">05</p>
+              <h3 class="mt-1 font-display text-base font-semibold sm:text-lg">Kiểm tra chất lượng</h3>
+              <p class="mt-2 leading-relaxed text-muted">Đo kích thước, kiểm tra bề mặt và đối chiếu với yêu cầu trên bản vẽ.</p>
+            </li>
+            <li class="relative pl-16 lg:pl-0">
+              <span class="absolute left-0 top-0 grid h-11 w-11 place-items-center border border-accent bg-accent text-void lg:static">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+              </span>
+              <p class="font-mono text-sm text-accent lg:mt-6">06</p>
+              <h3 class="mt-1 font-display text-base font-semibold sm:text-lg">Hoàn thiện sản phẩm</h3>
+              <p class="mt-2 leading-relaxed text-muted">Làm sạch, bảo vệ bề mặt, đóng gói và bàn giao kèm hồ sơ kiểm tra.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. QUALITY -->
+    <section id="quality" data-section="quality-split-accordion" class="border-y border-line bg-panel py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-start gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+        <figure data-reveal="fade" class="group marks lg:col-span-6">
+          <div class="relative aspect-[5/4] overflow-hidden bg-void">
+            <img src="assets/img/quality-micrometer.webp" alt="Kỹ thuật viên dùng dụng cụ đo kiểm tra đường kính trục kim loại lớn trên máy tiện" class="img-steel h-full w-full object-cover" loading="lazy" width="1200" height="981">
+            <svg class="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+              <g stroke="#F26A1B" stroke-width="2">
+                <line x1="660" y1="560" x2="660" y2="760"/>
+                <line x1="980" y1="560" x2="980" y2="760"/>
+                <line x1="660" y1="740" x2="980" y2="740"/>
+              </g>
+              <path d="M660 740l16-6v12z M980 740l-16-6v12z" fill="#F26A1B"/>
+              <text x="820" y="725" text-anchor="middle" class="cad-text" font-size="22" fill="#E8EBEE">KIỂM TRA Ø</text>
+            </svg>
+          </div>
+        </figure>
+
+        <div class="lg:col-span-6">
+          <h2 data-reveal="up" class="font-display text-3xl font-semibold leading-tight sm:text-4xl 2xl:text-5xl">Kiểm soát chất lượng trong từng công đoạn</h2>
+          <p data-reveal="up" class="mt-5 max-w-[60ch] text-lg leading-relaxed text-muted">Định hướng của MECHAVANCE là phát hiện sai lệch sớm, ngay tại máy, thay vì chờ đến khâu cuối.</p>
+
+          <div data-accordion="single" class="mt-10 border-t border-line">
+            <div data-acc-item data-open class="border-b border-line">
+              <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 text-left font-display text-base font-semibold transition-colors duration-300 hover:text-accent sm:text-lg">
+                Độ chính xác kích thước
+                <span data-acc-icon class="grid h-8 w-8 shrink-0 place-items-center border border-line text-accent"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+              </button>
+              <div data-acc-panel><div class="pb-6 leading-relaxed text-muted">Các kích thước quan trọng được đo bằng dụng cụ phù hợp với cấp dung sai trên bản vẽ và ghi lại kết quả cho từng lô.</div></div>
+            </div>
+            <div data-acc-item class="border-b border-line">
+              <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 text-left font-display text-base font-semibold transition-colors duration-300 hover:text-accent sm:text-lg">
+                Kiểm tra vật liệu và bề mặt
+                <span data-acc-icon class="grid h-8 w-8 shrink-0 place-items-center border border-line text-accent"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+              </button>
+              <div data-acc-panel><div class="pb-6 leading-relaxed text-muted">Đối chiếu chủng loại vật liệu đầu vào, kiểm tra độ nhám, vết xước, ba via và lớp bảo vệ bề mặt trước khi bàn giao.</div></div>
+            </div>
+            <div data-acc-item class="border-b border-line">
+              <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 text-left font-display text-base font-semibold transition-colors duration-300 hover:text-accent sm:text-lg">
+                Kiểm soát sai số gia công
+                <span data-acc-icon class="grid h-8 w-8 shrink-0 place-items-center border border-line text-accent"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+              </button>
+              <div data-acc-panel><div class="pb-6 leading-relaxed text-muted">Kiểm tra chi tiết đầu tiên, theo dõi mòn dụng cụ và đo lặp theo tần suất định trước để giữ sai số trong giới hạn cho phép.</div></div>
+            </div>
+            <div data-acc-item class="border-b border-line">
+              <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 text-left font-display text-base font-semibold transition-colors duration-300 hover:text-accent sm:text-lg">
+                Quy trình kiểm tra và nghiệm thu
+                <span data-acc-icon class="grid h-8 w-8 shrink-0 place-items-center border border-line text-accent"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+              </button>
+              <div data-acc-panel><div class="pb-6 leading-relaxed text-muted">Kết quả đo được tổng hợp thành biên bản kiểm tra; khách hàng có thể cùng nghiệm thu mẫu trước khi sản xuất hàng loạt.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PROJECTS -->
+    <section id="projects" data-section="gallery-lookbook" class="bg-void py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-display text-3xl font-semibold leading-tight sm:text-4xl 2xl:text-5xl">Dự án tiêu biểu</h2>
+        <p data-reveal="up" class="mt-5 max-w-[62ch] text-lg leading-relaxed text-muted">Các dự án dưới đây là nội dung minh họa cho từng nhóm năng lực, sẽ được thay bằng dự án thực tế của MECHAVANCE.</p>
+
+        <div class="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+          <a href="project-ong-thep-cuon-han.html" data-reveal="up" class="group block lg:col-span-7 lg:row-span-2">
+            <div class="marks">
+              <div class="aspect-[4/3] overflow-hidden bg-panel lg:aspect-[5/4]">
+                <img src="assets/img/project-mat-bich.webp" alt="Đoạn ống thép cuốn hàn đường kính lớn đặt trên giá đỡ ngoài bãi" class="img-steel h-full w-full object-cover" loading="lazy" width="1200" height="800">
+              </div>
+            </div>
+            <div class="mt-6 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+              <p class="font-mono text-sm text-accent">Kết cấu công nghiệp</p>
+              <p class="text-sm text-muted">Dự án minh họa</p>
+            </div>
+            <h3 class="mt-2 font-display text-xl font-semibold transition-colors duration-300 group-hover:text-accent sm:text-2xl">Ống thép cuốn hàn khẩu độ lớn</h3>
+            <p class="mt-3 max-w-[60ch] leading-relaxed text-muted">Cuốn tấm, hàn đường nối và kiểm tra độ tròn cho các đoạn ống dùng trong kết cấu và đường dẫn công nghiệp.</p>
+            <p class="mt-4 text-sm text-steel">Thép tấm kết cấu · Cuốn tấm, hàn</p>
+            <span class="mt-5 inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold text-ink">Xem chi tiết dự án <svg class="h-4 w-4 text-accent transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+
+          <a href="project-khung-nhom-dinh-hinh.html" data-reveal="up" class="group grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1 xl:grid-cols-2">
+            <div class="marks">
+              <div class="aspect-[4/3] overflow-hidden bg-panel">
+                <img src="assets/img/project-khung-nhom.jpg" alt="Mặt cắt các thanh nhôm định hình với rãnh chữ T" class="img-steel h-full w-full object-cover" loading="lazy" width="1024" height="683">
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <p class="font-mono text-sm text-accent">Thiết bị tự động hóa</p>
+                <p class="text-sm text-muted">Dự án minh họa</p>
+              </div>
+              <h3 class="mt-2 font-display text-lg font-semibold transition-colors duration-300 group-hover:text-accent">Khung nhôm định hình cho trạm lắp ráp</h3>
+              <p class="mt-2 leading-relaxed text-muted">Cắt, phay đầu và khoan taro thanh nhôm để lắp khung máy.</p>
+              <span class="mt-3 inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold">Xem chi tiết dự án <svg class="h-4 w-4 text-accent transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+
+          <a href="project-banh-rang-tru.html" data-reveal="up" class="group grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1 xl:grid-cols-2">
+            <div class="marks">
+              <div class="aspect-[4/3] overflow-hidden bg-panel">
+                <img src="assets/img/project-truc-banh-rang.jpg" alt="Bánh răng trụ bằng thép sáng bóng có lỗ trục, đặt trên nền trắng" class="img-steel h-full w-full object-cover" loading="lazy" width="1200" height="1210">
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <p class="font-mono text-sm text-accent">Máy móc và thiết bị</p>
+                <p class="text-sm text-muted">Dự án minh họa</p>
+              </div>
+              <h3 class="mt-2 font-display text-lg font-semibold transition-colors duration-300 group-hover:text-accent">Bánh răng trụ cho hộp giảm tốc băng tải</h3>
+              <p class="mt-2 leading-relaxed text-muted">Tiện phôi, cắt răng và xử lý bề mặt cho bộ truyền động.</p>
+              <span class="mt-3 inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold">Xem chi tiết dự án <svg class="h-4 w-4 text-accent transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INDUSTRIES -->
+    <section id="industries" data-section="industries-grid" class="border-y border-line bg-panel py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-display text-3xl font-semibold leading-tight sm:text-4xl 2xl:text-5xl">Lĩnh vực phục vụ</h2>
+        <p data-reveal="up" class="mt-5 max-w-[60ch] text-lg leading-relaxed text-muted">Năng lực cơ khí của MECHAVANCE được ứng dụng cho năm nhóm ngành chính.</p>
+
+        <div data-reveal-stagger="90" class="mt-12 grid grid-cols-2 gap-4 md:grid-cols-6 xl:grid-cols-5">
+          <article class="group relative col-span-2 aspect-[16/10] overflow-hidden bg-void md:col-span-2 md:aspect-[4/5] xl:col-span-1">
+            <img src="assets/img/ind-san-xuat-cong-nghiep.webp" alt="Kết cấu thép và đường ống lớn của nhà máy công nghiệp nặng" class="img-steel absolute inset-0 h-full w-full object-cover" loading="lazy" width="1200" height="800">
+            <div class="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <h3 class="font-display text-base font-semibold sm:text-lg">Sản xuất công nghiệp</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink/80 sm:text-[15px]">Chi tiết thay thế và cụm kết cấu cho dây chuyền.</p>
+            </div>
+          </article>
+          <article class="group relative aspect-[4/5] overflow-hidden bg-void md:col-span-2 xl:col-span-1">
+            <img src="assets/img/ind-tu-dong-hoa.jpg" alt="Bảng điều khiển thiết bị công nghiệp với nút bấm và đèn báo" class="img-steel absolute inset-0 h-full w-full object-cover" loading="lazy" width="1024" height="678">
+            <div class="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <h3 class="font-display text-base font-semibold sm:text-lg">Thiết bị tự động hóa</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink/80 sm:text-[15px]">Khung máy, gá đỡ và chi tiết cơ cấu.</p>
+            </div>
+          </article>
+          <article class="group relative aspect-[4/5] overflow-hidden bg-void md:col-span-2 xl:col-span-1">
+            <img src="assets/img/ind-may-moc-thiet-bi.jpg" alt="Cận cảnh khớp các đăng, xích và bánh xích trong cơ cấu truyền động máy" class="img-steel absolute inset-0 h-full w-full object-cover" loading="lazy" width="1200" height="800">
+            <div class="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <h3 class="font-display text-base font-semibold sm:text-lg">Máy móc và thiết bị kỹ thuật</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink/80 sm:text-[15px]">Trục, bánh răng và bộ phận truyền động.</p>
+            </div>
+          </article>
+          <article class="group relative aspect-[4/5] overflow-hidden bg-void md:col-span-3 md:aspect-[16/10] xl:col-span-1 xl:aspect-[4/5]">
+            <img src="assets/img/ind-cong-nghiep-phu-tro.jpg" alt="Mặt bích ống sơn trắng ghép bằng bu lông thép" class="img-steel absolute inset-0 h-full w-full object-cover" loading="lazy" width="1000" height="1510">
+            <div class="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <h3 class="font-display text-base font-semibold sm:text-lg">Công nghiệp phụ trợ</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink/80 sm:text-[15px]">Linh kiện cơ khí theo đơn đặt hàng.</p>
+            </div>
+          </article>
+          <article class="group relative col-span-2 aspect-[16/10] overflow-hidden bg-void md:col-span-3 xl:col-span-1 xl:aspect-[4/5]">
+            <img src="assets/img/ind-che-tao-lap-rap.jpg" alt="Bàn thao tác trong xưởng với dụng cụ, tủ đồ nghề và khung xe đang lắp ráp" class="img-steel absolute inset-0 h-full w-full object-cover" loading="lazy" width="1200" height="801">
+            <div class="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <h3 class="font-display text-base font-semibold sm:text-lg">Chế tạo và lắp ráp cơ khí</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink/80 sm:text-[15px]">Gia công, lắp cụm và hiệu chỉnh hoàn chỉnh.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTACT -->
+    <section id="contact" data-section="contact-split" class="bg-void bp-grid py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-display text-[clamp(2rem,5.6vw,6rem)] font-semibold uppercase leading-[1.04] tracking-tight">Let's build<br>something <span class="text-accent">precise.</span></h2>
+        <div data-reveal="up" class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center">
+          <a href="#contact-info" class="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-accent px-7 text-[15px] font-semibold text-void transition duration-300 hover:bg-ink active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            Liên hệ với chúng tôi
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <p class="max-w-[48ch] text-muted">Gửi bản vẽ hoặc mô tả chi tiết cần gia công, kỹ sư của chúng tôi sẽ trao đổi phương án phù hợp.</p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-12 border-t border-line pt-12 lg:grid-cols-12 lg:gap-16">
+          <div id="contact-info" class="lg:col-span-5">
+            <h3 class="font-display text-xl font-semibold">Thông tin liên hệ</h3>
+            <p class="mt-2 text-sm text-muted">Dữ liệu mẫu, có thể chỉnh sửa.</p>
+            <ul class="mt-8 space-y-6">
+              <li class="flex gap-4">
+                <span class="grid h-11 w-11 shrink-0 place-items-center border border-line text-accent"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <div class="min-w-0"><p class="text-sm text-muted">Địa chỉ nhà máy</p><p class="mt-1 font-medium">Lô B12, Đường số 7, Khu công nghiệp Mỹ Phước, Bình Dương</p></div>
+              </li>
+              <li class="flex gap-4">
+                <span class="grid h-11 w-11 shrink-0 place-items-center border border-line text-accent"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                <div class="min-w-0">
+                  <p class="text-sm text-muted">Điện thoại / Zalo</p>
+                  <div class="mt-1 flex flex-wrap items-center gap-3">
+                    <a href="tel:02743865120" class="font-medium transition-colors duration-300 hover:text-accent">0274 386 5120</a>
+                    <button type="button" data-copy="0274 386 5120" class="inline-flex min-h-[36px] items-center gap-1.5 border border-line px-3 text-sm text-muted transition-colors duration-300 hover:border-accent hover:text-ink">
+                      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      Sao chép
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="grid h-11 w-11 shrink-0 place-items-center border border-line text-accent"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                <div class="min-w-0"><p class="text-sm text-muted">Email</p><a href="mailto:contact@mechavance.vn" class="mt-1 inline-block break-all font-medium transition-colors duration-300 hover:text-accent">contact@mechavance.vn</a></div>
+              </li>
+              <li class="flex gap-4">
+                <span class="grid h-11 w-11 shrink-0 place-items-center border border-line text-accent"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                <div class="min-w-0"><p class="text-sm text-muted">Giờ làm việc</p><p class="mt-1 font-medium">Thứ Hai đến Thứ Bảy, 7:30 - 17:00</p></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-7">
+            <form data-form="lien-he" class="marks border border-line bg-panel p-6 sm:p-8 lg:p-10" novalidate>
+              <h3 class="font-display text-xl font-semibold">Gửi lời nhắn cho kỹ sư</h3>
+              <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div class="flex flex-col gap-2">
+                  <label for="f-name" class="text-sm font-medium text-ink">Họ và tên</label>
+                  <input id="f-name" name="name" type="text" required minlength="2" autocomplete="name" placeholder="Nguyễn Văn An" class="min-h-[48px] border border-line bg-void px-4 text-ink placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="f-company" class="text-sm font-medium text-ink">Công ty</label>
+                  <input id="f-company" name="company" type="text" autocomplete="organization" placeholder="Tên doanh nghiệp" class="min-h-[48px] border border-line bg-void px-4 text-ink placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="f-email" class="text-sm font-medium text-ink">Email</label>
+                  <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="ban@congty.vn" class="min-h-[48px] border border-line bg-void px-4 text-ink placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="f-phone" class="text-sm font-medium text-ink">Số điện thoại</label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="0912 345 678" class="min-h-[48px] border border-line bg-void px-4 text-ink placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                </div>
+                <div class="flex flex-col gap-2 sm:col-span-2">
+                  <label for="f-msg" class="text-sm font-medium text-ink">Nội dung</label>
+                  <textarea id="f-msg" name="message" rows="5" required minlength="10" placeholder="Mô tả chi tiết cần gia công, vật liệu, số lượng dự kiến..." class="border border-line bg-void px-4 py-3 text-ink placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"></textarea>
+                </div>
+              </div>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <button type="submit" class="inline-flex min-h-[52px] items-center justify-center bg-ink px-7 text-[15px] font-semibold text-void transition duration-300 hover:bg-accent active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Gửi lời nhắn</button>
+                <p class="text-sm text-muted">Bản demo: biểu mẫu chưa kết nối máy chủ, thông tin chưa được gửi đi.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (giống nhau trên mọi trang) -->
+  <footer id="footer" data-section="footer-big" class="border-t border-line bg-void">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="sm:col-span-2 lg:col-span-5">
+          <a href="index.html" class="inline-flex items-center gap-3">
+            <span class="grid h-9 w-9 place-items-center border border-accent font-mono text-sm font-semibold text-accent">MV</span>
+            <span class="font-display text-lg font-semibold tracking-[0.08em]">MECHAVANCE</span>
+          </a>
+          <p class="mt-5 max-w-[44ch] leading-relaxed text-muted">Gia công cơ khí chính xác, chế tạo chi tiết máy và kết cấu công nghiệp. Precision in Every Detail.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="font-display text-sm font-semibold uppercase tracking-[0.12em] text-steel">Điều hướng</p>
+          <ul class="mt-5 space-y-1">
+            <li><a href="index.html#hero" class="inline-flex min-h-[40px] items-center text-muted transition-colors duration-300 hover:text-accent">Trang chủ</a></li>
+            <li><a href="index.html#about" class="inline-flex min-h-[40px] items-center text-muted transition-colors duration-300 hover:text-accent">Giới thiệu</a></li>
+            <li><a href="index.html#capabilities" class="inline-flex min-h-[40px] items-center text-muted transition-colors duration-300 hover:text-accent">Năng lực</a></li>
+            <li><a href="index.html#technology" class="inline-flex min-h-[40px] items-center text-muted transition-colors duration-300 hover:text-accent">Công nghệ</a></li>
+            <li><a href="index.html#projects" class="inline-flex min-h-[40px] items-center text-muted transition-colors duration-300 hover:text-accent">Dự án</a></li>
+            <li><a href="index.html#contact" class="inline-flex min-h-[40px] items-center text-muted transition-colors duration-300 hover:text-accent">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4">
+          <p class="font-display text-sm font-semibold uppercase tracking-[0.12em] text-steel">Thông tin doanh nghiệp</p>
+          <ul class="mt-5 space-y-3 text-muted">
+            <li>Lô B12, Đường số 7, KCN Mỹ Phước, Bình Dương</li>
+            <li><a href="tel:02743865120" class="transition-colors duration-300 hover:text-accent">0274 386 5120</a></li>
+            <li><a href="mailto:contact@mechavance.vn" class="break-all transition-colors duration-300 hover:text-accent">contact@mechavance.vn</a></li>
+            <li>Thứ Hai đến Thứ Bảy, 7:30 - 17:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-16 overflow-hidden" aria-hidden="true">
+        <p class="whitespace-nowrap font-display text-[clamp(2rem,10vw,9.5rem)] font-extrabold leading-[0.9] tracking-tight text-panel">MECHAVANCE</p>
+      </div>
+      <div class="flex flex-col gap-2 border-t border-line py-6 text-sm text-muted sm:flex-row sm:justify-between">
+        <p>© 2026 MECHAVANCE. Bảo lưu mọi quyền.</p>
+        <p>Thông tin liên hệ và dự án trên website là dữ liệu mẫu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center border border-line bg-panel text-ink transition-colors duration-300 hover:border-accent hover:text-accent" aria-label="Về đầu trang">
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đơn hàng | Quản lý tiệm</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-014 Danh sách đơn: FR-026, q17 (huy hiệu + chuông), q18 (8 thông tin hiển thị ngay) -->
+<body data-screen="SCR-014" data-layout="admin" data-nav="orders" data-title="Đơn hàng" class="admin bg-[#FFFBF6] text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="lg:pl-60 pb-24 lg:pb-12">
+    <div class="mx-auto max-w-admin px-4 md:px-6 lg:px-8 pt-4 lg:pt-8">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h1 class="text-[20px] lg:text-2xl font-extrabold">Đơn hàng</h1>
+        <div class="flex items-center gap-2">
+          <div class="inline-flex rounded-full bg-white border border-beige p-1" role="group" aria-label="Kiểu xem">
+            <button type="button" data-view="list" class="h-9 px-3 rounded-full text-sm font-bold" aria-pressed="true"><i class="ph ph-list-bullets" aria-hidden="true"></i><span class="hidden sm:inline ml-1">Danh sách</span></button>
+            <button type="button" data-view="cal" class="h-9 px-3 rounded-full text-sm font-bold" aria-pressed="false"><i class="ph ph-calendar-blank" aria-hidden="true"></i><span class="hidden sm:inline ml-1">Lịch</span></button>
+          </div>
+          <button type="button" id="simulate" class="btn btn-secondary h-10 px-4 text-sm"><i class="ph ph-sparkle" aria-hidden="true"></i>Giả lập đơn mới</button>
+        </div>
+      </div>
+
+      <!-- Gợi ý bật chuông (lần đầu) -->
+      <div id="bell-hint" class="hidden mt-4 rounded-2xl bg-primary-soft px-4 py-3 flex items-center gap-3">
+        <i class="ph-fill ph-bell-ringing text-2xl text-primary-strong" aria-hidden="true"></i>
+        <p class="flex-1 text-[15px] font-semibold">Bấm để bật chuông báo đơn mới. Trình duyệt chỉ cho phát âm thanh sau khi bạn bấm.</p>
+        <button type="button" class="btn btn-primary h-9 px-4 text-sm" data-action="toggle-bell">Bật chuông</button>
+        <button type="button" id="hint-close" class="grid place-items-center w-9 h-9 rounded-full hover:bg-white" aria-label="Ẩn gợi ý"><i class="ph ph-x" aria-hidden="true"></i></button>
+      </div>
+
+      <!-- Bộ lọc -->
+      <div class="mt-4 rounded-2xl bg-white border border-beige p-3 md:p-4">
+        <div class="grid gap-3 md:grid-cols-12">
+          <div class="md:col-span-5 relative"><label for="q" class="sr-only">Tìm</label>
+            <i class="ph ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-lg text-ink-muted" aria-hidden="true"></i>
+            <input id="q" type="search" maxlength="100" class="field-input !pl-10" placeholder="Tìm mã đơn / SĐT / tên khách"></div>
+          <div class="hidden md:block md:col-span-3"><label for="status" class="sr-only">Trạng thái</label><select id="status" class="field-input"></select></div>
+          <div class="hidden md:block md:col-span-2"><label for="dtype" class="sr-only">Hình thức</label><select id="dtype" class="field-input"><option value="">Giao + Lấy</option><option value="delivery">Giao tận nơi</option><option value="pickup">Lấy tại tiệm</option></select></div>
+          <div class="hidden md:flex md:col-span-2"><button type="button" id="more-filter" class="btn btn-ghost h-[42px] w-full border border-beige text-sm"><i class="ph ph-calendar" aria-hidden="true"></i>Ngày nhận</button></div>
+        </div>
+        <div id="date-range" class="hidden mt-3 grid grid-cols-2 md:grid-cols-12 gap-3 items-end">
+          <div class="field md:col-span-3"><label class="field-label text-sm" for="from">Nhận từ ngày</label><input id="from" type="date" class="field-input"></div>
+          <div class="field md:col-span-3"><label class="field-label text-sm" for="to">Đến ngày</label><input id="to" type="date" class="field-input" aria-describedby="to-err"><p id="to-err" class="field-error hidden"></p></div>
+          <button type="button" id="clear" class="col-span-2 md:col-span-2 btn btn-ghost h-[42px] text-sm text-primary-strong">Xóa lọc</button>
+        </div>
+        <div id="quick" class="mt-3 flex gap-2 overflow-x-auto no-scrollbar" role="group" aria-label="Lọc nhanh"></div>
+      </div>
+
+      <div id="list-view" class="mt-4" aria-live="polite"></div>
+      <div id="cal-view" class="hidden mt-4 rounded-2xl bg-white border border-beige p-4 md:p-6 max-w-3xl"></div>
+      <nav id="pager" class="mt-6 flex justify-center gap-2" aria-label="Phân trang"></nav>
+    </div>
+  </main>
+
+  <script>
+    /* SCR-014. Sắp xếp mặc định: Chờ xác nhận trước, rồi ngày nhận gần nhất. Bộ lọc lưu lại để quay về từ SCR-015. */
+    App.onReady(function () {
+      var PER = 20;
+      var F = Store.get('admin_order_filters', { q: '', status: '', dtype: '', from: '', to: '', quick: 'all', sort: 'default', dir: 1, page: 1 });
+      var view = 'list';
+      var tomorrow = MOCK.helpers.d(1);
+
+      function save() { Store.set('admin_order_filters', F); }
+      function pendingCount() { return Orders.all().filter(function (o) { return o.status === 'pending'; }).length; }
+
+      /* ----- Bộ lọc ----- */
+      $('#status').innerHTML = '<option value="">Tất cả trạng thái</option>' + Object.keys(Orders.STATUS).map(function (k) { return '<option value="' + k + '">' + Orders.STATUS[k].vi + '</option>'; }).join('');
+      $('#q').value = F.q; $('#status').value = F.status; $('#dtype').value = F.dtype; $('#from').value = F.from; $('#to').value = F.to;
+      if (F.from || F.to) $('#date-range').classList.remove('hidden');
+
+      function renderQuick() {
+        var q = [['pending', 'Chờ xác nhận', pendingCount()], ['today', 'Nhận hôm nay'], ['tomorrow', 'Nhận ngày mai'], ['all', 'Tất cả']];
+        $('#quick').innerHTML = q.map(function (x) {
+          return '<button type="button" class="chip chip-sm shrink-0" aria-pressed="' + (F.quick === x[0]) + '" data-quick="' + x[0] + '">' + x[1] + (x[2] != null ? ' <span class="min-w-[22px] h-[22px] px-1.5 rounded-full bg-butter text-butter-strong text-xs grid place-items-center tabular-nums">' + x[2] + '</span>' : '') + '</button>';
+        }).join('') + '<button type="button" class="chip chip-sm shrink-0 md:hidden" id="m-filter"><i class="ph ph-sliders-horizontal" aria-hidden="true"></i>Lọc</button>';
+        $all('[data-quick]').forEach(function (b) { b.onclick = function () { F.quick = b.dataset.quick; F.page = 1; save(); render(); }; });
+        $('#m-filter').onclick = mobileFilter;
+      }
+
+      function filtered() {
+        var q = Fmt.fold(F.q.trim());
+        var list = Orders.all().filter(function (o) {
+          if (q && Fmt.fold(o.code + ' ' + o.customer.phone + ' ' + o.customer.name).indexOf(q.replace(/\s/g, '')) === -1 && Fmt.fold(o.customer.name).indexOf(q) === -1) return false;
+          if (F.status && o.status !== F.status) return false;
+          if (F.dtype && o.delivery.type !== F.dtype) return false;
+          if (F.from && o.delivery.date < F.from) return false;
+          if (F.to && o.delivery.date > F.to) return false;
+          if (F.quick === 'pending' && o.status !== 'pending') return false;
+          if (F.quick === 'today' && o.delivery.date !== MOCK.today) return false;
+          if (F.quick === 'tomorrow' && o.delivery.date !== tomorrow) return false;
+          if (F.quick.indexOf('date:') === 0 && o.delivery.date !== F.quick.slice(5)) return false;
+          return true;
+        });
+        var key = function (o) { return o.delivery.date + ' ' + o.delivery.slot; };
+        list.sort(function (a, b) {
+          if (F.sort === 'total') return (Orders.calc(a).total - Orders.calc(b).total) * F.dir;
+          if (F.sort === 'code') return (a.code < b.code ? -1 : 1) * F.dir;
+          if (F.sort === 'date') return (key(a) < key(b) ? -1 : 1) * F.dir;
+          var pa = a.status === 'pending' ? 0 : 1, pb = b.status === 'pending' ? 0 : 1;
+          if (pa !== pb) return pa - pb;
+          return key(a) < key(b) ? -1 : 1;
+        });
+        return list;
+      }
+
+      function cakeLine(o) { var it = o.items[0]; return Fmt.esc(it.cakeName.replace(/^Bánh /, '')) + ' - ' + it.sizeLabel + (o.items.length > 1 ? ' <span class="text-ink-muted">+' + (o.items.length - 1) + '</span>' : ''); }
+      function when(o) { return Fmt.relDay(o.delivery.date) + ' · ' + o.delivery.slot; }
+      function dtypeLabel(o) { return o.delivery.type === 'delivery' ? '<span class="inline-flex items-center gap-1"><i class="ph ph-moped" aria-hidden="true"></i>Giao</span>' : '<span class="inline-flex items-center gap-1"><i class="ph ph-storefront" aria-hidden="true"></i>Lấy</span>'; }
+      function th(label, key, cls) {
+        var on = F.sort === key;
+        return '<th class="' + (cls || '') + '"' + (key ? ' aria-sort="' + (on ? (F.dir > 0 ? 'ascending' : 'descending') : 'none') + '"' : '') + '>' +
+          (key ? '<button type="button" class="th-sort" data-sort="' + key + '">' + label + '<i class="ph ' + (on ? (F.dir > 0 ? 'ph-caret-up' : 'ph-caret-down') : 'ph-caret-up-down') + '" aria-hidden="true"></i></button>' : label) + '</th>';
+      }
+
+      function render(loading) {
+        renderQuick();
+        var box = $('#list-view'), pager = $('#pager');
+        if (view === 'cal') { renderCal(); pager.innerHTML = ''; return; }
+        if (loading) {
+          box.innerHTML = '<div class="space-y-2">' + Array(7).join('.').split('.').map(function () { return '<div class="skeleton h-14 rounded-xl"></div>'; }).join('') + '</div>';
+          return;
+        }
+        var all = filtered();
+        if (!all.length) {
+          box.innerHTML = '<div class="rounded-2xl bg-white border border-beige">' + UI.empty(Orders.all().length ? { icon: 'ph-funnel', title: 'Không có đơn phù hợp', action: '<button type="button" id="empty-clear" class="btn btn-secondary h-10 px-5">Xóa lọc</button>' } : { icon: 'ph-receipt', title: 'Chưa có đơn nào, tiệm chờ đơn đầu tiên nhé' }) + '</div>';
+          var ec = $('#empty-clear'); if (ec) ec.onclick = clearFilters;
+          pager.innerHTML = ''; return;
+        }
+        var pages = Math.ceil(all.length / PER); if (F.page > pages) F.page = 1;
+        var rows = all.slice((F.page - 1) * PER, F.page * PER);
+
+        var table = '<div class="hidden lg:block rounded-2xl bg-white border border-beige overflow-hidden"><div class="max-h-[70vh] overflow-auto"><table class="admin-table"><thead><tr>' +
+          th('Mã đơn', 'code') + th('Khách', '') + th('SĐT', '') + th('Nhận lúc', 'date') + th('Bánh - cỡ', '') + th('Giao / Lấy', '') + th('Tổng', 'total', 'text-right') + th('Cọc', '') + th('Trạng thái', '') +
+          '</tr></thead><tbody>' + rows.map(function (o) {
+            var c = Orders.calc(o);
+            return '<tr data-code="' + o.code + '" tabindex="0" class="' + (o.status === 'pending' ? 'row-pending' : '') + '" aria-label="Mở đơn ' + o.code + '">' +
+              '<td class="font-bold tabular-nums whitespace-nowrap">' + (!o.seen && o.status === 'pending' ? '<span class="inline-block w-2 h-2 rounded-full bg-primary-strong mr-1.5 align-middle" title="Đơn mới chưa xem"></span><span class="sr-only">Mới. </span>' : '') + o.code + '</td>' +
+              '<td class="max-w-[160px] truncate font-semibold">' + Fmt.esc(o.customer.name) + '</td>' +
+              '<td class="whitespace-nowrap"><a href="tel:' + o.customer.phone + '" class="tel hover:text-primary-strong tabular-nums">' + Fmt.phone(o.customer.phone) + '</a></td>' +
+              '<td class="whitespace-nowrap">' + when(o) + '</td>' +
+              '<td class="max-w-[200px] truncate" title="' + Fmt.esc(o.items.map(function (i) { return i.cakeName + ' ' + i.sizeLabel; }).join(', ')) + '">' + cakeLine(o) + '</td>' +
+              '<td class="whitespace-nowrap">' + dtypeLabel(o) + '</td>' +
+              '<td class="text-right font-bold tabular-nums whitespace-nowrap">' + Fmt.money(c.total) + (c.ship == null ? '<span class="block text-[11px] font-semibold text-ink-muted">+ phí giao</span>' : '') + '</td>' +
+              '<td>' + UI.depositBadge(o.depositStatus) + '</td><td>' + UI.statusBadge(o.status) + '</td></tr>';
+          }).join('') + '</tbody></table></div></div>';
+
+        var cards = '<ul class="lg:hidden grid md:grid-cols-2 gap-3">' + rows.map(function (o) {
+          var c = Orders.calc(o);
+          return '<li><div data-code="' + o.code + '" tabindex="0" role="link" aria-label="Mở đơn ' + o.code + '" class="block rounded-2xl bg-white border border-beige p-4 cursor-pointer ' + (o.status === 'pending' ? 'border-l-4 !border-l-[#F2C230]' : '') + '">' +
+            '<div class="flex items-start justify-between gap-2"><p class="font-extrabold flex items-center gap-1.5">' + (!o.seen && o.status === 'pending' ? '<span class="w-2 h-2 rounded-full bg-primary-strong"></span><span class="sr-only">Mới. </span>' : '') + Fmt.esc(o.customer.name) + '</p>' + UI.statusBadge(o.status) + '</div>' +
+            '<a href="tel:' + o.customer.phone + '" class="tel mt-1 inline-flex items-center gap-1.5 text-primary-strong font-bold min-h-[32px] tabular-nums"><i class="ph ph-phone" aria-hidden="true"></i>' + Fmt.phone(o.customer.phone) + '</a>' +
+            '<p class="text-sm">' + when(o) + ' · ' + dtypeLabel(o) + '</p>' +
+            '<p class="text-sm text-ink-muted mt-0.5">' + cakeLine(o) + ' · <span class="tabular-nums">' + o.code + '</span></p>' +
+            '<div class="mt-2 flex items-center justify-between"><p class="font-extrabold tabular-nums">' + Fmt.money(c.total) + (c.ship == null ? ' <span class="text-xs font-semibold text-ink-muted">+ phí giao</span>' : '') + '</p>' + UI.depositBadge(o.depositStatus) + '</div></div></li>';
+        }).join('') + '</ul>';
+
+        box.innerHTML = '<p class="text-sm font-bold text-ink-muted mb-2">' + all.length + ' đơn</p>' + table + cards;
+        $all('[data-code]', box).forEach(function (r) {
+          var open = function (e) { if (e.target.closest('.tel')) return; location.href = 'qt-chi-tiet-don.html?code=' + r.dataset.code; };
+          r.onclick = open;
+          r.onkeydown = function (e) { if (e.key === 'Enter') open(e); };
+        });
+        $all('[data-sort]', box).forEach(function (b) { b.onclick = function () { var k = b.dataset.sort; F.dir = F.sort === k ? -F.dir : 1; F.sort = k; save(); render(); }; });
+        pager.innerHTML = pages < 2 ? '' : Array.apply(null, { length: pages }).map(function (x, i) { return '<button type="button" data-page="' + (i + 1) + '" class="grid place-items-center w-10 h-10 rounded-full font-bold ' + (F.page === i + 1 ? 'bg-primary-strong text-white' : 'bg-white border border-beige') + '">' + (i + 1) + '</button>'; }).join('');
+        $all('[data-page]').forEach(function (b) { b.onclick = function () { F.page = +b.dataset.page; save(); render(); }; });
+      }
+
+      /* ----- Xem theo lịch: mỗi ngày "đã nhận / sức chứa" ----- */
+      var calMonth = new Date();
+      function renderCal() {
+        Calendar.render($('#cal-view'), {
+          month: calMonth, admin: true, selected: F.quick.indexOf('date:') === 0 ? F.quick.slice(5) : '',
+          dayInfo: function (iso) {
+            var st = Capacity.state(iso), cap = Capacity.capacityOf(iso), booked = Capacity.bookedOf(iso);
+            var off = (DB.get('settings').dayOverrides[iso] || {}).off;
+            return { state: off ? 'off' : booked >= cap ? 'full' : cap - booked <= 2 ? 'almost' : 'ok', reason: off ? 'Ngày nghỉ' : booked + '/' + cap + ' bánh', sub: off ? 'Nghỉ' : booked + '/' + cap };
+          },
+          onSelect: function (iso) { F.quick = 'date:' + iso; F.page = 1; save(); setView('list'); Toast.show('Đang xem đơn nhận ngày ' + Fmt.date(iso), 'info'); }
+        });
+      }
+      function setView(v) {
+        view = v;
+        $all('[data-view]').forEach(function (b) { var on = b.dataset.view === v; b.setAttribute('aria-pressed', on); b.className = 'h-9 px-3 rounded-full text-sm font-bold ' + (on ? 'bg-primary-soft text-primary-strong' : 'text-ink-muted'); });
+        $('#cal-view').classList.toggle('hidden', v !== 'cal');
+        $('#list-view').classList.toggle('hidden', v !== 'list');
+        render();
+      }
+      $all('[data-view]').forEach(function (b) { b.onclick = function () { setView(b.dataset.view); }; });
+
+      /* ----- Sự kiện bộ lọc ----- */
+      function clearFilters() { F = { q: '', status: '', dtype: '', from: '', to: '', quick: 'all', sort: 'default', dir: 1, page: 1 }; ['#q', '#status', '#dtype', '#from', '#to'].forEach(function (s) { $(s).value = ''; }); save(); render(); }
+      $('#q').addEventListener('input', debounce(function () { F.q = $('#q').value; F.page = 1; save(); render(); }, 250));
+      $('#status').onchange = function () { F.status = this.value; F.page = 1; save(); render(); };
+      $('#dtype').onchange = function () { F.dtype = this.value; F.page = 1; save(); render(); };
+      $('#more-filter').onclick = function () { $('#date-range').classList.toggle('hidden'); };
+      function dateChange() {
+        var to = $('#to');
+        if ($('#from').value && to.value && $('#from').value > to.value) { FormUI.setError(to, 'Ngày bắt đầu phải trước hoặc bằng ngày kết thúc.'); return; }
+        FormUI.clearError(to); F.from = $('#from').value; F.to = to.value; F.page = 1; save(); render();
+      }
+      $('#from').onchange = dateChange; $('#to').onchange = dateChange;
+      $('#clear').onclick = clearFilters;
+      function mobileFilter() {
+        Modal.open({
+          title: 'Lọc đơn',
+          body: '<div class="space-y-4"><div class="field"><label class="field-label" for="m-status">Trạng thái</label><select id="m-status" class="field-input">' + $('#status').innerHTML + '</select></div>' +
+            '<div class="field"><label class="field-label" for="m-dtype">Hình thức</label><select id="m-dtype" class="field-input">' + $('#dtype').innerHTML + '</select></div>' +
+            '<div class="grid grid-cols-2 gap-3"><div class="field"><label class="field-label" for="m-from">Nhận từ</label><input id="m-from" type="date" class="field-input" value="' + F.from + '"></div><div class="field"><label class="field-label" for="m-to">Đến</label><input id="m-to" type="date" class="field-input" value="' + F.to + '"></div></div></div>',
+          actions: [{ label: 'Xóa lọc', variant: 'secondary', onClick: clearFilters }, { label: 'Áp dụng', variant: 'primary', onClick: function (c, el) {
+            var fr = $('#m-from', el).value, to = $('#m-to', el).value;
+            if (fr && to && fr > to) { FormUI.setError($('#m-to', el), 'Ngày bắt đầu phải trước hoặc bằng ngày kết thúc.'); return false; }
+            F.status = $('#m-status', el).value; F.dtype = $('#m-dtype', el).value; F.from = fr; F.to = to; F.page = 1; save();
+            $('#status').value = F.status; $('#dtype').value = F.dtype; $('#from').value = fr; $('#to').value = to; render();
+          } }],
+          onOpen: function (el) { $('#m-status', el).value = F.status; $('#m-dtype', el).value = F.dtype; }
+        });
+      }
+
+      /* ----- Đơn mới (q17): huy hiệu + chuông + toast + thêm dòng lên đầu ----- */
+      $('#simulate').onclick = function () {
+        var o = Orders.simulate();
+        Layout.refreshBadge();
+        if (Bell.isOn()) Bell.ring();
+        Toast.show('Có 1 đơn mới - ' + o.code, 'order', { actionLabel: 'Xem', onAction: function () { location.href = 'qt-chi-tiet-don.html?code=' + o.code; }, duration: 6000 });
+        render();
+      };
+      if (!Bell.isOn() && !Store.get('bell_hint_closed', false)) $('#bell-hint').classList.remove('hidden');
+      $('#hint-close').onclick = function () { $('#bell-hint').remove(); Store.set('bell_hint_closed', true); };
+
+      setView('list');
+      render(true);
+      App.fakeLoad(function () { render(); }, 400);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "brand": "LUMIÈRE AESTHETICS",
+  "language": "vi",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Khung vòm (arch) bo tròn phía trên như cửa sổ phòng khám ánh sáng dịu, lặp lại ở ảnh hero, ảnh câu chuyện và chân dung; nền trắng ngà xen be sáng và champagne, phân tách bằng đường kẻ mảnh kiểu tạp chí",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Vẻ đẹp tự nhiên, chuẩn mực y khoa",
+    "description": "Website giới thiệu song ngữ Việt - Anh cho thẩm mỹ viện y khoa cao cấp LUMIÈRE AESTHETICS, phong cách Luxury Medical Editorial, có form đặt lịch tư vấn."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu định hướng thẩm mỹ, các nhóm dịch vụ nổi bật, thế mạnh chuyên môn và mời đặt lịch tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Hero chia đôi hình ảnh và nội dung theo chú thích BA (thay hero-type của preset)" },
+        { "id": "dinh-huong", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Định hướng thẩm mỹ" },
+        { "id": "dich-vu", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "4 nhóm dịch vụ nổi bật, link sang pages/services.html#<nhóm>" },
+        { "id": "the-manh", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Thế mạnh chuyên môn" },
+        { "id": "loi-bac-si", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "Trích lời giám đốc chuyên môn, link sang đội ngũ" },
+        { "id": "tu-van", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Lời mời tư vấn" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "beauty skincare woman", "file": "assets/img/home-hero-lan-da.jpg", "status": "ok" },
+        { "slot": "dinh-huong", "query": "woman skin mirror", "file": "assets/img/home-dinh-huong-tham-my.jpg", "status": "ok" },
+        { "slot": "the-manh — công nghệ", "query": "laser skin treatment", "file": "assets/img/home-the-manh-cong-nghe.jpg", "status": "ok" },
+        { "slot": "the-manh — dược mỹ phẩm", "query": "serum dropper bottle", "file": "assets/img/home-serum-duoc-my-pham.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ thẩm mỹ & Bảng giá",
+      "purpose": "Trình bày 4 nhóm dịch vụ (chăm sóc da, trẻ hóa da, điều trị da, thẩm mỹ không phẫu thuật), mỗi dịch vụ có mô tả, mục đích, thời lượng và giá tham khảo",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Tiêu đề trang + mục lục 4 nhóm" },
+        { "id": "cham-soc-da", "catalog": "pricing", "variant": "pricing-editorial", "source": "ba", "note": "Ảnh trái dính, bảng giá kẻ mảnh phải" },
+        { "id": "tre-hoa-da", "catalog": "pricing", "variant": "pricing-editorial", "source": "ba", "note": "Bảng giá trái, ảnh phải" },
+        { "id": "dieu-tri-da", "catalog": "pricing", "variant": "pricing-band", "source": "ba", "note": "Dải ảnh ngang trên, bảng giá 2 cột dưới" },
+        { "id": "khong-phau-thuat", "catalog": "pricing", "variant": "pricing-dark", "source": "ba", "note": "Nền champagne, ảnh vòm + bảng giá" },
+        { "id": "luu-y", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "Câu hỏi về giá, an toàn, thời gian nghỉ dưỡng" },
+        { "id": "tu-van", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Mời đặt lịch tư vấn" }
+      ],
+      "images": [
+        { "slot": "cham-soc-da", "query": "woman skin cream facial", "file": "assets/img/services-cham-soc-da.jpg", "status": "ok" },
+        { "slot": "tre-hoa-da", "query": "laser skin rejuvenation", "file": "assets/img/services-laser-tre-hoa.jpg", "status": "ok" },
+        { "slot": "dieu-tri-da", "query": "woman skin treatment face", "file": "assets/img/services-dieu-tri-da.jpg", "status": "ok" },
+        { "slot": "khong-phau-thuat", "query": "botox injection forehead", "file": "assets/img/services-tiem-khong-phau-thuat.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Về chúng tôi",
+      "purpose": "Kể câu chuyện thương hiệu, giới thiệu đội ngũ chuyên gia, cơ sở vật chất, quy trình tư vấn và cam kết an toàn",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Tiêu đề + ảnh vòm không gian phòng chờ" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Câu chuyện thương hiệu dạng thư của người sáng lập" },
+        { "id": "doi-ngu", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "4 chuyên gia: 2 ảnh chân dung + 2 khối chữ cái đầu tên" },
+        { "id": "co-so", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Cơ sở vật chất: ảnh lớn + danh sách tiện nghi" },
+        { "id": "quy-trinh", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "5 bước quy trình tư vấn" },
+        { "id": "cam-ket", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Cam kết an toàn, nền champagne" },
+        { "id": "tu-van", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Mời đặt lịch tư vấn" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "minimal white interior lounge", "file": "assets/img/about-phong-cho.jpg", "status": "ok" },
+        { "slot": "doi-ngu — bác sĩ nữ", "query": "female doctor portrait", "file": "assets/img/about-team-bac-si-nu.jpg", "status": "ok" },
+        { "slot": "doi-ngu — bác sĩ nam", "query": "male doctor portrait", "file": "assets/img/about-team-bac-si-nam.jpg", "status": "ok" },
+        { "slot": "doi-ngu — bác sĩ & điều dưỡng khác", "query": "asian female doctor portrait", "file": null, "status": "none" },
+        { "slot": "co-so", "query": "minimal interior consultation room", "file": "assets/img/about-phong-tu-van.jpg", "status": "ok" },
+        { "slot": "co-so — phòng thủ thuật vô khuẩn", "query": "aesthetic clinic treatment room", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Giữ đúng 3 trang chính BA yêu cầu (Trang chủ, Dịch vụ & Bảng giá, Về chúng tôi); không tạo trang chi tiết dịch vụ hay trang liên hệ riêng — liên hệ nằm ở footer và form đặt lịch dạng cửa sổ trên mọi trang",
+    "Hero trang chủ dùng hero-split (chia đôi ảnh và nội dung) theo chú thích BA thay cho hero-type của preset editorial",
+    "Concept ghi 'không tạo bộ chuyển ngôn ngữ' nhưng chú thích BA yêu cầu nút chuyển Việt – English với nội dung đủ hai ngôn ngữ → làm theo chú thích BA: HTML viết tiếng Việt (lang=vi), bản tiếng Anh nằm trong thuộc tính data-en và được site.js áp khi chọn EN (lưu lựa chọn, tải lại trang để thông báo form đúng ngôn ngữ)",
+    "Font display Instrument Serif thiếu ký tự tiếng Việt → thay bằng Cormorant Garamond (đủ tiếng Việt); body giữ Geist",
+    "Bảng màu preset được ánh xạ sang màu BA yêu cầu: trắng ngà, be sáng, champagne, nâu nhạt"
+  ],
+  "limitations": [
+    "Form 'Đặt lịch tư vấn' là bản demo, chưa có backend — thông tin chưa được gửi đi",
+    "Giá dịch vụ là giá tham khảo mẫu do BA chưa cung cấp, cần thẩm mỹ viện xác nhận",
+    "Tên, chức danh bác sĩ, địa chỉ, số điện thoại, giờ làm việc là nội dung mẫu, cần khách cung cấp thông tin thật",
+    "Cần ảnh thật từ khách: chân dung đội ngũ bác sĩ người Việt, phòng thủ thuật và thiết bị của phòng khám",
+    "Không có bán hàng, giỏ hàng hay thanh toán trực tuyến (theo yêu cầu BA)"
+  ]
+}

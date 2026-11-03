@@ -1,0 +1,82 @@
+/* MANGA CHRONICLE - biến thương hiệu + vài style Tailwind không làm được */
+:root {
+  --paper: #F0E8D8;
+  --paper-deep: #E6DCC6;
+  --ink: #242321;
+  --vermilion: #A6382B;
+  --archive: #81735F;
+  --archive-deep: #5C5243;
+  --ui-accent: #A6382B;
+  --font-display: "Playfair Display", Georgia, system-ui, "Segoe UI", Roboto, Arial, serif;
+  --font-body: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+[hidden] { display: none !important; }
+html { background: var(--paper); }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--paper);
+  /* sợi giấy rất nhẹ */
+  background-image:
+    repeating-linear-gradient(0deg, rgba(36, 35, 33, .018) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, rgba(129, 115, 95, .02) 0 1px, transparent 1px 7px);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--vermilion); color: var(--paper); }
+
+/* Hạt giấy: lớp cố định, không chặn chuột */
+.mc-grain {
+  position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+  background-image:
+    radial-gradient(rgba(36, 35, 33, .06) 1px, transparent 1px),
+    radial-gradient(rgba(129, 115, 95, .05) 1px, transparent 1px);
+  background-size: 3px 3px, 5px 5px;
+  background-position: 0 0, 1px 2px;
+}
+
+/* Con dấu lưu trữ */
+.mc-stamp {
+  display: inline-grid; place-items: center; text-align: center;
+  width: 8.75rem; height: 8.75rem; border-radius: 9999px;
+  border: 3px double var(--vermilion); color: var(--vermilion);
+  transform: rotate(-11deg);
+  font-family: var(--font-body); font-weight: 700; font-size: .75rem; letter-spacing: .14em; line-height: 1.5;
+  text-transform: uppercase;
+  background: radial-gradient(circle, rgba(166, 56, 43, .06), transparent 70%);
+  mix-blend-mode: multiply;
+}
+.mc-stamp b { display: block; font-family: var(--font-display); font-size: 1.35rem; letter-spacing: .02em; font-weight: 700; }
+html.motion-ready [data-stamp][data-reveal="zoom"]:not(.is-in) { transform: scale(1.7); }
+
+/* Mép phiếu hồ sơ (tab) */
+.mc-tab { position: relative; }
+.mc-tab::before {
+  content: ""; position: absolute; left: 1.25rem; top: -0.7rem; width: 6.5rem; height: .75rem;
+  background: inherit; border: inherit; border-bottom: 0; border-radius: .25rem .25rem 0 0;
+}
+
+/* Đường kẻ mực vẽ dần */
+.mc-rule { height: 1px; background: currentColor; transform-origin: left; }
+
+/* Thanh cuộn ẩn cho dải kéo ngang */
+.mc-noscroll { scrollbar-width: none; }
+.mc-noscroll::-webkit-scrollbar { display: none; }
+
+/* Chữ đầu đoạn kiểu tạp chí */
+.mc-dropcap::first-letter {
+  font-family: var(--font-display); float: left; font-size: 4.2em; line-height: .82; padding: .08em .12em 0 0; color: var(--vermilion);
+}
+
+/* Bộ lọc - nút đang chọn */
+.mc-chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* Hiệu ứng nhấp nháy con trỏ trong ô tìm kiếm trống (nhẹ) */
+@keyframes mc-flicker { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+.mc-flicker { animation: mc-flicker 2.4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mc-flicker { animation: none; }
+  html.motion-ready [data-stamp][data-reveal="zoom"]:not(.is-in) { transform: none; }
+}

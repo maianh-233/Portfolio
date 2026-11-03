@@ -1,0 +1,73 @@
+/* NEXMOTION INDUSTRIES — biến thương hiệu + vài style Tailwind không làm được */
+:root {
+  --navy: #102A43;
+  --ice: #F7FAFC;
+  --steel: #627D98;
+  --mint: #5DD6B0;
+  --graphite: #243B53;
+  --line: #D9E2EC;
+  --ui-accent: #5DD6B0;
+  --font-display: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Geist, "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); color: var(--graphite); background: var(--ice); }
+::selection { background: var(--mint); color: var(--navy); }
+
+/* Đường kích thước kỹ thuật — ý tưởng thị giác xuyên suốt: mở đầu tiêu đề section */
+.dim { position: relative; display: block; width: 72px; height: 11px; margin-bottom: 1.25rem; border-left: 2px solid var(--mint); border-right: 2px solid var(--mint); }
+.dim::before { content: ""; position: absolute; left: 0; right: 0; top: 4.5px; height: 2px; background: var(--mint); }
+.dim-wide { width: 120px; }
+
+/* Dấu góc khung ngắm trên ảnh */
+.marks { position: relative; }
+.marks::before, .marks::after { content: ""; position: absolute; width: 22px; height: 22px; z-index: 2; pointer-events: none; }
+.marks::before { top: 10px; left: 10px; border-top: 2px solid var(--mint); border-left: 2px solid var(--mint); }
+.marks::after { bottom: 10px; right: 10px; border-bottom: 2px solid var(--mint); border-right: 2px solid var(--mint); }
+
+/* Xử lý ảnh thống nhất: hơi giảm bão hòa, hover phóng chậm + trả màu */
+.photo { overflow: hidden; background: #DCE5ED; }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.55) contrast(1.04); transition: transform 1.2s var(--ease), filter .6s var(--ease); }
+.group:hover .photo img, .photo:hover img { transform: scale(1.04); filter: saturate(1) contrast(1.02); }
+.photo-full img { filter: none; }
+
+/* Gạch chân menu chạy từ trái, giữ dưới mục đang xem */
+.nav-link { position: relative; }
+.nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: var(--mint); transform: scaleX(0); transform-origin: right; transition: transform .5s var(--ease); }
+.nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav-link[aria-current="page"] { color: var(--navy); font-weight: 600; }
+.nav-link[aria-current="page"]::after { transform: scaleX(1); }
+
+/* Header thu gọn khi cuộn (motion.js thêm .is-scrolled) */
+.site-header .hdr { height: 76px; transition: height .35s var(--ease); }
+.site-header.is-scrolled .hdr { height: 62px; }
+.site-header { transition: box-shadow .35s var(--ease); }
+.site-header.is-scrolled { box-shadow: 0 10px 30px -18px rgba(16, 42, 67, .35); }
+
+/* Logo mark: ô vuông navy có góc mint */
+.logo-mark { position: relative; display: inline-block; width: 26px; height: 26px; background: var(--navy); flex: none; }
+.logo-mark::after { content: ""; position: absolute; right: 0; bottom: 0; width: 11px; height: 11px; background: var(--mint); }
+.on-dark .logo-mark { background: var(--ice); }
+
+/* Thẻ chuyển màu tinh tế theo mint */
+.card-mint { transition: background-color .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease); }
+.card-mint:hover { background-color: rgba(93, 214, 176, .09); border-color: var(--mint); }
+
+/* Mũi tên trong link */
+.arrow { display: inline-block; transition: transform .3s var(--ease); }
+.group:hover .arrow, a:hover > .arrow { transform: translateX(4px); }
+
+/* Accordion icon */
+[data-acc-item].is-open [data-acc-icon] { transform: rotate(45deg); }
+[data-acc-icon] { transition: transform .35s var(--ease); }
+
+/* Ô thông tin chờ cập nhật */
+.pending { color: var(--steel); font-style: italic; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .photo img, .nav-link::after, .site-header .hdr, .card-mint, .arrow, [data-acc-icon] { transition: none !important; }
+  .group:hover .photo img, .photo:hover img { transform: none; }
+}

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-vi="Về chúng tôi — TEA ORBIT">About — TEA ORBIT</title>
+  <meta name="description" content="TEA ORBIT is a small milk tea and pastry house in Saigon. Read how we test ratios in the kitchen, build drinks in layers and keep the tea at the center." data-vi-content="TEA ORBIT là quán trà sữa và bánh ngọt nhỏ ở Sài Gòn. Đọc cách chúng tôi thử tỷ lệ trong bếp, xếp lớp từng ly và luôn giữ vị trà ở trung tâm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-frost font-body text-void antialiased">
+
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-300 [&.is-scrolled]:border-void/10 [&.is-scrolled]:bg-frost/90 [&.is-scrolled]:backdrop-blur-md">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="flex items-center gap-2.5" aria-label="TEA ORBIT home" data-vi-aria="Trang chủ TEA ORBIT">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#795BFF"/><path d="M12.5 14h15l-1.8 15.2a2 2 0 0 1-2 1.8h-7.4a2 2 0 0 1-2-1.8z" fill="#F4F5FF"/><path d="M22 6.5l-1.6 8" stroke="#F4F5FF" stroke-width="2.2" stroke-linecap="round"/><circle cx="17" cy="26.5" r="1.7" fill="#10111B"/><circle cx="21" cy="27.5" r="1.7" fill="#10111B"/><circle cx="23.2" cy="24.6" r="1.7" fill="#10111B"/></svg>
+      <span class="font-display text-[17px] font-bold tracking-[0.08em]">TEA ORBIT</span>
+    </a>
+    <nav class="hidden items-center gap-2 lg:flex" aria-label="Main">
+      <a href="../index.html" class="rounded-full px-5 py-2.5 text-[15px] font-medium text-void/70 transition-colors duration-300 hover:bg-violet-wash hover:text-void" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="rounded-full px-5 py-2.5 text-[15px] font-medium text-void/70 transition-colors duration-300 hover:bg-violet-wash hover:text-void" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" aria-current="page" class="rounded-full bg-void px-5 py-2.5 text-[15px] font-medium text-frost" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button type="button" data-lang-toggle aria-pressed="false" aria-label="Switch language between Vietnamese and English" data-vi-aria="Chuyển ngôn ngữ Việt / Anh" class="flex h-11 items-center rounded-full border border-void/15 bg-white p-1 text-xs font-semibold tracking-wider transition-colors duration-300 hover:border-violet focus-visible:outline focus-visible:outline-2 focus-visible:outline-violet">
+        <span data-lang-opt="vi" class="grid h-full place-items-center rounded-full px-3 text-void/60 transition-colors duration-300 [&.is-active]:bg-violet [&.is-active]:text-white">VI</span>
+        <span data-lang-opt="en" class="is-active grid h-full place-items-center rounded-full px-3 text-void/60 transition-colors duration-300 [&.is-active]:bg-violet [&.is-active]:text-white">EN</span>
+      </button>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Open menu" data-vi-aria="Mở menu" class="grid h-11 w-11 place-items-center rounded-full border border-void/15 bg-white lg:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-[1.75rem] border border-void/10 bg-white p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col" aria-label="Mobile">
+      <a href="../index.html" class="flex min-h-[52px] items-center border-b border-void/10 font-display text-xl font-semibold" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="flex min-h-[52px] items-center border-b border-void/10 font-display text-xl font-semibold" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" aria-current="page" class="flex min-h-[52px] items-center font-display text-xl font-semibold text-violet-deep" data-vi="Về chúng tôi">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section id="about-hero" data-section="page-hero" data-particles="dust" data-particles-color="#795BFF" data-particles-density="0.4" class="milk-wash relative overflow-hidden">
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-14 px-4 pb-20 pt-32 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-24 lg:pt-36 2xl:px-16">
+      <div class="lg:col-span-6">
+        <span class="sticker bg-white text-violet-deep" data-reveal="fade"><span class="pearl is-violet h-2.5 w-2.5"></span><span data-vi="Về chúng tôi · Từ 2024">About · Since 2024</span></span>
+        <h1 class="mt-7 font-display text-[2.9rem] font-bold leading-[0.98] tracking-tight sm:text-7xl lg:text-[4.8rem] 2xl:text-[5.6rem]">
+          <span class="block" data-split="words" data-vi="Bắt đầu từ">Started with</span>
+          <span class="block text-violet" data-split="words" data-vi="một quầy nhỏ.">one small counter.</span>
+        </h1>
+        <p class="mt-7 max-w-[46ch] text-lg leading-relaxed text-void/70" data-reveal="up" data-vi="TEA ORBIT là quán trà sữa và bánh ngọt ở Sài Gòn. Chúng tôi mở quầy đầu tiên với một câu hỏi đơn giản: làm sao để một ly trà sữa vừa vui mắt, vừa vẫn ngon vị trà?">TEA ORBIT is a milk tea and pastry house in Saigon. We opened the first counter with one simple question: how do you make a cup that looks fun and still tastes of real tea?</p>
+        <dl class="mt-10 grid max-w-[36rem] grid-cols-3 gap-3" data-reveal="fade" data-reveal-delay="200">
+          <div class="rounded-2xl bg-white p-4"><dt class="text-xs text-void/55" data-vi="Từ">Since</dt><dd class="mt-1 font-display text-2xl font-bold">2024</dd></div>
+          <div class="rounded-2xl bg-white p-4"><dt class="text-xs text-void/55" data-vi="Địa điểm">Where</dt><dd class="mt-1 font-display text-2xl font-bold" data-vi="Quận 1">District 1</dd></div>
+          <div class="rounded-2xl bg-white p-4"><dt class="text-xs text-void/55" data-vi="Công thức">Recipes</dt><dd class="mt-1 font-display text-2xl font-bold">12</dd></div>
+        </dl>
+      </div>
+
+      <!-- Ảnh quầy trong khung vòm -->
+      <div class="relative lg:col-span-6 lg:col-start-7">
+        <div class="relative mx-auto w-full max-w-[500px] lg:mr-0 lg:ml-auto">
+          <div class="arch relative aspect-[4/5] overflow-hidden bg-violet-soft shadow-[0_40px_80px_-40px_rgba(90,63,224,.55)] ring-8 ring-white">
+            <img src="https://images.unsplash.com/photo-1636737187581-f25682019be7?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" alt="A hand holding milk tea in front of a pink wall with a neon sign" data-vi-alt="Tay cầm ly trà sữa trước bức tường hồng có bảng đèn neon" class="img-warm h-full w-full object-cover" width="1200" height="1500">
+          </div>
+          <span class="bubble rise absolute -right-3 top-[16%] h-14 w-14" aria-hidden="true"></span>
+          <div class="absolute -left-3 bottom-[10%] sm:-left-8" data-float="7"><span class="sticker -rotate-3 bg-white text-void"><span class="pearl h-3 w-3"></span><span data-vi="Mẻ thử thứ 40 mới lên thực đơn">Recipe #40 made the menu</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" data-section="story-letter" class="relative bg-frost-2 py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-10">
+        <div class="lg:col-span-7 xl:col-span-6 xl:col-start-2">
+          <span class="sticker bg-cobalt text-white" data-vi="Câu chuyện">Our story</span>
+          <h2 class="mt-5 font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl">
+            <span class="block" data-split="words" data-vi="Một tờ giấy gói bánh,">A pastry wrapper,</span>
+            <span class="block text-cobalt" data-split="words" data-vi="rồi một ly trà.">then a drink.</span>
+          </h2>
+
+          <div class="mt-9 max-w-prose space-y-6 text-lg leading-relaxed text-void/75">
+            <p data-reveal="up" data-vi="Bản phác thảo đầu tiên được vẽ trên mặt sau giấy gói bánh: một ly trà, vài lớp màu xếp chồng và những chấm nhỏ thay cho trân châu. Cái tên TEA ORBIT ra đời từ đó — mọi thứ trong quán xoay quanh ly trà, từ sữa, trái cây, kem đến chiếc bánh ăn kèm.">The first sketch was drawn on the back of a pastry wrapper: one cup, a few stacked layers of color and small dots standing in for tapioca. That is where the name TEA ORBIT came from — everything in the shop revolves around the tea, from milk, fruit and cream to the pastry on the side.</p>
+            <p data-reveal="up" data-vi="Đó là lý do thực đơn chỉ có bốn nhóm. Trà là nền. Sữa, trái cây và kem là các lớp ở giữa. Topping nằm dưới đáy, để ngụm cuối vẫn còn thú vị. Mỗi ly vì thế có thể nhìn thấy từ ngoài vào, và uống từ dưới lên.">That is why our menu has only four families. Tea is the base. Milk, fruit and cream are the middle layers. Toppings sit at the bottom so the last sip is still fun. Every cup can be read from the outside in, and drunk from the bottom up.</p>
+            <blockquote class="rounded-[1.5rem] bg-violet-wash p-6 font-display text-xl font-semibold leading-snug text-void sm:p-8 sm:text-2xl" data-reveal="up" data-vi="“Chúng tôi không thêm hương liệu để che vị trà. Chúng tôi xếp lớp để vị trà được nhìn thấy.”">“We don't add flavor to hide the tea. We build layers so the tea can be seen.”</blockquote>
+            <p data-reveal="up" data-vi="Phần còn lại là thử nghiệm. Trong bếp có một cuốn sổ ghi từng mẻ: nhiệt độ nước, thời gian ủ, tỷ lệ sữa, lượng đá. Có mẻ bị đổ đi vì trà chát quá; có mẻ ngọt đến mức không thể cứu. Công thức cuối cùng là công thức đứng được ở lần thử thứ bốn mươi, khi không còn ai trong quầy phải hỏi “cái này thiếu gì?”.">The rest is experimentation. A notebook in the kitchen logs every batch: water temperature, steep time, milk ratio, ice. Some batches went down the sink because the tea turned bitter; others were too sweet to rescue. A recipe earns its place around the fortieth trial, when nobody at the counter has to ask, “what is this missing?”</p>
+          </div>
+
+          <div class="mt-10 flex flex-wrap items-end justify-between gap-6 border-t border-void/10 pt-6" data-reveal="fade">
+            <div>
+              <p class="font-display text-lg font-bold" data-vi="Trần Khánh Linh">Tran Khanh Linh</p>
+              <p class="mt-1 text-sm text-void/60" data-vi="Nhà sáng lập & trưởng bộ phận hương vị">Founder &amp; flavor lead</p>
+            </div>
+            <p class="text-sm font-medium text-void/50" data-vi="Sài Gòn · 2024">Saigon · 2024</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 lg:col-start-9 lg:pt-16">
+          <figure class="lg:sticky lg:top-28" data-reveal="clip">
+            <div class="relative">
+              <div class="arch relative aspect-[3/4] overflow-hidden bg-cobalt-wash">
+                <img src="https://images.unsplash.com/photo-1620360289473-bfafadc16c57?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Milk poured from a small steel pitcher into a glass of iced tea" data-vi-alt="Sữa rót từ bình thép nhỏ vào ly trà đá" class="img-warm h-full w-full object-cover" width="1200" height="1600">
+              </div>
+              <div class="absolute -bottom-3 -right-2 flex gap-1.5" aria-hidden="true"><span class="pearl h-6 w-6"></span><span class="pearl is-cobalt mt-3 h-4 w-4"></span></div>
+            </div>
+            <figcaption class="mt-5 text-sm text-void/60" data-vi="Mẻ thử 07 — Assam, 6 phút, 92°C">Trial batch 07 — Assam, 6 min, 92°C</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section id="values" data-section="features-numbered" class="milk-wash-alt relative py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-7">
+          <span class="sticker bg-violet text-white" data-vi="Giá trị thương hiệu">Brand values</span>
+          <h2 class="mt-5 font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl" data-split="words" data-vi="Ba điều chúng tôi giữ.">Three things we keep.</h2>
+        </div>
+        <p class="max-w-[42ch] text-void/65 lg:col-span-5 lg:justify-self-end" data-reveal="up" data-vi="Không phải khẩu hiệu treo tường. Đây là ba câu hỏi chúng tôi hỏi lại mỗi tuần, khi một mẻ trà mới đi qua quầy.">Not a slogan for the wall. These are the three questions we ask again every week, when a new batch reaches the counter.</p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3 2xl:gap-6" data-reveal-stagger="90">
+        <article class="lift rounded-[2rem] bg-white p-7 sm:p-9">
+          <span class="grid h-14 w-14 place-items-center rounded-full bg-violet font-display text-xl font-bold text-white">01</span>
+          <h3 class="mt-8 font-display text-2xl font-bold sm:text-3xl" data-vi="Sáng tạo">Creativity</h3>
+          <p class="mt-3 leading-relaxed text-void/65" data-vi="Mỗi công thức bắt đầu bằng một buổi nếm trà, không phải một xu hướng. Cái mới đến từ cách kết hợp, không phải từ hương liệu.">Every recipe starts with a tasting, not a trend. The new comes from how things are combined, not from added flavoring.</p>
+        </article>
+        <article class="lift rounded-[2rem] bg-white p-7 sm:p-9 md:mt-10">
+          <span class="grid h-14 w-14 place-items-center rounded-full bg-cyan font-display text-xl font-bold text-void">02</span>
+          <h3 class="mt-8 font-display text-2xl font-bold sm:text-3xl" data-vi="Cân bằng hương vị">Balanced flavor</h3>
+          <p class="mt-3 leading-relaxed text-void/65" data-vi="Nhiệt độ, kết cấu và tỷ lệ quan trọng như hương liệu — đôi khi hơn. Một ly cân bằng là ly mà ngụm đầu, ngụm giữa và ngụm cuối đều ngon như nhau.">Temperature, texture and ratio matter as much as aroma — sometimes more. A balanced cup is just as good in the first, middle and last sip.</p>
+        </article>
+        <article class="lift rounded-[2rem] bg-white p-7 sm:p-9">
+          <span class="grid h-14 w-14 place-items-center rounded-full bg-cobalt font-display text-xl font-bold text-white">03</span>
+          <h3 class="mt-8 font-display text-2xl font-bold sm:text-3xl" data-vi="Trải nghiệm hiện đại">A modern experience</h3>
+          <p class="mt-3 leading-relaxed text-void/65" data-vi="Đôi khi chỉ là cách rót, cách đặt ly, cách gọi tên món. Trải nghiệm hiện đại nằm ở những chi tiết rất nhỏ, lặp lại mỗi ngày.">Sometimes it is just the pour, how the cup is handed over, the name on the menu. A modern experience lives in small details, repeated every day.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" data-section="gallery-lookbook" class="relative bg-frost-2 py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+        <div>
+          <span class="sticker bg-cyan text-void" data-vi="Góc ảnh">Lookbook</span>
+          <h2 class="mt-5 max-w-[16ch] font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl" data-split="words" data-vi="Một ngày ở quầy">A day at the counter</h2>
+        </div>
+        <p class="max-w-[34ch] text-sm leading-relaxed text-void/60" data-reveal="fade" data-vi="Năm khung hình trong một ngày làm việc. Bấm vào ảnh để xem lớn.">Five frames from one working day. Click any image to enlarge.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5" data-reveal-stagger="80">
+        <figure class="sm:col-span-2 lg:col-span-7">
+          <a href="https://images.unsplash.com/photo-1791945611215-2cb833de01f5?w=1800&q=80&auto=format&fit=crop" data-lightbox="about-gallery" data-caption="Morning set: butterfly pea latte, matcha and a fresh croissant" data-vi-caption="Bộ buổi sáng: latte hoa đậu biếc, matcha và bánh sừng bò mới nướng" class="group relative block h-[340px] overflow-hidden rounded-[2rem] bg-cobalt-wash sm:h-[440px] lg:h-[560px]">
+            <img src="https://images.unsplash.com/photo-1791945611215-2cb833de01f5?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A tray with a blue latte, a matcha latte and a croissant on a wooden table" data-vi-alt="Khay gồm latte xanh dương, matcha latte và bánh sừng bò trên bàn gỗ" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]" width="1400" height="1050">
+            <span class="sticker absolute bottom-5 left-5 bg-white text-void" data-vi="Bộ buổi sáng">Morning set</span>
+          </a>
+        </figure>
+
+        <figure class="lg:col-span-5">
+          <a href="https://images.unsplash.com/photo-1787559806175-af53ac9994f0?w=1600&q=80&auto=format&fit=crop" data-lightbox="about-gallery" data-caption="Four cups on one table: matcha, cocoa, Thai tea, jasmine" data-vi-caption="Bốn ly trên một mặt bàn: matcha, cacao, trà Thái, lài" class="group relative block h-[340px] overflow-hidden rounded-[2rem] bg-violet-wash sm:h-[440px] lg:h-[560px]">
+            <img src="https://images.unsplash.com/photo-1787559806175-af53ac9994f0?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Four iced drinks in clear cups seen from above on a pale table" data-vi-alt="Bốn ly đồ uống đá nhìn từ trên xuống trên mặt bàn sáng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]" width="1200" height="1500">
+            <span class="sticker absolute bottom-5 left-5 bg-white text-void" data-vi="Bốn ly, một bàn">Four cups, one table</span>
+          </a>
+        </figure>
+
+        <figure class="lg:col-span-4">
+          <a href="https://images.unsplash.com/photo-1745725247846-12a3e3109bbf?w=1600&q=80&auto=format&fit=crop" data-lightbox="about-gallery" data-caption="Taro latte by the window plant" data-vi-caption="Latte khoai môn cạnh chậu cây bên cửa sổ" class="group relative block h-[300px] overflow-hidden rounded-[2rem] bg-violet-wash sm:h-[340px] lg:h-[400px]">
+            <img src="https://images.unsplash.com/photo-1745725247846-12a3e3109bbf?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A purple taro iced latte next to a potted plant" data-vi-alt="Ly latte khoai môn tím cạnh chậu cây" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.05]" width="1000" height="1250">
+            <span class="sticker absolute bottom-5 left-5 bg-white text-void" data-vi="Khoai môn bên cửa sổ">Taro by the window</span>
+          </a>
+        </figure>
+
+        <figure class="lg:col-span-4">
+          <a href="https://images.unsplash.com/photo-1763649157135-50beaa9d6289?w=1600&q=80&auto=format&fit=crop" data-lightbox="about-gallery" data-caption="Milk tea to go, held up to a blue afternoon" data-vi-caption="Trà sữa mang đi, giơ lên trời chiều xanh" class="group relative block h-[300px] overflow-hidden rounded-[2rem] bg-cyan-wash sm:h-[340px] lg:h-[400px]">
+            <img src="https://images.unsplash.com/photo-1763649157135-50beaa9d6289?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A hand holding a cup of milk tea against a teal background" data-vi-alt="Tay cầm ly trà sữa trên nền xanh ngọc" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.05]" width="1000" height="1250">
+            <span class="sticker absolute bottom-5 left-5 bg-white text-void" data-vi="Mang đi">To go</span>
+          </a>
+        </figure>
+
+        <figure class="sm:col-span-2 lg:col-span-4">
+          <a href="https://images.unsplash.com/photo-1751199956820-ecb919004024?w=1600&q=80&auto=format&fit=crop" data-lightbox="about-gallery" data-caption="Pearl milk tea on the walk home" data-vi-caption="Trà sữa trân châu trên đường về" class="group relative block h-[300px] overflow-hidden rounded-[2rem] bg-violet-wash sm:h-[340px] lg:h-[400px]">
+            <img src="https://images.unsplash.com/photo-1751199956820-ecb919004024?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A hand holding pearl milk tea on a tree-lined street" data-vi-alt="Tay cầm ly trà sữa trân châu trên con phố rợp cây" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.05]" width="1000" height="1250">
+            <span class="sticker absolute bottom-5 left-5 bg-white text-void" data-vi="Trên đường về">On the walk home</span>
+          </a>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="about-cta" data-section="cta-type" class="milk-wash relative overflow-hidden py-24 lg:py-32">
+    <div class="relative mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 2xl:px-16">
+      <div class="lg:col-span-7">
+        <h2 class="font-display text-5xl font-bold leading-[0.96] tracking-tight sm:text-7xl 2xl:text-8xl">
+          <span class="block" data-split="words" data-vi="Ly của bạn">Your cup</span>
+          <span class="block text-violet" data-split="words" data-vi="đang chờ.">is waiting.</span>
+        </h2>
+        <p class="mt-6 max-w-[46ch] text-lg leading-relaxed text-void/70" data-reveal="up" data-vi="Mười hai món, bốn nhóm hương vị và một quầy nhỏ ở Quận 1. Bắt đầu từ ly đầu tiên, phần còn lại để vị giác quyết định.">Twelve drinks, four flavor families and one small counter in District 1. Start with the first cup; let your taste decide the rest.</p>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <a href="menu.html" class="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-full bg-violet px-8 font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 active:scale-[.98]">
+            <span data-vi="Khám phá thực đơn">Explore the menu</span>
+            <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="tel:02838224719" class="inline-flex min-h-[54px] items-center justify-center rounded-full border border-void/15 bg-white px-7 font-medium transition-colors duration-300 hover:border-void/40" data-vi="Gọi cho quầy">Call the shop</a>
+        </div>
+      </div>
+      <dl class="grid grid-cols-1 gap-6 rounded-[2rem] bg-white p-7 shadow-[0_30px_60px_-36px_rgba(16,17,27,.35)] sm:grid-cols-3 sm:p-8 lg:col-span-5 lg:grid-cols-1">
+        <div>
+          <dt class="text-sm text-void/55" data-vi="Địa chỉ">Address</dt>
+          <dd class="mt-1.5 text-lg font-medium" data-vi="42 Hồ Tùng Mậu, Bến Nghé, Quận 1, TP. Hồ Chí Minh">42 Ho Tung Mau, Ben Nghe, District 1, Ho Chi Minh City</dd>
+        </div>
+        <div>
+          <dt class="text-sm text-void/55" data-vi="Giờ mở cửa">Opening hours</dt>
+          <dd class="mt-1.5 text-lg font-medium" data-vi="Mỗi ngày, 9:00 - 22:30">Every day, 9:00 - 22:30</dd>
+        </div>
+        <div>
+          <dt class="text-sm text-void/55">Email</dt>
+          <dd class="mt-1.5 text-lg font-medium"><a href="mailto:hello@teaorbit.vn" class="underline decoration-void/25 underline-offset-4 transition-colors duration-300 hover:text-violet-deep hover:decoration-violet">hello@teaorbit.vn</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer" class="bg-void text-frost">
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-xl font-bold tracking-[0.08em]">TEA ORBIT</a>
+    <nav class="flex flex-wrap gap-x-8 gap-y-3 text-frost/70" aria-label="Footer">
+      <a href="../index.html" class="transition-colors duration-300 hover:text-cyan" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="transition-colors duration-300 hover:text-cyan" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="transition-colors duration-300 hover:text-cyan" data-vi="Về chúng tôi">About</a>
+      <a href="mailto:hello@teaorbit.vn" class="transition-colors duration-300 hover:text-cyan">hello@teaorbit.vn</a>
+      <a href="tel:02838224719" class="transition-colors duration-300 hover:text-cyan">028 3822 4719</a>
+    </nav>
+    <p class="text-sm text-frost/60" data-vi="© 2026 TEA ORBIT. Bảo lưu mọi quyền.">© 2026 TEA ORBIT. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+</body>
+</html>

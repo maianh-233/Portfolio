@@ -1,0 +1,75 @@
+{
+  "slug": "skincare-house",
+  "name": "SKINCARE HOUSE",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "SKINCARE HOUSE",
+    "purpose": "Thiết kế website giới thiệu SKINCARE HOUSE, một thẩm mỹ viện chăm sóc da mang phong cách retro pop vui tươi, gần gũi và giàu cá tính.\n\nArt direction: 1990s Retro Pop. Sử dụng xanh baby, đỏ gạch, vàng bơ và trắng kem. Kết hợp khung ảnh kiểu máy ảnh phim, họa tiết caro, chữ nghiêng, icon vui nhộn và các mảng đồ họa scrapbook. Tránh thiết kế quá nữ tính, quá sang trọng hoặc tối giản lạnh lẽo.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Hero như bìa tạp chí retro, giới thiệu thương hiệu bằng headline cá tính, hình ảnh không gian và các nhóm dịch vụ chính.\n\nDịch vụ thẩm mỹ & Bảng giá: Sử dụng danh sách dịch vụ kết hợp nhãn màu, icon minh họa và mô tả dễ hiểu. Có các nhóm chăm sóc da cơ bản, chăm sóc chuyên sâu và các dịch vụ thẩm mỹ phù hợp. Giá tham khảo chỉ hiển thị khi có thông tin.\n\nVề chúng tôi: Câu chuyện hình thành thương hiệu, đội ngũ, không gian và trải nghiệm tư vấn. Dùng bố cục ảnh ghép có chọn lọc thay vì các thẻ nội dung đồng nhất.\n\nWebsite song ngữ Việt – Anh, có công tắc chuyển ngôn ngữ hoạt động. Nút “Đặt lịch tư vấn / Book a Consultation” mở form tư vấn, có ở header, cuối trang và nút nổi trên mobile.\n\nĐây là website giới thiệu, không bán mỹ phẩm hoặc sản phẩm khác, không giỏ hàng và không thanh toán. Giữ tinh thần vui tươi nhưng không làm giảm độ tin cậy của dịch vụ chăm sóc da.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-21T04:40:14.306Z",
+  "updatedAt": "2026-10-21T06:38:38.570Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\skincare-house\\web",
+    "builtAt": "2026-10-21T06:38:21.804Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "44f52a3f-5213-44b9-9081-6cedb5b6f25d",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\skincare-house\\web",
+    "feedback": "Phong cách retro mà . Nhìn phong cách này hơi trẻ con á . Thêm hiệu ứng cho sinh đông đi",
+    "page": "index.html",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-21T06:38:34.631Z",
+    "critical": 0,
+    "major": 1,
+    "minor": 1,
+    "screenshots": 9
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-21T06:38:21.792Z",
+      "text": "Phong cách retro mà . Nhìn phong cách này hơi trẻ con á . Thêm hiệu ứng cho sinh đông đi"
+    }
+  ]
+}

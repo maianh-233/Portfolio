@@ -1,0 +1,36 @@
+:root {
+  --ink: #101010;
+  --charcoal: #1A1A1A;
+  --ivory: #F3F0E9;
+  --mute: #9B9B9B;
+  --stone: #57544E;
+  --line: #2C2C2C;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ui-accent: #F3F0E9;
+}
+
+html { scroll-behavior: smooth; background: var(--ink); }
+body { font-family: var(--font-body); background: var(--ink); color: var(--ivory); -webkit-font-smoothing: antialiased; }
+section[id] { scroll-margin-top: 4.5rem; }
+::selection { background: var(--ivory); color: var(--ink); }
+
+/* Khung ảnh: nền dự phòng khi ảnh lỗi, góc vuông */
+.frame { background: var(--charcoal); overflow: hidden; }
+.frame img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.16, 1, .3, 1); }
+.work:hover .frame img, .work:focus-visible .frame img { transform: scale(1.03); }
+
+/* Modal yêu cầu dự án: vuông, nền tối như phần còn lại */
+dialog#yeu-cau[data-ui-modal] { border-radius: 0; max-width: min(94vw, 620px); background: var(--charcoal); color: var(--ivory); }
+
+/* Chỉ báo cuộn xuống ở hero */
+.scroll-line { position: relative; overflow: hidden; }
+.scroll-line::after { content: ""; position: absolute; left: 0; top: -100%; width: 100%; height: 100%; background: var(--ivory); animation: scroll-drop 2.4s cubic-bezier(.16, 1, .3, 1) infinite; }
+@keyframes scroll-drop { 0% { top: -100%; } 60%, 100% { top: 100%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .scroll-line::after { animation: none; top: 0; }
+  .frame img { transition: none; }
+  .work:hover .frame img { transform: none; }
+}

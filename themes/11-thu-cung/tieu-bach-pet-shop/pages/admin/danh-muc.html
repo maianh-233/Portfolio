@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danh mục · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-PROD-006" data-module="PROD" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-PROD-006 Danh mục: Tabs Nhóm sản phẩm / Loại thú cưng; bảng có sắp xếp thứ tự (nút ▲▼ — bản demo thay cho kéo thả), Switch hiển thị
+   * (nhóm Pate chay khóa), Drawer thêm / sửa (tên không trùng — PROD-E06). */
+  Layout.mount({ area: 'admin', title: 'Danh mục', active: 'categories', breadcrumb: [['Hàng hóa'], ['Danh mục']] }, function (main) {
+    var U = Perm.url, esc = UI.esc, R = UI.rules;
+    var TABS = { cat: { store: 'categories', label: 'Nhóm sản phẩm', add: 'Thêm nhóm', field: 'Tên nhóm', count: function (x) { return DemoStore.list('products').filter(function (p) { return p.category_id === x.id; }).length; } },
+      pet: { store: 'petTypes', label: 'Loại thú cưng', add: 'Thêm loại thú cưng', field: 'Tên loại thú cưng', count: function (x) { return DemoStore.list('products').filter(function (p) { return p.pet_type_ids.indexOf(x.id) >= 0; }).length; } } };
+    var tab = 'cat', tbl;
+    function list() { return DemoStore.list(TABS[tab].store).sort(function (a, b) { return a.thu_tu - b.thu_tu; }); }
+    main.innerHTML = '<div data-head></div><div class="mb-4" data-tabs></div><div data-tbl>' + UI.skeleton(6) + '</div>';
+    function head() { main.querySelector('[data-head]').innerHTML = UI.pageHeader({ title: 'Danh mục', description: 'Nhóm hàng và loại thú cưng hiển thị trên website', actions: UI.button({ label: TABS[tab].add, icon: 'plus', attrs: { 'data-add': '', 'data-permission': 'PROD.PRODUCT.CREATE' } }) }); }
+    function paint() {
+      head();
+      var rows = list();
+      var cols = [
+        { key: 'move', label: 'Sắp xếp', toggle: false, width: 'w-24', render: function (x) { var i = rows.indexOf(x); return '<span class="inline-flex gap-1">' + UI.iconButton({ icon: 'chevron-up', label: 'Đưa ' + x.ten + ' lên', size: 'sm', variant: 'outline', disabled: i === 0, attrs: { 'data-move': x.id, 'data-dir': -1, 'data-permission': 'PROD.PRODUCT.UPDATE' } }) + UI.iconButton({ icon: 'chevron-down', label: 'Đưa ' + x.ten + ' xuống', size: 'sm', variant: 'outline', disabled: i === rows.length - 1, attrs: { 'data-move': x.id, 'data-dir': 1, 'data-permission': 'PROD.PRODUCT.UPDATE' } }) + '</span>'; } },
+        { key: 'thu_tu', label: 'Thứ tự', align: 'center', hideBelow: 'lg', width: 'w-20' },
+        { key: 'ten', label: 'Tên', mobile: 'title', render: function (x) { return '<span class="inline-flex items-center gap-2 font-bold text-neutral-800">' + (x.img ? '<span class="size-8 overflow-hidden rounded-full">' + UI.img({ src: x.img, alt: '' }) + '</span>' : '') + esc(x.full || x.ten) + (x.la_pate_chay ? UI.icon('lock', 'size-4 text-neutral-500') : '') + '</span>'; } },
+        { key: 'count', label: 'Số sản phẩm', align: 'right', render: function (x) { return '<a class="font-bold text-primary-700 hover:underline" href="' + U('pages/admin/san-pham.html?' + (tab === 'cat' ? 'nhom=' : 'thu-cung=') + x.id) + '">' + TABS[tab].count(x) + '</a>'; } },
+        { key: 'hien_thi', label: 'Hiển thị', mobile: 'badge', render: function (x) {
+          var sw = UI.switch({ checked: x.hien_thi, disabled: !!x.la_pate_chay, label: 'Hiển thị ' + x.ten, attrs: { 'data-vis': x.id, 'data-permission': 'PROD.PRODUCT.UPDATE', 'data-permission-mode': 'disable' } });
+          return x.la_pate_chay ? UI.withTooltip(sw, 'Nhóm gắn với luồng đặt trước, không ẩn được') : sw;
+        } }];
+      if (tbl) { tbl.destroy(); }
+      tbl = UI.table(main.querySelector('[data-tbl]'), { rows: rows, pageSize: 50, columns: cols,
+        rowActions: function (x) { return [{ label: 'Sửa', icon: 'pencil', primary: true, variant: 'secondary', permission: 'PROD.PRODUCT.UPDATE', onClick: function () { openForm(x); } }]; },
+        empty: { title: 'Chưa có danh mục', action: UI.button({ label: 'Thêm nhóm', icon: 'plus', attrs: { 'data-add': '' } }) } });
+    }
+    function openForm(x) {
+      var t = TABS[tab];
+      var body = '<form novalidate class="flex flex-col gap-4" data-cat-form>' + UI.field({ name: 'ten', label: t.field, required: true, maxlength: 100, value: x ? (x.full || x.ten) : '' }) +
+        UI.field({ name: 'hien_thi', type: 'switch', label: 'Hiển thị trên web', value: x ? x.hien_thi : true, disabled: !!(x && x.la_pate_chay) }) +
+        (tab === 'pet' ? UI.fileUpload({ name: 'anh', label: 'Ảnh đại diện', optional: true, kind: 'image', maxMB: 5, existing: x && x.img ? [x.img] : [], hint: 'Dùng cho ô "Chọn hàng theo thú cưng" ở trang chủ', sizeMsg: 'Ảnh tối đa 5MB (JPG, PNG, WEBP)' }) : '') + '</form>';
+      UI.drawer({ title: x ? 'Sửa ' + esc(x.ten) : t.add, body: body, actions: [{ label: 'Hủy', variant: 'ghost' }, { label: 'Lưu', icon: 'save', onClick: function (api) {
+        var f = api.body.querySelector('[data-cat-form]');
+        var ok = UI.validate(f, { ten: [R.required('Vui lòng nhập tên'), R.custom(function (v) { return !list().some(function (y) { return (!x || y.id !== x.id) && UI.norm(y.full || y.ten) === UI.norm(v); }); }, 'Tên đã tồn tại')] });
+        if (!ok) return false;
+        var d = UI.formData(f), vis = d.hien_thi === '1' || (x && x.la_pate_chay);
+        var patch = { ten: d.ten, hien_thi: !!vis };
+        if (tab === 'pet') { patch.full = d.ten; if (d.anh && d.anh[0]) patch.img = d.anh[0].url; }
+        if (x) { DemoStore.update(t.store, x.id, patch); UI.toast('Đã lưu', 'success'); }
+        else { DemoStore.insert(t.store, Object.assign({ id: 'dm' + Date.now(), thu_tu: list().length + 1, bg: 'bg-info-100', fg: 'text-info-700', tone: 'info' }, patch)); UI.toast('Đã thêm ' + d.ten, 'success'); }
+        paint();
+      } }] });
+    }
+    setTimeout(function () {
+      try {
+        UI.tabs(main.querySelector('[data-tabs]'), { panelCls: 'hidden', tabs: [{ id: 'cat', label: 'Nhóm sản phẩm', count: DemoStore.list('categories').length }, { id: 'pet', label: 'Loại thú cưng', count: DemoStore.list('petTypes').length }], onChange: function (id) { tab = id; paint(); } });
+      } catch (e) { main.querySelector('[data-tbl]').innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.' }); }
+    }, 400);
+    main.addEventListener('click', function (e) {
+      if (e.target.closest('[data-add]')) { openForm(null); return; }
+      var m = e.target.closest('[data-move]');
+      if (m && !m.disabled) {
+        var rows = list(), i = rows.findIndex(function (x) { return x.id === m.getAttribute('data-move'); }), j = i + (+m.getAttribute('data-dir'));
+        if (j < 0 || j >= rows.length) return;
+        var a = rows[i], b = rows[j];
+        DemoStore.update(TABS[tab].store, a.id, { thu_tu: b.thu_tu }); DemoStore.update(TABS[tab].store, b.id, { thu_tu: a.thu_tu });
+        UI.toast('Đã cập nhật thứ tự', 'success'); paint(); tbl.flash(a.id);
+      }
+    });
+    main.addEventListener('switchchange', function (e) {
+      var s = e.target.closest('[data-vis]'); if (!s) return;
+      var x = DemoStore.get(TABS[tab].store, s.getAttribute('data-vis'));
+      DemoStore.update(TABS[tab].store, x.id, { hien_thi: e.detail.checked });
+      UI.toast((e.detail.checked ? 'Đã hiện ' : 'Đã ẩn ') + x.ten, 'success');
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "slug": "moss-mist-nail-studio",
+  "name": "MOSS & MIST NAIL STUDIO",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu",
+    "brand": "MOSS & MIST NAIL STUDIO",
+    "purpose": "Thiết kế website giới thiệu MOSS & MIST NAIL STUDIO, nail studio lấy cảm hứng từ thực vật, vẻ đẹp tự nhiên và nghệ thuật chăm sóc móng tinh tế.",
+    "audience": "Khách có nhu cầu sẽ xem",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "# PROJECT: MOSS & MIST NAIL STUDIO\n## Botanical Nail Care Studio\n\nThiết kế website giới thiệu MOSS & MIST NAIL STUDIO, nail studio lấy cảm hứng từ thực vật, vẻ đẹp tự nhiên và nghệ thuật chăm sóc móng tinh tế.\n\n### 1. ART DIRECTION\n- Botanical Modern kết hợp Organic Editorial.\n- Màu xanh sage, xanh rêu, kem và nâu gỗ nhạt.\n- Typography serif tự nhiên kết hợp sans-serif.\n- Hình ảnh lá cây, hoa nhỏ, chất liệu đá, gỗ và nail art lấy cảm hứng từ thực vật.\n- Layout mềm mại, đường cong hữu cơ, khoảng trắng rộng.\n- Tránh biến website thành spa hoặc cửa hàng mỹ phẩm.\n\n### 2. TRANG CHỦ — HOME\n**Header**\n- Logo MOSS & MIST.\n- Menu, chuyển ngôn ngữ VI / EN và CTA Đặt lịch.\n- Nền kem, đường kẻ mảnh.\n\n**Hero**\n- Hình ảnh nail art hoa lá hoặc bàn tay trên nền thực vật.\n- Tiêu đề \"A Little Nature at Your Fingertips\".\n- Mô tả ngắn về nghệ thuật nail lấy cảm hứng từ thiên nhiên.\n- CTA khám phá dịch vụ.\n- Bố cục kết hợp hình ảnh lớn và typography mềm mại.\n\n**Our Philosophy**\n- Giới thiệu triết lý chăm sóc móng nhẹ nhàng.\n- Ba giá trị: Natural Beauty, Thoughtful Care, Artful Details.\n\n**Signature Services**\n- Botanical Nail Art, Natural Manicure và Gel Polish.\n- Ảnh, mô tả và giá tham khảo.\n\n**Botanical Collection**\n- Gallery các bộ móng lấy cảm hứng từ lá, hoa, màu đất và mùa.\n\n**The Studio**\n- Giới thiệu không gian, chất liệu tự nhiên và đội ngũ nail artist.\n\n**Footer**\n- Thông tin liên hệ, giờ hoạt động và CTA.\n\n### 3. TRANG DỊCH VỤ — SERVICES & PRICING\n- Hero với tiêu đề \"Thoughtful Nail Care\".\n- Nhóm Natural Manicure, Pedicure, Gel Polish, Nail Extensions và Botanical Nail Art.\n- Mỗi nhóm có ảnh minh họa, mô tả, thời lượng và giá tham khảo.\n- Section giới thiệu các phong cách nail art lấy cảm hứng từ thực vật.\n- Bảng giá được trình bày nhẹ nhàng, dễ đọc.\n- Có mục hướng dẫn chăm sóc móng cơ bản sau dịch vụ.\n\n### 4. TRANG BỘ SƯU TẬP — BOTANICAL COLLECTION\n- Hero với ảnh nail art hoa lá.\n- Tiêu đề \"Inspired by Nature\".\n- Bộ lọc Floral, Leaves, Earth Tones, Minimal và Seasonal.\n- Gallery dạng editorial, kết hợp ảnh cận cảnh và hình minh họa thực vật.\n- Mỗi ảnh có tên thiết kế, màu chủ đạo và mô tả ngắn.\n- Nhấn ảnh mở lightbox.\n- Cuối trang có phần giới thiệu cảm hứng thiết kế.\n\n### 5. TRANG GIỚI THIỆU — OUR STUDIO\n- Hero ảnh không gian với cây xanh và ánh sáng tự nhiên.\n- Câu chuyện thương hiệu và cảm hứng từ thiên nhiên.\n- Giới thiệu đội ngũ nail artist với ảnh và chuyên môn.\n- Gallery bàn làm móng, vật liệu và các chi tiết nội thất.\n- Section mô tả trải nghiệm tại studio.\n- Thông tin liên hệ, giờ mở cửa và địa chỉ mẫu.\n\n### 6. YÊU CẦU\n- Song ngữ Việt – Anh đầy đủ trên cả 4 trang.\n- Responsive, HTML/CSS/JS thuần.\n- Menu, gallery, bộ lọc và lightbox hoạt động.\n- CTA Đặt lịch chỉ để minh họa giao diện, không xử lý lịch hẹn.\n- Không backend, không bán sản phẩm, không thanh toán.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-30T14:36:25.468Z",
+  "updatedAt": "2026-10-30T14:50:29.797Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\moss-mist-nail-studio\\web",
+    "builtAt": "2026-10-30T14:50:14.239Z",
+    "pages": [
+      "index.html",
+      "pages/collection.html",
+      "pages/services.html",
+      "pages/studio.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/collection.html": [],
+      "pages/services.html": [],
+      "pages/studio.html": []
+    }
+  },
+  "job": {
+    "id": "b76252db-e128-400a-922d-a7200a606b85",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\moss-mist-nail-studio\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 191024,
+      "outputTokens": 99497,
+      "cacheReadTokens": 6153405,
+      "cacheCreationTokens": 294331,
+      "costUsd": 5.2376162,
+      "numTurns": 96,
+      "durationMs": 765189
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-30T14:50:25.953Z",
+    "critical": 0,
+    "major": 40,
+    "minor": 0,
+    "screenshots": 12
+  }
+}

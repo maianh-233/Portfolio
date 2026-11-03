@@ -1,0 +1,68 @@
+{
+  "slug": "verdant-sanctuary",
+  "name": "VERDANT SANCTUARY",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "VERDANT SANCTUARY",
+    "purpose": "Thiết kế website giới thiệu VERDANT SANCTUARY, một resort sinh thái cao cấp ẩn mình giữa không gian rừng xanh, nơi kiến trúc, ánh sáng và cảnh quan hòa quyện thành một trải nghiệm nghỉ dưỡng yên bình.\n\nPhong cách chủ đạo là Enchanted Forest Luxury — sang trọng, tự nhiên, sâu lắng và giàu cảm xúc. Website phải gợi lên cảm giác bước vào một khu rừng xanh mát, nơi ánh nắng xuyên qua tán cây, những lối đi bằng đá dẫn đến villa riêng tư và kiến trúc được bao bọc bởi thảm thực vật.\n\nKhông sử dụng phong cách resort nhiệt đới đại trà, giao diện tối giản lạnh lẽo hoặc thiết kế sinh thái chỉ mang tính biểu tượng.",
+    "audience": "",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "VISUAL IDENTITY — COLOR PALETTE\n\nSử dụng xanh rừng làm màu nhận diện xuyên suốt website:\n\nDeep Forest #243D30: Xanh rừng sâu, dùng cho header, footer, các section thương hiệu và tiêu đề nổi bật.\n\nCanopy Green #42664A: Xanh tán cây, tạo điểm nhấn và kết nối với hình ảnh thiên nhiên.\n\nFern #819875: Xanh dương xỉ, dùng cho chi tiết giao diện, nhãn section và hiệu ứng hover.\n\nMoss #A1A88A: Xanh rêu dịu, dùng cho nền phụ và các chi tiết trang trí.\n\nForest Mist #E4E9DD: Xanh sương nhẹ, dành cho các section sáng và khu vực giới thiệu.\n\nWarm Ivory #F5F1E7: Kem ấm, làm nền chính để cân bằng các mảng xanh đậm.\n\nNatural Bark #665443: Nâu vỏ cây, gợi chất liệu gỗ và đất rừng.\n\nNguyên tắc phối màu:\n\nDeep Forest và Canopy Green phải xuất hiện xuyên suốt để tạo nhận diện rõ ràng.\n\nWarm Ivory và Forest Mist giúp các trang sáng, dễ đọc và không bị tối.\n\nFern và Moss dùng làm điểm nhấn, không lạm dụng.\n\nNatural Bark xuất hiện ở các chi tiết liên quan đến vật liệu tự nhiên.\n\nCó thể sử dụng ảnh rừng xanh đậm làm nền cho một số section, kết hợp chữ màu kem.\n\nKhông dùng xanh neon, xanh bạc hà kiểu công nghệ hoặc màu xanh quá bão hòa. Tổng thể phải giống sắc độ của một khu rừng tự nhiên, có chiều sâu và biến đổi theo ánh sáng.\n\nTYPOGRAPHY & LAYOUT\n\nTiêu đề: Cormorant Garamond hoặc DM Serif Display, tạo vẻ thanh lịch và gần gũi với thiên nhiên.\n\nNội dung: Be Vietnam Pro hoặc Manrope, dễ đọc và hỗ trợ tiếng Việt tốt.\n\nNhãn section: Sans-serif in hoa, cỡ nhỏ, khoảng cách ký tự rộng.\n\nTiêu đề lớn, có khoảng thở và xuống dòng có chủ đích.\n\nKết hợp bố cục editorial bất đối xứng, ảnh toàn chiều rộng và các khung hình dọc. Sử dụng đường kẻ mảnh, khoảng trắng rộng và các chi tiết trang trí lấy cảm hứng từ đường nét tự nhiên.\n\nTránh sử dụng quá nhiều card bo góc, bóng đổ dày hoặc bố cục lặp lại giữa các section.\n\nIMAGE ART DIRECTION\n\nHình ảnh cần làm nổi bật cảm giác rừng xanh sống động, có chiều sâu và ánh sáng tự nhiên.\n\nƯu tiên:\n\nRừng xanh nhiều tầng tán, cây cao và thảm thực vật phong phú.\n\nÁnh nắng xuyên qua tán cây, tạo bóng đổ trên lối đi và kiến trúc.\n\nVilla bằng gỗ và đá tự nhiên nằm giữa khu rừng.\n\nLối đi lát đá, cầu gỗ và sân trong phủ bóng cây.\n\nPhòng nghỉ mở ra khu vườn hoặc rừng cây.\n\nHồ nước tĩnh phản chiếu tán lá.\n\nNhà hàng và spa hòa vào cảnh quan xanh.\n\nNhững góc chụp cận cảnh rêu, vân gỗ, đá và lá cây để thể hiện chất liệu.\n\nẢnh nên có màu xanh tự nhiên, ánh sáng dịu và độ tương phản vừa phải. Kết hợp ảnh rừng tươi sáng với một số ảnh xanh đậm để tạo chiều sâu.\n\nKhông sử dụng hình ảnh sa mạc, bờ biển nhiệt đới hoặc kiến trúc bê tông lạnh làm chủ đề chính.\n\nTRANG CHỦ — HOME\n\nHeader\n\nLogo VERDANT SANCTUARY trên nền Warm Ivory.\n\nMenu gồm Home, Our Philosophy, Stays, Experiences.\n\nNút chuyển đổi ngôn ngữ VI/EN.\n\nCó thể chuyển header sang nền Deep Forest khi cuộn trang, với chữ màu kem.\n\nHero Section\n\nẢnh lớn toàn chiều rộng về một khu nghỉ dưỡng ẩn mình giữa rừng xanh.\n\nTiêu đề: “Luxury, Rooted in Nature”.\n\nMô tả: “A secluded sanctuary shaped by the forest, natural materials and the quiet rhythm of nature.”\n\nNhãn nhỏ: “AN ENCHANTED FOREST RETREAT”.\n\nCTA: “Discover the Sanctuary”.\n\nTiêu đề màu kem nếu đặt trên ảnh tối; bảo đảm độ tương phản dễ đọc.\n\nBrand Introduction\n\nBố cục hai cột với tiêu đề lớn: “Where the Forest Becomes Home”.\n\nGiới thiệu triết lý nghỉ dưỡng gắn với cảnh quan, kiến trúc và sự riêng tư.\n\nKết hợp ảnh villa giữa tán cây và ảnh chi tiết vật liệu gỗ tự nhiên.\n\nForest Architecture\n\nẢnh kiến trúc lớn kết hợp ảnh chi tiết về mái, hành lang, cửa sổ và sân trong.\n\nTiêu đề: “Architecture Among the Trees”.\n\nMô tả cách công trình hòa vào cảnh quan bằng hình khối, vật liệu và ánh sáng.\n\nThe Stay Collection\nGiới thiệu ba loại hình lưu trú:\n\nGarden Suite: Suite hướng ra khu vườn xanh, có ánh sáng tự nhiên và vật liệu ấm.\n\nForest Villa: Villa riêng tư giữa cây xanh, nhấn mạnh sự kết nối với thiên nhiên.\n\nEco Residence: Không gian lưu trú rộng rãi, kết hợp nội thất tự nhiên và cảnh quan bên ngoài.\n\nTrình bày bằng các ảnh lớn có kích thước khác nhau, không sử dụng ba card giống hệt nhau.\n\nThe Forest Sanctuary\nGiới thiệu các không gian:\n\nBotanical Garden: Khu vườn xanh với lối đi giữa thảm thực vật.\n\nForest Table: Nhà hàng kết nối với cảnh quan.\n\nMoss Spa: Không gian thư giãn lấy cảm hứng từ sắc xanh và vật liệu tự nhiên.\n\nCanopy Lounge: Khu vực nghỉ ngơi dưới tán cây.\n\nLiving in Balance\n\nNền Deep Forest.\n\nChữ màu Warm Ivory, điểm nhấn Fern.\n\nTiêu đề: “A Deeper Connection to Nature”.\n\nGiới thiệu định hướng nghỉ dưỡng có trách nhiệm và sự tôn trọng cảnh quan.\n\nKhông sử dụng số liệu hoặc tuyên bố môi trường chưa được xác thực.\n\nClosing Gallery\n\nẢnh toàn chiều rộng về rừng xanh trong ánh nắng cuối ngày.\n\nDòng chữ: “Find Your Quiet in the Wild”.\n\nFooter\n\nNền Deep Forest.\n\nLogo, menu, thông tin liên hệ mẫu và liên kết mạng xã hội.\n\nĐường phân cách Fern mảnh.\n\nTRANG OUR PHILOSOPHY — GIỚI THIỆU\n\nHero ảnh kiến trúc ẩn trong tán rừng, tiêu đề “Designed to Belong”.\n\nGiới thiệu triết lý thương hiệu bằng nội dung ngắn gọn.\n\nSection kiến trúc và cảnh quan với ảnh villa, hành lang mở và sân trong.\n\nSection vật liệu tự nhiên gồm gỗ, đá, đất và các bề mặt hoàn thiện có kết cấu.\n\nSection ánh sáng tự nhiên thể hiện bóng cây và sự thay đổi ánh sáng trong không gian.\n\nSection định hướng phát triển có trách nhiệm, sử dụng ngôn ngữ chính xác và không phóng đại thành tựu.\n\nGallery cuối trang kết hợp ảnh toàn cảnh rừng và chi tiết kiến trúc.\n\nTRANG STAYS — PHÒNG NGHỈ & TIỆN ÍCH\n\nHero\n\nẢnh villa giữa rừng xanh.\n\nTiêu đề: “Private Spaces in Nature”.\n\nGarden Suite\n\nẢnh phòng nghỉ hướng ra vườn.\n\nMô tả ánh sáng, vật liệu, tầm nhìn và tiện nghi.\n\nForest Villa\n\nẢnh villa riêng tư nằm giữa cây cao và thảm thực vật.\n\nNhấn mạnh sự yên tĩnh, không gian mở và cảm giác gần gũi thiên nhiên.\n\nEco Residence\n\nẢnh khu vực sinh hoạt rộng rãi với cửa mở ra cảnh quan.\n\nMô tả thiết kế và các tiện nghi phù hợp.\n\nResort Facilities\n\nBotanical Garden.\n\nForest Table Restaurant.\n\nMoss Spa.\n\nCanopy Lounge.\n\nOutdoor Wellness Space.\n\nMỗi tiện ích có ảnh lớn, tiêu đề và mô tả ngắn. Sử dụng nền xen kẽ giữa Warm Ivory, Forest Mist và Deep Forest.\n\nCó thể bổ sung sơ đồ minh họa khái niệm về mối quan hệ giữa khu lưu trú, khu vườn và các tiện ích. Nếu không có mặt bằng thực tế, phải ghi rõ đây là sơ đồ minh họa.\n\nKhông hiển thị giá, lịch phòng hoặc chức năng đặt dịch vụ.\n\nTRANG EXPERIENCES — TRẢI NGHIỆM\n\nHero\n\nẢnh lối đi giữa khu rừng, ánh nắng xuyên qua tán cây.\n\nTiêu đề: “Follow the Rhythm of the Forest”.\n\nForest Discovery\n\nGiới thiệu trải nghiệm khám phá cảnh quan và các lối đi giữa thiên nhiên.\n\nBotanical Garden\n\nHình ảnh cây xanh, vườn thảo mộc và các góc cảnh quan.\n\nNội dung giới thiệu không gian và trải nghiệm tìm hiểu thực vật nếu phù hợp.\n\nConscious Dining\n\nẢnh nhà hàng giữa khu vườn và không gian thưởng thức ẩm thực.\n\nKhông tự khẳng định nguyên liệu hữu cơ hoặc có nguồn gốc địa phương nếu chưa có dữ liệu xác thực.\n\nForest Wellness\n\nGiới thiệu spa, thiền và các không gian thư giãn.\n\nDùng ảnh ánh sáng dịu, vật liệu tự nhiên và cảnh quan xanh.\n\nSlow Living\n\nSection nền Moss hoặc Canopy Green.\n\nTiêu đề lớn: “Make Space for Stillness”.\n\nNội dung nhấn mạnh việc nghỉ ngơi, tận hưởng không gian và kết nối với thiên nhiên.\n\nClosing Gallery\n\nẢnh rừng xanh và kiến trúc trong ánh sáng dịu.\n\nDòng chữ kết thúc: “Return to Nature, Return to Yourself”.\n\nMOTION & INTERACTION\n\nFade-in nhẹ khi các section xuất hiện.\n\nẢnh zoom chậm khi hover.\n\nTiêu đề xuất hiện theo chiều dọc.\n\nĐường phân cách hiện dần khi cuộn trang.\n\nChuyển trạng thái menu và ngôn ngữ mượt mà.\n\nHỗ trợ prefers-reduced-motion để hạn chế chuyển động khi người dùng yêu cầu.\n\nKhông sử dụng animation mạnh hoặc hiệu ứng gây mất tập trung.\n\nTECHNICAL REQUIREMENTS\n\nXây dựng bốn trang HTML riêng: index.html, about.html, stays.html, experiences.html.\n\nSử dụng HTML, CSS và JavaScript thuần.\n\nDùng chung stylesheet và script khi phù hợp.\n\nHỗ trợ chuyển đổi VI/EN đầy đủ cho mọi nội dung.\n\nLưu ngôn ngữ đã chọn khi chuyển trang hoặc tải lại.\n\nResponsive trên desktop, tablet và mobile.\n\nTối ưu ảnh, lazy-load các ảnh ngoài màn hình đầu tiên và có phương án dự phòng khi ảnh lỗi.\n\nĐảm bảo độ tương phản, alt text và khả năng điều hướng bằng bàn phím.\n\nKhông tích hợp đặt phòng, đặt lịch, giỏ hàng hoặc thanh toán.\n\nFINAL DESIGN GOAL\n\nVERDANT SANCTUARY phải gợi nhớ đến một khu rừng xanh sâu, tươi mát và đầy sức sống, nơi kiến trúc cao cấp được bao bọc bởi thiên nhiên.\n\nXanh rừng là màu nhận diện xuyên suốt, kết hợp xanh dương xỉ, xanh rêu và màu kem ấm. Hình ảnh rừng xanh, ánh nắng xuyên qua tán cây, vật liệu gỗ và đá tự nhiên phải tạo nên bản sắc thị giác nổi bật.\n\nWebsite cần sang trọng nhưng không lạnh lẽo, gần gũi thiên nhiên nhưng không đơn điệu, có chiều sâu kiến trúc nhưng vẫn dễ sử dụng.\n\nKết quả phải giống website của một thương hiệu Enchanted Forest Luxury Retreat, không phải một mẫu resort thông thường được đổi sang màu xanh lá.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-29T07:19:25.754Z",
+  "updatedAt": "2026-10-29T07:56:12.141Z",
+  "screen": "request",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "33090357-1b64-41f1-81f5-7e879c2c855a",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\verdant-sanctuary\\web",
+    "status": "error",
+    "error": "Đã chạm giới hạn sử dụng của tài khoản, vui lòng chờ rồi thử lại. Hạn mức sẽ được làm mới lúc 18:30 29-10.",
+    "errorCode": "usage_limit",
+    "resetsAt": 1793273400,
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 236332,
+      "outputTokens": 109099,
+      "cacheReadTokens": 4737711,
+      "cacheCreationTokens": 274162,
+      "costUsd": 4.5612148999999995,
+      "numTurns": 84,
+      "durationMs": 2144741
+    }
+  }
+}

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VERDANT | Reconnect With The Wild</title>
+<meta name="description" content="VERDANT. A Living World, Beyond the Screen. A journey through the quiet beauty of our living world.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: { 50:'#f1f4f2', 100:'#dfe7e2', 200:'#bfcfc4', 300:'#94ad9c', 400:'#65765A', 500:'#3f5b4a', 600:'#2c4a3a', 700:'#203B2D', 800:'#172c21', 900:'#101F18' },
+        forest: '#203B2D', deep: '#101F18', moss: '#65765A', ivory: '#F3F0E7',
+        earth: '#79634D', mist: '#D8DCD3', sun: '#D7C79C'
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif']
+      },
+      maxWidth: { content: '1600px' }
+    }
+  }
+}
+</script>
+<script src="assets/js/ui.js"></script>
+<style>
+  :root { --ease: cubic-bezier(.16,1,.3,1); --ui-accent: #D7C79C; }
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  ::selection { background: #D7C79C; color: #101F18; }
+  .font-display { letter-spacing: -0.012em; }
+
+  /* Ambient mist: abstract soft gradients, tiled so the drift loops without a seam */
+  .mist { position:absolute; left:0; bottom:0; width:200%; height:75%; pointer-events:none;
+    background-image:
+      radial-gradient(38% 42% at 18% 62%, rgba(216,220,211,.42), transparent 72%),
+      radial-gradient(30% 36% at 52% 74%, rgba(216,220,211,.32), transparent 70%),
+      radial-gradient(34% 40% at 84% 58%, rgba(216,220,211,.38), transparent 72%);
+    background-size: 50% 100%; background-repeat: repeat-x; }
+  .mist.thin { height: 55%; opacity: .7;
+    background-image:
+      radial-gradient(30% 30% at 30% 70%, rgba(243,240,231,.35), transparent 70%),
+      radial-gradient(36% 34% at 75% 80%, rgba(243,240,231,.28), transparent 70%); }
+  .rays { position:absolute; inset:-10% -10% 0 30%; pointer-events:none; mix-blend-mode:screen; opacity:.35;
+    background: repeating-conic-gradient(from 200deg at 85% -5%, rgba(215,199,156,.22) 0deg 2.5deg, transparent 2.5deg 7deg);
+    -webkit-mask-image: linear-gradient(200deg, #000 5%, transparent 65%); mask-image: linear-gradient(200deg, #000 5%, transparent 65%); }
+  .mote { position:absolute; border-radius:999px; background:#E9DDB8; box-shadow:0 0 8px 2px rgba(215,199,156,.45); opacity:0; pointer-events:none; }
+  .shimmer { background-image: linear-gradient(100deg, transparent 20%, rgba(243,240,231,.18) 35%, transparent 50%, rgba(243,240,231,.12) 65%, transparent 80%);
+    background-size: 200% 100%; mix-blend-mode: soft-light; }
+  .glow { background: radial-gradient(60% 55% at 70% 30%, rgba(215,199,156,.55), transparent 70%); mix-blend-mode: soft-light; }
+  .contour path { fill:none; stroke-width:1; vector-effect: non-scaling-stroke; }
+
+  .ulink { position:relative; }
+  .ulink::after { content:""; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:currentColor;
+    transform:scaleX(0); transform-origin:right; transition:transform .6s var(--ease); }
+  .ulink:hover::after, .ulink:focus-visible::after, .ulink.is-active::after { transform:scaleX(1); transform-origin:left; }
+
+  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+    .wclip { clip-path: inset(calc(max(0, .5 - var(--p, .5)) * 16%) calc(max(0, .5 - var(--p, .5)) * 20%)); }
+    .fclip { clip-path: inset(calc(max(0, .45 - var(--p, .5)) * 22%) calc(max(0, .45 - var(--p, .5)) * 34%)); }
+  }
+  .hotspot-ring { position:absolute; inset:-10px; border-radius:999px; border:1px solid rgba(215,199,156,.7); }
+
+  /* Default (reduced motion / no JS-animation) state = everything visible and still */
+  .i-veil { opacity:0; visibility:hidden; }
+  .i-line { display:block; overflow:hidden; padding-bottom:.08em; }
+  .i-line > span { display:block; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes veil { from { opacity:1; visibility:visible; } to { opacity:0; visibility:hidden; } }
+    @keyframes heroImg { from { transform:scale(1.16); filter:brightness(.3) saturate(.6); } to { transform:scale(1.04); filter:brightness(1) saturate(1); } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes lineUp { from { transform:translate3d(0,112%,0); } to { transform:none; } }
+    @keyframes riseIn { from { opacity:0; transform:translate3d(0,26px,0); } to { opacity:1; transform:none; } }
+    @keyframes drift { from { transform:translate3d(0,0,0); } to { transform:translate3d(-50%,0,0); } }
+    @keyframes driftBack { from { transform:translate3d(-50%,0,0); } to { transform:translate3d(0,0,0); } }
+    @keyframes breathe { 0%,100% { opacity:.22; } 50% { opacity:.46; } }
+    @keyframes moteFloat { 0% { transform:translate3d(0,0,0); opacity:0; } 18% { opacity:var(--o,.6); } 82% { opacity:var(--o,.6); } 100% { transform:translate3d(var(--dx,30px),-160px,0); opacity:0; } }
+    @keyframes cue { from { transform:translateY(-100%); } to { transform:translateY(260%); } }
+    @keyframes shimmer { from { background-position:0 0; } to { background-position:-200% 0; } }
+    @keyframes warm { 0%,100% { opacity:.55; } 50% { opacity:.9; } }
+    @keyframes pulseRing { 0% { transform:scale(.6); opacity:.9; } 100% { transform:scale(1.6); opacity:0; } }
+    @keyframes sway { 0%,100% { transform:translate3d(-1.2%,0,0); } 50% { transform:translate3d(1.2%,0,0); } }
+
+    .i-veil { opacity:1; visibility:visible; animation: veil 1.6s var(--ease) .1s both; }
+    .i-img { animation: heroImg 3.2s var(--ease) both; }
+    .i-fade { animation: fadeIn 1.4s var(--ease) var(--d,0s) both; }
+    .i-rise { animation: riseIn 1.2s var(--ease) var(--d,0s) both; }
+    .i-line > span { animation: lineUp 1.35s var(--ease) var(--d,0s) both; }
+    .mist { animation: drift 90s linear infinite; }
+    .mist.rev { animation: driftBack 130s linear infinite; }
+    .rays { animation: breathe 11s ease-in-out infinite; }
+    .mote { animation: moteFloat var(--t,14s) linear var(--delay,0s) infinite; }
+    .cue-bead { animation: cue 2.4s cubic-bezier(.6,0,.4,1) infinite; }
+    .shimmer { animation: shimmer 14s linear infinite; }
+    .warm { animation: warm 12s ease-in-out infinite; }
+    .hotspot-ring { animation: pulseRing 2.8s var(--ease) infinite; }
+    .sway { animation: sway 16s ease-in-out infinite; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mote, .rays { display:none; }
+    html { scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body class="bg-ivory font-sans text-deep">
+
+<div data-scroll-progress class="fixed inset-x-0 top-0 z-[60] h-[2px] bg-sun"></div>
+
+<!-- Header -->
+<header data-header="shrink" class="fixed inset-x-0 top-0 z-50 text-ivory [&.is-scrolled]:bg-deep/85 [&.is-scrolled]:backdrop-blur-md [&.is-scrolled]:shadow-[0_1px_0_rgba(243,240,231,.08)]">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-10 2xl:px-16">
+    <a href="#top" class="i-fade font-display text-2xl font-semibold tracking-[0.28em] transition-opacity duration-300 hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sun" style="--d:1.1s">VERDANT</a>
+    <nav data-scrollspy class="i-fade hidden items-center gap-9 text-[13px] font-medium uppercase tracking-[0.2em] lg:flex" style="--d:1.3s" aria-label="Primary">
+      <a href="#forest" class="ulink py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory [&.is-active]:text-ivory">Forest</a>
+      <a href="#water" class="ulink py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory [&.is-active]:text-ivory">Water</a>
+      <a href="#elements" class="ulink py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory [&.is-active]:text-ivory">Elements</a>
+      <a href="#journal" class="ulink py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory [&.is-active]:text-ivory">Journal</a>
+      <a href="#contact" class="ulink py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory [&.is-active]:text-ivory">Contact</a>
+      <button type="button" data-sound aria-pressed="false" class="flex items-center gap-2 rounded-full border border-ivory/25 px-4 py-2 tracking-[0.2em] text-ivory/85 transition duration-300 hover:border-sun hover:text-sun focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun active:scale-[.98]">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path data-sound-wave d="M15.5 8.5a5 5 0 0 1 0 7"/><path data-sound-wave d="M19 5a10 10 0 0 1 0 14"/></svg>
+        <span data-sound-label>Sound off</span>
+      </button>
+    </nav>
+    <button type="button" data-menu-toggle="#mnav" class="i-fade flex h-11 w-11 items-center justify-center rounded-full border border-ivory/25 transition duration-300 hover:border-sun lg:hidden" style="--d:1.3s" aria-label="Open menu">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-2xl bg-deep p-6 text-ivory shadow-2xl ring-1 ring-ivory/10 lg:hidden">
+  <nav class="flex flex-col font-display text-3xl" aria-label="Mobile">
+    <a href="#forest" class="border-b border-ivory/10 py-3">Forest</a>
+    <a href="#water" class="border-b border-ivory/10 py-3">Water</a>
+    <a href="#elements" class="border-b border-ivory/10 py-3">Elements</a>
+    <a href="#journal" class="border-b border-ivory/10 py-3">Journal</a>
+    <a href="#contact" class="py-3">Contact</a>
+  </nav>
+  <button type="button" data-sound aria-pressed="false" class="mt-4 flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-ivory/25 text-sm uppercase tracking-[0.2em]">
+    <span data-sound-label>Sound off</span>
+  </button>
+</div>
+
+<main>
+
+<!-- 01 THE AWAKENING -->
+<section id="top" data-scrub class="relative flex min-h-[100dvh] items-end overflow-hidden bg-deep text-ivory">
+  <div class="absolute -inset-[3%]" data-follow="0.018" aria-hidden="true">
+    <div class="absolute inset-x-0 -inset-y-[12%]" data-parallax="0.2">
+      <img src="assets/img/hero-forest-mist.webp" alt="" class="i-img absolute inset-0 h-full w-full object-cover" width="4896" height="3264" fetchpriority="high">
+    </div>
+  </div>
+  <div class="i-fade pointer-events-none absolute inset-0" style="--d:.9s" aria-hidden="true"><div class="rays"></div></div>
+  <div class="pointer-events-none absolute inset-0" data-follow="0.05" aria-hidden="true">
+    <div class="i-fade absolute inset-0" style="--d:.4s"><div class="mist"></div></div>
+  </div>
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-full" data-parallax="-0.12" aria-hidden="true">
+    <div class="i-fade absolute inset-0" style="--d:.7s"><div class="mist thin rev"></div></div>
+  </div>
+  <div class="pointer-events-none absolute inset-0" data-follow="0.08" data-particles="26" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-deep via-deep/30 to-deep/40" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-ivory/90" aria-hidden="true"></div>
+  <div class="i-veil pointer-events-none absolute inset-0 z-20 bg-[#0a140f]" aria-hidden="true"></div>
+
+  <div class="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pb-32 pt-28 sm:px-6 lg:px-10 lg:pb-40 2xl:px-16"
+       style="opacity: clamp(0, calc(1 - (var(--p, .5) - .5) * 2.4), 1); transform: translate3d(0, calc((var(--p, .5) - .5) * -200px), 0);">
+    <div class="grid items-end gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-8">
+        <h1 class="font-display text-[3.4rem] font-medium leading-[0.95] sm:text-7xl lg:text-[7.5rem] 2xl:text-[9.5rem]">
+          <span class="i-line"><span style="--d:1.15s">Reconnect With</span></span>
+          <span class="i-line pb-2"><span style="--d:1.3s">The <em class="font-normal italic text-sun">Wild.</em></span></span>
+        </h1>
+      </div>
+      <div class="lg:col-span-4 lg:pb-4">
+        <p class="i-rise max-w-sm text-lg leading-relaxed text-ivory/80" style="--d:1.7s">A journey through the quiet beauty of our living world.</p>
+        <a href="#quiet" data-magnetic="0.25" class="i-rise group mt-8 inline-flex min-h-[52px] items-center gap-3 rounded-full bg-ivory px-7 text-sm font-semibold uppercase tracking-[0.18em] text-deep transition-colors duration-300 hover:bg-sun focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sun active:scale-[.98]" style="--d:1.9s">
+          Begin the Journey
+          <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#quiet" class="i-fade absolute bottom-8 right-6 z-10 hidden flex-col items-center gap-3 text-xs uppercase tracking-[0.3em] text-deep/70 transition-colors hover:text-deep sm:flex lg:right-10" style="--d:2.3s" aria-label="Scroll to the next chapter">
+    <span>Scroll</span>
+    <span class="relative block h-12 w-px overflow-hidden bg-deep/20"><span class="cue-bead absolute inset-x-0 top-0 block h-4 bg-deep/70"></span></span>
+  </a>
+</section>
+
+<!-- 02 INTO THE QUIET -->
+<section id="quiet" class="relative overflow-hidden bg-ivory pb-32 pt-16 lg:pb-44 lg:pt-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-16 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+    <div class="relative lg:col-span-6 2xl:col-span-6">
+      <figure data-reveal="clip" class="relative aspect-[4/5] overflow-hidden bg-mist lg:aspect-[5/6]">
+        <div data-scrub class="absolute inset-0" style="transform: scale(calc(1.14 - var(--p, .5) * .16));">
+          <img src="assets/img/quiet-forest-path.webp" alt="A misty pine forest with a soft path between tall trunks" class="h-full w-full object-cover" loading="lazy" width="3840" height="5760">
+        </div>
+      </figure>
+      <div class="absolute -bottom-14 right-4 w-[40%] sm:right-8 lg:-bottom-20 lg:-right-14 lg:w-[38%]" data-parallax="-0.1">
+        <figure data-reveal="up" class="aspect-[3/4] overflow-hidden bg-mist shadow-[0_30px_60px_-20px_rgba(16,31,24,.45)]">
+          <img src="assets/img/quiet-dew-leaf.jpg" alt="Close up of dew drops resting on a green leaf" class="h-full w-full object-cover" loading="lazy" width="2760" height="4156">
+        </figure>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center pt-10 lg:col-span-5 lg:col-start-8 lg:pt-0">
+      <h2 data-split="words" class="font-display text-5xl font-medium leading-[1.02] text-forest sm:text-6xl lg:text-7xl 2xl:text-8xl">Somewhere Between <em class="italic text-moss">Silence</em> and Light.</h2>
+      <p data-reveal="up" class="mt-8 max-w-[34ch] text-xl leading-relaxed text-forest/90">Step away from the noise. Discover the quiet rhythms that make the natural world extraordinary.</p>
+      <div data-reveal-stagger="140" class="mt-12 grid max-w-xl gap-8 border-t border-forest/15 pt-10 sm:grid-cols-2">
+        <p class="leading-relaxed text-forest/75">Before sunrise, a forest is never truly silent. Water moves under the moss, needles settle, a wren tests the air.</p>
+        <p class="leading-relaxed text-forest/75">VERDANT begins here, in the pause before the day. Slow down long enough and the landscape starts to speak.</p>
+      </div>
+      <a href="#forest" class="group mt-12 inline-flex w-fit items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-forest">
+        <span class="ulink">Walk into the forest</span>
+        <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-deep" aria-hidden="true"></div>
+</section>
+
+<!-- 03 THE FOREST IS ALIVE -->
+<section id="forest" class="relative bg-deep text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-16 pt-20 sm:px-6 lg:px-10 lg:pb-20 lg:pt-28 2xl:px-16">
+    <p data-reveal="fade" class="text-xs font-semibold uppercase tracking-[0.32em] text-sun">The Forest Is Alive</p>
+    <h2 data-split="words" class="mt-6 max-w-5xl font-display text-5xl font-medium leading-[1] sm:text-7xl lg:text-8xl 2xl:text-9xl">Every Leaf Holds a <em class="italic text-sun">World.</em></h2>
+  </div>
+
+  <!-- Desktop pinned journey: canopy, undergrowth, forest floor -->
+  <div class="relative hidden h-[400vh] motion-safe:lg:block" data-scrub style="--q: calc((var(--p, 0) - .2) / .6);">
+    <div class="sticky top-0 h-[100dvh] overflow-hidden">
+      <div class="absolute inset-0" style="transform: scale(calc(1.22 - clamp(0, var(--q), 1) * .22)) translate3d(0, calc(clamp(0, var(--q), 1) * -4%), 0);">
+        <img src="assets/img/canopy-looking-up.jpg" alt="Looking up through tall conifers toward the sunlit canopy" class="h-full w-full object-cover" loading="lazy" width="6000" height="4000">
+      </div>
+      <div class="absolute inset-0" style="opacity: clamp(0, calc((var(--q) - .26) * 7), 1); transform: scale(calc(1.2 - clamp(0, var(--q), 1) * .16));">
+        <img src="assets/img/undergrowth-moss.jpg" alt="A moss covered log with young green seedlings growing along it" class="h-full w-full object-cover" loading="lazy" width="1024" height="768">
+      </div>
+      <div class="absolute inset-0" style="opacity: clamp(0, calc((var(--q) - .6) * 7), 1); transform: scale(calc(1.16 - clamp(0, var(--q) - .5, .5) * .3));">
+        <img src="assets/img/forest-floor-roots.webp" alt="Great buttress roots spreading over a forest floor of fallen leaves" class="h-full w-full object-cover" loading="lazy" width="5184" height="3456">
+      </div>
+      <div class="shimmer pointer-events-none absolute inset-0 opacity-60" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0" data-particles="16" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-deep/85 via-deep/35 to-transparent" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-deep/80 to-transparent" aria-hidden="true"></div>
+
+      <div class="relative mx-auto flex h-full w-full max-w-screen-2xl items-end px-10 pb-24 2xl:px-16">
+        <div class="relative h-72 w-full max-w-xl">
+          <article class="absolute inset-x-0 bottom-0" style="opacity: clamp(0, calc((.3 - var(--q)) * 9), 1); transform: translate3d(0, calc(clamp(0, var(--q), .3) * -120px), 0);">
+            <p class="font-display text-2xl italic text-sun">i.</p>
+            <h3 class="mt-2 font-display text-6xl font-medium 2xl:text-7xl">The Canopy</h3>
+            <p class="mt-5 max-w-md text-lg leading-relaxed text-ivory/80">Where light breaks through the crowns. Up here the forest trades in sun, wind and rain, and passes what it gathers down below.</p>
+          </article>
+          <article class="absolute inset-x-0 bottom-0" style="opacity: clamp(0, calc(min(var(--q) - .3, .64 - var(--q)) * 9), 1); transform: translate3d(0, calc((.47 - clamp(.3, var(--q), .64)) * 140px), 0);">
+            <p class="font-display text-2xl italic text-sun">ii.</p>
+            <h3 class="mt-2 font-display text-6xl font-medium 2xl:text-7xl">The Undergrowth</h3>
+            <p class="mt-5 max-w-md text-lg leading-relaxed text-ivory/80">A small world of moss, leaves and first shoots. Fallen wood becomes a nursery, and every seedling is a bet on the next hundred years.</p>
+          </article>
+          <article class="absolute inset-x-0 bottom-0" style="opacity: clamp(0, calc((var(--q) - .64) * 9), 1); transform: translate3d(0, calc((1 - clamp(.64, var(--q), .8)) * 120px - 24px), 0);">
+            <p class="font-display text-2xl italic text-sun">iii.</p>
+            <h3 class="mt-2 font-display text-6xl font-medium 2xl:text-7xl">The Forest Floor</h3>
+            <p class="mt-5 max-w-md text-lg leading-relaxed text-ivory/80">Soil, roots and the hidden network beneath them. What falls is taken apart slowly and returned to the trees as food.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="absolute right-10 top-1/2 flex -translate-y-1/2 items-stretch gap-5 2xl:right-16" aria-hidden="true">
+        <div class="relative w-px bg-ivory/20"><div class="absolute inset-0 origin-top bg-sun" style="transform: scaleY(clamp(0, var(--q), 1));"></div></div>
+        <ul class="flex flex-col justify-between gap-16 py-1 text-xs font-semibold uppercase tracking-[0.28em]">
+          <li style="opacity: calc(.35 + clamp(0, calc((.33 - var(--q)) * 9), 1) * .65);">Canopy</li>
+          <li style="opacity: calc(.35 + clamp(0, calc(min(var(--q) - .3, .66 - var(--q)) * 9), 1) * .65);">Undergrowth</li>
+          <li style="opacity: calc(.35 + clamp(0, calc((var(--q) - .64) * 9), 1) * .65);">Forest Floor</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile / tablet / reduced motion: stacked chapters -->
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-16 px-4 pb-24 sm:px-6 md:grid-cols-3 md:gap-8 lg:px-10 motion-safe:lg:hidden 2xl:px-16">
+    <article>
+      <figure data-reveal="clip" class="aspect-[4/5] overflow-hidden bg-forest"><img src="assets/img/canopy-looking-up.jpg" alt="Looking up through tall conifers toward the sunlit canopy" class="h-full w-full object-cover" loading="lazy" width="6000" height="4000"></figure>
+      <h3 data-reveal="up" class="mt-6 font-display text-4xl font-medium">The Canopy</h3>
+      <p data-reveal="up" class="mt-3 leading-relaxed text-ivory/75">Where light breaks through the crowns and is passed down to everything below.</p>
+    </article>
+    <article>
+      <figure data-reveal="clip" class="aspect-[4/5] overflow-hidden bg-forest"><img src="assets/img/undergrowth-moss.jpg" alt="A moss covered log with young green seedlings growing along it" class="h-full w-full object-cover" loading="lazy" width="1024" height="768"></figure>
+      <h3 data-reveal="up" class="mt-6 font-display text-4xl font-medium">The Undergrowth</h3>
+      <p data-reveal="up" class="mt-3 leading-relaxed text-ivory/75">A small world of moss, leaves and first shoots, growing from fallen wood.</p>
+    </article>
+    <article>
+      <figure data-reveal="clip" class="aspect-[4/5] overflow-hidden bg-forest"><img src="assets/img/forest-floor-roots.webp" alt="Great buttress roots spreading over a forest floor of fallen leaves" class="h-full w-full object-cover" loading="lazy" width="5184" height="3456"></figure>
+      <h3 data-reveal="up" class="mt-6 font-display text-4xl font-medium">The Forest Floor</h3>
+      <p data-reveal="up" class="mt-3 leading-relaxed text-ivory/75">Soil, roots and the hidden network that feeds the trees.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 04 WATER IN MOTION -->
+<section id="water" class="relative bg-forest pb-24 pt-24 text-ivory lg:pb-32 lg:pt-36">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-8 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+    <h2 data-reveal="up" class="font-display text-5xl font-medium leading-[1] sm:text-7xl lg:col-span-9 lg:text-8xl 2xl:text-9xl">Follow the Rhythm of <em class="italic text-sun">Water.</em></h2>
+  </div>
+  <div data-scrub class="relative mt-14 h-[70vh] lg:mt-20 lg:h-[92vh]">
+    <div class="wclip absolute inset-0 overflow-hidden">
+      <div class="absolute inset-x-0 -inset-y-[14%]" data-parallax="0.14">
+        <img src="assets/img/water-falls.webp" alt="A wide waterfall pouring over a moss green cliff into a rocky river" class="h-full w-full object-cover" loading="lazy" width="3500" height="2333">
+      </div>
+      <div class="shimmer pointer-events-none absolute inset-x-0 bottom-0 h-1/2 opacity-80" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-deep/90 via-deep/10 to-deep/30" aria-hidden="true"></div>
+    </div>
+    <div class="absolute inset-x-0 bottom-0">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-6 px-4 pb-10 sm:px-6 lg:grid-cols-12 lg:px-10 lg:pb-16 2xl:px-16">
+        <p data-reveal="up" class="font-display text-3xl leading-snug text-ivory sm:text-4xl lg:col-span-6 lg:text-5xl">From the first drop to the endless river, water shapes every living landscape.</p>
+        <p data-reveal="up" class="max-w-sm self-end leading-relaxed text-ivory/75 lg:col-span-3 lg:col-start-10">Rain gathers in moss, slips through roots, finds a stream. Follow it long enough and it carves valleys.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 A WORLD IN MOTION -->
+<section id="elements" class="relative overflow-hidden bg-mist py-24 lg:py-36">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 data-split="words" class="max-w-4xl font-display text-5xl font-medium leading-[1] text-forest sm:text-7xl lg:text-8xl">A World in <em class="italic text-earth">Motion.</em></h2>
+
+    <div class="mt-16 grid gap-16 lg:mt-24 lg:grid-cols-12 lg:gap-10">
+      <!-- Earth: large, tall -->
+      <article class="group lg:sticky lg:top-24 lg:col-span-6 lg:self-start">
+        <div data-parallax="0.05">
+          <figure data-reveal="clip" class="relative aspect-[4/5] overflow-hidden bg-forest/20">
+            <img src="assets/img/earth-mossy-rocks.jpg" alt="Moss covered granite boulders among beech trunks in a quiet wood" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]" loading="lazy" width="819" height="1024">
+          </figure>
+        </div>
+        <div class="mt-8 grid grid-cols-[auto,1fr] gap-x-6 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
+          <span data-reveal="fade" class="font-display text-2xl italic text-earth">01</span>
+          <div data-reveal="up">
+            <h3 class="font-display text-4xl font-medium text-forest lg:text-5xl">Earth</h3>
+            <p class="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-moss">The Ground Beneath Us</p>
+            <p class="mt-4 max-w-md leading-relaxed text-forest/80">Soil, stone, moss and the slow layers of terrain that hold every root in place.</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="flex flex-col gap-16 lg:col-span-5 lg:col-start-8 lg:pt-32">
+        <!-- Air: wide -->
+        <article class="group">
+          <div data-parallax="-0.06">
+            <figure data-reveal="clip" class="aspect-[5/4] overflow-hidden bg-forest/20">
+              <img src="assets/img/air-clouds-valley.webp" alt="Low clouds drifting over a deep green mountain valley" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]" loading="lazy" width="4000" height="3000">
+            </figure>
+          </div>
+          <div class="mt-7 grid grid-cols-[auto,1fr] gap-x-6 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
+            <span data-reveal="fade" class="font-display text-2xl italic text-earth">02</span>
+            <div data-reveal="up">
+              <h3 class="font-display text-4xl font-medium text-forest">Air</h3>
+              <p class="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-moss">The Invisible Movement</p>
+              <p class="mt-4 max-w-sm leading-relaxed text-forest/80">Wind, cloud and mist. The movement you only see in what it carries.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Light: narrower, pushed right -->
+        <article class="group w-full sm:w-3/4 sm:self-end">
+          <div data-parallax="0.1">
+            <figure data-reveal="clip" class="aspect-[3/4] overflow-hidden bg-forest/20">
+              <img src="assets/img/light-sunbeams.jpg" alt="Low evening sun casting long tree shadows across a path and grass" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]" loading="lazy" width="5248" height="7638">
+            </figure>
+          </div>
+          <div class="mt-7 grid grid-cols-[auto,1fr] gap-x-6 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-2">
+            <span data-reveal="fade" class="font-display text-2xl italic text-earth">03</span>
+            <div data-reveal="up">
+              <h3 class="font-display text-4xl font-medium text-forest">Light</h3>
+              <p class="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-moss">The Language of Nature</p>
+              <p class="mt-4 max-w-sm leading-relaxed text-forest/80">Sunlight, shade and the hour-by-hour shift that tells every living thing when to wake.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 THE LIVING EARTH -->
+<section id="connected" data-scrub class="relative overflow-hidden bg-deep py-24 text-ivory lg:py-36">
+  <div class="pointer-events-none absolute inset-x-0 top-0 h-[60vh] bg-gradient-to-b from-mist to-transparent motion-reduce:hidden" style="opacity: clamp(0, calc(1 - var(--p, 1) * 7), 1);" aria-hidden="true"></div>
+  <svg class="contour pointer-events-none absolute inset-0 h-full w-full text-sun/25" viewBox="0 0 1440 1400" preserveAspectRatio="none" aria-hidden="true"
+       style="stroke-dasharray: 1; stroke-dashoffset: clamp(0, calc(1.25 - var(--p, 1) * 2.4), 1);">
+    <path pathLength="1" stroke="currentColor" d="M-20 180 C 220 120, 420 260, 680 210 S 1120 90, 1460 170"/>
+    <path pathLength="1" stroke="currentColor" d="M-20 240 C 240 190, 430 320, 690 270 S 1110 160, 1460 240"/>
+    <path pathLength="1" stroke="currentColor" d="M-20 300 C 260 260, 450 380, 700 330 S 1100 230, 1460 310"/>
+    <path pathLength="1" stroke="currentColor" d="M1460 1080 C 1200 1020, 1000 1160, 760 1110 S 300 990, -20 1060"/>
+    <path pathLength="1" stroke="currentColor" d="M1460 1140 C 1210 1090, 1010 1220, 770 1170 S 320 1060, -20 1130"/>
+    <path pathLength="1" stroke="currentColor" d="M1460 1200 C 1220 1160, 1020 1280, 780 1230 S 340 1130, -20 1200"/>
+  </svg>
+
+  <div class="relative mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 data-split="words" class="font-display text-6xl font-medium leading-[0.98] sm:text-7xl lg:text-9xl 2xl:text-[10rem]">Everything Is <em class="italic text-sun">Connected.</em></h2>
+    <p data-reveal="up" class="mt-8 max-w-[52ch] text-lg leading-relaxed text-ivory/75 lg:text-xl">Forests make rain possible far inland. Rivers carry the forest to the sea. Soil, animals and people sit inside the same loop, and nothing in it stands alone.</p>
+  </div>
+
+  <div class="relative mt-16 lg:mt-24">
+    <div data-scrub class="relative h-[62vh] overflow-hidden lg:h-[86vh]">
+      <div class="absolute inset-0" style="transform: scale(calc(1.02 + var(--p, .5) * .16));">
+        <img src="assets/img/connected-aerial-river.jpg" alt="Aerial view of a river winding through a dense green forest" class="h-full w-full object-cover" loading="lazy" width="5472" height="3078">
+      </div>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-deep via-transparent to-deep" aria-hidden="true"></div>
+      <div data-reveal-stagger="260" class="absolute inset-0">
+        <button type="button" class="group absolute left-[16%] top-[30%] flex items-center gap-3 focus-visible:outline-none" aria-describedby="hs-1">
+          <span class="relative block h-3 w-3 rounded-full bg-sun"><span class="hotspot-ring"></span></span>
+          <span id="hs-1" class="whitespace-nowrap rounded-full bg-deep/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur transition duration-500 lg:translate-x-2 lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100 lg:group-focus-visible:opacity-100">Old forest</span>
+        </button>
+        <button type="button" class="group absolute left-[46%] top-[52%] flex items-center gap-3 focus-visible:outline-none" aria-describedby="hs-2">
+          <span class="relative block h-3 w-3 rounded-full bg-sun"><span class="hotspot-ring"></span></span>
+          <span id="hs-2" class="whitespace-nowrap rounded-full bg-deep/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur transition duration-500 lg:translate-x-2 lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100 lg:group-focus-visible:opacity-100">River</span>
+        </button>
+        <button type="button" class="group absolute right-[10%] top-[24%] flex flex-row-reverse items-center gap-3 focus-visible:outline-none" aria-describedby="hs-3">
+          <span class="relative block h-3 w-3 rounded-full bg-sun"><span class="hotspot-ring"></span></span>
+          <span id="hs-3" class="whitespace-nowrap rounded-full bg-deep/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur transition duration-500 lg:translate-x-2 lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100 lg:group-focus-visible:opacity-100">Floodplain soil</span>
+        </button>
+        <button type="button" class="group absolute right-[14%] top-[68%] hidden flex-row-reverse items-center gap-3 focus-visible:outline-none sm:flex" aria-describedby="hs-4">
+          <span class="relative block h-3 w-3 rounded-full bg-sun"><span class="hotspot-ring"></span></span>
+          <span id="hs-4" class="whitespace-nowrap rounded-full bg-deep/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur transition duration-500 lg:translate-x-2 lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100 lg:group-focus-visible:opacity-100">Wildlife corridor</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative mx-auto mt-16 w-full max-w-screen-2xl px-4 sm:px-6 lg:mt-24 lg:px-10 2xl:px-16">
+    <div data-reveal-stagger="120" class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <div class="border-t border-ivory/15 pt-6"><h3 class="font-display text-3xl">Forest to water</h3><p class="mt-3 leading-relaxed text-ivory/70">Roots hold the banks, so rivers run clearer and slower after rain.</p></div>
+      <div class="border-t border-ivory/15 pt-6"><h3 class="font-display text-3xl">Water to soil</h3><p class="mt-3 leading-relaxed text-ivory/70">Floods spread silt across the lowlands and leave the ground richer.</p></div>
+      <div class="border-t border-ivory/15 pt-6"><h3 class="font-display text-3xl">Soil to animals</h3><p class="mt-3 leading-relaxed text-ivory/70">Fungi, insects and seed eaters turn the floor into food for the whole web.</p></div>
+      <div class="border-t border-ivory/15 pt-6"><h3 class="font-display text-3xl">Animals to people</h3><p class="mt-3 leading-relaxed text-ivory/70">Pollinators, clean water and quiet places: we live downstream of all of it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 THE WILD JOURNAL -->
+<section id="journal" class="relative bg-ivory py-24 lg:py-36">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+      <h2 data-split="words" class="font-display text-5xl font-medium leading-[1] text-forest sm:text-7xl lg:col-span-8 lg:text-8xl">Collected Moments of the <em class="italic text-moss">Wild.</em></h2>
+      <p data-reveal="up" class="max-w-sm leading-relaxed text-forest/75 lg:col-span-3 lg:col-start-10">Six frames from the journey. Open any of them to see it full size.</p>
+    </div>
+
+    <div class="mt-14 columns-1 gap-6 sm:columns-2 lg:mt-20 lg:columns-3 lg:gap-8 [&>*]:mb-6 lg:[&>*]:mb-8">
+      <a href="assets/img/gallery-morning-mist.jpg" data-lightbox="journal" data-caption="Into the Morning Mist" class="group relative block break-inside-avoid overflow-hidden bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest">
+        <figure data-reveal="clip" class="aspect-[4/3] overflow-hidden"><img src="assets/img/gallery-morning-mist.jpg" alt="Fog lifting off a calm lake at dawn with forest behind" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]" loading="lazy" width="4032" height="3024"></figure>
+        <figcaption class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep/85 to-transparent p-6 pt-16 text-ivory transition duration-700 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100">
+          <span class="block font-display text-2xl">Into the Morning Mist</span><span class="mt-1 block text-sm text-ivory/75">The lake breathes out before sunrise.</span>
+        </figcaption>
+      </a>
+      <a href="assets/img/gallery-beneath-canopy.jpg" data-lightbox="journal" data-caption="Beneath the Canopy" class="group relative block break-inside-avoid overflow-hidden bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest">
+        <figure data-reveal="clip" class="aspect-[3/4] overflow-hidden"><img src="assets/img/gallery-beneath-canopy.jpg" alt="Dark dense forest with ferns under a closed canopy" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]" loading="lazy" width="2730" height="3895"></figure>
+        <figcaption class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep/85 to-transparent p-6 pt-16 text-ivory transition duration-700 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100">
+          <span class="block font-display text-2xl">Beneath the Canopy</span><span class="mt-1 block text-sm text-ivory/75">Ferns in the green half-light.</span>
+        </figcaption>
+      </a>
+      <a href="assets/img/canopy-stream.jpg" data-lightbox="journal" data-caption="Where Water Meets Earth" class="group relative block break-inside-avoid overflow-hidden bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest">
+        <figure data-reveal="clip" class="aspect-[4/3] overflow-hidden"><img src="assets/img/canopy-stream.jpg" alt="A clear forest stream with moss covered fallen trees" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]" loading="lazy" width="2048" height="1536"></figure>
+        <figcaption class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep/85 to-transparent p-6 pt-16 text-ivory transition duration-700 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100">
+          <span class="block font-display text-2xl">Where Water Meets Earth</span><span class="mt-1 block text-sm text-ivory/75">Fallen trunks slowing a clear stream.</span>
+        </figcaption>
+      </a>
+      <a href="assets/img/gallery-moss-dew.webp" data-lightbox="journal" data-caption="The Quiet Life of Moss" class="group relative block break-inside-avoid overflow-hidden bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest">
+        <figure data-reveal="clip" class="aspect-[4/5] overflow-hidden"><img src="assets/img/gallery-moss-dew.webp" alt="Macro of moss holding tiny drops of water" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]" loading="lazy" width="4080" height="2720"></figure>
+        <figcaption class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep/85 to-transparent p-6 pt-16 text-ivory transition duration-700 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100">
+          <span class="block font-display text-2xl">The Quiet Life of Moss</span><span class="mt-1 block text-sm text-ivory/75">A forest at the scale of a fingertip.</span>
+        </figcaption>
+      </a>
+      <a href="assets/img/gallery-leaf-light.jpg" data-lightbox="journal" data-caption="Light Through the Leaves" class="group relative block break-inside-avoid overflow-hidden bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest">
+        <figure data-reveal="clip" class="aspect-[3/4] overflow-hidden"><img src="assets/img/gallery-leaf-light.jpg" alt="Backlit green leaf showing its veins in the sun" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]" loading="lazy" width="4016" height="6016"></figure>
+        <figcaption class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep/85 to-transparent p-6 pt-16 text-ivory transition duration-700 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100">
+          <span class="block font-display text-2xl">Light Through the Leaves</span><span class="mt-1 block text-sm text-ivory/75">Every vein lit from behind.</span>
+        </figcaption>
+      </a>
+      <a href="assets/img/gallery-landscapes.jpg" data-lightbox="journal" data-caption="Landscapes Without End" class="group relative block break-inside-avoid overflow-hidden bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest">
+        <figure data-reveal="clip" class="aspect-[4/3] overflow-hidden"><img src="assets/img/gallery-landscapes.jpg" alt="Layered forested hills fading into morning fog" class="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]" loading="lazy" width="3933" height="2949"></figure>
+        <figcaption class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep/85 to-transparent p-6 pt-16 text-ivory transition duration-700 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100">
+          <span class="block font-display text-2xl">Landscapes Without End</span><span class="mt-1 block text-sm text-ivory/75">Ridge after ridge into the haze.</span>
+        </figcaption>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 08 THE FINAL LIGHT -->
+<section id="final" data-scrub class="relative min-h-[100dvh] overflow-hidden bg-deep text-ivory">
+  <div class="fclip absolute inset-0">
+    <div class="absolute inset-x-0 -inset-y-[12%]" data-parallax="0.12">
+      <img src="assets/img/final-light-valley.jpg" alt="Forested mountain ridges glowing in soft late sunlight" class="h-full w-full object-cover" loading="lazy" width="4496" height="3000">
+    </div>
+    <div class="warm glow pointer-events-none absolute inset-0" aria-hidden="true"></div>
+    <div class="sway pointer-events-none absolute inset-0" aria-hidden="true"><div class="mist thin"></div></div>
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-deep/30 via-deep/20 to-deep" aria-hidden="true"></div>
+  </div>
+  <div class="relative mx-auto flex min-h-[100dvh] w-full max-w-screen-2xl flex-col items-center justify-center px-4 py-32 text-center sm:px-6 lg:px-10 2xl:px-16">
+    <h2 data-split="words" class="max-w-6xl font-display text-5xl font-medium leading-[1.02] sm:text-7xl lg:text-8xl 2xl:text-9xl">The World Is Still Full of <em class="italic text-sun">Wonder.</em></h2>
+    <p data-reveal="up" class="mt-8 max-w-xl text-lg leading-relaxed text-ivory/85 lg:text-xl">Take a breath. Look closer. Find your way back to nature.</p>
+    <button type="button" data-modal-open="stay" data-magnetic="0.25" data-reveal="up" class="mt-10 inline-flex min-h-[52px] items-center gap-3 rounded-full bg-sun px-8 text-sm font-semibold uppercase tracking-[0.18em] text-deep transition-colors duration-300 hover:bg-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ivory active:scale-[.98]">Stay Connected</button>
+  </div>
+</section>
+
+</main>
+
+<!-- 09 CONTACT & FOOTER -->
+<footer id="contact" class="relative overflow-hidden bg-deep pb-10 pt-20 text-ivory lg:pt-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-16 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-6">
+      <h2 data-reveal="up" class="font-display text-5xl font-medium leading-[1] sm:text-6xl lg:text-7xl">Let Nature Stay <em class="italic text-sun">Close.</em></h2>
+      <p data-reveal="up" class="mt-6 max-w-[46ch] leading-relaxed text-ivory/70">VERDANT is a visual journal about wild places: forests, water, stone and light. One letter a month, a handful of photographs, nothing to buy.</p>
+      <button type="button" data-modal-open="stay" data-magnetic="0.2" data-reveal="up" class="mt-8 inline-flex min-h-[48px] items-center rounded-full border border-sun/60 px-7 text-sm font-semibold uppercase tracking-[0.18em] text-sun transition duration-300 hover:-translate-y-0.5 hover:bg-sun hover:text-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sun active:scale-[.98]">Stay Connected</button>
+    </div>
+
+    <div data-reveal-stagger="110" class="grid gap-10 sm:grid-cols-3 lg:col-span-6">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-ivory/45">Write to us</p>
+        <a href="mailto:hello@verdant.earth" class="ulink mt-4 inline-block text-lg">hello@verdant.earth</a>
+        <button type="button" data-copy="hello@verdant.earth" class="mt-3 flex min-h-[44px] items-center gap-2 text-sm text-ivory/60 transition-colors hover:text-sun">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          Copy email
+        </button>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-ivory/45">Follow</p>
+        <ul class="mt-4 space-y-3">
+          <li><a href="https://www.instagram.com/verdant.wild" target="_blank" rel="noopener" class="ulink">Instagram</a></li>
+          <li><a href="https://vimeo.com/verdantwild" target="_blank" rel="noopener" class="ulink">Vimeo</a></li>
+          <li><a href="https://www.pinterest.com/verdantwild" target="_blank" rel="noopener" class="ulink">Pinterest</a></li>
+          <li><a href="https://www.youtube.com/@verdantwild" target="_blank" rel="noopener" class="ulink">YouTube</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-ivory/45">Explore</p>
+        <ul class="mt-4 space-y-3">
+          <li><a href="#quiet" class="ulink">Into the Quiet</a></li>
+          <li><a href="#forest" class="ulink">The Forest</a></li>
+          <li><a href="#water" class="ulink">Water</a></li>
+          <li><a href="#journal" class="ulink">The Wild Journal</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto mt-20 w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <p class="select-none font-display text-[22vw] font-medium leading-[0.8] tracking-[0.04em] text-forest lg:text-[17vw]" aria-hidden="true" data-reveal="up">VERDANT</p>
+    <div class="mt-8 flex flex-col gap-4 border-t border-ivory/10 pt-6 text-sm text-ivory/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 VERDANT. A fictional brand for a nature storytelling concept.</p>
+      <a href="#top" class="ulink w-fit">Back to the beginning</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-forest text-ivory shadow-lg ring-1 ring-ivory/15 transition duration-300 hover:-translate-y-1 hover:bg-moss" aria-label="Back to top">
+  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<!-- Stay Connected modal -->
+<dialog id="stay" class="w-[min(92vw,560px)] rounded-2xl bg-ivory p-0 text-deep shadow-2xl backdrop:bg-deep/70">
+  <form data-form="stay-connected" data-success="You are on the list. The first letter from the forest arrives next Sunday." class="relative grid gap-5 p-6 sm:p-10" novalidate>
+    <button type="button" data-modal-close class="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full text-forest transition hover:bg-mist" aria-label="Close">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div>
+      <h3 class="font-display text-4xl font-medium text-forest">Stay Connected</h3>
+      <p class="mt-2 leading-relaxed text-forest/75">One quiet letter a month: new photographs, a place worth visiting, a few minutes of calm.</p>
+    </div>
+    <label class="grid gap-2 text-sm font-medium text-forest">First name
+      <input type="text" name="name" required minlength="2" autocomplete="given-name" class="min-h-[48px] rounded-lg border border-forest/25 bg-white/70 px-4 text-base text-deep placeholder:text-forest/50 focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/25" placeholder="Linh">
+    </label>
+    <label class="grid gap-2 text-sm font-medium text-forest">Email
+      <input type="email" name="email" required autocomplete="email" class="min-h-[48px] rounded-lg border border-forest/25 bg-white/70 px-4 text-base text-deep placeholder:text-forest/50 focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/25" placeholder="you@example.com">
+    </label>
+    <label class="grid gap-2 text-sm font-medium text-forest">What draws you outdoors?
+      <select name="interest" class="min-h-[48px] rounded-lg border border-forest/25 bg-white/70 px-4 text-base text-deep focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/25">
+        <option>Forests</option><option>Rivers and lakes</option><option>Mountains</option><option>All of it</option>
+      </select>
+    </label>
+    <button type="submit" class="mt-2 min-h-[52px] rounded-full bg-forest px-8 text-sm font-semibold uppercase tracking-[0.18em] text-ivory transition-colors duration-300 hover:bg-deep active:scale-[.98]">Join the Journal</button>
+    <p class="text-xs text-forest/65">No spam. Unsubscribe with one click.</p>
+  </form>
+</dialog>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

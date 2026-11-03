@@ -1,0 +1,89 @@
+{
+  "brand": "THE SKIN ARCHIVE",
+  "language": "en",
+  "preset": "film",
+  "motionLevel": 2,
+  "visualIdea": "Mỗi trang là một tập hồ sơ lưu trữ: bìa kem cũ có tab giấy, nhãn đánh máy số hiệu (chỉ để thiết kế), đường kẻ đôi mảnh, ảnh kẹp khung trắng xoay nhẹ và lớp hạt phim phủ toàn trang",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Hiểu làn da, ghi lại và chăm sóc có hệ thống",
+    "description": "Giao diện thẩm mỹ viện chăm sóc da phong cách hồ sơ lưu trữ y khoa cổ điển, song ngữ Anh – Việt."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Trang bìa hồ sơ: giới thiệu triết lý thương hiệu, các nhóm dịch vụ và quy trình tìm hiểu nhu cầu da, dẫn sang Dịch vụ và đặt lịch tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ai", "note": "Như trang bìa hồ sơ lưu trữ (theo chú thích BA)" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Triết lý thương hiệu dạng thư, link sang pages/about.html" },
+        { "id": "method-band", "catalog": "editorial", "variant": "marquee-band", "source": "ai", "note": "Dải chữ Observe / Record / Care / Review" },
+        { "id": "service-index", "catalog": "services", "variant": "features-numbered", "source": "ai", "note": "6 nhóm dịch vụ dạng mục lục hồ sơ, link sang pages/services.html#<nhóm>" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ai", "note": "Quy trình tìm hiểu nhu cầu da 4 bước trên khối màu xanh xám" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-fullbleed", "source": "ai", "note": "Nút Book a Consultation mở form" }
+      ],
+      "images": [
+        { "slot": "hero-main", "query": "facial skincare treatment clinic", "file": "assets/img/home-hero-care.jpg", "status": "ok" },
+        { "slot": "hero-secondary", "query": "facial skincare treatment clinic", "file": "assets/img/home-hero-skin.jpg", "status": "ok" },
+        { "slot": "philosophy", "query": "vintage apothecary bottles", "file": "assets/img/home-story-apothecary.webp", "status": "ok" },
+        { "slot": "process", "query": "facial skincare treatment clinic", "file": "assets/img/home-process-mirror.jpg", "status": "ok" },
+        { "slot": "cta", "query": "skincare products shelf", "file": "assets/img/home-cta-care.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Services & Price Guide",
+      "purpose": "Danh mục hồ sơ dịch vụ: mỗi mục có mã số minh họa, mô tả, mục đích, thông tin cần biết, giá tham khảo mẫu",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "catalogue", "catalog": "services", "variant": "list-cards", "source": "ai", "note": "Mục lục dính bên trái + 6 tập hồ sơ nhóm dịch vụ, mỗi mục có accordion 'Good to know'" },
+        { "id": "price-notes", "catalog": "pricing", "variant": "pricing-notes", "source": "ai", "note": "Ghi chú về giá tham khảo và chuẩn bị trước buổi hẹn (accordion)" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "card catalog drawers library", "file": "assets/img/svc-hero-catalog.webp", "status": "ok" },
+        { "slot": "group-reading", "query": "facial skincare treatment clinic", "file": "assets/img/svc-analysis.jpg", "status": "ok" },
+        { "slot": "group-barrier", "query": "facial skincare treatment clinic", "file": "assets/img/svc-cleansing.jpg", "status": "ok" },
+        { "slot": "group-hydration", "query": "cosmetic cream jars", "file": "assets/img/svc-hydration.jpg", "status": "ok" },
+        { "slot": "group-blemish", "query": "skincare products shelf", "file": "assets/img/svc-acne.jpg", "status": "ok" },
+        { "slot": "group-renewal", "query": "facial skincare treatment clinic", "file": "assets/img/svc-renewal.jpg", "status": "ok" },
+        { "slot": "group-body", "query": "cosmetic cream jars", "file": "assets/img/about-consult-skin.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About Us",
+      "purpose": "Câu chuyện thương hiệu, đội ngũ, không gian và quy trình tư vấn trình bày như một bộ tư liệu có cấu trúc",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ai", "note": "Khối chữ cái đầu tên, không dùng ảnh người giả, không ghi chứng chỉ" },
+        { "id": "space", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ai", "note": "Lightbox + kéo ngang" },
+        { "id": "consultation", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Quy trình buổi tư vấn" },
+        { "id": "faq", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "vintage microscope laboratory", "file": "assets/img/about-hero-lab.webp", "status": "ok" },
+        { "slot": "story", "query": "handwritten notebook journal desk", "file": "assets/img/about-story-notes.jpg", "status": "ok" },
+        { "slot": "space-1", "query": "treatment room spa bed", "file": "assets/img/about-space-room.jpg", "status": "ok" },
+        { "slot": "space-2", "query": "vintage armchair interior lamp", "file": "assets/img/about-space-lounge.jpg", "status": "ok" },
+        { "slot": "space-3", "query": "skincare products shelf", "file": "assets/img/about-space-shelf.webp", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng 3 trang (Home, Services & Price Guide, About Us) theo chú thích của BA; không thêm trang chi tiết dịch vụ, mỗi nhóm dịch vụ có neo #id trên trang Services",
+    "BA yêu cầu công tắc ngôn ngữ Việt – English với nội dung song ngữ đầy đủ, mâu thuẫn với mục 2 concept ('không tạo bộ chuyển ngôn ngữ') → theo chú thích BA: tiếng Anh là mặc định (<html lang=\"en\">, chữ trong HTML là tiếng Anh), bản tiếng Việt lưu trong thuộc tính data-vi và đổi bằng nút EN / VI (site.js, nhớ lựa chọn bằng localStorage)",
+    "Khi chuyển sang tiếng Việt, font tiêu đề đổi sang Lora và font nhãn sang IBM Plex Mono (Young Serif, Courier Prime không đủ dấu tiếng Việt)",
+    "Bảng màu theo art direction của BA (kem cũ, burgundy, nâu mực, xanh xám) thay cho bảng màu preset film; vẫn khai báo tên màu preset trong tw-config",
+    "Mã số SA-xx trên dịch vụ chỉ là nhãn thiết kế; footer mọi trang ghi rõ không phải hồ sơ y tế. Không dùng ảnh trước–sau, hồ sơ bệnh nhân, chứng nhận hay số liệu điều trị",
+    "Đội ngũ hiển thị bằng chữ cái đầu tên (không có ảnh thật của nhân sự), không ghi bằng cấp / chứng chỉ"
+  ],
+  "limitations": [
+    "Form 'Book a Consultation' là bản demo, chưa có backend, chưa gửi dữ liệu",
+    "Giá trên trang Services là giá mẫu để minh họa thiết kế, cần THE SKIN ARCHIVE cung cấp giá thật",
+    "Tên nhân sự, địa chỉ, số điện thoại, giờ mở cửa là nội dung mẫu cần khách xác nhận",
+    "Ảnh là ảnh stock minh họa (Openverse), cần thay bằng ảnh thật của cơ sở"
+  ]
+}

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services & Pricing — MOSS & MIST NAIL STUDIO</title>
+<meta name="description" content="Natural manicures, pedicures, gel polish, nail extensions and botanical nail art at MOSS & MIST NAIL STUDIO, with durations, reference prices and aftercare tips.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;700&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-mist font-sans text-ink">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-ink/10 bg-mist/90 backdrop-blur-md transition-shadow duration-300 [&.is-scrolled]:shadow-[0_8px_30px_-18px_rgba(31,39,29,.35)]">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="group flex min-h-[44px] flex-col justify-center leading-none" aria-label="MOSS & MIST NAIL STUDIO, home">
+      <span class="font-display text-[22px] font-semibold tracking-tight text-moss">MOSS &amp; MIST</span>
+      <span class="mt-1 text-[12px] font-bold tracking-[0.3em] text-bark">NAIL STUDIO</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 text-[15px] font-medium text-ink/75 transition-colors duration-300 hover:text-moss after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-moss after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moss aria-[current=page]:after:scale-x-100">Home</a>
+      <a aria-current="page" href="../pages/services.html" class="relative py-2 text-[15px] font-medium text-ink/75 transition-colors duration-300 hover:text-moss after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-moss after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moss aria-[current=page]:after:scale-x-100">Services &amp; Pricing</a>
+      <a href="../pages/collection.html" class="relative py-2 text-[15px] font-medium text-ink/75 transition-colors duration-300 hover:text-moss after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-moss after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moss aria-[current=page]:after:scale-x-100">Collection</a>
+      <a href="../pages/studio.html" class="relative py-2 text-[15px] font-medium text-ink/75 transition-colors duration-300 hover:text-moss after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-moss after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moss aria-[current=page]:after:scale-x-100">Our Studio</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button type="button" data-modal-open="booking" class="hidden min-h-[44px] items-center rounded-full bg-moss px-6 text-[15px] font-semibold text-mist transition duration-300 hover:bg-ink active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fern sm:inline-flex">Book a visit</button>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Open menu" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-ink transition hover:border-moss hover:text-moss lg:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-mist p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col" aria-label="Mobile">
+      <a href="../index.html" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-fern">Home</a>
+      <a aria-current="page" href="../pages/services.html" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-fern">Services &amp; Pricing</a>
+      <a href="../pages/collection.html" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-fern">Collection</a>
+      <a href="../pages/studio.html" class="flex min-h-[52px] items-center font-display text-2xl text-ink aria-[current=page]:text-fern">Our Studio</a>
+      <button type="button" data-modal-open="booking" class="mt-5 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-moss text-base font-semibold text-mist">Book a visit</button>
+    </nav>
+  </div>
+
+  <dialog id="booking" class="w-[min(94vw,560px)] rounded-[2rem] bg-mist p-0 text-ink shadow-2xl">
+    <div class="p-6 sm:p-9">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="font-display text-3xl leading-tight text-moss">Book a visit</p>
+          <p class="mt-2 text-[15px] text-ink/70">Tell us what you would like and when. We keep each appointment unhurried.</p>
+        </div>
+        <button type="button" data-modal-close aria-label="Close" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/15 text-xl transition hover:border-moss hover:text-moss">&times;</button>
+      </div>
+      <form data-form="booking" class="mt-6 grid gap-4 sm:grid-cols-2" novalidate>
+        <label class="grid gap-2 text-sm font-semibold text-ink">Your name
+          <input type="text" name="name" required minlength="2" autocomplete="name" class="min-h-[48px] rounded-xl border border-ink/20 bg-white px-4 text-base font-normal text-ink placeholder:text-ink/50 focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40" placeholder="Minh Chau">
+        </label>
+        <label class="grid gap-2 text-sm font-semibold text-ink">Phone
+          <input type="tel" name="phone" required autocomplete="tel" class="min-h-[48px] rounded-xl border border-ink/20 bg-white px-4 text-base font-normal text-ink placeholder:text-ink/50 focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40" placeholder="090 412 3876">
+        </label>
+        <label class="grid gap-2 text-sm font-semibold text-ink">Service
+          <select name="service" required class="min-h-[48px] rounded-xl border border-ink/20 bg-white px-4 text-base font-normal text-ink focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40">
+            <option value="">Choose a service</option>
+            <option>Natural Manicure</option>
+            <option>Pedicure</option>
+            <option>Gel Polish</option>
+            <option>Nail Extensions</option>
+            <option>Botanical Nail Art</option>
+          </select>
+        </label>
+        <label class="grid gap-2 text-sm font-semibold text-ink">Preferred date
+          <input type="date" name="date" required class="min-h-[48px] rounded-xl border border-ink/20 bg-white px-4 text-base font-normal text-ink focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40">
+        </label>
+        <label class="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">Notes (optional)
+          <textarea name="note" rows="3" class="rounded-xl border border-ink/20 bg-white px-4 py-3 text-base font-normal text-ink placeholder:text-ink/50 focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40" placeholder="A design you saved, nail length, anything we should know"></textarea>
+        </label>
+        <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
+          <button type="submit" class="inline-flex min-h-[48px] items-center justify-center rounded-full bg-moss px-8 text-[15px] font-semibold text-mist transition duration-300 hover:bg-ink active:scale-[.98]">Request this time</button>
+          <p class="text-[13px] leading-snug text-ink/65">Demo form only: no appointment is sent or confirmed.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- PAGE HERO -->
+  <section id="intro" data-section="page-hero" class="relative overflow-hidden bg-mist" data-particles="dust" data-particles-color="#C98A3D" data-particles-density="0.4">
+    <div class="mist-wash pointer-events-none absolute inset-0" aria-hidden="true"></div>
+    <div class="relative z-10 grid lg:min-h-[58vh] lg:grid-cols-12">
+      <div class="flex flex-col justify-center px-4 py-16 sm:px-6 lg:col-span-6 lg:py-20 lg:pl-10 lg:pr-12 2xl:pl-[max(4rem,calc((100vw-1536px)/2+4rem))]">
+        <p class="text-[13px] font-bold uppercase tracking-[0.22em] text-fern">Services &amp; Pricing</p>
+        <h1 data-split="words" class="mt-4 font-display text-[clamp(2.75rem,5.5vw,5.25rem)] leading-[1.05] tracking-tight">Thoughtful Nail <em class="italic text-fern">Care</em></h1>
+        <p data-reveal="up" class="mt-6 max-w-[34rem] text-lg leading-relaxed text-ink/75">Five ways to look after your hands and feet, each done at an easy pace with clean tools and gentle formulas.</p>
+      </div>
+      <div class="relative px-4 pb-10 sm:px-6 lg:col-span-6 lg:p-0">
+        <div class="relative h-[340px] overflow-hidden rounded-[2rem] bg-sand sm:h-[420px] lg:absolute lg:inset-y-8 lg:left-0 lg:right-0 lg:h-auto lg:rounded-r-none lg:rounded-tl-[12rem]">
+          <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[15%]">
+            <img src="https://images.unsplash.com/photo-1753285310651-6974a839c992?w=1800&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" alt="A nail artist applying polish to a fingernail with a fine brush" class="photo h-full w-full object-cover" width="1800" height="1200">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE MENU (TABS) -->
+  <section id="menu" data-section="features-tabs" class="bg-sand">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] sm:text-5xl 2xl:text-6xl">Our services</h2>
+      <div data-tabs class="mt-10">
+        <div class="no-bar relative flex gap-2 overflow-x-auto border-b border-ink/15 pb-px" role="tablist">
+          <button type="button" data-tab="natural" class="min-h-[48px] shrink-0 rounded-t-xl px-4 text-[15px] font-semibold text-ink/60 transition hover:text-moss [&.is-active]:text-moss">Natural Manicure</button>
+          <button type="button" data-tab="pedicure" class="min-h-[48px] shrink-0 rounded-t-xl px-4 text-[15px] font-semibold text-ink/60 transition hover:text-moss [&.is-active]:text-moss">Pedicure</button>
+          <button type="button" data-tab="gel" class="min-h-[48px] shrink-0 rounded-t-xl px-4 text-[15px] font-semibold text-ink/60 transition hover:text-moss [&.is-active]:text-moss">Gel Polish</button>
+          <button type="button" data-tab="extensions" class="min-h-[48px] shrink-0 rounded-t-xl px-4 text-[15px] font-semibold text-ink/60 transition hover:text-moss [&.is-active]:text-moss">Nail Extensions</button>
+          <button type="button" data-tab="botanical" class="min-h-[48px] shrink-0 rounded-t-xl px-4 text-[15px] font-semibold text-ink/60 transition hover:text-moss [&.is-active]:text-moss">Botanical Nail Art</button>
+          <span data-tab-indicator class="bottom-0 h-0.5 bg-moss"></span>
+        </div>
+
+        <div data-tab-panel="natural" class="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="aspect-[4/5] overflow-hidden rounded-t-full bg-mist lg:col-span-5">
+            <img src="https://images.unsplash.com/photo-1633955726992-2b7c0d2d2a69?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Hands with clean, softly polished natural nails" class="photo h-full w-full object-cover" width="1200" height="1500">
+          </div>
+          <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
+            <h3 class="font-display text-3xl sm:text-4xl">Natural Manicure</h3>
+            <p class="mt-5 max-w-prose text-lg leading-relaxed text-ink/75">Our everyday ritual. We shape, tidy the cuticles with care, buff lightly and finish with a warm oil and hand massage. Leave bare, add a sheer tint or choose a classic polish.</p>
+            <ul class="mt-7 grid gap-3 text-ink/80">
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Herbal hand soak and gentle exfoliation</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Cuticle care without aggressive cutting</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Camellia oil massage</li>
+            </ul>
+            <div class="mt-9 flex flex-wrap gap-x-10 gap-y-3 border-t border-ink/15 pt-6">
+              <p><span class="block text-sm text-ink/60">Duration</span><span class="font-display text-2xl">45 to 70 min</span></p>
+              <p><span class="block text-sm text-ink/60">Reference price</span><span class="font-display text-2xl">from VND 350,000</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab-panel="pedicure" class="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="aspect-[4/5] overflow-hidden rounded-t-full bg-mist lg:col-span-5">
+            <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Feet resting among fresh flowers after a pedicure" class="photo h-full w-full object-cover" width="1200" height="1500">
+          </div>
+          <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
+            <h3 class="font-display text-3xl sm:text-4xl">Pedicure</h3>
+            <p class="mt-5 max-w-prose text-lg leading-relaxed text-ink/75">A warm soak with lemongrass and sea salt, careful nail and heel care, then a slow massage with a cooling mint balm. Finish natural, polished or in gel.</p>
+            <ul class="mt-7 grid gap-3 text-ink/80">
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Lemongrass and sea salt foot soak</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Gentle callus smoothing</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Mint balm massage to the calf</li>
+            </ul>
+            <div class="mt-9 flex flex-wrap gap-x-10 gap-y-3 border-t border-ink/15 pt-6">
+              <p><span class="block text-sm text-ink/60">Duration</span><span class="font-display text-2xl">50 to 75 min</span></p>
+              <p><span class="block text-sm text-ink/60">Reference price</span><span class="font-display text-2xl">from VND 450,000</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab-panel="gel" class="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="aspect-[4/5] overflow-hidden rounded-t-full bg-mist lg:col-span-5">
+            <img src="https://images.unsplash.com/photo-1708036632171-ffff12627ffc?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Hands with glossy green gel polish" class="photo h-full w-full object-cover" width="1200" height="1500">
+          </div>
+          <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
+            <h3 class="font-display text-3xl sm:text-4xl">Gel Polish</h3>
+            <p class="mt-5 max-w-prose text-lg leading-relaxed text-ink/75">A full manicure finished in gel that stays glossy for around three weeks. Our palette leans to moss, sage, clay, petal and bark, with seasonal shades added every few months.</p>
+            <ul class="mt-7 grid gap-3 text-ink/80">
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>HEMA-free gel options</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Soak-off removal, never scraped</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Builder gel for thin or brittle nails</li>
+            </ul>
+            <div class="mt-9 flex flex-wrap gap-x-10 gap-y-3 border-t border-ink/15 pt-6">
+              <p><span class="block text-sm text-ink/60">Duration</span><span class="font-display text-2xl">60 to 80 min</span></p>
+              <p><span class="block text-sm text-ink/60">Reference price</span><span class="font-display text-2xl">from VND 500,000</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab-panel="extensions" class="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="aspect-[4/5] overflow-hidden rounded-t-full bg-mist lg:col-span-5">
+            <img src="https://images.unsplash.com/photo-1753285311550-154917dab783?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A manicurist painting long sculpted nail extensions" class="photo h-full w-full object-cover" width="1200" height="1500">
+          </div>
+          <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
+            <h3 class="font-display text-3xl sm:text-4xl">Nail Extensions</h3>
+            <p class="mt-5 max-w-prose text-lg leading-relaxed text-ink/75">Soft gel tips or hand-sculpted gel for extra length that still looks natural. We keep shapes balanced, usually short almond or soft square, so your nails stay comfortable day to day.</p>
+            <ul class="mt-7 grid gap-3 text-ink/80">
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Length and shape consultation</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Soft gel tips or sculpted gel</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Infills every three to four weeks</li>
+            </ul>
+            <div class="mt-9 flex flex-wrap gap-x-10 gap-y-3 border-t border-ink/15 pt-6">
+              <p><span class="block text-sm text-ink/60">Duration</span><span class="font-display text-2xl">75 to 120 min</span></p>
+              <p><span class="block text-sm text-ink/60">Reference price</span><span class="font-display text-2xl">from VND 650,000</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab-panel="botanical" class="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="aspect-[4/5] overflow-hidden rounded-t-full bg-mist lg:col-span-5">
+            <img src="https://images.unsplash.com/photo-1792776043433-9b4963ba6b4c?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Almond nails with green and white marbling and fine gold accents" class="photo h-full w-full object-cover" width="1200" height="1500">
+          </div>
+          <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
+            <h3 class="font-display text-3xl sm:text-4xl">Botanical Nail Art</h3>
+            <p class="mt-5 max-w-prose text-lg leading-relaxed text-ink/75">Our signature. Fine-line leaves, real pressed petals sealed in gel and stone-like marbling, planned with you from our collection or sketched fresh for the season.</p>
+            <ul class="mt-7 grid gap-3 text-ink/80">
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Added to any gel or extension set</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Accent nails or a full ten-nail design</li>
+              <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fern"></span>Real dried flowers, sourced from Hanoi markets</li>
+            </ul>
+            <div class="mt-9 flex flex-wrap gap-x-10 gap-y-3 border-t border-ink/15 pt-6">
+              <p><span class="block text-sm text-ink/60">Extra time</span><span class="font-display text-2xl">15 to 45 min</span></p>
+              <p><span class="block text-sm text-ink/60">Reference price</span><span class="font-display text-2xl">from VND 150,000</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTANICAL STYLES (BENTO) -->
+  <section id="styles" data-section="features-bento" class="bg-mist">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-3xl font-display text-4xl leading-[1.1] sm:text-5xl 2xl:text-6xl">Botanical art, four <em class="italic text-fern">ways</em></h2>
+      <p data-reveal="up" class="mt-5 max-w-prose leading-relaxed text-ink/75">Every design in our collection starts from one of these techniques. Mix two for something more personal.</p>
+      <div class="mt-12 grid gap-5 lg:grid-cols-12 lg:gap-6">
+        <div data-reveal="clip" class="min-h-[380px] overflow-hidden rounded-[2rem] bg-sand lg:col-span-5">
+          <img src="https://images.unsplash.com/photo-1573508938932-098bc908f25c?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A hand holding a broad palm-shaped green leaf" class="photo h-full w-full object-cover" width="1200" height="1400">
+        </div>
+        <div data-reveal-stagger="100" class="grid gap-5 sm:grid-cols-2 lg:col-span-7 lg:gap-6">
+          <article class="flex flex-col justify-between rounded-[2rem] bg-moss p-8 text-mist">
+            <h3 class="font-display text-3xl italic">Fern Line</h3>
+            <p class="mt-10 leading-relaxed text-mist/85">Hair-thin fronds painted freehand over sage, cream or bare nails. Quiet enough for every day.</p>
+          </article>
+          <article class="flex flex-col justify-between rounded-[2rem] bg-sand p-8">
+            <h3 class="font-display text-3xl italic text-moss">Pressed Petal</h3>
+            <p class="mt-10 leading-relaxed text-ink/75">Tiny dried flowers, baby's breath and fern tips sealed under clear gel, each set a little different.</p>
+          </article>
+          <article class="flex flex-col justify-between rounded-[2rem] bg-sky/60 p-8">
+            <h3 class="font-display text-3xl italic text-moss">Moss Marble</h3>
+            <p class="mt-10 leading-relaxed text-ink/75">Soft green and white veining that looks like river stone, sometimes with a thread of gold.</p>
+          </article>
+          <article class="flex flex-col justify-between rounded-[2rem] border border-wood/50 bg-mist p-8">
+            <h3 class="font-display text-3xl italic text-bark">Seed &amp; Stone</h3>
+            <p class="mt-10 leading-relaxed text-ink/75">Earthy clay, bark and oat tones with tiny dotted seeds. Our favourite for autumn and short nails.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE LIST -->
+  <section id="prices" data-section="pricing-list" class="bg-sand">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="lg:col-span-4">
+        <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] sm:text-5xl">Price list</h2>
+        <p data-reveal="up" class="mt-5 max-w-sm leading-relaxed text-ink/75">Reference prices in Vietnamese dong. Final price depends on nail length and art detail; your artist confirms it before starting.</p>
+        <button type="button" data-modal-open="booking" class="mt-8 inline-flex min-h-[48px] items-center rounded-full bg-moss px-7 text-[15px] font-semibold text-mist transition duration-300 hover:bg-ink active:scale-[.98]">Book a visit</button>
+      </div>
+      <div data-reveal-stagger="100" class="grid gap-x-14 gap-y-12 md:grid-cols-2 lg:col-span-8">
+        <div>
+          <h3 class="font-display text-2xl text-moss">Hands</h3>
+          <ul class="mt-5 grid gap-4">
+            <li class="flex items-end gap-3"><span>Bare manicure <span class="text-sm text-ink/60">45 min</span></span><span class="leader"></span><span class="font-semibold">350,000</span></li>
+            <li class="flex items-end gap-3"><span>Manicure with polish <span class="text-sm text-ink/60">55 min</span></span><span class="leader"></span><span class="font-semibold">420,000</span></li>
+            <li class="flex items-end gap-3"><span>Herbal spa manicure <span class="text-sm text-ink/60">70 min</span></span><span class="leader"></span><span class="font-semibold">550,000</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl text-moss">Feet</h3>
+          <ul class="mt-5 grid gap-4">
+            <li class="flex items-end gap-3"><span>Natural pedicure <span class="text-sm text-ink/60">50 min</span></span><span class="leader"></span><span class="font-semibold">450,000</span></li>
+            <li class="flex items-end gap-3"><span>Herbal soak pedicure <span class="text-sm text-ink/60">70 min</span></span><span class="leader"></span><span class="font-semibold">600,000</span></li>
+            <li class="flex items-end gap-3"><span>Gel pedicure <span class="text-sm text-ink/60">75 min</span></span><span class="leader"></span><span class="font-semibold">650,000</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl text-moss">Gel &amp; extensions</h3>
+          <ul class="mt-5 grid gap-4">
+            <li class="flex items-end gap-3"><span>Gel manicure <span class="text-sm text-ink/60">60 min</span></span><span class="leader"></span><span class="font-semibold">500,000</span></li>
+            <li class="flex items-end gap-3"><span>Builder gel overlay <span class="text-sm text-ink/60">80 min</span></span><span class="leader"></span><span class="font-semibold">700,000</span></li>
+            <li class="flex items-end gap-3"><span>Soft gel tips <span class="text-sm text-ink/60">90 min</span></span><span class="leader"></span><span class="font-semibold">900,000</span></li>
+            <li class="flex items-end gap-3"><span>Sculpted gel <span class="text-sm text-ink/60">120 min</span></span><span class="leader"></span><span class="font-semibold">1,200,000</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl text-moss">Botanical art &amp; extras</h3>
+          <ul class="mt-5 grid gap-4">
+            <li class="flex items-end gap-3"><span>Accent art, two nails</span><span class="leader"></span><span class="font-semibold">150,000</span></li>
+            <li class="flex items-end gap-3"><span>Full botanical design</span><span class="leader"></span><span class="font-semibold">400,000</span></li>
+            <li class="flex items-end gap-3"><span>Pressed flower set</span><span class="leader"></span><span class="font-semibold">600,000</span></li>
+            <li class="flex items-end gap-3"><span>Gel removal only</span><span class="leader"></span><span class="font-semibold">120,000</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFTERCARE -->
+  <section id="aftercare" data-section="accordion-split" class="bg-mist">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:items-start lg:gap-16 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="lg:col-span-5">
+        <div data-reveal="clip" class="aspect-[4/3] overflow-hidden rounded-[2rem] bg-sand lg:aspect-[4/5]">
+          <img src="https://images.unsplash.com/photo-1779636198585-658170ee0283?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Clean manicure and pedicure tools laid out on a towel" class="photo h-full w-full object-cover" width="1200" height="1500">
+        </div>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7">
+        <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] sm:text-5xl">Caring for your nails at home</h2>
+        <p data-reveal="up" class="mt-5 max-w-prose leading-relaxed text-ink/75">A few small habits keep colour fresh and nails strong between visits.</p>
+        <div data-accordion="single" class="mt-10 border-t border-ink/15">
+          <div data-acc-item data-open class="border-b border-ink/15">
+            <button type="button" data-acc-trigger class="flex min-h-[60px] w-full items-center justify-between gap-6 py-4 text-left font-display text-xl">Oil your cuticles daily <span data-acc-icon class="text-2xl text-fern">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-ink/75">A drop of cuticle oil each evening keeps the skin soft and helps gel stay flexible. We send you home with a small bottle of our camellia blend.</div></div>
+          </div>
+          <div data-acc-item class="border-b border-ink/15">
+            <button type="button" data-acc-trigger class="flex min-h-[60px] w-full items-center justify-between gap-6 py-4 text-left font-display text-xl">Wear gloves for chores <span data-acc-icon class="text-2xl text-fern">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-ink/75">Hot water and cleaning products are the main reason polish lifts early. Gloves for dishes and gardening make a real difference.</div></div>
+          </div>
+          <div data-acc-item class="border-b border-ink/15">
+            <button type="button" data-acc-trigger class="flex min-h-[60px] w-full items-center justify-between gap-6 py-4 text-left font-display text-xl">Treat nails as jewels, not tools <span data-acc-icon class="text-2xl text-fern">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-ink/75">Avoid opening cans or peeling labels with your nails. Pressed flower art in particular lasts longer when the tips are not knocked.</div></div>
+          </div>
+          <div data-acc-item class="border-b border-ink/15">
+            <button type="button" data-acc-trigger class="flex min-h-[60px] w-full items-center justify-between gap-6 py-4 text-left font-display text-xl">Never peel off gel <span data-acc-icon class="text-2xl text-fern">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-ink/75">Peeling takes layers of nail with it. If a nail lifts, file the edge lightly and come in for a gentle soak-off removal.</div></div>
+          </div>
+          <div data-acc-item class="border-b border-ink/15">
+            <button type="button" data-acc-trigger class="flex min-h-[60px] w-full items-center justify-between gap-6 py-4 text-left font-display text-xl">Give nails a rest between sets <span data-acc-icon class="text-2xl text-fern">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-ink/75">After two or three gel sets in a row, a week of bare nails with a strengthening treatment helps them recover.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="book" data-section="cta-type" class="bg-moss text-mist">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-10 px-4 py-24 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10 lg:py-28 2xl:px-16">
+      <h2 data-split="words" class="max-w-4xl font-display text-[clamp(2.5rem,5.5vw,5rem)] leading-[1.05] tracking-tight">Not sure which service? <em class="italic text-sage">Ask</em> your artist.</h2>
+      <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
+        <button type="button" data-modal-open="booking" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-mist px-9 text-[15px] font-semibold text-moss transition duration-300 hover:bg-sand active:scale-[.98]">Book a visit</button>
+        <a href="collection.html" class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-mist/40 px-8 text-[15px] font-semibold text-mist transition duration-300 hover:border-mist hover:bg-mist/10">Browse designs</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden bg-ink text-mist">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-24 2xl:px-16">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl leading-tight">A little nature<br>at your fingertips.</p>
+        <button type="button" data-modal-open="booking" class="mt-7 inline-flex min-h-[48px] items-center rounded-full bg-sage px-7 text-[15px] font-semibold text-ink transition duration-300 hover:bg-mist active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mist">Book a visit</button>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-bold text-sage">Visit</p>
+        <address class="mt-4 not-italic leading-relaxed text-mist/80">18 Xuan Dieu Street<br>Tay Ho District, Hanoi</address>
+        <a href="../pages/studio.html#contact" class="mt-3 inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold text-mist underline decoration-sage/60 underline-offset-4 transition hover:decoration-mist">Map and directions</a>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-bold text-sage">Opening hours</p>
+        <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-5 gap-y-1.5 text-mist/80">
+          <dt>Tue to Fri</dt><dd>9:30 to 19:30</dd>
+          <dt>Sat and Sun</dt><dd>9:00 to 18:00</dd>
+          <dt>Monday</dt><dd>Closed</dd>
+        </dl>
+        <p class="mt-5 text-sm font-bold text-sage">Contact</p>
+        <a href="tel:+842437192046" class="mt-2 flex min-h-[44px] items-center text-mist/90 transition hover:text-sage">+84 24 3719 2046</a>
+        <a href="mailto:hello@mossandmist.studio" class="flex min-h-[44px] items-center text-mist/90 transition hover:text-sage">hello@mossandmist.studio</a>
+      </div>
+      <nav class="lg:col-span-2" aria-label="Footer">
+        <p class="text-sm font-bold text-sage">Pages</p>
+        <ul class="mt-3">
+          <li><a href="../index.html" class="flex min-h-[40px] items-center text-mist/80 transition hover:text-mist">Home</a></li>
+          <li><a aria-current="page" href="../pages/services.html" class="flex min-h-[40px] items-center text-mist/80 transition hover:text-mist">Services &amp; Pricing</a></li>
+          <li><a href="../pages/collection.html" class="flex min-h-[40px] items-center text-mist/80 transition hover:text-mist">Collection</a></li>
+          <li><a href="../pages/studio.html" class="flex min-h-[40px] items-center text-mist/80 transition hover:text-mist">Our Studio</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p aria-hidden="true" class="mt-16 select-none whitespace-nowrap font-display text-[clamp(3.5rem,13.5vw,15rem)] leading-[0.85] tracking-tight text-mist/[0.09]">MOSS &amp; MIST</p>
+
+    <div class="flex flex-col gap-2 border-t border-mist/15 py-7 text-sm text-mist/60 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 MOSS &amp; MIST NAIL STUDIO. All rights reserved.</p>
+      <p>Booking and contact forms on this site are demos.</p>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

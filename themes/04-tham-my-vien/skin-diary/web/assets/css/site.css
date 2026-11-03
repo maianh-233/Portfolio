@@ -1,0 +1,53 @@
+:root {
+  --paper: #FAF8F6;
+  --ink: #151314;
+  --stone: #E4D9D4;
+  --muted: #6A6164;
+  --cherry: #B0122D;
+  --nude: #EBD3C9;
+  --nude-soft: #F5E9E3;
+  --ui-accent: #B0122D;
+  --font-display: "Instrument Serif", Georgia, system-ui, serif;
+  --font-sans: Geist, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--cherry); color: var(--paper); }
+
+/* Magazine drop cap */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 5.2em;
+  line-height: .82;
+  padding: .06em .12em 0 0;
+  color: var(--cherry);
+}
+
+/* Header state after scroll (motion.js adds .is-scrolled) */
+[data-header].is-scrolled { background: rgba(250, 248, 246, .94); box-shadow: 0 1px 0 rgba(21, 19, 20, .12); }
+
+/* Sharp dialog to match the editorial grid */
+dialog[data-ui-modal] { border-radius: 0 !important; max-width: min(94vw, 680px) !important; background: var(--paper); color: var(--ink); }
+
+/* Anchor offset under sticky header */
+section[id] { scroll-margin-top: 84px; }
+
+/* Thin scrollbar for horizontal chapter nav */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Vietnamese mode (site.js) — fonts with full Vietnamese diacritics */
+html[lang="vi"] { --font-display: "Playfair Display", Georgia, system-ui, serif; --font-sans: "Be Vietnam Pro", system-ui, sans-serif; }
+html[lang="vi"] .font-display { font-family: "Playfair Display", Georgia, system-ui, serif; }
+html[lang="vi"] .font-sans { font-family: "Be Vietnam Pro", system-ui, sans-serif; }
+
+/* Language switch EN / VI (site.js) */
+[data-set-lang] { color: var(--muted); }
+[data-set-lang]:hover { color: var(--cherry); }
+[data-set-lang].is-active { background: var(--ink); color: var(--paper); }

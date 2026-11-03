@@ -1,0 +1,57 @@
+:root {
+  --sky: #C9E4F5;
+  --lavender: #DCD2F4;
+  --cloud: #FFFDFB;
+  --blush: #F7DDE6;
+  --dusk: #4E4A7E;
+  --night: #26244A;
+  --ink: #2B2A45;
+  --sakura: #E7A3BB;
+  --ui-accent: #4E4A7E;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, serif;
+  --font-body: Nunito, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--sky), var(--cloud));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Soft cloud-shaped frame for floating product photos */
+.cloud-frame {
+  border-radius: 46% 54% 48% 52% / 58% 50% 50% 42%;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -30px rgba(78, 74, 126, .35), 0 0 0 10px rgba(255, 253, 251, .55);
+}
+.cloud-frame-b { border-radius: 58% 42% 55% 45% / 46% 54% 46% 54%; }
+.cloud-frame-c { border-radius: 50% 50% 44% 56% / 52% 44% 56% 48%; }
+
+/* Soft gradient puffs (abstract decoration, not photos) */
+.puff {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, rgba(255, 253, 251, .95), rgba(255, 253, 251, 0));
+  pointer-events: none;
+}
+
+/* Dreamy photo grade */
+.dream-img { filter: saturate(1.08) contrast(1.03); }
+
+/* Bilingual toggle: hide content until language applied (avoid flash) */
+.lang-btn[aria-pressed="true"] { background: var(--dusk); color: var(--cloud); }
+
+/* Slow drift for floating pieces (hero only) */
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}
+.drift { animation: drift 9s ease-in-out infinite; }
+.drift-slow { animation: drift 12s ease-in-out infinite; animation-delay: -4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .drift, .drift-slow { animation: none; }
+}

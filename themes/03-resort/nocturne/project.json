@@ -1,0 +1,84 @@
+{
+  "slug": "nocturne",
+  "name": "NOCTURNE",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "NOCTURNE",
+    "purpose": "Thiết kế website giới thiệu NOCTURNE, một resort nghỉ dưỡng cao cấp mang phong cách Midnight Teal Luxury, lấy cảm hứng từ mặt nước lúc nửa đêm, kiến trúc đương đại và ánh sáng phản chiếu trong không gian tĩnh lặng.\n\nThương hiệu hướng đến cảm giác sang trọng, bí ẩn, riêng tư và giàu tính điện ảnh. Sự cao cấp được thể hiện qua vật liệu, ánh sáng, kiến trúc và cách trình bày, không phụ thuộc vào các biểu tượng xa xỉ truyền thống.\n\nWebsite phải có cá tính riêng, tránh trở thành website câu lạc bộ đêm, thương hiệu thời trang hoặc khách sạn Dark Luxury thông thường.",
+    "audience": "Khách hàng du lịch muốn lưu trú",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. VISUAL IDENTITY — COLOR PALETTE\n\nThay hoàn toàn bảng màu đen – vàng bằng hệ màu xanh cổ vịt, tím mận và bạc lạnh.\n\nMidnight Teal #153C40: Màu nhận diện chính, tạo cảm giác sâu, tĩnh lặng và sang trọng.\n\nPetrol Blue #28545A: Xanh lam pha lục, dùng cho các section phụ và chi tiết giao diện.\n\nMuted Plum #594653: Tím mận trầm, tạo điểm nhấn khác biệt cho một số mảng nền và nội dung nổi bật.\n\nSilver Mist #B8C3C4: Xám bạc lạnh, dùng cho đường phân cách, nhãn nhỏ và chi tiết trang trí.\n\nMoonstone #E7E8E2: Trắng đá ánh xám, dùng cho chữ sáng và những section cần độ tương phản cao.\n\nDeep Charcoal #20282A: Xám than pha xanh, dùng làm nền tối thay cho màu đen tuyệt đối.\n\nNguyên tắc phối màu:\n\nMidnight Teal là màu nhận diện xuyên suốt.\n\nDeep Charcoal tạo chiều sâu nhưng không chiếm toàn bộ giao diện.\n\nPetrol Blue tạo chuyển tiếp giữa các mảng màu tối.\n\nMuted Plum chỉ xuất hiện ở một số section, tạo dấu ấn thị giác.\n\nSilver Mist và Moonstone giúp nội dung dễ đọc, đồng thời tạo cảm giác tinh tế.\n\nKhông sử dụng vàng kim làm điểm nhấn chủ đạo, không dùng neon hoặc hiệu ứng phát sáng quá mạnh. Màu sắc cần gợi cảm giác phản chiếu trên mặt nước hơn là ánh đèn sân khấu.\n\n3. TYPOGRAPHY & LAYOUT\n\nTypography\n\nTiêu đề: Bodoni Moda hoặc Cormorant Garamond.\n\nNội dung: Be Vietnam Pro hoặc Manrope.\n\nNhãn section: Sans-serif in hoa, cỡ nhỏ, khoảng cách ký tự rộng.\n\nTiêu đề chính có kích thước lớn, cách xuống dòng có chủ đích.\n\nBố cục\n\nSử dụng ảnh toàn chiều rộng, bố cục bất đối xứng và khoảng trống rộng.\n\nKết hợp các section nền Midnight Teal, Deep Charcoal và Moonstone.\n\nSử dụng đường phân cách Silver Mist mảnh.\n\nHạn chế card bo góc lớn, bóng đổ dày và các thành phần giao diện trang trí dư thừa.\n\nTạo sự tương phản giữa ảnh tối và những khu vực nội dung sáng.\n\nGiao diện phải giống một tạp chí kiến trúc và nghỉ dưỡng đương đại cao cấp, không phải trang quảng bá nightlife.\n\n4. IMAGE ART DIRECTION\n\nƯu tiên hình ảnh kiến trúc có ánh sáng điện ảnh, chiều sâu và bề mặt vật liệu rõ nét.\n\nCác nhóm hình ảnh cần có:\n\nResort hiện đại với hồ nước phản chiếu kiến trúc vào ban đêm.\n\nVilla riêng tư với cửa kính lớn và ánh sáng nội thất ấm.\n\nHồ bơi có màu nước xanh đậm, phản chiếu bầu trời và ánh sáng công trình.\n\nNội thất sử dụng đá tối màu, gỗ sẫm và kim loại hoàn thiện mờ.\n\nPhòng nghỉ có cửa sổ lớn hướng ra cảnh quan ban đêm.\n\nNhà hàng cao cấp với ánh sáng tập trung trên bàn ăn.\n\nSpa có đá tự nhiên, nước và ánh sáng dịu.\n\nLounge riêng tư với kiến trúc hiện đại và vật liệu cao cấp.\n\nHình ảnh cần có độ tương phản rõ, nhưng vẫn giữ được chi tiết ở vùng tối.\n\nTránh ảnh sân khấu, DJ, ánh sáng neon, quầy bar kiểu nightclub hoặc hình ảnh thời trang editorial không liên quan đến nghỉ dưỡng.\n\n5. TRANG CHỦ — HOME\n\nHeader\n\nNền Midnight Teal.\n\nLogo NOCTURNE sử dụng typography thanh lịch.\n\nMenu gồm Home, The Philosophy, Suites & Villas, Experiences.\n\nNút chuyển đổi ngôn ngữ VI/EN.\n\nChữ Moonstone, đường phân cách Silver Mist mảnh.\n\nHeader gọn, không sử dụng biểu tượng trang trí quá mức.\n\nHero Section\n\nẢnh toàn màn hình về resort đương đại bên hồ nước vào ban đêm.\n\nTiêu đề: “Luxury Beyond the Ordinary”.\n\nMô tả ngắn: “A private retreat shaped by architecture, water and light.”\n\nNhãn nhỏ: “A MIDNIGHT TEAL RETREAT”.\n\nCTA điều hướng nội bộ: “Discover NOCTURNE”.\n\nChữ Moonstone nổi bật trên ảnh, có lớp phủ tối vừa đủ để bảo đảm khả năng đọc.\n\nBrand Introduction\n\nBố cục editorial hai cột.\n\nTiêu đề lớn: “An Art of Quiet Luxury”.\n\nNội dung giới thiệu triết lý nghỉ dưỡng riêng tư, kiến trúc đương đại và trải nghiệm được tuyển chọn.\n\nKết hợp một ảnh kiến trúc lớn và một ảnh chi tiết vật liệu.\n\nArchitecture & Light\n\nẢnh kiến trúc ngang rộng, tập trung vào hình khối, ánh sáng và sự phản chiếu.\n\nTiêu đề: “Designed Around Light”.\n\nChú thích ảnh nhỏ, sử dụng Silver Mist.\n\nCó thể đặt một ảnh phụ lệch trục để tạo chiều sâu thị giác.\n\nSuites & Villas\nGiới thiệu ba loại hình lưu trú:\n\nSignature Suite: Không gian nghỉ dưỡng thanh lịch với vật liệu tối màu và ánh sáng ấm.\n\nPrivate Villa: Villa riêng tư, chú trọng sự tách biệt và kết nối với cảnh quan.\n\nPanoramic Residence: Không gian rộng với cửa kính lớn và tầm nhìn mở.\n\nSử dụng ảnh lớn, bố cục không đồng đều và mô tả ngắn. Không trình bày thành ba card giống hệt nhau.\n\nThe NOCTURNE Experience\nGiới thiệu bốn tiện ích:\n\nReflecting Pool.\n\nNocturne Dining.\n\nStillwater Spa.\n\nPrivate Lounge.\n\nMỗi tiện ích có ảnh riêng, tiêu đề và đoạn mô tả ngắn. Kết hợp nền sáng và nền tối để tạo nhịp điệu.\n\nMidnight Perspective\n\nNền Midnight Teal.\n\nTiêu đề Moonstone: “A World Apart from the Ordinary”.\n\nNội dung ngắn về sự riêng tư, không gian và triết lý nghỉ dưỡng của thương hiệu.\n\nFull-Width Gallery\n\nẢnh toàn chiều rộng về hồ nước phản chiếu kiến trúc.\n\nCó thể phủ một dòng chữ nhỏ: “Where the Night Finds Stillness”.\n\nKhông sử dụng hiệu ứng phát sáng nhân tạo.\n\nFooter\n\nNền Deep Charcoal.\n\nLogo, menu, thông tin liên hệ mẫu và liên kết mạng xã hội.\n\nĐường phân cách Silver Mist mảnh.\n\nBố cục gọn, đồng bộ với hệ thống màu sắc.\n\n6. TRANG THE PHILOSOPHY — GIỚI THIỆU\n\nHero\n\nẢnh kiến trúc đương đại trong ánh sáng chiều muộn hoặc ban đêm.\n\nTiêu đề: “The Beauty of Restraint”.\n\nOur Philosophy\n\nGiới thiệu triết lý về sự riêng tư, kiến trúc và trải nghiệm nghỉ dưỡng.\n\nBố cục typography lớn kết hợp đoạn văn ngắn.\n\nKhông sử dụng nội dung quảng cáo phô trương.\n\nArchitecture & Material\n\nGiới thiệu các yếu tố kiến trúc: hình khối, đá tự nhiên, kính, gỗ và kim loại hoàn thiện mờ.\n\nKết hợp ảnh tổng thể với ảnh chi tiết.\n\nSử dụng chú thích ngắn theo phong cách tạp chí kiến trúc.\n\nThe Language of Light\n\nẢnh ánh sáng phản chiếu trên mặt nước, tường đá và bề mặt kính.\n\nGiải thích vai trò của ánh sáng trong việc tạo nên không gian riêng tư và chiều sâu kiến trúc.\n\nBrand Values\nTrình bày bốn giá trị:\n\nPrivacy.\n\nArchitectural Integrity.\n\nSensory Balance.\n\nTimeless Design.\n\nMỗi giá trị có tiêu đề nổi bật, mô tả ngắn và đường phân cách mảnh.\n\nClosing Gallery\n\nGallery nội thất và ngoại thất.\n\nKết thúc bằng ảnh kiến trúc phản chiếu trên mặt nước.\n\n7. TRANG SUITES & VILLAS — PHÒNG NGHỈ & TIỆN ÍCH\n\nHero\n\nẢnh suite với ánh sáng ấm, vật liệu tối màu và tầm nhìn mở.\n\nTiêu đề: “Private Worlds of Calm”.\n\nSignature Suite\n\nẢnh phòng ngủ và khu vực sinh hoạt.\n\nMô tả vật liệu, ánh sáng, thiết kế nội thất và tiện nghi tiêu biểu.\n\nPrivate Villa\n\nẢnh villa riêng tư với hồ nước hoặc sân hiên.\n\nNhấn mạnh sự riêng tư, không gian rộng và kết nối với cảnh quan.\n\nPanoramic Residence\n\nẢnh không gian có cửa kính lớn và tầm nhìn mở.\n\nMô tả bố cục, vật liệu và các tiện nghi phù hợp.\n\nMỗi loại hình lưu trú cần có ảnh chính, tên, mô tả và tiện nghi. Không hiển thị giá, lịch phòng hoặc thông tin chưa được xác định.\n\nResort Facilities\n\nReflecting Pool: Hồ nước và hồ bơi tạo hiệu ứng phản chiếu kiến trúc.\n\nNocturne Dining: Nhà hàng với ánh sáng tập trung và nội thất thanh lịch.\n\nStillwater Spa: Không gian thư giãn với đá tự nhiên, nước và ánh sáng dịu.\n\nPrivate Lounge: Không gian nghỉ ngơi riêng tư với vật liệu cao cấp.\n\nGarden Retreat: Khu vực ngoài trời với cảnh quan và ánh sáng tinh tế.\n\nTrình bày bằng ảnh lớn và bố cục linh hoạt, không sử dụng quá nhiều card nhỏ.\n\n8. TRANG EXPERIENCES — TRẢI NGHIỆM\n\nHero\n\nẢnh hồ nước phản chiếu kiến trúc vào ban đêm.\n\nTiêu đề: “An Experience Beyond the Ordinary”.\n\nThe Art of Dining\n\nẢnh nhà hàng, bàn ăn và chi tiết nội thất.\n\nGiới thiệu trải nghiệm ẩm thực trong không gian tinh tế.\n\nStillwater Rituals\n\nẢnh spa, mặt nước và khu vực thư giãn.\n\nNội dung tập trung vào cảm giác yên tĩnh và sự chăm chút trong không gian.\n\nPrivate Moments\n\nẢnh villa, lounge và sân hiên riêng tư.\n\nGiới thiệu trải nghiệm nghỉ ngơi trong không gian tách biệt.\n\nWater & Reflection\n\nGallery về hồ bơi, mặt nước và ánh sáng phản chiếu.\n\nSử dụng ảnh ngang rộng, ít chữ và khoảng trắng lớn.\n\nThe Quiet Hour\n\nSection nền Muted Plum.\n\nTiêu đề Moonstone: “Let the World Fall Quiet”.\n\nMột đoạn giới thiệu ngắn về những khoảnh khắc nghỉ ngơi và tận hưởng không gian.\n\nClosing Panorama\n\nẢnh toàn cảnh resort trong ánh sáng ban đêm.\n\nKết thúc bằng một thông điệp thương hiệu ngắn, không có CTA giao dịch.\n\n9. MOTION & INTERACTION\n\nHero image zoom rất nhẹ.\n\nFade-in khi section đi vào vùng hiển thị.\n\nTiêu đề xuất hiện từ từ theo chiều dọc.\n\nChuyển màu nền mượt giữa các section.\n\nHover ảnh tinh tế.\n\nCó thể dùng hiệu ứng phản chiếu hoặc lớp phủ màu bằng CSS ở mức nhẹ.\n\nKhông sử dụng neon, hiệu ứng nhấp nháy, ánh sáng sân khấu hoặc animation liên tục.\n\nTôn trọng prefers-reduced-motion để hạn chế chuyển động khi người dùng yêu cầu.\n\n10. TECHNICAL REQUIREMENTS\n\nXây dựng bốn trang HTML riêng: index.html, about.html, stays.html, experiences.html.\n\nSử dụng HTML, CSS và JavaScript thuần.\n\nDùng chung stylesheet và script khi phù hợp.\n\nHỗ trợ chuyển đổi VI/EN đầy đủ cho toàn bộ menu, nội dung, nút và footer.\n\nLưu ngôn ngữ đã chọn khi chuyển trang hoặc tải lại.\n\nResponsive trên desktop, tablet và mobile.\n\nTối ưu hình ảnh, lazy-load ảnh nằm ngoài màn hình đầu tiên và có phương án dự phòng khi ảnh lỗi.\n\nBảo đảm độ tương phản, alt text và khả năng điều hướng bằng bàn phím.\n\nKhông tích hợp đặt phòng, đặt lịch, giỏ hàng, thanh toán hoặc biểu mẫu giao dịch.\n\n11. FINAL DESIGN GOAL\n\nNOCTURNE phải có bản sắc Midnight Teal Luxury rõ ràng, khác với phong cách Dark Luxury sử dụng đen và vàng truyền thống.\n\nXanh cổ vịt đậm, xanh lam pha lục và tím mận tạo nên một hệ màu sâu, bí ẩn và tinh tế. Ánh sáng phản chiếu, mặt nước và kiến trúc đương đại đóng vai trò trung tâm trong ngôn ngữ hình ảnh.\n\nWebsite phải gợi lên một resort riêng tư, nơi kiến trúc và ánh sáng tạo nên trải nghiệm sang trọng, không mang cảm giác của câu lạc bộ đêm hoặc thương hiệu thời trang.\n\nƯu tiên hình ảnh chất lượng cao, bố cục editorial, typography tinh tế và chuyển động tiết chế.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-29T13:26:12.470Z",
+  "updatedAt": "2026-10-29T13:42:43.574Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\nocturne\\web",
+    "builtAt": "2026-10-29T13:42:29.277Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/experiences.html",
+      "pages/stays.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/experiences.html": [],
+      "pages/stays.html": []
+    }
+  },
+  "job": {
+    "id": "3182e756-f3b7-4b3b-b078-4c4d469006cf",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\nocturne\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 206767,
+      "outputTokens": 112280,
+      "cacheReadTokens": 9056276,
+      "cacheCreationTokens": 322475,
+      "costUsd": 6.292757600000001,
+      "numTurns": 126,
+      "durationMs": 902929
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-29T13:42:40.163Z",
+    "critical": 0,
+    "major": 38,
+    "minor": 2,
+    "screenshots": 12
+  }
+}

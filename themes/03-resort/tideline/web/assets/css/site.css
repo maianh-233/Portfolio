@@ -1,0 +1,78 @@
+/* TIDELINE — biến màu / font và vài style Tailwind không làm gọn được */
+:root {
+  --terracotta: #B65F45;
+  --terracotta-ink: #97492F;
+  --copper: #754638;
+  --sand: #D9C5A7;
+  --chalk: #F3EDE3;
+  --plum: #49323B;
+  --plum-deep: #3A272F;
+  --ui-accent: #B65F45;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  background: var(--chalk);
+  color: var(--plum);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--terracotta); color: var(--chalk); }
+
+/* Khung nội dung rộng (layout-guide mục 1) */
+.wrap { margin-inline: auto; width: 100%; max-width: 1536px; padding-inline: 1rem; }
+@media (min-width: 640px) { .wrap { padding-inline: 1.5rem; } }
+@media (min-width: 1024px) { .wrap { padding-inline: 2.5rem; } }
+@media (min-width: 1536px) { .wrap { padding-inline: 4rem; } }
+@media (min-width: 1920px) { .wrap { max-width: 1720px; } }
+
+/* Nhãn section: sans in hoa, nhỏ, giãn chữ */
+.label { font-family: var(--font-body); font-size: 12px; font-weight: 500; letter-spacing: .26em; text-transform: uppercase; line-height: 1.4; }
+
+/* Đường chân trời: nét kẻ mảnh tự vẽ dần khi cuộn tới */
+.rule { display: block; height: 1px; width: 4.5rem; background: var(--terracotta); transform-origin: 0 50%; transition: transform 1.4s var(--ease), opacity .8s var(--ease); }
+.rule.rule-long { width: 100%; }
+.rule.on-dark { background: var(--terracotta); opacity: .9; }
+html.motion-ready .rule[data-reveal]:not(.is-in) { transform: scaleX(0); opacity: 1; }
+
+/* Menu chính: gạch chân chạy vào từ trái, giữ ở trang đang xem */
+.navlink { position: relative; padding-block: .5rem; transition: color .3s; }
+.navlink::after { content: ""; position: absolute; left: 0; right: 0; bottom: .1rem; height: 1px; background: var(--terracotta); transform: scaleX(0); transform-origin: 100% 50%; transition: transform .5s var(--ease); }
+.navlink:hover { color: var(--terracotta-ink); }
+.navlink:hover::after { transform: scaleX(1); transform-origin: 0 50%; }
+.navlink[aria-current="page"] { color: var(--terracotta-ink); }
+.navlink[aria-current="page"]::after { transform: scaleX(1); }
+
+/* Khung ảnh: góc vuông, nền dự phòng, phóng chậm khi hover */
+.frame { overflow: hidden; background: var(--sand); }
+.frame:not(.absolute) { position: relative; }
+.frame > img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.group:hover .frame > img, a.frame:hover > img { transform: scale(1.04); }
+.frame.img-fallback > img { visibility: hidden; }
+.frame.img-fallback::after {
+  content: "TIDELINE"; position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: var(--font-display); font-size: 1.25rem; letter-spacing: .4em; color: var(--copper);
+  background: linear-gradient(to bottom, var(--sand) 0 55%, var(--terracotta) 55% calc(55% + 1px), var(--sand) calc(55% + 1px));
+}
+
+/* Chữ hoa đầu đoạn kiểu tạp chí */
+.dropcap::first-letter { float: left; font-family: var(--font-display); font-size: 4.6em; line-height: .82; padding: .06em .12em 0 0; color: var(--terracotta); }
+
+/* Chuyển ngôn ngữ mượt: mờ nhẹ nội dung khi đổi */
+html.lang-pending body > * { opacity: 0; }
+body > main, body > header, body > footer { transition: opacity .25s ease; }
+body.lang-out > main, body.lang-out > footer, body.lang-out #top nav { opacity: 0; }
+
+/* Accordion: biểu tượng xoay */
+[data-acc-icon] { transition: transform .4s var(--ease); }
+[data-acc-item].is-open [data-acc-icon] { transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rule, .frame > img, .navlink::after, body > main, body > header, body > footer, [data-acc-icon] { transition: none !important; }
+  .group:hover .frame > img, a.frame:hover > img { transform: none; }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giới thiệu · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-HOME-002" data-module="HOME" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-HOME-002 Giới thiệu: câu chuyện mèo đen Tiểu Bạch + pate chay + ảnh cửa hàng + CTA. Nội dung văn mẫu chờ cửa hàng duyệt (OI-013). */
+  Layout.mount({ title: 'Giới thiệu', active: 'about', breadcrumb: [['Giới thiệu']] }, function (main) {
+    var U = Perm.url, P = MOCK.photo, ic = UI.icon;
+    var photos = [P('petshop', 201, 900, 900), P('cat', 202, 900, 900), P('dog', 203, 900, 900), P('kitten', 204, 900, 900), P('puppy', 205, 900, 900), P('hamster', 206, 900, 900)];
+
+    var hero = UI.hero({
+      title: 'Chuyện của Tiểu Bạch',
+      text: 'Tiểu Bạch là một chú mèo đen, đen tuyền dù tên là Bạch. Vì thương bé mà chúng mình mở cửa hàng nhỏ này.',
+      img: P('blackcat', 5, 1200, 1200), imgAlt: 'Chú mèo đen Tiểu Bạch',
+      actions: UI.button({ label: 'Xem sản phẩm', size: 'lg', href: U('pages/san-pham.html') })
+    });
+
+    function storyRow(img, alt, title, text, flip) {
+      return '<div class="grid items-center gap-6 md:grid-cols-2 lg:gap-14" data-reveal>' +
+        '<div class="' + (flip ? 'md:order-2' : '') + ' aspect-video overflow-hidden rounded-2xl bg-primary-100">' + UI.img({ src: img, alt: alt }) + '</div>' +
+        '<div class="flex flex-col gap-3"><h2 class="text-2xl font-extrabold text-neutral-800">' + title + '</h2><p class="text-base text-neutral-700 max-w-prose">' + text + '</p></div></div>';
+    }
+    var story = UI.section({ tone: 'white', body: '<div class="flex flex-col gap-12 lg:gap-20">' +
+      storyRow(P('blackcat', 210, 1200, 675), 'Tiểu Bạch lúc nhỏ', 'Một chú mèo kén ăn', 'Tiểu Bạch về nhà khi mới hai tháng tuổi. Bé kén ăn, hay đau bụng mỗi lần đổi pate. Chúng mình đọc từng bảng thành phần, thử từng loại hạt để tìm món hợp với bé.', false) +
+      storyRow(P('petshop', 211, 1200, 675), 'Góc cửa hàng Tiểu Bạch', 'Từ góc nhà thành cửa hàng', 'Bạn bè nuôi chó mèo hỏi mua theo, rồi hàng xóm cũng ghé. Thế là cửa hàng nhỏ ở Tân Phú ra đời, chỉ bán hàng chính hãng, hạn dùng còn dài và được tư vấn tận tình.', true) +
+      '</div>' });
+
+    var cards = [
+      ['utensils', 'Nguyên liệu tự nhiên', 'Bí đỏ, đậu gà, yến mạch, cà rốt. Không chất bảo quản, không muối, hành, tỏi.'],
+      ['heart', 'Làm tay theo đơn', 'Mỗi hũ được nấu sau khi cửa hàng gọi xác nhận đơn, ghi ngày làm trên nắp.'],
+      ['shield-check', 'Giấy chứng nhận ATTP', 'Cơ sở đã được cấp giấy chứng nhận an toàn thực phẩm, có bản chụp ở trang sản phẩm.']
+    ];
+    var pateSec = UI.section({ tone: 'mint', title: 'Vì sao có pate chay tự làm?', link: { label: 'Xem pate chay', href: U('pages/san-pham.html?nhom=pate-chay') }, body:
+      '<p class="mb-6 max-w-prose text-base text-neutral-700" data-reveal>Pate công nghiệp làm Tiểu Bạch đau bụng, nên chúng mình tự nấu. Boss ăn hết sạch bát, khách quen hỏi mua, và pate chay trở thành món riêng của cửa hàng.</p>' +
+      '<div class="grid gap-4 md:grid-cols-3" data-reveal>' + cards.map(function (c, i) {
+        return UI.card({ cls: i === 1 ? 'md:-translate-y-3' : '', body: '<span class="inline-flex size-12 items-center justify-center rounded-full bg-secondary-100 text-secondary-700">' + ic(c[0]) + '</span><h3 class="mt-3 text-lg font-bold text-neutral-800">' + c[1] + '</h3><p class="mt-1 text-sm text-neutral-700">' + c[2] + '</p>' });
+      }).join('') + '</div>' });
+
+    var gallery = UI.section({ title: 'Ghé cửa hàng', body: '<div class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4" data-reveal>' + photos.map(function (p, i) {
+      return '<button type="button" data-zoom=\'' + UI.esc(JSON.stringify(photos)) + '\' data-zoom-i="' + i + '" class="' + (i === 0 ? 'md:col-span-2 md:row-span-2 ' : '') + 'aspect-square overflow-hidden rounded-xl bg-primary-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600" aria-label="Phóng to ảnh cửa hàng ' + (i + 1) + '">' + UI.img({ src: p, alt: 'Ảnh cửa hàng ' + (i + 1), cls: 'transition duration-500 hover:scale-105' }) + '</button>';
+    }).join('') + '</div>' });
+
+    var cta = '<div class="mx-auto max-w-content px-4 pb-4 md:px-6 lg:px-8" data-reveal>' + UI.ctaSection({
+      title: 'Boss nhà bạn đang chờ món ngon', text: 'Xem hạt, pate, bánh thưởng hoặc ghé cửa hàng ở Tân Phú để được tư vấn trực tiếp.',
+      actions: UI.button({ label: 'Xem sản phẩm', size: 'lg', href: U('pages/san-pham.html'), full: true, cls: 'sm:w-auto' }) + UI.button({ label: 'Ghé cửa hàng', size: 'lg', variant: 'outline', href: U('pages/lien-he.html'), full: true, cls: 'sm:w-auto' })
+    }) + '</div>';
+
+    main.insertAdjacentHTML('beforeend', hero + story + pateSec + gallery + cta);
+  });
+  </script>
+</body>
+</html>

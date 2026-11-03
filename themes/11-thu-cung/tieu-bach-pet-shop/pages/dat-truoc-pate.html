@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt trước pate chay · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-003" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-003 Đặt trước pate chay (1 trang): nhắc điều kiện → vị đã chọn → người nhận → cách nhận → ghi chú → đồng ý điều kiện → "Gửi đặt trước".
+   * Tạo DOC-BOOK-PATE_ORDER: mã PC-{YYYY}-{00000}, tiền cọc 200.000đ, ngày giao dự kiến = hôm nay + 7 ngày. ?id=&bien-the=&so-hu= */
+  (function () {
+    var role = Perm.role();
+    var back = 'pages/dat-truoc-pate.html' + location.search;
+    if (!role || role === 'ROLE-01') { location.replace(App.loginHref(back)); return; }
+    var p = App.product(App.param('id') || 'pc1');
+    if (role === 'ROLE-02' && (!p || !p.la_pate || p.trang_thai !== 'DANG_BAN')) { location.replace(Perm.url('pages/san-pham.html?nhom=pate-chay')); return; }
+
+    Layout.mount({ title: 'Đặt trước pate chay', breadcrumb: [['Pate chay tự làm', 'pages/san-pham.html?nhom=pate-chay'], [p ? p.ten : 'Pate chay', p ? App.productHref(p) : null], ['Đặt trước']] }, function (main) {
+      var U = Perm.url, esc = UI.esc, ic = UI.icon, S = MOCK.settings, R = UI.rules;
+      var cus = App.customer(), me = App.me(), MAX = S.pateCap;
+      var addrs = DemoStore.list('addresses').filter(function (a) { return a.customerId === cus.id; });
+      var def = addrs.filter(function (a) { return a.mac_dinh; })[0] || addrs[0];
+      var first = p.variants.filter(function (v) { return v.id === App.param('bien-the'); })[0] || p.variants[0];
+      var lines = [{ variantId: first.id, qty: Math.max(1, Math.min(MAX, +App.param('so-hu') || 1)) }];
+      var due = new Date(); due.setDate(due.getDate() + S.pateDays); due.setHours(10, 0, 0, 0);
+      var st = { cach_nhan: 'GIAO', addrId: def ? def.id : 'new' };
+
+      function v(id) { return p.variants.filter(function (x) { return x.id === id; })[0]; }
+      function sub() { return lines.reduce(function (s, l) { return s + v(l.variantId).gia * l.qty; }, 0); }
+      function jars() { return lines.reduce(function (s, l) { return s + l.qty; }, 0); }
+      function addrText(a) { return a ? [a.chi_tiet, a.phuong, a.quan, a.tinh].filter(Boolean).join(', ') : ''; }
+
+      main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-6 pt-5 md:px-6 lg:px-8">' +
+        UI.pageHeader({ title: 'Đặt trước pate chay', description: esc(p.ten) }) +
+        '<div class="mb-6">' + UI.patePolicyNotice('alert', { title: 'Pate chay làm theo đơn, bạn lưu ý nhé', date: UI.fmt.date(due.toISOString()) }) + '</div>' +
+        '<div class="mb-4 lg:hidden" data-sum-m></div>' +
+        '<div class="grid gap-6 lg:grid-cols-12"><form novalidate class="lg:col-span-7 flex min-w-0 flex-col gap-6" data-form>' + UI.skeleton(6) + '</form>' +
+        '<aside class="hidden lg:block lg:col-span-5"><div class="sticky top-24" data-sum></div></aside></div></div>');
+      var form = main.querySelector('[data-form]');
+
+      function paintSummary() {
+        var o = { title: 'Tóm tắt đặt trước', rows: lines.map(function (l) { return { label: v(l.variantId).ten + ' × ' + l.qty, value: UI.fmt.money(v(l.variantId).gia * l.qty) }; }).concat([
+          { label: 'Tạm tính (' + jars() + ' hũ)', value: UI.fmt.money(sub()) },
+          { label: 'Phí giao hàng', value: '<span class="font-semibold text-neutral-600">Cửa hàng báo khi gọi xác nhận</span>' }]),
+          total: sub(), note: '<div class="flex flex-col gap-2 rounded-lg bg-warning-50 p-3 text-sm text-warning-700"><p class="flex justify-between gap-2"><span>Tiền cọc sau khi cửa hàng xác nhận</span><b class="tabular-nums">' + UI.fmt.money(S.deposit) + '</b></p><p class="flex justify-between gap-2"><span>Ngày giao dự kiến</span><b>' + UI.fmt.date(due.toISOString()) + '</b></p></div>' };
+        main.querySelector('[data-sum]').innerHTML = UI.orderSummary(o);
+        o.collapsible = true; main.querySelector('[data-sum-m]').innerHTML = UI.orderSummary(o);
+      }
+      function paintLines() {
+        var box = form.querySelector('[data-lines]');
+        UI.lineItems(box, { rows: lines.map(function (l, i) { return { i: i, v: v(l.variantId), qty: l.qty }; }), columns: [
+          { key: 'img', label: 'Vị', type: 'custom', width: 'w-16', render: function (r) { return '<span class="block size-12 overflow-hidden rounded-md bg-neutral-100">' + UI.img({ src: r.v.anh || p.anh[0], alt: '' }) + '</span>'; } },
+          { key: 'name', label: 'Tên vị', type: 'custom', render: function (r) { return '<span class="font-bold text-neutral-800">' + esc(r.v.ten) + '</span>'; } },
+          { key: 'price', label: 'Đơn giá', type: 'custom', align: 'right', render: function (r) { return UI.fmt.money(r.v.gia); } },
+          { key: 'qty', label: 'Số hũ', type: 'custom', render: function (r) { return UI.quantityStepper({ value: r.qty, max: MAX, size: 'sm', limitMsg: 'Số hũ phải từ 1 đến ' + MAX, label: 'Số hũ ' + r.v.ten, attrs: { 'data-pl-qty': r.i } }); } },
+          { key: 'total', label: 'Thành tiền', type: 'custom', align: 'right', render: function (r) { return '<b class="tabular-nums">' + UI.fmt.money(r.v.gia * r.qty) + '</b>'; } },
+          { key: 'del', label: 'Xóa', type: 'custom', render: function (r) { return UI.iconButton({ icon: 'trash-2', label: 'Xóa vị ' + r.v.ten, size: 'sm', attrs: { 'data-pl-del': r.i } }); } }] });
+        var rest = p.variants.filter(function (x) { return !lines.some(function (l) { return l.variantId === x.id; }); });
+        form.querySelector('[data-add-v]').innerHTML = rest.length ? '<div class="flex items-end gap-2"><div class="min-w-0 flex-1">' + UI.field({ name: 'them_vi', label: 'Thêm vị khác', type: 'select', placeholder: 'Chọn vị…', options: rest.map(function (x) { return { value: x.id, label: x.ten + ' · ' + UI.fmt.money(x.gia) }; }) }) + '</div>' + UI.button({ label: 'Thêm', icon: 'plus', variant: 'outline', attrs: { 'data-add-line': '' } }) + '</div>' : '';
+        paintSummary();
+      }
+      function addrFields() {
+        var L = MOCK.locations;
+        return '<div class="grid gap-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 lg:grid-cols-2" data-new-addr>' +
+          UI.field({ name: 'tinh', label: 'Tỉnh / thành', type: 'select', required: true, placeholder: 'Chọn tỉnh / thành', options: Object.keys(L), value: 'TP. Hồ Chí Minh' }) +
+          UI.field({ name: 'quan', label: 'Quận / huyện', type: 'select', required: true, placeholder: 'Chọn quận / huyện', options: Object.keys(L['TP. Hồ Chí Minh']) }) +
+          UI.field({ name: 'phuong', label: 'Phường / xã', type: 'select', required: true, placeholder: 'Chọn phường / xã', options: [], disabled: true }) +
+          UI.field({ name: 'chi_tiet', label: 'Số nhà, đường', required: true, maxlength: 200 }) + '</div>';
+      }
+
+      setTimeout(function () {
+        var opts = addrs.map(function (a) { return { value: a.id, label: a.nguoi_nhan + ' · ' + a.so_dien_thoai + (a.mac_dinh ? ' (mặc định)' : ''), desc: esc(addrText(a)) }; }).concat([{ value: 'new', label: '+ Thêm địa chỉ mới', desc: 'Nhập địa chỉ giao hàng mới' }]);
+        form.innerHTML = '<div data-form-summary></div>' +
+          UI.card({ title: 'Pate bạn chọn', body: '<div data-lines></div><div class="mt-4" data-add-v></div><p class="mt-2 text-sm text-neutral-600">Đổi sang sản phẩm pate chay khác? <a class="font-bold text-primary-700 hover:underline" href="' + U('pages/san-pham.html?nhom=pate-chay') + '">Xem pate chay</a></p>' }) +
+          UI.card({ body: UI.fieldGroup({ title: 'Người nhận', columns: 2, fields: [
+            UI.field({ name: 'ho_ten', label: 'Họ tên người nhận', required: true, value: cus.ho_ten, maxlength: 100, cls: 'lg:col-span-2' }),
+            UI.field({ name: 'sdt', label: 'Số điện thoại', type: 'tel', required: true, value: cus.so_dien_thoai, maxlength: 10 }),
+            UI.field({ name: 'email', label: 'Email', type: 'email', required: true, value: cus.email })] }) }) +
+          UI.card({ body: UI.fieldGroup({ title: 'Cách nhận hàng', description: 'Phí giao cho đơn pate chay cửa hàng sẽ báo khi gọi xác nhận.', fields: [
+            UI.field({ name: 'cach_nhan', type: 'radio-cards', value: 'GIAO', options: [{ value: 'GIAO', label: 'Giao tận nơi', icon: 'truck' }, { value: 'TU_LAY', label: 'Nhận tại cửa hàng', icon: 'store', desc: esc(S.address) }] }),
+            '<div data-addr class="flex flex-col gap-3">' + UI.field({ name: 'addr', label: 'Địa chỉ giao hàng', type: 'radio-cards', cols: 1, required: true, value: st.addrId, options: opts }) + '<div data-addr-new class="' + (st.addrId === 'new' ? '' : 'hidden') + '">' + addrFields() + '</div></div>'] }) }) +
+          UI.card({ body: UI.field({ name: 'ghi_chu', label: 'Ghi chú', type: 'textarea', rows: 3, maxlength: 500, required: true, placeholder: 'Ví dụ: Boss nhà mình 4kg, hơi kén vị cà rốt', hint: 'Cửa hàng đang xác nhận ghi chú có bắt buộc hay không.' }) }) +
+          UI.card({ body: UI.field({ name: 'dong_y', type: 'checkbox', label: 'Tôi đã đọc và đồng ý điều kiện đặt pate chay', required: true }) }) +
+          '<div class="flex justify-end">' + UI.button({ label: 'Gửi đặt trước', icon: 'calendar-heart', size: 'lg', attrs: { 'data-submit': '', 'data-permission': 'BOOK.MY_ORDER.CREATE' } }) + '</div>';
+        paintLines();
+        UI.stickyBar('<div class="flex items-center gap-3"><div class="flex-1"><p class="text-xs text-neutral-600">Giao dự kiến</p><p class="text-base font-extrabold">' + UI.fmt.date(due.toISOString()) + '</p></div>' + UI.button({ label: 'Gửi đặt trước', attrs: { 'data-submit': '' } }) + '</div>', { watch: form.querySelector('[data-submit]') });
+      }, 400);
+
+      form.addEventListener('qtychange', function (e) { var q = e.target.closest('[data-pl-qty]'); if (q) { lines[+q.getAttribute('data-pl-qty')].qty = e.detail.value; paintLines(); } });
+      form.addEventListener('change', function (e) {
+        var n = e.target.name;
+        if (n === 'cach_nhan') { st.cach_nhan = e.target.value; form.querySelector('[data-addr]').classList.toggle('hidden', st.cach_nhan === 'TU_LAY'); }
+        if (n === 'addr') { st.addrId = e.target.value; form.querySelector('[data-addr-new]').classList.toggle('hidden', st.addrId !== 'new'); }
+        if (n === 'quan' || n === 'tinh') {
+          var d = UI.formData(form), L = MOCK.locations;
+          if (n === 'tinh') { form.querySelector('[name=quan]').innerHTML = '<option value="">Chọn quận / huyện</option>' + Object.keys(L[d.tinh] || {}).map(function (q) { return '<option>' + esc(q) + '</option>'; }).join(''); }
+          var ph = form.querySelector('[name=phuong]'), list = (L[d.tinh] || {})[n === 'tinh' ? '' : d.quan] || [];
+          ph.innerHTML = '<option value="">Chọn phường / xã</option>' + list.map(function (x) { return '<option>' + esc(x) + '</option>'; }).join(''); ph.disabled = !list.length;
+        }
+        if (n === 'dong_y') UI.setError(form, 'dong_y', '');
+      });
+      document.addEventListener('click', function (e) {
+        var d = e.target.closest('[data-pl-del]');
+        if (d) { if (lines.length <= 1) { UI.toast('Vui lòng chọn ít nhất 1 hũ', 'error'); return; } lines.splice(+d.getAttribute('data-pl-del'), 1); paintLines(); return; }
+        if (e.target.closest('[data-add-line]')) { var s = form.querySelector('[name=them_vi]'); if (!s || !s.value) { UI.setError(form, 'them_vi', 'Vui lòng chọn loại / khối lượng'); return; } lines.push({ variantId: s.value, qty: 1 }); paintLines(); return; }
+        var b = e.target.closest('[data-submit]'); if (b && !b.disabled) submit(b);
+      });
+
+      function submit(btn) {
+        var rules = {
+          ho_ten: [R.required('Vui lòng nhập Họ tên người nhận'), R.len(2, 100, 'Vui lòng nhập Họ tên người nhận')],
+          sdt: [R.required('Vui lòng nhập Số điện thoại'), R.phone('Số điện thoại không hợp lệ')],
+          email: [R.required('Vui lòng nhập Email'), R.email('Email không hợp lệ')],
+          ghi_chu: [R.required('Vui lòng nhập Ghi chú')],
+          dong_y: [R.custom(function (x) { return x === true; }, 'Vui lòng xác nhận đã đọc điều kiện đặt pate chay')]
+        };
+        if (st.cach_nhan !== 'TU_LAY' && st.addrId === 'new') { var m = 'Vui lòng nhập Địa chỉ giao hàng'; rules.tinh = [R.required(m)]; rules.quan = [R.required(m)]; rules.phuong = [R.required(m)]; rules.chi_tiet = [R.required(m)]; }
+        if (jars() < 1) { UI.toast('Vui lòng chọn ít nhất 1 hũ', 'error'); return; }
+        if (!UI.validate(form, rules)) return;
+        var d = UI.formData(form);
+        var a = st.cach_nhan === 'TU_LAY' ? null : st.addrId === 'new' ? { tinh: d.tinh, quan: d.quan, phuong: d.phuong, chi_tiet: d.chi_tiet } : addrs.filter(function (x) { return x.id === st.addrId; })[0];
+        UI.setLoading(btn, true);
+        setTimeout(function () {
+          try {
+            var doc = 'DOC-BOOK-PATE_ORDER', now = new Date().toISOString();
+            var code = Workflow.nextCode(doc, DemoStore.list('orders').map(function (o) { return o.code; }));
+            var rec = {
+              id: code.toLowerCase(), code: code, docId: doc, loai_don: 'PATE_CHAY', state: Workflow.initial(doc),
+              history: [{ at: now, role: 'ROLE-02', roleName: Perm.roleName(), by: d.ho_ten, event: 'Tạo mới', from: null, to: Workflow.initial(doc), note: 'Đặt trước trên website' }],
+              ownerId: me.id, customerId: cus.id, teamId: me.teamId, branchId: me.branchId, ho_ten_nhan: d.ho_ten, so_dien_thoai_nhan: d.sdt, email: d.email,
+              cach_giao: st.cach_nhan === 'TU_LAY' ? 'TU_LAY' : (S.freeDistricts.indexOf(a.quan) >= 0 ? 'TU_GIAO' : 'DVVC'), quan: a ? a.quan : '', dia_chi_giao: addrText(a),
+              phi_ship: 0, cua_hang_chiu_ship: false, don_vi_van_chuyen: '', ma_van_don: '', cach_thanh_toan: 'CHUYEN_KHOAN', trang_thai_thanh_toan: 'CHUA_THANH_TOAN', payments: [], refunds: [],
+              items: lines.map(function (l) { var x = v(l.variantId); return { productId: p.id, variantId: x.id, ten_hang: p.ten, ten_bien_the: x.ten, don_gia: x.gia, so_luong: l.qty, anh: x.anh }; }),
+              tam_tinh: sub(), giam_gia: 0, ma_giam_gia: '', tong_cong: sub(), tien_coc: S.deposit, ngay_giao_du_kien: due.toISOString(),
+              ghi_chu: d.ghi_chu, yeu_cau_huy: null, bao_da_ck: null, tao_luc: now, thoi_diem_giao: null, diem: 0, diem_da_cong: false, return_id: null
+            };
+            DemoStore.insert('orders', rec);
+            location.href = U('pages/dat-hang-thanh-cong.html?id=' + rec.id);
+          } catch (err) { UI.setLoading(btn, false); UI.toast('Có lỗi xảy ra, vui lòng thử lại sau.', 'error'); }
+        }, 700);
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

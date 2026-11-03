@@ -1,0 +1,63 @@
+{
+  "slug": "japan-matsuri",
+  "name": "JAPAN MATSURI",
+  "projectType": "website",
+  "concept": {
+    "topic": "Web Quảng cáo du lịch khám phá các lễ hội Nhật Bản",
+    "brand": "JAPAN MATSURI",
+    "purpose": "Xây dựng website giới thiệu du lịch Nhật Bản với chủ đề khám phá và trực tiếp trải nghiệm các lễ hội truyền thống Nhật Bản (Matsuri). Website lấy cảm hứng từ cách Travel Japan kể chuyện về văn hóa, thiên nhiên, vùng miền và trải nghiệm địa phương, kết hợp phong cách thiết kế du lịch hiện đại, giàu hình ảnh.\n\nTên website: JAPAN MATSURI\n\nThông điệp: “Chạm vào văn hóa Nhật Bản qua từng mùa lễ hội.”\n\nNgôn ngữ: 100% tiếng Việt.\n\nMục tiêu: Giới thiệu lễ hội, địa điểm tổ chức, nét văn hóa đặc trưng và gợi ý trải nghiệm cho du khách.\n\nPhạm vi: Chỉ xây dựng 3 trang chính, không tạo thêm trang ngoài yêu cầu.",
+    "preset": "auto",
+    "motion": "1",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Phong cách thiết kế\n\nPhong cách du lịch Nhật Bản hiện đại, kết hợp văn hóa truyền thống và tạp chí du lịch cao cấp.\n\nMàu sắc chủ đạo: đỏ son Nhật Bản, trắng ngà, đen mực và màu be giấy washi.\n\nSử dụng hình ảnh chất lượng cao về đèn lồng, hoa anh đào, đường phố Kyoto, đoàn rước lễ hội, pháo hoa và trang phục truyền thống.\n\nBố cục thoáng, typography rõ ràng, tiêu đề lớn và hình ảnh nổi bật.\n\nAnimation vừa phải: hiệu ứng xuất hiện khi cuộn trang, chuyển ảnh nhẹ, hover trên thẻ và chuyển cảnh mượt.\n\nResponsive trên desktop, tablet và mobile.\n\n3. Cấu trúc website gồm 3 trang\n\nTrang 1: Trang chủ /\n\nMục tiêu: Tạo ấn tượng ngay từ đầu và truyền cảm hứng khám phá lễ hội Nhật Bản.\n\nCác section:\n\nHero: Hình ảnh lễ hội Nhật Bản ban đêm với đèn lồng hoặc pháo hoa, tiêu đề “Nhật Bản – Nơi mỗi mùa đều có một lễ hội”, đoạn giới thiệu ngắn và nút “Khám phá lễ hội”.\n\nLễ hội nổi bật: Hiển thị các thẻ lễ hội như Gion Matsuri, Aomori Nebuta, Awa Odori và Sapporo Snow Festival.\n\nKhám phá theo mùa: Bốn nhóm Xuân, Hạ, Thu, Đông, mỗi nhóm có hình ảnh, mô tả và liên kết đến danh sách lễ hội tương ứng.\n\nTrải nghiệm văn hóa: Giới thiệu hoạt động như mặc yukata, thưởng thức món ăn đường phố, xem diễu hành, tham gia điệu múa truyền thống và ngắm pháo hoa.\n\nKhám phá vùng miền: Gợi ý những khu vực tiêu biểu như Kyoto, Tokyo, Aomori, Tokushima và Hokkaido.\n\nFooter: Logo, điều hướng và thông tin giới thiệu website.\n\nTrang 2: Khám phá lễ hội /le-hoi\n\nMục tiêu: Giúp người dùng tìm kiếm và lựa chọn lễ hội phù hợp với sở thích, mùa du lịch và địa điểm.\n\nCác thành phần:\n\nTiêu đề: “Tìm lễ hội dành cho chuyến đi của bạn”.\n\nThanh tìm kiếm theo tên lễ hội hoặc địa điểm.\n\nBộ lọc theo mùa: Xuân, Hạ, Thu, Đông.\n\nBộ lọc theo loại trải nghiệm: lễ hội truyền thống, diễu hành, lễ hội ánh sáng, pháo hoa, lễ hội tuyết và lễ hội hoa.\n\nDanh sách lễ hội hiển thị bằng các thẻ hình ảnh.\n\nMỗi thẻ gồm tên lễ hội, địa điểm, thời gian thường tổ chức, mô tả ngắn và nút “Xem chi tiết”.\n\nCó trạng thái khi không tìm thấy kết quả.\n\nCác lễ hội mẫu có thể sử dụng: Gion Matsuri ở Kyoto, Aomori Nebuta ở Aomori, Awa Odori ở Tokushima, Sapporo Snow Festival ở Hokkaido và Hirosaki Cherry Blossom Festival ở Aomori.\n\nTrang 3: Chi tiết lễ hội /le-hoi/:slug\n\nMục tiêu: Giới thiệu sâu về một lễ hội và giúp người dùng hình dung trải nghiệm thực tế.\n\nSử dụng một mẫu trang chi tiết có thể tái sử dụng cho mọi lễ hội.\n\nCác section:\n\nẢnh bìa lớn: Tên lễ hội, địa điểm và thời gian tổ chức thường lệ.\n\nCâu chuyện lễ hội: Nguồn gốc, ý nghĩa văn hóa và giá trị truyền thống.\n\nĐiểm nổi bật: Các hoạt động, nghi thức, màn trình diễn hoặc món ăn đặc trưng.\n\nTrải nghiệm dành cho du khách: Những hoạt động người tham dự có thể quan sát hoặc tham gia nếu được phép.\n\nThông tin chuyến đi: Địa điểm, cách di chuyển khái quát, thời gian phù hợp và lưu ý khi tham dự.\n\nLễ hội liên quan: Gợi ý các lễ hội khác có cùng mùa hoặc khu vực.\n\nNút quay lại danh sách lễ hội và điều hướng về trang chủ.\n\nThông tin ngày tổ chức cụ thể phải được kiểm tra theo từng năm. Nếu chưa xác minh được lịch chính thức, hãy ghi rõ “thời gian thường tổ chức” thay vì khẳng định ngày diễn ra.\n\n4. Điều hướng và chức năng\n\nMenu chính gồm:\n\nTrang chủ\n\nKhám phá lễ hội\n\nGiới thiệu\n\nYêu cầu chức năng:\n\nĐiều hướng giữa đủ 3 trang.\n\nNút trên trang chủ dẫn đến trang danh sách lễ hội.\n\nNhấn thẻ lễ hội để mở đúng trang chi tiết tương ứng.\n\nTìm kiếm và bộ lọc trên trang /le-hoi phải hoạt động với dữ liệu mẫu.\n\nCó nút quay lại danh sách và các liên kết đến lễ hội liên quan.\n\nSử dụng dữ liệu mẫu có cấu trúc rõ ràng để dễ bổ sung nội dung sau này.\n\nChưa cần backend, đăng nhập, thanh toán hoặc hệ thống đặt tour.\n\n5. Yêu cầu nội dung và hình ảnh\n\nViết toàn bộ nội dung giao diện bằng tiếng Việt tự nhiên, dễ đọc.\n\nƯu tiên kể chuyện về văn hóa, con người và trải nghiệm địa phương, không chỉ liệt kê điểm đến.\n\nKhông bịa lịch sử, nguồn gốc, ngày tổ chức hoặc thông tin di chuyển.\n\nKhông sử dụng hình ảnh có bản quyền khi chưa được phép; ưu tiên ảnh được cấp phép sử dụng hoặc hình ảnh có nguồn rõ ràng.\n\nNội dung mẫu cần đủ chân thực để trình bày giao diện, đồng thời dễ thay thế bằng dữ liệu đã xác minh.\n\n6. Tiêu chí hoàn thành\n\nTạo website hoàn chỉnh gồm đúng 3 trang chính, giao diện thống nhất, có liên kết điều hướng và chức năng tìm kiếm, lọc lễ hội hoạt động được. Ưu tiên chất lượng giao diện, khả năng sử dụng và cấu trúc code rõ ràng thay vì tạo quá nhiều hiệu ứng phức tạp.\n\nKhông xây dựng website thương mại điện tử. Không thêm trang đặt vé hoặc thanh toán. Tập trung vào cảm hứng du lịch, khám phá văn hóa và trải nghiệm lễ hội Nhật Bản.",
+    "mood": "",
+    "reference": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-16T08:42:59.696Z",
+  "updatedAt": "2026-10-16T09:03:00.969Z",
+  "screen": "done",
+  "request": "Web Quảng cáo du lịch khám phá các lễ hội Nhật Bản",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\japan-matsuri\\prototype",
+    "builtAt": "2026-10-16T09:02:51.969Z",
+    "pages": [
+      "index.html",
+      "le-hoi-chi-tiet.html",
+      "le-hoi.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "le-hoi-chi-tiet.html": [],
+      "le-hoi.html": []
+    }
+  },
+  "job": {
+    "id": "734b7c94-4c9d-4225-b471-0e077625932d",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\japan-matsuri\\prototype",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-16T09:03:00.954Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 5,
+    "screenshots": 9
+  }
+}

@@ -1,0 +1,45 @@
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-stone bg-ivory/95 backdrop-blur-sm transition-shadow duration-300 [&.is-scrolled]:shadow-[0_8px_30px_-18px_rgba(48,58,45,.35)]">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="flex flex-col leading-none text-forest">
+      <span class="font-display text-[1.65rem] font-semibold tracking-[0.08em]">ROOTS</span>
+      <span class="mt-0.5 text-[0.62rem] font-bold uppercase tracking-[0.32em] text-olive">Organic Hair</span>
+      <span class="sr-only">ROOTS ORGANIC HAIR</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Menu chính" data-en-aria-label="Main menu">
+      <a href="{{root}}index.html" class="relative py-2 text-[0.95rem] font-medium text-forest/75 transition-colors duration-300 hover:text-forest aria-[current=page]:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-olive after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"><span data-en="Home">Trang chủ</span></a>
+      <a href="{{root}}pages/services.html" class="relative py-2 text-[0.95rem] font-medium text-forest/75 transition-colors duration-300 hover:text-forest aria-[current=page]:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-olive after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"><span data-en="Services">Dịch vụ</span></a>
+      <a href="{{root}}pages/journal.html" class="relative py-2 text-[0.95rem] font-medium text-forest/75 transition-colors duration-300 hover:text-forest aria-[current=page]:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-olive after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Hair Journal</a>
+      <a href="{{root}}pages/studio.html" class="relative py-2 text-[0.95rem] font-medium text-forest/75 transition-colors duration-300 hover:text-forest aria-[current=page]:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-olive after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"><span data-en="Our Studio">Về Studio</span></a>
+    </nav>
+
+    <div class="flex items-center gap-3 sm:gap-5">
+      <div class="hidden items-center gap-1 text-sm text-forest/55 sm:flex" role="group" aria-label="Ngôn ngữ" data-en-aria-label="Language">
+        <button type="button" data-lang-set="vi" class="min-h-[44px] px-1.5 transition-colors duration-300 hover:text-forest">VI</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" class="min-h-[44px] px-1.5 transition-colors duration-300 hover:text-forest">EN</button>
+      </div>
+      <button type="button" data-modal-open="dat-lich" class="hidden min-h-[44px] items-center rounded-full bg-olive px-6 text-sm font-bold text-ivory transition duration-300 hover:bg-olive-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive sm:inline-flex"><span data-en="Book a Visit">Đặt lịch</span></button>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone text-forest transition-colors duration-300 hover:bg-stone lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-[1.75rem] border border-stone bg-ivory p-6 shadow-[0_30px_80px_-30px_rgba(48,58,45,.45)] lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-en-aria-label="Mobile menu">
+      <a href="{{root}}index.html" class="border-b border-stone py-4 font-display text-3xl text-forest aria-[current=page]:text-olive"><span data-en="Home">Trang chủ</span></a>
+      <a href="{{root}}pages/services.html" class="border-b border-stone py-4 font-display text-3xl text-forest aria-[current=page]:text-olive"><span data-en="Services">Dịch vụ</span></a>
+      <a href="{{root}}pages/journal.html" class="border-b border-stone py-4 font-display text-3xl text-forest aria-[current=page]:text-olive">Hair Journal</a>
+      <a href="{{root}}pages/studio.html" class="py-4 font-display text-3xl text-forest aria-[current=page]:text-olive"><span data-en="Our Studio">Về Studio</span></a>
+    </nav>
+    <div class="mt-6 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-1 text-base text-forest/60" role="group" aria-label="Ngôn ngữ" data-en-aria-label="Language">
+        <button type="button" data-lang-set="vi" class="min-h-[44px] px-2">VI</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" class="min-h-[44px] px-2">EN</button>
+      </div>
+      <button type="button" data-modal-open="dat-lich" class="inline-flex min-h-[48px] items-center rounded-full bg-olive px-7 text-sm font-bold text-ivory"><span data-en="Book a Visit">Đặt lịch</span></button>
+    </div>
+  </div>
+</header>

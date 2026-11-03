@@ -1,0 +1,41 @@
+<header id="top" data-header="shrink" class="group fixed inset-x-0 top-0 z-40 text-ivory transition-colors duration-500 [&.is-scrolled]:bg-ivory/95 [&.is-scrolled]:text-royal [&.is-scrolled]:shadow-[0_1px_0_rgba(182,154,98,.45)] [&.is-scrolled]:backdrop-blur-sm">
+  <div class="header-veil pointer-events-none absolute inset-0 -z-10 h-28"></div>
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 transition-all duration-500 sm:px-6 lg:px-10 2xl:px-16 group-[.is-scrolled]:h-16">
+    <a href="{{root}}index.html" class="flex items-center gap-3" aria-label="THE GRAND AUREL" data-en-aria="THE GRAND AUREL, home">
+      <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-gold font-display text-[15px] italic text-gold">GA</span>
+      <span class="text-[13px] font-medium tracking-crest sm:text-sm">THE GRAND AUREL</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Điều hướng chính" data-en-aria="Main navigation">
+      <a href="{{root}}index.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="{{root}}pages/about.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Our Heritage">Di sản</a>
+      <a href="{{root}}pages/stays.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Suites &amp; Villas</a>
+      <a href="{{root}}pages/experiences.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <div class="hidden items-center border border-gold/60 text-xs tracking-[0.2em] sm:flex" role="group" aria-label="Ngôn ngữ" data-en-aria="Language">
+        <button type="button" data-lang="vi" class="min-h-[40px] px-3 opacity-70 transition duration-300 hover:opacity-100 [&.is-active]:bg-gold [&.is-active]:text-royal-deep [&.is-active]:opacity-100">VI</button>
+        <button type="button" data-lang="en" class="min-h-[40px] px-3 opacity-70 transition duration-300 hover:opacity-100 [&.is-active]:bg-gold [&.is-active]:text-royal-deep [&.is-active]:opacity-100">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center lg:hidden" aria-label="Mở menu" data-en-aria="Open menu">
+        <span class="flex w-6 flex-col gap-[6px]"><span class="h-px w-full bg-current"></span><span class="h-px w-4 bg-current"></span><span class="h-px w-full bg-current"></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-gold/60 bg-ivory p-8 text-royal shadow-[0_24px_60px_rgba(27,42,65,.25)] lg:hidden">
+    <div class="rule-ornament mb-6"><i></i></div>
+    <nav class="flex flex-col gap-1 font-display text-3xl" aria-label="Menu điện thoại" data-en-aria="Mobile menu">
+      <a href="{{root}}index.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Home">Trang chủ</a>
+      <a href="{{root}}pages/about.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Our Heritage">Di sản</a>
+      <a href="{{root}}pages/stays.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink">Suites &amp; Villas</a>
+      <a href="{{root}}pages/experiences.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+    <div class="mt-8 flex items-center gap-3 text-xs tracking-[0.2em]">
+      <span class="text-espresso" data-en="Language">Ngôn ngữ</span>
+      <button type="button" data-lang="vi" class="min-h-[44px] border border-gold/60 px-4 [&.is-active]:bg-royal [&.is-active]:text-ivory">VI</button>
+      <button type="button" data-lang="en" class="min-h-[44px] border border-gold/60 px-4 [&.is-active]:bg-royal [&.is-active]:text-ivory">EN</button>
+    </div>
+  </div>
+</header>

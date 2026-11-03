@@ -1,0 +1,130 @@
+{
+  "brand": "ROOTS ORGANIC HAIR",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Khung ảnh vòm mềm như một chân tóc mọc lên, nối với nhau bằng đường kẻ mảnh Soft Stone như sợi tóc; mảng Olive Green đặt lệch sau ảnh tóc lớn trên nền Warm Ivory",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nuôi dưỡng vẻ đẹp tự nhiên của mái tóc",
+    "description": "Giao diện salon tóc theo phong cách tự nhiên, chăm sóc tóc cá nhân hóa, song ngữ Việt - Anh."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu triết lý salon, dẫn sang Dịch vụ, Hair Journal và Our Studio",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Rooted in Natural Beauty, mảng Olive lệch sau ảnh vòm" },
+        { "id": "marquee", "catalog": "editorial", "variant": "marquee-band", "source": "ai", "note": "Dải tên dịch vụ chạy chậm" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Healthy Hair, Thoughtfully Created + 3 giá trị" },
+        { "id": "featured-services", "catalog": "services", "variant": "features-alternate", "source": "ba", "note": "3 dịch vụ, ảnh lớn xen nội dung, link sang pages/services.html" },
+        { "id": "journal-preview", "catalog": "blog", "variant": "teaser-row", "source": "ba", "note": "3 bài mẫu, link sang pages/journal.html" },
+        { "id": "studio", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Gallery nhỏ, link sang pages/studio.html" },
+        { "id": "final-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Let Your Hair Feel Like Itself, có data-particles dust" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "woman natural brown hair outdoors", "file": "https://images.unsplash.com/photo-1769687209456-e110aac388b5?auto=format&fit=crop&w=1800&q=75", "status": "link" },
+        { "slot": "philosophy", "query": "brown hair texture", "file": "https://images.unsplash.com/photo-1602549179763-ce6c9df961b7?auto=format&fit=crop&w=1400&q=75", "status": "link" },
+        { "slot": "featured-services haircut", "query": "stylist cutting hair", "file": "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?auto=format&fit=crop&w=1400&q=75", "status": "link" },
+        { "slot": "featured-services treatment", "query": "woman hair salon care", "file": "https://images.unsplash.com/photo-1695527081848-1e46c06e6458?auto=format&fit=crop&w=1400&q=75", "status": "link" },
+        { "slot": "featured-services coloring", "query": "wavy brunette blonde hair", "file": "https://images.unsplash.com/photo-1785456283212-338f5bc44d50?auto=format&fit=crop&w=1400&q=75", "status": "link" },
+        { "slot": "journal-preview healthy", "query": "brown hair person", "file": "https://images.unsplash.com/photo-1517931465348-90458682a9a6?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "journal-preview haircut", "query": "brown bob haircut", "file": "https://images.unsplash.com/photo-1779350676620-fde279b1d023?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "journal-preview color", "query": "balayage hair woman", "file": "https://images.unsplash.com/photo-1605980766335-d3a41c7332a1?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "studio space", "query": "modern hair salon interior", "file": "https://images.unsplash.com/photo-1781450090585-1a511b7066d9?auto=format&fit=crop&w=1400&q=75", "status": "link" },
+        { "slot": "studio mirror", "query": "salon chair wooden vanity mirror", "file": "https://images.unsplash.com/photo-1790009419892-f6f3fd516fb2?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "studio stylist", "query": "stylist styling hair", "file": "https://images.unsplash.com/photo-1634449571017-5fecfd26ad76?auto=format&fit=crop&w=1200&q=75", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ & Bảng giá",
+      "purpose": "Trình bày 5 nhóm dịch vụ với mô tả, thời lượng, giá tham khảo; quy trình chăm sóc; ghi chú giá",
+      "sections": [
+        { "id": "services-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Care for Your Hair + điều hướng nhanh 5 nhóm" },
+        { "id": "service-menu", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "5 nhóm, danh sách biên tập + ảnh xen kẽ, nhãn Olive" },
+        { "id": "routine", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "Understand / Care / Maintain / Refresh, nền Olive, có data-particles dust" },
+        { "id": "pricing-note", "catalog": "pricing", "variant": "pricing-note", "source": "ba", "note": "Ghi chú giá tham khảo" },
+        { "id": "services-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "A Little More Care Goes a Long Way" }
+      ],
+      "images": [
+        { "slot": "services-hero", "query": "woman long brown hair", "file": "https://images.unsplash.com/photo-1780260411343-143d0cc26391?auto=format&fit=crop&w=1800&q=75", "status": "link" },
+        { "slot": "haircut", "query": "woman cutting hair salon", "file": "https://images.unsplash.com/photo-1647462741351-4e7a5e7317c7?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "coloring", "query": "balayage hair back", "file": "https://images.unsplash.com/photo-1554519934-e32b1629d9ee?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "treatment", "query": "shampoo bowl salon", "file": "https://images.unsplash.com/photo-1787880172059-1c52decb1ca9?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "scalp-care", "query": "hair wash salon", "file": "https://images.unsplash.com/photo-1648313143853-aa913f6ad44a?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "styling", "query": "blow dry round brush", "file": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "routine", "query": "hairbrush scissors tools", "file": "https://images.unsplash.com/photo-1595475884562-073c30d45670?auto=format&fit=crop&w=1200&q=75", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/journal.html",
+      "title": "Hair Journal",
+      "purpose": "Gallery kiểu tóc có bộ lọc + lightbox và 3 bài viết chăm sóc tóc mở rộng tại chỗ",
+      "sections": [
+        { "id": "journal-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "The Natural Hair Edit" },
+        { "id": "hair-gallery", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "12 ảnh, lọc All / Haircut / Color / Treatment, lightbox có trước / sau" },
+        { "id": "articles", "catalog": "blog", "variant": "detail-article", "source": "ba", "note": "3 bài mẫu, đọc thêm bằng accordion" },
+        { "id": "journal-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Find Your Natural Hair Rhythm, có data-particles dust" }
+      ],
+      "images": [
+        { "slot": "journal-hero", "query": "woman hair blowing wind", "file": "https://images.unsplash.com/photo-1633382148761-d56d55cee3cd?auto=format&fit=crop&w=1800&q=75", "status": "link" },
+        { "slot": "gallery Natural Layers", "query": "long wavy hair", "file": "https://images.unsplash.com/photo-1770576568718-6747e3d85de8?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Soft Waves", "query": "wavy hair woman", "file": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Chocolate Brown", "query": "long brown hair", "file": "https://images.unsplash.com/photo-1767611019582-de3ae991bfcf?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Caramel Balayage", "query": "balayage hair", "file": "https://images.unsplash.com/photo-1522664101602-c1e70bcc9996?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Beige Brown", "query": "long brown hair smile", "file": "https://images.unsplash.com/photo-1770918655203-ec089927d91e?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Healthy Hair Texture", "query": "brown hair texture", "file": "https://images.unsplash.com/photo-1560264641-1b5191cc63e2?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Natural Bob", "query": "bob haircut woman", "file": "https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Soft Curtain Bangs", "query": "woman holding hair", "file": "https://images.unsplash.com/photo-1617690825153-8bb0a8e3c911?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Glossy Long Hair", "query": "long glossy hair close up", "file": "https://images.unsplash.com/photo-1674553048338-03f6a90a68df?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Sunlit Short Cut", "query": "short brown hair sunlight", "file": "https://images.unsplash.com/photo-1759352675002-958a2cddf291?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Natural Curls", "query": "short curly brown hair", "file": "https://images.unsplash.com/photo-1788534931554-01cccde4ae84?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "gallery Soft Ash Tone", "query": "grey black hair color", "file": "https://images.unsplash.com/photo-1605980625600-88b46abafa8d?auto=format&fit=crop&w=1000&q=75", "status": "link" },
+        { "slot": "article healthy", "query": "brown hair person", "file": "https://images.unsplash.com/photo-1517931465348-90458682a9a6?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "article haircut", "query": "brown bob haircut", "file": "https://images.unsplash.com/photo-1779350676620-fde279b1d023?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "article color", "query": "balayage hair woman", "file": "https://images.unsplash.com/photo-1605980766335-d3a41c7332a1?auto=format&fit=crop&w=1200&q=75", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/studio.html",
+      "title": "Our Studio",
+      "purpose": "Câu chuyện, triết lý, đội stylist, không gian salon và thông tin ghé thăm (dữ liệu mẫu)",
+      "sections": [
+        { "id": "studio-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "A Space to Feel Naturally You, ảnh vòm lớn" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Không tự tạo lịch sử / giải thưởng" },
+        { "id": "values", "catalog": "features", "variant": "values-columns", "source": "ba", "note": "3 giá trị, nền Sage nhạt, có data-particles dust" },
+        { "id": "stylists", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "3 stylist dữ liệu mẫu" },
+        { "id": "inside", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "5 ảnh không gian, lightbox" },
+        { "id": "visit", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Không có form, ghi rõ dữ liệu mẫu" }
+      ],
+      "images": [
+        { "slot": "studio-hero", "query": "salon room chair sink plant", "file": "https://images.unsplash.com/photo-1695527081827-fdbc4e77be9b?auto=format&fit=crop&w=1800&q=75", "status": "link" },
+        { "slot": "story", "query": "haircut in front of mirror", "file": "https://images.unsplash.com/photo-1637308596973-231d1a9221f5?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "values", "query": "natural hair back", "file": "https://images.unsplash.com/photo-1650984698580-3c5d31d1b558?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "stylist 1", "query": "woman portrait smiling", "file": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=75", "status": "link" },
+        { "slot": "stylist 2", "query": "woman long hair portrait", "file": "https://images.unsplash.com/photo-1634510979979-4be6881d31bb?auto=format&fit=crop&w=900&q=75", "status": "link" },
+        { "slot": "stylist 3", "query": "curly hair portrait", "file": "https://images.unsplash.com/photo-1768247695735-e10baa73e917?auto=format&fit=crop&w=900&q=75", "status": "link" },
+        { "slot": "inside chair room", "query": "salon chair room plants", "file": "https://images.unsplash.com/photo-1695527081728-e3a42f0ce261?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "inside mirrors", "query": "salon chairs circular mirrors", "file": "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "inside wash area", "query": "salon wash basins", "file": "https://images.unsplash.com/photo-1637777269308-6a072f24e8a4?auto=format&fit=crop&w=1200&q=75", "status": "link" },
+        { "slot": "inside space (dùng lại từ trang chủ)", "query": "modern hair salon interior", "file": "https://images.unsplash.com/photo-1781450090585-1a511b7066d9?auto=format&fit=crop&w=1400&q=75", "status": "link" },
+        { "slot": "inside wooden vanity (dùng lại từ trang chủ)", "query": "salon chair wooden vanity", "file": "https://images.unsplash.com/photo-1790009419892-f6f3fd516fb2?auto=format&fit=crop&w=1200&q=75", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Dựng đúng 4 trang theo chú thích của BA (Home, Services, Hair Journal, Our Studio); 3 bài Hair Journal mở rộng tại chỗ bằng accordion thay vì trang chi tiết riêng (BA cho phép).",
+    "BA yêu cầu song ngữ VI / EN có bộ chuyển ngôn ngữ, ưu tiên hơn mục 'không tạo bộ chuyển ngôn ngữ' của concept: mặc định tiếng Việt (<html lang=\"vi\">), bản tiếng Anh lưu trong thuộc tính data-en và được site.js đổi tại chỗ, nhớ lựa chọn qua localStorage khi chuyển trang.",
+    "Font theo BA: Cormorant Garamond (tiêu đề) + Manrope (thân bài), thay Fraunces của preset; màu theo bảng 7 màu của BA (có alias tên màu preset trỏ về cùng mã).",
+    "Ghi chú giá hiển thị theo ngôn ngữ đang chọn (đủ cả 2 bản) để tránh trộn ngôn ngữ trên cùng màn hình.",
+    "Thư viện ảnh (openverse) lỗi quá thời gian chờ: toàn bộ ảnh dùng link Unsplash đã kiểm qua link_image; đạt giới hạn 40 link nên gallery Inside the Studio dùng lại 2 ảnh không gian từ trang chủ.",
+    "Bài Hair Journal ở trang chủ dùng cùng ảnh bìa với bài tương ứng trên trang Hair Journal (cùng một bài viết)."
+  ],
+  "limitations": [
+    "Nút Đặt lịch / Book a Visit chỉ mở cửa sổ minh họa với số điện thoại mẫu, chưa có hệ thống đặt lịch.",
+    "Địa chỉ, giờ mở cửa, điện thoại, email, mạng xã hội và hồ sơ stylist là dữ liệu mẫu, chưa xác minh.",
+    "Ảnh dùng link ngoài (Unsplash), cần mạng để hiển thị; nên thay bằng ảnh thật của salon."
+  ]
+}

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hỷ Sự — An Nam Ký Test</title>
+  <meta name="description" content="Hỷ Sự, bộ sưu tập áo dài cưới hỏi của An Nam Ký Test: áo dài cô dâu hồng phấn, áo dài chấm bi đỏ mận cho hội chị em bưng quả và áo dài gấm cho mẹ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-cream font-sans text-ink antialiased">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-transparent bg-cream/95">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="font-display text-xl tracking-tight text-ink sm:text-2xl">An Nam Ký <span class="italic text-wine">Test</span></a>
+    <nav aria-label="Điều hướng chính" class="hidden items-center gap-8 text-[15px] lg:flex xl:gap-10">
+      <a href="index.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Trang chủ</a>
+      <a href="about.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Câu chuyện</a>
+      <a href="collections.html" aria-current="page" class="link-run py-2 text-wine">Bộ sưu tập</a>
+      <a href="may-do.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">May đo</a>
+      <a href="journal.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Ghi chép</a>
+      <a href="contact.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Liên hệ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="contact.html#hen-may" class="hidden h-11 items-center bg-wine px-6 text-sm font-medium text-cream transition-colors duration-300 hover:bg-wine-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine active:scale-[.98] sm:inline-flex">Hẹn may đo</a>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center border border-line text-ink transition-colors duration-300 hover:border-wine hover:text-wine lg:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-line bg-cream p-6 lg:hidden">
+    <nav aria-label="Điều hướng trên điện thoại" class="flex flex-col font-display text-2xl">
+      <a href="index.html" class="border-b border-line py-3">Trang chủ</a>
+      <a href="about.html" class="border-b border-line py-3">Câu chuyện</a>
+      <a href="collections.html" aria-current="page" class="border-b border-line py-3 text-wine">Bộ sưu tập</a>
+      <a href="may-do.html" class="border-b border-line py-3">May đo</a>
+      <a href="journal.html" class="border-b border-line py-3">Ghi chép</a>
+      <a href="contact.html" class="py-3">Liên hệ</a>
+    </nav>
+    <a href="contact.html#hen-may" class="mt-6 flex h-12 items-center justify-center bg-wine text-sm font-medium text-cream">Hẹn may đo</a>
+  </div>
+</header>
+
+<main>
+  <section id="page-hero" data-section="page-hero" class="bg-cream">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pt-10 sm:px-6 lg:px-10 lg:pt-14 2xl:px-16">
+      <nav aria-label="Đường dẫn" class="text-sm text-muted">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li><a href="index.html" class="link-run hover:text-wine">Trang chủ</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="collections.html" class="link-run hover:text-wine">Bộ sưu tập</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" class="text-ink">Hỷ Sự</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-24 2xl:px-16">
+      <div class="flex flex-col justify-between lg:col-span-5">
+        <div>
+          <h1 data-reveal="up" class="pb-2 font-display text-[clamp(3.4rem,8vw,9rem)] leading-[1.02] tracking-tight">Hỷ <span class="italic text-wine">Sự</span></h1>
+          <p data-reveal="up" class="mt-6 max-w-md text-lg leading-relaxed text-muted">Áo dài cho ngày đám hỏi: cô dâu, mẹ hai bên và cả hội chị em bưng quả, may cùng một tinh thần.</p>
+        </div>
+        <dl data-reveal="up" class="mt-12 grid grid-cols-2 gap-6 text-sm">
+          <div class="stitch pt-3"><dt class="text-muted">Mùa</dt><dd class="mt-1 font-display text-lg">Mùa cưới 2026</dd></div>
+          <div class="stitch pt-3"><dt class="text-muted">Số mẫu</dt><dd class="mt-1 font-display text-lg">7 mẫu</dd></div>
+          <div class="stitch pt-3"><dt class="text-muted">Chất liệu</dt><dd class="mt-1 font-display text-lg">Lụa, voan, gấm</dd></div>
+          <div class="stitch pt-3"><dt class="text-muted">Thời gian may</dt><dd class="mt-1 font-display text-lg">3 đến 5 tuần</dd></div>
+        </dl>
+      </div>
+      <figure data-reveal="fade" class="lg:col-span-7">
+        <div class="aspect-[3/2] overflow-hidden bg-wine-soft">
+          <img src="assets/img/ao-dai-c.jpg" alt="Cô dâu mặc áo dài hồng phấn chắp tay cười, phía sau là các chị em mặc áo dài đỏ chấm bi trước cổng hoa" width="1024" height="683" class="h-full w-full object-cover">
+        </div>
+        <figcaption class="mt-3 text-sm text-muted">Cô dâu và hội chị em trước cổng hoa ngày đám hỏi.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="bai-viet" data-section="detail-article" class="stitch bg-cream">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl lg:col-span-4">Một ngày vui, nhiều dáng áo</h2>
+      <article data-reveal="up" class="max-w-prose space-y-6 text-[17px] leading-relaxed text-ink/85 lg:col-span-6 lg:col-start-6">
+        <p class="dropcap">Trong đám hỏi của người Việt, áo dài không chỉ dành cho cô dâu. Hội chị em bưng quả đứng thành hàng trước cổng hoa, mẹ hai bên đón khách, các cô dì ngồi uống trà. Hỷ Sự được thiết kế để tất cả cùng đứng vào một khung hình mà vẫn ai ra người nấy.</p>
+        <p>Cô dâu mặc lụa hồng phấn phủ voan, cổ thêu chỉ trắng. Chị em mặc đỏ mận chấm bi trắng, màu của thương hiệu, đi cùng khăn buộc tóc may từ phần vải thừa. Mẹ hai bên mặc gấm đỏ mận hoa chìm, dáng rộng, tay dài.</p>
+        <p>Chúng tôi nhận may theo nhóm từ năm người, đo tại xưởng hoặc gửi bảng số đo hướng dẫn cho người ở xa. Mỗi nhóm có một buổi thử chung trước ngày cưới hai tuần.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="hinh-anh" data-section="gallery-lookbook" class="bg-cream-deep">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl">Hình ảnh ngày hỷ</h2>
+      <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2">
+        <a href="assets/img/ao-dai-f.jpg" data-lightbox="hy-su" data-caption="Hội chị em chụp ảnh cùng nhau" class="group block overflow-hidden bg-wine-soft sm:col-span-2 lg:col-span-7 lg:row-span-2">
+          <img src="assets/img/ao-dai-f.jpg" alt="Sáu cô gái mặc áo dài đỏ chấm bi, đeo nơ cùng màu, chụp ảnh tự sướng trong hẻm" width="1024" height="683" loading="lazy" class="zoom-img aspect-[3/2] h-full w-full object-cover">
+        </a>
+        <a href="assets/img/ao-dai-d.jpg" data-lightbox="hy-su" data-caption="Tà áo chấm bi và giày đỏ" class="group block overflow-hidden bg-wine-soft lg:col-span-5">
+          <img src="assets/img/ao-dai-d.jpg" alt="Cận cảnh tà áo dài đỏ chấm bi, quần lụa đen và áo dài hồng của cô dâu cùng những đôi giày" width="1024" height="683" loading="lazy" class="zoom-img aspect-[3/2] h-full w-full object-cover">
+        </a>
+        <a href="assets/img/ao-dai-e.jpg" data-lightbox="hy-su" data-caption="Cô dâu ngồi giữa hội chị em" class="group block overflow-hidden bg-wine-soft lg:col-span-5">
+          <img src="assets/img/ao-dai-e.jpg" alt="Cô dâu mặc áo dài hồng phấn ngồi giữa bốn chị em mặc áo dài đỏ chấm bi" width="1024" height="683" loading="lazy" class="zoom-img aspect-[3/2] h-full w-full object-cover">
+        </a>
+        <a href="assets/img/ao-dai-b.jpg" data-lightbox="hy-su" data-caption="Khoảnh khắc trước giờ rước dâu" class="group block overflow-hidden bg-wine-soft lg:col-span-6">
+          <img src="assets/img/ao-dai-b.jpg" alt="Cô dâu và các chị em che mặt bằng khăn hồng, cười đùa trước cổng hoa" width="1024" height="683" loading="lazy" class="zoom-img aspect-[3/2] h-full w-full object-cover">
+        </a>
+        <a href="assets/img/ao-dai-a.jpg" data-lightbox="hy-su" data-caption="Chú chó nhỏ cũng dự đám hỏi" class="group block overflow-hidden bg-wine-soft lg:col-span-6">
+          <img src="assets/img/ao-dai-a.jpg" alt="Hai cô gái mặc áo dài đỏ chấm bi ngồi xuống vuốt ve chú chó lông nâu" width="1024" height="683" loading="lazy" class="zoom-img aspect-[3/2] h-full w-full object-cover">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cac-mau" data-section="features-numbered" class="bg-cream">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl">Các mẫu trong bộ sưu tập</h2>
+      <div data-reveal-stagger="90" class="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="stitch pt-6">
+          <h3 class="font-display text-2xl">Áo cô dâu Hồng Phấn</h3>
+          <p class="mt-2 text-sm text-muted">Lụa hồng phủ voan, cổ thêu chỉ trắng</p>
+          <p class="mt-4 text-muted">Có thể thêu chữ Hỷ nhỏ ở vạt sau theo yêu cầu.</p>
+        </div>
+        <div class="stitch pt-6">
+          <h3 class="font-display text-2xl">Áo chị em Chấm Bi</h3>
+          <p class="mt-2 text-sm text-muted">Đỏ mận chấm trắng, kèm khăn buộc tóc</p>
+          <p class="mt-4 text-muted">May theo nhóm từ năm người, quần lụa đen hoặc trắng.</p>
+        </div>
+        <div class="stitch pt-6">
+          <h3 class="font-display text-2xl">Áo mẹ Gấm Mận</h3>
+          <p class="mt-2 text-sm text-muted">Gấm đỏ mận hoa chìm, dáng rộng</p>
+          <p class="mt-4 text-muted">Tay dài, tà rộng, đứng lâu không mỏi.</p>
+        </div>
+        <div class="stitch pt-6">
+          <h3 class="font-display text-2xl">Khăn vấn Hỷ</h3>
+          <p class="mt-2 text-sm text-muted">Nhung đỏ mận hoặc lụa vàng</p>
+          <p class="mt-4 text-muted">Đi cùng áo cô dâu cho lễ gia tiên.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lien-quan" data-section="cta-type" class="bg-wine text-cream">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="lg:col-span-7">
+        <h2 data-reveal="up" class="pb-2 font-display text-[clamp(2.4rem,5.5vw,6rem)] leading-[1.05] tracking-tight">Đặt áo cho cả nhà <span class="italic">trước ngày vui.</span></h2>
+        <p class="mt-6 max-w-lg text-lg text-cream/85">Nên hẹn trước ngày cưới ít nhất năm tuần để có đủ ba lần thử.</p>
+        <a href="contact.html#hen-may" class="mt-10 inline-flex h-14 items-center justify-center bg-cream px-10 text-base font-medium text-wine transition-colors duration-300 hover:bg-cream-deep active:scale-[.98]">Hẹn may đo</a>
+      </div>
+      <a href="collection-sen-ha.html" class="group block border-t border-dashed border-cream/50 pt-8 lg:col-span-4 lg:col-start-9 lg:self-end">
+        <p class="text-sm text-cream/80">Bộ sưu tập khác</p>
+        <p class="mt-3 flex items-center gap-4 font-display text-5xl tracking-tight"><span class="link-run">Sen Hạ</span><span aria-hidden="true" class="text-3xl transition-transform duration-300 group-hover:translate-x-2">&rarr;</span></p>
+        <p class="mt-3 text-cream/80">Áo dài lụa vẽ tay hoa sen cho mùa hè.</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" data-section="footer-big" class="bg-moss-dark text-cream">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl">An Nam Ký Test</p>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-cream/75">Áo dài may đo từ lụa Việt. Xưởng nhỏ ở Huế, may theo lịch hẹn.</p>
+      </div>
+      <nav aria-label="Liên kết cuối trang">
+        <p class="text-sm font-medium text-cream/60">Trang</p>
+        <ul class="mt-4 space-y-3">
+          <li><a href="index.html" class="link-run">Trang chủ</a></li>
+          <li><a href="about.html" class="link-run">Câu chuyện</a></li>
+          <li><a href="collections.html" class="link-run">Bộ sưu tập</a></li>
+          <li><a href="may-do.html" class="link-run">May đo</a></li>
+          <li><a href="journal.html" class="link-run">Ghi chép</a></li>
+          <li><a href="contact.html" class="link-run">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="text-sm font-medium text-cream/60">Ghé xưởng</p>
+        <address class="mt-4 not-italic leading-relaxed">68 Chi Lăng, phường Phú Hội<br>TP. Huế</address>
+        <p class="mt-3 text-sm text-cream/75">9:00 đến 19:00, Thứ Ba đến Chủ Nhật</p>
+      </div>
+      <div>
+        <p class="text-sm font-medium text-cream/60">Liên hệ</p>
+        <p class="mt-4"><a href="tel:+842343826517" class="link-run">0234 3826 517</a></p>
+        <p class="mt-3"><a href="mailto:xinchao@annamky.vn" class="link-run">xinchao@annamky.vn</a></p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="mt-20 whitespace-nowrap font-display text-[11vw] leading-[0.9] tracking-tight text-cream/90 2xl:text-[11.5rem]">An Nam Ký Test</p>
+    <div class="mt-6 flex flex-col gap-2 border-t border-cream/20 py-6 text-sm text-cream/70 sm:flex-row sm:justify-between">
+      <p>&copy; 2026 An Nam Ký Test. Bảo lưu mọi quyền.</p>
+      <a href="#top" class="link-run self-start">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

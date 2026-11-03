@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THIÊN THẦN NHỎ — Mỗi ngày đến trường là một ngày vui</title>
+  <meta name="description" content="THIÊN THẦN NHỎ là trường mầm non cho bé từ 18 tháng đến 6 tuổi, nơi trẻ được yêu thương, khám phá, vui chơi và phát triển toàn diện.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-cream font-sans text-ink">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 bg-cream/90">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="group flex shrink-0 items-center gap-2.5" aria-label="THIÊN THẦN NHỎ, về trang chủ">
+      <span class="grid h-11 w-11 place-items-center rounded-full bg-sun-300 transition-transform duration-500 group-hover:rotate-12">
+        <svg viewBox="0 0 24 24" class="h-6 w-6" fill="#2E3A2B" aria-hidden="true"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" stroke="#2E3A2B" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="font-display text-xl font-extrabold leading-none tracking-tight sm:text-2xl">THIÊN THẦN NHỎ</span>
+    </a>
+    <nav class="hidden items-center gap-7 lg:flex" aria-label="Điều hướng chính">
+      <a href="index.html" aria-current="page" class="nav-link relative py-2 font-bold transition-colors duration-300 hover:text-leaf-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[3px] after:rounded-full after:bg-peach-500 after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100">Trang chủ</a>
+      <a href="pages/about.html" class="nav-link relative py-2 font-bold transition-colors duration-300 hover:text-leaf-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[3px] after:rounded-full after:bg-peach-500 after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100">Về chúng tôi</a>
+      <a href="pages/programs.html" class="nav-link relative py-2 font-bold transition-colors duration-300 hover:text-leaf-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[3px] after:rounded-full after:bg-peach-500 after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100">Chương trình giáo dục</a>
+      <a href="pages/gallery-contact.html" class="nav-link relative py-2 font-bold transition-colors duration-300 hover:text-leaf-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[3px] after:rounded-full after:bg-peach-500 after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100">Thư viện &amp; Liên hệ</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="pages/gallery-contact.html#lien-he" class="hidden items-center rounded-full bg-leaf-700 px-6 py-3 font-bold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-leaf-800 active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf-700 sm:inline-flex lg:hidden xl:inline-flex">Liên hệ với chúng tôi</a>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full bg-leaf-100 transition-colors duration-300 hover:bg-leaf-300 lg:hidden" aria-label="Mở menu">
+        <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-cream p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại">
+      <a href="index.html" aria-current="page" class="rounded-2xl px-4 py-3 font-display text-xl font-bold text-leaf-700 transition-colors duration-300 hover:bg-leaf-100">Trang chủ</a>
+      <a href="pages/about.html" class="rounded-2xl px-4 py-3 font-display text-xl font-bold transition-colors duration-300 hover:bg-leaf-100">Về chúng tôi</a>
+      <a href="pages/programs.html" class="rounded-2xl px-4 py-3 font-display text-xl font-bold transition-colors duration-300 hover:bg-leaf-100">Chương trình giáo dục</a>
+      <a href="pages/gallery-contact.html" class="rounded-2xl px-4 py-3 font-display text-xl font-bold transition-colors duration-300 hover:bg-leaf-100">Thư viện &amp; Liên hệ</a>
+    </nav>
+    <a href="pages/gallery-contact.html#lien-he" class="mt-4 flex w-full items-center justify-center rounded-full bg-leaf-700 px-6 py-3.5 font-bold text-white transition duration-300 hover:bg-leaf-800">Liên hệ với chúng tôi</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="hero" data-section="hero-split" class="relative overflow-hidden bg-cream">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+      <svg viewBox="0 0 110 70" class="drift absolute left-[4%] top-6 w-24 text-white opacity-90 sm:w-32" fill="currentColor"><path d="M26 62a20 20 0 0 1 3-39 27 27 0 0 1 50-7 19 19 0 0 1 23 23 16 16 0 0 1-4 23z"/></svg>
+      <svg viewBox="0 0 110 70" class="drift-rev absolute left-[38%] top-[70%] hidden w-20 text-sun-100 lg:block" fill="currentColor"><path d="M26 62a20 20 0 0 1 3-39 27 27 0 0 1 50-7 19 19 0 0 1 23 23 16 16 0 0 1-4 23z"/></svg>
+      <svg viewBox="0 0 24 24" class="twinkle absolute left-[44%] top-16 hidden h-9 w-9 lg:block" fill="#F9D982" stroke="#EDBE45" stroke-width="1.2" stroke-linejoin="round"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></svg>
+      <svg viewBox="0 0 24 24" class="twinkle absolute bottom-10 left-[6%] h-6 w-6" style="animation-delay:-1.6s" fill="#F3B7A5" stroke="#E38E75" stroke-width="1.2" stroke-linejoin="round"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></svg>
+    </div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl items-center gap-10 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-24 lg:pt-10 2xl:px-16">
+      <div class="relative z-10 lg:col-span-6">
+        <span class="inline-flex -rotate-2 rounded-full bg-peach-300 px-4 py-1.5 text-sm font-extrabold shadow-sticker">Mầm non cho bé từ 18 tháng đến 6 tuổi</span>
+        <h1 data-reveal="up" class="mt-6 font-display text-[2.6rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl 2xl:text-7xl">Mỗi ngày đến trường là một <span class="relative inline-block whitespace-nowrap text-leaf-700">ngày vui<svg viewBox="0 0 200 16" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-3 w-full" fill="none" stroke="#F3B7A5" stroke-width="6" stroke-linecap="round" aria-hidden="true"><path d="M4 10c30-8 50 6 80-1s55-7 112 0"/></svg></span></h1>
+        <p data-reveal="up" class="mt-7 max-w-xl text-lg leading-relaxed text-ink-soft sm:text-xl">Môi trường yêu thương, nơi bé được khám phá, vui chơi và lớn lên theo nhịp độ của riêng mình.</p>
+        <div data-reveal="up" data-reveal-delay="150" class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <a href="pages/gallery-contact.html#lien-he" class="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-leaf-700 px-7 font-bold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-leaf-800 active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf-700">Liên hệ với chúng tôi</a>
+          <a href="pages/programs.html" class="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border-2 border-ink/15 bg-white/60 px-7 font-bold transition duration-300 hover:border-leaf-700 hover:text-leaf-700 active:scale-[.98]">Xem chương trình học
+            <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="relative lg:col-span-6 lg:-mr-10 2xl:-mr-16">
+        <div aria-hidden="true" class="float-slow absolute -left-6 -top-6 z-10 hidden h-24 w-24 sm:block">
+          <svg viewBox="0 0 120 70" class="h-full w-full" fill="none" stroke-linecap="round" stroke-width="9"><path d="M12 64a48 48 0 0 1 96 0" stroke="#F3B7A5"/><path d="M26 64a34 34 0 0 1 68 0" stroke="#F9D982"/><path d="M40 64a20 20 0 0 1 40 0" stroke="#B8D8B0"/></svg>
+        </div>
+        <div class="blob-1 relative aspect-[4/3] w-full overflow-hidden bg-leaf-100 lg:aspect-[5/4] xl:aspect-[4/3]">
+          <img src="assets/img/home-hero-co-va-be.jpg" alt="Cô giáo ngồi giữa vòng tròn các bé, cùng trò chuyện trong lớp học" width="1024" height="683" class="h-full w-full object-cover object-[45%_60%]">
+        </div>
+        <div aria-hidden="true" class="float-mid absolute -bottom-5 right-[12%] grid h-16 w-16 place-items-center rounded-full bg-sun-300 shadow-sticker">
+          <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="#2E3A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c0-3 2-4 4-4-0 3-2 4-4 4zM12 7c0-3-2-4-4-4 0 3 2 4 4 4z"/><circle cx="12" cy="13" r="3"/><path d="M12 16v5M9 21h6"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIỚI THIỆU NGẮN -->
+  <section id="gioi-thieu" data-section="story-letter" class="edge-cloud relative bg-leaf-100" style="--edge:#E3F0DE">
+    <div class="mx-auto grid w-full max-w-screen-2xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-12 lg:gap-12 lg:px-10 lg:py-24 2xl:px-16">
+      <figure data-reveal="up" class="md:col-span-5 lg:col-span-4 lg:col-start-2">
+        <div class="arch relative aspect-[4/5] overflow-hidden bg-leaf-300 ring-8 ring-white">
+          <img src="assets/img/home-intro-be-vui-choi.jpg" alt="Các bé mặc đồng phục kẻ ô nắm tay nhau đi dạo trên sân trường cùng cô" width="1024" height="683" loading="lazy" class="h-full w-full object-cover object-[40%_50%]">
+        </div>
+        <figcaption class="mt-4 text-center text-sm font-semibold text-ink-soft">Giờ dạo sân buổi sáng của lớp Mầm</figcaption>
+      </figure>
+      <div data-reveal="up" class="md:col-span-7 lg:col-span-6 lg:col-start-7">
+        <h2 class="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">Nơi bé được là chính mình</h2>
+        <div class="mt-6 max-w-prose space-y-4 text-lg leading-relaxed text-ink-soft">
+          <p>THIÊN THẦN NHỎ là ngôi nhà thứ hai của các bé. Ở đây, bé được khám phá, học hỏi, vui chơi và phát triển theo nhịp độ riêng, không bị so sánh hay thúc ép.</p>
+          <p>Mỗi lớp có tối đa 20 bé cùng hai cô, để cô kịp nhìn thấy từng nụ cười, từng câu hỏi và từng bước tiến nhỏ của con.</p>
+        </div>
+        <p class="mt-8 font-display text-xl font-bold text-leaf-700">Cô Trần Minh Hạnh, Hiệu trưởng</p>
+        <a href="pages/about.html" class="group mt-6 inline-flex min-h-[44px] items-center gap-2 font-bold text-ink underline decoration-peach-500 decoration-2 underline-offset-8 transition-colors duration-300 hover:text-leaf-700">Đọc câu chuyện của trường
+          <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIẾT LÝ GIÁO DỤC -->
+  <section id="triet-ly" data-section="features-bento" class="edge-cloud relative bg-cream" style="--edge:#FFF9F0">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-3xl font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">Triết lý giáo dục của chúng tôi</h2>
+      <div data-reveal="up" class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2">
+        <article class="group relative overflow-hidden rounded-[2rem] bg-peach-100 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-soft md:row-span-2 lg:col-span-5 lg:p-10">
+          <svg viewBox="0 0 24 24" class="h-12 w-12 text-peach-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+          <h3 class="mt-6 font-display text-3xl font-extrabold lg:text-4xl">Yêu thương</h3>
+          <p class="mt-4 max-w-md text-lg leading-relaxed text-ink-soft">Bé cảm thấy an toàn thì mới dám thử, dám hỏi, dám sai. Vì vậy, mọi hoạt động ở trường đều bắt đầu từ một cái ôm, một lời chào bằng tên.</p>
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="absolute -bottom-10 -right-10 hidden h-48 w-48 md:block text-peach-300 transition-transform duration-700 group-hover:rotate-6" fill="currentColor"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        </article>
+        <article class="rounded-[2rem] bg-sun-100 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-soft lg:col-span-7">
+          <div class="flex items-start gap-5">
+            <svg viewBox="0 0 24 24" class="h-10 w-10 shrink-0 text-sun-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9.5" r="2.5"/><path d="M3 20c0-3 2.2-5 5-5s5 2 5 5M13 20c.3-2.3 1.7-3.8 3.5-3.8S20 17.7 20.5 20"/></svg>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold">Tôn trọng sự khác biệt</h3>
+              <p class="mt-2 text-lg leading-relaxed text-ink-soft">Mỗi bé có sở thích, tính cách và nhịp phát triển riêng. Cô quan sát để đồng hành, không ép bé theo một khuôn mẫu.</p>
+            </div>
+          </div>
+        </article>
+        <article class="rounded-[2rem] bg-leaf-300 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-soft lg:col-span-4">
+          <svg viewBox="0 0 24 24" class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
+          <h3 class="mt-4 font-display text-2xl font-extrabold">Khuyến khích khám phá</h3>
+          <p class="mt-2 leading-relaxed">Câu hỏi "vì sao" của bé luôn được trân trọng và trả lời bằng trải nghiệm thật.</p>
+        </article>
+        <article class="rounded-[2rem] bg-leaf-700 p-8 text-white transition duration-300 hover:-translate-y-1 hover:shadow-soft lg:col-span-3">
+          <svg viewBox="0 0 24 24" class="h-10 w-10 text-sun-300" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg>
+          <h3 class="mt-4 font-display text-2xl font-extrabold">Phát triển toàn diện</h3>
+          <p class="mt-2 leading-relaxed text-leaf-100">Thể chất, tư duy, cảm xúc và kỹ năng xã hội cùng lớn lên.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHƯƠNG TRÌNH NỔI BẬT -->
+  <section id="chuong-trinh" data-section="teaser-row" class="edge-cloud relative bg-sun-100" style="--edge:#FDF3D3">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <h2 data-reveal="up" class="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">Chương trình nổi bật</h2>
+        <a href="pages/programs.html" class="group inline-flex min-h-[44px] items-center gap-2 font-bold text-leaf-700 transition-colors duration-300 hover:text-leaf-800">Xem chương trình học
+          <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div data-reveal="up" class="mt-10 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
+        <a href="pages/programs.html#trai-nghiem" class="group block">
+          <div class="arch aspect-[4/3] overflow-hidden sm:aspect-[4/5] bg-sun-300">
+            <img src="assets/img/home-prog-chu-so.jpg" alt="Bàn tay bé đang tập viết chữ trên vở ô li" width="960" height="640" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]">
+          </div>
+          <h3 class="mt-5 font-display text-2xl font-extrabold transition-colors duration-300 group-hover:text-leaf-700">Làm quen chữ và số</h3>
+          <p class="mt-1 text-ink-soft">Qua trò chơi, bài hát và đồ vật quen thuộc, không học thuộc lòng.</p>
+        </a>
+        <a href="pages/programs.html#trai-nghiem" class="group block xl:mt-14">
+          <div class="arch aspect-[4/3] overflow-hidden sm:aspect-[4/5] bg-peach-300">
+            <img src="assets/img/home-prog-nghe-thuat.webp" alt="Các bé cùng vẽ tranh bằng bút màu và màu nước trên bàn dài" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]">
+          </div>
+          <h3 class="mt-5 font-display text-2xl font-extrabold transition-colors duration-300 group-hover:text-leaf-700">Sáng tạo nghệ thuật</h3>
+          <p class="mt-1 text-ink-soft">Vẽ, nặn, cắt dán và âm nhạc để bé tự do thể hiện mình.</p>
+        </a>
+        <a href="pages/programs.html#trai-nghiem" class="group block">
+          <div class="arch aspect-[4/3] overflow-hidden sm:aspect-[4/5] bg-leaf-300">
+            <img src="assets/img/home-prog-van-dong.jpg" alt="Các bé nắm tay nhau chơi trò vòng tròn trên sân, một bé chạy vào giữa" width="1024" height="683" loading="lazy" class="h-full w-full object-cover object-[55%_50%] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]">
+          </div>
+          <h3 class="mt-5 font-display text-2xl font-extrabold transition-colors duration-300 group-hover:text-leaf-700">Vận động thể chất</h3>
+          <p class="mt-1 text-ink-soft">Chạy nhảy, leo trèo, trò chơi dân gian mỗi sáng ngoài sân.</p>
+        </a>
+        <a href="pages/programs.html#trai-nghiem" class="group block xl:mt-14">
+          <div class="arch aspect-[4/3] overflow-hidden sm:aspect-[4/5] bg-leaf-100">
+            <img src="assets/img/home-prog-thien-nhien.jpg" alt="Bé dùng bình tưới nhỏ màu xanh vàng tưới chậu hoa" width="960" height="1440" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]">
+          </div>
+          <h3 class="mt-5 font-display text-2xl font-extrabold transition-colors duration-300 group-hover:text-leaf-700">Khám phá thiên nhiên</h3>
+          <p class="mt-1 text-ink-soft">Chăm vườn rau, quan sát côn trùng, ngắm mây và đón mưa.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÔI TRƯỜNG HỌC TẬP -->
+  <section id="moi-truong" data-section="gallery-lookbook" class="edge-cloud relative bg-cream" style="--edge:#FFF9F0">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">Khám phá môi trường học tập</h2>
+      <p data-reveal="up" class="mt-4 max-w-2xl text-lg text-ink-soft">Lớp học nhiều ánh sáng, sân chơi có bóng cây, góc đọc yên tĩnh và những khoảng sinh hoạt chung để bé gặp gỡ bạn bè.</p>
+      <div class="mt-10 grid gap-6 lg:grid-cols-12">
+        <figure data-reveal="up" class="lg:col-span-7">
+          <div class="group aspect-[4/3] overflow-hidden rounded-[2rem] bg-leaf-100">
+            <img src="assets/img/home-env-lop-hoc.jpg" alt="Lớp học sáng sủa với bảng đen, tranh treo tường và cô giáo hướng dẫn các bé" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+          <figcaption class="mt-4 flex flex-wrap items-baseline gap-x-3"><span class="font-display text-2xl font-extrabold">Lớp học</span><span class="text-ink-soft">Bàn ghế vừa tầm, tranh ảnh do chính các bé làm.</span></figcaption>
+        </figure>
+        <div class="grid gap-6 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+          <figure data-reveal="up">
+            <div class="group aspect-[16/10] overflow-hidden rounded-[2rem] bg-sun-100">
+              <img src="assets/img/home-env-san-choi.jpg" alt="Sân chơi có cầu trượt, nhà chòi mái cam, các bé đang leo trèo cùng cô" width="1024" height="683" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+            <figcaption class="mt-4 flex flex-wrap items-baseline gap-x-3"><span class="font-display text-2xl font-extrabold">Sân chơi</span><span class="text-ink-soft">Nền cao su mềm, nhiều bóng cây.</span></figcaption>
+          </figure>
+          <figure data-reveal="up">
+            <div class="group aspect-[16/10] overflow-hidden rounded-[2rem] bg-peach-100">
+              <img src="assets/img/home-env-goc-doc.jpg" alt="Hai bé gái ôm nhau cùng đọc một cuốn sách ngoài bãi cỏ" width="960" height="1438" loading="lazy" class="h-full w-full object-cover object-[50%_55%] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+            <figcaption class="mt-4 flex flex-wrap items-baseline gap-x-3"><span class="font-display text-2xl font-extrabold">Thư viện &amp; góc đọc</span><span class="text-ink-soft">Sách tranh cho bé mượn về đọc cùng ba mẹ.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KHOẢNH KHẮC -->
+  <section id="khoanh-khac" data-section="gallery-masonry" class="edge-cloud relative bg-peach-100" style="--edge:#FDEDE7">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">Khoảnh khắc tại trường</h2>
+      <div data-reveal="up" class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+        <a href="assets/img/gallery-leo-day.jpg" data-lightbox="khoanh-khac" data-caption="Bé thử leo khung vòm ở sân chơi" class="group col-span-1 row-span-2 block overflow-hidden rounded-[2rem] bg-peach-300">
+          <img src="assets/img/gallery-leo-day.jpg" alt="Bé tóc xoăn đứng trong khung leo màu xanh ở sân chơi" width="768" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]">
+        </a>
+        <a href="assets/img/gallery-bong-bong.jpg" data-lightbox="khoanh-khac" data-caption="Đuổi bắt bong bóng xà phòng" class="group block aspect-square overflow-hidden rounded-[2rem] bg-sun-300">
+          <img src="assets/img/gallery-bong-bong.jpg" alt="Bé gái cười tươi chạy đuổi theo bong bóng xà phòng" width="768" height="1024" loading="lazy" class="h-full w-full object-cover object-[50%_40%] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]">
+        </a>
+        <a href="assets/img/gallery-but-sap.jpg" data-lightbox="khoanh-khac" data-caption="Bút sáp lấp lánh cho giờ vẽ" class="group block aspect-square overflow-hidden rounded-[2rem] bg-leaf-300">
+          <img src="assets/img/gallery-but-sap.jpg" alt="Bàn tay bé cầm ba cây bút sáp nhũ nhiều màu" width="960" height="1440" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]">
+        </a>
+        <a href="pages/gallery-contact.html#thu-vien" class="group col-span-2 flex flex-col justify-between rounded-[2rem] bg-sun-300 p-6 transition duration-300 hover:-translate-y-1 hover:shadow-soft lg:col-span-2 lg:p-8">
+          <svg viewBox="0 0 24 24" class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-9 8"/></svg>
+          <span class="mt-6 block font-display text-2xl font-extrabold leading-tight sm:text-3xl">Xem thư viện ảnh của bé</span>
+          <span class="mt-3 inline-flex items-center gap-2 font-bold">Học tập, vui chơi, nghệ thuật, sự kiện
+            <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" data-section="cta-type" class="edge-cloud relative overflow-hidden bg-sun-300" style="--edge:#F9D982">
+    <div aria-hidden="true" class="pointer-events-none absolute -right-16 bottom-0 hidden w-[28rem] opacity-90 md:block">
+      <svg viewBox="0 0 120 64" class="w-full" fill="none" stroke-linecap="round" stroke-width="8"><path d="M8 64a52 52 0 0 1 104 0" stroke="#F3B7A5"/><path d="M22 64a38 38 0 0 1 76 0" stroke="#FFF9F0"/><path d="M36 64a24 24 0 0 1 48 0" stroke="#B8D8B0"/></svg>
+    </div>
+    <div class="relative mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-5xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Mời ba mẹ ghé thăm lớp học của bé</h2>
+      <p data-reveal="up" class="mt-6 max-w-xl text-lg">Hẹn một buổi sáng tham quan, trò chuyện cùng cô và xem bé sẽ học, chơi, nghỉ ngơi ra sao.</p>
+      <a data-reveal="up" href="pages/gallery-contact.html#lien-he" class="mt-9 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-ink px-8 font-bold text-cream transition duration-300 hover:-translate-y-0.5 hover:bg-leaf-800 active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink sm:w-auto">Liên hệ với chúng tôi</a>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="edge-cloud relative bg-leaf-700 text-white" style="--edge:#4A7343">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-8 pt-16 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="font-display text-2xl font-extrabold">THIÊN THẦN NHỎ</a>
+        <p class="mt-3 max-w-sm leading-relaxed text-leaf-100">Trường mầm non cho bé từ 18 tháng đến 6 tuổi, nơi mỗi ngày đến trường là một ngày vui.</p>
+      </div>
+      <div class="lg:col-span-2">
+        <h2 class="font-display text-lg font-bold text-sun-300">Các trang</h2>
+        <ul class="mt-3 space-y-1">
+          <li><a href="index.html" class="inline-block py-1 text-leaf-100 transition-colors duration-300 hover:text-white">Trang chủ</a></li>
+          <li><a href="pages/about.html" class="inline-block py-1 text-leaf-100 transition-colors duration-300 hover:text-white">Về chúng tôi</a></li>
+          <li><a href="pages/programs.html" class="inline-block py-1 text-leaf-100 transition-colors duration-300 hover:text-white">Chương trình giáo dục</a></li>
+          <li><a href="pages/gallery-contact.html" class="inline-block py-1 text-leaf-100 transition-colors duration-300 hover:text-white">Thư viện &amp; Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h2 class="font-display text-lg font-bold text-sun-300">Liên hệ</h2>
+        <ul class="mt-3 space-y-1 text-leaf-100">
+          <li class="py-1">25 đường Hoa Phượng, phường Tân Phong, Quận 7, TP. Hồ Chí Minh</li>
+          <li><a href="tel:02837752468" class="inline-block py-1 transition-colors duration-300 hover:text-white">028 3775 2468</a></li>
+          <li><a href="mailto:lienhe@thienthannho.edu.vn" class="inline-block break-all py-1 transition-colors duration-300 hover:text-white">lienhe@thienthannho.edu.vn</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h2 class="font-display text-lg font-bold text-sun-300">Giờ làm việc</h2>
+        <ul class="mt-3 space-y-1 text-leaf-100">
+          <li class="py-1">Thứ Hai đến Thứ Sáu: 6:45 đến 17:30</li>
+          <li class="py-1">Thứ Bảy: 7:00 đến 11:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-14 overflow-hidden" aria-hidden="true">
+      <p class="select-none whitespace-nowrap font-display text-[10.5vw] font-extrabold leading-none text-leaf-600 2xl:text-[10rem]">THIÊN THẦN NHỎ</p>
+    </div>
+    <div class="mt-6 flex flex-col gap-2 border-t border-leaf-600 pt-6 text-sm text-leaf-100 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 THIÊN THẦN NHỎ. Địa chỉ và số liên hệ là dữ liệu mẫu.</p>
+      <a href="#top" class="inline-flex min-h-[44px] items-center font-bold transition-colors duration-300 hover:text-white">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top aria-label="Về đầu trang" class="fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center rounded-full bg-leaf-700 text-white shadow-soft transition duration-300 hover:-translate-y-1 hover:bg-leaf-800">
+  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Mission | Saigon Streetwear Label</title>
+<meta name="description" content="The Mission - a Saigon streetwear label since 2019. No online store, made to be worn on the street.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;0,900;1,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: { 50:'#f2f2ef',100:'#e4e4e0',200:'#c8c8c3',300:'#a3a39e',400:'#7d7d79',500:'#5c5c59',600:'#40403e',700:'#2b2b2a',800:'#1b1b1a',900:'#131313',950:'#0c0c0c' },
+        bone: '#d6d3cb'
+      },
+      fontFamily: {
+        display: ['"Barlow Condensed"', 'Impact', 'sans-serif'],
+        sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<script src="assets/js/ui.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body id="top" class="grain bg-ink-950 font-sans text-bone antialiased" data-cursor="ring">
+<div data-scroll-progress class="fixed inset-x-0 top-0 z-[70] h-0.5 bg-bone"></div>
+
+<!-- HEADER -->
+<header data-header="shrink" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="index.html" class="font-display text-2xl uppercase leading-none tracking-tight" style="font-weight:900">The Mission</a>
+    <nav data-scrollspy class="hidden items-center gap-9 text-sm font-semibold uppercase tracking-wider lg:flex">
+      <a href="#tinh-than" class="relative py-2 text-ink-300 transition hover:text-bone [&.is-active]:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">Our Spirit</a>
+      <a href="pages/collection.html" class="relative py-2 text-ink-300 transition hover:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">Collection</a>
+      <a href="pages/about.html" class="relative py-2 text-ink-300 transition hover:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">About</a>
+      <a href="#lookbook" class="relative py-2 text-ink-300 transition hover:text-bone [&.is-active]:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">Lookbook</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#lien-he" class="hidden border border-bone px-5 py-2.5 text-sm font-semibold uppercase tracking-wider transition hover:bg-bone hover:text-ink-950 active:scale-[.98] sm:inline-block">Join the list</a>
+      <button data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink-600 lg:hidden" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-ink-700 bg-ink-900 p-6 lg:hidden">
+    <nav class="flex flex-col font-display text-4xl font-extrabold uppercase">
+      <a href="#tinh-than" class="border-b border-ink-700 py-3 hover:text-ink-300">Our Spirit</a>
+      <a href="pages/collection.html" class="border-b border-ink-700 py-3 hover:text-ink-300">Collection</a>
+      <a href="pages/about.html" class="border-b border-ink-700 py-3 hover:text-ink-300">About</a>
+      <a href="#lookbook" class="border-b border-ink-700 py-3 hover:text-ink-300">Lookbook</a>
+      <a href="#lien-he" class="mt-5 bg-bone py-3 text-center text-2xl text-ink-950">Join the list</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="hero" class="relative isolate flex min-h-[100dvh] flex-col justify-end overflow-hidden">
+  <div class="absolute inset-0 -z-10" data-parallax="0.18">
+    <img src="assets/img/hero-skate-dem.jpg" alt="Young man in a black jacket skateboarding through the city at night" class="bw h-[115%] w-full object-cover object-[60%_40%]" width="1920" height="1280">
+  </div>
+  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink-950 via-ink-950/40 to-ink-950/30"></div>
+
+  <div class="tape absolute right-4 top-24 bg-bone px-4 py-2 font-display text-lg font-extrabold uppercase tracking-wide text-ink-950 sm:right-10 sm:top-28 sm:text-2xl lg:right-16">Not for sale online</div>
+
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-6 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <p class="max-w-md text-lg leading-relaxed text-ink-200 sm:text-xl" data-reveal="up">Clothes made to be worn on the street, not to sit on a shelf. Designed and screen-printed by hand in Saigon.</p>
+      <div class="flex flex-col gap-3 sm:flex-row" data-reveal="up" data-reveal-delay="150">
+        <a href="pages/collection.html" data-magnetic="0.3" data-ripple class="group inline-flex h-14 items-center justify-center gap-3 bg-bone px-8 font-display text-xl font-extrabold uppercase tracking-wide text-ink-950 transition hover:bg-ink-200 active:scale-[.98]">View collection
+          <svg class="transition group-hover:translate-x-1 group-hover:-translate-y-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a href="pages/about.html" class="inline-flex h-14 items-center justify-center border border-bone/60 px-8 font-display text-xl font-extrabold uppercase tracking-wide transition hover:border-bone hover:bg-bone/10 active:scale-[.98]">Our story</a>
+      </div>
+    </div>
+  </div>
+  <h1 class="w-full select-none overflow-hidden whitespace-nowrap px-2 text-center font-display text-[18.6vw] uppercase leading-[.8] tracking-tighter" style="font-weight:900" data-split="chars">The Mission</h1>
+</section>
+
+<!-- MARQUEE -->
+<div class="relative z-10 -my-4 -rotate-2 overflow-hidden border-y-2 border-ink-950 bg-bone py-3 text-ink-950" aria-hidden="true">
+  <div data-marquee="60" class="flex whitespace-nowrap font-display text-3xl font-extrabold uppercase tracking-wide sm:text-4xl">
+    <span class="px-6">No online store</span><span class="px-2">/</span>
+    <span class="px-6">Once it's gone, it's gone</span><span class="px-2">/</span>
+    <span class="px-6">Saigon since 2019</span><span class="px-2">/</span>
+    <span class="px-6">Dress for yourself</span><span class="px-2">/</span>
+    <span class="px-6">No restocks</span><span class="px-2">/</span>
+    <span class="px-6">The street is our runway</span><span class="px-2">/</span>
+  </div>
+</div>
+
+<!-- OUR SPIRIT -->
+<section id="tinh-than" class="py-20 lg:py-32">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-7">
+      <h2 class="font-display text-5xl uppercase leading-[.9] tracking-tight sm:text-6xl lg:text-7xl 2xl:text-8xl" style="font-weight:900" data-split="words">
+        Made for people who <span class="text-outline">dress for the street,</span> not for <span class="italic">approval.</span>
+      </h2>
+      <div class="mt-10 grid gap-8 sm:grid-cols-2" data-reveal="up">
+        <p class="text-base leading-relaxed text-ink-300 sm:text-lg">The Mission started in a 12m² rented room in District 4, with two old sewing machines and a homemade screen-printing frame. Every tee was printed by hand, tested on the street and repaired when it tore.</p>
+        <p class="text-base leading-relaxed text-ink-300 sm:text-lg">Each collection tells a story about Saigon after midnight: sidewalks, skateboards, concrete and spray-painted walls. Black and white only. No third colour.</p>
+      </div>
+      <a href="pages/about.html" class="group mt-10 inline-flex items-center gap-3 border-b-2 border-bone pb-1 font-display text-2xl font-extrabold uppercase">Read our story
+        <svg class="transition group-hover:translate-x-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="relative lg:col-span-5">
+      <div class="overflow-hidden" data-reveal="zoom">
+        <div data-parallax="-0.08">
+          <img src="assets/img/skate-trang-den.jpg" alt="Skateboarder gliding across a stone plaza at night" class="bw aspect-[4/5] w-full scale-110 object-cover object-[30%_20%]" loading="lazy" width="1024" height="683">
+        </div>
+      </div>
+      <div class="tape absolute -bottom-5 -left-3 bg-bone px-4 py-2 font-display text-xl font-extrabold uppercase text-ink-950 sm:-left-6">District 4, 2 a.m.</div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTIONS BENTO -->
+<section id="collection" class="border-t border-ink-800 py-20 lg:py-28">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between lg:mb-14">
+      <h2 class="font-display text-5xl uppercase leading-[.9] sm:text-6xl lg:text-7xl 2xl:text-8xl" style="font-weight:900" data-reveal="up">Our three<br>latest drops</h2>
+      <a href="pages/collection.html" class="group inline-flex h-12 items-center gap-3 self-start border border-bone px-6 font-display text-lg font-extrabold uppercase tracking-wide transition hover:bg-bone hover:text-ink-950 sm:self-auto">All collections
+        <svg class="transition group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:grid-rows-2 lg:gap-5" data-reveal-stagger="120">
+      <a href="pages/collection.html#no-signal" data-cursor-label="View" class="group relative block overflow-hidden lg:col-span-7 lg:row-span-2">
+        <img src="assets/img/model-hoodie-3.jpg" alt="Model in a black hooded windbreaker standing in the city" class="bw aspect-[4/5] h-full w-full object-cover transition duration-700 group-hover:scale-105 lg:aspect-auto lg:min-h-[760px]" loading="lazy" width="2336" height="3500">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/10 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+          <p class="text-sm font-semibold uppercase tracking-widest text-ink-300">Fall / Winter 2026</p>
+          <h3 class="mt-2 font-display text-6xl uppercase leading-[.85] sm:text-7xl 2xl:text-9xl" style="font-weight:900">No Signal</h3>
+          <p class="mt-4 max-w-md text-ink-200">Off the grid in the middle of the city. Heavy hoodies, black windbreakers, deep hoods.</p>
+        </div>
+      </a>
+      <a href="pages/collection.html#concrete-kids" data-cursor-label="View" class="group relative block overflow-hidden lg:col-span-5">
+        <img src="assets/img/model-graffiti-1.jpg" alt="Skater sitting on the edge of a graffiti-covered bowl" class="bw aspect-[16/11] h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="2500" height="1667">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/10 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+          <p class="text-sm font-semibold uppercase tracking-widest text-ink-300">Spring / Summer 2026</p>
+          <h3 class="mt-1 font-display text-5xl uppercase leading-[.85] 2xl:text-6xl" style="font-weight:900">Concrete Kids</h3>
+        </div>
+      </a>
+      <a href="pages/collection.html#blue-collar-riot" data-cursor-label="View" class="group relative block overflow-hidden bg-ink-900 lg:col-span-5">
+        <img src="assets/img/sp-ao-denim-chi-tiet.webp" alt="Short-sleeve denim jacket on a mannequin against a black background" class="bw aspect-[16/11] h-full w-full object-cover object-[50%_30%] transition duration-700 group-hover:scale-105" loading="lazy" width="877" height="1024">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-transparent to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+          <p class="text-sm font-semibold uppercase tracking-widest text-ink-300">Fall / Winter 2025</p>
+          <h3 class="mt-1 font-display text-5xl uppercase leading-[.85] 2xl:text-6xl" style="font-weight:900">Blue Collar Riot</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-bone py-20 text-ink-950 lg:py-24">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+    <h2 class="font-display text-5xl uppercase leading-[.9] sm:text-6xl lg:col-span-4 2xl:text-7xl" style="font-weight:900" data-reveal="up">Never restocked.<br><span class="text-outline-dark">Gone means gone.</span></h2>
+    <div class="grid grid-cols-2 gap-x-6 gap-y-10 lg:col-span-8 lg:grid-cols-4" data-reveal-stagger="100">
+      <div class="border-l-2 border-ink-950 pl-5">
+        <p class="font-display text-7xl leading-none 2xl:text-8xl" style="font-weight:900" data-count-to="11">11</p>
+        <p class="mt-3 text-sm font-medium text-ink-600">drops released since 2019</p>
+      </div>
+      <div class="border-l-2 border-ink-950 pl-5">
+        <p class="font-display text-7xl leading-none 2xl:text-8xl" style="font-weight:900" data-count-to="0">0</p>
+        <p class="mt-3 text-sm font-medium text-ink-600">designs ever produced twice</p>
+      </div>
+      <div class="border-l-2 border-ink-950 pl-5">
+        <p class="font-display text-7xl leading-none 2xl:text-8xl" style="font-weight:900" data-count-to="17" data-suffix=" min">17 min</p>
+        <p class="mt-3 text-sm font-medium text-ink-600">for our last pop-up to sell out</p>
+      </div>
+      <div class="border-l-2 border-ink-950 pl-5">
+        <p class="font-display text-7xl leading-none 2xl:text-8xl" style="font-weight:900" data-count-to="43">43</p>
+        <p class="mt-3 text-sm font-medium text-ink-600">models who are real friends from the street</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOOKBOOK -->
+<section id="lookbook" class="py-20 lg:py-28">
+  <div class="mx-auto mb-10 flex w-full max-w-screen-2xl flex-col gap-4 px-4 sm:flex-row sm:items-end sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+    <h2 class="font-display text-5xl uppercase leading-[.9] sm:text-6xl lg:text-7xl 2xl:text-8xl" style="font-weight:900" data-reveal="up">Lookbook<br><span class="text-outline">on the street</span></h2>
+    <p class="max-w-xs text-ink-400">Drag sideways to browse. Click a photo to enlarge.</p>
+  </div>
+  <div data-drag-scroll class="no-scrollbar flex snap-x snap-mandatory items-end gap-4 overflow-x-auto px-4 pb-4 sm:px-6 lg:gap-6 lg:px-10 2xl:px-16" data-reveal-stagger="80">
+    <a href="assets/img/model-graffiti-2.jpg" data-lightbox="lookbook" data-caption="No Signal - black leather bomber, grey wool trousers" data-cursor-label="Enlarge" class="group w-[72%] shrink-0 snap-start overflow-hidden sm:w-[42%] lg:w-[26%]">
+      <img src="assets/img/model-graffiti-2.jpg" alt="Model in a black leather bomber sitting on a graffiti wall" class="bw aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="2267" height="3400">
+    </a>
+    <a href="assets/img/skate-via-he.jpg" data-lightbox="lookbook" data-caption="Concrete Kids - straight-leg jeans, raw tee" data-cursor-label="Enlarge" class="group w-[85%] shrink-0 snap-start overflow-hidden sm:w-[56%] lg:w-[36%]">
+      <img src="assets/img/skate-via-he.jpg" alt="Skater's feet on a sunny sidewalk" class="bw aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="3361" height="2241">
+    </a>
+    <a href="assets/img/model-hoodie-2.jpg" data-lightbox="lookbook" data-caption="No Signal - ash grey hoodie, black backpack" data-cursor-label="Enlarge" class="group w-[72%] shrink-0 snap-start overflow-hidden sm:w-[42%] lg:w-[24%]">
+      <img src="assets/img/model-hoodie-2.jpg" alt="Person in a grey hoodie with a black backpack walking on a snowy road" class="bw aspect-[2/3] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="683" height="1024">
+    </a>
+    <a href="assets/img/model-nu-pho.jpg" data-lightbox="lookbook" data-caption="Blue Collar Riot - black star-print blazer" data-cursor-label="Enlarge" class="group w-[72%] shrink-0 snap-start overflow-hidden sm:w-[42%] lg:w-[26%]">
+      <img src="assets/img/model-nu-pho.jpg" alt="Female model in a black star-print blazer stepping out of the shadows" class="bw aspect-[5/6] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="854" height="1024">
+    </a>
+    <a href="assets/img/model-graffiti-3.jpg" data-lightbox="lookbook" data-caption="Blue Collar Riot - hand-distressed biker jeans" data-cursor-label="Enlarge" class="group w-[72%] shrink-0 snap-start overflow-hidden sm:w-[42%] lg:w-[24%]">
+      <img src="assets/img/model-graffiti-3.jpg" alt="Close-up of distressed biker jeans in front of a painted wall" class="bw aspect-[2/3] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="3456" height="5184">
+    </a>
+    <a href="assets/img/sp-giay.jpg" data-lightbox="lookbook" data-caption="Concrete Kids - white sneakers on a concrete ledge" data-cursor-label="Enlarge" class="group w-[85%] shrink-0 snap-start overflow-hidden sm:w-[56%] lg:w-[36%]">
+      <img src="assets/img/sp-giay.jpg" alt="White sneakers resting on a concrete ledge by a wire fence" class="bw aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="5363" height="3575">
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="hoi-dap" class="border-t border-ink-800 py-20 lg:py-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-5">
+      <h2 class="font-display text-5xl uppercase leading-[.9] sm:text-6xl lg:text-7xl" style="font-weight:900" data-reveal="up">Straight questions.<br>Straight answers.</h2>
+      <div class="mt-10 hidden overflow-hidden lg:block" data-reveal="fade">
+        <img src="assets/img/model-hoodie-1.webp" alt="Black hoodie emerging from the dark" class="bw aspect-[3/2] w-full object-cover" loading="lazy" width="1920" height="1271">
+      </div>
+    </div>
+    <div class="lg:col-span-7" data-accordion>
+      <div data-acc-item data-open class="border-b border-ink-700">
+        <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-2xl font-extrabold uppercase sm:text-3xl">Where can I buy?<span data-acc-icon class="text-3xl transition [.is-open_&]:rotate-45">+</span></button>
+        <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-ink-300">This website is only here to tell our story. The Mission is sold exclusively at pop-up events, announced by email and on Instagram a few hours before doors open.</div></div>
+      </div>
+      <div data-acc-item class="border-b border-ink-700">
+        <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-2xl font-extrabold uppercase sm:text-3xl">Do you restock?<span data-acc-icon class="text-3xl transition [.is-open_&]:rotate-45">+</span></button>
+        <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-ink-300">No. Each design is made once, in runs of 80 to 200 pieces. When it's sold out, it's gone for good.</div></div>
+      </div>
+      <div data-acc-item class="border-b border-ink-700">
+        <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-2xl font-extrabold uppercase sm:text-3xl">How can I become a model?<span data-acc-icon class="text-3xl transition [.is-open_&]:rotate-45">+</span></button>
+        <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-ink-300">We cast from the street: skaters, tattoo artists, rappers, people passing by the studio. Email us a few photos with your Instagram link. No studio shots needed.</div></div>
+      </div>
+      <div data-acc-item class="border-b border-ink-700">
+        <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-2xl font-extrabold uppercase sm:text-3xl">Are you open to collaborations?<span data-acc-icon class="text-3xl transition [.is-open_&]:rotate-45">+</span></button>
+        <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-ink-300">Yes, when the fit is right. Graffiti artists, skate shops and underground music collectives come first. We rarely take on purely promotional brand deals.</div></div>
+      </div>
+      <div data-acc-item class="border-b border-ink-700">
+        <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-2xl font-extrabold uppercase sm:text-3xl">How does the sizing fit?<span data-acc-icon class="text-3xl transition [.is-open_&]:rotate-45">+</span></button>
+        <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-ink-300">Oversized, dropped shoulders, slightly longer than usual. At 170 cm and 60 kg, a size M gives the intended relaxed fit.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN THE LIST -->
+<section id="lien-he" class="relative overflow-hidden border-t border-ink-800 py-20 lg:py-28" data-spotlight data-spotlight-color="rgba(214,211,203,.06)">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-7">
+      <h2 class="font-display text-6xl uppercase leading-[.85] sm:text-7xl lg:text-8xl 2xl:text-9xl" style="font-weight:900" data-split="words">Want to know <span class="text-outline">the next drop?</span></h2>
+      <p class="mt-8 max-w-lg text-lg leading-relaxed text-ink-300">Leave your email. We only write when there is a pop-up or a new collection, about four times a year. No spam, no discount codes.</p>
+      <div class="mt-10 flex flex-col gap-4 text-ink-200 sm:flex-row sm:gap-10">
+        <a href="https://instagram.com/themission.sgn" target="_blank" rel="noopener" class="group inline-flex items-center gap-3 hover:text-bone">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+          <span class="border-b border-transparent group-hover:border-bone">@themission.sgn</span>
+        </a>
+        <a href="mailto:hello@themission.vn" class="group inline-flex items-center gap-3 hover:text-bone">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="5" width="18" height="14"/><path d="m3 7 9 6 9-6"/></svg>
+          <span class="border-b border-transparent group-hover:border-bone">hello@themission.vn</span>
+        </a>
+      </div>
+    </div>
+    <form data-form="join-list" data-success="You're on the list. We'll email you when the next drop is announced." class="flex flex-col gap-5 self-end border border-ink-700 bg-ink-900 p-6 sm:p-8 lg:col-span-5" novalidate>
+      <label class="flex flex-col gap-2 text-sm font-semibold uppercase tracking-wider text-ink-200">Your name
+        <input name="name" required minlength="2" class="h-12 border border-ink-600 bg-ink-950 px-4 text-base font-normal normal-case tracking-normal text-bone placeholder:text-ink-400 focus:border-bone focus:outline-none" placeholder="e.g. Kai Nguyen">
+      </label>
+      <label class="flex flex-col gap-2 text-sm font-semibold uppercase tracking-wider text-ink-200">Email
+        <input type="email" name="email" required class="h-12 border border-ink-600 bg-ink-950 px-4 text-base font-normal normal-case tracking-normal text-bone placeholder:text-ink-400 focus:border-bone focus:outline-none" placeholder="you@email.com">
+      </label>
+      <label class="flex flex-col gap-2 text-sm font-semibold uppercase tracking-wider text-ink-200">Instagram (optional)
+        <input name="instagram" class="h-12 border border-ink-600 bg-ink-950 px-4 text-base font-normal normal-case tracking-normal text-bone placeholder:text-ink-400 focus:border-bone focus:outline-none" placeholder="@yourhandle">
+      </label>
+      <button type="submit" data-ripple class="mt-2 h-14 bg-bone font-display text-xl font-extrabold uppercase tracking-wide text-ink-950 transition hover:bg-ink-200 active:scale-[.98]">Join the list</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-ink-800 pt-16">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-10 2xl:px-16">
+    <div>
+      <p class="font-display text-3xl uppercase" style="font-weight:900">The Mission</p>
+      <p class="mt-3 max-w-xs text-ink-400">Saigon streetwear label. Brand showcase only, no online sales.</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Pages</p>
+      <ul class="mt-4 space-y-2">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="pages/collection.html" class="hover:underline">Collection</a></li>
+        <li><a href="pages/about.html" class="hover:underline">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Studio</p>
+      <p class="mt-4 text-ink-200">3rd Floor, 14 Ton That Dam St, District 1, Ho Chi Minh City<br>Open on pop-up days only</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Contact</p>
+      <ul class="mt-4 space-y-2">
+        <li><a href="https://instagram.com/themission.sgn" target="_blank" rel="noopener" class="hover:underline">Instagram @themission.sgn</a></li>
+        <li><a href="https://www.tiktok.com/@themission.sgn" target="_blank" rel="noopener" class="hover:underline">TikTok @themission.sgn</a></li>
+        <li><button data-copy="hello@themission.vn" class="hover:underline">hello@themission.vn (click to copy)</button></li>
+      </ul>
+    </div>
+  </div>
+  <p class="mt-16 select-none overflow-hidden whitespace-nowrap text-center font-display text-[18.6vw] uppercase leading-[.78] tracking-tighter text-outline" style="font-weight:900" aria-hidden="true">The Mission</p>
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 border-t border-ink-800 px-4 py-6 text-sm text-ink-400 sm:flex-row sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+    <p>© 2026 The Mission. Saigon.</p>
+    <p>Placeholder photos, to be replaced with the brand's own shoots.</p>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center border border-bone bg-ink-950 transition hover:bg-bone hover:text-ink-950" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

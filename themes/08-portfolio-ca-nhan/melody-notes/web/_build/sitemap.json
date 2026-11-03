@@ -1,0 +1,71 @@
+{
+  "brand": "KOMOREBI",
+  "language": "vi",
+  "preset": "gallery",
+  "motionLevel": 1,
+  "visualIdea": "Cuốn nhật ký ảnh film: ảnh như bản in dán vào sổ (viền giấy ngà, hơi lệch), dấu ngày tháng nhỏ, ghi chú nghiêng màu nâu gỗ và vệt nắng xuyên lá (komorebi) trên nền kem giấy",
+  "purposeInferred": "Portfolio & CV cá nhân của một nữ nhiếp ảnh gia phong cách Mori Girl: giới thiệu 4 bộ ảnh, câu chuyện sau ảnh, thẩm mỹ, quy trình, hồ sơ và kênh liên hệ để nhận lời mời hợp tác / chụp ảnh",
+  "theme": {
+    "tagline": "Nhặt nhạnh khoảnh khắc nhỏ giữa hàng cây và ánh sáng",
+    "description": "Giao diện portfolio một trang cho nữ nhiếp ảnh gia phong cách Mori Girl, ảnh film và nhật ký thực vật."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang đầu",
+      "purpose": "Landing page duy nhất: hero nhật ký, 4 bộ ảnh có lightbox, câu chuyện sau ảnh, moodboard thẩm mỹ, quy trình, giới thiệu, hành trình / CV, liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ai", "note": "Ảnh film lớn + 2 ảnh nhỏ dán lệch như sổ, tên KOMOREBI serif lớn, ghi chú nghiêng" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "4 bộ ảnh, mỗi bộ một bố cục khác: lookbook bất đối xứng, dải film kéo ngang, still life masonry, toàn cảnh + dải ảnh nhỏ; lightbox" },
+        { "id": "stories", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "3 trang nhật ký xếp lệch, mỗi trang ảnh chủ đạo + ghi chú ngày tháng; nội dung mẫu" },
+        { "id": "aesthetic", "catalog": "features", "variant": "features-bento", "source": "ai", "note": "Moodboard tĩnh: bảng màu, chất liệu, ánh sáng, đồ vật nhỏ" },
+        { "id": "process", "catalog": "process", "variant": "timeline", "source": "ai", "note": "5 bước, timeline ngang desktop / dọc mobile, số lớn" },
+        { "id": "about", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Chân dung hậu trường + lời tự bạch ngắn + trích dẫn" },
+        { "id": "journey", "catalog": "team", "variant": "timeline", "source": "ai", "note": "CV editorial: accordion các nhóm (dự án, học tập, workshop) + kỹ năng; mốc mẫu dễ thay" },
+        { "id": "contact", "catalog": "contact", "variant": "cta-type", "source": "ai", "note": "Lá thư nhỏ: tiêu đề lớn, nút mailto, sao chép email, Instagram / Behance mẫu" }
+      ],
+      "images": [
+        { "slot": "hero-main", "query": "sunlight through forest trees", "file": "assets/img/hero-nang-xuyen-la.webp", "status": "ok" },
+        { "slot": "hero-polaroid", "query": "woman film camera nature", "file": "assets/img/hero-co-gai-trong-rung.jpg", "status": "ok" },
+        { "slot": "hero-pressed-flower", "query": "pressed flowers vintage", "file": "assets/img/hero-hoa-ep.webp", "status": "ok" },
+        { "slot": "gallery-01-cover", "query": "moss forest path", "file": "assets/img/bo01-loi-mon-rung.jpg", "status": "ok" },
+        { "slot": "gallery-01-detail", "query": "fern leaves close up light", "file": "assets/img/bo01-la-duong-xi.jpg", "status": "ok" },
+        { "slot": "gallery-01-wide", "query": "moss garden path", "file": "assets/img/bo01-rung-ngang.jpg", "status": "ok" },
+        { "slot": "gallery-02-portrait", "query": "woman linen dress meadow", "file": "assets/img/bo02-co-gai-vay-linen.webp", "status": "ok" },
+        { "slot": "gallery-02-reading", "query": "girl reading book window", "file": "assets/img/bo02-doc-sach-ben-cua-so.jpg", "status": "ok" },
+        { "slot": "gallery-02-fabric", "query": "linen fabric texture natural", "file": "assets/img/bo02-chat-lieu-vai.jpg", "status": "ok" },
+        { "slot": "gallery-03-cover", "query": "dried rose still life", "file": "assets/img/bo03-hoa-hong-kho.webp", "status": "ok" },
+        { "slot": "gallery-03-detail", "query": "dried flowers old letters still life", "file": "assets/img/bo03-hoa-kho-dong-ho.jpg", "status": "ok" },
+        { "slot": "gallery-03-film", "query": "dried hydrangea film", "file": "assets/img/bo03-hoa-kho-film.jpg", "status": "ok" },
+        { "slot": "gallery-04-wide", "query": "old wooden farmhouse countryside", "file": "assets/img/bo04-nha-go-canh-dong.jpg", "status": "ok" },
+        { "slot": "gallery-04-window", "query": "old window sunlight curtain", "file": "assets/img/bo04-nha-go-cua-so.jpg", "status": "ok" },
+        { "slot": "gallery-04-cat", "query": "cat sleeping afternoon sun", "file": "assets/img/bo04-nang-tren-san-nha.jpg", "status": "ok" },
+        { "slot": "gallery-04-meadow", "query": "wildflower meadow summer light", "file": "assets/img/bo04-dong-co-mua-ha.jpg", "status": "ok" },
+        { "slot": "story-01", "query": "morning forest path", "file": "assets/img/story-buoi-sang-duoi-tan-cay.jpg", "status": "ok" },
+        { "slot": "story-02", "query": "tea cup wooden window light", "file": "assets/img/story-tach-tra-ban-go.webp", "status": "ok" },
+        { "slot": "story-03", "query": "wildflowers hand picked", "file": "assets/img/story-hoa-dai-trong-tui-ao.jpg", "status": "ok" },
+        { "slot": "aesthetic-texture", "query": "knitted wool texture", "file": "assets/img/mood-chat-lieu-len.webp", "status": "ok" },
+        { "slot": "aesthetic-light", "query": "leaf shadow wall sunlight", "file": "assets/img/mood-bong-la-tren-tuong.jpg", "status": "ok" },
+        { "slot": "aesthetic-objects", "query": "vintage film camera old books", "file": "assets/img/mood-may-anh-film.jpg", "status": "ok" },
+        { "slot": "about-portrait", "query": "photographer woman holding camera forest", "file": "assets/img/about-co-gai-cam-may-anh.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng một trang duy nhất (index.html) theo chú thích của BA: 'Chỉ tạo một landing page duy nhất, không có trang con'",
+    "Dùng bảng màu BA chỉ định (Milk Cream, Moss, Forest, Warm Brown, Dusty Rose, Paper Beige, Ink Black) thay bảng màu preset Art Gallery",
+    "Font nội dung dùng Montserrat (đã kiểm có đủ ký tự tiếng Việt) thay Noto Sans JP vì Noto Sans JP không đủ dấu tiếng Việt; ghi chú viết tay thể hiện bằng Cormorant Garamond nghiêng màu nâu gỗ để giữ tối đa 2 font",
+    "Chữ Nhật 木漏れ日 (komorebi, nắng xuyên kẽ lá) dùng làm chi tiết trang trí có nghĩa, nạp riêng Noto Serif JP chỉ cho các ký tự này",
+    "Mọi câu tiếng Anh trong brief (tagline, tiêu đề section, CTA) được dịch sang tiếng Việt để đúng ngôn ngữ website; giữ 'Photography & Visual Diary' như một phần nhận diện thương hiệu cạnh wordmark",
+    "Mức chuyển động Level 1: chỉ hiện dần khi cuộn, header thu gọn, hover phóng ảnh nhẹ; không dùng con trỏ nhãn 'Xem' của preset vì BA cấm con trỏ tùy chỉnh",
+    "Tên nhiếp ảnh gia chưa có: hiển thị theo tên thương hiệu KOMOREBI; email, Instagram, Behance, mốc CV đều là nội dung mẫu dễ thay",
+    "Không tạo nút tải CV vì chưa có file CV thật",
+    "Ảnh len đan được giảm bão hòa bằng CSS (saturate 45%) để hợp bảng màu trầm; ảnh nhà quê mùa thu có watermark và người lạ bị loại, thay bằng ảnh đồng cỏ hoa dại lấy qua công cụ ảnh",
+    "Bộ 04 dùng lưới 12 cột trong cột nội dung 7/12 để xếp 3 ảnh lệch nhịp thay vì lưới 7 cột cũ"
+  ],
+  "limitations": [
+    "Ảnh là ảnh minh họa lấy từ thư viện ảnh mở (ghi nguồn trong assets/img/CREDITS.md), không phải tác phẩm của chủ portfolio",
+    "Email, Instagram, Behance và các mốc hành trình là nội dung mẫu cần thay bằng thông tin thật",
+    "Nút 'Viết cho tôi một lá thư' mở ứng dụng email (mailto), website không có backend gửi thư"
+  ]
+}

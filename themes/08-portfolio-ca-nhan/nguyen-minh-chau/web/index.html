@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nguyễn Minh Châu · Chuyên viên tổ chức cưới hỏi truyền thống</title>
+<meta name="description" content="Nguyễn Minh Châu, chuyên viên tổ chức cưới hỏi truyền thống Việt Nam. Lễ ăn hỏi, lễ gia tiên và lễ cưới được chuẩn bị chỉn chu, am hiểu văn hóa và điều phối chu đáo.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-cream font-sans text-cocoa">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-500 [&.is-scrolled]:border-cream-line [&.is-scrolled]:bg-cream/95 [&.is-scrolled]:backdrop-blur-sm">
+  <div class="mx-auto flex h-[76px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html#home" class="group flex min-w-0 flex-col leading-none" aria-label="Nguyễn Minh Châu, về đầu trang">
+      <span class="font-display text-[1.35rem] font-semibold tracking-[0.08em] text-crimson sm:text-2xl">NGUYỄN MINH CHÂU</span>
+      <span class="mt-1.5 whitespace-nowrap text-xs font-medium tracking-[0.08em] sm:tracking-[0.12em] text-cocoa-soft">CHUYÊN VIÊN TỔ CHỨC CƯỚI HỎI TRUYỀN THỐNG</span>
+    </a>
+
+    <nav data-scrollspy aria-label="Điều hướng chính" class="hidden items-center gap-7 xl:flex xl:gap-9">
+      <a href="#home" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">TRANG CHỦ</a>
+      <a href="#about" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">VỀ TÔI</a>
+      <a href="#portfolio" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">DỰ ÁN</a>
+      <a href="#experience" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">KINH NGHIỆM</a>
+      <a href="#contact" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">LIÊN HỆ</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button type="button" data-modal-open="cv" class="hidden h-11 items-center whitespace-nowrap bg-crimson px-6 text-[0.75rem] font-semibold tracking-[0.2em] text-cream transition duration-300 hover:bg-crimson-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson sm:inline-flex">XEM CV</button>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="inline-flex h-11 w-11 items-center justify-center border border-cocoa/30 text-cocoa transition duration-300 hover:border-crimson hover:text-crimson xl:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-cream-line bg-cream p-6 shadow-2xl shadow-cocoa/20 xl:hidden">
+    <nav aria-label="Điều hướng trên điện thoại" class="flex flex-col">
+      <a href="#home" class="border-b border-cream-line py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Trang chủ</a>
+      <a href="#about" class="border-b border-cream-line py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Về tôi</a>
+      <a href="#portfolio" class="border-b border-cream-line py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Dự án</a>
+      <a href="#experience" class="border-b border-cream-line py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Kinh nghiệm</a>
+      <a href="#contact" class="py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Liên hệ</a>
+    </nav>
+    <button type="button" data-modal-open="cv" class="mt-5 flex h-12 w-full items-center justify-center bg-crimson text-[0.78rem] font-semibold tracking-[0.2em] text-cream">XEM CV</button>
+  </div>
+</header>
+<!-- /@partial header -->
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" data-section="hero-offset" class="relative overflow-hidden bg-cream pt-[76px]">
+    <div aria-hidden="true" class="lattice pointer-events-none absolute inset-y-0 right-0 hidden w-[44%] lg:block"></div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl gap-12 px-4 pb-16 pt-10 sm:px-6 lg:min-h-[calc(100dvh-76px)] lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-10 lg:pb-12 lg:pt-6 2xl:px-16">
+
+      <div class="min-w-0 lg:col-span-6 xl:col-span-6">
+        <p class="text-xs font-medium tracking-[0.32em] text-crimson" data-reveal="fade">CHUYÊN VIÊN TỔ CHỨC CƯỚI HỎI TRUYỀN THỐNG</p>
+        <h1 data-split="words" class="mt-6 font-display text-[clamp(3.4rem,8.4vw,8.25rem)] font-semibold leading-[0.9] tracking-[-0.01em] text-crimson">Nguyễn <br>Minh Châu</h1>
+        <div class="mt-8 flex items-start gap-5" data-reveal="up" data-reveal-delay="250">
+          <span aria-hidden="true" class="mt-4 hidden h-px w-14 shrink-0 bg-gold sm:block"></span>
+          <div class="min-w-0">
+            <p class="max-w-xl font-display text-[1.7rem] italic leading-[1.2] text-cocoa sm:text-[2rem]">“Gìn giữ nét truyền thống, chăm chút từng khoảnh khắc trọng đại.”</p>
+            <p class="mt-4 max-w-md text-base leading-relaxed text-cocoa-soft">Tôi tổ chức lễ ăn hỏi, lễ gia tiên và lễ cưới bằng sự am hiểu văn hóa, chỉn chu trong từng khâu và khả năng điều phối nhịp nhàng giữa hai gia đình.</p>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap" data-reveal="up" data-reveal-delay="400">
+          <a href="#portfolio" data-magnetic="0.25" class="group inline-flex h-14 items-center justify-center gap-3 whitespace-nowrap bg-crimson px-8 text-[0.78rem] font-semibold tracking-[0.22em] text-cream transition duration-300 hover:bg-crimson-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson">
+            KHÁM PHÁ DỰ ÁN
+            <svg class="transition-transform duration-300 group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14m-5-5l5 5-5 5"/></svg>
+          </a>
+          <a href="#experience" class="inline-flex h-14 items-center justify-center whitespace-nowrap border border-cocoa/40 px-8 text-[0.78rem] font-semibold tracking-[0.22em] text-cocoa transition duration-300 hover:border-crimson hover:text-crimson active:scale-[.98]">XEM HỒ SƠ NGHỀ NGHIỆP</a>
+        </div>
+      </div>
+
+      <div class="relative min-w-0 lg:col-span-6 lg:-mr-10 2xl:-mr-16">
+        <div class="relative ml-auto w-[82%] sm:w-[68%] lg:w-[74%]">
+          <div data-reveal="clip" class="arch relative aspect-[4/5] overflow-hidden bg-cream-deep ring-1 ring-gold/60 ring-offset-[10px] ring-offset-cream">
+            <img src="assets/img/hero-portrait-ao-dai.jpg" alt="Người phụ nữ mặc áo dài màu san hô và đội nón lá, cầm quạt vẽ trên bậc đá" width="1024" height="773" class="h-full w-full object-cover object-[43%_30%]">
+          </div>
+          <div class="absolute -left-6 top-10 sm:-left-10 lg:-left-12" aria-hidden="true">
+            <div data-float="8" data-float-rotate="2">
+              <div class="seal h-24 w-24 rotate-[-6deg] text-[1.45rem] font-semibold sm:h-28 sm:w-28 sm:text-[1.7rem]">Minh<br>Châu</div>
+            </div>
+          </div>
+        </div>
+        <figure class="absolute -bottom-6 left-0 w-[46%] sm:w-[40%] lg:-bottom-4 lg:left-[2%] lg:w-[42%]">
+          <div data-reveal="clip" data-reveal-delay="300" class="aspect-[4/3] overflow-hidden border-[8px] border-cream bg-cream-deep shadow-xl shadow-cocoa/20">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Do_le_an_hoi.JPG" referrerpolicy="no-referrer" alt="Các mâm lễ ăn hỏi phủ vải đỏ được chuẩn bị cho lễ đính hôn truyền thống Việt Nam" class="h-full w-full object-cover">
+          </div>
+          <figcaption class="mt-2 hidden text-xs italic text-cocoa-soft sm:block">Mâm quả ăn hỏi thường được chuẩn bị theo số lẻ, mang ý nghĩa may mắn.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITES MARQUEE -->
+  <section id="rites" data-section="marquee-band" aria-label="Các nghi lễ tôi tổ chức" class="overflow-hidden border-y border-crimson-deep bg-crimson py-5 text-cream">
+    <div data-marquee="38" class="flex whitespace-nowrap font-display text-2xl italic sm:text-3xl">
+      <span class="px-8">Lễ dạm ngõ</span><span class="text-gold-soft" aria-hidden="true">✦</span>
+      <span class="px-8">Lễ ăn hỏi</span><span class="text-gold-soft" aria-hidden="true">✦</span>
+      <span class="px-8">Lễ gia tiên</span><span class="text-gold-soft" aria-hidden="true">✦</span>
+      <span class="px-8">Lễ vu quy</span><span class="text-gold-soft" aria-hidden="true">✦</span>
+      <span class="px-8">Lễ rước dâu</span><span class="text-gold-soft" aria-hidden="true">✦</span>
+      <span class="px-8">Tiệc cưới</span><span class="text-gold-soft" aria-hidden="true">✦</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" data-section="story-editorial" class="bg-cream py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-[clamp(2.6rem,5vw,4.6rem)] font-semibold leading-[1.02] text-crimson">Người đứng sau những ngày hỷ trọn vẹn.</h2>
+          <div data-reveal="clip" class="mt-10 aspect-[4/3] overflow-hidden bg-cream-deep">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/VNese_Wedding_021.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Hai gia đình Việt Nam trao lễ vật trong nghi thức cưới truyền thống" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] hover:scale-[1.04]">
+          </div>
+          <p class="mt-3 text-sm italic text-cocoa-soft">Khoảnh khắc hai gia đình gặp gỡ là trái tim của mỗi nghi lễ.</p>
+        </div>
+      </div>
+
+      <div class="min-w-0 lg:col-span-6 lg:col-start-7">
+        <p data-reveal="up" class="max-w-prose text-lg leading-relaxed text-cocoa first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-[4.6rem] first-letter:font-semibold first-letter:leading-[0.8] first-letter:text-crimson">Tôi là Minh Châu, chuyên viên tổ chức cưới hỏi với 5 năm kinh nghiệm hỗ trợ các gia đình chuẩn bị lễ ăn hỏi, lễ gia tiên và lễ cưới. Từ nhỏ, tôi đã quan sát bà chuẩn bị bàn thờ trong mỗi dịp sum họp. Sự chỉn chu và trân trọng ý nghĩa của từng nghi thức cũng là điều tôi gửi gắm vào mỗi buổi lễ.</p>
+        <p data-reveal="up" class="mt-6 max-w-prose text-lg leading-relaxed text-cocoa-soft">Công việc của tôi kết hợp sự am hiểu phong tục với năng lực tổ chức: hiểu ý nghĩa của mỗi nghi thức, đồng thời đảm bảo mọi việc diễn ra đúng thời điểm, đúng người và đủ lễ vật cần thiết.</p>
+
+        <blockquote data-reveal="up" class="relative my-12 border-l-2 border-crimson py-2 pl-8 lg:-ml-16 lg:pl-14">
+          <p class="font-display text-[1.75rem] italic leading-[1.25] text-crimson sm:text-[2.1rem]">“Mỗi nghi lễ đều mang một ý nghĩa riêng và xứng đáng được chuẩn bị bằng sự tôn trọng, chu đáo.”</p>
+          <footer class="mt-4 text-sm tracking-[0.08em] text-cocoa-soft">Nguyễn Minh Châu</footer>
+        </blockquote>
+
+        <h3 class="font-display text-2xl font-semibold text-cocoa">Điều tôi mang đến cho mỗi gia đình</h3>
+        <ul data-reveal-stagger="80" class="mt-6 grid gap-x-10 sm:grid-cols-2">
+          <li class="border-t border-cream-line py-5">
+            <p class="font-display text-xl font-semibold text-crimson">Tình yêu với văn hóa cưới hỏi Việt</p>
+            <p class="mt-1.5 text-[0.95rem] leading-relaxed text-cocoa-soft">Từ trầu cau đến trình tự dâng hương, phong tục là kim chỉ nam cho mỗi kế hoạch.</p>
+          </li>
+          <li class="border-t border-cream-line py-5">
+            <p class="font-display text-xl font-semibold text-crimson">Tổ chức và điều phối</p>
+            <p class="mt-1.5 text-[0.95rem] leading-relaxed text-cocoa-soft">Danh sách công việc rõ ràng và một lịch trình thống nhất cho mọi người.</p>
+          </li>
+          <li class="border-t border-cream-line py-5">
+            <p class="font-display text-xl font-semibold text-crimson">Chỉn chu trong từng nghi thức</p>
+            <p class="mt-1.5 text-[0.95rem] leading-relaxed text-cocoa-soft">Lễ vật được kiểm đếm, bàn thờ được rà soát, người lớn tuổi được đón tiếp chu đáo.</p>
+          </li>
+          <li class="border-t border-cream-line py-5">
+            <p class="font-display text-xl font-semibold text-crimson">Kết nối hai gia đình</p>
+            <p class="mt-1.5 text-[0.95rem] leading-relaxed text-cocoa-soft">Lắng nghe cha mẹ, ông bà để tìm ra phương án được cả hai bên đồng thuận.</p>
+          </li>
+          <li class="border-t border-cream-line py-5 sm:col-span-2">
+            <p class="font-display text-xl font-semibold text-crimson">Truyền thống trong cách tổ chức chuyên nghiệp</p>
+            <p class="mt-1.5 max-w-prose text-[0.95rem] leading-relaxed text-cocoa-soft">Trân trọng ý nghĩa phong tục, đồng thời điều phối ngày vui bằng phương pháp lập kế hoạch hiện đại.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" data-section="gallery-lookbook" class="bg-cream-deep py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <p class="text-xs font-medium tracking-[0.32em] text-crimson">DỰ ÁN TIÊU BIỂU</p>
+      <h2 data-reveal="up" class="mt-4 font-display text-[clamp(2.6rem,5.4vw,5rem)] font-semibold leading-[1] text-cocoa">Những dự án tôi tự hào.</h2>
+      <p class="mt-4 max-w-prose text-sm text-cocoa-soft">Các dự án và thông tin dưới đây được xây dựng để minh họa cho hồ sơ mẫu.</p>
+
+      <!-- Project 01: wide image + side sheet -->
+      <article class="mt-16 grid gap-8 lg:grid-cols-12 lg:gap-10">
+        <a href="assets/img/project-hong-duyen.jpg" data-lightbox="projects" data-caption="Hồng Duyên, lễ ăn hỏi và lễ gia tiên, Thành phố Hồ Chí Minh" class="group block min-w-0 lg:col-span-8">
+          <div data-reveal="clip" class="aspect-[3/2] overflow-hidden bg-cream-line">
+            <img src="assets/img/project-hong-duyen.jpg" loading="lazy" alt="Cổng hoa đỏ trắng dẫn vào ngôi nhà được chuẩn bị cho lễ ăn hỏi" width="1024" height="682" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+        </a>
+        <div class="flex min-w-0 flex-col lg:col-span-4 lg:pt-6">
+          <p class="font-display text-6xl font-semibold text-gold">01</p>
+          <h3 class="mt-2 font-display text-4xl font-semibold text-crimson sm:text-5xl">Hồng Duyên</h3>
+          <dl class="mt-6 grid grid-cols-2 gap-y-4 border-y border-cream-line py-5 text-sm">
+            <div><dt class="text-cocoa-soft">Nghi lễ</dt><dd class="mt-0.5 font-medium">Lễ ăn hỏi &amp; lễ gia tiên</dd></div>
+            <div><dt class="text-cocoa-soft">Địa điểm</dt><dd class="mt-0.5 font-medium">Thành phố Hồ Chí Minh</dd></div>
+            <div><dt class="text-cocoa-soft">Khách mời</dt><dd class="mt-0.5 font-medium">60 người</dd></div>
+            <div><dt class="text-cocoa-soft">Vai trò</dt><dd class="mt-0.5 font-medium">Lịch trình &amp; trình tự nghi lễ</dd></div>
+          </dl>
+          <p class="mt-5 leading-relaxed text-cocoa-soft">Áo dài đỏ, mâm quả truyền thống và bàn thờ gia tiên trang nghiêm. Tôi lập lịch trình, phối hợp chuẩn bị lễ vật giữa hai gia đình và điều phối trình tự từng nghi thức.</p>
+          <button type="button" data-modal-open="p-hong-duyen" class="group mt-7 inline-flex h-12 w-fit items-center gap-3 border-b border-crimson text-[0.75rem] font-semibold tracking-[0.2em] text-crimson transition duration-300 hover:gap-4">XEM CÂU CHUYỆN <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span></button>
+        </div>
+      </article>
+
+      <!-- Project 02: crimson band, text left, tall image right -->
+      <article class="relative mt-24 overflow-hidden bg-crimson text-cream lg:-mx-10 2xl:-mx-16">
+        <div aria-hidden="true" class="lattice-dark absolute inset-0"></div>
+        <div class="relative grid gap-10 px-6 py-12 sm:px-10 lg:grid-cols-12 lg:items-center lg:gap-12 lg:px-16 lg:py-16 2xl:px-24">
+          <div class="min-w-0 lg:col-span-5">
+            <p class="font-display text-6xl font-semibold text-gold-soft">02</p>
+            <h3 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">Sen Hồng Gia Lễ</h3>
+            <p class="mt-5 max-w-prose text-lg leading-relaxed text-cream/90">Lễ cưới truyền thống lấy hoa sen làm cảm hứng, với sắc đỏ trầm, kem và vàng cổ xuyên suốt từ thiệp mời đến bàn lễ.</p>
+            <ul class="mt-7 space-y-3 text-sm text-cream/90">
+              <li class="flex gap-4 border-t border-cream/20 pt-3"><span class="w-24 shrink-0 text-gold-soft">Địa điểm</span>Cần Thơ</li>
+              <li class="flex gap-4 border-t border-cream/20 pt-3"><span class="w-24 shrink-0 text-gold-soft">Khách mời</span>100 người</li>
+              <li class="flex gap-4 border-t border-cream/20 pt-3"><span class="w-24 shrink-0 text-gold-soft">Vai trò</span>Phát triển ý tưởng, phối hợp trang trí và kiểm tra khâu chuẩn bị</li>
+            </ul>
+            <button type="button" data-modal-open="p-sen-hong" class="mt-9 inline-flex h-12 items-center whitespace-nowrap bg-cream px-7 text-[0.75rem] font-semibold tracking-[0.2em] text-crimson transition duration-300 hover:bg-gold-soft active:scale-[.98]">XEM CÂU CHUYỆN</button>
+          </div>
+          <div class="min-w-0 lg:col-span-6 lg:col-start-7">
+            <a href="assets/img/project-sen-hong-lotus.webp" data-lightbox="projects" data-caption="Sen Hồng Gia Lễ, ý tưởng hoa sen, Cần Thơ" class="group block">
+              <div data-reveal="clip" class="arch aspect-[4/5] overflow-hidden bg-crimson-deep sm:aspect-[5/4] lg:aspect-[4/5]">
+                <img src="assets/img/project-sen-hong-lotus.webp" loading="lazy" alt="Hoa sen hồng đậm nở rộ, hình ảnh chủ đạo của lễ cưới Sen Hồng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 03: portrait image + horizontal facts strip -->
+      <article class="mt-24 grid gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="order-2 min-w-0 lg:order-1 lg:col-span-7">
+          <p class="font-display text-6xl font-semibold text-gold">03</p>
+          <h3 class="mt-2 font-display text-[clamp(2.6rem,5vw,4.5rem)] font-semibold leading-[1] text-crimson">Tơ Hồng Sum Vầy</h3>
+          <p class="mt-6 max-w-prose text-lg leading-relaxed text-cocoa-soft">Lễ cưới ấm cúng tại Huế với trang phục truyền thống cho hai gia đình và hoa tươi từ khu vườn địa phương. Tôi lập kế hoạch, quản lý lịch trình và điều phối mọi việc trong buổi sáng ngày cưới.</p>
+          <div class="mt-8 grid grid-cols-1 border-t border-cocoa/15 sm:grid-cols-3">
+            <div class="border-b border-cocoa/15 py-5 sm:border-b-0 sm:border-r sm:pr-6">
+              <p class="text-sm text-cocoa-soft">Nghi lễ</p>
+              <p class="mt-1 font-display text-2xl font-semibold">Lễ cưới gia đình</p>
+            </div>
+            <div class="border-b border-cocoa/15 py-5 sm:border-b-0 sm:border-r sm:px-6">
+              <p class="text-sm text-cocoa-soft">Địa điểm &amp; khách mời</p>
+              <p class="mt-1 font-display text-2xl font-semibold">Huế, 80 người</p>
+            </div>
+            <div class="py-5 sm:pl-6">
+              <p class="text-sm text-cocoa-soft">Vai trò</p>
+              <p class="mt-1 font-display text-2xl font-semibold">Lập kế hoạch &amp; điều phối</p>
+            </div>
+          </div>
+          <button type="button" data-modal-open="p-to-hong" class="group mt-6 inline-flex h-12 items-center gap-3 border-b border-crimson text-[0.75rem] font-semibold tracking-[0.2em] text-crimson transition duration-300 hover:gap-4">XEM CÂU CHUYỆN <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span></button>
+        </div>
+        <div class="order-1 min-w-0 lg:order-2 lg:col-span-4 lg:col-start-9">
+          <a href="assets/img/project-to-hong-hue-garden.jpg" data-lightbox="projects" data-caption="Tơ Hồng Sum Vầy, không gian nhà vườn ở Huế" class="group block">
+            <div data-reveal="clip" class="aspect-[3/4] overflow-hidden bg-cream-line ring-1 ring-gold/60 ring-offset-[10px] ring-offset-cream-deep">
+              <img src="assets/img/project-to-hong-hue-garden.jpg" loading="lazy" alt="Nhà vườn truyền thống ở Huế với nhà thủy tạ bằng gỗ, cầu nhỏ và cây hoa" width="1024" height="683" class="h-full w-full object-cover object-[40%_center] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- HERITAGE QUOTE -->
+  <section id="heritage" data-section="quote-full" data-particles="dust" data-particles-color="#D8C497" data-particles-density="0.6" class="relative overflow-hidden bg-cocoa-deep py-28 text-cream lg:py-40">
+    <div data-parallax="0.15" class="absolute inset-x-0 -inset-y-[15%]" aria-hidden="true">
+      <img src="assets/img/hero-incense-ritual.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-45">
+    </div>
+    <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-cocoa-deep via-cocoa-deep/80 to-cocoa-deep/30"></div>
+    <div class="relative z-10 mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <p data-split="words" class="max-w-4xl font-display text-[clamp(2.2rem,4.8vw,4.4rem)] italic leading-[1.12]">“Đám cưới không chỉ gói gọn trong một ngày. Đó là hành trình hai gia đình cùng bước chung một con đường, qua từng nghi lễ.”</p>
+      <p class="mt-8 text-sm tracking-[0.12em] text-gold-soft">Nguyễn Minh Châu, về việc tổ chức nghi lễ truyền thống</p>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise" data-section="features-tabs" class="bg-cream py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="min-w-0 lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-[clamp(2.6rem,5vw,4.6rem)] font-semibold leading-[1] text-crimson">Năng lực chuyên môn.</h2>
+          <p class="mt-5 max-w-md leading-relaxed text-cocoa-soft">Bảy năng lực tôi vận dụng trong mỗi buổi lễ, từ buổi gặp gỡ đầu tiên đến khi tiễn vị khách cuối cùng.</p>
+          <div class="relative mt-10 pb-16 pr-10 sm:pr-24">
+            <div data-reveal="clip" class="arch aspect-[4/5] overflow-hidden bg-cream-deep">
+              <img src="assets/img/expertise-areca-betel.jpg" loading="lazy" alt="Buồng cau đỏ chín trên cây, lễ vật thường được dâng cùng trầu trong lễ ăn hỏi Việt Nam" width="683" height="1024" class="h-full w-full object-cover">
+            </div>
+            <div class="absolute bottom-0 right-0 w-[48%]">
+              <div data-reveal="clip" data-reveal-delay="250" class="aspect-square overflow-hidden border-[8px] border-cream bg-cream-deep shadow-xl shadow-cocoa/15">
+                <img src="assets/img/expertise-embroidery.jpg" loading="lazy" alt="Đôi tay thêu họa tiết tre trên nền vải màu kem" class="h-full w-full object-cover object-[60%_center]">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="min-w-0 lg:col-span-6 lg:col-start-7">
+        <div data-accordion>
+          <p class="pb-3 text-sm font-medium tracking-[0.16em] text-gold-ink">NGHI LỄ</p>
+          <div data-acc-item data-open class="border-t border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-[1.75rem] font-semibold leading-tight text-cocoa transition-colors duration-300 hover:text-crimson sm:text-3xl">Lập kế hoạch cưới hỏi truyền thống <span data-acc-icon class="shrink-0 text-2xl text-crimson transition-transform duration-300 [.is-open_&]:rotate-45">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-cocoa-soft">Kết nối phong tục, vùng miền và mong muốn của mỗi gia đình thành một kế hoạch thống nhất: tổ chức nghi lễ nào, vào ngày nào và ai sẽ chủ trì.</div></div>
+          </div>
+          <div data-acc-item class="border-t border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-[1.75rem] font-semibold leading-tight text-cocoa transition-colors duration-300 hover:text-crimson sm:text-3xl">Chuẩn bị nghi lễ truyền thống <span data-acc-icon class="shrink-0 text-2xl text-crimson transition-transform duration-300 [.is-open_&]:rotate-45">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-cocoa-soft">Kiểm đếm mâm quả, trầu cau, trà, rượu và bánh theo số lượng phù hợp; sắp đặt, rà soát bàn thờ gia tiên trước khi đón khách.</div></div>
+          </div>
+          <div data-acc-item class="border-t border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-[1.75rem] font-semibold leading-tight text-cocoa transition-colors duration-300 hover:text-crimson sm:text-3xl">Điều phối nghi lễ <span data-acc-icon class="shrink-0 text-2xl text-crimson transition-transform duration-300 [.is-open_&]:rotate-45">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-cocoa-soft">Điều phối đoàn rước, nghi thức trao quả, dâng hương và giới thiệu hai gia đình để từng nghi thức diễn ra đúng trình tự.</div></div>
+          </div>
+
+          <p class="pb-3 pt-10 text-sm font-medium tracking-[0.16em] text-gold-ink">LẬP KẾ HOẠCH</p>
+          <div data-acc-item class="border-t border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-[1.75rem] font-semibold leading-tight text-cocoa transition-colors duration-300 hover:text-crimson sm:text-3xl">Quản lý lịch trình ngày cưới <span data-acc-icon class="shrink-0 text-2xl text-crimson transition-transform duration-300 [.is-open_&]:rotate-45">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-cocoa-soft">Xây dựng lịch trình chung từ sáu tuần trước đến từng giờ trong ngày, phù hợp với giờ lành hai gia đình đã chọn.</div></div>
+          </div>
+          <div data-acc-item class="border-t border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-[1.75rem] font-semibold leading-tight text-cocoa transition-colors duration-300 hover:text-crimson sm:text-3xl">Phối hợp các đơn vị cung cấp dịch vụ <span data-acc-icon class="shrink-0 text-2xl text-crimson transition-transform duration-300 [.is-open_&]:rotate-45">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-cocoa-soft">Thống nhất kế hoạch và đầu mối trong ngày với florist, đơn vị chuẩn bị mâm quả, thợ may áo dài, nhiếp ảnh gia và đơn vị tiệc.</div></div>
+          </div>
+
+          <p class="pb-3 pt-10 text-sm font-medium tracking-[0.16em] text-gold-ink">GIA ĐÌNH &amp; KHÔNG GIAN</p>
+          <div data-acc-item class="border-t border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-[1.75rem] font-semibold leading-tight text-cocoa transition-colors duration-300 hover:text-crimson sm:text-3xl">Kết nối hai gia đình <span data-acc-icon class="shrink-0 text-2xl text-crimson transition-transform duration-300 [.is-open_&]:rotate-45">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-cocoa-soft">Trao đổi chân thành với cha mẹ và người lớn tuổi hai bên để mọi quyết định được thấu hiểu, thống nhất trước ngày vui.</div></div>
+          </div>
+          <div data-acc-item class="border-y border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-[1.75rem] font-semibold leading-tight text-cocoa transition-colors duration-300 hover:text-crimson sm:text-3xl">Trang trí không gian sự kiện <span data-acc-icon class="shrink-0 text-2xl text-crimson transition-transform duration-300 [.is-open_&]:rotate-45">+</span></button>
+            <div data-acc-panel><div class="max-w-prose pb-6 leading-relaxed text-cocoa-soft">Chọn màu sắc, hoa và chất liệu tôn lên nghi thức thay vì lấn át: sắc đỏ may mắn, sắc vàng ấm áp và không gian trang trọng cho bàn thờ.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" data-section="timeline" class="bg-cocoa py-20 text-cream lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="min-w-0 lg:col-span-7">
+        <h2 data-reveal="up" class="font-display text-[clamp(2.6rem,5vw,4.6rem)] font-semibold leading-[1]">Kinh nghiệm làm việc.</h2>
+        <ol class="relative mt-14 border-l border-gold/50 pl-8 sm:pl-12">
+          <li data-reveal="up" class="relative pb-14">
+            <span aria-hidden="true" class="absolute -left-[calc(2rem+5px)] top-2 h-[9px] w-[9px] rotate-45 bg-gold sm:-left-[calc(3rem+5px)]"></span>
+            <p class="text-sm tracking-[0.16em] text-gold-soft">2023 – HIỆN TẠI</p>
+            <h3 class="mt-2 font-display text-3xl font-semibold sm:text-4xl">Chuyên viên tổ chức cưới hỏi độc lập</h3>
+            <ul class="mt-5 grid gap-x-8 gap-y-2 text-cream/85 sm:grid-cols-2">
+              <li class="flex gap-3"><span aria-hidden="true" class="text-gold">✦</span>Lập kế hoạch lễ ăn hỏi và lễ cưới</li>
+              <li class="flex gap-3"><span aria-hidden="true" class="text-gold">✦</span>Phối hợp với gia đình và các đơn vị dịch vụ</li>
+              <li class="flex gap-3"><span aria-hidden="true" class="text-gold">✦</span>Chuẩn bị danh sách công việc và lịch trình</li>
+              <li class="flex gap-3"><span aria-hidden="true" class="text-gold">✦</span>Điều phối công việc trong ngày diễn ra sự kiện</li>
+            </ul>
+          </li>
+          <li data-reveal="up" class="relative">
+            <span aria-hidden="true" class="absolute -left-[calc(2rem+5px)] top-2 h-[9px] w-[9px] rotate-45 bg-gold sm:-left-[calc(3rem+5px)]"></span>
+            <p class="text-sm tracking-[0.16em] text-gold-soft">2021 – 2023</p>
+            <h3 class="mt-2 font-display text-3xl font-semibold sm:text-4xl">Điều phối viên sự kiện</h3>
+            <p class="mt-1 font-display text-xl italic text-cream/80">An Duyên Wedding Studio</p>
+            <ul class="mt-5 grid gap-x-8 gap-y-2 text-cream/85 sm:grid-cols-2">
+              <li class="flex gap-3"><span aria-hidden="true" class="text-gold">✦</span>Hỗ trợ tổ chức lễ ăn hỏi và lễ cưới</li>
+              <li class="flex gap-3"><span aria-hidden="true" class="text-gold">✦</span>Phối hợp cùng đội ngũ trang trí</li>
+              <li class="flex gap-3"><span aria-hidden="true" class="text-gold">✦</span>Theo dõi tiến độ chuẩn bị</li>
+              <li class="flex gap-3"><span aria-hidden="true" class="text-gold">✦</span>Hỗ trợ điều phối nghi thức</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div class="min-w-0 lg:col-span-4 lg:col-start-9">
+        <div data-reveal="clip" class="aspect-[3/4] overflow-hidden bg-cocoa-soft lg:mt-24">
+          <img src="assets/img/project-to-hong-table.jpg" loading="lazy" alt="Bàn tiệc cưới được bày trí với hoa, ly thủy tinh và khăn trải bàn" class="h-full w-full object-cover">
+        </div>
+        <p class="mt-3 text-sm italic text-cream/70">Không gian tiệc được kiểm tra từng bàn trước khi đón khách.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" data-section="features-bento" class="bg-cream-deep py-20 lg:py-24">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-[clamp(2.4rem,4.4vw,4rem)] font-semibold leading-[1] text-cocoa">Học vấn &amp; chứng nhận.</h2>
+      <div data-reveal-stagger="100" class="mt-12 grid gap-6 md:grid-cols-12">
+        <article class="relative overflow-hidden border border-gold/60 bg-cream p-8 md:col-span-7 lg:p-12">
+          <div aria-hidden="true" class="lattice absolute inset-y-0 right-0 w-1/3 opacity-70"></div>
+          <div class="relative">
+            <div aria-hidden="true" class="seal h-16 w-16 text-base font-semibold">2021</div>
+            <p class="mt-8 text-sm tracking-[0.16em] text-gold-ink">BẰNG CẤP</p>
+            <h3 class="mt-2 font-display text-3xl font-semibold text-crimson sm:text-4xl">Cử nhân Quản trị sự kiện</h3>
+            <p class="mt-2 text-lg text-cocoa-soft">Học viện Sự kiện Việt</p>
+          </div>
+        </article>
+        <article class="relative overflow-hidden bg-crimson p-8 text-cream md:col-span-5 lg:p-12">
+          <div aria-hidden="true" class="lattice-dark absolute inset-0"></div>
+          <div class="relative">
+            <div aria-hidden="true" class="seal h-16 w-16 bg-cream text-base font-semibold text-crimson" style="background:#F7F0E5;color:#8E2028;outline-color:#F7F0E5;box-shadow:inset 0 0 0 3px #F7F0E5, inset 0 0 0 4.5px rgba(142,32,40,.6)">2022</div>
+            <p class="mt-8 text-sm tracking-[0.16em] text-gold-soft">CHỨNG NHẬN</p>
+            <h3 class="mt-2 font-display text-3xl font-semibold sm:text-4xl">Kiến thức nền tảng về tổ chức sự kiện</h3>
+            <p class="mt-2 text-lg text-cream/85">Chương trình đào tạo chuyên môn</p>
+          </div>
+        </article>
+      </div>
+      <p class="mt-6 text-sm text-cocoa-soft">Thông tin minh họa cho hồ sơ mẫu, không đại diện cho bằng cấp hoặc chứng chỉ có thật.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" data-section="cta-type" class="relative overflow-hidden bg-crimson-deep py-20 text-cream lg:py-28">
+    <div aria-hidden="true" class="lattice-dark absolute inset-0"></div>
+    <div class="relative mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <p class="text-xs font-medium tracking-[0.32em] text-gold-soft">LIÊN HỆ</p>
+      <h2 data-reveal="up" class="mt-5 max-w-6xl font-display text-[clamp(3rem,7.6vw,7.5rem)] font-semibold leading-[0.95]">Hãy cùng bắt đầu một cuộc trò chuyện.</h2>
+
+      <div class="mt-12 flex flex-col gap-3 sm:flex-row" data-reveal="up">
+        <a href="mailto:minchau@example.com" data-magnetic="0.25" class="inline-flex h-14 items-center justify-center whitespace-nowrap bg-cream px-9 text-[0.78rem] font-semibold tracking-[0.22em] text-crimson transition duration-300 hover:bg-gold-soft active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream">GỬI EMAIL</a>
+        <a href="assets/files/nguyen-minh-chau-cv-sample.txt" download class="inline-flex h-14 items-center justify-center gap-3 whitespace-nowrap border border-cream/60 px-9 text-[0.78rem] font-semibold tracking-[0.22em] text-cream transition duration-300 hover:border-cream hover:bg-cream hover:text-crimson active:scale-[.98]">
+          TẢI CV
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+        </a>
+      </div>
+      <p class="mt-3 text-xs text-cream/70">CV tải về là tệp văn bản mẫu.</p>
+
+      <dl class="mt-16 grid gap-0 border-t border-cream/20 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="border-b border-cream/20 py-6 lg:border-b-0 lg:border-r lg:pr-6">
+          <dt class="text-sm text-gold-soft">Thư điện tử</dt>
+          <dd class="mt-2 flex flex-wrap items-center gap-3">
+            <a href="mailto:minchau@example.com" class="break-all font-display text-2xl hover:text-gold-soft">minchau@example.com</a>
+            <button type="button" data-copy="minchau@example.com" class="inline-flex h-9 items-center border border-cream/40 px-3 text-xs tracking-[0.14em] text-cream/90 transition hover:bg-cream hover:text-crimson">SAO CHÉP</button>
+          </dd>
+        </div>
+        <div class="border-b border-cream/20 py-6 sm:pl-6 lg:border-b-0 lg:border-r lg:px-6">
+          <dt class="text-sm text-gold-soft">Địa điểm</dt>
+          <dd class="mt-2 font-display text-2xl">Thành phố Hồ Chí Minh, Việt Nam</dd>
+        </div>
+        <div class="border-b border-cream/20 py-6 sm:border-b-0 lg:border-r lg:px-6">
+          <dt class="text-sm text-gold-soft">LinkedIn</dt>
+          <dd class="mt-2 font-display text-2xl">Hồ sơ minh họa</dd>
+        </div>
+        <div class="py-6 sm:pl-6 lg:px-6">
+          <dt class="text-sm text-gold-soft">Instagram</dt>
+          <dd class="mt-2 font-display text-2xl">Hồ sơ minh họa</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- PROJECT PANELS -->
+  <dialog id="p-hong-duyen" aria-labelledby="p1-title" class="m-auto max-h-[90dvh] w-[min(860px,calc(100%-2rem))] overflow-y-auto bg-cream p-0 text-cocoa shadow-2xl">
+    <div class="relative aspect-[16/9] bg-cream-deep">
+      <img src="assets/img/project-hong-duyen.jpg" alt="Cổng hoa ở lối vào lễ ăn hỏi Hồng Duyên" class="h-full w-full object-cover">
+      <button type="button" data-modal-close aria-label="Đóng thông tin dự án" class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center bg-cream text-cocoa transition hover:bg-crimson hover:text-cream"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="px-6 py-8 sm:px-10">
+      <p class="text-sm tracking-[0.16em] text-gold-ink">DỰ ÁN 01 · THÀNH PHỐ HỒ CHÍ MINH · 60 KHÁCH</p>
+      <h3 id="p1-title" class="mt-2 font-display text-4xl font-semibold text-crimson">Hồng Duyên</h3>
+      <p class="mt-4 leading-relaxed text-cocoa-soft">Lễ ăn hỏi kết hợp lễ gia tiên diễn ra trong một buổi sáng. Ý tưởng gồm áo dài đỏ cho nhà gái, mâm quả truyền thống và bàn thờ gia tiên được bài trí trang nhã, trang nghiêm.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-3">
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Chuẩn bị</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Gặp gỡ hai mẹ trước sáu tuần để thống nhất số lượng mâm quả và trình tự nghi lễ.</p></div>
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Phối hợp</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Tìm và kiểm tra từng mâm lễ, hướng dẫn đội bê tráp của hai gia đình.</p></div>
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Trong ngày vui</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Điều phối lịch trình từ lúc nhà trai đến cho đến nghi thức dâng hương trước bàn thờ.</p></div>
+      </div>
+      <p class="mt-8 text-xs text-cocoa-soft">Dự án minh họa cho hồ sơ mẫu.</p>
+    </div>
+  </dialog>
+
+  <dialog id="p-sen-hong" aria-labelledby="p2-title" class="m-auto max-h-[90dvh] w-[min(860px,calc(100%-2rem))] overflow-y-auto bg-cream p-0 text-cocoa shadow-2xl">
+    <div class="relative aspect-[16/9] bg-crimson-deep">
+      <img src="assets/img/project-sen-hong-lotus.webp" alt="Hoa sen nở rộ, hình ảnh chủ đạo của lễ cưới Sen Hồng Gia Lễ" class="h-full w-full object-cover">
+      <button type="button" data-modal-close aria-label="Đóng thông tin dự án" class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center bg-cream text-cocoa transition hover:bg-crimson hover:text-cream"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="px-6 py-8 sm:px-10">
+      <p class="text-sm tracking-[0.16em] text-gold-ink">DỰ ÁN 02 · CẦN THƠ · 100 KHÁCH</p>
+      <h3 id="p2-title" class="mt-2 font-display text-4xl font-semibold text-crimson">Sen Hồng Gia Lễ</h3>
+      <p class="mt-4 leading-relaxed text-cocoa-soft">Lễ cưới truyền thống lấy cảm hứng từ hoa sen miền Tây. Sắc đỏ trầm, kem và vàng cổ được sử dụng xuyên suốt từ thiệp mời, bàn thờ đến bàn tiệc.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-3">
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Ý tưởng</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Hỗ trợ đôi uyên ương phát triển chủ đề hoa sen thành bảng màu, danh sách hoa và phông nền nghi lễ.</p></div>
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Trang trí</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Phối hợp với đơn vị hoa tươi và đội trang trí về nguồn hoa sen và thời gian thi công.</p></div>
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Rà soát</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Kiểm tra địa điểm vào tối hôm trước theo danh sách bàn thờ, sân khấu và bàn tiệc.</p></div>
+      </div>
+      <p class="mt-8 text-xs text-cocoa-soft">Dự án minh họa cho hồ sơ mẫu.</p>
+    </div>
+  </dialog>
+
+  <dialog id="p-to-hong" aria-labelledby="p3-title" class="m-auto max-h-[90dvh] w-[min(860px,calc(100%-2rem))] overflow-y-auto bg-cream p-0 text-cocoa shadow-2xl">
+    <div class="relative aspect-[16/9] bg-cream-deep">
+      <img src="assets/img/project-to-hong-wedding.jpg" alt="Phụ nữ mặc áo dài truyền thống đi giữa những cột sơn son trong chính điện" class="h-full w-full object-cover">
+      <button type="button" data-modal-close aria-label="Đóng thông tin dự án" class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center bg-cream text-cocoa transition hover:bg-crimson hover:text-cream"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="px-6 py-8 sm:px-10">
+      <p class="text-sm tracking-[0.16em] text-gold-ink">DỰ ÁN 03 · HUẾ · 80 KHÁCH</p>
+      <h3 id="p3-title" class="mt-2 font-display text-4xl font-semibold text-crimson">Tơ Hồng Sum Vầy</h3>
+      <p class="mt-4 leading-relaxed text-cocoa-soft">Lễ cưới thân mật tổ chức tại nhà gái ở Huế. Không gian ấm cúng, thư thái với trang phục truyền thống cho hai gia đình và hoa tươi trong vườn.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-3">
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Lập kế hoạch</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Thiết kế nghi lễ dựa trên phong tục Huế và mong muốn của ông bà hai bên.</p></div>
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Lịch trình</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Thống nhất lịch trình chung cho gia đình, đơn vị hoa tươi, tiệc và nhiếp ảnh.</p></div>
+        <div class="border-t-2 border-crimson pt-4"><p class="font-display text-xl font-semibold">Ngày cưới</p><p class="mt-1 text-sm leading-relaxed text-cocoa-soft">Điều phối khách đến, nghi lễ và bữa cơm thân mật để gia chủ có thể an tâm tiếp khách.</p></div>
+      </div>
+      <p class="mt-8 text-xs text-cocoa-soft">Dự án minh họa cho hồ sơ mẫu.</p>
+    </div>
+  </dialog>
+
+</main>
+
+<!-- @partial footer -->
+<footer id="footer" class="bg-cocoa-deep text-cream">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 py-12 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-10 md:grid-cols-12 md:items-end">
+      <div class="md:col-span-5">
+        <p class="font-display text-3xl font-semibold tracking-[0.06em] text-cream">NGUYỄN MINH CHÂU</p>
+        <p class="mt-2 text-xs tracking-[0.28em] text-gold-soft">CHUYÊN VIÊN TỔ CHỨC CƯỚI HỎI TRUYỀN THỐNG</p>
+      </div>
+      <nav aria-label="Điều hướng cuối trang" class="flex flex-wrap gap-x-7 gap-y-3 text-sm text-cream/80 md:col-span-4">
+        <a href="index.html#home" class="transition-colors duration-300 hover:text-gold-soft">Trang chủ</a>
+        <a href="index.html#about" class="transition-colors duration-300 hover:text-gold-soft">Về tôi</a>
+        <a href="index.html#portfolio" class="transition-colors duration-300 hover:text-gold-soft">Dự án</a>
+        <a href="index.html#experience" class="transition-colors duration-300 hover:text-gold-soft">Kinh nghiệm</a>
+        <a href="index.html#contact" class="transition-colors duration-300 hover:text-gold-soft">Liên hệ</a>
+      </nav>
+      <div class="text-sm text-cream/80 md:col-span-3 md:text-right">
+        <a href="mailto:minchau@example.com" class="transition-colors duration-300 hover:text-gold-soft">minchau@example.com</a>
+        <p class="mt-1">Thành phố Hồ Chí Minh, Việt Nam</p>
+      </div>
+    </div>
+    <div class="mt-10 flex flex-col gap-3 border-t border-cream/15 pt-6 text-xs text-cream/65 sm:flex-row sm:justify-between">
+      <p>© 2026 Nguyễn Minh Châu. Bảo lưu mọi quyền.</p>
+      <p>Dự án, vai trò và bằng cấp trong hồ sơ này là nội dung minh họa.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top aria-label="Về đầu trang" class="fixed bottom-6 right-6 z-30 inline-flex h-12 w-12 items-center justify-center bg-crimson text-cream shadow-lg shadow-cocoa/30 transition duration-300 hover:bg-crimson-deep">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
+
+<dialog id="cv" aria-labelledby="cv-title" class="m-auto max-h-[90dvh] w-[min(920px,calc(100%-2rem))] overflow-y-auto bg-cream p-0 text-cocoa shadow-2xl">
+  <div class="relative border-b border-cream-line bg-crimson px-6 py-8 text-cream sm:px-10">
+    <button type="button" data-modal-close aria-label="Đóng CV" class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center border border-cream/40 text-cream transition hover:bg-cream hover:text-crimson">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <p class="text-xs tracking-[0.28em] text-gold-soft">HỒ SƠ NGHỀ NGHIỆP</p>
+    <h2 id="cv-title" class="mt-3 font-display text-4xl font-semibold sm:text-5xl">Nguyễn Minh Châu</h2>
+    <p class="mt-2 text-sm text-cream/85">Chuyên viên tổ chức cưới hỏi · Thành phố Hồ Chí Minh, Việt Nam · minchau@example.com</p>
+  </div>
+  <div class="grid gap-10 px-6 py-8 sm:px-10 md:grid-cols-5">
+    <div class="md:col-span-3">
+      <h3 class="font-display text-2xl font-semibold text-crimson">Giới thiệu</h3>
+      <p class="mt-3 text-[0.95rem] leading-relaxed text-cocoa-soft">Chuyên viên tổ chức cưới hỏi với 5 năm kinh nghiệm trong lễ ăn hỏi, lễ gia tiên và lễ cưới truyền thống. Có thế mạnh điều phối nhịp nhàng giữa hai gia đình và chuẩn bị chu đáo từng nghi thức.</p>
+      <h3 class="mt-8 font-display text-2xl font-semibold text-crimson">Kinh nghiệm</h3>
+      <div class="mt-3 space-y-5 text-[0.95rem]">
+        <div>
+          <p class="font-semibold">Chuyên viên tổ chức cưới hỏi độc lập</p>
+          <p class="text-sm text-cocoa-soft">2023 đến nay</p>
+          <p class="mt-1 leading-relaxed text-cocoa-soft">Lập kế hoạch nghi lễ, phối hợp gia đình và đơn vị dịch vụ, chuẩn bị danh sách công việc, lịch trình và điều phối ngày cưới.</p>
+        </div>
+        <div>
+          <p class="font-semibold">Điều phối viên sự kiện, An Duyên Wedding Studio</p>
+          <p class="text-sm text-cocoa-soft">2021 đến 2023</p>
+          <p class="mt-1 leading-relaxed text-cocoa-soft">Hỗ trợ lễ ăn hỏi và lễ cưới, phối hợp với đội ngũ trang trí, theo dõi tiến độ chuẩn bị và trình tự nghi lễ.</p>
+        </div>
+      </div>
+    </div>
+    <div class="md:col-span-2">
+      <h3 class="font-display text-2xl font-semibold text-crimson">Học vấn</h3>
+      <ul class="mt-3 space-y-3 text-[0.95rem] leading-relaxed text-cocoa-soft">
+        <li><span class="font-semibold text-cocoa">Cử nhân Quản trị sự kiện</span><br>Học viện Sự kiện Việt, 2021</li>
+        <li><span class="font-semibold text-cocoa">Kiến thức nền tảng về tổ chức sự kiện</span><br>Chứng nhận, 2022</li>
+      </ul>
+      <h3 class="mt-8 font-display text-2xl font-semibold text-crimson">Kỹ năng</h3>
+      <p class="mt-3 text-[0.95rem] leading-relaxed text-cocoa-soft">Điều phối nghi lễ, quản lý lịch trình, phối hợp đơn vị dịch vụ, kết nối gia đình, trang trí sự kiện.</p>
+      <a href="assets/files/nguyen-minh-chau-cv-sample.txt" download class="mt-8 inline-flex h-12 items-center gap-3 whitespace-nowrap bg-cocoa px-6 text-[0.75rem] font-semibold tracking-[0.2em] text-cream transition duration-300 hover:bg-crimson active:scale-[.98]">
+        TẢI CV
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+      </a>
+      <p class="mt-3 text-xs text-cocoa-soft">CV mẫu dạng văn bản; toàn bộ thông tin chỉ nhằm mục đích minh họa.</p>
+    </div>
+  </div>
+</dialog>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

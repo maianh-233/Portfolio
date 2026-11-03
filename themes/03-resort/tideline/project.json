@@ -1,0 +1,84 @@
+{
+  "slug": "tideline",
+  "name": "TIDELINE",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "TIDELINE",
+    "purpose": "hiết kế website giới thiệu TIDELINE, một resort nghỉ dưỡng ven biển lấy cảm hứng từ những vách đá ven đại dương, địa hình khô cằn và vẻ đẹp của kiến trúc điêu khắc.\n\nThay vì mô phỏng resort biển hiện đại thông thường, TIDELINE theo đuổi phong cách Desert Coastal Retreat: mạnh mẽ, nguyên bản, giàu kết cấu vật liệu và có sự tương phản giữa đất, đá, ánh sáng và mặt nước.\n\nWebsite cần tạo cảm giác như một công trình kiến trúc được điêu khắc từ cảnh quan tự nhiên, nơi biển xanh đậm gặp những vách đá màu đất nung.\n\nTránh phong cách Tropical Luxury, Mediterranean Resort, Coastal Minimalism và các giao diện khách sạn sử dụng quá nhiều kính, nền trắng hoặc xanh biển nhạt.",
+    "audience": "Khách hàng du lịch muốn lưu trú",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. VISUAL IDENTITY — COLOR PALETTE\n\nSử dụng bảng màu ấm, trầm và có chiều sâu:\n\nTerracotta #B65F45: Màu nhận diện chính, lấy cảm hứng từ đất nung và vách đá đỏ.\n\nBurnt Copper #754638: Tông nâu đỏ đậm, dùng cho các section nổi bật và footer.\n\nSandstone #D9C5A7: Màu đá sa thạch, dùng làm nền phụ và tạo cảm giác tự nhiên.\n\nWarm Chalk #F3EDE3: Màu trắng phấn ấm, làm nền chính cho nội dung.\n\nDeep Plum #49323B: Màu mận trầm, dùng làm điểm nhấn cho typography, section đặc biệt và chi tiết giao diện.\n\nCách phối màu:\n\nWarm Chalk tạo không gian thoáng và giúp hình ảnh nổi bật.\n\nTerracotta là màu nhận diện dễ ghi nhớ, xuất hiện tại tiêu đề, nút điều hướng và một số mảng nền.\n\nSandstone kết nối giao diện với vật liệu tự nhiên.\n\nBurnt Copper tạo chiều sâu cho các section lớn.\n\nDeep Plum tạo điểm nhấn bất ngờ, giúp bảng màu không bị đơn điệu theo hướng nâu đất thông thường.\n\nKhông sử dụng xanh biển nhạt, xám lạnh hoặc trắng tinh làm màu chủ đạo. Màu biển nên xuất hiện chủ yếu trong hình ảnh, tạo tương phản với bảng màu đất nung.\n\n3. TYPOGRAPHY & LAYOUT\n\nTypography\n\nTiêu đề chính: Bodoni Moda hoặc Cormorant Garamond, tạo nét nghệ thuật và giàu tính kiến trúc.\n\nNội dung: Be Vietnam Pro, bảo đảm dễ đọc và hỗ trợ tiếng Việt.\n\nNhãn section: Sans-serif in hoa, cỡ nhỏ, khoảng cách ký tự rộng.\n\nMột số tiêu đề có thể sử dụng cỡ chữ lớn vượt khỏi bố cục thông thường.\n\nLayout\n\nKết hợp bố cục bất đối xứng, ảnh tràn khung và các khoảng trống lớn.\n\nSử dụng đường kẻ mảnh màu Terracotta hoặc Burnt Copper.\n\nẢnh có thể chồng lớp nhẹ hoặc đặt lệch trục để tạo cảm giác như trang tạp chí kiến trúc.\n\nƯu tiên hình chữ nhật, khối ngang dài và những vùng ảnh lớn.\n\nHạn chế card bo góc, bóng đổ nặng và các thành phần giao diện kiểu dashboard.\n\nTổng thể phải có tính nghệ thuật nhưng vẫn rõ ràng, dễ đọc và dễ điều hướng.\n\n4. IMAGE ART DIRECTION\n\nƯu tiên hình ảnh có chất liệu rõ, ánh sáng mạnh và tương phản tự nhiên.\n\nCác loại hình ảnh cần có:\n\nResort nằm trên vách đá hoặc địa hình ven biển khô cằn.\n\nCông trình có tường đất nung, đá tự nhiên và bề mặt hoàn thiện thủ công.\n\nLối đi kiến trúc uốn cong hoặc các khối tường điêu khắc.\n\nHồ bơi vô cực tương phản với vách đá và đại dương.\n\nPhòng nghỉ sử dụng màu đất, vải thô, gỗ sẫm và đá tự nhiên.\n\nNhà hàng có ánh sáng chiều, bàn ăn bằng đá và nội thất thủ công.\n\nKhu thư giãn ngoài trời với ghế dài, bóng nắng và cảnh quan tự nhiên.\n\nĐường chân trời và mặt biển nhìn từ những góc kiến trúc đặc biệt.\n\nTránh ảnh resort nhiệt đới có hàng dừa, nội thất trắng xanh kiểu Địa Trung Hải, công trình kính hiện đại hoặc những hình ảnh quá bóng bẩy như quảng cáo bất động sản.\n\n5. TRANG CHỦ — HOME\n\nHeader\n\nNền Warm Chalk.\n\nLogo TIDELINE sử dụng typography thanh lịch, có thể kết hợp biểu tượng đường chân trời cách điệu.\n\nMenu gồm Home, The Retreat, Stays, Experiences.\n\nCó nút chuyển đổi ngôn ngữ VI/EN.\n\nHeader gọn, không dùng nhiều biểu tượng hoặc đường viền trang trí.\n\nHero Section\n\nẢnh toàn chiều rộng về resort trên vách đá hoặc công trình màu đất nung bên đại dương.\n\nTiêu đề: “Where Earth Meets the Ocean”.\n\nDòng giới thiệu ngắn: “A retreat shaped by land, light and sea.”\n\nNhãn nhỏ phía trên tiêu đề: “A DESERT COASTAL RETREAT”.\n\nCTA điều hướng nội bộ: “Discover TIDELINE”.\n\nCó thể đặt tiêu đề lệch về một bên để giữ lại phần lớn diện tích ảnh.\n\nBrand Introduction\n\nBố cục hai cột không cân xứng.\n\nMột bên là tiêu đề lớn: “Rooted in the Landscape”.\n\nBên còn lại là đoạn giới thiệu về kiến trúc, vật liệu và mối liên hệ với địa hình.\n\nThêm một ảnh chi tiết bề mặt đá hoặc tường đất nung.\n\nArchitecture in Earth\n\nSử dụng một ảnh kiến trúc lớn kết hợp hai ảnh chi tiết nhỏ.\n\nGiới thiệu cách hình khối, vật liệu và ánh sáng tạo nên bản sắc của resort.\n\nCó thể dùng chú thích nhỏ dưới ảnh như trong tạp chí kiến trúc.\n\nNền Warm Chalk hoặc Sandstone.\n\nStay Collection\nGiới thiệu ba loại hình lưu trú:\n\nOcean Suite: Suite hướng biển với tông đất ấm và cửa mở rộng ra cảnh quan.\n\nHorizon Villa: Villa riêng tư với sân hiên và tầm nhìn đường chân trời.\n\nCoastal Residence: Không gian lưu trú rộng rãi, chú trọng sự kết nối giữa nội thất và cảnh quan.\n\nTrình bày bằng các ảnh có kích thước khác nhau, tránh lặp lại ba card giống hệt nhau.\n\nThe Elements\nGiới thiệu bốn tiện ích:\n\nOcean Pool.\n\nEarth Table Restaurant.\n\nStone Spa.\n\nSunset Lounge.\n\nMỗi tiện ích có ảnh, tiêu đề và mô tả ngắn. Bố cục cần linh hoạt, mang cảm giác của một bộ sưu tập kiến trúc và phong cách sống.\n\nFull-Width Gallery\n\nMột ảnh toàn chiều rộng về biển, vách đá hoặc hồ bơi.\n\nCó thể phủ một dòng chữ ngắn: “A Different Kind of Escape”.\n\nKhông đặt quá nhiều nội dung lên ảnh.\n\nBrand Statement\n\nNền Burnt Copper hoặc Deep Plum.\n\nChữ Warm Chalk.\n\nTiêu đề: “Find Your Own Horizon”.\n\nMột đoạn giới thiệu ngắn về triết lý nghỉ dưỡng gắn với thiên nhiên.\n\nFooter\n\nNền Deep Plum.\n\nLogo, điều hướng, thông tin liên hệ mẫu và liên kết mạng xã hội.\n\nĐường phân cách Terracotta mảnh.\n\nBố cục tối giản nhưng có cá tính.\n\n6. TRANG THE RETREAT — GIỚI THIỆU\n\nHero\n\nẢnh kiến trúc nằm giữa địa hình đá và biển.\n\nTiêu đề: “Designed by the Elements”.\n\nOur Philosophy\n\nGiới thiệu triết lý thiết kế của TIDELINE.\n\nNhấn mạnh sự kết hợp giữa địa hình, vật liệu tự nhiên, ánh sáng và tầm nhìn.\n\nTrình bày bằng đoạn văn ngắn kết hợp typography lớn.\n\nThe Materials\nGiới thiệu ba yếu tố:\n\nEarth: Bề mặt đất nung và sắc màu khoáng chất.\n\nStone: Kết cấu đá tự nhiên và cảm giác vững chắc.\n\nLight: Ánh sáng tạo hình cho không gian theo từng thời điểm trong ngày.\n\nMỗi yếu tố có ảnh riêng và một đoạn mô tả ngắn.\n\nArchitecture & Landscape\n\nẢnh công trình, hành lang, sân trong và hồ bơi.\n\nSử dụng bố cục editorial bất đối xứng.\n\nChú thích ảnh ngắn, tránh các đoạn giới thiệu quá dài.\n\nBrand Values\nTrình bày bốn giá trị bằng typography lớn:\n\nNatural Character.\n\nArchitectural Clarity.\n\nQuiet Luxury.\n\nConnection to Place.\n\nCó thể sử dụng nền Sandstone hoặc Terracotta cho một section nhằm tạo nhịp điệu thị giác.\n\n7. TRANG STAYS — PHÒNG NGHỈ & TIỆN ÍCH\n\nHero\n\nẢnh phòng nghỉ có tường màu đất, vật liệu tự nhiên và tầm nhìn hướng biển.\n\nTiêu đề: “Spaces with a Sense of Place”.\n\nOcean Suite\n\nHình ảnh phòng nghỉ và khu vực cửa sổ hướng biển.\n\nMô tả không gian, vật liệu và các tiện nghi tiêu biểu.\n\nHorizon Villa\n\nẢnh villa có sân hiên riêng và tầm nhìn rộng.\n\nNhấn mạnh sự riêng tư, kết nối với cảnh quan và trải nghiệm thư giãn.\n\nCoastal Residence\n\nẢnh không gian rộng, kết hợp phòng khách, phòng ngủ và khu vực ngoài trời.\n\nNhấn mạnh ngôn ngữ thiết kế xuyên suốt giữa nội thất và kiến trúc.\n\nMỗi hạng lưu trú có ảnh chính, tên, mô tả, đặc điểm thiết kế và danh sách tiện nghi phù hợp. Không hiển thị giá, lịch phòng hoặc thông tin chưa được xác định.\n\nResort Facilities\nGiới thiệu các tiện ích:\n\nOcean Pool: Hồ bơi với đường nét hình học và tầm nhìn ra biển.\n\nEarth Table: Nhà hàng mang phong cách ẩm thực đương đại.\n\nStone Spa: Không gian thư giãn với đá tự nhiên và ánh sáng dịu.\n\nSunset Lounge: Khu vực ngắm hoàng hôn và thư giãn.\n\nMovement Studio: Không gian dành cho vận động và chăm sóc sức khỏe.\n\nSử dụng lưới ảnh linh hoạt, phối hợp giữa ảnh ngang dài và ảnh dọc. Không trình bày mọi tiện ích thành những card đồng nhất.\n\n8. TRANG EXPERIENCES — TRẢI NGHIỆM\n\nHero\n\nẢnh đường chân trời, vách đá hoặc hồ bơi vào thời điểm hoàng hôn.\n\nTiêu đề: “Beyond the Ordinary Coast”.\n\nCoastal Discovery\n\nGiới thiệu trải nghiệm khám phá đường bờ biển và cảnh quan tự nhiên.\n\nDùng ảnh toàn cảnh và chú thích ngắn.\n\nThe Art of Dining\n\nẢnh món ăn, không gian nhà hàng và cách trình bày bàn ăn.\n\nTập trung vào cảm giác tinh tế, vật liệu tự nhiên và ánh sáng.\n\nSlow Rituals\n\nGiới thiệu spa, thư giãn và những khoảng thời gian nghỉ ngơi.\n\nBố cục thoáng, ảnh lớn và nội dung ngắn.\n\nMovement & Wellness\n\nGiới thiệu các hoạt động vận động và chăm sóc sức khỏe.\n\nHình ảnh mang tính tự nhiên, không sử dụng phong cách phòng gym công nghiệp.\n\nThe Sunset Hour\n\nẢnh hoàng hôn trên biển, sân hiên hoặc lounge.\n\nTiêu đề lớn đặt trên nền Terracotta hoặc Deep Plum.\n\nTạo một điểm nhấn cảm xúc cho trang.\n\nClosing Gallery\n\nMột ảnh toàn chiều rộng về cảnh quan.\n\nDòng chữ kết thúc: “Let the Landscape Set the Pace”.\n\nKhông có CTA đặt phòng hoặc giao dịch.\n\n9. INTERACTION & MOTION\n\nSử dụng chuyển động có tiết chế:\n\nFade-in theo chiều dọc khi section xuất hiện.\n\nẢnh zoom nhẹ khi hover.\n\nTiêu đề xuất hiện mượt mà khi cuộn.\n\nĐường kẻ trang trí xuất hiện dần.\n\nChuyển trạng thái menu và ngôn ngữ mượt mà.\n\nKhông dùng parallax mạnh, hiệu ứng 3D nặng hoặc animation liên tục.\n\n10. TECHNICAL REQUIREMENTS\n\nXây dựng bốn trang HTML riêng: index.html, about.html, stays.html, experiences.html.\n\nSử dụng HTML, CSS và JavaScript thuần.\n\nCó CSS và JavaScript dùng chung để giữ nhận diện nhất quán.\n\nHỗ trợ chuyển đổi VI/EN thực sự cho toàn bộ nội dung, menu, nút và footer.\n\nLưu lựa chọn ngôn ngữ khi người dùng chuyển trang hoặc tải lại.\n\nResponsive trên desktop, tablet và mobile.\n\nTối ưu hình ảnh, bảo đảm ảnh không bị méo và có phương án dự phòng khi tải lỗi.\n\nCác liên kết điều hướng phải hoạt động chính xác.\n\nKhông tích hợp đặt phòng, đặt lịch, giỏ hàng, thanh toán hoặc giao dịch.\n\n11. FINAL DESIGN GOAL\n\nTIDELINE phải mang bản sắc của một Desert Coastal Retreat: mạnh mẽ, giàu chất liệu và kết nối với cảnh quan tự nhiên.\n\nSự kết hợp giữa Terracotta, Burnt Copper, Sandstone và Deep Plum tạo nên một bảng màu khác biệt so với những resort xanh biển, trắng và xám thông thường.\n\nƯu tiên ảnh kiến trúc có cá tính, bố cục editorial, typography giàu biểu cảm và sự tương phản giữa đất nung với đại dương.\n\nKết quả phải giống website của một resort kiến trúc độc đáo giữa vùng bờ biển khô cằn, không phải một mẫu Contemporary Coastal Resort được thay đổi màu sắc đơn thuần.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-29T06:51:04.080Z",
+  "updatedAt": "2026-10-29T07:19:07.886Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\tideline\\web",
+    "builtAt": "2026-10-29T07:18:30.989Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/experiences.html",
+      "pages/stays.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/experiences.html": [],
+      "pages/stays.html": []
+    }
+  },
+  "job": {
+    "id": "8b522934-816d-4781-93e5-d26d22e8c859",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\tideline\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 262724,
+      "outputTokens": 151568,
+      "cacheReadTokens": 11396060,
+      "cacheCreationTokens": 350798,
+      "costUsd": 7.297018099999998,
+      "numTurns": 135,
+      "durationMs": 1591984
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-29T07:18:56.600Z",
+    "critical": 0,
+    "major": 39,
+    "minor": 1,
+    "screenshots": 12
+  }
+}

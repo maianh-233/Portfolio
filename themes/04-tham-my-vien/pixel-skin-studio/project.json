@@ -1,0 +1,75 @@
+{
+  "slug": "pixel-skin-studio",
+  "name": "PIXEL SKIN STUDIO",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "PIXEL SKIN STUDIO",
+    "purpose": "Thiết kế website giới thiệu PIXEL SKIN STUDIO, một studio thẩm mỹ và chăm sóc da hướng đến khách hàng trẻ, yêu thích sự khác biệt và phong cách hiện đại.\n\nArt direction: Pop Graphic Design. Sử dụng cam điện, tím, xanh lime và trắng. Typography đậm, hình khối hình học, sticker đồ họa, đường viền tương phản và các mảng màu lớn. Bố cục vui nhộn nhưng có hệ thống, không biến website thành trò chơi hoặc giao diện thiếu chuyên nghiệp.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Hero với typography lớn, hình ảnh chân dung nổi bật và các hình khối đồ họa. Giới thiệu studio, nhóm dịch vụ và triết lý chăm sóc da.\n\nDịch vụ thẩm mỹ & Bảng giá: Hiển thị dịch vụ bằng các khối đồ họa có số thứ tự, màu sắc phân nhóm và mô tả ngắn. Bao gồm chăm sóc da, làm sạch chuyên sâu, hỗ trợ cải thiện sắc tố và các dịch vụ phù hợp. Giá chỉ hiển thị khi có dữ liệu được cung cấp.\n\nVề chúng tôi: Giới thiệu câu chuyện thương hiệu, đội ngũ, không gian studio và cách tiếp cận khách hàng.\n\nWebsite có công tắc Việt – English với nội dung đầy đủ bằng hai ngôn ngữ. Nút “Đặt lịch tư vấn / Book a Consultation” mở form tư vấn tại header, cuối trang và nút nổi trên mobile.\n\nKhông có giỏ hàng, thanh toán hoặc chức năng mua sản phẩm. Các hình khối và màu sắc phải tạo bản sắc riêng, nhưng nội dung y khoa và thông tin dịch vụ vẫn phải rõ ràng, dễ đọc và đáng tin cậy.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-21T03:33:06.243Z",
+  "updatedAt": "2026-10-21T04:17:42.075Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\pixel-skin-studio\\web",
+    "builtAt": "2026-10-21T04:17:26.766Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "1b013465-6918-4b45-9a42-451e635a9710",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\pixel-skin-studio\\web",
+    "feedback": "Họ muốn giữ màu sắc nhưng phong cách này hơi trẻ con quá . Hãy giữu nội dung giữ màu đổi phong cách phù hợp hơn",
+    "page": "index.html",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-21T04:17:38.582Z",
+    "critical": 0,
+    "major": 1,
+    "minor": 0,
+    "screenshots": 9
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-21T04:17:26.755Z",
+      "text": "Họ muốn giữ màu sắc nhưng phong cách này hơi trẻ con quá . Hãy giữu nội dung giữ màu đổi phong cách phù hợp hơn"
+    }
+  ]
+}

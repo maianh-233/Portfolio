@@ -1,0 +1,34 @@
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-transparent bg-pearl transition-[background-color,border-color] duration-500 [&.is-scrolled]:border-line [&.is-scrolled]:bg-pearl/90 [&.is-scrolled]:backdrop-blur-md">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="min-w-0 whitespace-nowrap font-display text-[15px] font-medium uppercase leading-none tracking-[0.1em] text-cocoa sm:text-xl sm:tracking-[0.24em]">PEARL NAIL ATELIER</a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Chính">
+      <a href="{{root}}index.html" data-i18n="n-home" class="relative py-2 text-[13px] font-medium tracking-[0.06em] text-muted transition-colors duration-300 hover:text-cocoa aria-[current=page]:text-cocoa after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-cocoa after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Trang chủ</a>
+      <a href="{{root}}pages/services.html" data-i18n="n-services" class="relative py-2 text-[13px] font-medium tracking-[0.06em] text-muted transition-colors duration-300 hover:text-cocoa aria-[current=page]:text-cocoa after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-cocoa after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Dịch vụ &amp; Bảng giá</a>
+      <a href="{{root}}pages/gallery.html" data-i18n="n-gallery" class="relative py-2 text-[13px] font-medium tracking-[0.06em] text-muted transition-colors duration-300 hover:text-cocoa aria-[current=page]:text-cocoa after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-cocoa after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Bộ sưu tập</a>
+      <a href="{{root}}pages/about.html" data-i18n="n-about" class="relative py-2 text-[13px] font-medium tracking-[0.06em] text-muted transition-colors duration-300 hover:text-cocoa aria-[current=page]:text-cocoa after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-cocoa after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Về Atelier</a>
+    </nav>
+
+    <div class="flex shrink-0 items-center gap-2 sm:gap-5">
+      <div class="flex items-center text-[12px] font-medium tracking-[0.14em]" role="group" aria-label="Ngôn ngữ / Language">
+        <button type="button" data-lang="vi" class="h-11 px-2 text-muted transition-colors duration-300 hover:text-cocoa [&.is-active]:text-cocoa [&.is-active]:underline [&.is-active]:decoration-champagne [&.is-active]:underline-offset-[6px]">VI</button>
+        <span class="h-3 w-px bg-champagne" aria-hidden="true"></span>
+        <button type="button" data-lang="en" class="h-11 px-2 text-muted transition-colors duration-300 hover:text-cocoa [&.is-active]:text-cocoa [&.is-active]:underline [&.is-active]:decoration-champagne [&.is-active]:underline-offset-[6px]">EN</button>
+      </div>
+      <button type="button" data-modal-open="dat-lich" data-i18n="n-book" class="hidden h-11 items-center rounded-hair border border-cocoa/70 px-6 text-[12px] font-medium uppercase tracking-[0.16em] text-cocoa transition-colors duration-300 hover:bg-cocoa hover:text-pearl active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cocoa sm:inline-flex">Đặt lịch</button>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center text-cocoa lg:hidden" aria-label="Mở menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-hair border border-line bg-pearl p-6 shadow-[0_24px_60px_-20px_rgba(81,68,61,.35)] lg:hidden">
+    <nav class="flex flex-col divide-y divide-line" aria-label="Menu điện thoại">
+      <a href="{{root}}index.html" data-i18n="n-home" class="py-4 font-display text-2xl text-cocoa aria-[current=page]:italic">Trang chủ</a>
+      <a href="{{root}}pages/services.html" data-i18n="n-services" class="py-4 font-display text-2xl text-cocoa aria-[current=page]:italic">Dịch vụ &amp; Bảng giá</a>
+      <a href="{{root}}pages/gallery.html" data-i18n="n-gallery" class="py-4 font-display text-2xl text-cocoa aria-[current=page]:italic">Bộ sưu tập</a>
+      <a href="{{root}}pages/about.html" data-i18n="n-about" class="py-4 font-display text-2xl text-cocoa aria-[current=page]:italic">Về Atelier</a>
+    </nav>
+    <button type="button" data-modal-open="dat-lich" data-i18n="n-book" class="mt-6 inline-flex h-12 w-full items-center justify-center rounded-hair bg-cocoa text-[12px] font-medium uppercase tracking-[0.16em] text-pearl">Đặt lịch</button>
+  </div>
+</header>

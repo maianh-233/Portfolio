@@ -1,0 +1,182 @@
+{
+  "brand": "An Nam Ký Test",
+  "language": "vi",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Đường kẻ mảnh màu đỏ mận như đường may viền tà áo: chạy dọc lưới tạp chí, đánh số trang kiểu ấn phẩm, ảnh đặt như trang đôi",
+  "purposeInferred": "",
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu thương hiệu, dẫn sang câu chuyện, bộ sưu tập và hẹn may đo",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-type", "source": "ai", "note": "" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Đoạn ngắn, link sang about.html" },
+        { "id": "collections", "catalog": "collections", "variant": "gallery-lookbook", "source": "ba", "note": "3 bộ sưu tập nổi bật, link sang trang chi tiết" },
+        { "id": "craft", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "" },
+        { "id": "quote", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "ao dai hue", "file": "assets/img/home-hero-ao-dai-hue.jpg", "status": "ok" },
+        { "slot": "story", "query": "vietnamese girls ao dai temple", "file": "assets/img/col-van-mieu.jpg", "status": "ok" },
+        { "slot": "collections-sen-ha", "query": "ao dai lookbook", "file": "assets/img/lookbook-04.jpg", "status": "ok" },
+        { "slot": "collections-hy-su", "query": "ao dai", "file": "assets/img/col-trinh-nguyen-cover.jpg", "status": "ok" },
+        { "slot": "collections-tinh-khoi", "query": "ao dai lookbook", "file": "assets/img/lookbook-02.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "about.html",
+      "title": "Câu chuyện",
+      "purpose": "Kể quá trình hình thành thương hiệu và cảm hứng từ văn hóa Việt",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "" },
+        { "id": "lua", "catalog": "gallery", "variant": "gallery-band", "source": "ai", "note": "" },
+        { "id": "quy-trinh", "catalog": "process", "variant": "process-steps", "source": "ai", "note": "" },
+        { "id": "hanh-trinh", "catalog": "story", "variant": "timeline", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "hue imperial city", "file": "assets/img/about-hue-ngo-mon.jpg", "status": "ok" },
+        { "slot": "cau-chuyen", "query": "ao dai ngu than", "file": "assets/img/home-story-ao-dai.jpg", "status": "ok" },
+        { "slot": "lua", "query": "silk drying bamboo", "file": "assets/img/lookbook-06.jpg", "status": "ok" },
+        { "slot": "quy-trinh", "query": "hoi an tailor shop", "file": "assets/img/about-tiem-may.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "collections.html",
+      "title": "Bộ sưu tập",
+      "purpose": "Danh sách bộ sưu tập, lọc theo dịp mặc, thư viện ảnh trên phố",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "danh-sach", "catalog": "collections", "variant": "list-cards", "source": "ba", "note": "Lọc theo dịp mặc" },
+        { "id": "tren-pho", "catalog": "gallery", "variant": "gallery-masonry", "source": "ai", "note": "Lightbox" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "sen-ha", "query": "lotus flower", "file": "assets/img/sen-ha-lotus.jpg", "status": "ok" },
+        { "slot": "hy-su", "query": "ao dai", "file": "assets/img/ao-dai-g.jpg", "status": "ok" },
+        { "slot": "list-other", "query": "ao dai lookbook", "file": "assets/img/lookbook-03.jpg", "status": "ok" },
+        { "slot": "tren-pho", "query": "ao dai street", "file": "assets/img/nh-b.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "collection-sen-ha.html",
+      "title": "Sen Hạ",
+      "purpose": "Chi tiết bộ sưu tập Sen Hạ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "bai-viet", "catalog": "collections", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "cac-mau", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "" },
+        { "id": "lien-quan", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "ao dai parade", "file": "assets/img/nh-c.jpg", "status": "ok" },
+        { "slot": "bai-viet", "query": "ao dai lookbook", "file": "assets/img/lookbook-01.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "collection-hy-su.html",
+      "title": "Hỷ Sự",
+      "purpose": "Chi tiết bộ sưu tập Hỷ Sự (cưới hỏi)",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "bai-viet", "catalog": "collections", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "hinh-anh", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "Lightbox" },
+        { "id": "cac-mau", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "" },
+        { "id": "lien-quan", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "ao dai", "file": "assets/img/ao-dai-c.jpg", "status": "ok" },
+        { "slot": "hinh-anh", "query": "ao dai", "file": "assets/img/ao-dai-f.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "may-do.html",
+      "title": "May đo",
+      "purpose": "Giới thiệu các cách nhận may, chất liệu, một buổi hẹn và cách giữ áo, dẫn tới hẹn may đo",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "dich-vu", "catalog": "services", "variant": "services-tabs", "source": "ai", "note": "Tabs: áo riêng / cưới hỏi / lễ Tết" },
+        { "id": "chat-lieu", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "Bảng 4 chất liệu" },
+        { "id": "buoi-hen", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Không lặp quy trình ở about.html, link sang about.html#quy-trinh" },
+        { "id": "giu-ao", "catalog": "faq", "variant": "faq", "source": "ai", "note": "Accordion cách giữ áo lụa" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "tailor sewing machine vietnam", "file": "assets/img/may-do-hero-may-khau.webp", "status": "ok" },
+        { "slot": "dich-vu-rieng", "query": "fabric shop vietnam market", "file": "assets/img/may-do-lua.webp", "status": "ok" },
+        { "slot": "dich-vu-cuoi-hoi", "query": "ao dai", "file": "assets/img/may-do-ca-nhan.jpg", "status": "ok" },
+        { "slot": "dich-vu-le-tet", "query": "ao dai lookbook", "file": "assets/img/lookbook-07.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "journal.html",
+      "title": "Ghi chép",
+      "purpose": "Danh sách ghi chép (blog) về lụa, nghề may và áo dài; nhận thư theo mùa",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "noi-bat", "catalog": "blog", "variant": "editorial-feature", "source": "ai", "note": "Bài nổi bật dạng trang đôi" },
+        { "id": "tat-ca", "catalog": "blog", "variant": "blog-list", "source": "ai", "note": "2 bài 'Sắp đăng' không có link" },
+        { "id": "nhan-thu", "catalog": "cta", "variant": "cta-newsletter", "source": "ai", "note": "Form demo" }
+      ],
+      "images": [
+        { "slot": "noi-bat", "query": "silk weaving village", "file": "assets/img/article-lua-khung-cui.jpg", "status": "ok" },
+        { "slot": "tat-ca-02", "query": "ao dai", "file": "assets/img/article-giu-ao-hero.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "article-lua-nha-xa.html",
+      "title": "Một ngày ở làng lụa Nha Xá",
+      "purpose": "Bài ghi chép mẫu về chất liệu lụa",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "bai-viet", "catalog": "editorial", "variant": "detail-article", "source": "ai", "note": "" },
+        { "id": "lien-quan", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "silk weaving village", "file": "assets/img/article-lua-khung-cui.jpg", "status": "ok" },
+        { "slot": "bai-viet", "query": "fabric shop vietnam market", "file": "assets/img/article-lua-ken-tam.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "article-ao-bung-qua.html",
+      "title": "Chọn áo dài cho hội chị em bưng quả",
+      "purpose": "Bài ghi chép mẫu về áo cưới hỏi, dẫn sang Hỷ Sự và hẹn may",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "bai-viet", "catalog": "editorial", "variant": "detail-article", "source": "ai", "note": "" },
+        { "id": "lien-quan", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "ao dai", "file": "assets/img/article-giu-ao-hero.jpg", "status": "ok" },
+        { "slot": "bai-viet", "query": "ao dai", "file": "assets/img/may-do-gia-dinh.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "contact.html",
+      "title": "Liên hệ",
+      "purpose": "Thông tin xưởng, form hẹn may đo (demo) và câu hỏi trước khi ghé",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "hen-may", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Form demo" },
+        { "id": "hoi-dap", "catalog": "faq", "variant": "faq", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "hen-may", "query": "tailor boutique", "file": "assets/img/contact-boutique.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Theo góp ý của BA: thêm trang May đo (may-do.html), Ghi chép (journal.html) và 2 bài chi tiết mẫu, cùng phong cách editorial cũ; menu header / footer mọi trang thêm 'May đo', 'Ghi chép'.",
+    "Không thêm mua hàng / giỏ hàng vì website chỉ giới thiệu thương hiệu (chú thích BA).",
+    "Bộ sưu tập Tinh Khôi để 'Sắp ra mắt', chỉ liên kết tới mục trong collections.html, chưa có trang chi tiết.",
+    "Còn 2 file ảnh tải thử không dùng (assets/img/may-do-lua.jpg, assets/img/article-lua-ken-tam.jpg) do sai chủ đề, đã thay bằng bản .webp; tool không cho xóa file."
+  ],
+  "limitations": [
+    "Form hẹn may đo và form nhận thư là bản demo, chưa có backend.",
+    "Ảnh lấy từ thư viện ảnh mở (Openverse), cần thay bằng ảnh thật của thương hiệu khi đưa lên web."
+  ]
+}

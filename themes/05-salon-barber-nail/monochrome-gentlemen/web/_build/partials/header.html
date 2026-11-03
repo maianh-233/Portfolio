@@ -1,0 +1,36 @@
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-line bg-paper">
+  <div class="mg-header-inner mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="flex min-w-0 items-center gap-3" aria-label="MONOCHROME GENTLEMEN">
+      <span class="grid h-9 w-9 shrink-0 place-items-center border border-ink font-display text-[13px] font-semibold tracking-[0.04em]">MG</span>
+      <span class="font-display text-[12px] font-semibold uppercase leading-[1.25] tracking-[0.16em] sm:text-sm sm:tracking-[0.22em]">Monochrome<br class="sm:hidden"> Gentlemen</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Menu chính" data-i18n-attr="aria-label:nav.label">
+      <a href="{{root}}index.html" data-i18n="nav.home" class="relative py-2 text-[13px] font-medium uppercase tracking-[0.14em] text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Trang chủ</a>
+      <a href="{{root}}pages/services.html" data-i18n="nav.services" class="relative py-2 text-[13px] font-medium uppercase tracking-[0.14em] text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Dịch vụ</a>
+      <a href="{{root}}pages/portfolio.html" data-i18n="nav.portfolio" class="relative py-2 text-[13px] font-medium uppercase tracking-[0.14em] text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Bộ sưu tập tóc</a>
+      <a href="{{root}}pages/studio.html" data-i18n="nav.studio" class="relative py-2 text-[13px] font-medium uppercase tracking-[0.14em] text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">The Studio</a>
+    </nav>
+
+    <div class="flex shrink-0 items-center gap-3">
+      <div class="flex border border-ink text-[12px] font-semibold tracking-[0.1em]" role="group" aria-label="Ngôn ngữ" data-i18n-attr="aria-label:lang.label">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="h-11 w-11 transition-colors duration-300 hover:bg-line lg:h-9 lg:w-10">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="h-11 w-11 border-l border-ink transition-colors duration-300 hover:bg-line lg:h-9 lg:w-10">EN</button>
+      </div>
+      <button type="button" data-book data-i18n="cta.book" class="hidden h-11 items-center bg-ink px-6 text-[12px] font-semibold uppercase tracking-[0.16em] text-paper transition-colors duration-300 hover:bg-graphite active:scale-[.98] lg:inline-flex">Đặt lịch</button>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink lg:hidden" aria-label="Mở menu" data-i18n-attr="aria-label:nav.open">
+        <span class="flex w-5 flex-col gap-[5px]" aria-hidden="true"><span class="h-px w-full bg-ink"></span><span class="h-px w-full bg-ink"></span><span class="h-px w-3/5 bg-ink"></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="absolute inset-x-0 top-full z-50 max-h-[calc(100dvh-64px)] overflow-y-auto border-y border-ink bg-paper px-4 pb-8 pt-2 sm:px-6 lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-i18n-attr="aria-label:nav.mobile">
+      <a href="{{root}}index.html" class="flex items-baseline gap-5 border-b border-line py-4 font-display text-2xl font-medium uppercase tracking-tight aria-[current=page]:font-semibold"><span class="w-6 text-xs font-medium text-graphite">01</span><span data-i18n="nav.home">Trang chủ</span></a>
+      <a href="{{root}}pages/services.html" class="flex items-baseline gap-5 border-b border-line py-4 font-display text-2xl font-medium uppercase tracking-tight aria-[current=page]:font-semibold"><span class="w-6 text-xs font-medium text-graphite">02</span><span data-i18n="nav.services">Dịch vụ</span></a>
+      <a href="{{root}}pages/portfolio.html" class="flex items-baseline gap-5 border-b border-line py-4 font-display text-2xl font-medium uppercase tracking-tight aria-[current=page]:font-semibold"><span class="w-6 text-xs font-medium text-graphite">03</span><span data-i18n="nav.portfolio">Bộ sưu tập tóc</span></a>
+      <a href="{{root}}pages/studio.html" class="flex items-baseline gap-5 border-b border-line py-4 font-display text-2xl font-medium uppercase tracking-tight aria-[current=page]:font-semibold"><span class="w-6 text-xs font-medium text-graphite">04</span><span data-i18n="nav.studio">The Studio</span></a>
+    </nav>
+    <button type="button" data-book data-i18n="cta.book" class="mt-6 flex h-12 w-full items-center justify-center bg-ink text-[13px] font-semibold uppercase tracking-[0.16em] text-paper">Đặt lịch</button>
+  </div>
+</header>

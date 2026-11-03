@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết đơn (quản trị) · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-009" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-009 Chi tiết đơn (quản trị): DetailHeader + nút chuyển trạng thái (App.orderActions) + OrderStepper + Alert tình huống
+   * + khách & nhận hàng + sản phẩm (cột Tồn hiện tại khi NEW) + suất pate + OrderSummary + Thanh toán (ghi nhận / hoàn tiền) + Timeline đủ tên. ?id= */
+  (function () {
+    var o = DemoStore.get('orders', App.param('id') || 'pc-2026-00006');
+    Layout.mount({ area: 'admin', title: o ? o.code : 'Chi tiết đơn', active: 'orders', breadcrumb: [['Đơn hàng', 'pages/admin/don-hang.html'], [o ? o.code : 'Không tìm thấy']] }, function (main) {
+      var U = Perm.url, esc = UI.esc, S = MOCK.settings;
+      if (!o) { main.innerHTML = '<div class="rounded-lg border border-neutral-200 bg-white">' + UI.emptyState({ title: 'Không tìm thấy đơn hàng', action: UI.button({ label: 'Về danh sách đơn', href: U('pages/admin/don-hang.html') }) }) + '</div>'; return; }
+      var doc = App.docOf(o), pate = doc === 'DOC-BOOK-PATE_ORDER';
+      main.innerHTML = UI.skeleton(2) + '<div class="mt-4">' + UI.skeletonBlock('h-24 rounded-lg') + '</div><div class="mt-4 grid gap-4 lg:grid-cols-3">' + UI.skeletonBlock('h-72 rounded-lg lg:col-span-2') + UI.skeletonBlock('h-72 rounded-lg') + '</div>';
+
+      function actionButtons(acts, mobile) {
+        var prim = acts.filter(function (a) { return a.primary; }), rest = acts.filter(function (a) { return !a.primary; });
+        var html = prim.concat(mobile ? [] : rest.filter(function (a) { return a.kind === 'event'; }).slice(0, 1)).map(function (a) {
+          var i = acts.indexOf(a), b = UI.button({ label: a.label, icon: a.icon, variant: a.primary ? 'primary' : a.danger ? 'danger-outline' : 'outline', disabled: a.disabled, full: mobile, attrs: { 'data-act': i, 'data-permission': a.permission } });
+          return a.disabled && a.tooltip ? UI.withTooltip(b, a.tooltip) : b;
+        }).join('');
+        var more = mobile ? rest : rest.filter(function (a) { return a.kind !== 'event'; }).concat(rest.filter(function (a) { return a.kind === 'event'; }).slice(1));
+        html += UI.iconButton({ icon: 'ellipsis', label: 'Thao tác khác', variant: 'outline', attrs: { 'data-more': mobile ? 'm' : 'd', 'aria-haspopup': 'menu' } });
+        return { html: html, more: more };
+      }
+      var acts = [], desk, mob;
+      function paint() {
+        o = DemoStore.get('orders', o.id);
+        acts = App.orderActions(o); desk = actionButtons(acts, false); mob = actionButtons(acts, true);
+        var ret = o.return_id ? DemoStore.get('returns', o.return_id) : null;
+        var alerts = [];
+        if (App.cancelRequested(o)) alerts.push(UI.alert({ tone: 'danger', text: 'Khách yêu cầu hủy lúc ' + UI.fmt.datetime(o.yeu_cau_huy.at) + '. Lý do: ' + o.yeu_cau_huy.reason + '.' }));
+        if (pate && o.state === 'CONFIRMED' && o.trang_thai_thanh_toan === 'CHUA_THANH_TOAN') alerts.push(UI.alert({ tone: 'warning', text: 'Chờ khách chuyển cọc 200.000đ.' }));
+        if (App.paidReported(o)) alerts.push(UI.alert({ tone: 'info', text: 'Khách báo đã chuyển khoản lúc ' + UI.fmt.datetime(o.bao_da_ck) + '. Vui lòng kiểm tra tài khoản và ghi nhận thanh toán.' }));
+        if (App.needsRefund(o)) alerts.push(UI.alert({ tone: 'warning', text: (pate ? 'Chờ hoàn cọc ' : 'Chờ hoàn tiền ') + UI.fmt.money(App.paid(o) - App.refunded(o)) + ' cho khách.' }));
+        var feeTxt = o.cach_giao === 'TU_LAY' ? 'Miễn phí (tự lấy)' : o.cach_giao === 'TU_GIAO' && !o.phi_ship ? 'Miễn phí (cửa hàng tự giao)' : o.cua_hang_chiu_ship ? 'Cửa hàng chịu phí ship' : UI.fmt.money(o.phi_ship);
+        var customer = UI.card({ title: 'Khách hàng & nhận hàng', body: UI.descriptionList([
+          { label: 'Người nhận', value: '<b>' + esc(o.ho_ten_nhan) + '</b>' }, { label: 'Số điện thoại', value: '<a class="font-bold text-primary-700 hover:underline" href="tel:' + esc(o.so_dien_thoai_nhan) + '">' + esc(o.so_dien_thoai_nhan) + '</a>' },
+          { label: 'Email', value: esc(o.email) }, { label: 'Cách giao', value: esc(App.SHIP[o.cach_giao]) },
+          { label: 'Địa chỉ giao', value: o.cach_giao === 'TU_LAY' ? 'Khách tự lấy tại cửa hàng' : esc(o.dia_chi_giao), full: true }, { label: 'Quận / huyện', value: esc(o.quan) },
+          { label: 'Phí giao', value: feeTxt }, o.don_vi_van_chuyen ? { label: 'Đơn vị vận chuyển', value: esc(o.don_vi_van_chuyen) + (o.ma_van_don ? ' · <span class="font-mono">' + esc(o.ma_van_don) + '</span>' : '') } : null,
+          { label: 'Ghi chú của khách', value: esc(o.ghi_chu), full: true }]) });
+        var cap = pate && o.ngay_giao_du_kien ? UI.card({ title: 'Suất pate ngày ' + UI.fmt.date(o.ngay_giao_du_kien), body: UI.capacityBar(App.pateJars(o.ngay_giao_du_kien), S.pateCap) + '<p class="mt-2 text-xs text-neutral-600">Năng lực tối đa ' + S.pateCap + ' hũ / ngày</p>' }) : '';
+        var payCard = UI.card({ title: 'Thanh toán', actions: App.payTag(o.trang_thai_thanh_toan), body:
+          UI.descriptionList([{ label: 'Cách thanh toán', value: esc(App.PAY_METHOD[o.cach_thanh_toan]), full: true }], 1) +
+          '<p class="mt-4 text-sm font-bold text-neutral-800">Đã nhận</p>' + ((o.payments || []).length ? '<ul class="mt-1 flex flex-col gap-1.5 text-sm">' + o.payments.map(function (p) { return '<li class="flex justify-between gap-2"><span class="text-neutral-700">' + UI.fmt.date(p.at) + ' · ' + esc(p.loai) + ' (' + esc(p.cach) + ')<span class="block text-xs text-neutral-600">' + esc(p.by || '') + '</span></span><b class="tabular-nums">' + UI.fmt.money(p.so_tien) + '</b></li>'; }).join('') + '</ul>' : '<p class="text-sm text-neutral-600">Chưa có</p>') +
+          ((o.refunds || []).length ? '<p class="mt-4 text-sm font-bold text-neutral-800">Đã hoàn</p><ul class="mt-1 flex flex-col gap-1.5 text-sm">' + o.refunds.map(function (r) { return '<li class="flex justify-between gap-2"><span class="text-neutral-700">' + UI.fmt.date(r.at) + ' · ' + esc(r.ly_do) + '</span><b class="tabular-nums text-danger-700">−' + UI.fmt.money(r.so_tien) + '</b></li>'; }).join('') + '</ul>' : '') +
+          '<div class="mt-4 flex flex-col gap-2">' + acts.filter(function (a) { return a.kind === 'pay' || a.kind === 'refund'; }).map(function (a) { return UI.button({ label: a.label, icon: a.icon, variant: 'outline', full: true, attrs: { 'data-act': acts.indexOf(a), 'data-permission': a.permission } }); }).join('') + '</div>' });
+        var summary = UI.orderSummary({ title: 'Tiền hàng', rows: [{ label: 'Tạm tính', value: UI.fmt.money(o.tam_tinh) }, o.giam_gia ? { label: 'Giảm giá (' + esc(o.ma_giam_gia) + ')', value: '−' + UI.fmt.money(o.giam_gia), tone: 'success' } : null, { label: 'Phí giao hàng', value: o.phi_ship ? UI.fmt.money(o.phi_ship) : '0đ' }, pate ? { label: 'Tiền cọc', value: UI.fmt.money(o.tien_coc) } : null], total: o.tong_cong, points: pate ? '' : (o.diem_da_cong ? 'Đã cộng ' + o.diem + ' điểm cho khách' : '+' + o.diem + ' điểm khi giao thành công') });
+        var timeline = UI.timeline((o.history || []).slice().reverse().map(function (h) {
+          var s = h.to ? Workflow.state(doc, h.to) : null, f = h.from ? Workflow.state(doc, h.from) : null;
+          return { at: h.at, by: h.by || h.roleName, tone: s ? s.tone : 'info', note: h.note, title: h.log ? esc(h.event) : (f ? esc(f.name) + ' → ' : '') + '<b>' + esc(s ? s.name : h.event) + '</b>' + (h.event && !h.log ? ' <span class="font-normal text-neutral-600">(' + esc(h.event) + ')</span>' : '') };
+        }));
+
+        main.innerHTML = UI.detailHeader({ code: o.code, tags: App.typeTag(o) + App.orderFlags(o), status: App.stateBadge(doc, o.state, 'md'), meta: 'Đặt lúc ' + UI.fmt.datetime(o.tao_luc) + (pate && o.ngay_giao_du_kien ? ' · Giao dự kiến ' + UI.fmt.date(o.ngay_giao_du_kien) : ''), actions: '<span class="hidden md:contents">' + desk.html + '</span>' }) +
+          '<div class="rounded-lg border border-neutral-200 bg-white p-4 md:p-5">' + App.stepper(o) + '</div>' +
+          (alerts.length ? '<div class="mt-4 flex flex-col gap-2">' + alerts.join('') + '</div>' : '') +
+          '<div class="mt-4 grid gap-4 lg:grid-cols-3"><div class="order-2 flex min-w-0 flex-col gap-4 lg:order-1 lg:col-span-2">' + customer + UI.card({ title: 'Sản phẩm', body: '<div data-items></div>' }) + cap +
+          (ret ? UI.card({ title: 'Yêu cầu đổi trả', body: '<a href="' + U('pages/admin/chi-tiet-doi-tra.html?id=' + ret.id) + '" class="flex flex-wrap items-center gap-2 hover:underline"><span class="font-mono font-extrabold text-primary-700">' + esc(ret.code) + '</span>' + App.stateBadge('DOC-BOOK-RETURN', ret.state) + '</a>', attrs: { 'data-permission': 'BOOK.RETURN.VIEW' } }) : '') +
+          UI.card({ title: 'Lịch sử', body: timeline }) + '</div>' +
+          '<aside class="order-1 lg:order-2"><div class="flex flex-col gap-4 lg:sticky lg:top-20">' + summary + payCard + '</div></aside></div>';
+
+        UI.lineItems(main.querySelector('[data-items]'), { rows: o.items.map(function (it, i) { return Object.assign({ id: i }, it); }), columns: [
+          { key: 'name', label: 'Sản phẩm', type: 'custom', render: function (it) { return '<span class="flex items-center gap-3"><span class="size-12 shrink-0 overflow-hidden rounded-md bg-neutral-100">' + UI.img({ src: it.anh, alt: '' }) + '</span><span class="min-w-0"><span class="block font-bold text-neutral-800">' + esc(it.ten_hang) + '</span><span class="block text-xs text-neutral-600">' + esc(it.ten_bien_the) + (it.mon ? ' · ' + it.mon.map(esc).join(', ') : '') + '</span></span></span>'; } },
+          { key: 'gia', label: 'Đơn giá', type: 'custom', align: 'right', render: function (it) { return UI.fmt.money(it.don_gia); } },
+          { key: 'sl', label: 'SL', type: 'custom', align: 'right', render: function (it) { return '× ' + it.so_luong; } },
+          { key: 'tt', label: 'Thành tiền', type: 'custom', align: 'right', render: function (it) { return '<b class="tabular-nums">' + UI.fmt.money(it.don_gia * it.so_luong) + '</b>'; } }
+        ].concat(o.state === 'NEW' && !pate ? [{ key: 'ton', label: 'Tồn hiện tại', type: 'custom', align: 'right', render: function (it) {
+          if (!it.variantId) return '<span class="text-neutral-400">Combo</span>';
+          var x = App.variant(it.variantId), t = x ? x.v.ton_kho : 0;
+          return '<span class="font-bold ' + (t < it.so_luong ? 'text-danger-700' : 'text-success-700') + '">' + t + '</span>';
+        } }] : []) });
+
+        var old = document.getElementById('ui-sticky'); if (old) old.remove();
+        if (acts.length) UI.stickyBar('<div class="flex items-center gap-2"><a href="tel:' + esc(o.so_dien_thoai_nhan) + '" class="inline-flex size-11 shrink-0 items-center justify-center rounded-lg border border-neutral-300 text-primary-700" aria-label="Gọi khách">' + UI.icon('phone') + '</a><div class="flex flex-1 items-center gap-2">' + mob.html + '</div></div>');
+      }
+      function run(i) { var a = acts[i]; if (a) App.runOrderAction(DemoStore.get('orders', o.id), a, function () { paint(); }); }
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-act]'); if (b && !b.disabled) { run(+b.getAttribute('data-act')); return; }
+        var m = e.target.closest('[data-more]');
+        if (m) {
+          var list = m.getAttribute('data-more') === 'm' ? mob.more : desk.more;
+          UI.dropdown(m, list.map(function (a) { return { label: a.label, icon: a.icon, danger: a.danger, disabled: a.disabled, tooltip: a.tooltip, permission: a.permission, onClick: function () { run(acts.indexOf(a)); } }; })
+            .concat([{ divider: true }, { label: 'Gọi khách', icon: 'phone', onClick: function () { location.href = 'tel:' + o.so_dien_thoai_nhan; } }, { label: 'Về danh sách đơn', icon: 'arrow-left', href: U('pages/admin/don-hang.html') }]));
+        }
+      });
+      setTimeout(paint, 400);
+    });
+  })();
+  </script>
+</body>
+</html>

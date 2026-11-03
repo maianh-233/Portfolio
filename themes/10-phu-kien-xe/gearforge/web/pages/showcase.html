@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Showcase: Mâm forged Vortex 19 — GEARFORGE</title>
+  <meta name="description" content="GEARFORGE Showcase: mâm forged Vortex 19 rèn nguyên khối. Thư viện ảnh, câu chuyện thiết kế, công nghệ rèn, thông số kỹ thuật và dòng xe tương thích.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-charcoal font-sans text-silver antialiased">
+
+  <header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-300">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="../index.html" class="font-display text-2xl font-extrabold tracking-[0.12em] text-silver transition-colors duration-300 hover:text-ember" aria-label="GEARFORGE - Trang chủ">GEAR<span class="text-ember">FORGE</span></a>
+      <nav class="hidden items-center gap-10 lg:flex" aria-label="Điều hướng chính">
+        <a href="../index.html" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver/70 transition-colors duration-300 hover:text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-ember after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Trang chủ</a>
+        <a href="collections.html" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver/70 transition-colors duration-300 hover:text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-ember after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Bộ sưu tập</a>
+        <a href="showcase.html" aria-current="page" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:bg-ember after:transition-transform after:duration-500">Showcase</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button type="button" data-modal-open="tu-van" class="chamfer hidden min-h-[44px] items-center bg-ember px-5 font-display text-base font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ember sm:inline-flex">Liên hệ tư vấn</button>
+        <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center border border-silver/20 text-silver transition-colors duration-300 hover:border-ember hover:text-ember lg:hidden">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-silver/10 bg-gunmetal p-6 lg:hidden">
+      <nav class="grid gap-1" aria-label="Menu điện thoại">
+        <a href="../index.html" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-silver hover:text-ember">Trang chủ</a>
+        <a href="collections.html" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-silver hover:text-ember">Bộ sưu tập</a>
+        <a href="showcase.html" aria-current="page" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-ember">Showcase</a>
+      </nav>
+      <button type="button" data-modal-open="tu-van" class="chamfer mt-6 flex min-h-[48px] w-full items-center justify-center bg-ember font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal">Liên hệ tư vấn</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SẢN PHẨM -->
+    <section id="san-pham" data-section="page-hero" class="relative overflow-hidden bg-charcoal pt-16 lg:pt-[72px]">
+      <div class="blueprint absolute inset-0" aria-hidden="true"></div>
+      <div class="relative grid lg:min-h-[calc(88dvh-72px)] lg:grid-cols-12">
+        <div class="flex flex-col justify-center px-4 py-12 sm:px-6 lg:col-span-5 lg:py-16 lg:pl-10 lg:pr-8 2xl:pl-16">
+          <nav aria-label="Đường dẫn" class="text-sm text-muted">
+            <ol class="flex flex-wrap items-center gap-2">
+              <li><a href="../index.html" class="transition-colors duration-300 hover:text-ember">Trang chủ</a></li>
+              <li aria-hidden="true">/</li>
+              <li><a href="collections.html" class="transition-colors duration-300 hover:text-ember">Bộ sưu tập</a></li>
+              <li aria-hidden="true">/</li>
+              <li class="text-silver">Mâm forged Vortex 19</li>
+            </ol>
+          </nav>
+          <p data-reveal="fade" class="mt-10 font-display text-base font-semibold uppercase tracking-[0.18em] text-ember">GF-W19 · Phụ kiện ô tô · Ngoại thất</p>
+          <h1 data-reveal="up" class="mt-3 font-display text-[clamp(3.25rem,6.5vw,7rem)] font-extrabold uppercase italic leading-[0.9] tracking-tight pb-1">Vortex 19</h1>
+          <p data-reveal="up" class="mt-6 max-w-lg text-lg leading-relaxed text-muted">Mâm rèn nguyên khối 10 chấu xoắn. Nhẹ hơn, cứng hơn, và để lộ trọn bộ phanh phía sau.</p>
+          <div data-reveal="up" data-reveal-delay="150" class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <button type="button" data-modal-open="tu-van" class="chamfer inline-flex min-h-[52px] items-center justify-center bg-ember px-8 font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98]">Liên hệ tư vấn</button>
+            <a href="#thong-so" class="inline-flex min-h-[52px] items-center justify-center border border-silver/25 px-8 font-display text-lg font-semibold uppercase tracking-[0.1em] text-silver transition duration-300 hover:border-ember hover:text-ember">Tìm hiểu thêm</a>
+          </div>
+        </div>
+        <div class="relative min-h-[42vh] lg:col-span-7 lg:min-h-0">
+          <a href="../assets/img/sp-mam-vortex.webp" data-lightbox="vortex" data-caption="Vortex 19, bản Bạc Hyper, lắp trên sedan thể thao" class="group absolute inset-0 block overflow-hidden bg-gunmetal" aria-label="Phóng to ảnh Vortex 19">
+            <img src="../assets/img/sp-mam-vortex.webp" alt="Mâm forged Vortex 19 màu bạc lắp trên sedan trắng, cùm phanh vàng lộ sau chấu" class="h-full w-full object-cover object-[60%_center] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1024" height="474">
+            <span class="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-transparent to-transparent" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- THƯ VIỆN BẢN HOÀN THIỆN -->
+    <section id="hoan-thien" data-section="features-tabs" class="border-t border-silver/10 bg-charcoal py-20 lg:py-28">
+      <div data-tabs class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <div class="lg:col-span-4">
+          <h2 data-reveal="up" class="redline font-display text-4xl font-bold uppercase leading-none tracking-tight sm:text-5xl">Ba bản hoàn thiện</h2>
+          <p data-reveal="fade" class="mt-8 max-w-sm text-base leading-relaxed text-muted">Cùng một khối rèn, ba cách xử lý bề mặt. Chọn để xem cận cảnh, bấm ảnh để phóng to.</p>
+          <div class="relative mt-8 grid gap-1 border-l border-silver/15" role="tablist">
+            <button type="button" data-tab="bac" class="is-active flex min-h-[56px] items-center justify-between px-5 text-left font-display text-2xl font-bold uppercase text-silver/50 transition-colors duration-300 hover:text-silver [&.is-active]:text-silver">Bạc Hyper <span class="text-sm font-semibold tracking-[0.14em] text-ember">Sơn phủ</span></button>
+            <button type="button" data-tab="chrome" class="flex min-h-[56px] items-center justify-between px-5 text-left font-display text-2xl font-bold uppercase text-silver/50 transition-colors duration-300 hover:text-silver [&.is-active]:text-silver">Chrome gương <span class="text-sm font-semibold tracking-[0.14em] text-ember">Mạ</span></button>
+            <button type="button" data-tab="den" class="flex min-h-[56px] items-center justify-between px-5 text-left font-display text-2xl font-bold uppercase text-silver/50 transition-colors duration-300 hover:text-silver [&.is-active]:text-silver">Đen viền phay <span class="text-sm font-semibold tracking-[0.14em] text-ember">CNC</span></button>
+            <span data-tab-indicator class="left-[-1px] w-[3px] bg-ember"></span>
+          </div>
+        </div>
+        <div class="min-w-0 lg:col-span-8">
+          <div data-tab-panel="bac">
+            <a href="../assets/img/sp-mam-vortex.webp" data-lightbox="hoan-thien" data-caption="Bạc Hyper: sơn ánh kim nhiều lớp, phủ bóng chống đá văng" class="group block aspect-[16/10] overflow-hidden bg-gunmetal">
+              <img src="../assets/img/sp-mam-vortex.webp" alt="Mâm Vortex bản bạc hyper, chấu xoắn ôm cùm phanh vàng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="474">
+            </a>
+            <p class="mt-4 text-base text-muted">Sơn ánh kim nhiều lớp, phủ bóng chống đá văng. Dễ vệ sinh, hợp xe màu sáng.</p>
+          </div>
+          <div data-tab-panel="chrome">
+            <a href="../assets/img/showcase-mam-can-canh-1.webp" data-lightbox="hoan-thien" data-caption="Chrome gương: mạ nhiều lớp, mặt chấu vát kim cương" class="group block aspect-[16/10] overflow-hidden bg-gunmetal">
+              <img src="../assets/img/showcase-mam-can-canh-1.webp" alt="Cận cảnh mâm mạ chrome sáng bóng với chấu vát kim cương trên xe trắng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="769">
+            </a>
+            <p class="mt-4 text-base text-muted">Mạ nhiều lớp, mặt chấu vát kim cương bắt sáng. Dành cho xe trưng bày và xe cưới.</p>
+          </div>
+          <div data-tab-panel="den">
+            <a href="../assets/img/showcase-mam-can-canh-2.webp" data-lightbox="hoan-thien" data-caption="Đen viền phay: sơn đen bóng, viền vành phay CNC lộ nhôm" class="group block aspect-[16/10] overflow-hidden bg-gunmetal">
+              <img src="../assets/img/showcase-mam-can-canh-2.webp" alt="Mâm đen bóng nhiều chấu với viền vành phay bạc trên xe xanh dương" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+            </a>
+            <p class="mt-4 text-base text-muted">Sơn đen bóng, viền vành phay CNC lộ nhôm. Tương phản mạnh trên xe màu nổi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÂU CHUYỆN THIẾT KẾ -->
+    <section id="cau-chuyen" data-section="story-editorial" class="bg-gunmetal/40 py-20 lg:py-32">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <div class="lg:col-span-5">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold uppercase leading-[0.95] tracking-tight sm:text-5xl 2xl:text-6xl lg:sticky lg:top-28">Thiết kế bắt đầu từ <span class="text-ember">luồng gió</span> qua cùm phanh</h2>
+        </div>
+        <div class="min-w-0 lg:col-span-7">
+          <div data-reveal="fade" class="grid gap-8 text-lg leading-relaxed text-muted md:grid-cols-2">
+            <p class="first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-7xl first-letter:font-extrabold first-letter:leading-[0.8] first-letter:text-ember">Mười chấu của Vortex xoắn nhẹ theo chiều quay. Khi xe chạy, mỗi chấu kéo không khí qua đĩa phanh như một cánh quạt, giúp phanh nguội nhanh hơn sau những đoạn đèo dài.</p>
+            <p>Chúng tôi giữ chấu mảnh ở mép vành và dày dần về tâm, nơi chịu lực nhiều nhất. Kết quả là một chiếc mâm trông nhẹ nhàng khi nhìn ngang, nhưng không hề mềm khi vào cua gắt.</p>
+          </div>
+          <blockquote data-reveal="up" class="mt-14 border-l-[3px] border-ember pl-6">
+            <p class="font-display text-3xl font-bold uppercase leading-tight sm:text-4xl">“Mâm đẹp là mâm biến mất khi xe chạy, chỉ còn lại cảm giác lái.”</p>
+            <footer class="mt-4 text-sm text-muted">Lê Quang Vinh, trưởng nhóm kỹ thuật GEARFORGE</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÔNG NGHỆ & ĐIỂM NỔI BẬT -->
+    <section id="cong-nghe" data-section="features-bento" class="bg-charcoal py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="max-w-3xl font-display text-4xl font-bold uppercase leading-none tracking-tight sm:text-5xl 2xl:text-6xl">Công nghệ bên trong khối nhôm</h2>
+        <div data-reveal-stagger="80" class="mt-12 grid gap-4 md:grid-cols-6 lg:grid-rows-2">
+          <figure class="group relative overflow-hidden bg-gunmetal md:col-span-6 lg:col-span-3 lg:row-span-2">
+            <div class="aspect-[4/3] overflow-hidden lg:aspect-auto lg:h-full">
+              <img src="../assets/img/sp-phanh-dia.jpg" alt="Đĩa phanh kim loại nhìn qua khe chấu mâm hợp kim" class="h-full w-full object-cover grayscale transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+            </div>
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent p-6 pt-20">
+              <p class="font-display text-2xl font-bold uppercase">Khoảng hở cùm phanh rộng</p>
+              <p class="mt-2 max-w-md text-sm leading-relaxed text-silver/80">Lòng mâm thiết kế đủ chỗ cho cùm phanh 6 piston và đĩa 380 mm khi bạn nâng cấp sau này.</p>
+            </figcaption>
+          </figure>
+          <div class="flex flex-col justify-between bg-ember p-6 text-charcoal md:col-span-3 lg:col-span-3">
+            <p class="font-display text-6xl font-extrabold leading-none 2xl:text-7xl"><span data-count-to="8000">8000</span><span class="text-3xl"> tấn</span></p>
+            <div class="mt-8">
+              <p class="font-display text-2xl font-bold uppercase">Rèn nguyên khối</p>
+              <p class="mt-2 text-sm leading-relaxed text-charcoal/80">Phôi nhôm 6061-T6 được ép dưới lực 8.000 tấn, thớ kim loại chạy liền theo dáng chấu thay vì rỗ khí như mâm đúc.</p>
+            </div>
+          </div>
+          <div class="border border-silver/15 p-6 md:col-span-3 lg:col-span-1 lg:p-5 xl:p-6">
+            <p class="font-display text-5xl font-extrabold leading-none text-ember">-22%</p>
+            <p class="mt-6 font-display text-xl font-bold uppercase">Khối lượng</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted">So với mâm đúc cùng cỡ 19 x 8.5J của chúng tôi.</p>
+          </div>
+          <div class="border border-silver/15 p-6 md:col-span-3 lg:col-span-1 lg:p-5 xl:p-6">
+            <p class="font-display text-5xl font-extrabold leading-none">5 trục</p>
+            <p class="mt-6 font-display text-xl font-bold uppercase">Phay CNC</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Từng chấu được phay để cân bằng động trước khi sơn.</p>
+          </div>
+          <div class="border border-silver/15 p-6 md:col-span-3 lg:col-span-1 lg:p-5 xl:p-6">
+            <p class="font-display text-5xl font-extrabold leading-none">JWL</p>
+            <p class="mt-6 font-display text-xl font-bold uppercase">Kiểm định</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Thử va đập và mỏi uốn theo tiêu chuẩn JWL / VIA.</p>
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-muted">Thông số minh họa cho bản demo, sẽ thay bằng dữ liệu kỹ thuật chính thức của GEARFORGE.</p>
+      </div>
+    </section>
+
+    <!-- THÔNG SỐ & XE TƯƠNG THÍCH -->
+    <section id="thong-so" data-section="specs-grouped" class="border-y border-silver/10 bg-gunmetal/40 py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="redline font-display text-4xl font-bold uppercase leading-none tracking-tight sm:text-5xl">Thông số kỹ thuật</h2>
+        <div data-reveal-stagger="80" class="mt-14 grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase text-ember">Kích thước</h3>
+            <dl class="mt-5 grid gap-4">
+              <div class="flex justify-between gap-4"><dt class="text-muted">Đường kính</dt><dd class="font-medium">19 inch</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-muted">Bề rộng</dt><dd class="font-medium">8.5J / 9.5J</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-muted">Offset</dt><dd class="font-medium">ET35 - ET45</dd></div>
+            </dl>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase text-ember">Lắp đặt</h3>
+            <dl class="mt-5 grid gap-4">
+              <div class="flex justify-between gap-4"><dt class="text-muted">PCD</dt><dd class="font-medium">5x112 / 5x114.3</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-muted">Lỗ tâm</dt><dd class="font-medium">66.6 / 73.1 mm</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-muted">Tải trọng</dt><dd class="font-medium">720 kg / bánh</dd></div>
+            </dl>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase text-ember">Vật liệu &amp; công dụng</h3>
+            <p class="mt-5 leading-relaxed text-silver/85">Nhôm 6061-T6 rèn, phay CNC 5 trục. Giảm khối lượng không treo, tăng độ bám và phản hồi vô lăng, tản nhiệt phanh tốt hơn khi chạy đèo.</p>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold uppercase text-ember">Dòng xe tương thích</h3>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="border border-silver/20 px-3 py-2 text-sm">Toyota Camry</li>
+              <li class="border border-silver/20 px-3 py-2 text-sm">Honda Accord</li>
+              <li class="border border-silver/20 px-3 py-2 text-sm">Mazda 6</li>
+              <li class="border border-silver/20 px-3 py-2 text-sm">Lexus IS</li>
+              <li class="border border-silver/20 px-3 py-2 text-sm">Mercedes C-Class</li>
+              <li class="border border-silver/20 px-3 py-2 text-sm">BMW 3 Series</li>
+              <li class="border border-silver/20 px-3 py-2 text-sm">Audi A4 / A5</li>
+            </ul>
+            <p class="mt-4 text-sm text-muted">Đời xe cụ thể sẽ được đối chiếu khi tư vấn.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SẢN PHẨM LIÊN QUAN -->
+    <section id="lien-quan" data-section="teaser-row" class="bg-charcoal py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold uppercase leading-none tracking-tight sm:text-5xl">Xem tiếp trong Showcase</h2>
+          <a href="collections.html" class="group inline-flex min-h-[44px] items-center gap-2 font-display text-lg font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            Quay lại bộ sưu tập
+          </a>
+        </div>
+        <div data-reveal-stagger="100" class="mt-12 grid gap-5 md:grid-cols-2">
+          <a href="product-co-po-hellion.html" class="group grid overflow-hidden border border-silver/10 bg-gunmetal/50 transition duration-300 hover:border-ember/60 sm:grid-cols-[2fr_3fr]">
+            <div class="aspect-[4/3] overflow-hidden bg-gunmetal sm:aspect-auto">
+              <img src="../assets/img/sp-ong-xa-titan.webp" alt="Cổ pô chrome Hellion uốn cong dọc thân xe máy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="600" height="800">
+            </div>
+            <div class="flex flex-col justify-between gap-6 p-6 lg:p-8">
+              <div>
+                <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-X88 · Xe máy</p>
+                <h3 class="mt-2 font-display text-3xl font-bold uppercase">Cổ pô Hellion</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted">Thép không gỉ 304 uốn liền mạch, tiếng pô trầm và đều.</p>
+              </div>
+              <span class="inline-flex items-center gap-2 font-display text-base font-semibold uppercase tracking-[0.1em]">Sản phẩm tiếp theo
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </div>
+          </a>
+          <a href="product-can-so.html" class="group grid overflow-hidden border border-silver/10 bg-gunmetal/50 transition duration-300 hover:border-ember/60 sm:grid-cols-[2fr_3fr]">
+            <div class="aspect-[4/3] overflow-hidden bg-gunmetal sm:aspect-auto">
+              <img src="../assets/img/sp-can-so.webp" alt="Đầu cần số Torque Knob mặt đen bóng in sơ đồ số" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="800" height="533">
+            </div>
+            <div class="flex flex-col justify-between gap-6 p-6 lg:p-8">
+              <div>
+                <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-S06 · Nội thất</p>
+                <h3 class="mt-2 font-display text-3xl font-bold uppercase">Cần số Torque Knob</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted">Lõi nhôm đặc bọc da đục lỗ, vào số dứt khoát.</p>
+              </div>
+              <span class="inline-flex items-center gap-2 font-display text-base font-semibold uppercase tracking-[0.1em]">Xem chi tiết
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" data-section="cta-type" class="blueprint border-t border-silver/10 bg-charcoal py-24 lg:py-32">
+      <div class="mx-auto grid w-full max-w-screen-2xl items-end gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-display text-[clamp(2.75rem,6.5vw,7rem)] font-extrabold uppercase leading-[0.9] tracking-tight lg:col-span-8">Vortex có vừa <span class="text-ember">xe bạn?</span></h2>
+        <div data-reveal="fade" class="lg:col-span-4 lg:pb-2">
+          <p class="text-base leading-relaxed text-muted">Gửi đời xe và cỡ lốp hiện tại, kỹ thuật viên sẽ kiểm offset và khoảng hở phanh giúp bạn.</p>
+          <button type="button" data-modal-open="tu-van" class="chamfer mt-6 inline-flex min-h-[52px] w-full items-center justify-center bg-ember px-8 font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98] sm:w-auto">Liên hệ tư vấn</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="border-t border-silver/10 bg-deep pt-20">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <a href="../index.html" class="font-display text-3xl font-extrabold tracking-[0.12em]">GEAR<span class="text-ember">FORGE</span></a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">Phụ kiện và đồ chơi xe máy, ô tô phong cách hiệu năng. Chọn bằng kinh nghiệm thợ độ, trình bày như một catalogue cao cấp.</p>
+        </div>
+        <nav class="lg:col-span-2" aria-label="Trang">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Trang</p>
+          <ul class="mt-5 grid gap-1 text-base">
+            <li><a href="../index.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Trang chủ</a></li>
+            <li><a href="collections.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Bộ sưu tập</a></li>
+            <li><a href="showcase.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Showcase</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Liên hệ</p>
+          <ul class="mt-5 grid gap-3 text-base text-silver">
+            <li><a href="tel:+842873006868" class="transition-colors duration-300 hover:text-ember">Hotline: 028 7300 6868</a></li>
+            <li><a href="mailto:tuvan@gearforge.vn" class="transition-colors duration-300 hover:text-ember">tuvan@gearforge.vn</a></li>
+            <li class="text-muted">Showroom: 212 Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh</li>
+            <li class="text-muted">Mở cửa 9:00 - 20:00, thứ Hai đến Chủ nhật</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Mạng xã hội</p>
+          <ul class="mt-5 flex flex-wrap gap-3">
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">Instagram</a></li>
+            <li><a href="https://www.youtube.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">YouTube</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-16 select-none overflow-hidden whitespace-nowrap font-display text-[clamp(4rem,17vw,19rem)] font-extrabold uppercase leading-[0.8] tracking-tight text-gunmetal" aria-hidden="true">GEARFORGE</p>
+      <div class="flex flex-col gap-2 border-t border-silver/10 py-6 text-sm text-muted sm:flex-row sm:justify-between">
+        <p>© 2026 GEARFORGE. Bảo lưu mọi quyền.</p>
+        <a href="#top" class="transition-colors duration-300 hover:text-ember">Về đầu trang</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="tu-van" class="m-auto w-[min(92vw,560px)] border border-silver/10 bg-gunmetal p-0 text-silver">
+    <div class="relative p-6 sm:p-8">
+      <button type="button" data-modal-close aria-label="Đóng" class="absolute right-3 top-3 grid h-11 w-11 place-items-center text-silver/70 transition-colors duration-300 hover:text-ember">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h2 class="pr-10 font-display text-3xl font-bold uppercase">Liên hệ tư vấn</h2>
+      <p class="mt-2 text-sm leading-relaxed text-muted">Cho chúng tôi biết dòng xe và phụ kiện bạn quan tâm, kỹ thuật viên GEARFORGE sẽ gợi ý lựa chọn phù hợp.</p>
+      <form data-form="tu-van" class="mt-6 grid gap-4">
+        <label class="block text-sm font-medium">Họ và tên
+          <input type="text" name="name" required minlength="2" autocomplete="name" placeholder="Ví dụ: Trần Minh Khoa" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Số điện thoại
+          <input type="tel" name="phone" required minlength="9" autocomplete="tel" placeholder="Ví dụ: 0908 214 377" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Dòng xe của bạn
+          <input type="text" name="vehicle" required placeholder="Ví dụ: Honda Civic 2022, Yamaha MT-15" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Nhóm phụ kiện quan tâm
+          <select name="topic" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver focus:border-ember focus:outline-none">
+            <option>Phụ kiện ô tô</option>
+            <option>Phụ kiện xe máy</option>
+            <option>Đồ chơi xe</option>
+            <option>Phụ kiện nội thất</option>
+            <option>Thiết bị công nghệ</option>
+          </select>
+        </label>
+        <div class="mt-2 flex flex-wrap items-center gap-4">
+          <button type="submit" class="chamfer inline-flex min-h-[48px] items-center bg-ember px-7 font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98]">Gửi yêu cầu</button>
+          <p class="text-xs text-muted">Bản demo: biểu mẫu chưa gửi đi đâu.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="../assets/js/motion.js"></script>
+</body>
+</html>

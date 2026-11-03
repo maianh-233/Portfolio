@@ -1,0 +1,53 @@
+{
+  "slug": "tea-orbit",
+  "name": "TEA ORBIT",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website giới thiệu thương hiệu trà sữa và bánh ngọt",
+    "brand": "TEA ORBIT",
+    "purpose": "Thiết kế website giới thiệu TEA ORBIT, thương hiệu trà sữa sáng tạo lấy cảm hứng từ các hành tinh và vũ trụ. Hình ảnh phải hiện đại, có tính nghệ thuật số, nhưng sản phẩm trà sữa vẫn là chủ thể chính.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Art direction\n\nNền #10111B; tím điện #795BFF; cobalt #3157F5; cyan #62E8F2; trắng lạnh #F4F5FF.\n\nHeading sans-serif hình học, chữ lớn và có độ tương phản kích thước rõ rệt.\n\nDùng vòng tròn, đường quỹ đạo, lưới kỹ thuật và các hình cầu 3D.\n\nẢnh sản phẩm có thể đặt trong bối cảnh không gian trừu tượng, nhưng phải nhận diện rõ ly trà, lớp trà, đá và topping.\n\nKhông biến website thành dashboard, game hoặc giao diện quản trị.\n\n3. Trang chủ\n\nHeader trong suốt trên nền tối, logo TEA ORBIT, menu và VI–EN.\n\nHero có headline “Your Daily Tea. Another Universe.”, mô tả ngắn, CTA “Khám phá hương vị”. Ly trà sữa lớn nằm lệch tâm, xung quanh là các khối cầu và quỹ đạo.\n\nSection “Explore the Orbit”: 3 nhóm đồ uống, mỗi nhóm có màu nhận diện và hình ảnh riêng.\n\nSection “Flavor in Motion”: một ảnh sản phẩm lớn đi kèm mô tả cách kết hợp trà, sữa và topping.\n\nSection giới thiệu triết lý sáng tạo của thương hiệu với nền chuyển sắc nhẹ.\n\nFooter tối giản.\n\n4. Trang Sản phẩm & Menu\n\nMở đầu bằng tiêu đề “Choose Your Orbit”.\n\nChia danh mục Milk Tea, Fruit Tea, Cream Series, Toppings.\n\nMỗi danh mục được trình bày như một khu vực riêng, có màu nhấn, hình ảnh sản phẩm lớn và lưới thẻ.\n\nThẻ gồm ảnh, tên, mô tả hương vị; không có thao tác mua.\n\nCó bộ lọc danh mục bằng JavaScript nếu cần.\n\n5. Trang Về chúng tôi\n\nHero có hình cầu trừu tượng kết hợp ly trà.\n\nCâu chuyện về cảm hứng vũ trụ và việc thử nghiệm hương vị.\n\nBa giá trị thương hiệu: sáng tạo, cân bằng hương vị, trải nghiệm hiện đại.\n\nGallery ảnh nhận diện và sản phẩm.\n\n6. Chuyển động\n\nChỉ dùng bong bóng trôi chậm, quỹ đạo chuyển động nhẹ và hover nâng thẻ. Không yêu cầu WebGL hoặc mô hình 3D nặng nếu công cụ không hỗ trợ. Có phương án ảnh tĩnh thay thế.\n\n7. Ràng buộc\n\nTối đa 3 trang, song ngữ đầy đủ <có nút chuyển từ tiếng anh sang tiếng việt>, responsive. Không có đặt hàng, giỏ hàng, checkout, thanh toán hay form giao dịch.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-22T04:33:59.983Z",
+  "updatedAt": "2026-10-22T04:56:18.382Z",
+  "screen": "request",
+  "request": "Website giới thiệu thương hiệu trà sữa và bánh ngọt",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "699723bd-7c4d-4ddb-8b1a-83812d842a0c",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\tea-orbit\\web",
+    "status": "error",
+    "error": "Đã chạm giới hạn sử dụng của tài khoản, vui lòng chờ rồi thử lại. Hạn mức sẽ được làm mới lúc 15:30 22-10.",
+    "errorCode": "usage_limit",
+    "resetsAt": 1792657800
+  }
+}

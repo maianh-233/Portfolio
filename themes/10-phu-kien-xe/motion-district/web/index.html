@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOTION DISTRICT — Ride Your Own Way</title>
+  <meta name="description" content="MOTION DISTRICT designs motorcycle accessories, helmets, protective gear and bike toys for young riders who live by street style.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-paper text-ink">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 bg-paper/95 transition-shadow duration-300">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="index.html" class="font-poster text-2xl leading-none tracking-tight sm:text-[1.7rem]" aria-label="MOTION DISTRICT home">MOTION<span class="text-brick">/</span>DISTRICT</a>
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a href="index.html" aria-current="page" class="relative py-2 text-[15px] font-semibold after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brick after:origin-left after:scale-x-100">Home</a>
+      <a href="pages/collections.html" class="relative py-2 text-[15px] font-semibold after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brick after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Collections</a>
+      <a href="pages/product-showcase.html" class="relative py-2 text-[15px] font-semibold after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brick after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Product Showcase</a>
+      <button type="button" data-modal-open="contact-modal" class="bg-ink px-5 py-2.5 text-[15px] font-semibold text-paper transition-colors duration-300 hover:bg-moss focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brick active:scale-[.98]">Contact</button>
+    </nav>
+    <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink/20 lg:hidden" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 bg-paper p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col" aria-label="Mobile">
+      <a href="index.html" aria-current="page" class="font-poster border-b border-ink/15 py-3 text-3xl text-brick">Home</a>
+      <a href="pages/collections.html" class="font-poster border-b border-ink/15 py-3 text-3xl">Collections</a>
+      <a href="pages/product-showcase.html" class="font-poster border-b border-ink/15 py-3 text-3xl">Product Showcase</a>
+      <button type="button" data-modal-open="contact-modal" class="mt-5 min-h-[48px] bg-ink px-5 text-base font-semibold text-paper">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="hero" data-section="hero-cinematic" class="relative isolate overflow-hidden bg-ink text-paper">
+    <img src="assets/img/home-hero-night-riders.webp" alt="Rider in a red helmet waiting in evening traffic among city lights" class="film absolute inset-0 -z-10 h-full w-full object-cover object-[62%_center]" width="1920" height="1278">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/55 to-ink/10"></div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/70 via-ink/20 to-transparent"></div>
+    <div class="mx-auto flex min-h-[calc(100dvh-64px)] w-full max-w-screen-2xl flex-col justify-end px-4 pb-12 pt-24 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:px-10 lg:pb-16 2xl:px-16">
+      <div class="sticker absolute right-5 top-8 h-28 w-28 rotate-[12deg] bg-brick p-3 text-white shadow-[0_8px_24px_rgba(25,26,24,.35)] sm:right-10 sm:h-36 sm:w-36 lg:right-16 lg:top-14 lg:h-44 lg:w-44">
+        <span class="font-poster text-lg sm:text-2xl lg:text-[1.7rem]">Made for<br>city<br>nights</span>
+      </div>
+      <h1 data-split="words" class="font-poster max-w-[14ch] text-[clamp(3.6rem,13vw,11.5rem)] leading-[0.86]">Ride your own way.</h1>
+      <div class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <p data-reveal="up" class="max-w-md text-lg leading-relaxed text-paper/90 sm:text-xl">Accessories, helmets and riding gear for people who treat the city as their open road.</p>
+        <a data-reveal="up" data-reveal-delay="200" href="pages/collections.html" class="group inline-flex min-h-[52px] w-full items-center justify-center gap-3 bg-paper px-7 text-base font-bold text-ink transition-colors duration-300 hover:bg-brick hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paper active:scale-[.98] sm:w-auto">Explore the collection <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section id="intro" data-section="story-letter" class="bg-paper">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-32 2xl:px-16">
+      <figure class="lg:col-span-5">
+        <div data-reveal="clip" class="aspect-[4/5] overflow-hidden bg-stone">
+          <img src="assets/img/home-intro-rider.jpg" alt="Rider in a denim jacket and full-face helmet standing beside a red café racer" class="film h-full w-full object-cover" loading="lazy" width="960" height="1280">
+        </div>
+        <figcaption class="font-editorial mt-4 text-xl text-muted">Denim, a vintage helmet and a café racer on the kerb.</figcaption>
+      </figure>
+      <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brick">The brand</p>
+        <h2 data-reveal="up" class="font-poster mt-5 text-5xl leading-[0.92] sm:text-6xl 2xl:text-7xl">Gear for riders who dress the part.</h2>
+        <div data-reveal="up" class="mt-8 max-w-prose space-y-5 text-lg leading-relaxed text-ink/85">
+          <p>MOTION DISTRICT started in a small Saigon workshop where friends swapped parts, painted helmets and planned night rides. We still design the same way: by riding first and drawing second.</p>
+          <p>Every piece has to work in traffic, look good off the bike and leave room for you to make it your own. No uniform, no rulebook.</p>
+        </div>
+        <p class="font-editorial mt-10 text-3xl leading-snug text-moss sm:text-4xl">"Freedom is a full tank and nowhere you have to be."</p>
+        <dl class="mt-12 grid gap-8 border-t border-ink/15 pt-8 sm:grid-cols-3">
+          <div><dt class="text-lg font-bold">Ridden first</dt><dd class="mt-2 text-base leading-relaxed text-muted">Every sample is tested on city streets before it gets a name.</dd></div>
+          <div><dt class="text-lg font-bold">Street-ready style</dt><dd class="mt-2 text-base leading-relaxed text-muted">Cuts and colours that work at a café as well as on the bike.</dd></div>
+          <div><dt class="text-lg font-bold">Yours to change</dt><dd class="mt-2 text-base leading-relaxed text-muted">Parts that bolt on, swap out and wear in with you.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories" data-section="features-bento" class="bg-mist">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <h2 data-reveal="up" class="font-poster max-w-[16ch] text-5xl leading-[0.92] sm:text-6xl 2xl:text-7xl">Five ways into the district.</h2>
+      <div data-reveal-stagger="80" class="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-12 lg:gap-4 [&>*]:min-w-0">
+        <a href="pages/collections.html?cat=helmets" class="poster-lines group relative flex min-h-[18rem] flex-col justify-between overflow-hidden bg-moss p-6 text-paper transition-transform duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-6 lg:row-span-2 lg:min-h-[34rem] lg:p-10">
+          <span class="text-base font-medium text-paper/80">Open-face, three-quarter and custom-painted shells</span>
+          <span class="font-poster text-7xl leading-[0.85] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04] origin-bottom-left sm:text-8xl 2xl:text-[10rem]">Helmets</span>
+          <span class="sticker absolute right-6 top-6 h-24 w-24 rotate-[-10deg] bg-brick text-sm font-bold uppercase text-white lg:right-10 lg:top-10 lg:h-28 lg:w-28">Browse<br>&rarr;</span>
+        </a>
+        <a href="pages/collections.html?cat=protection" class="group flex min-h-[16rem] flex-col justify-between bg-brick p-6 text-white transition-transform duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-6 lg:p-8">
+          <span class="text-base font-medium text-white/90">Jackets, gloves and knee guards</span>
+          <span class="flex items-end justify-between gap-4"><span class="font-poster text-6xl leading-[0.85] sm:text-7xl">Protective gear</span><span class="text-3xl transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="pages/collections.html?cat=accessories" class="group flex min-h-[16rem] flex-col justify-between bg-ink p-6 text-paper transition-transform duration-300 hover:-translate-y-1 lg:col-span-3 lg:p-8">
+          <span class="text-base font-medium text-paper/80">Mirrors, mounts and screens</span>
+          <span class="font-poster text-5xl leading-[0.85]">Bike accessories</span>
+        </a>
+        <a href="pages/collections.html?cat=bags" class="group flex min-h-[16rem] flex-col justify-between bg-stone p-6 text-ink transition-transform duration-300 hover:-translate-y-1 lg:col-span-3 lg:p-8">
+          <span class="text-base font-medium text-ink/75">Panniers, tank and tail bags</span>
+          <span class="font-poster text-5xl leading-[0.85]">Mounted bags</span>
+        </a>
+        <a href="pages/collections.html?cat=style" class="group flex flex-col gap-4 border-2 border-ink bg-paper p-6 transition-colors duration-300 hover:bg-ink hover:text-paper sm:col-span-2 sm:flex-row sm:items-center sm:justify-between lg:col-span-12 lg:px-10 lg:py-8">
+          <span class="font-poster text-5xl leading-[0.85] sm:text-6xl">Style &amp; bike toys</span>
+          <span class="max-w-md text-base font-medium">Stickers, valve caps and keyrings: the small things that make a bike yours.</span>
+          <span class="text-3xl transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section id="featured" data-section="gallery-lookbook" class="bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <h2 data-reveal="up" class="font-poster max-w-[14ch] text-5xl leading-[0.92] sm:text-6xl 2xl:text-7xl">Pieces we keep reaching for.</h2>
+        <a href="pages/collections.html" class="group inline-flex items-center gap-2 text-base font-bold underline decoration-brick decoration-2 underline-offset-[6px]">See all 13 pieces <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-6">
+        <article data-reveal="up" class="group lg:col-span-7">
+          <a href="pages/product-showcase.html?p=starline-helmet" class="block">
+            <div class="aspect-[4/3] overflow-hidden bg-stone lg:aspect-[5/4]">
+              <img src="assets/img/product-helmet-star.webp" alt="Open-face helmet with a white star graphic resting on a scooter handlebar" class="film h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1920" height="1280">
+            </div>
+            <div class="mt-5 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-start">
+              <div>
+                <p class="text-sm text-muted">Helmets</p>
+                <h3 class="mt-1 text-3xl font-bold leading-tight sm:text-4xl">Starline 3/4 Helmet</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-muted">A three-quarter shell with a hand-sprayed star, cut for short city runs and long night loops.</p>
+              </div>
+              <span class="inline-flex items-center gap-2 text-base font-bold">View details <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+        <div class="grid gap-10 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1 lg:gap-8">
+          <article data-reveal="up" class="group">
+            <a href="pages/product-showcase.html?p=grip-shift-gloves" class="block">
+              <div class="aspect-[16/10] overflow-hidden bg-stone">
+                <img src="assets/img/product-gloves-rider.jpg" alt="Pair of black and red leather riding gloves with knuckle armour on a motorcycle tank" class="film h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+              </div>
+              <p class="mt-4 text-sm text-muted">Protective gear</p>
+              <h3 class="mt-1 text-2xl font-bold leading-tight">Grip Shift Leather Gloves</h3>
+              <span class="mt-3 inline-flex items-center gap-2 text-base font-bold">View details <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </article>
+          <article data-reveal="up" class="group">
+            <a href="pages/product-showcase.html?p=long-way-panniers" class="block">
+              <div class="aspect-[16/10] overflow-hidden bg-stone">
+                <img src="assets/img/product-helmet-open-face.webp" alt="Yellow adventure motorcycle with black side panniers parked on a misty mountain road" class="film h-full w-full object-cover object-[65%_center] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1920" height="1282">
+              </div>
+              <p class="mt-4 text-sm text-muted">Mounted bags</p>
+              <h3 class="mt-1 text-2xl font-bold leading-tight">Long Way Pannier Set</h3>
+              <span class="mt-3 inline-flex items-center gap-2 text-base font-bold">View details <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY BANNER -->
+  <section id="culture" data-section="quote-full" class="relative isolate overflow-hidden bg-ink text-paper">
+    <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%] -z-10">
+      <img src="assets/img/home-story-night-ride.jpg" alt="Two scooters with riders streaking past a lit shopfront at night" class="film h-full w-full object-cover" loading="lazy" width="2801" height="1807">
+    </div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/20"></div>
+    <div class="mx-auto grid min-h-[80vh] w-full max-w-screen-2xl items-end px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-28 2xl:px-16">
+      <div class="lg:col-span-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brick">Street culture</p>
+        <blockquote data-reveal="up" class="font-poster mt-6 text-5xl leading-[0.9] sm:text-7xl 2xl:text-8xl">The city after dark belongs to the people who ride it.</blockquote>
+        <p data-reveal="up" class="mt-8 max-w-xl text-lg leading-relaxed text-paper/85">Late noodle stops, a convoy across the bridge, the quiet after the last traffic light. Biker culture here is less about speed and more about the crew you ride home with.</p>
+        <p class="font-editorial mt-6 text-2xl text-paper/80">Shot on the streets we ride every week.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" data-section="cta-type" class="bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="font-poster text-[clamp(3.4rem,11vw,10rem)] leading-[0.85]">Find your <span class="text-brick">gear.</span></h2>
+      <div data-reveal="up" class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <a href="pages/collections.html" class="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-ink px-7 text-base font-bold text-paper transition-colors duration-300 hover:bg-moss active:scale-[.98]">Explore the collection <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span></a>
+        <button type="button" data-modal-open="contact-modal" class="inline-flex min-h-[52px] items-center justify-center border-2 border-ink px-7 text-base font-bold transition-colors duration-300 hover:bg-ink hover:text-paper active:scale-[.98]">Contact</button>
+        <p class="text-base text-muted sm:ml-4">Questions about fit or a bike? We reply within one working day.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" data-section="footer-big" class="overflow-hidden bg-ink text-paper">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 lg:pt-24 2xl:px-16">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-poster text-3xl">MOTION<span class="text-brick">/</span>DISTRICT</p>
+        <p class="mt-4 max-w-sm text-base leading-relaxed text-paper/75">Motorcycle accessories, helmets and riding gear for young riders with street style. Designed and ridden in Saigon.</p>
+      </div>
+      <nav class="lg:col-span-2 lg:col-start-6" aria-label="Footer">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-paper/60">Pages</p>
+        <ul class="mt-4 space-y-3 text-base">
+          <li><a href="index.html" class="hover:text-brick">Home</a></li>
+          <li><a href="pages/collections.html" class="hover:text-brick">Collections</a></li>
+          <li><a href="pages/product-showcase.html" class="hover:text-brick">Product Showcase</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-paper/60">Contact</p>
+        <ul class="mt-4 space-y-3 text-base">
+          <li><a href="mailto:hello@motiondistrict.vn" class="hover:text-brick">hello@motiondistrict.vn</a></li>
+          <li><a href="tel:+842839256418" class="hover:text-brick">+84 28 3925 6418</a></li>
+          <li class="text-paper/75">Showroom: 112 Nguyen Trai, District 1, Ho Chi Minh City</li>
+          <li><button type="button" data-modal-open="contact-modal" class="font-semibold underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">Send a message</button></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-paper/60">Social</p>
+        <ul class="mt-4 space-y-3 text-base">
+          <li><button type="button" data-copy="@motiondistrict.vn" class="text-left hover:text-brick">Instagram @motiondistrict.vn</button></li>
+          <li><button type="button" data-copy="@motiondistrict" class="text-left hover:text-brick">TikTok @motiondistrict</button></li>
+          <li><button type="button" data-copy="facebook.com/motiondistrict" class="text-left hover:text-brick">Facebook /motiondistrict</button></li>
+        </ul>
+        <p class="mt-3 text-sm text-paper/60">Tap a handle to copy it.</p>
+      </div>
+    </div>
+    <p class="font-poster mt-16 select-none whitespace-nowrap text-[15.5vw] leading-[0.8] text-paper/95 2xl:text-[14.5rem]" aria-hidden="true">MOTION DISTRICT</p>
+    <div class="flex flex-col gap-2 border-t border-paper/15 py-6 text-sm text-paper/60 sm:flex-row sm:justify-between">
+      <p>&copy; 2026 MOTION DISTRICT. All rights reserved.</p>
+      <p>Brand showcase. Products are not sold online.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="contact-modal" aria-labelledby="contact-title" class="w-full">
+  <div class="relative p-6 sm:p-10">
+    <button type="button" data-modal-close class="absolute right-3 top-3 grid h-11 w-11 place-items-center text-2xl hover:text-brick" aria-label="Close">&times;</button>
+    <h2 id="contact-title" class="font-poster text-4xl leading-[0.9] sm:text-5xl">Contact the brand</h2>
+    <p class="mt-3 max-w-prose text-base text-muted">Ask about a product, fit or bike compatibility, or visit our showroom.</p>
+    <form data-form="contact" class="mt-8 grid gap-5 sm:grid-cols-2" novalidate>
+      <div class="grid gap-2"><label for="c-name" class="text-sm font-semibold">Your name</label><input id="c-name" name="name" type="text" required minlength="2" autocomplete="name" class="min-h-[48px] border border-ink/40 bg-white px-4 text-base focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50"></div>
+      <div class="grid gap-2"><label for="c-email" class="text-sm font-semibold">Email</label><input id="c-email" name="email" type="email" required autocomplete="email" class="min-h-[48px] border border-ink/40 bg-white px-4 text-base focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50"></div>
+      <div class="grid gap-2 sm:col-span-2"><label for="c-topic" class="text-sm font-semibold">Product or topic</label><input id="c-topic" name="topic" type="text" placeholder="e.g. Starline 3/4 Helmet sizing" class="min-h-[48px] border border-ink/40 bg-white px-4 text-base placeholder:text-muted focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50"></div>
+      <div class="grid gap-2 sm:col-span-2"><label for="c-msg" class="text-sm font-semibold">Message</label><textarea id="c-msg" name="message" rows="4" required minlength="10" class="border border-ink/40 bg-white px-4 py-3 text-base focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50"></textarea></div>
+      <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
+        <button type="submit" class="min-h-[52px] bg-ink px-8 text-base font-bold text-paper transition-colors duration-300 hover:bg-moss active:scale-[.98]">Send message</button>
+        <p class="text-sm text-muted">Demo form: messages are not sent yet.</p>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Collection — NOIR PATISSERIE</title>
+  <meta name="description" content="The Collection of NOIR PATISSERIE: signature cakes, chocolate entremets, macarons and French pastries, each made by hand in small batches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-ink font-sans text-paper antialiased">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-paper/10 bg-ink/95 backdrop-blur-sm transition-colors duration-300">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="text-[13px] font-medium uppercase tracking-[0.32em] text-paper transition-colors duration-300 hover:text-bronze">NOIR PATISSERIE</a>
+    <nav aria-label="Main" class="hidden items-center gap-10 text-sm text-muted lg:flex">
+      <a href="../index.html" class="relative py-2 transition-colors duration-300 hover:text-paper aria-[current=page]:text-paper after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-bronze after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Home</a>
+      <a href="collection.html" aria-current="page" class="relative py-2 transition-colors duration-300 hover:text-paper aria-[current=page]:text-paper after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-bronze after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">The Collection</a>
+      <a href="about.html" class="relative py-2 transition-colors duration-300 hover:text-paper aria-[current=page]:text-paper after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-bronze after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">About</a>
+      <a href="#visit" class="border border-bronze/60 px-5 py-2.5 text-paper transition-colors duration-300 hover:bg-bronze hover:text-ink">Visit the salon</a>
+      <div data-lang-switch role="group" aria-label="Language" class="-ml-4 flex items-center text-xs font-medium tracking-[0.18em]">
+        <button type="button" data-lang="en" aria-pressed="true" class="h-11 px-2 text-muted transition-colors duration-300 hover:text-paper">EN</button>
+        <span aria-hidden="true" class="h-3 w-px bg-paper/25"></span>
+        <button type="button" data-lang="vi" aria-pressed="false" class="h-11 px-2 text-muted transition-colors duration-300 hover:text-paper">VI</button>
+      </div>
+    </nav>
+    <div class="flex items-center gap-4 lg:hidden">
+      <div data-lang-switch role="group" aria-label="Language" class="flex items-center text-xs font-medium tracking-[0.18em]">
+        <button type="button" data-lang="en" aria-pressed="true" class="h-11 min-w-[44px] px-2 text-muted transition-colors duration-300 hover:text-paper">EN</button>
+        <span aria-hidden="true" class="h-3 w-px bg-paper/25"></span>
+        <button type="button" data-lang="vi" aria-pressed="false" class="h-11 min-w-[44px] px-2 text-muted transition-colors duration-300 hover:text-paper">VI</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Open menu" class="flex h-11 items-center gap-3 text-sm text-paper lg:hidden">
+        Menu
+        <span class="flex w-6 flex-col gap-1.5"><span class="h-px w-full bg-paper"></span><span class="h-px w-4 bg-paper"></span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-0 top-[72px] z-50 border-b border-paper/10 bg-ink px-4 pb-10 pt-6 sm:px-6 lg:hidden">
+    <nav aria-label="Mobile" class="flex flex-col">
+      <a href="../index.html" class="border-b border-paper/10 py-4 font-display text-4xl text-muted transition-colors duration-300 hover:text-paper">Home</a>
+      <a href="collection.html" aria-current="page" class="border-b border-paper/10 py-4 font-display text-4xl text-paper">The Collection</a>
+      <a href="about.html" class="border-b border-paper/10 py-4 font-display text-4xl text-muted transition-colors duration-300 hover:text-paper">About</a>
+      <a href="#visit" class="mt-8 flex h-12 items-center justify-center border border-bronze text-sm text-paper">Visit the salon</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section id="page-hero" data-section="page-hero" class="bg-ink">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-16 pt-16 sm:px-6 lg:px-10 lg:pb-20 lg:pt-24 2xl:px-16">
+      <h1 data-reveal="up" class="font-display text-[clamp(4rem,13vw,13rem)] leading-[0.9] tracking-tight">The <em class="italic text-bronze">Collection</em></h1>
+      <p data-reveal="up" class="mt-8 max-w-[48ch] text-base leading-relaxed text-muted lg:text-lg">Four families of French pastry, composed in small batches and changed with the seasons.</p>
+      <nav aria-label="Collection index" class="mt-16 grid grid-cols-1 border-t border-paper/10 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="#signature-cakes" class="group flex min-h-[44px] items-baseline gap-4 border-b border-paper/10 py-6 transition-colors duration-300 hover:text-bronze lg:border-b-0 lg:border-r lg:pr-6">
+          <span class="text-xs text-bronze">01</span><span class="font-display text-2xl lg:text-3xl">Signature Cakes</span>
+        </a>
+        <a href="#chocolate-entremets" class="group flex min-h-[44px] items-baseline gap-4 border-b border-paper/10 py-6 transition-colors duration-300 hover:text-bronze sm:pl-6 lg:border-b-0 lg:border-r">
+          <span class="text-xs text-bronze">02</span><span class="font-display text-2xl lg:text-3xl">Chocolate &amp; Entremets</span>
+        </a>
+        <a href="#macarons" class="group flex min-h-[44px] items-baseline gap-4 border-b border-paper/10 py-6 transition-colors duration-300 hover:text-bronze sm:border-b-0 lg:border-r lg:pl-6">
+          <span class="text-xs text-bronze">03</span><span class="font-display text-2xl lg:text-3xl">Macarons</span>
+        </a>
+        <a href="#french-pastries" class="group flex min-h-[44px] items-baseline gap-4 py-6 transition-colors duration-300 hover:text-bronze sm:pl-6">
+          <span class="text-xs text-bronze">04</span><span class="font-display text-2xl lg:text-3xl">French Pastries</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 01 SIGNATURE CAKES -->
+  <section id="signature-cakes" data-section="features-alternate" class="scroll-mt-20 border-t border-paper/10 bg-stone">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div data-reveal="up" class="flex items-baseline gap-6">
+        <span class="text-sm text-bronze">01</span>
+        <h2 class="font-display text-5xl leading-none tracking-tight sm:text-6xl lg:text-7xl">Signature Cakes</h2>
+      </div>
+      <p data-reveal="up" class="mt-6 max-w-[52ch] text-base leading-relaxed text-muted">Whole cakes for the table, built in layers and finished by hand.</p>
+
+      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+        <a href="https://images.unsplash.com/photo-1761637604893-f049f46d2bcd?w=1800&q=80&auto=format&fit=crop" data-lightbox="cakes" data-caption="Le Noir" data-reveal="fade" class="group block aspect-[16/10] overflow-hidden bg-ink lg:col-span-8">
+          <img src="https://images.unsplash.com/photo-1761637604893-f049f46d2bcd?w=1800&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Layered chocolate cake with cream and chocolate decorations" width="1800" height="1125" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+        </a>
+        <div data-reveal="up" class="border-t border-paper/10 pt-6 lg:col-span-4 lg:self-end">
+          <p class="text-xs text-bronze">No. 01</p>
+          <h3 class="mt-3 font-display text-4xl lg:text-5xl">Le Noir</h3>
+          <p class="mt-4 max-w-[40ch] text-base leading-relaxed text-muted">Dark chocolate genoise, a bittersweet ganache, light chantilly and shaved chocolate curls.</p>
+        </div>
+      </div>
+
+      <div class="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+        <article data-reveal="up" class="lg:col-span-5">
+          <a href="https://images.unsplash.com/photo-1761637604927-e3656dc81383?w=1200&q=80&auto=format&fit=crop" data-lightbox="cakes" data-caption="Fraisier Minuit" class="group block aspect-[4/5] overflow-hidden bg-ink">
+            <img src="https://images.unsplash.com/photo-1761637604927-e3656dc81383?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Slice of layered cake topped with fresh berries" width="1200" height="1500" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 02</span>
+            <div><h3 class="font-display text-3xl">Fraisier Minuit</h3><p class="mt-2 text-sm leading-relaxed text-muted">Almond sponge, mousseline cream, fresh berries and a thin veil of almond paste.</p></div>
+          </div>
+        </article>
+        <article data-reveal="up" class="lg:col-span-6 lg:col-start-7 lg:mt-40">
+          <a href="../assets/img/home-signature-chocolate-slice.jpg" data-lightbox="cakes" data-caption="Praline Chantilly" class="group block aspect-[4/3] overflow-hidden bg-ink">
+            <img src="../assets/img/home-signature-chocolate-slice.jpg" loading="lazy" alt="Slice of cake with whipped cream, caramel sauce and toasted hazelnuts" width="1200" height="900" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 03</span>
+            <div><h3 class="font-display text-3xl">Praline Chantilly</h3><p class="mt-2 text-sm leading-relaxed text-muted">Spiced sponge, whipped crème fraîche, salted caramel and roasted hazelnuts.</p></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 CHOCOLATE & ENTREMETS -->
+  <section id="chocolate-entremets" data-section="gallery-lookbook" class="scroll-mt-20 border-t border-paper/10 bg-ink">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div data-reveal="up" class="flex items-baseline gap-6">
+        <span class="text-sm text-bronze">02</span>
+        <h2 class="font-display text-5xl leading-none tracking-tight sm:text-6xl lg:text-7xl">Chocolate &amp; <em class="italic text-bronze">Entremets</em></h2>
+      </div>
+      <p data-reveal="up" class="mt-6 max-w-[52ch] text-base leading-relaxed text-muted">Mousses, crémeux and glazes, set overnight and served cold.</p>
+
+      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+        <div data-reveal="up" class="order-2 border-t border-paper/10 pt-6 lg:order-1 lg:col-span-4 lg:self-end">
+          <p class="text-xs text-bronze">No. 04</p>
+          <h3 class="mt-3 font-display text-4xl lg:text-5xl">Forêt Sombre</h3>
+          <p class="mt-4 max-w-[40ch] text-base leading-relaxed text-muted">Chocolate biscuit, dark chocolate mousse, griotte cherries and kirsch chantilly, finished with fresh berries.</p>
+        </div>
+        <a href="https://images.unsplash.com/photo-1759146233677-292a2f1a2236?w=1800&q=80&auto=format&fit=crop" data-lightbox="chocolate" data-caption="Forêt Sombre" data-reveal="fade" class="group order-1 block aspect-[16/10] overflow-hidden bg-stone lg:order-2 lg:col-span-8">
+          <img src="https://images.unsplash.com/photo-1759146233677-292a2f1a2236?w=1800&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Small layered chocolate entremet topped with berries" width="1800" height="1125" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+        </a>
+      </div>
+
+      <div class="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+        <article data-reveal="up" class="lg:col-span-4">
+          <a href="https://images.unsplash.com/photo-1768326119181-5f3cfe0adb4c?w=1200&q=80&auto=format&fit=crop" data-lightbox="chocolate" data-caption="Cube Ébène" class="group block aspect-square overflow-hidden bg-stone">
+            <img src="https://images.unsplash.com/photo-1768326119181-5f3cfe0adb4c?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Dark chocolate cube dessert on a plate" width="1200" height="1200" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 05</span>
+            <div><h3 class="font-display text-3xl">Cube Ébène</h3><p class="mt-2 text-sm leading-relaxed text-muted">Bitter chocolate cube, passion fruit heart and a cocoa butter velvet.</p></div>
+          </div>
+        </article>
+        <article data-reveal="up" class="lg:col-span-5 lg:mt-24">
+          <a href="https://images.unsplash.com/photo-1766734974600-b6ea9a40a03a?w=1200&q=80&auto=format&fit=crop" data-lightbox="chocolate" data-caption="Assiette de Bonbons" class="group block aspect-[4/5] overflow-hidden bg-stone">
+            <img src="https://images.unsplash.com/photo-1766734974600-b6ea9a40a03a?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Plate of gourmet chocolate bonbons with a small tart" width="1200" height="1500" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 06</span>
+            <div><h3 class="font-display text-3xl">Assiette de Bonbons</h3><p class="mt-2 text-sm leading-relaxed text-muted">Hand-dipped bonbons of praline, coffee and passion fruit, served with a small chocolate tart.</p></div>
+          </div>
+        </article>
+        <article data-reveal="up" class="md:col-span-2 lg:col-span-3 lg:mt-48">
+          <a href="../assets/img/home-hero-chocolate-cake.webp" data-lightbox="chocolate" data-caption="Fondant Noir" class="group block aspect-[3/4] overflow-hidden bg-stone">
+            <img src="../assets/img/home-hero-chocolate-cake.webp" loading="lazy" alt="Flourless chocolate cake dusted with icing sugar, one slice cut" width="900" height="1200" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 07</span>
+            <div><h3 class="font-display text-3xl">Fondant Noir</h3><p class="mt-2 text-sm leading-relaxed text-muted">Flourless dark chocolate cake, baked low and slow, dusted with icing sugar.</p></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 MACARONS -->
+  <section id="macarons" data-section="features-alternate" class="scroll-mt-20 border-t border-paper/10 bg-stone">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div data-reveal="up" class="flex items-baseline gap-6">
+        <span class="text-sm text-bronze">03</span>
+        <h2 class="font-display text-5xl leading-none tracking-tight sm:text-6xl lg:text-7xl">Macarons</h2>
+      </div>
+      <p data-reveal="up" class="mt-6 max-w-[52ch] text-base leading-relaxed text-muted">Shells rest for a day after filling, so the ganache settles in and the bite stays tender.</p>
+
+      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+        <a href="https://images.unsplash.com/photo-1519665541-b13188b28be9?w=1800&q=80&auto=format&fit=crop" data-lightbox="macarons" data-caption="Collection Grand Cru" data-reveal="fade" class="group block aspect-[16/10] overflow-hidden bg-ink lg:col-span-8">
+          <img src="https://images.unsplash.com/photo-1519665541-b13188b28be9?w=1800&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Three stacks of macarons in assorted flavours" width="1800" height="1125" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+        </a>
+        <div data-reveal="up" class="border-t border-paper/10 pt-6 lg:col-span-4 lg:self-end">
+          <p class="text-xs text-bronze">No. 08</p>
+          <h3 class="mt-3 font-display text-4xl lg:text-5xl">Collection Grand Cru</h3>
+          <p class="mt-4 max-w-[40ch] text-base leading-relaxed text-muted">A seasonal box of twelve: dark chocolate, pistachio, raspberry, salted caramel, vanilla and rose.</p>
+        </div>
+      </div>
+
+      <div class="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+        <article data-reveal="up" class="lg:col-span-6 lg:col-start-2">
+          <a href="https://images.unsplash.com/photo-1697607448688-c5ca9f87e79f?w=1200&q=80&auto=format&fit=crop" data-lightbox="macarons" data-caption="Rose et Litchi" class="group block aspect-[4/3] overflow-hidden bg-ink">
+            <img src="https://images.unsplash.com/photo-1697607448688-c5ca9f87e79f?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Pink and white macarons on a black plate" width="1200" height="900" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 09</span>
+            <div><h3 class="font-display text-3xl">Rose et Litchi</h3><p class="mt-2 text-sm leading-relaxed text-muted">Rose shell, lychee and raspberry ganache.</p></div>
+          </div>
+        </article>
+        <article data-reveal="up" class="lg:col-span-4 lg:col-start-9 lg:mt-32">
+          <a href="https://images.unsplash.com/photo-1680814773994-0a1db34abe9a?w=1200&q=80&auto=format&fit=crop" data-lightbox="macarons" data-caption="Assortiment Classique" class="group block aspect-[3/4] overflow-hidden bg-ink">
+            <img src="https://images.unsplash.com/photo-1680814773994-0a1db34abe9a?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Stack of macarons close up" width="900" height="1200" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 10</span>
+            <div><h3 class="font-display text-3xl">Assortiment Classique</h3><p class="mt-2 text-sm leading-relaxed text-muted">Vanilla, pistachio, chocolate and salted caramel: the four that never leave the menu.</p></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 FRENCH PASTRIES -->
+  <section id="french-pastries" data-section="gallery-lookbook" class="scroll-mt-20 border-t border-paper/10 bg-ink">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div data-reveal="up" class="flex items-baseline gap-6">
+        <span class="text-sm text-bronze">04</span>
+        <h2 class="font-display text-5xl leading-none tracking-tight sm:text-6xl lg:text-7xl">French <em class="italic text-bronze">Pastries</em></h2>
+      </div>
+      <p data-reveal="up" class="mt-6 max-w-[52ch] text-base leading-relaxed text-muted">Viennoiserie for the morning, tarts for the afternoon.</p>
+
+      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+        <div data-reveal="up" class="order-2 border-t border-paper/10 pt-6 lg:order-1 lg:col-span-4 lg:self-end">
+          <p class="text-xs text-bronze">No. 11</p>
+          <h3 class="mt-3 font-display text-4xl lg:text-5xl">Tarte Citron Yuzu</h3>
+          <p class="mt-4 max-w-[40ch] text-base leading-relaxed text-muted">Lemon and yuzu curd in a sweet pastry shell, with fresh berries and toasted almonds.</p>
+        </div>
+        <a href="https://images.unsplash.com/photo-1785695797215-4345de8ab06c?w=1800&q=80&auto=format&fit=crop" data-lightbox="pastries" data-caption="Tarte Citron Yuzu" data-reveal="fade" class="group order-1 block aspect-[16/10] overflow-hidden bg-stone lg:order-2 lg:col-span-8">
+          <img src="https://images.unsplash.com/photo-1785695797215-4345de8ab06c?w=1800&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Lemon tart garnished with fresh berries and nuts" width="1800" height="1125" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+        </a>
+      </div>
+
+      <div class="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+        <article data-reveal="up" class="lg:col-span-7">
+          <a href="https://images.unsplash.com/photo-1623334044303-241021148842?w=1200&q=80&auto=format&fit=crop" data-lightbox="pastries" data-caption="Croissant au Beurre" class="group block aspect-[4/3] overflow-hidden bg-stone">
+            <img src="https://images.unsplash.com/photo-1623334044303-241021148842?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Freshly baked butter croissants on a table" width="1200" height="900" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 12</span>
+            <div><h3 class="font-display text-3xl">Croissant au Beurre</h3><p class="mt-2 text-sm leading-relaxed text-muted">Laminated over three days with cultured butter, baked every morning before nine.</p></div>
+          </div>
+        </article>
+        <article data-reveal="up" class="lg:col-span-4 lg:col-start-9 lg:mt-36">
+          <a href="../assets/img/home-signature-fruit-tart.webp" data-lightbox="pastries" data-caption="Tarte aux Fruits" class="group block aspect-[4/5] overflow-hidden bg-stone">
+            <img src="../assets/img/home-signature-fruit-tart.webp" loading="lazy" alt="Fruit tart topped with glazed strawberries, blueberries and kiwi" width="1200" height="1500" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          </a>
+          <div class="mt-6 grid grid-cols-[3.5rem_1fr] gap-4 border-t border-paper/10 pt-5">
+            <span class="text-xs text-bronze">No. 13</span>
+            <div><h3 class="font-display text-3xl">Tarte aux Fruits</h3><p class="mt-2 text-sm leading-relaxed text-muted">Sablé, vanilla crème pâtissière, strawberries, blueberries and kiwi under a light glaze.</p></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" data-section="cta-type" class="border-t border-paper/10 bg-stone">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-36 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-[clamp(3.5rem,11vw,11rem)] leading-[0.95] tracking-tight">Visit the <em class="italic text-bronze">salon</em></h2>
+      <div data-reveal="up" class="mt-16 grid grid-cols-1 border-t border-paper/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="border-b border-paper/10 py-8 sm:pr-8 lg:border-b-0 lg:border-r">
+          <p class="text-xs text-bronze">Address</p>
+          <p class="mt-3 text-base leading-relaxed text-paper">42 Ly Tu Trong Street<br>District 1, Ho Chi Minh City</p>
+          <button type="button" data-copy="42 Ly Tu Trong Street, District 1, Ho Chi Minh City" class="mt-4 h-11 text-sm text-muted underline decoration-paper/30 underline-offset-8 transition-colors duration-300 hover:text-paper">Copy address</button>
+        </div>
+        <div class="border-b border-paper/10 py-8 sm:pl-8 lg:border-b-0 lg:border-r lg:px-8">
+          <p class="text-xs text-bronze">Hours</p>
+          <p class="mt-3 text-base leading-relaxed text-paper">Tuesday to Sunday<br>10:00 to 21:00</p>
+          <p class="mt-4 text-sm text-muted">Closed on Mondays</p>
+        </div>
+        <div class="border-b border-paper/10 py-8 sm:border-b-0 sm:pr-8 lg:border-r lg:px-8">
+          <p class="text-xs text-bronze">Telephone</p>
+          <a href="tel:+842838234716" class="mt-3 block text-base text-paper transition-colors duration-300 hover:text-bronze">+84 28 3823 4716</a>
+        </div>
+        <div class="py-8 sm:pl-8">
+          <p class="text-xs text-bronze">Email</p>
+          <a href="mailto:hello@noirpatisserie.vn" class="mt-3 block break-words text-base text-paper transition-colors duration-300 hover:text-bronze">hello@noirpatisserie.vn</a>
+        </div>
+      </div>
+      <a href="tel:+842838234716" class="mt-12 inline-flex h-12 w-full items-center justify-center bg-paper px-8 text-sm font-medium text-ink transition-colors duration-300 hover:bg-bronze active:scale-[.98] sm:w-auto">Call the salon</a>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="border-t border-paper/10 bg-ink">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-12">
+      <div class="col-span-2 lg:col-span-4">
+        <p class="max-w-[32ch] font-display text-2xl leading-snug text-paper">French pâtisserie, made slowly in Saigon.</p>
+      </div>
+      <nav aria-label="Footer" class="lg:col-span-2 lg:col-start-7">
+        <p class="text-xs text-bronze">Pages</p>
+        <ul class="mt-4 space-y-3 text-sm text-muted">
+          <li><a href="../index.html" class="transition-colors duration-300 hover:text-paper">Home</a></li>
+          <li><a href="collection.html" class="transition-colors duration-300 hover:text-paper">The Collection</a></li>
+          <li><a href="about.html" class="transition-colors duration-300 hover:text-paper">About</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-2">
+        <p class="text-xs text-bronze">Salon</p>
+        <p class="mt-4 text-sm leading-relaxed text-muted">42 Ly Tu Trong Street<br>District 1, Ho Chi Minh City<br>Tue to Sun, 10:00 to 21:00</p>
+      </div>
+      <div class="col-span-2 lg:col-span-2">
+        <p class="text-xs text-bronze">Contact</p>
+        <p class="mt-4 space-y-2 text-sm text-muted">
+          <a href="tel:+842838234716" class="block transition-colors duration-300 hover:text-paper">+84 28 3823 4716</a>
+          <a href="mailto:hello@noirpatisserie.vn" class="block break-words transition-colors duration-300 hover:text-paper">hello@noirpatisserie.vn</a>
+        </p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="mt-20 select-none whitespace-nowrap font-display text-[11.5vw] leading-[0.85] tracking-tight text-paper/90">NOIR PATISSERIE</p>
+    <div class="flex flex-col gap-3 border-t border-paper/10 py-8 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 NOIR PATISSERIE. All rights reserved.</p>
+      <a href="#top" class="h-11 leading-[2.75rem] transition-colors duration-300 hover:text-paper">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

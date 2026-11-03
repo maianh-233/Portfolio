@@ -1,0 +1,44 @@
+# Nguồn ảnh
+
+> Ảnh thật (không phải ảnh do AI tạo): tải về từ thư viện ảnh, hoặc dùng bằng link ngoài khi không tải được (cột File là URL). Ảnh link ngoài chỉ dùng cho prototype — khi đưa lên web thật, thay bằng ảnh của khách hoặc ảnh có giấy phép.
+
+| File | Dùng cho | Nguồn | Tác giả | Giấy phép | Link gốc |
+|---|---|---|---|---|---|
+| https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80&auto=format&fit=crop | index.html — hero | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/wavy-hair |
+| https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=1200&q=80&auto=format&fit=crop | index.html — signature services: cut | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-salon |
+| https://images.unsplash.com/photo-1554519934-e32b1629d9ee?w=1200&q=80&auto=format&fit=crop | index.html — signature services: color | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/balayage |
+| https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80&auto=format&fit=crop | index.html — signature services: care | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-salon |
+| https://images.unsplash.com/photo-1560264641-1b5191cc63e2?w=1000&q=80&auto=format&fit=crop | index.html — color stories: Rose Brown | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/wavy-hair |
+| https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1000&q=80&auto=format&fit=crop | index.html — color stories: Lavender Brown | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/lavender-hair |
+| https://images.unsplash.com/photo-1605980766335-d3a41c7332a1?w=1000&q=80&auto=format&fit=crop | index.html — color stories: Beige Blonde | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/balayage |
+| https://images.unsplash.com/photo-1598897506620-c6601b3c2f12?w=1000&q=80&auto=format&fit=crop | index.html — color stories: Soft Pink | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/pink-hair |
+| https://images.unsplash.com/photo-1622418131139-8549767c2670?w=900&q=80&auto=format&fit=crop | index.html + about — artist 1 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/pink-hair |
+| https://images.unsplash.com/photo-1628126929453-b519555aaabf?w=900&q=80&auto=format&fit=crop | index.html + about — artist 2 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/female-hairdresser-portrait |
+| https://images.unsplash.com/photo-1599332069800-fcf11ed035ff?w=900&q=80&auto=format&fit=crop | index.html + about — artist 3 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/female-hairdresser-portrait |
+| https://images.unsplash.com/photo-1634449571017-5fecfd26ad76?w=1600&q=80&auto=format&fit=crop | pages/services.html — hero | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-wash-salon |
+| https://images.unsplash.com/photo-1700760934268-8aa0ef52ce0a?w=1200&q=80&auto=format&fit=crop | pages/services.html — Haircut & Styling | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hairstylist |
+| https://images.unsplash.com/photo-1574773004910-1eeaabb62b55?w=1200&q=80&auto=format&fit=crop | pages/services.html — Hair Coloring | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/lavender-hair |
+| https://images.unsplash.com/photo-1611590027211-b954fd027b51?w=1200&q=80&auto=format&fit=crop | pages/services.html — Perm & Texture | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/curly-hair-woman |
+| https://images.unsplash.com/photo-1734111719430-fe4a3973f8af?w=1200&q=80&auto=format&fit=crop | pages/services.html — Hair Treatment | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hairstylist |
+| https://images.unsplash.com/photo-1769007783470-cf53b045bab1?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 1 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/pink-hair |
+| https://images.unsplash.com/photo-1769006370577-d0eca8c11741?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 2 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/pink-hair |
+| https://images.unsplash.com/photo-1659683704761-4c1a34c8f6ec?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 3 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/pink-hair |
+| https://images.unsplash.com/photo-1632984814154-6e07a671ae58?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 4 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/curly-hair-woman |
+| https://images.unsplash.com/photo-1554519515-242161756769?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 5 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/balayage |
+| https://images.unsplash.com/photo-1633165864153-5a83575b24af?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 6 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/lavender-hair |
+| https://images.unsplash.com/photo-1707812343087-c9ff9e5abb43?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 7 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-coloring |
+| https://images.unsplash.com/photo-1637308596973-231d1a9221f5?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 8 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-wash-salon |
+| https://images.unsplash.com/photo-1723879371824-dfd4bd34d1f6?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 9 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/female-hairdresser-portrait |
+| https://images.unsplash.com/photo-1470259078422-826894b933aa?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 10 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/pink-hair |
+| https://images.unsplash.com/photo-1785456283212-338f5bc44d50?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 11 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/wavy-hair |
+| https://images.unsplash.com/photo-1770576568718-6747e3d85de8?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 12 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/wavy-hair |
+| https://images.unsplash.com/photo-1785456390070-9960e3997066?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 13 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-coloring |
+| https://images.unsplash.com/photo-1774660810725-fb04e002003d?w=1000&q=80&auto=format&fit=crop | pages/gallery.html — look 14 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-salon |
+| https://images.unsplash.com/photo-1781450090585-1a511b7066d9?w=1600&q=80&auto=format&fit=crop | pages/about.html — hero | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-salon |
+| https://images.unsplash.com/photo-1758315949140-1972ace0644e?w=1200&q=80&auto=format&fit=crop | pages/about.html — our story | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/brunette-hair |
+| https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80&auto=format&fit=crop | pages/about.html — inside the atelier 1 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hairstylist |
+| https://images.unsplash.com/photo-1536520002442-39764a41e987?w=1200&q=80&auto=format&fit=crop | pages/about.html — inside the atelier 2 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hairstylist |
+| https://images.unsplash.com/photo-1746723378067-83a345ff3160?w=1200&q=80&auto=format&fit=crop | pages/about.html — inside the atelier 3 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-salon-interior |
+| https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1200&q=80&auto=format&fit=crop | pages/about.html — inside the atelier 4 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-salon-interior |
+| https://images.unsplash.com/photo-1776105609708-3d8908ab4dc2?w=1200&q=80&auto=format&fit=crop | pages/about.html — inside the atelier 5 | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/hair-coloring |
+| https://images.unsplash.com/photo-1599148200256-649e98444ef2?w=900&q=80&auto=format&fit=crop | index.html + about — artist 3 (thay ảnh cũ không phải chân dung) | web |  | Chưa rõ — chỉ dùng cho prototype | https://unsplash.com/s/photos/female-hairdresser-portrait |

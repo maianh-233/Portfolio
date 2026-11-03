@@ -1,0 +1,128 @@
+{
+  "brand": "CELESTIA",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Đường chân trời mảnh màu Silver và quầng sáng Lavender như mặt trời lúc bình minh trên mặt hồ: lặp lại ở hero, nhãn section, khối chuyển sắc Lavender – Pearl và footer Midnight",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Trở về với sự cân bằng bên trong",
+    "description": "Giao diện giới thiệu resort wellness cao cấp, tông Lavender – Pearl – Midnight Blue, song ngữ Việt / Anh."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Ấn tượng đầu tiên về CELESTIA; dẫn sang Lưu trú, Trải nghiệm, Giới thiệu",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Ảnh hồ bình minh toàn màn hình, nút Khám phá CELESTIA cuộn tới #intro" },
+        { "id": "intro", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Câu giới thiệu lớn + đoạn triết lý, đường kẻ Silver" },
+        { "id": "stays", "catalog": "features", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh ngang lớn + ảnh dọc vòm + chữ lệch trục, link pages/stays.html" },
+        { "id": "experiences", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "4 trải nghiệm ảnh to nhỏ xen kẽ trên nền Midnight, link pages/experiences.html" },
+        { "id": "philosophy", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Nền Lavender – Pearl chuyển sắc, mây mỏng, trích dẫn lớn" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Lưới bất đối xứng 4 ảnh + đoạn chữ, lightbox" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "misty forest lake sunrise reflection", "file": "https://images.pexels.com/photos/30948820/pexels-photo-30948820.jpeg?auto=compress&cs=tinysrgb&w=1920", "status": "link" },
+        { "slot": "stays-wide", "query": "minimalist tropical house greenery", "file": "https://images.pexels.com/photos/34277704/pexels-photo-34277704.jpeg?auto=compress&cs=tinysrgb&w=1920", "status": "link" },
+        { "slot": "stays-portrait", "query": "sheer curtain glass door", "file": "https://images.pexels.com/photos/7290073/pexels-photo-7290073.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "experiences-spa", "query": "massage room interior", "file": "https://images.pexels.com/photos/11774389/pexels-photo-11774389.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "experiences-yoga", "query": "yoga pavilion outdoor", "file": "https://images.pexels.com/photos/35630591/pexels-photo-35630591.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "experiences-garden", "query": "meditation garden lotus", "file": "https://images.pexels.com/photos/5045171/pexels-photo-5045171.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "experiences-waters", "query": "tranquil infinity pool", "file": "https://images.pexels.com/photos/28408327/pexels-photo-28408327.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "philosophy", "query": "lavender close up", "file": "https://images.pexels.com/photos/12652584/pexels-photo-12652584.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "gallery-2", "query": "misty forest pathway", "file": "https://images.pexels.com/photos/29579812/pexels-photo-29579812.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "gallery-3", "query": "sunrise calm lake", "file": "https://images.pexels.com/photos/28640154/pexels-photo-28640154.jpeg?auto=compress&cs=tinysrgb&w=1600", "status": "link" },
+        { "slot": "gallery-4", "query": "lavender field morning", "file": "https://images.pexels.com/photos/5126290/pexels-photo-5126290.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "gallery-5", "query": "flowing curtains balcony", "file": "https://images.pexels.com/photos/11775152/pexels-photo-11775152.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Giới thiệu",
+      "purpose": "Câu chuyện, triết lý, kiến trúc và giá trị thương hiệu CELESTIA",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Hai cột bất đối xứng, tiêu đề dính" },
+        { "id": "architecture", "catalog": "gallery", "variant": "cta-fullbleed", "source": "ba", "note": "Ảnh lớn gần toàn chiều rộng + 4 chú thích kiểu tạp chí kiến trúc" },
+        { "id": "values", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "4 giá trị số lớn trên nền Midnight" },
+        { "id": "nature", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Ảnh vòm + đoạn văn ngắn, không tuyên bố y tế" },
+        { "id": "about-cta", "catalog": "cta", "variant": "cta-sky", "source": "ba", "note": "Find Space for What Matters → pages/experiences.html" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "architecture reflective pool greenery", "file": "https://images.pexels.com/photos/18233791/pexels-photo-18233791.jpeg?auto=compress&cs=tinysrgb&w=1920", "status": "link" },
+        { "slot": "story", "query": "lakeside dawn mist", "file": "https://images.pexels.com/photos/35487947/pexels-photo-35487947.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "architecture", "query": "contemporary resort minimalist", "file": "https://images.pexels.com/photos/5563472/pexels-photo-5563472.jpeg?auto=compress&cs=tinysrgb&w=1920", "status": "link" },
+        { "slot": "nature", "query": "woman meditation morning nature", "file": "https://images.pexels.com/photos/8964938/pexels-photo-8964938.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/stays.html",
+      "title": "Lưu trú",
+      "purpose": "Giới thiệu phòng, villa, tiện ích và vật liệu; không giá, không đặt phòng",
+      "sections": [
+        { "id": "stays-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "suite", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Ảnh trái, nội dung phải" },
+        { "id": "garden-villa", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Đảo vị trí ảnh / nội dung" },
+        { "id": "pool-villa", "catalog": "features", "variant": "cta-fullbleed", "source": "ba", "note": "Ảnh ngang toàn cảnh + tiện nghi bằng typography và đường kẻ" },
+        { "id": "facilities", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "5 khu tiện ích dạng tab trên nền Midnight" },
+        { "id": "materials", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh cận cảnh vật liệu + danh sách 5 chất liệu" },
+        { "id": "stays-cta", "catalog": "cta", "variant": "cta-sky", "source": "ba", "note": "Your Own Space to Breathe → pages/about.html" }
+      ],
+      "images": [
+        { "slot": "stays-hero", "query": "hotel room large window view", "file": "https://images.pexels.com/photos/30835932/pexels-photo-30835932.jpeg?auto=compress&cs=tinysrgb&w=1920", "status": "link" },
+        { "slot": "suite", "query": "minimalist bedroom sunlight windows", "file": "https://images.pexels.com/photos/30926942/pexels-photo-30926942.jpeg?auto=compress&cs=tinysrgb&w=1600", "status": "link" },
+        { "slot": "garden-villa", "query": "modern hotel tropical resort", "file": "https://images.pexels.com/photos/15995605/pexels-photo-15995605.jpeg?auto=compress&cs=tinysrgb&w=1600", "status": "link" },
+        { "slot": "pool-villa", "query": "luxury villa pool minimalist", "file": "https://images.pexels.com/photos/34378030/pexels-photo-34378030.jpeg?auto=compress&cs=tinysrgb&w=1920", "status": "link" },
+        { "slot": "facility-spa", "query": "candles incense wooden stool", "file": "https://images.pexels.com/photos/3865773/pexels-photo-3865773.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "facility-meditation", "query": "woman lotus meditating", "file": "https://images.pexels.com/photos/5435242/pexels-photo-5435242.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "facility-yoga", "query": "woman practicing yoga", "file": "https://images.pexels.com/photos/6787218/pexels-photo-6787218.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "facility-pool", "query": "infinity pool cloudy sky", "file": "https://images.pexels.com/photos/8110136/pexels-photo-8110136.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "facility-restaurant", "query": "wooden tables modern restaurant", "file": "https://images.pexels.com/photos/17584116/pexels-photo-17584116.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "materials-linen", "query": "linen fabric close up", "file": "https://images.pexels.com/photos/8774406/pexels-photo-8774406.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "materials-light", "query": "light through curtains", "file": "https://images.pexels.com/photos/11901304/pexels-photo-11901304.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Trải nghiệm",
+      "purpose": "Truyền cảm hứng về các hoạt động wellness, không như danh mục bán dịch vụ",
+      "sections": [
+        { "id": "exp-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "rituals", "catalog": "features", "variant": "timeline", "source": "ba", "note": "Ảnh rộng + 4 nghi thức buổi sáng theo giờ" },
+        { "id": "spa", "catalog": "features", "variant": "hero-split", "source": "ba", "note": "Nền Midnight, không bảng giá / đặt lịch" },
+        { "id": "mindful", "catalog": "editorial", "variant": "story-editorial", "source": "ba", "note": "Ảnh dọc + chữ lớn kiểu tạp chí" },
+        { "id": "cuisine", "catalog": "gallery", "variant": "features-bento", "source": "ba", "note": "Bento 3 ảnh ẩm thực, không đặt món" },
+        { "id": "exp-gallery", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ba", "note": "Dải ảnh kéo ngang + lightbox" },
+        { "id": "exp-cta", "catalog": "cta", "variant": "cta-sky", "source": "ba", "note": "Let Stillness Become Part of You → index.html" }
+      ],
+      "images": [
+        { "slot": "exp-hero", "query": "outdoor yoga deck water", "file": "https://images.pexels.com/photos/29614929/pexels-photo-29614929.jpeg?auto=compress&cs=tinysrgb&w=1920", "status": "link" },
+        { "slot": "rituals-wide", "query": "deck facing sunrise", "file": "https://images.pexels.com/photos/2407455/pexels-photo-2407455.jpeg?auto=compress&cs=tinysrgb&w=1920", "status": "link" },
+        { "slot": "rituals-walk", "query": "sunlit forest path morning", "file": "https://images.pexels.com/photos/31035343/pexels-photo-31035343.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "spa", "query": "scented sticks candle", "file": "https://images.pexels.com/photos/7795827/pexels-photo-7795827.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "mindful-reading", "query": "woman reading by window", "file": "https://images.pexels.com/photos/6965743/pexels-photo-6965743.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "mindful-tea", "query": "gaiwan pouring tea", "file": "https://images.pexels.com/photos/6545346/pexels-photo-6545346.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "cuisine-main", "query": "plates healthy food", "file": "https://images.pexels.com/photos/4519057/pexels-photo-4519057.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "cuisine-dish", "query": "vegetable dish plate", "file": "https://images.pexels.com/photos/2102948/pexels-photo-2102948.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "cuisine-tea", "query": "herbal tea lavender cup", "file": "https://images.pexels.com/photos/341514/pexels-photo-341514.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "gallery-1", "query": "sunlit forest edge morning", "file": "https://images.pexels.com/photos/37183183/pexels-photo-37183183.jpeg?auto=compress&cs=tinysrgb&w=1600", "status": "link" },
+        { "slot": "gallery-2", "query": "meditating lotus park", "file": "https://images.pexels.com/photos/4457915/pexels-photo-4457915.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "gallery-3", "query": "rolled spa towels", "file": "https://images.pexels.com/photos/208504/pexels-photo-208504.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA yêu cầu công tắc VI / EN (data-vi / data-en + localStorage, đổi lang của <html>) dù concept.md ghi 'không tạo bộ chuyển ngôn ngữ' — theo chú thích của BA (ưu tiên cao hơn); mặc định tiếng Việt, lang=\"vi\"",
+    "BA đặt tên about.html / stays.html / experiences.html ở gốc và assets/css/style.css, assets/js/main.js — giữ chuẩn công ty: trang con trong pages/, CSS chung assets/css/site.css, JS chung assets/js/site.js",
+    "Font theo BA: Cormorant Garamond (tiêu đề) + Be Vietnam Pro (nội dung) thay cho Fraunces / Manrope của preset; bảng màu theo BA (Midnight, Lavender, Pearl, Muted Rose, Silver) thay bảng màu preset",
+    "Tiêu đề tiếng Anh BA đưa (Return to Your Inner Balance…) dùng cho bản EN; bản VI dịch tương ứng",
+    "Không dùng data-particles vì BA cấm hạt sáng / sao bay liên tục; không khí Level 2 thể hiện bằng data-clouds mỏng (sương) ở một section mỗi trang + data-gradient-shift + data-float",
+    "Công cụ search_images lỗi (openverse quá thời gian) → toàn bộ ảnh là link Pexels đã kiểm qua link_image (đạt hạn mức 40 link); gallery trang Trải nghiệm còn 3 ảnh"
+  ],
+  "limitations": [
+    "Website chỉ giới thiệu: không đặt phòng, đặt spa / yoga, đặt bàn, giỏ hàng hay thanh toán (theo yêu cầu BA)",
+    "Địa chỉ, số điện thoại, email trong footer là thông tin mẫu",
+    "Ảnh dùng bằng link ngoài (Pexels), cần ảnh thật của resort khi triển khai"
+  ]
+}

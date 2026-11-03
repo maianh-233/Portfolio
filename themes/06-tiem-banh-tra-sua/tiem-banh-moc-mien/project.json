@@ -1,0 +1,75 @@
+{
+  "slug": "tiem-banh-moc-mien",
+  "name": "TIỆM BÁNH MỘC MIÊN",
+  "projectType": "website",
+  "concept": {
+    "topic": "website tiệm bánh",
+    "brand": "TIỆM BÁNH MỘC MIÊN",
+    "purpose": "Xây dựng website giới thiệu Tiệm Bánh Mộc Miên, một thương hiệu gợi nhớ tiệm bánh Việt Nam xưa, ký ức gia đình và những buổi sáng bình dị. Không gian cần ấm áp, chân thật, không biến thành website du lịch hoặc bảo tàng.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Art direction\n\nVàng giấy #E9D8B5; đỏ gạch #9E4034; xanh rêu #59634B; nâu gỗ #624631.\n\nHeading serif cổ điển; phần mô tả dùng font dễ đọc; chữ viết tay chỉ dành cho ghi chú ngắn.\n\nDùng khung ảnh film, đường viền không hoàn toàn đều, texture giấy rất nhẹ, tem nhãn vintage và họa tiết hoa lá đơn giản.\n\nHình ảnh: bánh mì, bánh bông lan, bánh quy, bánh mì ngọt, quầy gỗ và giấy gói bánh.\n\nKhông dùng hiệu ứng giấy cũ quá đậm làm giảm độ rõ của chữ.\n\n3. Trang chủ\n\nHeader có logo dạng bảng hiệu tiệm, nền vàng giấy.\n\nHero như một tấm bưu thiếp: ảnh tiệm hoặc khay bánh ở một bên; bên kia là headline “Hương bánh xưa, thương nhớ hôm nay” và CTA “Ghé thăm câu chuyện”.\n\nDải chữ nhỏ giống dòng ghi chú trên sổ tay.\n\nSection “Món bánh thân quen” trình bày 3–4 sản phẩm bằng khung ảnh film không đồng đều.\n\nSection kể chuyện ngắn với ảnh quầy bánh, giấy gói hoặc bàn gỗ.\n\nGallery ba ảnh có chú thích ngắn.\n\nFooter giống phần cuối một tấm thư cũ.\n\n4. Trang Sản phẩm & Menu\n\nBố cục như menu in trên giấy, không giống catalog thương mại điện tử.\n\nChia nhóm Bánh mì, Bánh ngọt, Bánh truyền thống, Bánh theo mùa.\n\nCó tên món, mô tả ngắn và ảnh; trình bày bằng các khung ảnh hoặc danh sách biên tập.\n\nDùng nhãn số thứ tự, đường kẻ và ghi chú viết tay để tăng chất hoài cổ.\n\n5. Trang Về chúng tôi\n\nHero ảnh tiệm với màu film ấm.\n\nCâu chuyện thương hiệu viết bằng tiếng Việt tự nhiên, có bản dịch tiếng Anh tương ứng.\n\nTimeline ngắn về hành trình tiệm bánh, không bịa dữ kiện lịch sử như sự thật.\n\nCác giá trị: hương vị thân quen, sự chăm chút, tinh thần hiếu khách.\n\nGallery không gian và chi tiết làm bánh.\n\n6. Chuyển động\n\nChuyển trang nhẹ, ảnh hiện dần, hover chỉ làm ảnh sáng hơn hoặc phóng nhẹ. Không dùng hoạt ảnh hoạt hình hoặc parallax phức tạp.\n\n7. Ràng buộc\n\nTối đa 3 trang, song ngữ đầy đủ, responsive. Không có chức năng đặt bánh, giỏ hàng, thanh toán, form mua hàng. Có nút chuyển ngôn ngữ anh việt",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-23T03:03:13.323Z",
+  "updatedAt": "2026-10-23T04:07:01.581Z",
+  "screen": "done",
+  "request": "website tiệm bánh",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\tiem-banh-moc-mien\\web",
+    "builtAt": "2026-10-23T04:06:49.537Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/menu.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/menu.html": []
+    }
+  },
+  "job": {
+    "id": "af7f9405-0213-4423-aa46-6d1fce2b43de",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\tiem-banh-moc-mien\\web",
+    "feedback": "Phần Inside the bakehouse ở OurStory có thanh cuộn ngang họ muốn mất thanh cuộn đó đi",
+    "page": "index.html",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-23T04:06:58.872Z",
+    "critical": 0,
+    "major": 3,
+    "minor": 0,
+    "screenshots": 9
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-23T04:06:49.532Z",
+      "text": "Phần Inside the bakehouse ở OurStory có thanh cuộn ngang họ muốn mất thanh cuộn đó đi"
+    }
+  ]
+}

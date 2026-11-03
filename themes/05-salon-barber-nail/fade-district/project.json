@@ -1,0 +1,92 @@
+{
+  "slug": "fade-district",
+  "name": "FADE DISTRICT",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu",
+    "brand": "FADE DISTRICT",
+    "purpose": "Thiết kế website giới thiệu FADE DISTRICT, một barber studio dành cho thế hệ trẻ yêu thích streetwear, văn hóa đường phố và các kiểu tóc cá tính như Skin Fade, Textured Crop, Buzz Cut và Modern Mullet.\n\nWebsite kết hợp tinh thần của một barber studio hiện đại với hình ảnh của streetwear brand và tạp chí văn hóa đô thị.\n\nCreative direction: Streetwear Editorial × Neo-Brutalism × Urban Photography.\n\nGiao diện phải mạnh mẽ, trực diện, có nhịp điệu thị giác nhanh và khác biệt rõ ràng với website barber cổ điển hoặc luxury salon.\n\nTránh bố cục website doanh nghiệp truyền thống, card bo tròn đại trà và các section lặp lại theo cùng một khuôn mẫu.",
+    "audience": "Khách có nhu cầu sẽ xem",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. VISUAL IDENTITY\n\nColor palette\n\nNeon Orange: #FF5A1F — màu nhận diện chủ đạo.\n\nCarbon Black: #171717 — nền tối.\n\nConcrete Gray: #B8B8B3 — màu trung tính.\n\nOff White: #F4F2EC — nền sáng và màu chữ.\n\nAcid Yellow: #D9FF3F — màu nhấn phụ, chỉ sử dụng ở một vài chi tiết.\n\nCam neon phải là điểm nhận diện nổi bật nhất. Kết hợp những mảng đen lớn với nền xám bê tông và các khối cam có hình dạng dứt khoát.\n\nKhông dùng gradient cầu vồng, pastel, ánh kim sang trọng hoặc bảng màu vintage.\n\nTypography\n\nHeading: Sans-serif condensed, bold hoặc extra-bold.\n\nBody: Sans-serif hiện đại, dễ đọc.\n\nLabel: Uppercase, letter-spacing rộng.\n\nSố thứ tự và thông tin phụ có thể sử dụng typography dạng technical/editorial.\n\nSử dụng heading lớn, đôi khi chiếm gần toàn bộ chiều rộng màn hình. Cho phép chữ chạm sát lề hoặc xếp thành nhiều dòng để tạo sức nặng thị giác, nhưng không được cắt mất nội dung quan trọng.\n\nCó thể kết hợp chữ nghiêng, chữ outline và các con số lớn như yếu tố đồ họa.\n\nImage direction\n\nStreet photography với ánh sáng flash trực diện.\n\nChân dung nam giới trẻ với skin fade, textured crop, buzz cut và modern mullet.\n\nẢnh barber đang thao tác bằng tông màu thô, chân thực.\n\nBối cảnh phố, tường bê tông, kim loại, gương và ghế barber hiện đại.\n\nẢnh cận cảnh đường fade, texture tóc và dụng cụ cắt.\n\nƯu tiên ảnh có cá tính, bố cục tự nhiên và cảm giác như một chiến dịch streetwear.\n\nKhông sử dụng ảnh barber shop cổ điển, nội thất gỗ vintage hoặc ảnh stock mang phong cách doanh nghiệp.\n\n3. GLOBAL LAYOUT & COMPONENTS\n\nHeader\n\nThiết kế header gọn, có cá tính.\n\nLogo FADE DISTRICT ở góc trái, chữ in hoa đậm.\n\nMenu: HOME / SERVICES / STYLE GALLERY / THE DISTRICT.\n\nBộ chuyển đổi VI / EN.\n\nNút BOOK A VISIT nền cam neon, chữ đen.\n\nHeader có đường viền dưới dày, tương phản rõ.\n\nHeader có thể sticky khi cuộn trang. Trạng thái sticky giữ nền đặc và không che nội dung.\n\nTrên mobile, sử dụng hamburger menu. Nút đặt lịch phải dễ tìm và dễ thao tác.\n\nButtons\n\nNút vuông hoặc chữ nhật với góc bo rất nhẹ hoặc không bo góc.\n\nNền cam neon, chữ đen.\n\nHover chuyển nền đen, chữ cam và đường viền cam.\n\nCó mũi tên hoặc ký hiệu cộng ở cạnh phải.\n\nChuyển trạng thái nhanh, rõ ràng.\n\nTránh nút dạng pill hoặc hiệu ứng phát sáng quá mức.\n\nGraphic elements\n\nSử dụng có kiểm soát:\n\nSố thứ tự lớn.\n\nĐường viền đen dày.\n\nNhãn dạng tem.\n\nKhung ảnh bất đối xứng.\n\nChữ chạy ngang.\n\nDấu cộng, mũi tên và ký hiệu hình học.\n\nCác dải màu cam làm điểm phân cách section.\n\nCác yếu tố này phải phục vụ bố cục, không được khiến website trở nên lộn xộn hoặc khó đọc.\n\n4. PAGE 01 — HOME\n\nSection 01: High-impact Hero\n\nHero phải tạo ấn tượng ngay khi trang vừa mở.\n\nBố cục:\n\nNền đen hoặc xám bê tông.\n\nHeading cực lớn chiếm phần lớn khu vực bên trái.\n\nẢnh street photography lớn ở bên phải, có thể chồng nhẹ lên một khối cam neon.\n\nCác nhãn nhỏ, số thứ tự và đường viền dày tạo cảm giác poster đường phố.\n\nBố cục bất đối xứng, không căn giữa mọi thành phần.\n\nNội dung:\n\nEyebrow:\nYOUR HAIR. YOUR RULES.\n\nHeading:\n\"FRESH\nFADE.\nNO RULES.\"\n\nMô tả:\nMột barber studio dành cho những người thích thử nghiệm phong cách, thể hiện cá tính và không ngại khác biệt.\n\nCTA:\n\nFIND YOUR STYLE\n\nBOOK A VISIT\n\nBổ sung nhãn đồ họa:\nDISTRICT 001 / STREET CULTURE / EST. 2022.\n\nẢnh hero là chân dung nam giới với kiểu tóc fade nổi bật, ánh sáng flash và phông nền đô thị.\n\nCó thể đặt chữ \"FADE DISTRICT\" cỡ lớn phía sau ảnh với độ tương phản thấp để tăng chiều sâu.\n\nTrên mobile, chuyển sang bố cục dọc, giữ heading dễ đọc và ưu tiên hiển thị kiểu tóc.\n\nSection 02: Moving Street Banner\n\nTạo một dải cam neon chạy ngang toàn màn hình.\n\nNội dung lặp:\n\"STAY FRESH — STAY DIFFERENT — OWN YOUR STYLE —\"\n\nSử dụng marquee animation chạy ngang chậm, liên tục.\n\nChiều cao dải vừa đủ để tạo nhịp chuyển tiếp giữa hero và phần nội dung. Không làm ảnh hưởng khả năng đọc hoặc gây khó chịu.\n\nNếu người dùng bật giảm chuyển động, dừng marquee.\n\nSection 03: The District Attitude\n\nNền xám bê tông, chữ đen.\n\nHeading:\n\"NOT JUST A CUT.\nIT'S YOUR IDENTITY.\"\n\nThiết kế theo dạng editorial bất đối xứng:\n\nMột ảnh barber đang cắt tóc chiếm khoảng 55–60% chiều rộng.\n\nPhần còn lại chứa nội dung và ba tuyên ngôn thương hiệu.\n\n01 — NO BASIC CUTS\nKhông rập khuôn. Mỗi kiểu tóc được điều chỉnh theo cá tính của khách hàng.\n\n02 — BUILT ON PRECISION\nĐường fade gọn, texture rõ và sự tỉ mỉ trong từng chi tiết.\n\n03 — STREET APPROVED\nLấy cảm hứng từ streetwear, âm nhạc và văn hóa đô thị đương đại.\n\nSử dụng số thứ tự lớn, đường kẻ dày và typography đậm. Không trình bày ba giá trị dưới dạng ba card bo tròn giống nhau.\n\nSection 04: Signature Styles\n\nNền đen.\n\nHeading:\n\"CHOOSE YOUR ATTITUDE.\"\n\nGiới thiệu bốn kiểu tóc chủ lực:\n\nSKIN FADE\nĐường chuyển tiếp sát da, sắc nét và hiện đại.\n\nTEXTURED CROP\nTexture tự nhiên, tạo độ chuyển động và vẻ ngoài phóng khoáng.\n\nBUZZ CUT\nGọn, mạnh mẽ, tối giản và dễ chăm sóc.\n\nMODERN MULLET\nCá tính, nổi bật và mang hơi hướng street culture.\n\nMỗi kiểu tóc có ảnh riêng, tên kiểu tóc cỡ lớn và mô tả ngắn.\n\nSắp xếp ảnh theo bố cục bất đối xứng. Một kiểu tóc có thể được ưu tiên bằng ảnh lớn, các kiểu còn lại dùng khung ảnh nhỏ hơn.\n\nHover:\n\nẢnh zoom nhẹ.\n\nXuất hiện nhãn cam neon.\n\nTên kiểu tóc dịch chuyển nhẹ hoặc đổi màu.\n\nCTA: EXPLORE ALL SERVICES.\n\nSection 05: Style Gallery Preview\n\nNền off-white.\n\nHeading:\n\"SEEN ON THE STREETS.\"\n\nHiển thị 6–8 ảnh kiểu tóc và chân dung khách hàng.\n\nThiết kế theo phong cách streetwear lookbook:\n\nKhung ảnh đa dạng.\n\nKhoảng cách không hoàn toàn đồng đều nhưng vẫn có hệ thống.\n\nChú thích ngắn bên dưới hoặc chồng lên ảnh.\n\nMột số ảnh có nhãn như FADE / TEXTURE / DISTRICT LOOK.\n\nẢnh phải thể hiện rõ kiểu tóc. Không đặt typography lớn lên vùng quan trọng của chân dung.\n\nCTA: VIEW THE GALLERY.\n\nSection 06: Meet the Barbers\n\nNền đen, tiêu đề cam neon.\n\nHeading:\n\"THE CREW BEHIND THE CUT.\"\n\nGiới thiệu ba thành viên với dữ liệu mẫu:\n\nMinh Khoa — Fade Specialist.\n\nJay Nguyen — Texture & Modern Cuts.\n\nAlex Tran — Creative Barber.\n\nMỗi hồ sơ gồm ảnh chân dung, tên, chuyên môn và giới thiệu ngắn.\n\nThiết kế ảnh dạng poster với đường viền đậm, nhãn số thứ tự và typography lớn.\n\nKhông cần tạo hồ sơ dài hoặc các card nhân sự theo phong cách corporate.\n\nCTA: MEET THE CREW.\n\nSection 07: Closing Statement\n\nNền cam neon chiếm toàn bộ chiều rộng.\n\nHeading:\n\"YOUR STYLE.\nYOUR DISTRICT.\"\n\nMô tả ngắn mời khách khám phá kiểu tóc phù hợp với cá tính.\n\nCTA: BOOK A VISIT.\n\nSử dụng typography đen cỡ lớn, bố cục mạnh và một chi tiết đồ họa dạng mũi tên.\n\n5. PAGE 02 — SERVICES & PRICING\n\nHero\n\nNền xám bê tông, chữ đen.\n\nHeading:\n\"THE CUT MENU.\"\n\nBố cục gồm heading lớn, mô tả ngắn và ảnh barber action đặt lệch về một bên.\n\nCó nhãn:\nSERVICES / PRICING / DISTRICT 002.\n\nService Menu\n\nThiết kế danh sách dịch vụ theo phong cách poster editorial, dùng đường viền dày và số thứ tự lớn.\n\n01 — SKIN FADE\n\nMô tả: Fade sát da với đường chuyển tiếp sắc nét.\n\nThời lượng: 45–60 phút.\n\nGiá tham khảo: 180.000 VNĐ.\n\n02 — LOW FADE\n\nMô tả: Đường fade thấp, tự nhiên và dễ kết hợp với nhiều kiểu tóc.\n\nThời lượng: 40–50 phút.\n\nGiá tham khảo: 160.000 VNĐ.\n\n03 — MID FADE\n\nMô tả: Độ chuyển tiếp cân bằng, tạo vẻ ngoài hiện đại.\n\nThời lượng: 40–50 phút.\n\nGiá tham khảo: 170.000 VNĐ.\n\n04 — TEXTURED CROP\n\nMô tả: Tạo texture rõ nét, phù hợp phong cách trẻ trung.\n\nThời lượng: 40–50 phút.\n\nGiá tham khảo: 170.000 VNĐ.\n\n05 — BUZZ CUT\n\nMô tả: Kiểu tóc ngắn gọn, mạnh mẽ và tối giản.\n\nThời lượng: 20–30 phút.\n\nGiá tham khảo: 100.000 VNĐ.\n\n06 — BEARD STYLING\n\nMô tả: Tỉa và định hình râu theo đường nét khuôn mặt.\n\nThời lượng: 20–30 phút.\n\nGiá tham khảo: 80.000 VNĐ.\n\nGiá và thời lượng chỉ mang tính minh họa.\n\nMỗi dòng hiển thị tên, mô tả, thời lượng và giá. Trên desktop có thể bố trí hai cột; trên mobile chuyển thành danh sách một cột.\n\nHover một dịch vụ sẽ làm nổi bật đường viền hoặc nhãn màu cam. Không dùng hiệu ứng quá mạnh gây khó đọc.\n\nFind Your Cut\n\nTạo một section nền đen giới thiệu các hướng lựa chọn kiểu tóc.\n\nClean & Minimal.\n\nBold & Textured.\n\nSharp & Defined.\n\nMỗi phong cách có ảnh minh họa, mô tả ngắn và liên kết đến gallery.\n\nKhông tạo công cụ tư vấn phức tạp hoặc chức năng phân tích khuôn mặt.\n\nBooking CTA\n\nNền cam neon.\n\nHeading:\n\"YOUR NEXT CUT STARTS HERE.\"\n\nNút BOOK A VISIT.\n\nKhi nhấn, hiển thị thông báo nhỏ cho biết chức năng đặt lịch chỉ là minh họa. Không thu thập dữ liệu hoặc gửi biểu mẫu lên máy chủ.\n\n6. PAGE 03 — STYLE GALLERY\n\nHero\n\nHeading:\n\"REAL CUTS.\nREAL PEOPLE.\"\n\nDùng một ảnh chân dung lớn kết hợp typography mạnh và nhãn STREET LOOKBOOK.\n\nBố cục giống trang mở đầu của một tạp chí streetwear.\n\nCategory Filters\n\nTạo các bộ lọc:\n\nALL STYLES.\n\nSKIN FADE.\n\nTEXTURED.\n\nBUZZ CUT.\n\nMODERN MULLET.\n\nBEARD.\n\nBộ lọc phải hoạt động thực sự bằng JavaScript, không chỉ thay đổi màu nút.\n\nMain Gallery\n\nTạo gallery gồm 8–12 ảnh, sử dụng CSS Grid bất đối xứng.\n\nKết hợp:\n\nChân dung chính diện.\n\nGóc nghiêng để thể hiện đường fade.\n\nẢnh cận cảnh texture tóc.\n\nẢnh barber đang thao tác.\n\nẢnh phong cách khách hàng trong bối cảnh đô thị.\n\nMỗi ảnh có tên kiểu tóc và nhãn danh mục.\n\nHover:\n\nẢnh phóng to nhẹ.\n\nLớp phủ đen xuất hiện.\n\nTên kiểu tóc và ký hiệu mũi tên được hiển thị.\n\nKhi nhấn ảnh, mở lightbox có ảnh lớn, tên kiểu tóc và nút đóng.\n\nHỗ trợ đóng bằng phím Escape và nhấn bên ngoài ảnh.\n\nKhông tạo giao diện mạng xã hội hoặc chức năng đăng tải ảnh của người dùng.\n\nDistrict Looks\n\nMột section nhỏ giới thiệu ba bộ sưu tập:\n\nTHE CLEAN FADE.\n\nTEXTURE CULTURE.\n\nNO RULES LOOK.\n\nMỗi bộ sưu tập gồm ảnh đại diện, mô tả ngắn và liên kết lọc gallery theo danh mục tương ứng.\n\n7. PAGE 04 — ABOUT THE DISTRICT\n\nHero\n\nNền đen, heading cam neon:\n\n\"BUILT FOR\nTHE BOLD.\"\n\nSử dụng ảnh barber studio hoặc chân dung đội ngũ theo phong cách street photography.\n\nOur Story\n\nHeading:\n\"MORE THAN A BARBER SHOP.\"\n\nGiới thiệu FADE DISTRICT là không gian dành cho những người xem kiểu tóc như một phần của bản sắc cá nhân.\n\nNội dung tập trung vào:\n\nVăn hóa streetwear và phong cách đô thị.\n\nKỹ thuật fade và tạo texture.\n\nTinh thần sáng tạo, cởi mở và không rập khuôn.\n\nTrải nghiệm barber gần gũi, chuyên nghiệp.\n\nBố cục chia đôi giữa nội dung và ảnh, có thể sử dụng typography cỡ lớn làm điểm nhấn.\n\nKhông viết câu chuyện thương hiệu quá dài hoặc dùng những tuyên bố thành tích chưa được xác thực.\n\nMeet the Crew\n\nGiới thiệu ba barber:\n\nMINH KHOA\nFade Specialist.\n\nJAY NGUYEN\nTexture & Modern Cuts.\n\nALEX TRAN\nCreative Barber.\n\nMỗi người có ảnh chân dung, chuyên môn và giới thiệu ngắn.\n\nDùng layout dạng poster hoặc editorial portrait thay vì card doanh nghiệp.\n\nInside the Studio\n\nHiển thị ảnh:\n\nGhế barber và gương.\n\nKhu vực cắt tóc.\n\nDụng cụ và bàn làm việc.\n\nKhông gian chờ.\n\nChi tiết tường bê tông, kim loại và biển hiệu.\n\nDùng bố cục ảnh bất đối xứng, có thể mở lightbox.\n\nVisit the District\n\nHiển thị:\n\nĐịa chỉ mẫu.\n\nSố điện thoại mẫu.\n\nEmail liên hệ mẫu.\n\nGiờ hoạt động.\n\nLiên kết mạng xã hội dạng minh họa.\n\nĐánh dấu dữ liệu mẫu rõ ràng. Không tạo địa chỉ hoặc thông tin liên hệ giả như thể đó là cơ sở có thật.\n\nCTA: FIND US / BOOK A VISIT.\n\n8. BILINGUAL VI / EN\n\nTất cả bốn trang phải có nội dung tiếng Việt và tiếng Anh.\n\nNút chuyển đổi ngôn ngữ đặt ở header, hiển thị rõ trạng thái hiện tại.\n\nKhi chuyển ngôn ngữ:\n\nKhông điều hướng người dùng về trang chủ.\n\nGiữ nguyên trang hiện tại.\n\nKhông tải lại trang.\n\nDịch toàn bộ heading, mô tả, menu, dịch vụ, giá, bộ lọc, CTA, footer và thông báo.\n\nLưu ngôn ngữ đã chọn bằng localStorage.\n\nDuy trì ngôn ngữ khi chuyển sang trang khác hoặc tải lại trang.\n\nKhông để giao diện ở trạng thái nửa tiếng Việt, nửa tiếng Anh.\n\nGiữ nguyên tên thương hiệu FADE DISTRICT và các tên kiểu tóc phổ biến khi phù hợp.\n\n9. ANIMATION & INTERACTIONS\n\nAnimation phải tạo cảm giác nhanh, dứt khoát và hiện đại.\n\nHero\n\nHeading xuất hiện bằng hiệu ứng reveal hoặc slide ngắn.\n\nẢnh xuất hiện với hiệu ứng fade hoặc scale nhẹ.\n\nScroll\n\nSection xuất hiện khi cuộn đến.\n\nDùng opacity và translateY nhỏ.\n\nTránh animation dài hoặc nhiều lớp chuyển động đồng thời.\n\nMarquee\n\nDải chữ cam chạy ngang liên tục với tốc độ vừa phải.\n\nTạm dừng khi hover nếu phù hợp.\n\nHỗ trợ reduced motion.\n\nHover\n\nẢnh zoom nhẹ.\n\nViền chuyển màu cam.\n\nCTA đổi màu tương phản.\n\nCác nhãn đồ họa dịch chuyển nhẹ.\n\nNavigation\n\nMenu desktop hoạt động.\n\nHamburger menu mở và đóng bình thường.\n\nHeader sticky không che nội dung.\n\nGallery\n\nBộ lọc hoạt động.\n\nLightbox mở và đóng được.\n\nHỗ trợ phím Escape.\n\nTất cả tương tác phải hoạt động thực sự, không chỉ là hiệu ứng trang trí. Tránh con trỏ tùy chỉnh hoặc hiệu ứng gây cản trở thao tác thông thường.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-30T07:04:33.969Z",
+  "updatedAt": "2026-10-30T07:29:16.555Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\fade-district\\web",
+    "builtAt": "2026-10-30T07:29:03.305Z",
+    "pages": [
+      "index.html",
+      "pages/district.html",
+      "pages/gallery.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/district.html": [],
+      "pages/gallery.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "376366cd-c121-4d86-9db9-46b048f4be15",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\fade-district\\web",
+    "feedback": "Ở Trang chủ phần \"Bắt gặp\ntrên phố.\" phần đó các ảnh đang đè lên chữ",
+    "page": "index.html",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 16,
+      "outputTokens": 2566,
+      "cacheReadTokens": 210758,
+      "cacheCreationTokens": 33549,
+      "costUsd": 0.3619276,
+      "numTurns": 13,
+      "durationMs": 35852
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-30T07:29:13.869Z",
+    "critical": 0,
+    "major": 48,
+    "minor": 1,
+    "screenshots": 12
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-30T07:29:03.294Z",
+      "text": "Ở Trang chủ phần \"Bắt gặp\ntrên phố.\" phần đó các ảnh đang đè lên chữ"
+    }
+  ]
+}

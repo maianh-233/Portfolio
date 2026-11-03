@@ -1,0 +1,73 @@
+{
+  "slug": "form-function-clinic",
+  "name": "FORM & FUNCTION CLINIC",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "FORM & FUNCTION CLINIC",
+    "purpose": "Thiết kế website giới thiệu FORM & FUNCTION CLINIC, một trung tâm thẩm mỹ y khoa theo định hướng kiến trúc đương đại, công năng và sự chính xác.\n\nArt direction: Architectural Minimalism. Sử dụng xám bê tông, trắng, đen và vàng chanh làm điểm nhấn nhỏ. Hình ảnh kiến trúc có bóng đổ mạnh, bề mặt bê tông, kính, các khối hình học và bố cục bất đối xứng. Không dùng phong cách luxury, ánh kim hoặc hiệu ứng công nghệ tương lai.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Hero với hình ảnh kiến trúc toàn khổ, headline lớn, giới thiệu triết lý thương hiệu, nhóm dịch vụ và không gian thực tế.\n\nDịch vụ thẩm mỹ & Bảng giá: Tổ chức thông tin thành các khối lớn, danh sách dịch vụ rõ ràng và bảng giá tối giản. Mỗi dịch vụ có mô tả, mục đích, thông tin cần biết và giá tham khảo nếu có dữ liệu.\n\nVề chúng tôi: Giới thiệu kiến trúc phòng khám, đội ngũ, cơ sở vật chất, quy trình tư vấn và định hướng chuyên môn.\n\nHỗ trợ song ngữ Việt – Anh với công tắc chuyển ngôn ngữ. Nút “Đặt lịch tư vấn / Book a Consultation” mở form tư vấn và xuất hiện tại header, cuối trang và dạng nút nổi trên điện thoại.\n\nChỉ xây dựng website giới thiệu, không bán sản phẩm, không giỏ hàng và không thanh toán. Ưu tiên cấu trúc rõ, ảnh kiến trúc có chất lượng, chuyển động tiết chế và responsive. Không để phong cách tối giản khiến thông tin y khoa hoặc thông tin liên hệ bị thiếu.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-21T06:39:44.639Z",
+  "updatedAt": "2026-10-21T07:02:11.738Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\form-function-clinic\\web",
+    "builtAt": "2026-10-21T07:01:48.140Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/contact.html",
+      "pages/service-filler.html",
+      "pages/service-laser.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/contact.html": [],
+      "pages/service-filler.html": [],
+      "pages/service-laser.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "7b284b4e-8e2c-40fb-a344-0c7373a04fb6",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\form-function-clinic\\web",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-21T07:02:07.942Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 18
+  }
+}

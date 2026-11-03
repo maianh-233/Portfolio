@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bánh | Quản lý tiệm</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-016 Danh sách bánh (quản trị): FR-031. Không xóa cứng bánh đã có trong đơn, chỉ ẩn. -->
+<body data-screen="SCR-016" data-layout="admin" data-nav="cakes" data-title="Bánh" class="admin bg-[#FFFBF6] text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="lg:pl-60 pb-24 lg:pb-12">
+    <div class="mx-auto max-w-admin px-4 md:px-6 lg:px-8 pt-4 lg:pt-8">
+      <div class="flex items-center justify-between gap-3">
+        <h1 class="text-[20px] lg:text-2xl font-extrabold">Bánh</h1>
+        <a href="qt-sua-banh.html" class="hidden lg:inline-flex btn btn-primary h-10 px-5"><i class="ph ph-plus" aria-hidden="true"></i>Thêm bánh</a>
+      </div>
+      <div class="mt-4 rounded-2xl bg-white border border-beige p-3 md:p-4 grid gap-3 md:grid-cols-12 items-center">
+        <div class="md:col-span-6 relative"><label for="q" class="sr-only">Tìm tên bánh</label><i class="ph ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-lg text-ink-muted" aria-hidden="true"></i><input id="q" type="search" maxlength="100" class="field-input !pl-10" placeholder="Tìm tên bánh"></div>
+        <div class="md:col-span-3"><label for="status" class="sr-only">Trạng thái</label><select id="status" class="field-input"><option value="">Tất cả trạng thái</option><option value="active">Đang bán</option><option value="inactive">Ngừng bán</option></select></div>
+        <label class="md:col-span-3 flex items-center gap-2 font-semibold cursor-pointer min-h-[42px]"><input id="featured" type="checkbox">Chỉ bánh nổi bật</label>
+      </div>
+      <div id="list" class="mt-4" aria-live="polite"></div>
+    </div>
+  </main>
+  <!-- Nút + nổi (điện thoại) -->
+  <a href="qt-sua-banh.html" class="lg:hidden fixed right-4 bottom-20 z-20 fab bg-primary-strong text-white" aria-label="Thêm bánh"><i class="ph-bold ph-plus text-2xl" aria-hidden="true"></i></a>
+
+  <script>
+    App.onReady(function () {
+      var F = { q: '', status: '', featured: false };
+      function filtered() {
+        var q = Fmt.fold(F.q.trim());
+        return Cakes.all().filter(function (c) {
+          return (!q || Fmt.fold(c.name).indexOf(q) > -1) && (!F.status || c.status === F.status) && (!F.featured || c.featured);
+        });
+      }
+      function toggle(c, on, done) {
+        if (!on) {
+          Modal.confirm({ title: 'Ẩn bánh này khỏi trang web?', message: '“' + Fmt.esc(c.name) + '” sẽ không hiện với khách nữa. Đơn đã đặt vẫn giữ nguyên.', confirmLabel: 'Ẩn bánh', danger: true })
+            .then(function (r) { if (r.ok) { c.status = 'inactive'; DB.save('cakes'); Toast.show('Đã ẩn bánh', 'success'); } render(); });
+        } else { c.status = 'active'; DB.save('cakes'); Toast.show('Đã mở bán lại', 'success'); render(); }
+      }
+      function sw(c) { return '<label class="switch" title="' + (c.status === 'active' ? 'Đang bán' : 'Ngừng bán') + '"><input type="checkbox" data-toggle="' + c.id + '"' + (c.status === 'active' ? ' checked' : '') + ' aria-label="Đang bán: ' + Fmt.esc(c.name) + '"><span></span></label>'; }
+      function badge(c) { return c.status === 'active' ? '<span class="badge bg-mint text-mint-strong">Đang bán</span>' : '<span class="badge bg-stone2 text-stone2-strong">Ngừng bán</span>'; }
+      function render(loading) {
+        var box = $('#list');
+        if (loading) { box.innerHTML = '<div class="space-y-2">' + Array(7).join('.').split('.').map(function () { return '<div class="skeleton h-16 rounded-xl"></div>'; }).join('') + '</div>'; return; }
+        var list = filtered();
+        if (!list.length) {
+          box.innerHTML = '<div class="rounded-2xl bg-white border border-beige">' + (Cakes.all().length ? UI.empty({ icon: 'ph-funnel', title: 'Không có bánh phù hợp' }) : UI.empty({ icon: 'ph-cake', title: 'Chưa có bánh nào', action: '<a href="qt-sua-banh.html" class="btn btn-primary h-10 px-5">Thêm bánh đầu tiên</a>' })) + '</div>';
+          return;
+        }
+        box.innerHTML = '<p class="text-sm font-bold text-ink-muted mb-2">' + list.length + ' bánh</p>' +
+          '<div class="hidden md:block rounded-2xl bg-white border border-beige overflow-hidden"><table class="admin-table"><thead><tr><th>Ảnh</th><th>Tên bánh</th><th>Hương vị</th><th class="text-right">Giá từ</th><th class="text-center">Cỡ</th><th class="text-center">Nổi bật</th><th>Trạng thái</th></tr></thead><tbody>' +
+          list.map(function (c) {
+            return '<tr data-id="' + c.id + '" tabindex="0"><td><img src="' + c.images[0] + '" alt="" class="w-12 h-12 rounded-lg object-cover bg-beige"></td><td class="font-bold">' + Fmt.esc(c.name) + '</td><td>' + Fmt.esc(c.flavor) + '</td>' +
+              '<td class="text-right tabular-nums">' + Fmt.money(Cakes.priceFrom(c)) + '</td><td class="text-center tabular-nums">' + Cakes.sizes(c).length + '</td><td class="text-center">' + (c.featured ? '<i class="ph-fill ph-star text-[#E0A100] text-lg" aria-label="Nổi bật"></i>' : '<span class="text-ink-muted">-</span>') + '</td>' +
+              '<td class="sw-cell"><div class="flex items-center gap-2">' + sw(c) + badge(c) + '</div></td></tr>';
+          }).join('') + '</tbody></table></div>' +
+          '<ul class="md:hidden space-y-2">' + list.map(function (c) {
+            return '<li class="rounded-2xl bg-white border border-beige p-3 flex gap-3 items-center"><a href="qt-sua-banh.html?id=' + c.id + '" class="flex gap-3 items-center flex-1 min-w-0"><img src="' + c.images[0] + '" alt="" class="w-16 h-16 rounded-xl object-cover bg-beige shrink-0"><span class="min-w-0"><span class="block font-bold truncate">' + (c.featured ? '<i class="ph-fill ph-star text-[#E0A100]" aria-label="Nổi bật"></i> ' : '') + Fmt.esc(c.name) + '</span><span class="block text-sm text-ink-muted tabular-nums">Từ ' + Fmt.money(Cakes.priceFrom(c)) + ' · ' + Cakes.sizes(c).length + ' cỡ</span><span class="mt-1 inline-block">' + badge(c) + '</span></span></a>' + sw(c) + '</li>';
+          }).join('') + '</ul>';
+        $all('tr[data-id]', box).forEach(function (r) {
+          r.onclick = function (e) { if (e.target.closest('.sw-cell')) return; location.href = 'qt-sua-banh.html?id=' + r.dataset.id; };
+          r.onkeydown = function (e) { if (e.key === 'Enter') location.href = 'qt-sua-banh.html?id=' + r.dataset.id; };
+        });
+        $all('[data-toggle]', box).forEach(function (t) { t.onchange = function () { toggle(Cakes.byId(t.dataset.toggle), t.checked); }; });
+      }
+      $('#q').addEventListener('input', debounce(function () { F.q = $('#q').value; render(); }, 250));
+      $('#status').onchange = function () { F.status = this.value; render(); };
+      $('#featured').onchange = function () { F.featured = this.checked; render(); };
+      render(true);
+      App.fakeLoad(function () { render(); }, 350);
+    });
+  </script>
+</body>
+</html>

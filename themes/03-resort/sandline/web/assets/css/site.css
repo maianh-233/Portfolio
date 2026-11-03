@@ -1,0 +1,49 @@
+:root {
+  --sand: #D7BD96;
+  --terracotta: #A75F43;
+  --bone: #F4EFE5;
+  --umber: #342B25;
+  --clay: #C58D69;
+  --rust: #8E4D35;
+  --stone: #6B5B4E;
+  --font-display: "Playfair Display", Georgia, system-ui, serif;
+  --font-sans: Jost, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, system-ui, monospace;
+  --ui-accent: #A75F43;
+}
+
+html { background: var(--bone); }
+body { font-family: var(--font-sans); color: var(--umber); background: var(--bone); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--sand); color: var(--umber); }
+
+/* Header: fade-in nhẹ khi tải trang */
+.header-in { animation: headerIn .6s cubic-bezier(.16,1,.3,1) both; }
+@keyframes headerIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Ảnh hero: zoom chậm 1.04 -> 1 */
+.hero-zoom { animation: heroZoom 2.6s cubic-bezier(.16,1,.3,1) both; }
+@keyframes heroZoom { from { transform: scale(1.04); } to { transform: scale(1); } }
+
+/* Đường chân trời: kẻ mảnh mở rộng từ trái sang phải khi vào màn hình */
+.line-draw { transform-origin: 0 50%; }
+html.motion-ready .line-draw[data-reveal]:not(.is-in) { transform: scaleX(0); opacity: 1; }
+html.motion-ready .line-draw[data-reveal] { transition: transform 1s cubic-bezier(.16,1,.3,1); }
+
+/* Số thứ tự lớn: hiện dần bằng opacity */
+.num-fade[data-reveal] { transform: none !important; }
+
+/* Hộp thoại */
+dialog::backdrop { background: rgba(52, 43, 37, .6); }
+
+/* Công tắc ngôn ngữ EN/VI: nút đang chọn đậm + gạch chân, nút còn lại mờ đi */
+[data-lang-toggle] { opacity: .72; transition: opacity .3s; color: inherit; cursor: pointer; }
+[data-lang-toggle]:hover, [data-lang-toggle].is-active { opacity: 1; }
+[data-lang-toggle].is-active { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+/* Tiếng Việt có dấu cao trên đầu chữ: nới khung mask của tiêu đề tách chữ để không cắt dấu */
+html[lang="vi"] .m-split-w { overflow: visible; }
+
+@media (prefers-reduced-motion: reduce) {
+  .header-in, .hero-zoom { animation: none; }
+  html.motion-ready .line-draw[data-reveal]:not(.is-in) { transform: none; }
+}

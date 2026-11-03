@@ -1,0 +1,111 @@
+{
+  "brand": "SIAM LINGUA",
+  "language": "en",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Mỗi section ký tên bằng một từ tiếng Thái kèm phiên âm (như chú giải bên lề sách học), nối với nhau bằng đường chỉ vàng champagne mảnh có hạt kim cương nhỏ, gợi lá vàng trên sơn mài đền Thái",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Học tiếng Thái, mở ra một thế giới mới",
+    "description": "Giao diện giới thiệu trung tâm đào tạo tiếng Thái cho người Việt theo phong cách editorial hiện đại."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu thương hiệu, dẫn sang chương trình học, trang giới thiệu và liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Tiêu đề 'Discover Thailand Through Its Language.', chào สวัสดี (Sawasdee), 2 CTA" },
+        { "id": "about", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Giới thiệu ngắn, link sang pages/about.html" },
+        { "id": "programs", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "4 chương trình, link tới pages/programs.html#<id>" },
+        { "id": "why", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Why Learn With Us" },
+        { "id": "culture", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "A Glimpse of Thai Culture, lightbox, ô dẫn sang Culture Journal" },
+        { "id": "stories", "catalog": "testimonials", "variant": "testimonials-carousel", "source": "ba", "note": "Cảm nhận mẫu, ghi rõ là nội dung mẫu" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Final CTA dẫn tới liên hệ" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "students studying together table", "file": "assets/img/about-class-workshop.jpg", "status": "ok" },
+        { "slot": "about", "query": "thai university students", "file": "assets/img/home-hero-class.jpg", "status": "ok" },
+        { "slot": "programs-beginners", "query": "teacher student lesson thailand", "file": "assets/img/program-beginners-books.jpg", "status": "ok" },
+        { "slot": "programs-conversation", "query": "thai market vendor", "file": "assets/img/program-conversation-market.jpg", "status": "ok" },
+        { "slot": "programs-work", "query": "bangkok business district", "file": "assets/img/program-work-bangkok.jpg", "status": "ok" },
+        { "slot": "programs-culture", "query": "thai temple monks ceremony", "file": "assets/img/program-culture-monks.webp", "status": "ok" },
+        { "slot": "culture-festival", "query": "loy krathong lanterns", "file": "assets/img/culture-festival-lanterns.jpg", "status": "ok" },
+        { "slot": "culture-food", "query": "thai street food stall", "file": "assets/img/culture-food-cooking.jpg", "status": "ok" },
+        { "slot": "culture-customs", "query": "loy krathong lanterns", "file": "assets/img/culture-monk-candles.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About Us",
+      "purpose": "Câu chuyện, sứ mệnh, triết lý, giá trị cốt lõi, mốc phát triển mẫu và đội ngũ giáo viên",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "More Than Language, A Cultural Journey" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Câu chuyện hình thành (dữ liệu mẫu, có ghi chú)" },
+        { "id": "philosophy", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Sứ mệnh, định hướng giảng dạy, triết lý" },
+        { "id": "values", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "4 giá trị cốt lõi" },
+        { "id": "journey", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Mốc phát triển mẫu, ghi rõ là dữ liệu mẫu" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Giáo viên mẫu, khối chữ cái đầu tên" },
+        { "id": "life", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Lớp học, hoạt động nhóm, buổi giao lưu văn hóa; lightbox" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "wat arun temple", "file": "assets/img/about-story-chaophraya.jpg", "status": "ok" },
+        { "slot": "life-1", "query": "students studying together table", "file": "assets/img/about-teacher-board.jpg", "status": "ok" },
+        { "slot": "life-2", "query": "thai cooking class", "file": "assets/img/about-life-food.webp", "status": "ok" },
+        { "slot": "life-3", "query": "notebook pen study desk", "file": "assets/img/about-life-group.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/programs.html",
+      "title": "Programs",
+      "purpose": "Chi tiết 4 chương trình, phương pháp học, môi trường học, FAQ (không giá, không nút mua)",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Find Your Path to Thai Fluency., thanh liên kết nhanh tới từng chương trình" },
+        { "id": "overview", "catalog": "services", "variant": "list-cards", "source": "ba", "note": "4 thẻ chương trình có id beginners / conversation / work / culture" },
+        { "id": "method", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "5 bước Learning Method" },
+        { "id": "environment", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Learning Environment" },
+        { "id": "faq", "catalog": "faq", "variant": "faq-accordion", "source": "ba", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "teacher student lesson thailand", "file": "assets/img/home-hero-class.webp", "status": "ok" },
+        { "slot": "environment", "query": "notebook pen study desk", "file": "assets/img/programs-env-workshop.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/culture-contact.html",
+      "title": "Culture & Contact",
+      "purpose": "Thai Culture Journal (thẻ editorial, lọc theo chủ đề, mở bài trong modal) và khu vực liên hệ có form demo",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "journal", "catalog": "blog", "variant": "gallery-filter", "source": "ba", "note": "5 thẻ editorial, lọc theo chủ đề, mở modal nội dung" },
+        { "id": "contact", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Địa chỉ mẫu, giờ làm việc, mạng xã hội, form demo có kiểm tra dữ liệu" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "wat arun temple", "file": "assets/img/culture-hero-watarun.jpg", "status": "ok" },
+        { "slot": "journal-festival", "query": "loy krathong lanterns", "file": "assets/img/journal-festival-krathong.jpg", "status": "ok" },
+        { "slot": "journal-food", "query": "thai classical dance", "file": "assets/img/journal-food-somtam.jpg", "status": "ok" },
+        { "slot": "journal-places", "query": "thai wai greeting", "file": "assets/img/journal-places-ayutthaya.jpg", "status": "ok" },
+        { "slot": "journal-differences", "query": "thai wai greeting", "file": "assets/img/journal-differences-station.jpg", "status": "ok" },
+        { "slot": "journal-language", "query": "thai wai greeting", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Giữ đúng 4 trang theo chú thích của BA; nội dung chi tiết bài Culture Journal mở trong cửa sổ (modal) thay vì tạo trang bài viết riêng",
+    "BA chọn ngôn ngữ English nên toàn bộ chữ (kể cả CTA BA ghi tiếng Việt như 'Khám phá chương trình học', 'Liên hệ với SIAM LINGUA') được dịch sang tiếng Anh ('Explore programs', 'Contact SIAM LINGUA'); tiếng Thái + phiên âm giữ làm chi tiết nhận diện",
+    "Bảng màu theo chú thích BA (#8D3038, #F8F3E9, #D5B36A, #354A3C, #302A27) thay cho bảng màu preset",
+    "Thêm font Noto Serif Thai / Noto Sans Thai làm fallback để chữ Thái hiển thị đúng (Instrument Serif và Geist không có ký tự Thái)",
+    "Hero dùng ảnh lớn (hero-split) thay cho hero-type của preset, theo yêu cầu 'hình ảnh lớn về lớp học' của BA",
+    "Thẻ 'Language & politeness' trong Journal dùng khối chữ Thái ขอบคุณ trên nền xanh thay cho ảnh (không tìm được ảnh chào wai phù hợp)",
+    "Không có ảnh giáo viên thật nên đội ngũ dùng khối chữ cái đầu tên trên nền màu thương hiệu"
+  ],
+  "limitations": [
+    "Form liên hệ là bản demo, chưa có backend, không gửi dữ liệu đi",
+    "Địa chỉ, số điện thoại, email, giờ làm việc, giáo viên, mốc lịch sử, hình thức lớp và cảm nhận học viên là dữ liệu mẫu cần thay bằng thông tin thật",
+    "Link mạng xã hội đang trỏ tới trang chủ Facebook / Zalo / YouTube / Instagram, cần thay bằng trang thật của trung tâm",
+    "Ảnh lớp học là ảnh minh họa chung (nguồn Openverse), nên thay bằng ảnh lớp học thật của trung tâm",
+    "Không hiển thị giá, không có thanh toán, đăng nhập hay LMS theo yêu cầu"
+  ]
+}

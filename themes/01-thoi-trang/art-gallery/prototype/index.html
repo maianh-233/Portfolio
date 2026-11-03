@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIEN Studio - Fashion Beyond Form</title>
+  <meta name="description" content="MIEN Studio is an independent fashion practice. A digital exhibition of collections, process and archive.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F4F0E8',
+            paper: '#ECE7DD',
+            mist: '#D8D5CE',
+            charcoal: { DEFAULT: '#20201E', soft: '#2B2B28', muted: '#55544F' },
+            olive: { 50:'#f3f4ef',100:'#e5e6dc',200:'#cbcdba',300:'#acaf94',400:'#8f9276',500:'#777A62',600:'#5f624e',700:'#4a4c3d',800:'#36382d',900:'#23241d' },
+            burgundy: { 50:'#f8eef0',100:'#efd9dd',200:'#dfb3ba',300:'#c98692',400:'#ad5b6a',500:'#8f4250',600:'#763642',700:'#652D36',800:'#4d2229',900:'#34171c' }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: { label: '0.22em' }
+        }
+      }
+    }
+  </script>
+  <script src="assets/js/ui.js"></script>
+  <style>
+    :root { --ui-accent: #652D36; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { -webkit-font-smoothing: antialiased; }
+    .grain::after {
+      content: ""; position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .07;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    dialog::backdrop { background: rgba(32,32,30,.72); }
+  </style>
+</head>
+<body id="top" class="grain bg-ivory font-sans text-charcoal selection:bg-burgundy-700 selection:text-ivory">
+
+  <div data-scroll-progress class="fixed inset-x-0 top-0 z-50 h-px bg-burgundy-700"></div>
+
+  <!-- HEADER -->
+  <header data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-500 [&.is-scrolled]:border-charcoal/10 [&.is-scrolled]:bg-ivory/95">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-10 2xl:px-16">
+      <a href="#top" class="font-serif text-2xl font-medium tracking-[0.18em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">MIEN</a>
+      <nav data-scrollspy aria-label="Main" class="hidden items-center gap-9 text-sm lg:flex">
+        <a href="#manifesto" class="relative py-1 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-charcoal after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Manifesto</a>
+        <a href="#collections" class="relative py-1 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-charcoal after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Collections</a>
+        <a href="#process" class="relative py-1 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-charcoal after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Process</a>
+        <a href="#archive" class="relative py-1 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-charcoal after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Archive</a>
+        <a href="#contact" class="border border-charcoal px-5 py-2.5 transition-colors duration-300 hover:bg-charcoal hover:text-ivory active:scale-[.98]">Get in Touch</a>
+      </nav>
+      <button data-menu-toggle="#mnav" class="-mr-2 flex h-11 w-11 items-center justify-center lg:hidden" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-charcoal/10 bg-ivory p-8 lg:hidden">
+    <nav aria-label="Mobile" class="flex flex-col gap-1 font-serif text-3xl">
+      <a href="#manifesto" class="py-2">Manifesto</a>
+      <a href="#collections" class="py-2">Collections</a>
+      <a href="#process" class="py-2">Process</a>
+      <a href="#archive" class="py-2">Archive</a>
+      <a href="#contact" class="mt-4 border border-charcoal py-3 text-center font-sans text-base">Get in Touch</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- 01 EXHIBITION HERO -->
+    <section aria-label="Exhibition" class="relative overflow-hidden">
+      <div class="mx-auto grid min-h-[100dvh] w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 pb-12 pt-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-16 lg:pt-28 2xl:px-16">
+        <div class="flex min-w-0 flex-col justify-between lg:col-span-7">
+          <p data-reveal="fade" class="text-xs uppercase tracking-label text-charcoal-muted">Independent Fashion Practice / Vol. 01</p>
+          <div class="mt-10 lg:mt-0">
+            <h1 data-split="words" class="font-serif text-[clamp(3.6rem,10vw,10.5rem)] font-normal leading-[0.92] tracking-[-0.02em]">
+              Fashion<br>Beyond <em class="font-normal italic text-burgundy-700">Form.</em>
+            </h1>
+            <div class="mt-8 grid gap-8 sm:grid-cols-[minmax(0,22rem)_auto] sm:items-end sm:justify-between lg:mt-12">
+              <p data-reveal="up" class="max-w-[22rem] text-lg leading-relaxed text-charcoal/80">An exploration of identity, material and the art of becoming.</p>
+              <a data-reveal="up" data-reveal-delay="250" href="#manifesto" class="group inline-flex items-center gap-4 self-start text-sm font-medium sm:self-end">
+                <span class="border-b border-charcoal pb-1">Enter the Exhibition</span>
+                <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <figure class="min-w-0 lg:col-span-5 lg:pl-8 xl:pl-16">
+          <div data-reveal="clip" class="relative aspect-[3/4] overflow-hidden bg-mist lg:aspect-auto lg:h-[calc(100dvh-11rem)]">
+            <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[15%]">
+              <img src="assets/img/form-portrait.jpg" alt="A long black pleated column dress with vertical metallic chain stripes, displayed on a stand against a pale wall" class="h-full w-full object-cover object-center" width="598" height="1024">
+            </div>
+          </div>
+          <figcaption class="mt-4 grid grid-cols-3 gap-4 border-t border-charcoal/15 pt-3 text-[13px] leading-snug text-charcoal-muted">
+            <span><span class="block text-charcoal">FORM / 001</span>Pleated column</span>
+            <span><span class="block text-charcoal">2024</span>Silk georgette</span>
+            <span class="text-right"><span class="block text-charcoal">Room I</span>Entrance</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 02 BRAND MANIFESTO -->
+    <section id="manifesto" class="border-t border-charcoal/10 bg-paper py-24 lg:py-36">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <blockquote class="max-w-[18ch] font-serif text-[clamp(2.6rem,6vw,6.5rem)] leading-[1.02] tracking-[-0.01em]">
+          <p data-split="words">Clothing is not merely worn. It is <em class="italic text-burgundy-700">interpreted.</em></p>
+        </blockquote>
+
+        <div class="mt-16 grid grid-cols-1 gap-12 lg:mt-24 lg:grid-cols-12 lg:gap-8">
+          <figure class="min-w-0 lg:col-span-5 lg:col-start-1">
+            <div data-reveal="clip" class="aspect-[4/5] overflow-hidden bg-mist">
+              <img src="assets/img/manifesto-portrait.jpg" alt="Black and white portrait of a young woman resting her head on a wooden beam, hands at her face" class="h-full w-full object-cover object-[40%_center] grayscale" loading="lazy" width="4107" height="2733">
+            </div>
+            <figcaption class="mt-3 text-[13px] text-charcoal-muted">Portrait study for AFTERIMAGE, analog black and white.</figcaption>
+          </figure>
+
+          <ol data-reveal-stagger="120" class="grid min-w-0 grid-cols-1 content-end gap-x-10 gap-y-12 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
+            <li class="border-t border-charcoal/25 pt-5">
+              <span class="font-serif text-2xl italic text-olive-600">i.</span>
+              <p class="mt-3 text-[17px] leading-relaxed text-charcoal/85">A garment begins as a thought. We cut it, drape it and wear it to find out what it means.</p>
+            </li>
+            <li class="border-t border-charcoal/25 pt-5 sm:mt-16">
+              <span class="font-serif text-2xl italic text-olive-600">ii.</span>
+              <p class="mt-3 text-[17px] leading-relaxed text-charcoal/85">Shape, proportion and material are not rules to follow. They are questions we keep asking the body.</p>
+            </li>
+            <li class="border-t border-charcoal/25 pt-5">
+              <span class="font-serif text-2xl italic text-olive-600">iii.</span>
+              <p class="mt-3 text-[17px] leading-relaxed text-charcoal/85">Every piece passes through research, failed experiments and slow interpretation before it is allowed to exist.</p>
+            </li>
+            <li class="border-t border-charcoal/25 pt-5 sm:mt-16">
+              <span class="font-serif text-2xl italic text-olive-600">iv.</span>
+              <p class="mt-3 text-[17px] leading-relaxed text-charcoal/85">We do not design for a season. We design to keep a voice of our own, one collection at a time.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 COLLECTIONS AS ART -->
+    <section id="collections" aria-labelledby="collections-title" class="pt-24 lg:pt-36">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
+          <h2 id="collections-title" data-reveal="up" class="font-serif text-5xl leading-[1] sm:text-6xl lg:col-span-7 lg:text-7xl 2xl:text-8xl">Three exhibitions,<br><em class="italic">one open question.</em></h2>
+          <nav aria-label="Collection index" class="lg:col-span-4 lg:col-start-9">
+            <ul class="text-[15px]">
+              <li><a href="#form" class="group flex items-baseline justify-between border-t border-charcoal/20 py-3 transition-colors duration-300 hover:text-burgundy-700"><span><span class="mr-4 text-charcoal-muted">001</span>FORM</span><span class="text-charcoal-muted transition-transform duration-500 group-hover:-translate-x-1">2024</span></a></li>
+              <li><a href="#afterimage" class="group flex items-baseline justify-between border-t border-charcoal/20 py-3 transition-colors duration-300 hover:text-burgundy-700"><span><span class="mr-4 text-charcoal-muted">002</span>AFTERIMAGE</span><span class="text-charcoal-muted transition-transform duration-500 group-hover:-translate-x-1">2025</span></a></li>
+              <li><a href="#dissonance" class="group flex items-baseline justify-between border-y border-charcoal/20 py-3 transition-colors duration-300 hover:text-burgundy-700"><span><span class="mr-4 text-charcoal-muted">003</span>SOFT DISSONANCE</span><span class="text-charcoal-muted transition-transform duration-500 group-hover:-translate-x-1">2026</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- FORM / 001 -->
+      <article id="form" aria-labelledby="form-title" class="mx-auto mt-20 w-full max-w-screen-2xl px-4 pb-24 sm:px-6 lg:mt-28 lg:px-10 lg:pb-36 2xl:px-16">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+          <figure class="min-w-0 lg:col-span-7">
+            <div data-reveal="clip" class="group aspect-square overflow-hidden bg-mist">
+              <img src="assets/img/manifesto-gown.jpg" alt="A pale gown of gathered, pleated cotton with a wide sculptural black headpiece, displayed in a period room" class="h-full w-full object-cover object-top transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="683" height="1024">
+            </div>
+            <figcaption class="mt-3 text-[13px] text-charcoal-muted">Look 07. Gathered cotton gown with a folded black crown.</figcaption>
+          </figure>
+
+          <div class="flex min-w-0 flex-col lg:col-span-5 lg:pl-6 xl:pl-12">
+            <p class="text-xs uppercase tracking-label text-charcoal-muted">Project 001 / 2024</p>
+            <h3 id="form-title" data-reveal="up" class="mt-4 font-serif text-7xl leading-[0.9] tracking-[-0.02em] sm:text-8xl 2xl:text-9xl">FORM</h3>
+            <p data-reveal="up" class="mt-6 max-w-[34ch] font-serif text-2xl italic leading-snug text-charcoal/85">A study of volume, proportion and the architecture of the body.</p>
+            <dl class="mt-10 grid grid-cols-1 gap-x-8 gap-y-6 text-[15px] sm:grid-cols-2">
+              <div class="border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Inspiration</dt><dd class="mt-1 leading-relaxed">Plaster casts in a sculpture studio, and the way a shoulder holds a shadow.</dd></div>
+              <div class="border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Design idea</dt><dd class="mt-1 leading-relaxed">Garments that keep their shape when no one is wearing them.</dd></div>
+              <div class="border-t border-charcoal/20 pt-3 sm:col-span-2"><dt class="text-charcoal-muted">Material and technique</dt><dd class="mt-1 leading-relaxed">Pleated silk georgette, hand-set pleats, internal tape structures that replace seams.</dd></div>
+            </dl>
+            <div class="mt-10 grid grid-cols-2 gap-4 lg:mt-auto lg:pt-12">
+              <div data-reveal="clip" class="group aspect-[3/4] overflow-hidden bg-mist">
+                <img src="assets/img/archive-01.jpg" alt="A corded black dress made of hundreds of hanging cords, gathered by a dark belt" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="683" height="1024">
+              </div>
+              <div class="flex flex-col justify-end">
+                <div data-reveal="clip" class="aspect-square overflow-hidden bg-mist">
+                  <img src="assets/img/form-material.jpg" alt="Close-up of dark charcoal linen weave" class="h-full w-full object-cover" loading="lazy" width="6016" height="4016">
+                </div>
+                <p class="mt-3 text-[13px] text-charcoal-muted">Material study. Washed linen, 240 gsm.</p>
+              </div>
+            </div>
+            <button data-modal-open="notes-form" class="group mt-10 inline-flex items-center gap-3 self-start border-b border-charcoal pb-1 text-sm font-medium transition-colors duration-300 hover:border-burgundy-700 hover:text-burgundy-700">
+              Explore Collection
+              <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- AFTERIMAGE / 002 -->
+      <article id="afterimage" aria-labelledby="after-title" class="bg-mist/60 py-24 lg:py-36">
+        <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+          <figure>
+            <div data-reveal="clip" class="group aspect-[4/3] overflow-hidden bg-mist sm:aspect-[16/9] xl:aspect-[21/9]">
+              <img src="assets/img/form-wide.jpg" alt="An embroidered ivory gown with blue floral motifs standing in an eighteenth century salon with gilded mirrors" class="h-full w-full object-cover object-[center_45%] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+            </div>
+          </figure>
+          <div class="mt-10 grid grid-cols-1 gap-10 lg:mt-14 lg:grid-cols-12 lg:gap-8">
+            <div class="min-w-0 lg:col-span-5">
+              <h3 id="after-title" data-reveal="up" class="font-serif text-6xl leading-[0.92] tracking-[-0.02em] sm:text-7xl 2xl:text-8xl">AFTER<br>IMAGE</h3>
+              <p class="mt-4 text-sm text-charcoal-muted">Project 002 / 2025 / Memory, wear and imperfect beauty</p>
+              <p data-reveal="up" class="mt-8 max-w-[44ch] text-[17px] leading-relaxed text-charcoal/85">AFTERIMAGE collects traces. Stitches overlap older stitches, prints fade on purpose, and every repair stays in view. The starting point was a family linen, embroidered and mended across three generations.</p>
+              <dl class="mt-8 max-w-[44ch] space-y-4 text-[15px]">
+                <div class="flex gap-6 border-t border-charcoal/20 pt-3"><dt class="w-28 shrink-0 text-charcoal-muted">Design idea</dt><dd>Clothes that look as though they already have a past.</dd></div>
+                <div class="flex gap-6 border-t border-charcoal/20 pt-3"><dt class="w-28 shrink-0 text-charcoal-muted">Technique</dt><dd>Hand embroidery on washed cotton rib, archival print references, visible mending.</dd></div>
+              </dl>
+              <button data-modal-open="notes-after" class="group mt-10 inline-flex items-center gap-3 border-b border-charcoal pb-1 text-sm font-medium transition-colors duration-300 hover:border-burgundy-700 hover:text-burgundy-700">
+                Explore Collection
+                <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+              </button>
+            </div>
+            <figure class="min-w-0 lg:col-span-4 lg:col-start-7 lg:-mt-32">
+              <div data-reveal="clip" class="group aspect-[3/4] overflow-hidden bg-mist">
+                <img src="assets/img/afterimage-garment.jpg" alt="Close-up of a cream ribbed cuff with naive hand embroidery of a figure and a black cat" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="768" height="1024">
+              </div>
+              <figcaption class="mt-3 text-[13px] text-charcoal-muted">Cuff detail. Embroidery drawn from a childhood sketchbook.</figcaption>
+            </figure>
+            <figure class="min-w-0 w-2/3 sm:w-1/2 lg:col-span-2 lg:w-auto lg:self-end">
+              <div data-reveal="clip" class="aspect-[3/4] overflow-hidden bg-mist">
+                <img src="assets/img/afterimage-swatch.webp" alt="A page from a vintage sample book printed with pale leaves and small red berries" class="h-full w-full object-cover" loading="lazy" width="5000" height="6800">
+              </div>
+              <figcaption class="mt-3 text-[13px] text-charcoal-muted">Collection notes. Archive print, reworked.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- SOFT DISSONANCE / 003 -->
+      <article id="dissonance" aria-labelledby="dis-title" class="bg-charcoal py-24 text-ivory lg:py-36">
+        <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+          <div class="flex min-w-0 flex-col lg:order-2 lg:col-span-4 lg:col-start-9">
+            <p class="text-xs uppercase tracking-label text-ivory/60">Project 003 / 2026</p>
+            <h3 id="dis-title" data-reveal="up" class="mt-4 font-serif text-6xl leading-[0.95] tracking-[-0.01em] sm:text-7xl">Soft<br><em class="italic text-burgundy-300">Dissonance</em></h3>
+            <p data-reveal="up" class="mt-8 max-w-[40ch] text-[17px] leading-relaxed text-ivory/80">A quiet argument between metal and knit, structure and drift. Rigid ornament and fluid wool share one silhouette, and neither is allowed to win.</p>
+            <dl class="mt-8 space-y-4 text-[15px]">
+              <div class="border-t border-ivory/20 pt-3"><dt class="text-ivory/55">Inspiration</dt><dd class="mt-1">Gilded ornament seen through fog.</dd></div>
+              <div class="border-t border-ivory/20 pt-3"><dt class="text-ivory/55">Material</dt><dd class="mt-1">Cast metallic appliqué, burgundy wool knit, translucent paillettes.</dd></div>
+            </dl>
+            <div class="mt-10 flex items-end gap-4 lg:mt-auto lg:pt-12">
+              <div class="aspect-[3/2] w-1/2 overflow-hidden bg-burgundy-800">
+                <img src="assets/img/dissonance-material.webp" alt="Close-up of a burgundy wool knit" class="h-full w-full object-cover" loading="lazy" width="5072" height="3381">
+              </div>
+              <p class="w-1/2 text-[13px] leading-snug text-ivory/60">Material study. Wool knit dyed in deep burgundy, felted at the edges.</p>
+            </div>
+            <button data-modal-open="notes-dis" class="group mt-10 inline-flex items-center gap-3 self-start border-b border-ivory pb-1 text-sm font-medium transition-colors duration-300 hover:border-burgundy-300 hover:text-burgundy-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              Explore Collection
+              <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+            </button>
+          </div>
+          <figure class="min-w-0 lg:order-1 lg:col-span-7">
+            <div data-reveal="clip" class="group aspect-[4/5] overflow-hidden bg-charcoal-soft lg:aspect-[5/6]">
+              <img src="assets/img/dissonance-look.jpg" alt="A dark mannequin dressed in sculptural gilded metal ornament that rises from the head and spreads from the hip" class="h-full w-full object-cover object-[center_30%] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="683" height="1024">
+            </div>
+            <figcaption class="mt-3 text-[13px] text-ivory/60">Look 03. Cast ornament worn as a second skeleton.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- 04 CREATIVE PROCESS -->
+    <section id="process" aria-labelledby="process-title" class="py-24 lg:py-36">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="max-w-3xl">
+          <h2 id="process-title" data-reveal="up" class="font-serif text-5xl leading-[1] sm:text-6xl lg:text-7xl">The studio journal</h2>
+          <p data-reveal="up" class="mt-6 max-w-[52ch] text-[17px] leading-relaxed text-charcoal/80">Pages from the research table. Each collection moves through the same four rooms, never in a straight line.</p>
+        </div>
+
+        <ol class="mt-16 grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-x-10 lg:mt-24 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-0">
+          <li data-reveal="up" class="min-w-0 lg:col-span-3 lg:pt-0">
+            <div class="aspect-[3/4] overflow-hidden bg-paper p-3 lg:-rotate-2">
+              <img src="assets/img/process-research.webp" alt="A hand coloured 1799 satirical print of a gentleman in a top hat and long coat, used as a silhouette reference" class="h-full w-full object-cover object-top" loading="lazy" width="2974" height="4096">
+            </div>
+            <h3 class="mt-6 font-serif text-3xl">Research</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-charcoal/80">Images, culture, architecture and art. We read old prints for the cut, not the costume.</p>
+            <p class="mt-4 border-l border-burgundy-700 pl-3 font-serif text-lg italic leading-snug text-burgundy-700">Archive print, 1799. Notice how the coat stands away from the body.</p>
+          </li>
+          <li data-reveal="up" class="min-w-0 lg:col-span-3 lg:mt-40">
+            <div class="aspect-[4/5] overflow-hidden lg:rotate-1">
+              <img src="assets/img/process-experiment.jpg" alt="A stack of wool fabric swatches in orange, blue, green, sand and pink, seen at an angle" class="h-full w-full object-cover" loading="lazy" width="2736" height="3648">
+            </div>
+            <h3 class="mt-6 font-serif text-3xl">Experiment</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-charcoal/80">Material, colour, surface and structure, tested until something resists us.</p>
+            <p class="mt-4 border-l border-burgundy-700 pl-3 font-serif text-lg italic leading-snug text-burgundy-700">Twelve dyes on wool crepe. Keep the third and the ninth.</p>
+          </li>
+          <li data-reveal="up" class="min-w-0 lg:col-span-3 lg:mt-12">
+            <div class="aspect-square overflow-hidden lg:-rotate-1">
+              <img src="assets/img/process-construction.webp" alt="Close-up of a black vintage sewing machine arm with a wooden thread spool" class="h-full w-full object-cover object-[70%_center]" loading="lazy" width="4640" height="3472">
+            </div>
+            <h3 class="mt-6 font-serif text-3xl">Construction</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-charcoal/80">Shape, pattern and toile. Every form is built twice before it is built once.</p>
+            <p class="mt-4 border-l border-burgundy-700 pl-3 font-serif text-lg italic leading-snug text-burgundy-700">Second toile. Lower the shoulder 1.5 cm, keep the drag lines.</p>
+          </li>
+          <li data-reveal="up" class="min-w-0 lg:col-span-3 lg:mt-56">
+            <div class="aspect-[4/3] overflow-hidden lg:rotate-2">
+              <img src="assets/img/process-expression.jpg" alt="Behind the scenes of a photoshoot: a model in a dark suit sits beside a beige vintage car in a garage studio" class="h-full w-full object-cover" loading="lazy" width="1024" height="678">
+            </div>
+            <h3 class="mt-6 font-serif text-3xl">Expression</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-charcoal/80">The idea becomes images, a sequence and a visual language of its own.</p>
+            <p class="mt-4 border-l border-burgundy-700 pl-3 font-serif text-lg italic leading-snug text-burgundy-700">Natural light only. The garment leads, the model follows.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 05 VISUAL ARCHIVE -->
+    <section id="archive" aria-labelledby="archive-title" class="border-t border-charcoal/10 bg-paper py-24 lg:py-36">
+      <div data-filter-group class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <h2 id="archive-title" data-reveal="up" class="font-serif text-6xl leading-[0.95] sm:text-7xl lg:text-8xl">Visual <em class="italic">Archive</em></h2>
+          <div role="group" aria-label="Filter archive" class="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 text-sm sm:mx-0 sm:flex-wrap sm:px-0">
+            <button data-filter="all" class="is-active shrink-0 border border-charcoal/25 px-4 py-2.5 transition-colors duration-300 hover:border-charcoal [&.is-active]:border-charcoal [&.is-active]:bg-charcoal [&.is-active]:text-ivory">All</button>
+            <button data-filter="editorial" class="shrink-0 border border-charcoal/25 px-4 py-2.5 transition-colors duration-300 hover:border-charcoal [&.is-active]:border-charcoal [&.is-active]:bg-charcoal [&.is-active]:text-ivory">Editorial</button>
+            <button data-filter="backstage" class="shrink-0 border border-charcoal/25 px-4 py-2.5 transition-colors duration-300 hover:border-charcoal [&.is-active]:border-charcoal [&.is-active]:bg-charcoal [&.is-active]:text-ivory">Behind the Scenes</button>
+            <button data-filter="material" class="shrink-0 border border-charcoal/25 px-4 py-2.5 transition-colors duration-300 hover:border-charcoal [&.is-active]:border-charcoal [&.is-active]:bg-charcoal [&.is-active]:text-ivory">Material Studies</button>
+            <button data-filter="experiment" class="shrink-0 border border-charcoal/25 px-4 py-2.5 transition-colors duration-300 hover:border-charcoal [&.is-active]:border-charcoal [&.is-active]:bg-charcoal [&.is-active]:text-ivory">Experiments</button>
+            <button data-filter="documentation" class="shrink-0 border border-charcoal/25 px-4 py-2.5 transition-colors duration-300 hover:border-charcoal [&.is-active]:border-charcoal [&.is-active]:bg-charcoal [&.is-active]:text-ivory">Documentation</button>
+          </div>
+        </div>
+
+        <div data-reveal-stagger="80" class="mt-14 columns-1 gap-6 sm:columns-2 lg:columns-3 2xl:columns-4 2xl:gap-8">
+          <article data-category="editorial" class="mb-6 break-inside-avoid 2xl:mb-8">
+            <a href="assets/img/hero-look.jpg" data-lightbox="archive" data-caption="A-021 / Plumage bodice / Editorial, 2025" class="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">
+              <div class="aspect-[3/4] overflow-hidden bg-mist"><img src="assets/img/hero-look.jpg" alt="A sculpted mannequin with a feathered blue headdress and a bodice of iridescent sequins and plates" class="h-full w-full object-cover contrast-[.92] saturate-[.85] transition duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] group-hover:contrast-110 group-hover:saturate-100" loading="lazy" width="768" height="1024"></div>
+              <p class="mt-3 flex justify-between text-[13px] text-charcoal-muted"><span><span class="text-charcoal">A-021</span> Plumage bodice</span><span>Editorial</span></p>
+            </a>
+          </article>
+          <article data-category="backstage" class="mb-6 break-inside-avoid 2xl:mb-8">
+            <a href="assets/img/archive-05.jpg" data-lightbox="archive" data-caption="A-034 / On set, AFTERIMAGE campaign / Behind the scenes, 2025" class="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">
+              <div class="aspect-[3/2] overflow-hidden bg-mist"><img src="assets/img/archive-05.jpg" alt="A photographer shooting a model in a white top beside a sheet of purple acrylic, with a stylist watching" class="h-full w-full object-cover contrast-[.92] saturate-[.85] transition duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] group-hover:contrast-110 group-hover:saturate-100" loading="lazy" width="1024" height="678"></div>
+              <p class="mt-3 flex justify-between text-[13px] text-charcoal-muted"><span><span class="text-charcoal">A-034</span> On set, AFTERIMAGE</span><span>Behind the Scenes</span></p>
+            </a>
+          </article>
+          <article data-category="material" class="mb-6 break-inside-avoid 2xl:mb-8">
+            <a href="assets/img/archive-04.jpg" data-lightbox="archive" data-caption="A-009 / Flecked wool, rose / Material study, 2024" class="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">
+              <div class="aspect-square overflow-hidden bg-mist"><img src="assets/img/archive-04.jpg" alt="Close-up of a soft rose wool fabric with small coloured flecks, folded in a gentle wave" class="h-full w-full object-cover contrast-[.92] saturate-[.85] transition duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] group-hover:contrast-110 group-hover:saturate-100" loading="lazy" width="6016" height="4016"></div>
+              <p class="mt-3 flex justify-between text-[13px] text-charcoal-muted"><span><span class="text-charcoal">A-009</span> Flecked wool, rose</span><span>Material Studies</span></p>
+            </a>
+          </article>
+          <article data-category="experiment" class="mb-6 break-inside-avoid 2xl:mb-8">
+            <a href="assets/img/archive-03.jpg" data-lightbox="archive" data-caption="A-041 / Paillette test, translucent green / Experiment, 2026" class="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">
+              <div class="aspect-[3/4] overflow-hidden bg-mist"><img src="assets/img/archive-03.jpg" alt="Side view of a garment covered in long translucent green paillettes on a dress form" class="h-full w-full object-cover contrast-[.92] saturate-[.85] transition duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] group-hover:contrast-110 group-hover:saturate-100" loading="lazy" width="768" height="1024"></div>
+              <p class="mt-3 flex justify-between text-[13px] text-charcoal-muted"><span><span class="text-charcoal">A-041</span> Paillette test</span><span>Experiments</span></p>
+            </a>
+          </article>
+          <article data-category="documentation" class="mb-6 break-inside-avoid 2xl:mb-8">
+            <a href="assets/img/archive-06.jpg" data-lightbox="archive" data-caption="A-027 / Drape room, installation view / Documentation, 2025" class="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">
+              <div class="aspect-[16/9] overflow-hidden bg-mist"><img src="assets/img/archive-06.jpg" alt="An exhibition room titled Drape with mannequins in black, red and green dresses and a bridal gown on a plinth" class="h-full w-full object-cover contrast-[.92] saturate-[.85] transition duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] group-hover:contrast-110 group-hover:saturate-100" loading="lazy" width="1024" height="576"></div>
+              <p class="mt-3 flex justify-between text-[13px] text-charcoal-muted"><span><span class="text-charcoal">A-027</span> Drape room</span><span>Documentation</span></p>
+            </a>
+          </article>
+          <article data-category="experiment" class="mb-6 break-inside-avoid 2xl:mb-8">
+            <a href="assets/img/archive-07.jpg" data-lightbox="archive" data-caption="A-038 / Bead lattice on tulle / Experiment, 2026" class="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">
+              <div class="aspect-[2/3] overflow-hidden bg-mist"><img src="assets/img/archive-07.jpg" alt="A black mannequin wearing a tiered tulle gown with a beaded lattice pattern in front of a tapestry" class="h-full w-full object-cover contrast-[.92] saturate-[.85] transition duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] group-hover:contrast-110 group-hover:saturate-100" loading="lazy" width="683" height="1024"></div>
+              <p class="mt-3 flex justify-between text-[13px] text-charcoal-muted"><span><span class="text-charcoal">A-038</span> Bead lattice on tulle</span><span>Experiments</span></p>
+            </a>
+          </article>
+          <article data-category="documentation" class="mb-6 break-inside-avoid 2xl:mb-8">
+            <a href="assets/img/archive-02.jpg" data-lightbox="archive" data-caption="A-016 / Brocade coat, salon installation / Documentation, 2024" class="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">
+              <div class="aspect-[3/4] overflow-hidden bg-mist"><img src="assets/img/archive-02.jpg" alt="A pale blue floral brocade coat over tartan trousers displayed beside a gilded harp in a salon" class="h-full w-full object-cover contrast-[.92] saturate-[.85] transition duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] group-hover:contrast-110 group-hover:saturate-100" loading="lazy" width="683" height="1024"></div>
+              <p class="mt-3 flex justify-between text-[13px] text-charcoal-muted"><span><span class="text-charcoal">A-016</span> Brocade coat</span><span>Documentation</span></p>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 CONTACT -->
+    <section id="contact" aria-labelledby="contact-title" class="py-24 lg:py-40">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-16 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+        <div class="min-w-0 lg:col-span-7">
+          <h2 id="contact-title" data-split="words" class="font-serif text-[clamp(3rem,7vw,7.5rem)] leading-[0.98] tracking-[-0.01em]">Every idea begins with a <em class="italic text-burgundy-700">conversation.</em></h2>
+          <div class="mt-12 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <a href="mailto:studio@mien-studio.example?subject=Collaboration" data-magnetic="0.2" class="inline-flex min-h-[52px] items-center justify-center bg-charcoal px-8 text-sm font-medium text-ivory transition-colors duration-300 hover:bg-burgundy-700 active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy-700">Get in Touch</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="inline-flex min-h-[52px] items-center justify-center border border-charcoal px-8 text-sm font-medium transition-colors duration-300 hover:bg-charcoal hover:text-ivory active:scale-[.98]">Follow the Archive</a>
+          </div>
+        </div>
+
+        <div class="min-w-0 lg:col-span-4 lg:col-start-9 lg:pt-4">
+          <dl class="text-[15px]">
+            <div class="border-t border-charcoal/20 py-5">
+              <dt class="font-serif text-2xl">Collaborations</dt>
+              <dd class="mt-2 leading-relaxed text-charcoal/80">Artists, musicians and designers working on shared garments or objects.</dd>
+            </div>
+            <div class="border-t border-charcoal/20 py-5">
+              <dt class="font-serif text-2xl">Editorial projects</dt>
+              <dd class="mt-2 leading-relaxed text-charcoal/80">Pulls and commissions for magazines, photobooks and independent publications.</dd>
+            </div>
+            <div class="border-y border-charcoal/20 py-5">
+              <dt class="font-serif text-2xl">Exhibitions</dt>
+              <dd class="mt-2 leading-relaxed text-charcoal/80">Loans and installations for galleries, festivals and creative partnerships.</dd>
+            </div>
+          </dl>
+          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-[15px]">
+            <a href="mailto:studio@mien-studio.example" class="border-b border-charcoal/40 pb-0.5 transition-colors duration-300 hover:border-burgundy-700 hover:text-burgundy-700">studio@mien-studio.example</a>
+            <button data-copy="studio@mien-studio.example" class="min-h-[44px] text-sm text-charcoal-muted underline-offset-4 transition-colors duration-300 hover:text-charcoal hover:underline">Copy email</button>
+          </div>
+          <p class="mt-4 text-[13px] leading-relaxed text-charcoal-muted">Contact details on this page are placeholders until the official channels are confirmed.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal text-ivory">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-16 sm:px-6 lg:px-10 lg:pt-24 2xl:px-16">
+      <p class="font-serif text-[clamp(5rem,22vw,22rem)] leading-[0.8] tracking-[0.04em]" aria-hidden="true">MIEN</p>
+      <div class="mt-12 grid grid-cols-1 gap-8 border-t border-ivory/15 pt-8 text-sm text-ivory/70 sm:grid-cols-2 lg:grid-cols-4">
+        <p>MIEN Studio<br>Independent fashion practice</p>
+        <nav aria-label="Footer" class="flex flex-col gap-2">
+          <a href="#collections" class="transition-colors duration-300 hover:text-ivory">Collections</a>
+          <a href="#process" class="transition-colors duration-300 hover:text-ivory">Process</a>
+          <a href="#archive" class="transition-colors duration-300 hover:text-ivory">Archive</a>
+        </nav>
+        <div class="flex flex-col gap-2">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-ivory">Instagram</a>
+          <a href="mailto:studio@mien-studio.example" class="transition-colors duration-300 hover:text-ivory">Email</a>
+          <a href="#top" class="transition-colors duration-300 hover:text-ivory">Back to top</a>
+        </div>
+        <p class="leading-relaxed">&copy; 2026 MIEN Studio. Collections, texts and images are illustrative and will be replaced with the studio's own material.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COLLECTION NOTES DIALOGS -->
+  <dialog id="notes-form" aria-labelledby="nf-title" class="m-auto max-h-[90dvh] w-[min(92vw,64rem)] overflow-y-auto bg-ivory p-0 text-charcoal">
+    <div class="grid grid-cols-1 md:grid-cols-5">
+      <div class="aspect-[4/3] bg-mist md:col-span-2 md:aspect-auto"><img src="assets/img/manifesto-gown.jpg" alt="" class="h-full w-full object-cover object-top" loading="lazy" width="683" height="1024"></div>
+      <div class="relative p-8 md:col-span-3 md:p-12">
+        <button data-modal-close aria-label="Close" class="absolute right-3 top-3 flex h-11 w-11 items-center justify-center text-2xl transition-colors hover:text-burgundy-700">&times;</button>
+        <p class="text-sm text-charcoal-muted">Collection notes / Project 001 / 2024</p>
+        <h3 id="nf-title" class="mt-3 font-serif text-5xl">FORM</h3>
+        <p class="mt-5 leading-relaxed text-charcoal/85">Fourteen looks built without side seams. Each pleat is set by hand and held by an internal tape, so the garment stands on its own and the body enters it like a room.</p>
+        <dl class="mt-8 grid grid-cols-2 gap-6 text-[15px]">
+          <div class="border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Looks</dt><dd class="mt-1 font-serif text-2xl">14</dd></div>
+          <div class="border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Toiles made</dt><dd class="mt-1 font-serif text-2xl">31</dd></div>
+          <div class="col-span-2 border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Visual research</dt><dd class="mt-1 leading-relaxed">Plaster studio casts, brutalist stairwells, the shadow line under a raised arm.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="notes-after" aria-labelledby="na-title" class="m-auto max-h-[90dvh] w-[min(92vw,64rem)] overflow-y-auto bg-ivory p-0 text-charcoal">
+    <div class="grid grid-cols-1 md:grid-cols-5">
+      <div class="aspect-[4/3] bg-mist md:col-span-2 md:aspect-auto"><img src="assets/img/afterimage-garment.jpg" alt="" class="h-full w-full object-cover" loading="lazy" width="768" height="1024"></div>
+      <div class="relative p-8 md:col-span-3 md:p-12">
+        <button data-modal-close aria-label="Close" class="absolute right-3 top-3 flex h-11 w-11 items-center justify-center text-2xl transition-colors hover:text-burgundy-700">&times;</button>
+        <p class="text-sm text-charcoal-muted">Collection notes / Project 002 / 2025</p>
+        <h3 id="na-title" class="mt-3 font-serif text-5xl">AFTERIMAGE</h3>
+        <p class="mt-5 leading-relaxed text-charcoal/85">Garments washed, worn in the studio for a month, then embroidered over the marks they collected. The collection treats damage as a record rather than a flaw.</p>
+        <dl class="mt-8 grid grid-cols-2 gap-6 text-[15px]">
+          <div class="border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Looks</dt><dd class="mt-1 font-serif text-2xl">11</dd></div>
+          <div class="border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Hours of hand stitching</dt><dd class="mt-1 font-serif text-2xl">460</dd></div>
+          <div class="col-span-2 border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Visual research</dt><dd class="mt-1 leading-relaxed">Family linens, faded sample books, double exposures on expired film.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="notes-dis" aria-labelledby="nd-title" class="m-auto max-h-[90dvh] w-[min(92vw,64rem)] overflow-y-auto bg-ivory p-0 text-charcoal">
+    <div class="grid grid-cols-1 md:grid-cols-5">
+      <div class="aspect-[4/3] bg-charcoal md:col-span-2 md:aspect-auto"><img src="assets/img/dissonance-look.jpg" alt="" class="h-full w-full object-cover object-top" loading="lazy" width="683" height="1024"></div>
+      <div class="relative p-8 md:col-span-3 md:p-12">
+        <button data-modal-close aria-label="Close" class="absolute right-3 top-3 flex h-11 w-11 items-center justify-center text-2xl transition-colors hover:text-burgundy-700">&times;</button>
+        <p class="text-sm text-charcoal-muted">Collection notes / Project 003 / 2026</p>
+        <h3 id="nd-title" class="mt-3 font-serif text-5xl">Soft Dissonance</h3>
+        <p class="mt-5 leading-relaxed text-charcoal/85">Cast ornament is stitched directly onto loose knit, so the heavy parts pull the soft ones out of shape. The collection keeps that tension visible instead of correcting it.</p>
+        <dl class="mt-8 grid grid-cols-2 gap-6 text-[15px]">
+          <div class="border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Looks</dt><dd class="mt-1 font-serif text-2xl">9</dd></div>
+          <div class="border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Cast elements</dt><dd class="mt-1 font-serif text-2xl">72</dd></div>
+          <div class="col-span-2 border-t border-charcoal/20 pt-3"><dt class="text-charcoal-muted">Visual research</dt><dd class="mt-1 leading-relaxed">Baroque gilding, coastal fog, knitted armour from museum stores.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

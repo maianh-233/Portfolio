@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quên mật khẩu · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-SYS-003" data-module="SYS" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-SYS-003 Quên mật khẩu: bước A nhập email → Alert đã gửi (không tiết lộ email có tồn tại) + nút demo mở link;
+   * bước B (?token=) đặt mật khẩu mới; ?token=het-han → lỗi link hết hạn. */
+  Layout.mount({ title: 'Quên mật khẩu', breadcrumb: [['Đăng nhập', 'pages/dang-nhap.html'], ['Quên mật khẩu']] }, function (main) {
+    var U = Perm.url, R = UI.rules;
+    main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-0 pb-10 pt-6 sm:px-4"><div class="mx-auto w-full max-w-lg bg-white p-5 sm:rounded-2xl sm:border sm:border-neutral-200 md:p-8" data-card></div></div>');
+    var card = main.querySelector('[data-card]');
+    var head = '<div class="mb-5 flex flex-col items-center gap-2 text-center">' + UI.mascot(72, 'wow') + '<h1 class="text-2xl font-extrabold text-neutral-800">Quên mật khẩu?</h1></div>';
+    var backLink = '<div class="mt-5 text-center">' + UI.button({ label: 'Quay lại đăng nhập', icon: 'arrow-left', variant: 'link', size: 'sm', href: U('pages/dang-nhap.html') }) + '</div>';
+
+    function stepA(sent) {
+      card.innerHTML = head + '<form novalidate class="flex flex-col gap-4" data-a><p class="text-center text-sm text-neutral-600">Nhập email đã đăng ký, Tiểu Bạch sẽ gửi link đặt lại mật khẩu cho bạn.</p>' +
+        (sent ? UI.alert({ tone: 'success', text: 'Nếu email này đã đăng ký, Tiểu Bạch đã gửi link đặt lại mật khẩu. Link có hiệu lực trong 30 phút.', actions: UI.button({ label: 'Mở link trong email (demo)', size: 'sm', variant: 'outline', href: U('pages/quen-mat-khau.html?token=demo-123') }) }) : '') +
+        UI.field({ name: 'email', label: 'Email đã đăng ký', type: 'email', required: true, autocomplete: 'email' }) +
+        UI.button({ label: 'Gửi link đặt lại', size: 'lg', full: true, type: 'submit', attrs: { 'data-submit': '' } }) + '</form>' + backLink;
+      var f = card.querySelector('[data-a]'), rules = { email: [R.required('Vui lòng nhập email'), R.email('Email không hợp lệ')] };
+      UI.validate.live(f, rules);
+      f.addEventListener('submit', function (e) { e.preventDefault(); if (!UI.validate(f, rules)) return; var b = f.querySelector('[data-submit]'); UI.setLoading(b, true); setTimeout(function () { stepA(true); }, 600); });
+    }
+    function expired() {
+      card.innerHTML = head + UI.alert({ tone: 'danger', text: 'Link đặt lại mật khẩu đã hết hạn hoặc đã được sử dụng.', actions: UI.button({ label: 'Gửi lại link', size: 'sm', href: U('pages/quen-mat-khau.html') }) }) + backLink;
+    }
+    function stepB() {
+      card.innerHTML = head + '<form novalidate class="flex flex-col gap-4" data-b><p class="text-center text-sm text-neutral-600">Đặt mật khẩu mới cho tài khoản của bạn.</p>' +
+        UI.field({ name: 'mat_khau_moi', label: 'Mật khẩu mới', type: 'password', required: true, hint: 'Ít nhất 8 ký tự', autocomplete: 'new-password' }) +
+        UI.field({ name: 'nhap_lai', label: 'Nhập lại mật khẩu mới', type: 'password', required: true, autocomplete: 'new-password' }) +
+        UI.button({ label: 'Đặt lại mật khẩu', size: 'lg', full: true, type: 'submit', attrs: { 'data-submit': '' } }) + '</form>' + backLink;
+      var f = card.querySelector('[data-b]');
+      var rules = { mat_khau_moi: [R.custom(function (v) { return String(v || '').length >= 8; }, 'Mật khẩu cần ít nhất 8 ký tự')], nhap_lai: [R.match('mat_khau_moi', 'Mật khẩu nhập lại không khớp')] };
+      UI.validate.live(f, rules);
+      f.addEventListener('submit', function (e) {
+        e.preventDefault(); if (!UI.validate(f, rules)) return;
+        UI.setLoading(f.querySelector('[data-submit]'), true);
+        setTimeout(function () { UI.toast('Đã đặt lại mật khẩu. Mời bạn đăng nhập.', 'success'); setTimeout(function () { location.href = U('pages/dang-nhap.html'); }, 900); }, 600);
+      });
+    }
+    var token = App.param('token');
+    if (!token) stepA(false); else if (token === 'het-han') expired(); else stepB();
+  });
+  </script>
+</body>
+</html>

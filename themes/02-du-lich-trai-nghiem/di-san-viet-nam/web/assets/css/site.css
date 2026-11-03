@@ -1,0 +1,264 @@
+/* disanvietnam — biến thiết kế + vài style Tailwind không làm được */
+:root {
+  --primary: #0B4773;
+  --academic: #143A56;
+  --gis: #0D9488;
+  --gis-dark: #0F766E;
+  --heritage: #C4A46A;
+  --surface: #F3F6FA;
+  --ink: #1A2B3C;
+  --muted: #4A5B6C;
+  --line: #D9E1EA;
+  --font-sans: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Noto Serif", Georgia, system-ui, "Segoe UI", Roboto, Arial, serif;
+  --ui-accent: #0B4773;
+}
+
+/* Nhảy tới #mục: chừa đúng chiều cao header dính (--header-h do site.js đo) + 16px.
+   Ghi đè scroll-margin-top 88px của motion.js để khoảng chừa không bị cộng đôi. */
+html { scroll-padding-top: calc(var(--header-h, 114px) + 16px); -webkit-text-size-adjust: 100%; }
+html [id] { scroll-margin-top: 0; }
+body { font-family: var(--font-sans); color: var(--ink); background: #fff; }
+
+/* Nội dung bài dài: Noto Serif 17px / 1.7 */
+.prose-serif { font-family: var(--font-serif); font-size: 17px; line-height: 1.7; color: var(--ink); }
+
+/* Focus rõ ràng cho bàn phím */
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+.on-dark :focus-visible, .bg-academic :focus-visible { outline-color: #fff; }
+
+/* Lưới tọa độ mảnh — ý tưởng "lớp bản đồ" */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(11,71,115,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11,71,115,.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.rule-heritage { height: 2px; width: 56px; background: var(--heritage); }
+
+/* Header thu gọn khi cuộn (motion.js thêm .is-scrolled) */
+.site-header { transition: box-shadow .2s ease; }
+.site-header.is-scrolled { box-shadow: 0 6px 20px rgba(20,58,86,.08); }
+
+/* Menu chính: dropdown mở bằng hover và bàn phím (focus-within) */
+.nav-drop { visibility: hidden; opacity: 0; transform: translateY(4px); transition: opacity .16s ease, transform .16s ease, visibility .16s; }
+.nav-item:hover > .nav-drop, .nav-item:focus-within > .nav-drop { visibility: visible; opacity: 1; transform: none; }
+.nav-link[aria-current="page"] { color: var(--primary); box-shadow: inset 0 -3px 0 var(--primary); }
+.nav-item:hover > .nav-link .chev, .nav-item:focus-within > .nav-link .chev { transform: rotate(180deg); }
+.chev { transition: transform .16s ease; }
+
+/* Nút ngôn ngữ */
+.lang-btn[aria-pressed="true"] { background: #fff; color: var(--academic); }
+
+/* Nút lọc năm (trang Hội thảo) */
+.year-btn { min-height: 44px; padding: 0 14px; border-radius: 8px; border: 1px solid var(--line); background: #fff; color: var(--ink); font-weight: 600; font-size: 14px; font-variant-numeric: tabular-nums; transition: background-color .15s, color .15s, border-color .15s; }
+.year-btn:hover { border-color: var(--primary); color: var(--primary); }
+.year-btn[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* Badge trạng thái */
+.badge-ok { background: var(--gis-dark); color: #fff; }
+.badge-wait { border: 1.5px solid var(--heritage); color: #5E4719; background: #fff; }
+
+/* Bộ lọc nghiên cứu: drawer trên mobile */
+@media (max-width: 1023px) {
+  .filter-drawer { position: fixed; inset: 0 auto 0 0; z-index: 55; width: min(88vw, 360px); overflow-y: auto; background: #fff; box-shadow: 0 20px 60px rgba(20,58,86,.25); transform: translateX(-105%); transition: transform .2s ease; }
+  .filter-drawer[data-open] { transform: none; }
+  .filter-drawer:not([data-open]), .sheet:not([data-open]) { visibility: hidden; transition: transform .2s ease, visibility 0s linear .2s; }
+  .sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; max-height: 72dvh; overflow-y: auto; background: #fff; border-radius: 16px 16px 0 0; box-shadow: 0 -12px 40px rgba(20,58,86,.2); transform: translateY(105%); transition: transform .2s ease; }
+  .sheet[data-open] { transform: none; }
+}
+.dim { position: fixed; inset: 0; z-index: 44; background: rgba(14,43,65,.45); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.dim[data-open] { opacity: 1; pointer-events: auto; }
+
+/* Bản đồ Leaflet — ghim đánh dấu, tên hiện khi rê chuột */
+.leaflet-container { font-family: var(--font-sans); background: #e8eef4; }
+.map-marker { background: none; border: 0; }
+.map-marker .pin { display: block; width: 32px; height: 42px; transform-origin: 50% 100%; transition: transform .18s ease; filter: drop-shadow(0 4px 5px rgba(14,43,65,.35)); }
+.map-marker .pin svg { display: block; width: 100%; height: 100%; }
+.map-marker .pin-body { fill: var(--gis-dark); stroke: #fff; stroke-width: 2; transition: fill .18s ease; }
+.map-marker .pin-dot { fill: #fff; }
+.map-marker:hover .pin, .map-marker:focus .pin { transform: translateY(-3px) scale(1.12); }
+.map-marker:hover .pin-body, .map-marker:focus .pin-body { fill: var(--primary); }
+.map-marker.is-active .pin { transform: translateY(-3px) scale(1.2); }
+.map-marker.is-active .pin-body { fill: var(--academic); }
+.map-marker.is-active .pin-dot { fill: var(--heritage); }
+.map-marker:focus { outline: none; }
+.map-marker:focus-visible .pin-body { stroke: var(--heritage); stroke-width: 3; }
+.leaflet-tooltip.map-tip { background: var(--academic); color: #fff; border: 0; border-radius: 8px; padding: 6px 10px; font-size: 13px; font-weight: 600; box-shadow: 0 6px 18px rgba(14,43,65,.28); white-space: nowrap; }
+.leaflet-tooltip-top.map-tip::before { border-top-color: var(--academic); }
+
+/* Một kiểu rê chuột chung cho mọi thẻ nội dung (giới thiệu, nghiên cứu, giải thưởng, hội thảo):
+   nhấc nhẹ 2px, viền đậm lên, bóng mềm, tiêu đề đổi màu. Không vạch chạy, không xoay, không lưới trang trí. */
+.card-hover { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background-color .2s ease; }
+.card-hover:hover, .card-hover:focus-within { transform: translateY(-2px); border-color: rgba(11,71,115,.32); box-shadow: 0 1px 2px rgba(20,58,86,.05), 0 10px 24px rgba(20,58,86,.09); }
+.card-title { transition: color .2s ease; }
+.card-hover:hover .card-title, .card-hover:focus-within .card-title { color: var(--primary); }
+
+/* Nhóm nghiên cứu, đối tác: dùng chung kiểu rê chuột ở trên */
+.lift-card { border-radius: 12px; border: 1px solid var(--line); background: #fff; padding: 20px; }
+.lift-avatar { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 10px; font-size: 18px; font-weight: 700; color: #fff; }
+.partner-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 10px; transition: background-color .2s ease, color .2s ease; }
+
+/* Chân dung chuyên gia: ảnh phóng nhẹ, lên màu khi rê chuột */
+.portrait-img { filter: grayscale(.3) contrast(1.02); transition: transform .6s cubic-bezier(.2,.7,.2,1), filter .4s ease; }
+.portrait:hover .portrait-img { transform: scale(1.04); filter: none; }
+
+/* Lịch sử dự án — trục thời gian có mốc */
+.tl-item { position: relative; padding-top: 30px; }
+.tl-item::before { content: ""; position: absolute; top: 7px; left: 0; right: -24px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--heritage), rgba(196,164,106,.3)); }
+.tl-item:last-child::before { right: 0; background: linear-gradient(90deg, var(--gis), rgba(13,148,136,.12)); }
+.tl-node { position: absolute; top: 0; left: 16px; z-index: 1; width: 16px; height: 16px; border-radius: 999px; background: #fff; border: 2px solid var(--heritage); box-shadow: 0 0 0 4px #fff; transition: transform .2s ease, background-color .2s ease; }
+.tl-node::after { content: ""; position: absolute; inset: 3px; border-radius: 999px; background: var(--heritage); transform: scale(0); transition: transform .2s ease; }
+.tl-now .tl-node { border-color: var(--gis-dark); }
+.tl-now .tl-node::after { background: var(--gis-dark); transform: scale(1); }
+.tl-card { height: 100%; border: 1px solid transparent; border-radius: 12px; padding: 14px 16px; transition: background-color .2s ease, border-color .2s ease, transform .2s ease; }
+.tl-item:hover .tl-node { transform: scale(1.2); }
+.tl-item:hover .tl-node::after { transform: scale(1); }
+.tl-item:hover .tl-card { background: var(--surface); border-color: var(--line); transform: translateY(-2px); }
+@media (min-width: 768px) and (max-width: 1279px) { .tl-item:nth-child(3n)::before { right: 0; } .tl-4 .tl-item:nth-child(3n)::before { right: -24px; } .tl-4 .tl-item:last-child::before { right: 0; } }
+@media (max-width: 767px) {
+  .tl { gap: 8px; }
+  .tl-item { padding-top: 0; padding-left: 28px; }
+  .tl-item::before { top: 18px; bottom: -26px; left: 7px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, var(--heritage), rgba(196,164,106,.3)); }
+  .tl-item:last-child::before { display: none; }
+  .tl-node { top: 18px; left: 0; }
+}
+
+/* Hội thảo theo năm: mốc năm bấm được */
+.conf-node { transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.conf-year { cursor: pointer; border-radius: 8px; transition: color .2s ease; }
+.conf-year:hover { color: var(--primary); }
+.conf-item:hover .conf-node { transform: scale(1.2); }
+.conf-item.is-active .conf-node { background: var(--primary); border-color: var(--primary); transform: scale(1.25); box-shadow: 0 0 0 5px rgba(11,71,115,.14); }
+.conf-item.is-active .conf-year { color: var(--primary); }
+.conf-item.is-active .conf-card { border-color: rgba(11,71,115,.4); background: #F7FAFD; }
+.conf-note { animation: conf-in .25s ease; }
+@keyframes conf-in { from { opacity: 0; transform: translateY(-4px); } }
+
+/* Bảng dữ liệu: dòng nổi lên khi rê chuột; dòng được đánh dấu từ timeline */
+.data-table tbody tr { transition: background-color .15s ease; }
+.data-table tbody tr > :first-child { transition: box-shadow .15s ease; }
+.data-table tbody tr:hover { background: #EAF1F8; }
+.data-table tbody tr:hover > :first-child { box-shadow: inset 3px 0 0 var(--primary); }
+.data-table tbody tr.is-linked { background: rgba(196,164,106,.16); }
+.data-table tbody tr.is-linked > :first-child { box-shadow: inset 3px 0 0 var(--heritage); }
+
+/* Khung ảnh di tích chuyển ảnh (Di sản văn hóa) */
+.ds-slides [data-carousel-track] { position: absolute; inset: 0; }
+.ds-slides [data-carousel-track] > * { width: 100%; height: 100%; }
+.ds-slides img { cursor: zoom-in; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.ds-slides:hover img { transform: scale(1.03); }
+.ds-ctrl button { pointer-events: auto; }
+.ds-ctrl [data-carousel-dots] { pointer-events: auto; }
+.ds-ctrl .ui-dot { opacity: .6; box-shadow: 0 0 0 1px rgba(14,43,65,.25); }
+.ds-ctrl .ui-dot.is-active { opacity: 1; }
+
+/* Bộ sưu tập ảnh (Ngân hàng số di sản) */
+.gallery-item img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.gallery-item:hover img, .gallery-item:focus-visible img { transform: scale(1.06); }
+.gallery-zoom { opacity: 0; transform: translateY(-4px); transition: opacity .2s ease, transform .2s ease; }
+.gallery-item:hover .gallery-zoom, .gallery-item:focus-visible .gallery-zoom { opacity: 1; transform: none; }
+@media (hover: none) { .gallery-zoom { opacity: 1; transform: none; } }
+
+/* Tài nguyên số: ảnh phóng nhẹ / ảnh VR360 lia ngang khi rê chuột */
+.zoom-media img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.zoom-media:hover img { transform: scale(1.06); }
+.vr-pan { position: absolute; top: 0; bottom: 0; left: 0; height: 100%; width: 140%; max-width: none; object-fit: cover; transform: translateX(0); transition: transform 3.2s cubic-bezier(.25,.6,.3,1); }
+.vr-card:hover .vr-pan, .vr-card:focus-within .vr-pan { transform: translateX(-28.5%); }
+.vr-hint { transition: opacity .3s ease; }
+.vr-card:hover .vr-hint { opacity: 0; }
+@media (hover: none) { .vr-hint { display: none; } }
+
+/* Nút nổi: Zalo + gọi điện (trái), trợ lý ảo (phải) — bản demo */
+.fab-stack { position: fixed; bottom: 20px; z-index: 38; display: flex; flex-direction: column; gap: 12px; }
+.fab-left { left: 20px; }
+.fab-right { right: 20px; align-items: flex-end; }
+.fab { position: relative; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 999px; color: #fff; box-shadow: 0 6px 18px rgba(14,43,65,.28); transition: transform .2s ease, box-shadow .2s ease; }
+.fab:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(14,43,65,.32); }
+.fab-zalo { background: #0068FF; }
+.fab-zalo-text { font-size: 13px; font-weight: 700; letter-spacing: .01em; }
+.fab-call { background: var(--gis-dark); }
+.fab-call::after { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 2px solid var(--gis); animation: fab-ring 2.4s ease-out infinite; pointer-events: none; }
+@keyframes fab-ring { 0% { opacity: .7; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(1.45); } }
+.fab-bot { width: 58px; height: 58px; background: var(--academic); border: 2px solid var(--heritage); }
+.fab-bot.is-open { background: var(--primary); }
+.fab-dot { position: absolute; top: 5px; right: 5px; width: 11px; height: 11px; border-radius: 999px; background: var(--gis); border: 2px solid #fff; }
+.fab-tip { position: absolute; top: 50%; white-space: nowrap; padding: 5px 10px; border-radius: 6px; background: var(--academic); color: #fff; font-size: 13px; font-weight: 600; opacity: 0; pointer-events: none; transform: translateY(-50%); transition: opacity .15s ease; }
+.fab-left .fab-tip { left: calc(100% + 10px); }
+.fab-right .fab-tip { right: calc(100% + 10px); }
+.fab:hover .fab-tip, .fab:focus-visible .fab-tip { opacity: 1; }
+.fab-bot.is-open .fab-tip { display: none; }
+.bot-panel { width: min(360px, calc(100vw - 40px)); overflow: hidden; border-radius: 14px; border: 1px solid var(--line); background: #fff; box-shadow: 0 20px 50px rgba(14,43,65,.25); animation: conf-in .2s ease; }
+.bot-panel[hidden] { display: none; }
+.bot-log { display: flex; flex-direction: column; gap: 8px; height: 240px; overflow-y: auto; padding: 14px; background: var(--surface); }
+.bot-msg { max-width: 85%; padding: 9px 12px; border-radius: 12px; font-size: 14px; line-height: 1.5; }
+.bot-ai { align-self: flex-start; background: #fff; border: 1px solid var(--line); color: var(--ink); border-bottom-left-radius: 4px; }
+.bot-me { align-self: flex-end; background: var(--primary); color: #fff; border-bottom-right-radius: 4px; }
+.bot-quick { scrollbar-width: thin; }
+.bot-chip { flex-shrink: 0; white-space: nowrap; min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--academic); font-size: 13px; font-weight: 600; transition: border-color .15s ease, color .15s ease; }
+.bot-chip:hover { border-color: var(--primary); color: var(--primary); }
+@media (max-width: 767px) {
+  .fab-stack { bottom: 14px; gap: 10px; }
+  .fab-left { left: 12px; } .fab-right { right: 12px; }
+  .fab { width: 46px; height: 46px; } .fab-bot { width: 50px; height: 50px; }
+  .fab-tip { display: none; }
+}
+
+/* Tầm nhìn (trang Giới thiệu): thẻ bấm được, thẻ đang chọn có viền xanh */
+.vision-card { cursor: pointer; }
+.vision-card.is-active { border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary), 0 10px 24px rgba(20,58,86,.09); }
+.vision-card.on-dark.is-active { border-color: var(--heritage); box-shadow: 0 0 0 1px var(--heritage), 0 10px 24px rgba(20,58,86,.18); }
+.vision-chev { transition: transform .2s ease, opacity .2s ease; }
+.vision-card.is-active .vision-chev { transform: rotate(180deg); opacity: 1; }
+.vision-detail [data-vision-panel]:not([hidden]) { animation: conf-in .25s ease; }
+
+/* Loại hình di tích: rê chuột đổi sang nền xanh GIS */
+.type-card:hover, .type-card:focus-within { background: #E6F4F2; border-color: transparent; }
+.type-card .type-icon { transition: color .2s ease; }
+.type-card:hover .type-icon { color: var(--gis-dark); }
+.type-card:hover .card-title, .type-card:hover h3 { color: var(--academic); }
+
+/* Kỷ yếu theo năm (trang Nghiên cứu): dòng nổi lên khi rê chuột, cùng kiểu với bảng dữ liệu */
+.proc-row { margin: 0 -12px; padding-left: 12px; padding-right: 12px; border-radius: 8px; transition: background-color .15s ease, box-shadow .15s ease; }
+.proc-row:hover { background: #EAF1F8; box-shadow: inset 3px 0 0 var(--primary); }
+.proc-row > span:first-child { transition: color .15s ease; }
+.proc-row:hover > span:first-child { color: var(--academic); }
+
+/* Danh mục UNESCO: thẻ bấm được, mở hộp thoại chi tiết */
+.heritage-item { cursor: pointer; }
+dialog.heritage-dialog[data-ui-modal] { max-width: min(94vw, 760px); max-height: 92vh; overflow: hidden; }
+.heritage-dialog .hd-media { aspect-ratio: 16 / 9; }
+@media (max-width: 639px) { .heritage-dialog .hd-media { aspect-ratio: 4 / 3; } }
+
+/* Lớp bản đồ chuyên đề (trang chủ) */
+.layer-tile .layer-icon { transition: transform .2s ease; }
+.layer-tile:hover .layer-icon { transform: scale(1.06); }
+
+/* Dòng chữ dài không tràn */
+.break-anywhere { overflow-wrap: anywhere; }
+
+/* Thanh cuộn ngang cho bảng */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Hộp thoại trích dẫn rộng hơn mặc định */
+dialog.cite-dialog { max-width: min(94vw, 720px); }
+
+/* Banner trang chủ: slider ảnh tràn màn hình */
+.hero-cap { position: absolute; right: clamp(16px, 4vw, 64px); bottom: 32px; z-index: 5; max-width: 64ch; text-align: right; font-size: 13px; line-height: 1.5; color: rgba(255,255,255,.88); text-shadow: 0 1px 6px rgba(14,43,65,.6); }
+@media (max-width: 767px) { .hero-cap { display: none; } }
+/* Máy có chuột: ảnh không nhận chuột để slider vẫn tự chuyển khi chuột nằm trên banner; nút điều khiển vẫn bấm được */
+@media (hover: hover) {
+  .hero-carousel { pointer-events: none; }
+  .hero-carousel .hero-ctrl { pointer-events: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-drop, .chev, .filter-drawer, .sheet, .dim, .site-header,
+  .map-marker .pin, .card-hover, .card-title, .partner-icon, .portrait-img,
+  .tl-node, .tl-card, .zoom-media img, .vr-pan, .conf-node, .ds-slides img, .gallery-item img, .gallery-zoom { transition: none !important; }
+  .card-hover:hover, .card-hover:focus-within, .tl-item:hover .tl-card, .zoom-media:hover img, .portrait:hover .portrait-img,
+  .ds-slides:hover img, .gallery-item:hover img { transform: none !important; }
+  .conf-note, .fab-call::after, .bot-panel { animation: none; }
+  .fab, .layer-tile .layer-icon { transition: none !important; }
+  html { scroll-behavior: auto; }
+}

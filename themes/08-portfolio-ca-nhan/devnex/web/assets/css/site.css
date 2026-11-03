@@ -1,0 +1,53 @@
+:root {
+  --bg: #0B0F14;
+  --panel: #111820;
+  --card: #151D27;
+  --ink: #F3F6FA;
+  --muted: #9AA7B5;
+  --neon: #A3FF68;
+  --line: rgba(255, 255, 255, 0.10);
+  --ui-accent: #A3FF68;
+  --font-display: "Space Grotesk", "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Inter, "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Consolas, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; background: var(--bg); }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+section[id] { scroll-margin-top: 84px; }
+::selection { background: var(--neon); color: var(--bg); }
+
+/* Nền lưới kỹ thuật mờ */
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 30% 40%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 70% at 30% 40%, #000 30%, transparent 100%);
+}
+
+/* Header khi đã cuộn */
+#top.is-scrolled { background: rgba(11, 15, 20, 0.92); border-bottom-color: var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+
+/* Terminal: từng dòng xuất hiện khi tải trang */
+.term-line { opacity: 0; transform: translateY(6px); animation: termIn .5s cubic-bezier(.16,1,.3,1) forwards; animation-delay: calc(var(--i, 0) * 160ms + 300ms); }
+.term-caret { display: inline-block; width: .55em; height: 1.1em; vertical-align: -0.2em; background: var(--neon); animation: caret 1s steps(1) infinite; animation-delay: 2.6s; }
+@keyframes termIn { to { opacity: 1; transform: none; } }
+@keyframes caret { 50% { opacity: 0; } }
+
+/* Đèn trạng thái sẵn sàng */
+.status-dot { position: relative; }
+.status-dot::after { content: ""; position: absolute; inset: -3px; border-radius: 9999px; border: 1px solid var(--neon); opacity: .6; animation: ping 2.4s cubic-bezier(0,0,.2,1) infinite; }
+@keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+
+/* Timeline: đường neon */
+.timeline-rail { background: linear-gradient(to bottom, var(--neon), rgba(163,255,104,0.15)); }
+
+dialog::backdrop { background: rgba(5, 8, 12, 0.72); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .term-line { animation: none; opacity: 1; transform: none; }
+  .term-caret, .status-dot::after { animation: none; }
+}

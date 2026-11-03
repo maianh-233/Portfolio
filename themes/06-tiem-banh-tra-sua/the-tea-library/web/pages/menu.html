@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" data-vi-title="Thực đơn | THE TEA LIBRARY" data-vi-desc="Mục lục trà và bánh của THE TEA LIBRARY: trà tuyển chọn, trà sữa, trà trái cây và bánh ngọt.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu — THE TEA LIBRARY</title>
+  <meta name="description" content="The Tea &amp; Pastry Index of THE TEA LIBRARY: loose leaf teas, milk teas, fruit infusions and pastries baked each morning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-paper text-ink font-sans">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 bg-paper/95 transition-[background-color,box-shadow] duration-500">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="whitespace-nowrap font-display text-lg font-semibold tracking-[0.1em] text-forest sm:text-2xl sm:tracking-[0.18em]">THE TEA LIBRARY</a>
+    <nav aria-label="Main" class="hidden items-center gap-10 lg:flex">
+      <a href="../index.html" class="relative py-2 text-[15px] text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" aria-current="page" class="relative py-2 text-[15px] text-burgundy after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-burgundy" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="relative py-2 text-[15px] text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100" data-vi="Về chúng tôi">About</a>
+      <a href="../index.html#visit" class="relative py-2 text-[15px] text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100" data-vi="Ghé thăm">Visit</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center text-[13px] font-medium tracking-[0.12em]" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="relative min-h-[44px] px-2 text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-2 after:bottom-2 after:h-px after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500">EN</button>
+        <span aria-hidden="true" class="text-wood/50">/</span>
+        <button type="button" data-lang="vi" class="relative min-h-[44px] px-2 text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-2 after:bottom-2 after:h-px after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500">VI</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center text-forest lg:hidden" aria-label="Open menu" data-vi-aria="Mở menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div data-rule class="h-px w-full bg-forest/25"></div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-forest/15 bg-paper-light p-6 shadow-2xl lg:hidden">
+    <nav aria-label="Mobile" class="flex flex-col divide-y divide-forest/10 font-display text-2xl text-forest">
+      <a href="../index.html" class="py-3" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" aria-current="page" class="py-3 text-burgundy" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="py-3" data-vi="Về chúng tôi">About</a>
+      <a href="../index.html#visit" class="py-3" data-vi="Ghé thăm">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- INDEX HERO -->
+  <section id="index-hero" data-section="page-hero" class="bg-paper pb-20 pt-16 lg:pb-28 lg:pt-24">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-6">
+        <p class="flex items-center gap-4 text-xs font-medium uppercase tracking-label text-burgundy" data-reveal="fade">
+          <span class="h-px w-10 bg-burgundy"></span><span data-vi="Tập một, thực đơn">Volume One, the Menu</span>
+        </p>
+        <h1 data-split="words" class="mt-7 font-display text-[3.1rem] font-medium leading-[1.04] text-forest sm:text-7xl 2xl:text-[5.75rem]" data-vi="Mục lục <em class='italic text-burgundy'>Trà &amp; Bánh</em>">The Tea &amp; Pastry <em class="italic text-burgundy">Index</em></h1>
+        <p class="mt-7 max-w-[32rem] text-[17px] leading-relaxed text-ink-soft" data-reveal="up" data-vi="Bốn chương, đọc theo thứ tự nào cũng được. Giá tính bằng nghìn đồng, đã gồm thuế.">Four chapters, to be read in any order you like. Prices are in thousand VND, tax included.</p>
+      </div>
+      <nav aria-label="Contents" class="lg:col-span-5 lg:col-start-8 lg:pt-6">
+        <p class="font-display text-xl italic text-wood" data-vi="Mục lục">Contents</p>
+        <div data-rule class="mt-4 h-px w-full bg-forest/30"></div>
+        <ol class="mt-2" data-reveal-stagger="90">
+          <li><a href="#tea-selection" class="group flex min-h-[56px] items-baseline gap-5 py-3 text-forest transition-colors duration-300 hover:text-burgundy"><span class="w-8 font-display text-2xl italic text-burgundy">I.</span><span class="font-display text-2xl sm:text-3xl" data-vi="Trà tuyển chọn">Tea Selection</span><span class="mx-2 hidden flex-1 border-b border-dotted border-wood/40 sm:block"></span><span class="ml-auto text-sm text-wood">p. 03</span></a></li>
+          <li><a href="#milk-tea" class="group flex min-h-[56px] items-baseline gap-5 py-3 text-forest transition-colors duration-300 hover:text-burgundy"><span class="w-8 font-display text-2xl italic text-burgundy">II.</span><span class="font-display text-2xl sm:text-3xl" data-vi="Trà sữa">Milk Tea</span><span class="mx-2 hidden flex-1 border-b border-dotted border-wood/40 sm:block"></span><span class="ml-auto text-sm text-wood">p. 11</span></a></li>
+          <li><a href="#fruit-infusions" class="group flex min-h-[56px] items-baseline gap-5 py-3 text-forest transition-colors duration-300 hover:text-burgundy"><span class="w-8 font-display text-2xl italic text-burgundy">III.</span><span class="font-display text-2xl sm:text-3xl" data-vi="Trà trái cây">Fruit Infusions</span><span class="mx-2 hidden flex-1 border-b border-dotted border-wood/40 sm:block"></span><span class="ml-auto text-sm text-wood">p. 17</span></a></li>
+          <li><a href="#pastries" class="group flex min-h-[56px] items-baseline gap-5 py-3 text-forest transition-colors duration-300 hover:text-burgundy"><span class="w-8 font-display text-2xl italic text-burgundy">IV.</span><span class="font-display text-2xl sm:text-3xl" data-vi="Bánh ngọt">Pastries</span><span class="mx-2 hidden flex-1 border-b border-dotted border-wood/40 sm:block"></span><span class="ml-auto text-sm text-wood">p. 23</span></a></li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CHAPTER I -->
+  <section id="tea-selection" data-section="list-editorial" class="scroll-mt-20 bg-paper-light py-24 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <div class="aspect-[4/5] overflow-hidden bg-paper-deep" data-reveal="clip">
+            <img src="https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Six silver spoons holding different loose leaf teas" data-vi-alt="Sáu chiếc thìa bạc đựng các loại trà lá khác nhau" class="img-warm h-full w-full object-cover" width="1400" height="1750">
+          </div>
+          <p class="mt-4 text-xs tracking-[0.08em] text-wood" data-vi="Sáu loại lá trong tủ trà của chúng tôi">Six leaves from our tea cabinet</p>
+        </div>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7 xl:col-span-6 xl:col-start-7">
+        <p class="font-display text-7xl italic leading-none text-burgundy/80 sm:text-8xl">I.</p>
+        <h2 class="mt-4 font-display text-4xl font-medium text-forest sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Trà tuyển chọn">Tea Selection</h2>
+        <div data-rule class="mt-6 h-px w-24 bg-burgundy"></div>
+        <p class="mt-6 max-w-prose text-[17px] leading-relaxed text-ink-soft" data-reveal="up" data-vi="Trà lá nguyên cánh từ Việt Nam, Ấn Độ, Sri Lanka và Trung Quốc, pha theo ấm và phục vụ cùng đồng hồ cát.">Whole leaf teas from Vietnam, India, Sri Lanka and China, brewed by the pot and served with an hourglass.</p>
+        <ul class="mt-12 grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2" data-reveal-stagger="80">
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Earl Grey Thư Viện">Library Earl Grey</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">85</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Hồng trà Ceylon, cam bergamot, hoa ngô xanh.">Ceylon black tea, bergamot, blue cornflower.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Darjeeling vụ đầu">Darjeeling First Flush</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">110</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Thanh, hương hoa, hậu vị nho xanh.">Light and floral with a green grape finish.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Shan Tuyết Hà Giang">Ha Giang Shan Tuyet</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">105</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Lá cây cổ thụ, vị mật ong và khói nhẹ.">Ancient tree leaves, honeyed with a hint of smoke.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Trà xanh Thái Nguyên">Thai Nguyen Green</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">75</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Đượm, chát nhẹ, ngọt hậu, pha ở 80°C.">Brisk and grassy with a sweet finish, brewed at 80°C.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Bạch trà hoa nhài">Jasmine Silver Needle</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">120</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Búp bạch trà ướp hoa nhài bảy lần.">White tea buds scented seven times with jasmine.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Chính Sơn Tiểu Chủng">Lapsang Souchong</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">95</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Hồng trà sấy khói gỗ thông, hợp ngày mưa.">Pine-smoked black tea, made for rainy afternoons.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER II -->
+  <section id="milk-tea" data-section="list-editorial" class="scroll-mt-20 bg-paper py-24 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="order-2 lg:order-1 lg:col-span-6">
+        <p class="font-display text-7xl italic leading-none text-burgundy/80 sm:text-8xl">II.</p>
+        <h2 class="mt-4 font-display text-4xl font-medium text-forest sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Trà sữa">Milk Tea</h2>
+        <div data-rule class="mt-6 h-px w-24 bg-burgundy"></div>
+        <p class="mt-6 max-w-prose text-[17px] leading-relaxed text-ink-soft" data-reveal="up" data-vi="Trà thật pha đậm, sữa tươi thanh trùng và đường thốt nốt. Không dùng bột pha sẵn. Có thể chọn nóng hoặc đá.">Real tea brewed strong, fresh pasteurised milk and palm sugar. No powders. Served hot or over ice.</p>
+        <ul class="mt-12 grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2" data-reveal-stagger="80">
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Trà sữa Assam">Reading Room Assam</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">75</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Assam ủ lạnh qua đêm, sữa tươi, thốt nốt.">Overnight cold-brewed Assam, fresh milk, palm sugar.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Trà sữa Hoàng gia">Royal Milk Tea</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">85</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Hồng trà nấu trực tiếp trong sữa, béo và đậm.">Black tea simmered directly in milk, rich and round.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Hojicha Latte">Hojicha Latte</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">79</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Trà xanh rang Nhật, vị hạt dẻ và caramel.">Roasted Japanese green tea, nutty with notes of caramel.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Ô long kem muối">Oolong Cream Top</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">82</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Ô long rang than, lớp kem muối biển phía trên.">Charcoal-roasted oolong under a sea salt cream.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Trà sữa Chai">Masala Chai</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">79</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Quế, bạch đậu khấu, gừng tươi và đinh hương.">Cinnamon, cardamom, fresh ginger and clove.</p></li>
+          <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Trà sữa Earl Grey">Earl Grey Milk Tea</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">79</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Earl Grey nhà pha, sữa tươi và mật hoa oải hương.">House Earl Grey, fresh milk and lavender honey.</p></li>
+        </ul>
+      </div>
+      <div class="order-1 lg:order-2 lg:col-span-5 lg:col-start-8">
+        <div class="lg:sticky lg:top-28">
+          <div class="aspect-[4/3] overflow-hidden bg-paper-deep lg:aspect-[3/4]" data-reveal="clip">
+            <img src="https://images.unsplash.com/photo-1595434091143-b375ced5fe5c?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Milk tea in a white ceramic cup on a wooden table" data-vi-alt="Trà sữa trong tách sứ trắng trên bàn gỗ" class="img-warm h-full w-full object-cover" width="1400" height="1860">
+          </div>
+          <p class="mt-4 text-xs tracking-[0.08em] text-wood" data-vi="Trà sữa Hoàng gia, phục vụ nóng">Royal Milk Tea, served hot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER III -->
+  <section id="fruit-infusions" data-section="list-editorial" class="scroll-mt-20 bg-forest py-24 text-paper lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
+        <div class="lg:col-span-5">
+          <p class="font-display text-7xl italic leading-none text-paper-deep/80 sm:text-8xl">III.</p>
+          <h2 class="mt-4 font-display text-4xl font-medium sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Trà trái cây">Fruit Infusions</h2>
+          <div data-rule class="mt-6 h-px w-24 bg-paper-deep"></div>
+          <p class="mt-6 max-w-prose text-[17px] leading-relaxed text-paper/80" data-reveal="up" data-vi="Trái cây theo mùa ngâm cùng trà nền và thảo mộc. Ít đường, nhiều hương, rất hợp những buổi chiều nóng.">Seasonal fruit steeped with base teas and herbs. Little sugar, plenty of aroma, made for warm afternoons.</p>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="aspect-[16/10] overflow-hidden bg-forest-soft" data-reveal="clip">
+            <img src="https://images.unsplash.com/photo-1647894111500-4ea0cea3bfe6?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A glass teapot filled with flowers and fruit" data-vi-alt="Ấm thủy tinh đầy hoa và trái cây" class="img-warm h-full w-full object-cover" width="1400" height="875">
+          </div>
+        </div>
+      </div>
+      <ul class="mt-16 grid grid-cols-1 gap-x-12 gap-y-10 border-t border-paper/20 pt-12 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5" data-reveal-stagger="80">
+        <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium" data-vi="Ô long đào mộc tê">Peach &amp; Osmanthus Oolong</h3><span class="flex-1 border-b border-dotted border-paper/30"></span><span class="font-display text-xl text-paper-deep">79</span></div><p class="mt-2 text-[15px] leading-relaxed text-paper/75" data-vi="Đào vàng, hoa mộc tê, ô long Đài Loan.">Yellow peach, osmanthus, Taiwanese oolong.</p></li>
+        <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium" data-vi="Atiso đỏ, hồng và vải">Hibiscus, Rose &amp; Lychee</h3><span class="flex-1 border-b border-dotted border-paper/30"></span><span class="font-display text-xl text-paper-deep">75</span></div><p class="mt-2 text-[15px] leading-relaxed text-paper/75" data-vi="Chua nhẹ, thơm hoa hồng, không caffeine.">Gently tart and rose-scented, caffeine free.</p></li>
+        <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium" data-vi="Hồng trà cam quế">Orange Peel &amp; Cinnamon</h3><span class="flex-1 border-b border-dotted border-paper/30"></span><span class="font-display text-xl text-paper-deep">75</span></div><p class="mt-2 text-[15px] leading-relaxed text-paper/75" data-vi="Vỏ cam sấy, quế Trà My, hồng trà.">Dried orange peel, Tra My cinnamon, black tea.</p></li>
+        <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium" data-vi="Trà xanh chanh dây">Passion Fruit Green</h3><span class="flex-1 border-b border-dotted border-paper/30"></span><span class="font-display text-xl text-paper-deep">72</span></div><p class="mt-2 text-[15px] leading-relaxed text-paper/75" data-vi="Chanh dây Lâm Đồng, trà xanh, lá bạc hà.">Lam Dong passion fruit, green tea, mint leaf.</p></li>
+        <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium" data-vi="Táo và cúc La Mã">Apple Chamomile</h3><span class="flex-1 border-b border-dotted border-paper/30"></span><span class="font-display text-xl text-paper-deep">72</span></div><p class="mt-2 text-[15px] leading-relaxed text-paper/75" data-vi="Táo đỏ nướng, cúc La Mã, mật ong rừng.">Baked red apple, chamomile, wild honey.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHAPTER IV -->
+  <section id="pastries" data-section="list-editorial" class="scroll-mt-20 bg-paper-light py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
+        <div class="lg:col-span-7">
+          <div class="aspect-[4/3] overflow-hidden bg-paper-deep xl:aspect-[16/11]" data-reveal="clip">
+            <img src="https://images.unsplash.com/photo-1710077717714-976db5604dd7?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A table set with an assortment of pastries" data-vi-alt="Bàn bày nhiều loại bánh ngọt" class="img-warm h-full w-full object-cover" width="1400" height="960">
+          </div>
+          <p class="mt-4 text-xs tracking-[0.08em] text-wood" data-vi="Mẻ bánh buổi sáng, ra lò lúc 7 giờ">The morning bake, out of the oven at seven</p>
+        </div>
+        <div class="lg:col-span-5 lg:pl-6">
+          <p class="font-display text-7xl italic leading-none text-burgundy/80 sm:text-8xl">IV.</p>
+          <h2 class="mt-4 font-display text-4xl font-medium text-forest sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Bánh ngọt">Pastries</h2>
+          <div data-rule class="mt-6 h-px w-24 bg-burgundy"></div>
+          <p class="mt-6 max-w-prose text-[17px] leading-relaxed text-ink-soft" data-reveal="up" data-vi="Nướng tại bếp mỗi sáng với bơ Normandy và bột mì xay đá. Khi hết là hết, nên hãy đến sớm.">Baked in our kitchen each morning with Normandy butter and stone-milled flour. When they are gone, they are gone.</p>
+          <ul class="mt-10 space-y-8" data-reveal-stagger="80">
+            <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Scone sữa bơ">Buttermilk Scones</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">65</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Hai chiếc, kem đặc và mứt dâu nhà làm.">A pair, with clotted cream and house strawberry jam.</p></li>
+            <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Madeleine Earl Grey">Earl Grey Madeleines</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">55</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Ba chiếc, nướng ngay khi gọi món.">Three, baked to order.</p></li>
+            <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Bánh bông lan chanh">Lemon Drizzle Cake</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">68</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Chanh vàng, lớp đường giòn phía trên.">Lemon sponge with a crisp sugar glaze.</p></li>
+            <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Croissant hạnh nhân">Almond Croissant</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">69</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Nhân kem hạnh nhân, nướng hai lần.">Frangipane filled and twice baked.</p></li>
+            <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Financier trà xanh">Matcha Financier</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">58</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Bơ nâu và matcha Uji.">Brown butter and Uji matcha.</p></li>
+            <li><div class="flex items-baseline gap-3"><h3 class="font-display text-2xl font-medium text-forest" data-vi="Trà chiều cho hai người">Afternoon Tea for Two</h3><span class="flex-1 border-b border-dotted border-wood/40"></span><span class="font-display text-xl text-burgundy">420</span></div><p class="mt-2 text-[15px] leading-relaxed text-ink-soft" data-vi="Hai ấm trà tự chọn, khay bánh ba tầng, từ 14:00 đến 17:00.">Two pots of your choice and a three-tier stand, 14:00 to 17:00.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="menu-cta" data-section="cta-type" class="bg-paper py-24 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-end gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <h2 class="font-display text-5xl font-medium leading-[1.05] text-forest sm:text-6xl lg:col-span-8 2xl:text-8xl" data-reveal="up" data-vi="Thực đơn hay nhất khi được <em class='italic text-burgundy'>đọc tại chỗ</em>">The menu reads best <em class="italic text-burgundy">at the table</em></h2>
+      <div class="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:justify-end">
+        <a href="../index.html#visit" class="inline-flex min-h-[48px] items-center justify-center bg-forest px-7 text-[15px] font-medium text-paper-light transition-all duration-300 hover:bg-forest-deep active:scale-[.98]" data-vi="Ghé thăm thư viện">Visit the Library</a>
+        <a href="about.html" class="inline-flex min-h-[48px] items-center justify-center border border-forest/40 px-7 text-[15px] text-forest transition-colors duration-300 hover:border-forest hover:bg-forest hover:text-paper-light" data-vi="Câu chuyện của chúng tôi">Our Story</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="bg-forest text-paper">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <a href="../index.html" class="font-display text-3xl font-semibold tracking-[0.18em] sm:text-4xl">THE TEA LIBRARY</a>
+        <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-paper/70" data-vi="Nhà của trà và bánh, lấy cảm hứng từ thư viện cổ và phòng trà châu Âu.">A house of tea and pastry, inspired by old libraries and European tea rooms.</p>
+      </div>
+      <nav aria-label="Footer" class="md:col-span-3">
+        <p class="font-display text-lg italic text-paper-deep" data-vi="Các trang">Pages</p>
+        <ul class="mt-4 space-y-2 text-[15px]">
+          <li><a href="../index.html" class="inline-flex min-h-[32px] items-center text-paper/80 transition-colors duration-300 hover:text-paper" data-vi="Trang chủ">Home</a></li>
+          <li><a href="menu.html" class="inline-flex min-h-[32px] items-center text-paper/80 transition-colors duration-300 hover:text-paper" data-vi="Thực đơn">Menu</a></li>
+          <li><a href="about.html" class="inline-flex min-h-[32px] items-center text-paper/80 transition-colors duration-300 hover:text-paper" data-vi="Về chúng tôi">About</a></li>
+          <li><a href="../index.html#visit" class="inline-flex min-h-[32px] items-center text-paper/80 transition-colors duration-300 hover:text-paper" data-vi="Ghé thăm">Visit</a></li>
+        </ul>
+      </nav>
+      <div class="md:col-span-4">
+        <p class="font-display text-lg italic text-paper-deep" data-vi="Ghé thăm">Visit</p>
+        <p class="mt-4 text-[15px] leading-relaxed text-paper/80">27 Ngo Duc Ke, Ben Nghe Ward<br><span data-vi="Quận 1, TP. Hồ Chí Minh">District 1, Ho Chi Minh City</span><br><a href="tel:+842838229147" class="transition-colors duration-300 hover:text-paper">+84 28 3822 9147</a><br><a href="mailto:hello@thetealibrary.vn" class="transition-colors duration-300 hover:text-paper">hello@thetealibrary.vn</a></p>
+      </div>
+    </div>
+    <div data-rule class="mt-16 h-px w-full bg-paper/20"></div>
+    <div class="mt-6 flex flex-col gap-3 text-[13px] text-paper/60 sm:flex-row sm:justify-between">
+      <p>&copy; 2026 THE TEA LIBRARY. <span data-vi="Bảo lưu mọi quyền.">All rights reserved.</span></p>
+      <a href="#top" class="transition-colors duration-300 hover:text-paper" data-vi="Lên đầu trang">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-30 inline-flex h-11 w-11 items-center justify-center bg-forest text-paper shadow-lg transition-colors duration-300 hover:bg-burgundy" aria-label="Back to top" data-vi-aria="Lên đầu trang">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

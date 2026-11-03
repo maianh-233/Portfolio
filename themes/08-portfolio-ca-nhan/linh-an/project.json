@@ -1,0 +1,94 @@
+{
+  "slug": "linh-an",
+  "name": "Linh An",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website portfolio cá nhân",
+    "brand": "Linh An",
+    "purpose": "",
+    "audience": "",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "# WEBSITE PORTFOLIO: BLOOMÉ\n## Wedding Floral Designer — Romantic Editorial × Botanical Luxury\n\n### 1. TỔNG QUAN\n\nThiết kế website portfolio cá nhân cho **Linh An**, một nghệ nhân thiết kế hoa cưới chuyên sáng tạo hoa cầm tay cô dâu, trang trí lễ đường và không gian tiệc cưới nghệ thuật.\n\nTên thương hiệu cá nhân: **BLOOMÉ**.\n\nWebsite có nhiệm vụ giới thiệu phong cách sáng tạo, trưng bày các dự án hoa cưới tiêu biểu, kể câu chuyện nghệ thuật của người thiết kế và giúp khách hàng liên hệ hợp tác.\n\nĐây là portfolio cá nhân, không phải website bán hoa. Không tạo giỏ hàng, thanh toán trực tuyến hoặc hệ thống thương mại điện tử.\n\n### 2. PHONG CÁCH THIẾT KẾ\n\n**Art direction: Romantic Editorial × Botanical Luxury × Fine Art Wedding Photography.**\n\nTạo cảm giác như một tạp chí nghệ thuật cưới cao cấp kết hợp triển lãm nhiếp ảnh hoa.\n\nBảng màu:\n- Deep Burgundy: `#722F37` — màu nhận diện nổi bật.\n- Champagne: `#E8D8C3` — màu nền phụ.\n- Sage Green: `#929B80` — màu thiên nhiên.\n- Warm Ivory: `#F8F4ED` — màu nền chủ đạo.\n- Dusty Rose: `#C58F91` — màu nhấn phụ.\n\nSử dụng Warm Ivory làm nền chính, Burgundy cho tiêu đề và các điểm nhấn quan trọng, Sage Green để tạo sự cân bằng. Không phủ hồng pastel lên toàn bộ giao diện.\n\nTypography kết hợp serif thanh lịch như Cormorant Garamond với sans-serif hiện đại như Manrope. Sử dụng tiêu đề lớn, chữ nghiêng nghệ thuật và cách sắp xếp chữ mang phong cách editorial.\n\nBố cục bất đối xứng, ảnh khổ lớn, ảnh chồng lớp, khoảng trắng có chủ đích và các chi tiết đường nét thực vật tinh tế. Tránh bố cục card đồng nhất, giao diện cửa hàng hoa truyền thống và thiết kế template đại trà.\n\n### 3. CẤU TRÚC WEBSITE\n\n**SECTION 01 — HERO**\n\nTạo màn hình mở đầu giàu tính nghệ thuật với hình ảnh một không gian tiệc cưới được trang trí bằng hoa tươi, ánh sáng tự nhiên và những chất liệu sang trọng.\n\nNội dung:\n\nBLOOMÉ  \nWedding Floral Artistry\n\nTiêu đề lớn:\n\"Every Love Story Blooms Differently.\"\n\nMô tả:\n\"Thoughtfully designed florals that turn meaningful moments into unforgettable memories.\"\n\nNút:\n- Explore My Work\n- My Creative Philosophy\n\nBố cục tiêu đề đặt lệch về một phía, kết hợp ảnh hoa cưới khổ lớn chiếm phần lớn màn hình. Logo nhỏ gọn, thanh điều hướng thanh lịch và hiệu ứng xuất hiện nhẹ nhàng.\n\n**SECTION 02 — ABOUT THE ARTIST**\n\nTiêu đề:\n\"Flowers are my way of telling stories.\"\n\nGiới thiệu Linh An, nghệ nhân thiết kế hoa cưới yêu thích việc kết hợp màu sắc, hình khối tự nhiên và chất liệu thực vật để tạo nên những không gian giàu cảm xúc.\n\nNội dung nhấn mạnh triết lý thiết kế riêng cho từng cặp đôi, sự tỉ mỉ trong lựa chọn hoa và khả năng kể chuyện bằng nghệ thuật sắp đặt.\n\nBố cục kết hợp ảnh chân dung hoặc ảnh nghệ nhân đang làm việc với hoa, văn bản ngắn và các chi tiết typography nghệ thuật. Tránh sử dụng một profile card đơn giản.\n\n**SECTION 03 — SIGNATURE COLLECTIONS**\n\nTiêu đề:\n\"A collection of beautiful beginnings.\"\n\nTrưng bày bốn bộ sưu tập hoa cưới, mỗi bộ có bảng màu và phong cách riêng.\n\n**01. GARDEN ROMANCE**\n\nPhong cách: Romantic European Garden.\n\nHoa hồng vườn, hoa mao lương, hoa trắng nhỏ và lá xanh tự nhiên. Cách sắp đặt phóng khoáng, mềm mại, như một khu vườn đang nở rộ.\n\nMàu sắc: Ivory, Sage Green, Dusty Rose.\n\n**02. IVORY ELEGANCE**\n\nPhong cách: Refined Contemporary Wedding.\n\nHoa trắng kem, lan, hoa hồng trắng và những cụm hoa có hình dáng thanh thoát. Bố cục tinh tế, sang trọng, tập trung vào hình khối và ánh sáng.\n\nMàu sắc: Warm Ivory, Champagne, Olive Green.\n\n**03. WILDFLOWER DREAMS**\n\nPhong cách: Artistic Meadow Wedding.\n\nHoa theo mùa, cành lá tự nhiên, hoa dại và những hình dáng bất quy tắc. Tổng thể tự do, giàu tính nghệ thuật, không quá trau chuốt hoặc đối xứng.\n\nMàu sắc: Muted Green, Cream, Terracotta.\n\n**04. VELVET ROSE**\n\nPhong cách: Dramatic Romantic Luxury.\n\nHoa hồng đỏ rượu vang, hoa đỏ sẫm, điểm xuyết hoa kem và lá xanh đậm. Ánh sáng tương phản, không gian giàu chiều sâu và cảm giác lãng mạn trưởng thành.\n\nMàu sắc: Deep Burgundy, Champagne, Dark Green.\n\nMỗi bộ sưu tập phải có hình ảnh lớn, tên bộ sưu tập, mô tả ngắn và nút \"Explore Collection\". Khi nhấn vào, mở trang chi tiết hoặc overlay giới thiệu thêm hình ảnh, ý tưởng thiết kế và bảng màu.\n\nKhông trình bày bốn bộ sưu tập thành bốn card giống hệt nhau. Hãy thay đổi tỷ lệ ảnh, cách sắp xếp và vị trí văn bản để tạo nhịp điệu thị giác.\n\n**SECTION 04 — BRIDAL BOUQUETS**\n\nTiêu đề:\n\"Made to walk with you.\"\n\nTạo một gallery giới thiệu hoa cầm tay cô dâu với nhiều kiểu dáng:\n- Classic Round Bouquet.\n- Loose Garden Bouquet.\n- Cascading Bridal Bouquet.\n- Sculptural Contemporary Bouquet.\n- Burgundy Statement Bouquet.\n\nMỗi mẫu cần thể hiện rõ hình dáng, kết cấu hoa và cách phối màu.\n\nThiết kế gallery như một bộ ảnh editorial thời trang cưới. Sử dụng ảnh chân dung hoặc ảnh cận cảnh chất lượng cao, phối hợp các kích thước ảnh khác nhau và caption nhỏ.\n\nKhông dùng giao diện danh sách sản phẩm hoặc hiển thị giá bán.\n\n**SECTION 05 — BEHIND THE BLOOMS**\n\nTiêu đề:\n\"From a feeling to a floral story.\"\n\nTrình bày quy trình sáng tạo qua bốn bước:\n\n01 — Discover  \nTìm hiểu câu chuyện tình yêu, địa điểm và cảm xúc mà cặp đôi muốn lưu giữ.\n\n02 — Imagine  \nXây dựng concept, bảng màu và lựa chọn hoa phù hợp.\n\n03 — Compose  \nThử nghiệm hình khối, kết cấu, tỷ lệ và cách sắp đặt hoa.\n\n04 — Bring to Life  \nHoàn thiện thiết kế và biến ý tưởng thành không gian hoa cưới thực tế.\n\nSử dụng ảnh hậu trường, bàn làm việc với hoa tươi, bảng phối màu và hình ảnh nghệ nhân đang cắm hoa. Bố cục dạng timeline sáng tạo hoặc chuỗi hình ảnh kể chuyện, không dùng bốn card thông thường.\n\n**SECTION 06 — THE DETAILS**\n\nTiêu đề:\n\"Beauty lives in the details.\"\n\nTạo một bộ sưu tập ảnh cận cảnh:\n- Cánh hoa và kết cấu tự nhiên.\n- Sự kết hợp giữa hoa và dải ruy băng.\n- Hoa trang trí bàn tiệc.\n- Chi tiết hoa trên lễ đường.\n- Sự tương phản giữa hoa Burgundy và hoa kem.\n- Cách hoa hòa quyện với khăn trải bàn, nến và chất liệu trang trí.\n\nSử dụng ảnh macro và ánh sáng tự nhiên để làm nổi bật vẻ đẹp của vật liệu. Trình bày theo dạng collage nghệ thuật, không đóng khung mọi ảnh trong các card giống nhau.\n\n**SECTION 07 — KIND WORDS**\n\nTiêu đề:\n\"Memories that continue to bloom.\"\n\nHiển thị hai hoặc ba lời nhận xét ngắn từ khách hàng giả lập, tập trung vào trải nghiệm và cảm xúc trong ngày cưới.\n\nMỗi nhận xét có tên viết tắt, mô tả phong cách tiệc cưới và nội dung phản hồi.\n\nĐánh dấu đây là nội dung mẫu nếu website được dùng để trình diễn. Không trình bày lời nhận xét giả lập như đánh giá thực tế.\n\n**SECTION 08 — CONTACT**\n\nSử dụng nền Deep Burgundy hoặc hình ảnh hoa cưới nghệ thuật với lớp phủ tối nhẹ.\n\nTiêu đề:\n\"Let's create something unforgettable.\"\n\nMô tả:\n\"Tell me about your celebration, your inspiration, and the feeling you want your flowers to express.\"\n\nNút chính:\n\"Start a Conversation\"\n\nThông tin liên hệ mẫu:\n- Email: hello@bloome.example\n- Location: Ho Chi Minh City, Vietnam.\n- Instagram: BLOOMÉ Floral Artistry.\n\nCó thể triển khai biểu mẫu liên hệ đơn giản gồm tên, email, ngày cưới dự kiến và lời nhắn. Nếu chưa có backend, sử dụng liên kết email hoặc thông báo rõ rằng biểu mẫu chỉ là giao diện demo.\n\n**SECTION 09 — FOOTER**\n\nHiển thị logo BLOOMÉ, một câu tagline ngắn:\n\n\"Every flower holds a feeling.\"\n\nKèm liên kết đến About, Collections, Bridal Bouquets và Contact. Footer gọn gàng, thanh lịch, sử dụng typography phù hợp với toàn bộ website.\n\n### 4. YÊU CẦU HÌNH ẢNH\n\nHình ảnh là yếu tố quan trọng nhất của website. Ưu tiên ảnh chụp hoa cưới chuyên nghiệp theo phong cách fine-art editorial.\n\nTừ khóa tìm ảnh:\n- `luxury wedding floral editorial photography`\n- `burgundy wedding flowers champagne palette`\n- `fine art bridal bouquet natural light`\n- `romantic garden wedding flower installation`\n- `editorial wedding tablescape floral design`\n- `wildflower wedding floral art photography`\n- `dark burgundy rose wedding ceremony flowers`\n\nYêu cầu:\n- Ảnh phải có hoa tươi chân thực, màu sắc tự nhiên và bố cục nghệ thuật.\n- Mỗi bộ sưu tập cần hình ảnh đúng với concept tương ứng.\n- Không lặp lại cùng một ảnh ở nhiều section.\n- Tránh ảnh hoa nhựa, hoa hoạt hình, ảnh chất lượng thấp hoặc ảnh không liên quan.\n- Không sử dụng ảnh phong cảnh hay ảnh cô dâu đơn thuần để thay thế ảnh thiết kế hoa.\n- Nếu không tìm được ảnh phù hợp, sử dụng placeholder có định hướng rõ ràng thay vì chọn ảnh ngẫu nhiên.\n- Các dự án, tên khách hàng và thông tin cá nhân đều là dữ liệu giả lập.\n\n### 5. HIỆU ỨNG VÀ TƯƠNG TÁC\n\n- Ảnh xuất hiện bằng hiệu ứng fade và reveal mềm mại.\n- Chữ lớn xuất hiện theo từng dòng khi tải trang hoặc cuộn.\n- Gallery có hiệu ứng zoom nhẹ khi hover.\n- Các bộ sưu tập mở được phần chi tiết.\n- Chuyển động parallax nhẹ trên một số ảnh lớn.\n- Menu điều hướng mượt mà và hoạt động tốt trên mobile.\n- Nút bấm có trạng thái hover và focus rõ ràng.\n\nKhông lạm dụng hiệu ứng hoa rơi, cánh hoa bay, trái tim hoặc animation trang trí kiểu thiệp cưới. Tránh chuyển động quá nhiều gây phân tán sự chú ý khỏi hình ảnh.\n\n### 6. YÊU CẦU KỸ THUẬT\n\n- Sử dụng HTML, CSS và JavaScript thuần.\n- Tách riêng `index.html`, `style.css` và `script.js`.\n- Thiết kế responsive cho desktop, tablet và mobile.\n- Tối ưu hình ảnh và tốc độ tải trang.\n- Đảm bảo tiếng Việt hiển thị đúng dấu nếu có nội dung tiếng Việt.\n- Các liên kết, menu, gallery và nút tương tác phải hoạt động.\n- Không tạo giỏ hàng, thanh toán hoặc tính năng thương mại điện tử.\n- Không tạo chức năng backend giả vờ hoạt động khi chưa được triển khai.\n\n### 7. TIÊU CHÍ HOÀN THIỆN\n\nWebsite cuối cùng phải mang cảm giác của một portfolio nghệ thuật cưới cao cấp, giàu hình ảnh và có dấu ấn cá nhân.\n\n**Ưu tiên hàng đầu:** Hình ảnh hoa cưới chất lượng cao, bảng màu Burgundy × Champagne × Sage Green, bố cục editorial sáng tạo và sự khác biệt rõ ràng giữa các bộ sưu tập.\n\nKhông biến website thành một template dịch vụ cưới thông thường. Hãy thiết kế như một triển lãm nghệ thuật kể chuyện bằng hoa.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-26T08:06:28.608Z",
+  "updatedAt": "2026-10-26T08:26:39.176Z",
+  "screen": "done",
+  "request": "Website portfolio cá nhân",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\linh-an\\web",
+    "builtAt": "2026-10-26T08:26:15.782Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/bouquets.html",
+      "pages/collection-garden-romance.html",
+      "pages/collection-ivory-elegance.html",
+      "pages/collection-velvet-rose.html",
+      "pages/collection-wildflower-dreams.html",
+      "pages/collections.html",
+      "pages/contact.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/bouquets.html": [],
+      "pages/collection-garden-romance.html": [],
+      "pages/collection-ivory-elegance.html": [],
+      "pages/collection-velvet-rose.html": [],
+      "pages/collection-wildflower-dreams.html": [],
+      "pages/collections.html": [],
+      "pages/contact.html": []
+    }
+  },
+  "job": {
+    "id": "3b683865-3dc7-432a-b029-60aa29ab2613",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\linh-an\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 70,
+      "outputTokens": 79267,
+      "cacheReadTokens": 8138205,
+      "cacheCreationTokens": 287833,
+      "costUsd": 5.515925,
+      "numTurns": 134,
+      "durationMs": 1165652
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-26T08:26:36.453Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 27
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "file": "assets/img/home-hero-night-riders.webp",
+    "purpose": "index.html — hero, xe máy đô thị về đêm",
+    "source": "openverse",
+    "id": "openverse-a6652325-e7a0-42f3-9d77-04a2d58ceee1",
+    "title": "People motorbikes, wearing helmets night",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/3283252/free-photo-image-city-night-people-chi-minh"
+  },
+  {
+    "file": "assets/img/home-story-night-ride.jpg",
+    "purpose": "index.html — banner câu chuyện văn hóa biker",
+    "source": "openverse",
+    "id": "openverse-6c856b9a-927c-47c1-b88e-47a43cebbe65",
+    "title": "Scooter Motorbike",
+    "creator": "Skitter Photo",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/scooter-motorbike-2F43546631"
+  },
+  {
+    "file": "assets/img/product-helmet-star.webp",
+    "purpose": "pages/collections.html — thẻ sản phẩm mũ bảo hiểm",
+    "source": "openverse",
+    "id": "openverse-5fa80235-793b-4641-8111-e37dfa486092",
+    "title": "Free motorbike helmet image",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/5901164/photo-image-public-domain-star-black"
+  },
+  {
+    "file": "assets/img/product-helmet-open-face.webp",
+    "purpose": "pages/collections.html — thẻ sản phẩm mũ bảo hiểm 2",
+    "source": "openverse",
+    "id": "openverse-da9fe03a-d74b-45c1-a9a6-85e6d7f4c55a",
+    "title": "Original public domain image Flickr",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/6081202/original-public-domain-image-from-flickr"
+  },
+  {
+    "file": "assets/img/home-intro-rider.jpg",
+    "purpose": "index.html — giới thiệu thương hiệu, người lái",
+    "source": "openverse",
+    "id": "openverse-69a3a081-808f-4f2d-8b84-8efbd4faded3",
+    "title": "Motor Motorcycle",
+    "creator": "Mike Wilson",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/motor-motorcycle-SQ0TNVHHO0"
+  },
+  {
+    "file": "assets/img/product-gloves-rider.jpg",
+    "purpose": "pages/collections.html — găng tay bảo hộ",
+    "source": "openverse",
+    "id": "openverse-a32cce27-e4e2-4cc7-8955-123818cde9ef",
+    "title": "Rider gloves",
+    "creator": "driver Photographer",
+    "license": "CC BY-SA 2.0",
+    "page": "https://www.flickr.com/photos/72334647@N03/54538425675"
+  },
+  {
+    "file": "assets/img/product-helmet-biker.webp",
+    "purpose": "pages/product-showcase.html — mũ bảo hiểm chi tiết",
+    "source": "openverse",
+    "id": "openverse-1fb90a69-2b6b-4dfd-ad29-918d581d8784",
+    "title": "",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/6056374/free-public-domain-cc0-photo"
+  }
+]

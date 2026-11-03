@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stays — CASA SOL</title>
+<meta name="description" content="Rooms, suites and a private villa at CASA SOL: arched windows, natural materials, sunlit terraces and gardens, plus the pool, outdoor restaurant and lounge.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body data-page="stays" class="bg-chalk font-body text-ink antialiased">
+<!-- @partial header -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-chalk focus:px-4 focus:py-2" data-i18n="g.skip">Skip to content</a>
+<header id="top" data-header class="sticky top-0 z-50 border-b border-ink/10 bg-chalk">
+  <div class="mx-auto flex h-[68px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-[1.65rem] font-semibold leading-none tracking-[0.2em] text-ink transition-colors duration-300 hover:text-terra-deep">CASA SOL</a>
+    <nav aria-label="Main" class="hidden items-center gap-10 lg:flex">
+      <a href="../index.html" data-i18n="g.nav.home" class="relative py-2 text-[15px] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0 after:bg-terra after:transition-transform after:duration-500 hover:text-terra-deep hover:after:scale-x-100 aria-[current=page]:text-terra-deep aria-[current=page]:after:scale-x-100">Home</a>
+      <a href="../pages/about.html" data-i18n="g.nav.about" class="relative py-2 text-[15px] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0 after:bg-terra after:transition-transform after:duration-500 hover:text-terra-deep hover:after:scale-x-100 aria-[current=page]:text-terra-deep aria-[current=page]:after:scale-x-100">About</a>
+      <a aria-current="page" href="../pages/stays.html" data-i18n="g.nav.stays" class="relative py-2 text-[15px] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0 after:bg-terra after:transition-transform after:duration-500 hover:text-terra-deep hover:after:scale-x-100 aria-[current=page]:text-terra-deep aria-[current=page]:after:scale-x-100">Stays</a>
+      <a href="../pages/experiences.html" data-i18n="g.nav.exp" class="relative py-2 text-[15px] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0 after:bg-terra after:transition-transform after:duration-500 hover:text-terra-deep hover:after:scale-x-100 aria-[current=page]:text-terra-deep aria-[current=page]:after:scale-x-100">Experiences</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div role="group" aria-label="Language" data-i18n-aria="g.lang" class="flex items-center rounded-full border border-ink/15 p-0.5 text-[13px] font-medium tracking-wider">
+        <button type="button" data-lang-set="en" aria-pressed="true" class="min-h-[40px] min-w-[44px] rounded-full px-3 text-ink-soft transition-colors duration-300 hover:text-ink [&.is-active]:bg-ink [&.is-active]:text-chalk">EN</button>
+        <button type="button" data-lang-set="vi" aria-pressed="false" class="min-h-[40px] min-w-[44px] rounded-full px-3 text-ink-soft transition-colors duration-300 hover:text-ink [&.is-active]:bg-ink [&.is-active]:text-chalk">VI</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Open menu" data-i18n-aria="g.menu" class="inline-flex h-11 w-11 items-center justify-center text-ink lg:hidden">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-ink/10 bg-chalk p-6 shadow-2xl lg:hidden">
+  <nav aria-label="Mobile" class="flex flex-col">
+    <a href="../index.html" data-i18n="g.nav.home" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-terra-deep">Home</a>
+    <a href="../pages/about.html" data-i18n="g.nav.about" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-terra-deep">About</a>
+    <a aria-current="page" href="../pages/stays.html" data-i18n="g.nav.stays" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-terra-deep">Stays</a>
+    <a href="../pages/experiences.html" data-i18n="g.nav.exp" class="flex min-h-[52px] items-center font-display text-2xl text-ink aria-[current=page]:text-terra-deep">Experiences</a>
+  </nav>
+</div>
+<!-- /@partial header -->
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section id="stays-hero" data-section="page-hero-wide" class="bg-chalk pt-14 lg:pt-20">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-8">
+          <p data-i18n="s.hero.eyebrow" class="text-xs font-medium uppercase tracking-[0.32em] text-terra-deep">Rooms, villa &amp; amenities</p>
+          <h1 data-split="words" data-i18n="s.hero.title" class="mt-6 max-w-5xl font-display text-[clamp(3rem,6.6vw,6.8rem)] font-medium leading-[0.96]">Rooms with a Mediterranean Soul</h1>
+        </div>
+        <p data-reveal="up" data-i18n="s.hero.sub" class="max-w-md text-[17px] leading-relaxed text-ink-soft lg:col-span-4 lg:pb-3">Lime-washed walls, linen, local stone and windows that frame the sea or the garden. Every room is shaped by the landscape around it.</p>
+      </div>
+      <div data-scrub class="frame mt-12 aspect-[4/3] sm:aspect-[16/9] lg:mt-16 lg:aspect-[21/9]">
+        <img src="https://images.unsplash.com/photo-1760204741315-abfc98ce3bf5?auto=format&fit=crop&w=2000&q=80" referrerpolicy="no-referrer" alt="A lamp on a table beside a window overlooking the sea at sunset" data-i18n-alt="s.hero.alt" class="h-full w-full object-cover" style="transform: scale(calc(1.12 - var(--p, 0) * .12))" width="2000" height="857" fetchpriority="high">
+      </div>
+      <nav aria-label="Stays" data-i18n-aria="s.toc.label" class="grid border-b border-ink/15 sm:grid-cols-3">
+        <a href="#coastal-suite" class="group flex min-h-[64px] items-baseline gap-4 border-t border-ink/15 py-5 sm:border-t-0 sm:pr-6">
+          <span class="font-display text-lg italic text-terra-deep">01</span>
+          <span class="font-display text-2xl text-ink transition-colors duration-300 group-hover:text-terra-deep">Coastal Suite</span>
+        </a>
+        <a href="#courtyard-room" class="group flex min-h-[64px] items-baseline gap-4 border-t border-ink/15 py-5 sm:border-l sm:border-t-0 sm:px-6">
+          <span class="font-display text-lg italic text-terra-deep">02</span>
+          <span class="font-display text-2xl text-ink transition-colors duration-300 group-hover:text-terra-deep">Courtyard Room</span>
+        </a>
+        <a href="#private-villa" class="group flex min-h-[64px] items-baseline gap-4 border-t border-ink/15 py-5 sm:border-l sm:border-t-0 sm:px-6">
+          <span class="font-display text-lg italic text-terra-deep">03</span>
+          <span class="font-display text-2xl text-ink transition-colors duration-300 group-hover:text-terra-deep">Private Villa</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- COASTAL SUITE -->
+  <section id="coastal-suite" data-section="feature-split" class="scroll-mt-20 bg-chalk py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="relative lg:col-span-7">
+        <div data-reveal="clip" class="frame zoom aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1683387656179-6110eed7dfe2?auto=format&fit=crop&w=1800&q=80" referrerpolicy="no-referrer" loading="lazy" alt="The open sea seen from a white balcony" data-i18n-alt="s.cs.alt1" class="h-full w-full object-cover" width="1800" height="1350">
+        </div>
+        <figure class="relative -mt-20 ml-auto w-[48%] max-w-[300px] rotate-2 sm:-mt-28 lg:absolute lg:-bottom-16 lg:-right-14 lg:mt-0">
+          <div class="postcard postcard--lg">
+            <div class="frame aspect-[4/5]">
+              <img src="https://images.unsplash.com/photo-1722095454514-661600984095?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A white bed in front of a soft blue headboard" data-i18n-alt="s.cs.alt2" class="h-full w-full object-cover" width="1000" height="1250">
+            </div>
+            <figcaption data-i18n="s.cs.cap" class="mt-3 font-display text-lg italic leading-none text-ink-soft">Morning light, sea blue</figcaption>
+          </div>
+        </figure>
+      </div>
+      <div class="flex flex-col justify-center lg:col-span-4 lg:col-start-9">
+        <p class="font-display text-xl italic text-terra-deep">No. 01</p>
+        <h2 data-reveal="up" class="mt-3 font-display text-[clamp(2.6rem,4.4vw,4.4rem)] font-medium leading-[1]">Coastal Suite</h2>
+        <p data-reveal="up" data-i18n="s.cs.p" class="mt-7 max-w-prose text-[17px] leading-relaxed text-ink-soft">Wide windows turned towards the horizon, pale linen and walls the colour of chalk. The room changes with the light, from soft blue mornings to golden evenings on the balcony.</p>
+        <ul class="mt-9 max-w-sm border-t border-ink/15 text-[15px] text-ink">
+          <li data-i18n="s.cs.l1" class="border-b border-ink/15 py-3">Private balcony facing the sea</li>
+          <li data-i18n="s.cs.l2" class="border-b border-ink/15 py-3">King bed dressed in washed linen</li>
+          <li data-i18n="s.cs.l3" class="border-b border-ink/15 py-3">Stone bathroom with rain shower</li>
+          <li data-i18n="s.cs.l4" class="border-b border-ink/15 py-3">Reading corner by the window</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURTYARD ROOM -->
+  <section id="courtyard-room" data-section="feature-arch" class="relative scroll-mt-20 bg-sand-soft py-24 lg:py-36">
+    <div aria-hidden="true" class="absolute inset-y-0 left-0 hidden w-3 bg-terra lg:block"></div>
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="order-2 flex flex-col justify-center lg:order-1 lg:col-span-4 lg:col-start-2">
+        <p class="font-display text-xl italic text-terra-deep">No. 02</p>
+        <h2 data-reveal="up" class="mt-3 font-display text-[clamp(2.6rem,4.4vw,4.4rem)] font-medium leading-[1]">Courtyard Room</h2>
+        <p data-reveal="up" data-i18n="s.cr.p" class="mt-7 max-w-prose text-[17px] leading-relaxed text-ink-soft">Arched doors open straight onto a quiet courtyard of potted lemon trees and climbing jasmine. Cool terracotta underfoot, thick walls and a sense of privacy that feels like a home in the old village.</p>
+        <div class="mt-9 flex flex-wrap gap-2">
+          <span data-i18n="s.cr.t1" class="border border-terra/50 px-4 py-2 text-sm text-terra-deep">Garden terrace</span>
+          <span data-i18n="s.cr.t2" class="border border-terra/50 px-4 py-2 text-sm text-terra-deep">Vaulted ceiling</span>
+          <span data-i18n="s.cr.t3" class="border border-terra/50 px-4 py-2 text-sm text-terra-deep">Terracotta floors</span>
+        </div>
+      </div>
+      <div class="order-1 grid grid-cols-12 items-end gap-4 lg:order-2 lg:col-span-6 lg:col-start-7 lg:gap-6">
+        <div class="col-span-8">
+          <div data-reveal="clip" class="frame zoom arch aspect-[3/4]">
+            <img src="https://images.unsplash.com/photo-1611971263023-105938ce12ed?auto=format&fit=crop&w=1400&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A white bed with blue cushions in a calm, bright room" data-i18n-alt="s.cr.alt1" class="h-full w-full object-cover" width="1400" height="1867">
+          </div>
+        </div>
+        <figure class="col-span-4 pb-10">
+          <div data-reveal="clip" class="frame zoom aspect-square">
+            <img src="https://images.unsplash.com/photo-1765784606995-fd43684463eb?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="White outdoor seating beside a potted flowering tree" data-i18n-alt="s.cr.alt2" class="h-full w-full object-cover" width="1000" height="1000">
+          </div>
+          <figcaption data-i18n="s.cr.cap" class="mt-3 font-display text-base italic leading-snug text-ink-soft sm:text-lg">The courtyard at four o'clock</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVATE VILLA -->
+  <section id="private-villa" data-section="feature-wide" class="scroll-mt-20 bg-chalk pb-24 pt-24 lg:pb-36 lg:pt-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-display text-xl italic text-terra-deep">No. 03</p>
+          <h2 data-reveal="up" class="mt-3 font-display text-[clamp(2.6rem,4.4vw,4.4rem)] font-medium leading-[1]">Private Villa</h2>
+        </div>
+        <p data-i18n="s.pv.kicker" class="text-xs font-medium uppercase tracking-[0.32em] text-sea-deep">Terrace &middot; Plunge pool &middot; Sea view</p>
+      </div>
+      <div class="frame mt-10 aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]">
+        <div data-parallax="0.06" class="absolute inset-x-0 -inset-y-[12%]">
+          <img src="https://images.unsplash.com/photo-1787155394469-0dccd2e83b4f?auto=format&fit=crop&w=2000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A white villa with an outdoor spiral staircase above the sea" data-i18n-alt="s.pv.alt1" class="h-full w-full object-cover" width="2000" height="1100">
+        </div>
+      </div>
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-10">
+        <div class="pt-12 lg:col-span-5 lg:col-start-2 lg:pt-16">
+          <p data-reveal="up" data-i18n="s.pv.p" class="max-w-prose text-[17px] leading-relaxed text-ink-soft">A house of its own, set a little apart from the village. Two bedrooms, a living room that opens fully to the terrace, a plunge pool and a long table for dinners outdoors. Space to spread out, and complete quiet.</p>
+          <ul class="mt-9 grid max-w-md grid-cols-2 gap-x-8 border-t border-ink/15 text-[15px]">
+            <li data-i18n="s.pv.l1" class="border-b border-ink/15 py-3">Two bedrooms</li>
+            <li data-i18n="s.pv.l2" class="border-b border-ink/15 py-3">Private plunge pool</li>
+            <li data-i18n="s.pv.l3" class="border-b border-ink/15 py-3">Outdoor dining terrace</li>
+            <li data-i18n="s.pv.l4" class="border-b border-ink/15 py-3">Shaded day beds</li>
+          </ul>
+        </div>
+        <figure class="lg:col-span-4 lg:col-start-8 lg:-mt-32">
+          <div class="postcard postcard--lg -rotate-2">
+            <div class="frame aspect-[3/4]">
+              <img src="https://images.unsplash.com/photo-1561586003-e1bcd340f5d9?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Rattan armchairs in front of blue doors" data-i18n-alt="s.pv.alt2" class="h-full w-full object-cover" width="1000" height="1333">
+            </div>
+            <figcaption data-i18n="s.pv.cap" class="mt-3 font-display text-lg italic leading-none text-ink-soft">Blue doors, afternoon shade</figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section id="amenities" data-section="features-alternate" data-sky="#F7F3E9,#F7F3E9 | #EEF2F2,#E3EAEC | #F7F3E9,#F3ECDD" class="py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <p data-i18n="s.am.eyebrow" class="text-xs font-medium uppercase tracking-[0.32em] text-sea-deep">Around the resort</p>
+      <h2 data-reveal="up" data-i18n="s.am.title" class="mt-5 max-w-3xl font-display text-[clamp(2.4rem,4.2vw,4.2rem)] font-medium leading-[1.02]">Places to spend the day</h2>
+      <div class="mt-16 grid gap-16 md:grid-cols-2 md:gap-x-10 lg:gap-x-16">
+        <div class="space-y-16">
+          <article>
+            <div data-reveal="clip" class="frame zoom aspect-[4/5]">
+              <img src="https://images.unsplash.com/photo-1780914149187-c4f302dafbb0?auto=format&fit=crop&w=1400&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A resort swimming pool lined with sun loungers and gardens" data-i18n-alt="s.am.a1" class="h-full w-full object-cover" width="1400" height="1750">
+            </div>
+            <div class="bg-sea-deep p-7 text-chalk lg:p-9">
+              <h3 data-i18n="s.am.t1" class="font-display text-3xl font-medium">Outdoor pool</h3>
+              <p data-i18n="s.am.d1" class="mt-3 max-w-md text-[16px] leading-relaxed text-chalk/85">A long pool framed by olive trees and loungers, open from sunrise until the first stars.</p>
+            </div>
+          </article>
+          <article class="md:pr-16">
+            <div data-reveal="clip" class="frame zoom aspect-square">
+              <img src="https://images.unsplash.com/photo-1632739148604-53b9fd796690?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Branches of an olive tree heavy with green olives" data-i18n-alt="s.am.a3" class="h-full w-full object-cover" width="1000" height="1000">
+            </div>
+            <h3 data-i18n="s.am.t3" class="mt-7 font-display text-3xl font-medium text-olive-deep">Mediterranean garden</h3>
+            <p data-i18n="s.am.d3" class="mt-3 max-w-md text-[16px] leading-relaxed text-ink-soft">Olive trees, rosemary, lavender and bougainvillea, with stone paths and benches hidden in the shade.</p>
+          </article>
+        </div>
+        <div class="space-y-16 md:pt-32">
+          <article>
+            <div data-reveal="clip" class="frame zoom aspect-[16/11]">
+              <img src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?auto=format&fit=crop&w=1400&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Tables and chairs on a stone patio beside the sea" data-i18n-alt="s.am.a2" class="h-full w-full object-cover" width="1400" height="963">
+            </div>
+            <div class="bg-terra-deep p-7 text-chalk lg:p-9">
+              <h3 data-i18n="s.am.t2" class="font-display text-3xl font-medium">Outdoor restaurant</h3>
+              <p data-i18n="s.am.d2" class="mt-3 max-w-md text-[16px] leading-relaxed text-chalk/85">Breakfast, long lunches and candlelit dinners on a stone terrace a few steps from the water.</p>
+            </div>
+          </article>
+          <article class="md:pl-16">
+            <div data-reveal="clip" class="frame zoom arch aspect-[4/5]">
+              <img src="https://images.unsplash.com/photo-1469796466635-455ede028aca?auto=format&fit=crop&w=1400&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Two lounge chairs on a white terrace overlooking the sea" data-i18n-alt="s.am.a4" class="h-full w-full object-cover" width="1400" height="1750">
+            </div>
+            <h3 data-i18n="s.am.t4" class="mt-7 font-display text-3xl font-medium text-sea-deep">Lounge &amp; terraces</h3>
+            <p data-i18n="s.am.d4" class="mt-3 max-w-md text-[16px] leading-relaxed text-ink-soft">White terraces with cushions and low tables, made for reading, an afternoon drink or simply watching the boats.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section id="details" data-section="gallery-filmstrip" class="overflow-hidden bg-sand py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+        <h2 data-reveal="up" data-i18n="s.dt.title" class="font-display text-[clamp(2.4rem,4.2vw,4.2rem)] font-medium leading-[1.02] lg:col-span-7">The details that make a stay</h2>
+        <p data-i18n="s.dt.sub" class="max-w-md text-[16px] leading-relaxed text-ink lg:col-span-4 lg:col-start-9">Linen, hand-thrown ceramics, lemons on the table, old stone and painted doors. Drag to browse, tap to enlarge.</p>
+      </div>
+    </div>
+    <div data-drag-scroll class="no-scrollbar mt-14 flex snap-x snap-mandatory scroll-px-4 gap-6 overflow-x-auto px-4 sm:scroll-px-6 lg:scroll-px-10 2xl:scroll-px-16 pb-6 sm:px-6 lg:gap-10 lg:px-10 2xl:px-16">
+      <figure class="w-[70%] shrink-0 snap-start sm:w-[42%] lg:w-[24%]">
+        <a href="https://images.unsplash.com/photo-1705598122310-c7532144a329?auto=format&fit=crop&w=1000&q=80" data-lightbox="details" data-caption="Hand-thrown ceramics" data-i18n-cap="s.dt.c1" class="postcard block -rotate-1 transition duration-500 hover:rotate-0">
+          <span class="frame zoom block aspect-[4/5]"><img src="https://images.unsplash.com/photo-1705598122310-c7532144a329?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="White ceramic plates on a table" data-i18n-alt="s.dt.a1" class="h-full w-full object-cover" width="1000" height="1250"></span>
+        </a>
+        <figcaption data-i18n="s.dt.c1" class="mt-4 font-display text-lg italic text-ink">Hand-thrown ceramics</figcaption>
+      </figure>
+      <figure class="w-[70%] shrink-0 snap-start pt-10 sm:w-[42%] lg:w-[24%]">
+        <a href="https://images.unsplash.com/photo-1586718520704-f7f9db04b8c0?auto=format&fit=crop&w=1200&q=80" data-lightbox="details" data-caption="Lemons and glasses in the sun" data-i18n-cap="s.dt.c2" class="postcard block rotate-1 transition duration-500 hover:rotate-0">
+          <span class="frame zoom block aspect-square"><img src="https://images.unsplash.com/photo-1586718520704-f7f9db04b8c0?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A table set with plates, glasses and lemons in sunlight" data-i18n-alt="s.dt.a2" class="h-full w-full object-cover" width="1200" height="1200"></span>
+        </a>
+        <figcaption data-i18n="s.dt.c2" class="mt-4 font-display text-lg italic text-ink">Lemons and glasses in the sun</figcaption>
+      </figure>
+      <figure class="w-[70%] shrink-0 snap-start sm:w-[42%] lg:w-[24%]">
+        <a href="https://images.unsplash.com/photo-1721415290761-8202b0a094d3?auto=format&fit=crop&w=1000&q=80" data-lightbox="details" data-caption="Blue stripes, local pottery" data-i18n-cap="s.dt.c3" class="postcard block -rotate-2 transition duration-500 hover:rotate-0">
+          <span class="frame zoom block aspect-[3/4]"><img src="https://images.unsplash.com/photo-1721415290761-8202b0a094d3?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A blue and white striped cup beside a matching vase" data-i18n-alt="s.dt.a3" class="h-full w-full object-cover" width="1000" height="1333"></span>
+        </a>
+        <figcaption data-i18n="s.dt.c3" class="mt-4 font-display text-lg italic text-ink">Blue stripes, local pottery</figcaption>
+      </figure>
+      <figure class="w-[70%] shrink-0 snap-start pt-14 sm:w-[42%] lg:w-[24%]">
+        <a href="https://images.unsplash.com/photo-1652627703214-c982c57904f8?auto=format&fit=crop&w=1000&q=80" data-lightbox="details" data-caption="Wild flowers on the table" data-i18n-cap="s.dt.c4" class="postcard block rotate-2 transition duration-500 hover:rotate-0">
+          <span class="frame zoom block aspect-[4/5]"><img src="https://images.unsplash.com/photo-1652627703214-c982c57904f8?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A table with a vase of fresh flowers" data-i18n-alt="s.dt.a4" class="h-full w-full object-cover" width="1000" height="1250"></span>
+        </a>
+        <figcaption data-i18n="s.dt.c4" class="mt-4 font-display text-lg italic text-ink">Wild flowers on the table</figcaption>
+      </figure>
+      <figure class="w-[70%] shrink-0 snap-start sm:w-[42%] lg:w-[24%]">
+        <a href="https://images.unsplash.com/photo-1698517092454-c8ee5ed74b02?auto=format&fit=crop&w=1000&q=80" data-lightbox="details" data-caption="Old stone, a blue window" data-i18n-cap="s.dt.c5" class="postcard block -rotate-1 transition duration-500 hover:rotate-0">
+          <span class="frame zoom block aspect-square"><img src="https://images.unsplash.com/photo-1698517092454-c8ee5ed74b02?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="An old stone wall with a blue painted window" data-i18n-alt="s.dt.a5" class="h-full w-full object-cover" width="1000" height="1000"></span>
+        </a>
+        <figcaption data-i18n="s.dt.c5" class="mt-4 font-display text-lg italic text-ink">Old stone, a blue window</figcaption>
+      </figure>
+      <figure class="w-[70%] shrink-0 snap-start pt-8 sm:w-[42%] lg:w-[24%]">
+        <a href="https://images.unsplash.com/photo-1598376700101-3138a0d40f6d?auto=format&fit=crop&w=1000&q=80" data-lightbox="details" data-caption="A painted door in a white wall" data-i18n-cap="s.dt.c6" class="postcard block rotate-1 transition duration-500 hover:rotate-0">
+          <span class="frame zoom block aspect-[3/4]"><img src="https://images.unsplash.com/photo-1598376700101-3138a0d40f6d?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A blue wooden door set in a white wall" data-i18n-alt="s.dt.a6" class="h-full w-full object-cover" width="1000" height="1333"></span>
+        </a>
+        <figcaption data-i18n="s.dt.c6" class="mt-4 font-display text-lg italic text-ink">A painted door in a white wall</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section id="stays-closing" data-section="cta-fullbleed" class="relative overflow-hidden bg-ink">
+    <div class="relative min-h-[80vh] lg:min-h-[86vh]">
+      <img src="https://images.unsplash.com/photo-1504823349073-5a888013012e?auto=format&fit=crop&w=1400&q=80" referrerpolicy="no-referrer" loading="lazy" alt="A white wooden table and chairs by the calm water" data-i18n-alt="s.end.alt" class="absolute inset-0 h-full w-full object-cover" width="1400" height="933">
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/30 to-ink/5"></div>
+      <div class="relative mx-auto flex min-h-[80vh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-16 sm:px-6 lg:min-h-[86vh] lg:px-10 lg:pb-24 2xl:px-16">
+        <h2 data-split="words" data-i18n="s.end.title" class="max-w-4xl font-display text-[clamp(2.8rem,6vw,6.2rem)] font-medium leading-[0.98] text-chalk">A Stay Made for Slow Days</h2>
+        <p data-reveal="up" data-i18n="s.end.p" class="mt-6 max-w-lg text-[17px] leading-relaxed text-chalk/90">Wherever you sleep at CASA SOL, the sea, the garden and the light are never more than a few steps away.</p>
+        <div data-reveal="up" class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+          <a href="../index.html" data-i18n="s.end.cta1" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-chalk px-8 text-[15px] font-medium text-ink transition duration-300 hover:bg-sand active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-chalk">Back to home</a>
+          <a href="about.html" data-i18n="s.end.cta2" class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-chalk/70 px-8 text-[15px] font-medium text-chalk transition duration-300 hover:bg-chalk/10 active:scale-[.98]">Our story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer class="bg-terra-deep text-chalk">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 pb-10 pt-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:pt-24 2xl:px-16">
+    <div class="lg:col-span-5">
+      <a href="../index.html" class="font-display text-4xl font-semibold tracking-[0.2em] text-chalk transition-opacity duration-300 hover:opacity-80">CASA SOL</a>
+      <p data-i18n="g.foot.about" class="mt-6 max-w-sm font-display text-[1.6rem] italic leading-snug text-chalk/90">A boutique resort in the spirit of a Mediterranean coastal village. Sun, stone and slow days.</p>
+    </div>
+    <nav aria-label="Footer" class="lg:col-span-3">
+      <p data-i18n="g.foot.explore" class="text-xs font-medium uppercase tracking-[0.3em] text-chalk/70">Explore</p>
+      <ul class="mt-6 space-y-1 text-[16px]">
+        <li><a href="../index.html" data-i18n="g.nav.home" class="inline-flex min-h-[40px] items-center text-chalk transition-opacity duration-300 hover:opacity-70">Home</a></li>
+        <li><a href="../pages/about.html" data-i18n="g.nav.about" class="inline-flex min-h-[40px] items-center text-chalk transition-opacity duration-300 hover:opacity-70">About</a></li>
+        <li><a aria-current="page" href="../pages/stays.html" data-i18n="g.nav.stays" class="inline-flex min-h-[40px] items-center text-chalk transition-opacity duration-300 hover:opacity-70">Stays</a></li>
+        <li><a href="../pages/experiences.html" data-i18n="g.nav.exp" class="inline-flex min-h-[40px] items-center text-chalk transition-opacity duration-300 hover:opacity-70">Experiences</a></li>
+      </ul>
+    </nav>
+    <div class="lg:col-span-4">
+      <p data-i18n="g.foot.contact" class="text-xs font-medium uppercase tracking-[0.3em] text-chalk/70">Contact</p>
+      <address class="mt-6 space-y-2 text-[16px] not-italic leading-relaxed">
+        <span data-i18n="g.foot.addr" class="block">Harbour Lane, Old Village, Mediterranean coast</span>
+        <a href="tel:+302100000000" class="inline-flex min-h-[40px] items-center text-chalk underline decoration-chalk/40 underline-offset-4 transition-opacity duration-300 hover:opacity-70">+30 210 000 0000</a><br>
+        <a href="mailto:hello@casasol.example" class="inline-flex min-h-[40px] items-center text-chalk underline decoration-chalk/40 underline-offset-4 transition-opacity duration-300 hover:opacity-70">hello@casasol.example</a>
+      </address>
+      <p data-i18n="g.foot.sample" class="mt-4 text-sm text-chalk/70">Sample contact details for this demo website.</p>
+    </div>
+    <div class="flex flex-col gap-3 border-t border-chalk/25 pt-8 text-sm text-chalk/75 sm:flex-row sm:items-center sm:justify-between lg:col-span-12">
+      <p>&copy; 2026 CASA SOL. <span data-i18n="g.foot.rights">All rights reserved.</span></p>
+      <a href="#top" data-i18n="g.foot.top" class="inline-flex min-h-[40px] items-center text-chalk/85 transition-opacity duration-300 hover:opacity-70">Back to top &uarr;</a>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

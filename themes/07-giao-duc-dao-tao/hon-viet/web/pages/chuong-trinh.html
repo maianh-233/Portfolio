@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chương trình học — HỒN VIỆT</title>
+<meta name="description" content="Chương trình học tại HỒN VIỆT: lớp đàn tranh, đàn bầu, đàn nguyệt, tỳ bà, sáo trúc theo trình độ nhập môn, cơ bản và nâng cao, học trực tiếp cùng nghệ nhân.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+</head>
+<body class="paper-tex font-sans text-ink">
+<div class="grain" aria-hidden="true"></div>
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-ink/15 bg-paper/95 transition-shadow duration-300">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="../index.html" class="group flex items-center gap-3" aria-label="HỒN VIỆT, về trang chủ">
+      <span class="seal">HV</span>
+      <span class="font-display text-xl tracking-[0.14em] text-ink transition-colors duration-300 group-hover:text-son">HỒN VIỆT</span>
+    </a>
+    <nav class="hidden items-center gap-6 text-[15px] xl:flex 2xl:gap-8" aria-label="Điều hướng chính">
+      <a class="nav-link" href="nghe-nhan.html">Nghệ nhân</a>
+      <a class="nav-link" href="chuong-trinh.html" aria-current="page">Chương trình học</a>
+      <a class="nav-link" href="di-san.html">Di sản nhạc cụ</a>
+      <a class="nav-link" href="khong-gian.html">Không gian truyền nghề</a>
+      <a class="nav-link" href="su-kien.html">Văn hóa &amp; sự kiện</a>
+      <a class="nav-link" href="ve-hon-viet.html">Về Hồn Việt</a>
+    </nav>
+    <a href="ve-hon-viet.html#lien-he" class="btn hidden !min-h-[42px] !px-5 text-sm 2xl:inline-flex">Đăng ký tư vấn</a>
+    <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink/40 text-ink transition-colors duration-300 hover:bg-ink hover:text-paper-light xl:hidden" aria-label="Mở menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
+</header>
+<div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-ink/25 bg-paper-light p-6 shadow-2xl xl:hidden">
+  <nav class="flex flex-col font-display text-xl" aria-label="Điều hướng trên điện thoại">
+    <a class="border-b border-ink/10 py-3 hover:text-son" href="../index.html">Trang chủ</a>
+    <a class="border-b border-ink/10 py-3 hover:text-son" href="nghe-nhan.html">Nghệ nhân</a>
+    <a class="border-b border-ink/10 py-3 hover:text-son" href="chuong-trinh.html" aria-current="page">Chương trình học</a>
+    <a class="border-b border-ink/10 py-3 hover:text-son" href="di-san.html">Di sản nhạc cụ</a>
+    <a class="border-b border-ink/10 py-3 hover:text-son" href="khong-gian.html">Không gian truyền nghề</a>
+    <a class="border-b border-ink/10 py-3 hover:text-son" href="su-kien.html">Văn hóa &amp; sự kiện</a>
+    <a class="py-3 hover:text-son" href="ve-hon-viet.html">Về Hồn Việt</a>
+  </nav>
+  <a href="ve-hon-viet.html#lien-he" class="btn mt-5 w-full">Đăng ký tư vấn</a>
+</div>
+
+<main>
+  <section id="mo-dau" data-section="page-hero" class="relative overflow-hidden paper-light-tex">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-10 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-20 lg:pt-16 2xl:px-16">
+      <div class="lg:col-span-6">
+        <p class="font-display text-lg italic text-son">Chương hai</p>
+        <h1 data-split="words" class="mt-4 font-display text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">Danh mục lớp học</h1>
+        <p class="mt-6 max-w-lg text-lg leading-relaxed text-ink/80" data-reveal="up">Mỗi lớp gắn với một cây đàn và một người thầy. Học viên đi từ thế ngồi, ngón tay đầu tiên đến những bài bản cổ.</p>
+        <div class="rule-double mt-10 max-w-lg text-ink"></div>
+        <nav class="mt-6 flex max-w-xl flex-wrap gap-x-6 gap-y-3 text-[15px]" aria-label="Các nhạc cụ">
+          <a class="nav-link" href="#dan-tranh">Đàn tranh</a>
+          <a class="nav-link" href="#dan-bau">Đàn bầu</a>
+          <a class="nav-link" href="#dan-nguyet">Đàn nguyệt</a>
+          <a class="nav-link" href="#ty-ba">Tỳ bà</a>
+          <a class="nav-link" href="#sao-truc">Sáo trúc</a>
+          <a class="nav-link" href="#dan-nhi">Đàn nhị</a>
+        </nav>
+      </div>
+      <div class="lg:col-span-6 lg:-mr-10 2xl:-mr-16">
+        <figure class="mount rotate-[1.2deg]" data-reveal="fade">
+          <div class="aspect-[4/3] overflow-hidden bg-wood/20">
+            <img src="../assets/img/chuong-trinh-nhac-cong.jpg" alt="Ba nhạc công lớn tuổi ngồi trước hiên nhà đàn ca tài tử với đàn nguyệt và đàn phím lõm" class="photo-aged h-full w-full object-cover object-[18%_center]" width="1024" height="683">
+          </div>
+          <figcaption class="caption mt-2 px-1">Một buổi đờn ca trước hiên nhà, nơi tiếng đàn vẫn là chuyện thường ngày.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="danh-muc" data-section="story-editorial" class="paper-tex py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <aside class="lg:col-span-3">
+        <div class="lg:sticky lg:top-28">
+          <h2 class="font-display text-3xl leading-tight lg:text-4xl">Sáu cây đàn đang mở lớp</h2>
+          <p class="mt-4 text-ink/80">Lớp nhỏ, tối đa sáu học viên, để nghệ nhân sửa được từng thế tay.</p>
+          <div class="trong-dong mt-10 hidden aspect-square w-48 text-son opacity-25 lg:block" aria-hidden="true"></div>
+        </div>
+      </aside>
+      <div class="lg:col-span-9">
+        <article id="dan-tranh" class="scroll-mt-28 border-t-2 border-ink pt-8 pb-14" data-reveal="up">
+          <div class="flex flex-wrap items-baseline justify-between gap-4">
+            <h3 class="font-display text-4xl lg:text-5xl">Đàn tranh</h3>
+            <p class="font-display text-lg italic text-son">Nghệ nhân Lê Thị Thu Vân</p>
+          </div>
+          <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div><p class="font-display text-lg italic text-son">Học gì</p><p class="mt-2 text-ink/85">Cách lên dây theo hệ ngũ cung, ngón gảy, ngón nhấn, ngón rung. Bài dân ca ba miền rồi đến bài bản ca Huế.</p></div>
+            <div><p class="font-display text-lg italic text-son">Học thế nào</p><p class="mt-2 text-ink/85">Nghe nghệ nhân đàn trọn câu, đàn lại từng câu ngắn. Thầy chỉnh thế ngồi, độ cong của ngón tay trực tiếp trên đàn.</p></div>
+            <div><p class="font-display text-lg italic text-son">Vì sao đáng học</p><p class="mt-2 text-ink/85">Đàn tranh là cửa ngõ dễ vào nhất để hiểu thang âm ngũ cung, nền tảng của hầu hết âm nhạc cổ truyền Việt.</p></div>
+          </div>
+          <a href="nghe-nhan-thu-van.html" class="group mt-8 inline-flex items-center gap-2 border-b border-ink/50 pb-1 font-medium hover:border-son hover:text-son">Hồ sơ người đứng lớp
+            <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article id="dan-bau" class="scroll-mt-28 grid grid-cols-1 gap-8 bg-wood-deep on-dark p-8 text-paper-light sm:p-10 lg:grid-cols-[1fr_15rem] lg:p-12" data-reveal="up">
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-4">
+              <h3 class="font-display text-4xl lg:text-5xl">Đàn bầu</h3>
+              <p class="font-display text-lg italic text-paper">Thầy Nguyễn Văn Khiêm</p>
+            </div>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-paper-light/85">Học viên tìm âm bồi trên một sợi dây, tập nhấn cần đàn để tiếng luyến láy như giọng hát. Bài đầu luôn là dân ca: Cò lả, Lý cây bông, Trống cơm.</p>
+            <p class="mt-4 max-w-2xl text-paper-light/75">Phương pháp truyền khẩu: thầy hát, trò nghe, rồi trò tìm lại câu hát trên dây. Không dùng bản nhạc ở hai tháng đầu.</p>
+            <a href="nghe-nhan-van-khiem.html" class="group mt-8 inline-flex items-center gap-2 border-b border-paper-light/50 pb-1 font-medium hover:text-paper">Hồ sơ người đứng lớp
+              <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <blockquote class="self-end border-l-2 border-paper/50 pl-5 font-display text-xl italic leading-snug text-paper">“Cây đàn một dây mà nói được đủ chuyện của người Việt.”</blockquote>
+        </article>
+
+        <article id="dan-nguyet" class="scroll-mt-28 border-b border-ink/25 pt-14 pb-14" data-reveal="up">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+            <div class="lg:col-span-5">
+              <h3 class="font-display text-4xl lg:text-5xl">Đàn nguyệt</h3>
+              <p class="mt-3 font-display text-lg italic text-son">Lớp ghép, nghệ nhân khách mời</p>
+            </div>
+            <div class="lg:col-span-7">
+              <p class="text-lg leading-relaxed text-ink/85">Học cách bấm trên phím cao, cách vê dây bằng móng gảy, và đệm cho giọng hát chầu văn, ca Huế. Lớp mở theo đợt khi có nghệ nhân đàn nguyệt nhận dạy.</p>
+              <p class="mt-4 text-ink/75">Phù hợp với người đã biết một nhạc cụ dây và muốn tìm hiểu âm nhạc nghi lễ, hát văn.</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="ty-ba" class="scroll-mt-28 border-b border-ink/25 pt-14 pb-14" data-reveal="up">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+            <div class="lg:col-span-5">
+              <h3 class="font-display text-4xl lg:text-5xl">Đàn tỳ bà</h3>
+              <p class="mt-3 font-display text-lg italic text-son">Lớp ghép, nghệ nhân khách mời</p>
+            </div>
+            <div class="lg:col-span-7">
+              <p class="text-lg leading-relaxed text-ink/85">Bốn dây, mười mấy phím, ngón vê nhanh mà vẫn thanh. Học viên học bài bản nhã nhạc rút gọn và các làn điệu dân ca miền Bắc.</p>
+              <p class="mt-4 text-ink/75">Nội dung học được nghệ nhân điều chỉnh theo từng đợt, trung tâm báo lịch trước khi mở lớp.</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="sao-truc" class="scroll-mt-28 mt-14 grid grid-cols-1 gap-8 border border-ink/30 bg-paper-light p-8 sm:p-10 lg:grid-cols-12 lg:p-12" data-reveal="up">
+          <div class="lg:col-span-5">
+            <h3 class="font-display text-4xl lg:text-5xl">Sáo trúc</h3>
+            <p class="mt-3 font-display text-lg italic text-son">Thầy Đào Minh Lộc</p>
+            <a href="nghe-nhan-minh-loc.html" class="group mt-8 inline-flex items-center gap-2 border-b border-ink/50 pb-1 font-medium hover:border-son hover:text-son">Hồ sơ người đứng lớp
+              <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <ul class="space-y-4 lg:col-span-7">
+            <li class="border-l-2 border-moss pl-4"><span class="font-medium">Tập thở trước khi tập bài.</span> <span class="text-ink/80">Buổi đầu chỉ có lấy hơi, giữ hơi và nghe tiếng gió qua ống trúc.</span></li>
+            <li class="border-l-2 border-moss pl-4"><span class="font-medium">Học láy, vỗ, rung hơi.</span> <span class="text-ink/80">Những kỹ thuật làm tiếng sáo Việt khác tiếng sáo nơi khác.</span></li>
+            <li class="border-l-2 border-moss pl-4"><span class="font-medium">Biết cây sáo của mình.</span> <span class="text-ink/80">Thầy hướng dẫn chọn sáo, giữ sáo và cách ống trúc đổi tiếng theo mùa.</span></li>
+          </ul>
+        </article>
+
+        <article id="dan-nhi" class="scroll-mt-28 pt-14" data-reveal="up">
+          <h3 class="font-display text-4xl lg:text-5xl">Đàn nhị và các nhạc cụ khác</h3>
+          <p class="mt-5 max-w-3xl text-lg leading-relaxed text-ink/85">Đàn nhị, đàn đáy, đàn sến, trống đế, phách... được mở thành lớp nhóm nhỏ khi trung tâm mời được nghệ nhân phù hợp. Bạn có thể đăng ký quan tâm trước để được báo khi lớp mở.</p>
+          <a href="ve-hon-viet.html#lien-he" class="btn-ghost mt-8">Đăng ký quan tâm</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="trinh-do" data-section="features-tabs" class="wood-tex on-dark py-20 text-paper-light lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 class="max-w-3xl font-display text-3xl leading-tight sm:text-4xl lg:text-5xl" data-split="words">Ba chặng đường, đi theo nhịp của mỗi người</h2>
+      <p class="mt-5 max-w-2xl text-lg text-paper-light/80">Thời lượng dưới đây là gợi ý. Nghệ nhân quyết định khi nào học viên sẵn sàng sang chặng mới.</p>
+      <div data-tabs class="mt-12">
+        <div class="relative flex flex-wrap gap-2 border-b border-paper-light/20" role="tablist">
+          <button type="button" data-tab="nhap-mon" class="min-h-[48px] px-5 font-display text-xl text-paper-light/70 transition-colors duration-300 hover:text-paper-light [&.is-active]:text-paper-light">Nhập môn</button>
+          <button type="button" data-tab="co-ban" class="min-h-[48px] px-5 font-display text-xl text-paper-light/70 transition-colors duration-300 hover:text-paper-light [&.is-active]:text-paper-light">Cơ bản</button>
+          <button type="button" data-tab="nang-cao" class="min-h-[48px] px-5 font-display text-xl text-paper-light/70 transition-colors duration-300 hover:text-paper-light [&.is-active]:text-paper-light">Nâng cao</button>
+          <span data-tab-indicator class="bottom-0 h-0.5 bg-paper"></span>
+        </div>
+        <div data-tab-panel="nhap-mon" class="grid grid-cols-1 gap-10 pt-10 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <p class="font-display text-6xl text-paper lg:text-7xl">3 tháng</p>
+            <p class="mt-3 text-paper-light/75">Hai buổi mỗi tuần, mỗi buổi 90 phút</p>
+          </div>
+          <div class="lg:col-span-8">
+            <p class="text-lg leading-relaxed text-paper-light/90">Dành cho người chưa từng chơi nhạc cụ dân tộc. Học viên làm quen với cây đàn, tư thế, cách nghe thang âm ngũ cung và chơi được hai đến ba bài dân ca ngắn.</p>
+            <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Tư thế, cách cầm và giữ đàn</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Nghe và hát lại thang âm ngũ cung</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Các ngón cơ bản của nhạc cụ</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Hai đến ba bài dân ca quen thuộc</li>
+            </ul>
+          </div>
+        </div>
+        <div data-tab-panel="co-ban" class="grid grid-cols-1 gap-10 pt-10 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <p class="font-display text-6xl text-paper lg:text-7xl">6 tháng</p>
+            <p class="mt-3 text-paper-light/75">Hai buổi mỗi tuần, thêm một buổi nghe nhạc mỗi tháng</p>
+          </div>
+          <div class="lg:col-span-8">
+            <p class="text-lg leading-relaxed text-paper-light/90">Học viên luyện các ngón kỹ thuật đặc trưng như nhấn, rung, luyến, láy và bắt đầu chơi bài bản có cấu trúc. Mỗi tháng có một buổi cùng nghe và bàn về một bản nhạc cổ.</p>
+            <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Kỹ thuật nhấn, rung, luyến láy</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Đọc ký âm và nghe theo lối truyền khẩu</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Hòa đàn với một nhạc cụ khác</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Biểu diễn trong buổi giao lưu cuối khóa</li>
+            </ul>
+          </div>
+        </div>
+        <div data-tab-panel="nang-cao" class="grid grid-cols-1 gap-10 pt-10 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <p class="font-display text-6xl text-paper lg:text-7xl">Theo thầy</p>
+            <p class="mt-3 text-paper-light/75">Học kèm riêng hoặc nhóm hai người</p>
+          </div>
+          <div class="lg:col-span-8">
+            <p class="text-lg leading-relaxed text-paper-light/90">Chặng học lâu dài cùng một nghệ nhân, đi sâu vào bài bản cổ, cách xử lý tình cảm trong từng câu đàn và vai trò của nhạc cụ trong ca Huế, chèo, chầu văn, đờn ca tài tử.</p>
+            <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Bài bản cổ và dị bản theo từng vùng</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Đệm cho giọng hát truyền thống</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Cùng nghệ nhân đi điền dã</li>
+              <li class="border-t border-paper-light/20 pt-3 text-paper-light/85">Tham gia đêm nhạc của trung tâm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hoi-dap" data-section="faq-accordion" class="paper-light-tex py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <h2 class="font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">Những điều học viên hay hỏi</h2>
+        <p class="mt-5 max-w-sm text-lg text-ink/80">Chưa thấy câu trả lời bạn cần? Gọi cho trung tâm, chúng tôi trả lời trong giờ mở cửa.</p>
+        <a href="tel:02439236815" class="btn-ghost mt-8">Gọi 024 3923 6815</a>
+      </div>
+      <div class="lg:col-span-8" data-accordion>
+        <div data-acc-item data-open class="border-t border-ink/30">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl lg:text-2xl">Tôi chưa biết nhạc lý, có học được không? <span data-acc-icon class="text-son">+</span></button>
+          <div data-acc-panel><div class="max-w-2xl pb-6 text-ink/85">Được. Phần lớn học viên lớp nhập môn chưa từng học nhạc. Nghệ nhân dạy theo lối nghe và bắt chước trước, ký âm học sau.</div></div>
+        </div>
+        <div data-acc-item class="border-t border-ink/30">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl lg:text-2xl">Trẻ em từ mấy tuổi có thể học? <span data-acc-icon class="text-son">+</span></button>
+          <div data-acc-panel><div class="max-w-2xl pb-6 text-ink/85">Trung tâm nhận trẻ từ 8 tuổi với đàn tranh và sáo trúc. Đàn bầu và các đàn dây khác phù hợp hơn từ 12 tuổi. Nghệ nhân sẽ gặp trực tiếp để tư vấn.</div></div>
+        </div>
+        <div data-acc-item class="border-t border-ink/30">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl lg:text-2xl">Tôi có cần mua đàn trước khi học? <span data-acc-icon class="text-son">+</span></button>
+          <div data-acc-panel><div class="max-w-2xl pb-6 text-ink/85">Không cần. Trung tâm có đàn để học viên dùng trong giờ học. Khi muốn tự luyện ở nhà, nghệ nhân sẽ hướng dẫn cách chọn một cây đàn phù hợp.</div></div>
+        </div>
+        <div data-acc-item class="border-y border-ink/30">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl lg:text-2xl">Học phí và lịch học được tính thế nào? <span data-acc-icon class="text-son">+</span></button>
+          <div data-acc-panel><div class="max-w-2xl pb-6 text-ink/85">Học phí và lịch học khác nhau theo nhạc cụ, trình độ và hình thức học nhóm hay kèm riêng. Trung tâm tư vấn trực tiếp sau khi bạn để lại thông tin.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="loi-moi" data-section="cta-type" class="relative overflow-hidden bg-son on-dark py-24 text-paper-light lg:py-28">
+    <div class="trong-dong pointer-events-none absolute -right-40 top-1/2 h-[640px] w-[640px] -translate-y-1/2 text-paper-light opacity-10" aria-hidden="true"></div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-end gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <h2 class="font-display text-4xl leading-[1.1] sm:text-5xl lg:col-span-8 lg:text-6xl" data-reveal="up">Chưa biết bắt đầu từ cây đàn nào?</h2>
+      <div class="lg:col-span-4">
+        <p class="text-lg text-paper-light/85">Đến nghe thử một buổi. Nghệ nhân sẽ cho bạn chạm vào từng cây đàn trước khi chọn.</p>
+        <a href="ve-hon-viet.html#lien-he" class="btn-ghost btn-light mt-7 w-full sm:w-auto">Đăng ký tư vấn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="on-dark overflow-hidden bg-ink text-paper-light">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <div class="flex items-center gap-3"><span class="seal">HV</span><span class="font-display text-xl tracking-[0.14em]">HỒN VIỆT</span></div>
+        <p class="mt-5 max-w-sm text-paper-light/75">Trung tâm truyền dạy nhạc cụ dân tộc Việt Nam. Giữ tiếng xưa, truyền hồn Việt.</p>
+      </div>
+      <nav class="lg:col-span-3" aria-label="Các trang">
+        <p class="font-display text-lg italic text-paper">Các chương</p>
+        <ul class="mt-4 space-y-2 text-paper-light/80">
+          <li><a class="hover:text-paper" href="../index.html">Trang chủ</a></li>
+          <li><a class="hover:text-paper" href="nghe-nhan.html">Nghệ nhân</a></li>
+          <li><a class="hover:text-paper" href="chuong-trinh.html">Chương trình học</a></li>
+          <li><a class="hover:text-paper" href="di-san.html">Di sản nhạc cụ</a></li>
+          <li><a class="hover:text-paper" href="khong-gian.html">Không gian truyền nghề</a></li>
+          <li><a class="hover:text-paper" href="su-kien.html">Văn hóa &amp; sự kiện</a></li>
+          <li><a class="hover:text-paper" href="ve-hon-viet.html">Về Hồn Việt &amp; Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <p class="font-display text-lg italic text-paper">Liên hệ</p>
+        <ul class="mt-4 space-y-2 text-paper-light/80">
+          <li>Số 18, ngõ Văn Chương, Đống Đa, Hà Nội</li>
+          <li><a class="hover:text-paper" href="tel:02439236815">024 3923 6815</a> <button type="button" data-copy="024 3923 6815" class="ml-2 border-b border-paper-light/40 text-sm hover:text-paper">Sao chép</button></li>
+          <li><a class="hover:text-paper" href="mailto:lienhe@honviet.vn">lienhe@honviet.vn</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="font-display text-lg italic text-paper">Giờ mở cửa</p>
+        <ul class="mt-4 space-y-2 text-paper-light/80">
+          <li>Thứ Ba đến Chủ nhật</li>
+          <li>8:30 đến 20:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule-double mt-14 text-paper-light"></div>
+    <p class="select-none pt-6 font-display text-[19vw] leading-[0.85] tracking-[0.04em] text-paper-light/10 sm:text-[17vw] 2xl:text-[15rem]" aria-hidden="true">HỒN VIỆT</p>
+    <div class="flex flex-col gap-2 border-t border-paper-light/15 py-6 text-sm text-paper-light/70 sm:flex-row sm:justify-between">
+      <p>© 2026 HỒN VIỆT. Bảo lưu mọi quyền.</p>
+      <p>Thông tin liên hệ là thông tin mẫu.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

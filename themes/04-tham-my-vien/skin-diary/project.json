@@ -1,0 +1,63 @@
+{
+  "slug": "skin-diary",
+  "name": "SKIN DIARY",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "SKIN DIARY",
+    "purpose": "Thiết kế website giới thiệu SKIN DIARY, một thương hiệu thẩm mỹ viện chuyên chăm sóc da và giới thiệu các dịch vụ làm đẹp theo phong cách tạp chí hiện đại.\n\nArt direction: Contemporary Beauty Magazine. Dùng trắng giấy, đỏ cherry, hồng nude và đen. Kết hợp typography tạp chí, tiêu đề lớn, ảnh chân dung cận cảnh, bố cục nhiều cột và các chi tiết đồ họa giống trang in. Tránh giao diện phòng khám truyền thống và không sử dụng layout thương mại điện tử.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Mở đầu bằng một trang bìa tạp chí với hình ảnh chủ đạo, headline nổi bật, tuyên ngôn thương hiệu, giới thiệu các nhóm dịch vụ và những nội dung chia sẻ về chăm sóc da.\n\nDịch vụ thẩm mỹ & Bảng giá: Trình bày dịch vụ theo các chuyên mục biên tập như Skin Care, Skin Renewal, Skin Treatment. Mỗi dịch vụ có ảnh, tiêu đề, mô tả và giá tham khảo nếu được cung cấp. Có thể sử dụng bố cục bài viết xen kẽ hình ảnh thay vì lưới thẻ đồng nhất.\n\nVề chúng tôi: Kể câu chuyện thương hiệu qua hình ảnh, nội dung biên tập, đội ngũ và không gian thực tế.\n\nHỗ trợ đầy đủ tiếng Việt và tiếng Anh. Nút “Đặt lịch tư vấn / Book a Consultation” mở form tư vấn, xuất hiện ở header, cuối trang và dạng nút nổi trên điện thoại.\n\nChỉ giới thiệu thương hiệu và dịch vụ, không bán mỹ phẩm, không giỏ hàng, không thanh toán. Thiết kế có cá tính tạp chí rõ ràng nhưng vẫn đảm bảo thông tin dịch vụ dễ đọc, đặc biệt trên điện thoại.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-21T02:40:57.002Z",
+  "updatedAt": "2026-10-21T02:59:30.531Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\skin-diary\\web",
+    "builtAt": "2026-10-21T02:58:01.930Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": null,
+  "qa": {
+    "createdAt": "2026-10-21T02:58:10.406Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 9
+  },
+  "external": null
+}

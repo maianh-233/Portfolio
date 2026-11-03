@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Our Studio — ROOTS ORGANIC HAIR">Về Studio — ROOTS ORGANIC HAIR</title>
+<meta name="description" content="Không gian, triết lý làm việc và đội stylist của ROOTS ORGANIC HAIR — salon tóc theo đuổi vẻ đẹp tự nhiên tại TP. Hồ Chí Minh." data-en-content="The space, the way we work and the stylists at ROOTS ORGANIC HAIR — a hair salon for natural beauty in Ho Chi Minh City.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;700&display=swap&subset=vietnamese">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-ivory font-sans text-forest">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-stone bg-ivory/95 backdrop-blur-sm transition-shadow duration-300 [&.is-scrolled]:shadow-[0_8px_30px_-18px_rgba(48,58,45,.35)]">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="flex flex-col leading-none text-forest">
+      <span class="font-display text-[1.65rem] font-semibold tracking-[0.08em]">ROOTS</span>
+      <span class="mt-0.5 text-[0.62rem] font-bold uppercase tracking-[0.32em] text-olive">Organic Hair</span>
+      <span class="sr-only">ROOTS ORGANIC HAIR</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Menu chính" data-en-aria-label="Main menu">
+      <a href="../index.html" class="relative py-2 text-[0.95rem] font-medium text-forest/75 transition-colors duration-300 hover:text-forest aria-[current=page]:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-olive after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"><span data-en="Home">Trang chủ</span></a>
+      <a href="../pages/services.html" class="relative py-2 text-[0.95rem] font-medium text-forest/75 transition-colors duration-300 hover:text-forest aria-[current=page]:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-olive after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"><span data-en="Services">Dịch vụ</span></a>
+      <a href="../pages/journal.html" class="relative py-2 text-[0.95rem] font-medium text-forest/75 transition-colors duration-300 hover:text-forest aria-[current=page]:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-olive after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Hair Journal</a>
+      <a aria-current="page" href="../pages/studio.html" class="relative py-2 text-[0.95rem] font-medium text-forest/75 transition-colors duration-300 hover:text-forest aria-[current=page]:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-olive after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"><span data-en="Our Studio">Về Studio</span></a>
+    </nav>
+
+    <div class="flex items-center gap-3 sm:gap-5">
+      <div class="hidden items-center gap-1 text-sm text-forest/55 sm:flex" role="group" aria-label="Ngôn ngữ" data-en-aria-label="Language">
+        <button type="button" data-lang-set="vi" class="min-h-[44px] px-1.5 transition-colors duration-300 hover:text-forest">VI</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" class="min-h-[44px] px-1.5 transition-colors duration-300 hover:text-forest">EN</button>
+      </div>
+      <button type="button" data-modal-open="dat-lich" class="hidden min-h-[44px] items-center rounded-full bg-olive px-6 text-sm font-bold text-ivory transition duration-300 hover:bg-olive-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive sm:inline-flex"><span data-en="Book a Visit">Đặt lịch</span></button>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone text-forest transition-colors duration-300 hover:bg-stone lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-[1.75rem] border border-stone bg-ivory p-6 shadow-[0_30px_80px_-30px_rgba(48,58,45,.45)] lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-en-aria-label="Mobile menu">
+      <a href="../index.html" class="border-b border-stone py-4 font-display text-3xl text-forest aria-[current=page]:text-olive"><span data-en="Home">Trang chủ</span></a>
+      <a href="../pages/services.html" class="border-b border-stone py-4 font-display text-3xl text-forest aria-[current=page]:text-olive"><span data-en="Services">Dịch vụ</span></a>
+      <a href="../pages/journal.html" class="border-b border-stone py-4 font-display text-3xl text-forest aria-[current=page]:text-olive">Hair Journal</a>
+      <a aria-current="page" href="../pages/studio.html" class="py-4 font-display text-3xl text-forest aria-[current=page]:text-olive"><span data-en="Our Studio">Về Studio</span></a>
+    </nav>
+    <div class="mt-6 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-1 text-base text-forest/60" role="group" aria-label="Ngôn ngữ" data-en-aria-label="Language">
+        <button type="button" data-lang-set="vi" class="min-h-[44px] px-2">VI</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" class="min-h-[44px] px-2">EN</button>
+      </div>
+      <button type="button" data-modal-open="dat-lich" class="inline-flex min-h-[48px] items-center rounded-full bg-olive px-7 text-sm font-bold text-ivory"><span data-en="Book a Visit">Đặt lịch</span></button>
+    </div>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- PAGE HERO -->
+  <section id="studio-hero" data-section="page-hero" class="relative overflow-hidden bg-ivory">
+    <div aria-hidden="true" class="absolute inset-y-0 right-0 hidden w-[26%] bg-olive lg:block"></div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:pb-16 lg:pt-16 2xl:px-16">
+      <div class="lg:col-span-6">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-earth" data-en="Our Studio">Về Studio</p>
+        <h1 data-split="words" class="mt-6 pb-2 font-display text-[2.9rem] font-medium leading-[1.05] text-forest sm:text-6xl lg:text-[4.4rem] 2xl:text-[5.2rem]" data-en="A Space to Feel <em class='text-olive'>Naturally You</em>.">Không gian để bạn <em class="text-olive">tự nhiên là chính mình</em>.</h1>
+        <p class="mt-6 max-w-lg text-[1.05rem] leading-relaxed text-forest/75" data-en="A small studio with daylight, pale wood and a few chairs only. Enough time to listen before anyone picks up the scissors.">Một studio nhỏ với ánh sáng cửa sổ, gỗ sáng và chỉ vài chiếc ghế. Đủ thời gian để lắng nghe trước khi ai đó cầm kéo.</p>
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap" data-reveal="up" data-reveal-delay="200">
+          <button type="button" data-modal-open="dat-lich" class="group inline-flex min-h-[52px] items-center justify-center gap-3 rounded-full bg-olive px-8 text-[0.95rem] font-bold text-ivory transition duration-300 hover:bg-olive-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive"><span data-en="Book a Visit">Đặt lịch</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></button>
+          <a href="services.html" class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-forest/25 px-8 text-[0.95rem] font-bold text-forest transition-colors duration-300 hover:border-forest hover:bg-white/60"><span data-en="See our services">Xem dịch vụ</span></a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 lg:col-start-8">
+        <div class="relative mx-auto max-w-[440px] lg:mr-0 lg:max-w-none">
+          <div class="arch h-[400px] overflow-hidden bg-sand sm:h-[480px] lg:h-[min(58dvh,560px)]">
+            <img src="https://images.unsplash.com/photo-1695527081827-fdbc4e77be9b?auto=format&fit=crop&w=1800&q=75" referrerpolicy="no-referrer" alt="Không gian salon với ghế làm tóc, chậu gội và cây xanh" data-en-alt="The salon room with styling chairs, a wash basin and plants" class="photo h-full w-full object-cover" width="1400" height="1750">
+          </div>
+          <p class="mt-4 text-right text-xs uppercase tracking-[0.2em] text-forest/50" data-en="District 3 / Ho Chi Minh City">Quận 3 / TP. Hồ Chí Minh</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="story" data-section="story-letter" class="border-t border-stone bg-ivory py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-3">
+        <div data-reveal="clip" class="arch aspect-[3/4] w-full max-w-[240px] overflow-hidden bg-sand">
+          <img src="https://images.unsplash.com/photo-1637308596973-231d1a9221f5?auto=format&fit=crop&amp;w=1200&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Stylist đang cắt tóc cho khách trước gương" data-en-alt="A stylist cutting a client's hair in front of a mirror" class="photo h-full w-full object-cover" width="960" height="1200">
+        </div>
+        <p class="mt-4 max-w-[240px] text-sm leading-relaxed text-forest/60" data-en="Every visit begins with a conversation, not a catalogue.">Mỗi buổi hẹn bắt đầu bằng một cuộc trò chuyện, không phải một cuốn catalogue.</p>
+      </div>
+
+      <div class="lg:col-span-7 lg:col-start-5">
+        <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.08] text-forest sm:text-5xl lg:text-[3.6rem]" data-en="A small studio, working slowly.">Một studio nhỏ, làm việc chậm.</h2>
+        <p class="dropcap mt-6 max-w-prose text-[1.05rem] leading-relaxed text-forest/80" data-en="ROOTS ORGANIC HAIR began with a simple belief: the best hair is hair that still looks like its owner. So we work slowly. We look at the hair first, ask about your routine second, and only then choose the technique.">ROOTS ORGANIC HAIR bắt đầu từ một niềm tin đơn giản: mái tóc đẹp nhất là mái tóc còn giữ được chất riêng. Vì vậy chúng tôi làm việc chậm — xem tóc trước, hỏi thói quen sau, rồi mới chọn kỹ thuật.</p>
+        <p class="mt-5 max-w-prose text-[1.05rem] leading-relaxed text-forest/75" data-en="We do not chase every trend, and we will not talk you into going lighter or shorter than you want. A visit here usually starts with one question: how many minutes do you have for your hair in the morning?">Chúng tôi không chạy theo mọi xu hướng, và không thuyết phục bạn nhuộm sáng hơn hay cắt ngắn hơn bạn muốn. Một buổi hẹn ở đây thường bắt đầu bằng câu hỏi: sáng nay bạn dành bao nhiêu phút cho mái tóc?</p>
+
+        <blockquote class="mt-10 border-l-2 border-olive pl-6 font-display text-3xl italic leading-snug text-forest lg:text-4xl">“<span data-en="We want you to leave with hair you can look after yourself.">Chúng tôi muốn bạn rời studio với mái tóc mình tự chăm được.</span>”</blockquote>
+
+        <p class="mt-8 text-sm text-forest/55" data-en="The ROOTS ORGANIC HAIR team">Đội ngũ ROOTS ORGANIC HAIR</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section id="values" data-section="values-columns" class="relative overflow-hidden bg-sage/30 py-24 lg:py-32" data-particles="dust" data-particles-color="#F8F5EF" data-particles-density="0.4">
+    <div class="relative z-10 mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 lg:grid-cols-12 lg:gap-10">
+        <div class="lg:col-span-4">
+          <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.08] text-forest sm:text-5xl" data-en="Three things that do not change.">Ba điều không thay đổi.</h2>
+          <p class="mt-5 max-w-sm text-[1.02rem] leading-relaxed text-forest/75" data-en="Trends move. These three stay with every cut, color and treatment we do.">Xu hướng thay đổi. Ba điều này vẫn giữ nguyên trong mọi lần cắt, nhuộm và dưỡng.</p>
+        </div>
+        <div class="lg:col-span-7 lg:col-start-6">
+          <div data-reveal="clip" class="aspect-[16/10] overflow-hidden rounded-[1.75rem] bg-sand">
+            <img src="https://images.unsplash.com/photo-1650984698580-3c5d31d1b558?auto=format&amp;fit=crop&amp;w=1600&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Mái tóc nâu tự nhiên nhìn từ phía sau trong ánh sáng dịu" data-en-alt="Natural brown hair seen from behind in soft light" class="photo h-full w-full object-cover" width="1400" height="875">
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 grid gap-10 border-t border-forest/20 pt-10 md:grid-cols-3 lg:gap-14" data-reveal-stagger="90">
+        <div>
+          <p aria-hidden="true" class="font-display text-3xl text-olive">01</p>
+          <h3 class="mt-3 font-display text-3xl leading-tight text-forest" data-en="Healthy Hair">Mái tóc khỏe</h3>
+          <p class="mt-3 max-w-sm text-[0.98rem] leading-relaxed text-forest/75" data-en="We check the condition of the hair before we discuss the shape. If the hair needs a rest, we say so.">Chúng tôi xem tình trạng tóc trước khi bàn đến kiểu dáng. Nếu tóc cần nghỉ, chúng tôi nói ra.</p>
+        </div>
+        <div>
+          <p aria-hidden="true" class="font-display text-3xl text-olive">02</p>
+          <h3 class="mt-3 font-display text-3xl leading-tight text-forest" data-en="Thoughtful Care">Chăm sóc có chủ đích</h3>
+          <p class="mt-3 max-w-sm text-[0.98rem] leading-relaxed text-forest/75" data-en="Every visit gets a plan of its own, written down so the next one does not start from zero.">Mỗi buổi hẹn có một kế hoạch riêng, được ghi lại để lần sau không bắt đầu từ số không.</p>
+        </div>
+        <div>
+          <p aria-hidden="true" class="font-display text-3xl text-olive">03</p>
+          <h3 class="mt-3 font-display text-3xl leading-tight text-forest" data-en="Natural Style">Phong cách tự nhiên</h3>
+          <p class="mt-3 max-w-sm text-[0.98rem] leading-relaxed text-forest/75" data-en="We keep the texture the hair already has instead of forcing every head into one shape.">Chúng tôi giữ kết cấu vốn có của tóc thay vì ép mọi mái tóc vào một khuôn hình.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STYLISTS -->
+  <section id="stylists" data-section="team-grid" class="bg-ivory py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-earth" data-en="The team">Đội ngũ</p>
+          <h2 data-reveal="up" class="mt-3 font-display text-4xl font-medium leading-[1.08] text-forest sm:text-5xl lg:text-6xl" data-en="Meet the stylists.">Gặp những người cầm kéo.</h2>
+        </div>
+        <p class="max-w-xs text-sm leading-relaxed text-forest/60 sm:text-right" data-en="Stylist profiles are sample data for this demo, not verified team information.">Hồ sơ stylist là dữ liệu mẫu cho bản minh họa, chưa phải thông tin đội ngũ đã xác minh.</p>
+      </div>
+
+      <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8" data-reveal-stagger="100">
+        <article class="group">
+          <div class="aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-sand">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&amp;fit=crop&amp;w=900&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Chân dung Ngọc Anh, stylist tóc" data-en-alt="Portrait of Ngoc Anh, stylist" class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="900" height="1125">
+          </div>
+          <div class="mt-5 border-t border-stone pt-4">
+            <h3 class="font-display text-3xl leading-tight text-forest">Ngọc Anh</h3>
+            <p class="mt-1 text-xs font-bold uppercase tracking-[0.16em] text-olive" data-en="Senior Stylist">Stylist chính</p>
+            <dl class="mt-4 space-y-2 text-[0.95rem] leading-relaxed">
+              <div class="flex gap-3">
+                <dt class="w-24 shrink-0 text-forest/55" data-en="Focus">Chuyên môn</dt>
+                <dd class="text-forest/80" data-en="Layered cuts, short hair, fringe.">Cắt layer, tóc ngắn và tóc mái.</dd>
+              </div>
+              <div class="flex gap-3">
+                <dt class="w-24 shrink-0 text-forest/55" data-en="Style">Phong cách</dt>
+                <dd class="text-forest/80" data-en="Soft, neat, easy to keep at home.">Mềm, gọn, dễ tự chăm tại nhà.</dd>
+              </div>
+            </dl>
+            <p class="mt-4 max-w-sm text-[0.95rem] leading-relaxed text-forest/70" data-en="Likes to ask how you dry your hair before deciding on a length.">Thích bắt đầu bằng việc hỏi bạn sấy tóc thế nào trước khi chọn độ dài.</p>
+          </div>
+        </article>
+
+        <article class="group">
+          <div class="aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-sand">
+            <img src="https://images.unsplash.com/photo-1634510979979-4be6881d31bb?auto=format&amp;fit=crop&amp;w=900&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Chân dung Mai Linh, chuyên viên màu tóc" data-en-alt="Portrait of Mai Linh, color specialist" class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="900" height="1125">
+          </div>
+          <div class="mt-5 border-t border-stone pt-4">
+            <h3 class="font-display text-3xl leading-tight text-forest">Mai Linh</h3>
+            <p class="mt-1 text-xs font-bold uppercase tracking-[0.16em] text-olive" data-en="Color Specialist">Chuyên viên màu</p>
+            <dl class="mt-4 space-y-2 text-[0.95rem] leading-relaxed">
+              <div class="flex gap-3">
+                <dt class="w-24 shrink-0 text-forest/55" data-en="Focus">Chuyên môn</dt>
+                <dd class="text-forest/80" data-en="Balayage, natural brown tones.">Balayage và các tông nâu tự nhiên.</dd>
+              </div>
+              <div class="flex gap-3">
+                <dt class="w-24 shrink-0 text-forest/55" data-en="Style">Phong cách</dt>
+                <dd class="text-forest/80" data-en="Depth over brightness, soft transitions.">Ưu tiên chiều sâu, chuyển màu mềm.</dd>
+              </div>
+            </dl>
+            <p class="mt-4 max-w-sm text-[0.95rem] leading-relaxed text-forest/70" data-en="Always tests the color on a small strand before covering the whole head.">Luôn thử màu trên một lọn nhỏ trước khi phủ toàn bộ.</p>
+          </div>
+        </article>
+
+        <article class="group">
+          <div class="aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-sand">
+            <img src="https://images.unsplash.com/photo-1768247695735-e10baa73e917?auto=format&amp;fit=crop&amp;w=900&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Chân dung Thu Hà, chuyên viên dưỡng tóc và da đầu" data-en-alt="Portrait of Thu Ha, hair and scalp therapist" class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="900" height="1125">
+          </div>
+          <div class="mt-5 border-t border-stone pt-4">
+            <h3 class="font-display text-3xl leading-tight text-forest">Thu Hà</h3>
+            <p class="mt-1 text-xs font-bold uppercase tracking-[0.16em] text-olive" data-en="Hair &amp; Scalp Therapist">Dưỡng tóc &amp; da đầu</p>
+            <dl class="mt-4 space-y-2 text-[0.95rem] leading-relaxed">
+              <div class="flex gap-3">
+                <dt class="w-24 shrink-0 text-forest/55" data-en="Focus">Chuyên môn</dt>
+                <dd class="text-forest/80" data-en="Deep conditioning, scalp rituals.">Dưỡng sâu và chăm sóc da đầu.</dd>
+              </div>
+              <div class="flex gap-3">
+                <dt class="w-24 shrink-0 text-forest/55" data-en="Style">Phong cách</dt>
+                <dd class="text-forest/80" data-en="Slow, light hands, comfort first.">Chậm, nhẹ tay, ưu tiên cảm giác dễ chịu.</dd>
+              </div>
+            </dl>
+            <p class="mt-4 max-w-sm text-[0.95rem] leading-relaxed text-forest/70" data-en="Keeps the room quiet during most of the treatment, so you can rest.">Giữ căn phòng yên tĩnh trong phần lớn buổi chăm sóc, để bạn được nghỉ.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIDE THE STUDIO -->
+  <section id="inside" data-section="gallery-lookbook" class="bg-stone/40 py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="max-w-2xl">
+        <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.08] text-forest sm:text-5xl lg:text-6xl" data-en="Inside the studio.">Bên trong studio.</h2>
+        <p class="mt-4 max-w-prose text-[1.02rem] leading-relaxed text-forest/75" data-en="Wood, stone, linen and daylight. Not many chairs, so the room stays calm even on a full afternoon.">Gỗ, đá, vải linen và ánh sáng tự nhiên. Không nhiều ghế, nên căn phòng vẫn yên cả vào buổi chiều kín lịch.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-12 lg:gap-6" data-reveal-stagger="90">
+        <a href="https://images.unsplash.com/photo-1695527081728-e3a42f0ce261?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" data-lightbox="studio" data-caption="Khu ghế làm tóc — Ghế đặt cạnh cửa sổ, gỗ sáng và cây xanh vừa phải." data-en-caption="The styling area — chairs by the window, pale wood and a few plants." class="group col-span-2 block lg:col-span-7 lg:row-span-2">
+          <div class="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-sand lg:aspect-auto lg:h-full">
+            <img src="https://images.unsplash.com/photo-1695527081728-e3a42f0ce261?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Khu ghế làm tóc cạnh cửa sổ với cây xanh" data-en-alt="The styling chairs by the window with plants" class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1400" height="1050">
+          </div>
+          <p class="mt-3 text-sm text-forest/60" data-en="The styling area">Khu ghế làm tóc</p>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" data-lightbox="studio" data-caption="Gương và ghế — Gương tròn đặt trên bàn gỗ, ghế bọc vải sáng màu." data-en-caption="Mirrors and chairs — Round mirrors above wooden vanities, chairs in pale fabric." class="group lg:col-span-4 lg:col-start-9">
+          <div class="aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-sand">
+            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Gương tròn và ghế làm tóc bọc vải sáng" data-en-alt="Round mirrors and light fabric styling chairs" class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250">
+          </div>
+          <p class="mt-3 text-sm text-forest/60" data-en="Mirrors and chairs">Gương và ghế</p>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1637777269308-6a072f24e8a4?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" data-lightbox="studio" data-caption="Khu gội đầu — Chậu gội đặt riêng, ánh sáng dịu và ít tiếng ồn." data-en-caption="The wash area — Basins set apart, soft light and little noise." class="group lg:col-span-4 lg:col-start-9">
+          <div class="aspect-square overflow-hidden rounded-[1.75rem] bg-sand">
+            <img src="https://images.unsplash.com/photo-1637777269308-6a072f24e8a4?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Khu gội đầu với chậu gội màu tối" data-en-alt="The wash area with dark shampoo basins" class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="1200">
+          </div>
+          <p class="mt-3 text-sm text-forest/60" data-en="The wash area">Khu gội đầu</p>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1781450090585-1a511b7066d9?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" data-lightbox="studio" data-caption="Không gian chính — Ghế làm tóc và gương lớn, ánh sáng ban ngày tràn vào." data-en-caption="The main room — Styling chairs and large mirrors, daylight coming in." class="group lg:col-span-3">
+          <div class="aspect-[3/4] overflow-hidden rounded-[1.75rem] bg-sand">
+            <img src="https://images.unsplash.com/photo-1781450090585-1a511b7066d9?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Không gian salon với ghế làm tóc và gương lớn" data-en-alt="The salon space with styling chairs and large mirrors" class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="900" height="1200">
+          </div>
+          <p class="mt-3 text-sm text-forest/60" data-en="The main room">Không gian chính</p>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1790009419892-f6f3fd516fb2?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" data-lightbox="studio" data-caption="Bàn gỗ — Gương tròn, khăn linen và những dụng cụ quen tay." data-en-caption="The wooden vanity — A round mirror, linen towels and the tools we reach for most." class="group lg:col-span-4 lg:col-start-4">
+          <div class="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-sand">
+            <img src="https://images.unsplash.com/photo-1790009419892-f6f3fd516fb2?auto=format&fit=crop&amp;w=1200&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt="Ghế làm tóc trước bàn gỗ và gương tròn" data-en-alt="A styling chair in front of a wooden vanity and round mirror" class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="900">
+          </div>
+          <p class="mt-3 text-sm text-forest/60" data-en="The wooden vanity">Bàn gỗ</p>
+        </a>
+
+        <div class="col-span-2 self-end lg:col-span-4 lg:col-start-9">
+          <p class="font-display text-3xl italic leading-snug text-forest lg:text-4xl" data-en="A room with fewer chairs, and more time for each one.">Một căn phòng ít ghế hơn, và nhiều thời gian hơn cho mỗi chiếc ghế.</p>
+          <p class="mt-4 text-sm leading-relaxed text-forest/60" data-en="Studio photos are sample images for this demo.">Ảnh không gian là ảnh mẫu cho bản minh họa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & VISIT -->
+  <section id="visit" data-section="contact-split" class="border-t border-stone bg-ivory py-24 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-5">
+        <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.08] text-forest sm:text-5xl" data-en="Come by for an afternoon.">Ghé studio một buổi chiều.</h2>
+        <p class="mt-4 max-w-md text-[1.02rem] leading-relaxed text-forest/75" data-en="No form to fill in here. Call or send an email and we will find a time that leaves room for a proper consultation.">Ở đây không có form để điền. Hãy gọi hoặc gửi email, chúng tôi sẽ tìm một khung giờ đủ rộng cho một buổi tư vấn tử tế.</p>
+
+        <address class="mt-8 space-y-5 not-italic">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-earth" data-en="Address (sample)">Địa chỉ (mẫu)</p>
+            <p class="mt-1 text-[1.02rem] leading-relaxed text-forest/85" data-en="18 Tran Quy Cap Street, District 3,<br>Ho Chi Minh City">18 Trần Quý Cáp, Quận 3,<br>TP. Hồ Chí Minh</p>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-earth" data-en="Opening hours">Giờ mở cửa</p>
+            <p class="mt-1 text-[1.02rem] leading-relaxed text-forest/85" data-en="Tuesday to Sunday, 9:00 - 19:30<br>Closed on Mondays">Thứ Ba đến Chủ Nhật, 9:00 - 19:30<br>Nghỉ Thứ Hai</p>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-earth" data-en="Phone &amp; email (sample)">Điện thoại &amp; email (mẫu)</p>
+            <p class="mt-1 text-[1.02rem] leading-relaxed text-forest/85"><a href="tel:02839254718" class="transition-colors duration-300 hover:text-olive">028 3925 4718</a><br><a href="mailto:hello@rootsorganichair.vn" class="break-words transition-colors duration-300 hover:text-olive">hello@rootsorganichair.vn</a></p>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-earth" data-en="Social">Mạng xã hội</p>
+            <ul class="mt-2 flex flex-wrap gap-2 text-sm">
+              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="inline-flex min-h-[40px] items-center rounded-full border border-stone px-4 text-forest/80 transition-colors duration-300 hover:border-olive hover:text-forest">Instagram</a></li>
+              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="inline-flex min-h-[40px] items-center rounded-full border border-stone px-4 text-forest/80 transition-colors duration-300 hover:border-olive hover:text-forest">Facebook</a></li>
+              <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="inline-flex min-h-[40px] items-center rounded-full border border-stone px-4 text-forest/80 transition-colors duration-300 hover:border-olive hover:text-forest">TikTok</a></li>
+            </ul>
+          </div>
+        </address>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <a href="tel:02839254718" class="inline-flex min-h-[48px] items-center justify-center rounded-full bg-olive px-7 text-sm font-bold text-ivory transition duration-300 hover:bg-olive-deep active:scale-[.98]"><span data-en="Call the salon">Gọi salon</span></a>
+          <button type="button" data-modal-open="dat-lich" class="inline-flex min-h-[48px] items-center justify-center rounded-full border border-forest/25 px-7 text-sm font-bold text-forest transition-colors duration-300 hover:border-forest hover:bg-stone/50"><span data-en="Book a Visit">Đặt lịch</span></button>
+        </div>
+
+        <p class="mt-6 max-w-md text-sm leading-relaxed text-forest/60" data-en="Address, opening hours, phone, email and social links are sample data for this demo and have not been verified.">Địa chỉ, giờ mở cửa, điện thoại, email và mạng xã hội là dữ liệu mẫu cho bản minh họa, chưa được xác minh.</p>
+      </div>
+
+      <div class="lg:col-span-6 lg:col-start-7">
+        <div class="overflow-hidden rounded-[1.75rem] border border-stone bg-sand/60">
+          <iframe src="https://www.google.com/maps?q=18+Tran+Quy+Cap,+District+3,+Ho+Chi+Minh+City&amp;output=embed" title="Bản đồ vị trí studio" data-en-title="Map of the studio location" width="100%" height="420" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="block h-[320px] w-full border-0 sm:h-[420px]"></iframe>
+        </div>
+        <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+          <p class="text-sm text-forest/60" data-en="The address above is sample data.">Địa chỉ trên bản đồ là dữ liệu mẫu.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=18+Tran+Quy+Cap,+District+3,+Ho+Chi+Minh+City" target="_blank" rel="noopener" class="group inline-flex min-h-[44px] items-center gap-2 border-b border-olive text-sm font-bold text-olive"><span data-en="Open in Google Maps">Mở trong Google Maps</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="overflow-hidden bg-forest text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl leading-tight lg:text-4xl" data-en="Hair care that starts <em class='text-sage'>at the roots</em>.">Chăm sóc mái tóc <em class="text-sage">từ gốc rễ</em>.</p>
+        <p class="mt-5 max-w-sm text-[0.95rem] leading-relaxed text-ivory/70" data-en="A hair salon for natural beauty, healthy hair and a consultation made for you.">Salon tóc dành cho vẻ đẹp tự nhiên, mái tóc khỏe và buổi tư vấn dành riêng cho bạn.</p>
+        <button type="button" data-modal-open="dat-lich" class="mt-8 inline-flex min-h-[48px] items-center gap-3 rounded-full bg-olive px-7 text-sm font-bold text-ivory transition duration-300 hover:bg-ivory hover:text-forest active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ivory"><span data-en="Book a Visit">Đặt lịch</span><span aria-hidden="true">&rarr;</span></button>
+      </div>
+
+      <nav class="lg:col-span-2 lg:col-start-6" aria-label="Điều hướng chân trang" data-en-aria-label="Footer navigation">
+        <p class="text-sm font-bold text-sage" data-en="Navigation">Điều hướng</p>
+        <ul class="mt-5 space-y-3 text-[0.95rem]">
+          <li><a href="../index.html" class="text-ivory/80 transition-colors duration-300 hover:text-ivory"><span data-en="Home">Trang chủ</span></a></li>
+          <li><a href="../pages/services.html" class="text-ivory/80 transition-colors duration-300 hover:text-ivory"><span data-en="Services">Dịch vụ</span></a></li>
+          <li><a href="../pages/journal.html" class="text-ivory/80 transition-colors duration-300 hover:text-ivory">Hair Journal</a></li>
+          <li><a aria-current="page" href="../pages/studio.html" class="text-ivory/80 transition-colors duration-300 hover:text-ivory"><span data-en="Our Studio">Về Studio</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <p class="text-sm font-bold text-sage" data-en="Visit &amp; contact">Ghé thăm &amp; liên hệ</p>
+        <address class="mt-5 space-y-3 text-[0.95rem] not-italic leading-relaxed text-ivory/80">
+          <p data-en="18 Tran Quy Cap Street, District 3,<br>Ho Chi Minh City">18 Trần Quý Cáp, Quận 3,<br>TP. Hồ Chí Minh</p>
+          <p data-en="Tue to Sun: 9:00 - 19:30<br>Closed on Mondays">Thứ Ba - Chủ Nhật: 9:00 - 19:30<br>Nghỉ Thứ Hai</p>
+          <p><a href="tel:02839254718" class="transition-colors duration-300 hover:text-ivory">028 3925 4718</a><br><a href="mailto:hello@rootsorganichair.vn" class="break-words transition-colors duration-300 hover:text-ivory">hello@rootsorganichair.vn</a></p>
+        </address>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="text-sm font-bold text-sage" data-en="Social">Mạng xã hội</p>
+        <ul class="mt-5 space-y-3 text-[0.95rem]">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-ivory/80 transition-colors duration-300 hover:text-ivory">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="text-ivory/80 transition-colors duration-300 hover:text-ivory">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="text-ivory/80 transition-colors duration-300 hover:text-ivory">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mt-14 border-t border-ivory/15 pt-6 text-sm leading-relaxed text-ivory/60" data-en="Address, phone, email and social links are sample data for this demo and have not been verified.">Địa chỉ, điện thoại, email và liên kết mạng xã hội là dữ liệu mẫu cho bản minh họa, chưa được xác minh.</p>
+
+    <p aria-hidden="true" class="mt-10 select-none whitespace-nowrap font-display text-[17vw] font-medium leading-[0.8] tracking-[0.02em] text-ivory/[0.07] lg:text-[13.5vw]">ROOTS</p>
+
+    <div class="flex flex-col gap-2 border-t border-ivory/15 py-6 text-sm text-ivory/60 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 ROOTS ORGANIC HAIR</p>
+      <a href="#top" class="inline-flex min-h-[44px] items-center transition-colors duration-300 hover:text-ivory"><span data-en="Back to top">Về đầu trang</span>&nbsp;&uarr;</a>
+    </div>
+  </div>
+</footer>
+
+<dialog id="dat-lich" aria-labelledby="dat-lich-title">
+  <div class="relative p-7 sm:p-9">
+    <button type="button" data-modal-close class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full text-2xl text-forest/70 transition-colors duration-300 hover:bg-stone" aria-label="Đóng" data-en-aria-label="Close">&times;</button>
+    <p class="text-xs font-bold uppercase tracking-[0.22em] text-olive" data-en="Book a visit">Đặt lịch hẹn</p>
+    <h2 id="dat-lich-title" class="mt-3 font-display text-4xl leading-tight text-forest" data-en="Let us save you a <em>quiet hour</em>.">Giữ cho bạn một <em>giờ thư thả</em>.</h2>
+    <p class="mt-4 text-[0.95rem] leading-relaxed text-forest/75" data-en="Online booking in this website is a demo and does not send any data. Please call or email the salon to reserve a time.">Đặt lịch trực tuyến trên website này là bản minh họa, chưa gửi dữ liệu. Vui lòng gọi hoặc gửi email cho salon để giữ chỗ.</p>
+    <div class="mt-6 rounded-[1.25rem] border border-stone bg-white/60 p-5">
+      <p class="text-sm text-forest/60" data-en="Phone (sample)">Điện thoại (mẫu)</p>
+      <div class="mt-1 flex flex-wrap items-center gap-3">
+        <a href="tel:02839254718" class="font-display text-3xl text-forest">028 3925 4718</a>
+        <button type="button" data-copy="028 3925 4718" class="min-h-[40px] rounded-full border border-olive px-4 text-sm font-bold text-olive transition-colors duration-300 hover:bg-olive hover:text-ivory"><span data-en="Copy">Sao chép</span></button>
+      </div>
+      <p class="mt-4 text-sm text-forest/60" data-en="Opening hours">Giờ mở cửa</p>
+      <p class="mt-1 text-[0.95rem] text-forest" data-en="Tue to Sun: 9:00 - 19:30. Closed on Mondays.">Thứ Ba - Chủ Nhật: 9:00 - 19:30. Nghỉ Thứ Hai.</p>
+    </div>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="tel:02839254718" class="inline-flex min-h-[48px] items-center rounded-full bg-olive px-7 text-sm font-bold text-ivory transition duration-300 hover:bg-olive-deep"><span data-en="Call the salon">Gọi salon</span></a>
+      <a href="mailto:hello@rootsorganichair.vn" class="inline-flex min-h-[48px] items-center rounded-full border border-forest/25 px-7 text-sm font-bold text-forest transition-colors duration-300 hover:border-forest"><span data-en="Send an email">Gửi email</span></a>
+    </div>
+  </div>
+</dialog>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

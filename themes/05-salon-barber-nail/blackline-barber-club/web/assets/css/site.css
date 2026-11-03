@@ -1,0 +1,39 @@
+:root {
+  --ink: #111111;
+  --coal: #242321;
+  --ivory: #F2EBDD;
+  --wine: #702B35;
+  --brass: #A68A5B;
+  --ui-accent: #702B35;
+  --font-display: "Noto Serif Display", Georgia, system-ui, "Segoe UI", Roboto, Arial, serif;
+  --font-sans: Geist, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--ink); color: var(--ivory); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--wine); color: var(--ivory); }
+
+/* Header: trạng thái sau khi cuộn (motion.js gắn .is-scrolled) */
+[data-header] { transition: background-color .4s ease, padding .4s cubic-bezier(.16,1,.3,1); }
+[data-header] .hdr-inner { transition: height .4s cubic-bezier(.16,1,.3,1); }
+[data-header].is-scrolled { background: var(--ink); }
+[data-header].is-scrolled .hdr-inner { height: 4rem; }
+
+/* Đường kẻ dao cạo: vạch đỏ mảnh mở đầu mỗi section */
+.razor { display: block; width: 3.5rem; height: 2px; background: var(--wine); }
+
+/* Ảnh hero: zoom rất nhẹ khi vào trang */
+@keyframes hero-settle { from { transform: scale(1.06); opacity: .4; } to { transform: scale(1); opacity: 1; } }
+.hero-settle { animation: hero-settle 1.6s cubic-bezier(.16,1,.3,1) both; }
+
+/* Gallery lọc: ẩn mục không khớp (ui.js gắn hidden / class) */
+[data-category][hidden] { display: none !important; }
+
+/* Dialog đặt lịch */
+dialog#book::backdrop { background: rgba(17,17,17,.78); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-settle { animation: none; }
+  [data-header], [data-header] .hdr-inner { transition: none; }
+}

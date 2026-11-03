@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEVNEX | Viết code rõ ràng, xây sản phẩm chạy thật</title>
+<meta name="description" content="DEVNEX: portfolio và CV trực tuyến của lập trình viên full-stack. Kỹ năng, dự án tiêu biểu, kinh nghiệm làm việc và thông tin liên hệ.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-void font-sans text-ink">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-300">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[76px] lg:px-10 2xl:px-16">
+    <a href="#hero" class="group flex items-center gap-2 rounded-md font-display text-xl font-bold tracking-tight text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon" aria-label="DEVNEX, về đầu trang">
+      <span class="font-mono text-base font-medium text-neon transition-transform duration-300 group-hover:-translate-x-0.5">&lt;/&gt;</span>
+      DEVNEX
+    </a>
+
+    <nav data-scrollspy aria-label="Điều hướng chính" class="hidden lg:block">
+      <ul class="flex items-center gap-8 text-[15px] text-muted">
+        <li><a href="#about" class="relative py-2 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-neon after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100 focus-visible:outline-none focus-visible:text-ink focus-visible:after:scale-x-100">Giới thiệu</a></li>
+        <li><a href="#skills" class="relative py-2 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-neon after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100 focus-visible:outline-none focus-visible:text-ink focus-visible:after:scale-x-100">Kỹ năng</a></li>
+        <li><a href="#projects" class="relative py-2 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-neon after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100 focus-visible:outline-none focus-visible:text-ink focus-visible:after:scale-x-100">Dự án</a></li>
+        <li><a href="#experience" class="relative py-2 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-neon after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100 focus-visible:outline-none focus-visible:text-ink focus-visible:after:scale-x-100">Kinh nghiệm</a></li>
+        <li><a href="#education" class="relative py-2 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-neon after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100 focus-visible:outline-none focus-visible:text-ink focus-visible:after:scale-x-100">Học vấn</a></li>
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <span class="hidden items-center gap-2 rounded-md border border-line px-3 py-1.5 font-mono text-xs text-muted xl:inline-flex">
+        <span class="status-dot h-2 w-2 rounded-full bg-neon" aria-hidden="true"></span>
+        Sẵn sàng nhận dự án
+      </span>
+      <button type="button" data-modal-open="cv-modal" class="hidden h-11 items-center gap-2 rounded-lg bg-neon px-5 text-sm font-semibold text-void transition duration-300 hover:bg-neon-soft active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-void sm:inline-flex">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+        Tải CV
+      </button>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-line text-ink transition duration-300 hover:border-neon focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon lg:hidden">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-lg border border-line bg-card p-6 shadow-2xl shadow-black/40 lg:hidden">
+    <p class="mb-4 font-mono text-xs text-muted">~/devnex <span class="text-neon">$</span> ls</p>
+    <ul class="grid gap-1 font-display text-lg text-ink">
+      <li><a href="#about" class="flex min-h-[44px] items-center rounded-md px-3 hover:bg-raised">Giới thiệu</a></li>
+      <li><a href="#skills" class="flex min-h-[44px] items-center rounded-md px-3 hover:bg-raised">Kỹ năng</a></li>
+      <li><a href="#projects" class="flex min-h-[44px] items-center rounded-md px-3 hover:bg-raised">Dự án</a></li>
+      <li><a href="#experience" class="flex min-h-[44px] items-center rounded-md px-3 hover:bg-raised">Kinh nghiệm</a></li>
+      <li><a href="#education" class="flex min-h-[44px] items-center rounded-md px-3 hover:bg-raised">Học vấn</a></li>
+      <li><a href="#contact" class="flex min-h-[44px] items-center rounded-md px-3 hover:bg-raised">Liên hệ</a></li>
+    </ul>
+    <button type="button" data-modal-open="cv-modal" class="mt-5 flex h-12 w-full items-center justify-center rounded-lg bg-neon font-semibold text-void">Tải CV</button>
+  </div>
+</header>
+<!-- /@partial header -->
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-split" class="relative overflow-hidden bg-void pt-24 lg:pt-[76px]">
+    <div class="tech-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl items-center gap-12 px-4 pb-16 pt-8 sm:px-6 lg:min-h-[calc(92dvh-76px)] lg:grid-cols-[58fr_42fr] lg:gap-10 lg:px-10 lg:pb-20 lg:pt-12 2xl:gap-16 2xl:px-16">
+      <div class="min-w-0">
+        <p data-reveal="fade" class="font-mono text-xs font-medium uppercase tracking-[0.16em] text-neon sm:text-sm">Kỹ sư phần mềm / Full-stack Developer</p>
+        <h1 data-reveal="up" class="mt-5 font-display text-[2.6rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl xl:text-7xl 2xl:text-[5.5rem]">
+          Xây dựng sản phẩm số <span class="text-neon">vận hành thật.</span>
+        </h1>
+        <p data-reveal="up" class="mt-6 max-w-[58ch] text-lg leading-relaxed text-muted">
+          Tôi là <strong class="font-semibold text-ink">Trần Minh Khoa</strong>, người đứng sau DEVNEX, lập trình viên full-stack với hơn 5 năm kinh nghiệm. Tôi đã bàn giao hơn 20 ứng dụng web cho startup và doanh nghiệp vừa, từ hệ thống chat thời gian thực tới API thương mại điện tử xử lý hàng nghìn đơn mỗi ngày.
+        </p>
+        <div data-reveal="up" data-reveal-delay="200" class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <a href="#projects" class="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-neon px-7 font-semibold text-void transition duration-300 hover:bg-neon-soft active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-void">
+            Xem dự án
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <button type="button" data-modal-open="cv-modal" class="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-linehi px-7 font-semibold text-ink transition duration-300 hover:border-neon hover:text-neon active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+            Tải CV
+          </button>
+        </div>
+
+        <dl data-reveal="fade" class="mt-12 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-line pt-7 xl:grid-cols-4">
+          <div class="min-w-0">
+            <dt class="font-mono text-xs text-muted">địa_điểm</dt>
+            <dd class="mt-1.5 text-[15px] text-ink">TP. Hồ Chí Minh, làm từ xa</dd>
+          </div>
+          <div class="min-w-0">
+            <dt class="font-mono text-xs text-muted">chuyên_môn</dt>
+            <dd class="mt-1.5 text-[15px] text-ink">React, Node.js, PostgreSQL</dd>
+          </div>
+          <div class="min-w-0">
+            <dt class="font-mono text-xs text-muted">kinh_nghiệm</dt>
+            <dd class="mt-1.5 text-[15px] text-ink">5+ năm, 20+ dự án</dd>
+          </div>
+          <div class="min-w-0">
+            <dt class="font-mono text-xs text-muted">email</dt>
+            <dd class="mt-1.5 flex items-center gap-2 text-[15px]">
+              <a href="mailto:hello@devnex.dev" class="break-all text-ink underline decoration-line underline-offset-4 hover:text-neon hover:decoration-neon">hello@devnex.dev</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Cửa sổ editor -->
+      <div data-reveal="up" class="min-w-0">
+        <div class="overflow-hidden rounded-lg border border-line bg-card shadow-[0_30px_80px_-30px_rgba(163,255,104,0.18)]" role="img" aria-label="Cửa sổ trình soạn thảo hiển thị tệp profile.ts mô tả vai trò, kỹ năng và trạng thái sẵn sàng của DEVNEX">
+          <div class="flex items-center gap-2 border-b border-line bg-panel px-4 py-3">
+            <span class="h-3 w-3 rounded-full bg-[#FF5F57]" aria-hidden="true"></span>
+            <span class="h-3 w-3 rounded-full bg-[#FEBC2E]" aria-hidden="true"></span>
+            <span class="h-3 w-3 rounded-full bg-[#28C840]" aria-hidden="true"></span>
+            <span class="ml-3 rounded-md border border-line bg-card px-3 py-1 font-mono text-xs text-ink">profile.ts</span>
+            <span class="ml-auto hidden font-mono text-xs text-muted sm:inline">TypeScript</span>
+          </div>
+          <pre class="overflow-x-auto whitespace-pre-wrap break-words p-5 font-mono text-[13px] sm:whitespace-pre leading-7 sm:p-6 sm:text-sm 2xl:text-[15px]" aria-hidden="true"><code><span class="term-line block" style="--i:0"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">1</span><span class="text-syn-com">// profile.ts: hồ sơ ngắn gọn</span></span><span class="term-line block" style="--i:1"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">2</span><span class="text-syn-fn">const</span> <span class="text-ink">developer</span> <span class="text-muted">=</span> <span class="text-muted">{</span></span><span class="term-line block" style="--i:2"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">3</span>  <span class="text-syn-key">name</span><span class="text-muted">:</span> <span class="text-syn-str">"DEVNEX"</span><span class="text-muted">,</span></span><span class="term-line block" style="--i:3"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">4</span>  <span class="text-syn-key">role</span><span class="text-muted">:</span> <span class="text-syn-str">"Software Engineer"</span><span class="text-muted">,</span></span><span class="term-line block" style="--i:4"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">5</span>  <span class="text-syn-key">skills</span><span class="text-muted">:</span> <span class="text-muted">[</span><span class="text-syn-str">"TypeScript"</span><span class="text-muted">,</span> <span class="text-syn-str">"React"</span><span class="text-muted">,</span> <span class="text-syn-str">"Node.js"</span><span class="text-muted">],</span></span><span class="term-line block" style="--i:5"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">6</span>  <span class="text-syn-key">focus</span><span class="text-muted">:</span> <span class="text-muted">[</span><span class="text-syn-str">"Web Development"</span><span class="text-muted">,</span> <span class="text-syn-str">"APIs"</span><span class="text-muted">],</span></span><span class="term-line block" style="--i:6"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">7</span>  <span class="text-syn-key">mindset</span><span class="text-muted">:</span> <span class="text-syn-str">"Build. Test. Improve."</span><span class="text-muted">,</span></span><span class="term-line block" style="--i:7"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">8</span>  <span class="text-syn-key">availability</span><span class="text-muted">:</span> <span class="text-neon">true</span><span class="text-muted">,</span></span><span class="term-line block" style="--i:8"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">9</span><span class="text-muted">};</span></span><span class="term-line block" style="--i:9"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">10</span></span><span class="term-line block" style="--i:10"><span class="mr-4 inline-block w-5 select-none text-right text-syn-com">11</span><span class="text-syn-fn">export default</span> <span class="text-ink">developer</span><span class="text-muted">;</span></span></code></pre>
+          <div class="border-t border-line bg-void/60 px-5 py-4 font-mono text-[13px] sm:px-6">
+            <p class="term-line text-muted" style="--i:11"><span class="text-neon">~/devnex $</span> npm run build</p>
+            <p class="term-line mt-1 text-ink" style="--i:12"><span class="text-neon">✓</span> compiled, 0 errors <span class="term-caret" aria-hidden="true"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" data-section="story-letter" class="border-t border-line bg-panel py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:gap-16 2xl:px-16">
+      <div class="min-w-0 lg:col-span-6">
+        <h2 data-reveal="up" class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl 2xl:text-6xl"><span class="font-mono text-[0.6em] font-medium text-neon mr-2">~/</span>Giới thiệu</h2>
+        <p data-reveal="up" class="mt-6 font-display text-2xl leading-snug text-ink sm:text-[1.7rem]">Tôi thích những bài toán có ràng buộc thật: dữ liệu lộn xộn, thời hạn gấp và người dùng không đọc hướng dẫn.</p>
+        <div data-reveal="up" class="mt-7 max-w-prose space-y-4 text-[17px] leading-relaxed text-muted">
+          <p>Tôi làm việc ở cả hai phía của ứng dụng web: từ giao diện React, TypeScript đến API Node.js và cơ sở dữ liệu quan hệ. Điều tôi quan tâm nhất không phải công nghệ mới nhất, mà là hệ thống chạy ổn định sau khi bàn giao và người kế nhiệm đọc hiểu được code.</p>
+          <p>Trước khi viết dòng đầu tiên, tôi muốn hiểu ai dùng sản phẩm, họ đang vướng ở đâu và đo thành công bằng gì. Sau đó tôi chia nhỏ việc, viết test cho phần dễ vỡ, ghi lại quyết định kỹ thuật và giao từng phần có thể dùng được thay vì một bản lớn vào phút cuối.</p>
+          <p>Hiện tôi là Senior Full-stack Developer tại Lumio Commerce và nhận thêm một số dự án freelance mỗi năm. Ngoài giờ làm, tôi duy trì một bộ UI kit mã nguồn mở và viết blog kỹ thuật về hiệu năng React.</p>
+        </div>
+        <dl data-reveal-stagger="80" class="mt-10 grid grid-cols-2 gap-6 border-t border-line pt-8 sm:grid-cols-4">
+          <div><dt class="font-mono text-xs text-muted">năm_kinh_nghiệm</dt><dd class="mt-2 font-display text-4xl font-bold text-ink">5+</dd></div>
+          <div><dt class="font-mono text-xs text-muted">dự_án_bàn_giao</dt><dd class="mt-2 font-display text-4xl font-bold text-ink">23</dd></div>
+          <div><dt class="font-mono text-xs text-muted">khách_hàng</dt><dd class="mt-2 font-display text-4xl font-bold text-ink">14</dd></div>
+          <div><dt class="font-mono text-xs text-muted">commit_2025</dt><dd class="mt-2 font-display text-4xl font-bold text-neon">1.8k</dd></div>
+        </dl>
+      </div>
+
+      <div class="min-w-0 lg:col-span-6">
+        <figure data-reveal="clip" class="relative overflow-hidden rounded-lg border border-line bg-card">
+          <img src="assets/img/about-code-screen.webp" alt="Cận cảnh màn hình hiển thị mã JavaScript với cú pháp tô màu" width="1600" height="1067" loading="lazy" class="aspect-[16/10] w-full object-cover opacity-90">
+        </figure>
+        <dl data-reveal-stagger="80" class="mt-8 grid gap-6 sm:grid-cols-3">
+          <div class="border-l border-neon/60 pl-4">
+            <dt class="font-mono text-xs text-neon">phương_pháp</dt>
+            <dd class="mt-2 text-[15px] leading-relaxed text-ink">Làm rõ yêu cầu, giao theo vòng ngắn, review code và viết test cho luồng quan trọng.</dd>
+          </div>
+          <div class="border-l border-line pl-4">
+            <dt class="font-mono text-xs text-muted">quan_tâm</dt>
+            <dd class="mt-2 text-[15px] leading-relaxed text-ink">Ứng dụng thời gian thực, thiết kế API, hiệu năng giao diện và trải nghiệm nhà phát triển.</dd>
+          </div>
+          <div class="border-l border-line pl-4">
+            <dt class="font-mono text-xs text-muted">mục_tiêu</dt>
+            <dd class="mt-2 text-[15px] leading-relaxed text-ink">Phát triển thành kỹ sư phụ trách kiến trúc cho sản phẩm web có lượng người dùng lớn.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div data-reveal-stagger="90" class="grid border-t border-line pt-10 sm:grid-cols-3 lg:col-span-12">
+        <div class="py-4 sm:pr-8">
+          <p class="font-mono text-sm font-bold text-neon">GIẢI QUYẾT VẤN ĐỀ</p>
+          <p class="mt-3 text-[15px] leading-relaxed text-muted">Tìm nguyên nhân gốc trước khi sửa triệu chứng, rồi chọn cách đơn giản nhất giải quyết được nó.</p>
+        </div>
+        <div class="border-line py-4 sm:border-l sm:px-8">
+          <p class="font-mono text-sm font-bold text-neon">HỌC HỎI LIÊN TỤC</p>
+          <p class="mt-3 text-[15px] leading-relaxed text-muted">Mỗi dự án thử một kỹ thuật mới ở phạm vi nhỏ, ghi chú lại những gì hiệu quả và những gì không.</p>
+        </div>
+        <div class="border-line py-4 sm:border-l sm:pl-8">
+          <p class="font-mono text-sm font-bold text-neon">CODE SẠCH</p>
+          <p class="mt-3 text-[15px] leading-relaxed text-muted">Đặt tên rõ nghĩa, hàm làm một việc, và để lại code dễ đọc hơn lúc nhận.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" data-section="features-tabs" class="border-t border-line bg-void py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl 2xl:text-6xl"><span class="font-mono text-[0.6em] font-medium text-neon mr-2">~/</span>Kỹ năng kỹ thuật</h2>
+      <p data-reveal="up" class="mt-5 max-w-prose text-[17px] leading-relaxed text-muted">Công nghệ tôi dùng hằng ngày trong dự án thương mại, chia theo nhóm. Stack chính: TypeScript, React, Node.js và PostgreSQL, triển khai bằng Docker trên AWS.</p>
+
+      <div data-tabs data-reveal="up" class="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-10">
+        <div role="tablist" class="flex gap-2 overflow-x-auto pb-1 lg:col-span-3 lg:flex-col lg:overflow-visible">
+          <button type="button" data-tab="frontend" class="flex min-h-[48px] shrink-0 items-center justify-between gap-6 rounded-lg border border-line px-4 text-left font-display text-lg text-muted transition duration-300 hover:border-linehi hover:text-ink [&.is-active]:border-neon [&.is-active]:bg-card [&.is-active]:text-ink lg:w-full lg:py-3">Frontend <span class="font-mono text-xs text-muted">06</span></button>
+          <button type="button" data-tab="backend" class="flex min-h-[48px] shrink-0 items-center justify-between gap-6 rounded-lg border border-line px-4 text-left font-display text-lg text-muted transition duration-300 hover:border-linehi hover:text-ink [&.is-active]:border-neon [&.is-active]:bg-card [&.is-active]:text-ink lg:w-full lg:py-3">Backend <span class="font-mono text-xs text-muted">04</span></button>
+          <button type="button" data-tab="database" class="flex min-h-[48px] shrink-0 items-center justify-between gap-6 rounded-lg border border-line px-4 text-left font-display text-lg text-muted transition duration-300 hover:border-linehi hover:text-ink [&.is-active]:border-neon [&.is-active]:bg-card [&.is-active]:text-ink lg:w-full lg:py-3">Cơ sở dữ liệu <span class="font-mono text-xs text-muted">03</span></button>
+          <button type="button" data-tab="tools" class="flex min-h-[48px] shrink-0 items-center justify-between gap-6 rounded-lg border border-line px-4 text-left font-display text-lg text-muted transition duration-300 hover:border-linehi hover:text-ink [&.is-active]:border-neon [&.is-active]:bg-card [&.is-active]:text-ink lg:w-full lg:py-3">Công cụ <span class="font-mono text-xs text-muted">05</span></button>
+          <div class="hidden rounded-lg border border-dashed border-line p-4 lg:mt-4 lg:block">
+            <p class="font-mono text-xs leading-relaxed text-muted"><span class="text-neon">Nâng cao</span> dùng độc lập trong sản phẩm<br><span class="text-ink">Trung cấp</span> dùng tốt với tài liệu<br><span class="text-muted">Cơ bản</span> đã làm dự án nhỏ</p>
+          </div>
+        </div>
+
+        <div class="min-w-0 lg:col-span-9">
+          <div data-tab-panel="frontend" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#F06529]">H5</span><div><p class="font-display text-lg font-semibold">HTML</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#5AA9E6]">C3</span><div><p class="font-display text-lg font-semibold">CSS / Tailwind</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#F7DF1E]">JS</span><div><p class="font-display text-lg font-semibold">JavaScript</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#4E9BE6]">TS</span><div><p class="font-display text-lg font-semibold">TypeScript</p><p class="font-mono text-xs text-ink">Trung cấp</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#61DAFB]">Re</span><div><p class="font-display text-lg font-semibold">React</p><p class="font-mono text-xs text-ink">Trung cấp</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#42D392]">Vu</span><div><p class="font-display text-lg font-semibold">Vue</p><p class="font-mono text-xs text-muted">Cơ bản</p></div></div>
+          </div>
+          <div data-tab-panel="backend" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#8CC84B]">No</span><div><p class="font-display text-lg font-semibold">Node.js</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-ink">Ex</span><div><p class="font-display text-lg font-semibold">Express</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#7CC7FF]">WS</span><div><p class="font-display text-lg font-semibold">WebSocket</p><p class="font-mono text-xs text-ink">Trung cấp</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#FFD43B]">Py</span><div><p class="font-display text-lg font-semibold">Python</p><p class="font-mono text-xs text-muted">Cơ bản</p></div></div>
+          </div>
+          <div data-tab-panel="database" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#6BA4D8]">Pg</span><div><p class="font-display text-lg font-semibold">PostgreSQL</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#F29111]">My</span><div><p class="font-display text-lg font-semibold">MySQL</p><p class="font-mono text-xs text-ink">Trung cấp</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#4DB33D]">Mg</span><div><p class="font-display text-lg font-semibold">MongoDB</p><p class="font-mono text-xs text-ink">Trung cấp</p></div></div>
+          </div>
+          <div data-tab-panel="tools" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#F1502F]">Gt</span><div><p class="font-display text-lg font-semibold">Git</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-ink">GH</span><div><p class="font-display text-lg font-semibold">GitHub Actions</p><p class="font-mono text-xs text-ink">Trung cấp</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#2496ED]">Dk</span><div><p class="font-display text-lg font-semibold">Docker</p><p class="font-mono text-xs text-ink">Trung cấp</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#FF6C37]">Pm</span><div><p class="font-display text-lg font-semibold">Postman</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+            <div class="group flex items-center gap-4 rounded-lg border border-line bg-card p-5 transition duration-300 hover:-translate-y-0.5 hover:border-neon"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-panel font-mono text-sm font-bold text-[#3EA8F4]">VS</span><div><p class="font-display text-lg font-semibold">VS Code</p><p class="font-mono text-xs text-neon">Nâng cao</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" data-section="gallery-lookbook" class="border-t border-line bg-panel py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl 2xl:text-6xl"><span class="font-mono text-[0.6em] font-medium text-neon mr-2">~/</span>Dự án tiêu biểu</h2>
+      <p data-reveal="up" class="mt-5 max-w-prose text-[17px] leading-relaxed text-muted">Bốn dự án cho thấy cách tôi đi từ vấn đề tới giải pháp, kèm số liệu đo được sau khi bàn giao. Bấm "Xem case study" để đọc chi tiết bối cảnh, kiến trúc và bài học.</p>
+
+      <!-- Dự án nổi bật -->
+      <article data-reveal="up" class="group mt-12 grid overflow-hidden rounded-lg border border-line bg-card transition duration-300 hover:-translate-y-1 hover:border-linehi lg:grid-cols-12">
+        <div class="relative overflow-hidden bg-raised lg:col-span-7">
+          <img src="assets/img/project-chat-realtime.jpg" alt="Tay cầm điện thoại đang xem danh sách tin nhắn trong ứng dụng trò chuyện" width="1024" height="651" loading="lazy" class="aspect-[16/10] h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+        </div>
+        <div class="flex min-w-0 flex-col p-6 sm:p-8 lg:col-span-5 2xl:p-10">
+          <p class="font-mono text-xs text-neon">Ứng dụng web thời gian thực · 03/2025 – 07/2025</p>
+          <h3 class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Realtime Chat</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-muted">Ứng dụng nhắn tin nội bộ cho Orbis Studio (agency 120 nhân sự), thay thế nhóm chat rời rạc trên nhiều nền tảng: phòng theo dự án, trạng thái trực tuyến, gửi tệp và tìm kiếm lịch sử hội thoại.</p>
+          <dl class="mt-6 grid gap-4 text-[15px]">
+            <div><dt class="font-mono text-xs text-muted">vấn_đề</dt><dd class="mt-1 leading-relaxed text-ink">Tin nhắn qua cơ chế tải lại định kỳ đến chậm và tốn tài nguyên máy chủ.</dd></div>
+            <div><dt class="font-mono text-xs text-muted">giải_pháp</dt><dd class="mt-1 leading-relaxed text-ink">Kết nối WebSocket hai chiều, phòng chat theo nhóm, lưu tin nhắn vào MongoDB.</dd></div>
+            <div><dt class="font-mono text-xs text-muted">vai_trò</dt><dd class="mt-1 leading-relaxed text-ink">Tech lead nhóm 3 người: thiết kế API, xây backend realtime và giao diện chat.</dd></div>
+          </dl>
+          <dl class="mt-6 grid grid-cols-3 gap-3 border-y border-line py-5">
+            <div><dt class="font-mono text-[11px] text-muted">độ_trễ</dt><dd class="mt-1 font-display text-2xl font-bold text-neon">&lt;150ms</dd></div>
+            <div><dt class="font-mono text-[11px] text-muted">kết_nối</dt><dd class="mt-1 font-display text-2xl font-bold text-ink">2.000</dd></div>
+            <div><dt class="font-mono text-[11px] text-muted">người_dùng/tháng</dt><dd class="mt-1 font-display text-2xl font-bold text-ink">1.200</dd></div>
+          </dl>
+          <ul class="mt-6 flex flex-wrap gap-2 font-mono text-xs" aria-label="Công nghệ">
+            <li class="rounded-md border border-line px-2.5 py-1 text-ink">Node.js</li>
+            <li class="rounded-md border border-line px-2.5 py-1 text-ink">Express</li>
+            <li class="rounded-md border border-line px-2.5 py-1 text-ink">WebSocket</li>
+            <li class="rounded-md border border-line px-2.5 py-1 text-ink">React</li>
+            <li class="rounded-md border border-line px-2.5 py-1 text-ink">MongoDB</li>
+          </ul>
+          <p class="mt-5 text-sm text-muted"><span class="font-mono text-xs text-neon">kết_quả:</span> độ trễ tin nhắn giảm từ khoảng 4 giây xuống dưới 150 ms; chi phí máy chủ giảm 35% so với cơ chế tải lại định kỳ.</p>
+          <div class="mt-auto flex flex-wrap gap-3 pt-7">
+            <button type="button" data-modal-open="case-chat" class="inline-flex h-11 items-center gap-2 rounded-lg bg-neon px-5 text-sm font-semibold text-void transition duration-300 hover:bg-neon-soft active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-card">Xem case study</button>
+            <span aria-disabled="true" title="Chưa cấu hình liên kết" class="inline-flex h-11 cursor-not-allowed items-center gap-2 rounded-lg border border-dashed border-line px-4 text-sm text-muted">GitHub <span class="font-mono text-xs">chưa cấu hình</span></span>
+            <span aria-disabled="true" title="Chưa cấu hình liên kết" class="inline-flex h-11 cursor-not-allowed items-center gap-2 rounded-lg border border-dashed border-line px-4 text-sm text-muted">Live Demo <span class="font-mono text-xs">chưa cấu hình</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hàng 2: 7 + 5 -->
+      <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-12">
+        <article data-reveal="up" class="group flex min-w-0 flex-col overflow-hidden rounded-lg border border-line bg-card transition duration-300 hover:-translate-y-1 hover:border-linehi lg:col-span-7">
+          <div class="overflow-hidden bg-raised"><img src="assets/img/project-ecommerce-api.jpg" alt="Người dùng làm việc trên laptop hiển thị bảng số liệu bán hàng trực tuyến, bên cạnh mô hình xe đẩy mua sắm" width="1024" height="683" loading="lazy" class="aspect-[16/9] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]"></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <p class="font-mono text-xs text-neon">REST API / Backend · 2024</p>
+            <h3 class="mt-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">Shop API cho chuỗi Mộc Trà</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted">Chuỗi 18 cửa hàng trà và đồ gốm bán đồng thời trên website, Shopee và tại quầy, khoảng 3.000 đơn mỗi ngày dịp cao điểm.</p>
+            <div class="mt-4 grid gap-4 text-[15px] sm:grid-cols-2">
+              <p class="leading-relaxed text-muted"><span class="block font-mono text-xs text-muted">vấn_đề</span><span class="text-ink">Đơn hàng, tồn kho và thanh toán nằm ở ba hệ thống rời, số liệu lệch nhau.</span></p>
+              <p class="leading-relaxed text-muted"><span class="block font-mono text-xs text-muted">giải_pháp</span><span class="text-ink">Một API thống nhất, giao dịch cơ sở dữ liệu cho đơn hàng và tài liệu OpenAPI.</span></p>
+            </div>
+            <p class="mt-4 text-sm text-muted"><span class="font-mono text-xs text-muted">vai_trò:</span> Backend developer chính, làm cùng 1 frontend dev và 1 QA trong 5 tháng.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-y border-line py-4">
+              <div><dt class="font-mono text-[11px] text-muted">lệch_tồn_kho</dt><dd class="mt-1 font-display text-xl font-bold text-neon">6% → 0,3%</dd></div>
+              <div><dt class="font-mono text-[11px] text-muted">p95</dt><dd class="mt-1 font-display text-xl font-bold text-ink">180ms</dd></div>
+              <div><dt class="font-mono text-[11px] text-muted">endpoint</dt><dd class="mt-1 font-display text-xl font-bold text-ink">42</dd></div>
+            </dl>
+            <ul class="mt-5 flex flex-wrap gap-2 font-mono text-xs" aria-label="Công nghệ">
+              <li class="rounded-md border border-line px-2.5 py-1">Node.js</li><li class="rounded-md border border-line px-2.5 py-1">Express</li><li class="rounded-md border border-line px-2.5 py-1">PostgreSQL</li><li class="rounded-md border border-line px-2.5 py-1">Redis</li><li class="rounded-md border border-line px-2.5 py-1">Docker</li>
+            </ul>
+            <div class="mt-auto flex flex-wrap gap-3 pt-6">
+              <button type="button" data-modal-open="case-shop" class="inline-flex h-11 items-center rounded-lg border border-linehi px-5 text-sm font-semibold text-ink transition duration-300 hover:border-neon hover:text-neon focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon">Xem case study</button>
+              <span aria-disabled="true" class="inline-flex h-11 cursor-not-allowed items-center rounded-lg border border-dashed border-line px-4 text-sm text-muted">Mã nguồn riêng của khách</span>
+            </div>
+          </div>
+        </article>
+
+        <article data-reveal="up" class="group flex min-w-0 flex-col overflow-hidden rounded-lg border border-line bg-card transition duration-300 hover:-translate-y-1 hover:border-linehi lg:col-span-5">
+          <div class="overflow-hidden bg-raised"><img src="assets/img/project-analytics-dashboard.jpg" alt="Màn hình máy tính trên bàn làm việc hiển thị biểu đồ phân tích dữ liệu dạng cột" width="1600" height="1067" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]"></div>
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <p class="font-mono text-xs text-neon">Ứng dụng web / Dashboard · 2023</p>
+            <h3 class="mt-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">Insight Board</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-ink">Thay 12 file Excel tổng hợp thủ công của phòng kinh doanh Vinamove Logistics bằng dashboard lọc theo ngày, kênh, khu vực và sản phẩm, xuất báo cáo PDF một chạm.</p>
+            <p class="mt-4 text-sm text-muted"><span class="font-mono text-xs text-muted">vai_trò:</span> Frontend developer, thiết kế luồng lọc dữ liệu và bộ biểu đồ.</p>
+            <dl class="mt-5 grid grid-cols-2 gap-3 border-y border-line py-4">
+              <div><dt class="font-mono text-[11px] text-muted">báo_cáo_tuần</dt><dd class="mt-1 font-display text-xl font-bold text-neon">6 giờ → 15 phút</dd></div>
+              <div><dt class="font-mono text-[11px] text-muted">người_dùng</dt><dd class="mt-1 font-display text-xl font-bold text-ink">35/ngày</dd></div>
+            </dl>
+            <ul class="mt-5 flex flex-wrap gap-2 font-mono text-xs" aria-label="Công nghệ">
+              <li class="rounded-md border border-line px-2.5 py-1">React</li><li class="rounded-md border border-line px-2.5 py-1">TypeScript</li><li class="rounded-md border border-line px-2.5 py-1">Recharts</li><li class="rounded-md border border-line px-2.5 py-1">MySQL</li>
+            </ul>
+            <div class="mt-auto flex flex-wrap gap-3 pt-6">
+              <button type="button" data-modal-open="case-insight" class="inline-flex h-11 items-center rounded-lg border border-linehi px-5 text-sm font-semibold text-ink transition duration-300 hover:border-neon hover:text-neon focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon">Xem case study</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Hàng 3: chữ trái, ảnh phải -->
+      <article data-reveal="up" class="group mt-6 grid overflow-hidden rounded-lg border border-line bg-card transition duration-300 hover:-translate-y-1 hover:border-linehi lg:grid-cols-12">
+        <div class="order-2 flex min-w-0 flex-col justify-center p-6 sm:p-8 lg:order-1 lg:col-span-5 2xl:p-10">
+          <p class="font-mono text-xs text-neon">Thư viện giao diện / Mã nguồn mở · 2022 – nay</p>
+          <h3 class="mt-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">Nex UI Kit</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-ink">Bộ 28 component và design token giúp nhiều dự án Vue giữ cùng màu, khoảng cách và trạng thái focus. Đạt chuẩn tương phản WCAG AA, hỗ trợ giao diện sáng / tối.</p>
+          <p class="mt-4 text-sm text-muted"><span class="font-mono text-xs text-muted">vai_trò:</span> Tác giả, viết tài liệu, ví dụ sử dụng và duyệt đóng góp từ cộng đồng.</p>
+          <dl class="mt-5 grid grid-cols-3 gap-3 border-y border-line py-4">
+            <div><dt class="font-mono text-[11px] text-muted">component</dt><dd class="mt-1 font-display text-xl font-bold text-neon">28</dd></div>
+            <div><dt class="font-mono text-[11px] text-muted">dự_án_dùng</dt><dd class="mt-1 font-display text-xl font-bold text-ink">6</dd></div>
+            <div><dt class="font-mono text-[11px] text-muted">CSS_viết_mới</dt><dd class="mt-1 font-display text-xl font-bold text-ink">−40%</dd></div>
+          </dl>
+          <ul class="mt-5 flex flex-wrap gap-2 font-mono text-xs" aria-label="Công nghệ">
+            <li class="rounded-md border border-line px-2.5 py-1">Vue 3</li><li class="rounded-md border border-line px-2.5 py-1">CSS variables</li><li class="rounded-md border border-line px-2.5 py-1">Storybook</li><li class="rounded-md border border-line px-2.5 py-1">Vitest</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <button type="button" data-modal-open="case-uikit" class="inline-flex h-11 items-center rounded-lg border border-linehi px-5 text-sm font-semibold text-ink transition duration-300 hover:border-neon hover:text-neon focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon">Xem case study</button>
+            <span aria-disabled="true" class="inline-flex h-11 cursor-not-allowed items-center rounded-lg border border-dashed border-line px-4 text-sm text-muted">GitHub: chưa cấu hình</span>
+          </div>
+        </div>
+        <div class="order-1 overflow-hidden bg-raised lg:order-2 lg:col-span-7">
+          <img src="assets/img/project-task-api.jpg" alt="Cận cảnh màn hình hiển thị mã CSS với các mã màu" width="1600" height="1067" loading="lazy" class="aspect-[16/9] h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" data-section="timeline" class="border-t border-line bg-void py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl 2xl:text-6xl"><span class="font-mono text-[0.6em] font-medium text-neon mr-2">~/</span>Kinh nghiệm</h2>
+          <p data-reveal="up" class="mt-5 max-w-sm text-[17px] leading-relaxed text-muted">Hơn 5 năm làm việc từ thực tập sinh tới senior: sản phẩm thương mại điện tử, phần mềm outsource cho khách Nhật và dự án freelance.</p>
+          <dl data-reveal="up" class="mt-8 grid max-w-sm grid-cols-2 gap-5 border-t border-line pt-6">
+            <div><dt class="font-mono text-xs text-muted">công_ty</dt><dd class="mt-1 font-display text-3xl font-bold text-ink">3</dd></div>
+            <div><dt class="font-mono text-xs text-muted">khách_freelance</dt><dd class="mt-1 font-display text-3xl font-bold text-ink">9</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <ol class="relative lg:col-span-8">
+        <span class="timeline-rail absolute bottom-2 left-[7px] top-2 w-px" aria-hidden="true"></span>
+
+        <li data-reveal="up" class="relative pb-12 pl-10">
+          <span class="absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-2 border-neon bg-void" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-center gap-3">
+            <p class="font-mono text-sm text-neon">01/2024 - nay</p>
+            <span class="rounded-md border border-line px-2 py-0.5 font-mono text-xs text-muted">Toàn thời gian</span>
+          </div>
+          <h3 class="mt-3 font-display text-2xl font-semibold">Senior Full-stack Developer</h3>
+          <p class="mt-1 text-[15px] text-muted">Lumio Commerce, TP. Hồ Chí Minh · nền tảng bán hàng đa kênh, 40 kỹ sư</p>
+          <ul class="mt-4 max-w-prose list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-ink marker:text-neon">
+            <li>Dẫn dắt nhóm 5 người xây lại module thanh toán, tích hợp VNPay, MoMo và ZaloPay; tỉ lệ thanh toán thất bại giảm từ 4,1% xuống 1,2%.</li>
+            <li>Chuyển trang sản phẩm sang render phía máy chủ, LCP trên điện thoại giảm từ 4,2 s xuống 1,6 s.</li>
+            <li>Viết quy chuẩn code review, mentor 3 lập trình viên junior lên mid-level trong 12 tháng.</li>
+          </ul>
+          <p class="mt-4 font-mono text-xs text-muted">TypeScript · Next.js · Node.js · PostgreSQL · Redis · AWS</p>
+        </li>
+
+        <li data-reveal="up" class="relative pb-12 pl-10">
+          <span class="absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-2 border-linehi bg-void" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-center gap-3">
+            <p class="font-mono text-sm text-neon">2022 - nay</p>
+            <span class="rounded-md border border-line px-2 py-0.5 font-mono text-xs text-muted">Freelance</span>
+          </div>
+          <h3 class="mt-3 font-display text-2xl font-semibold">Full-stack Developer</h3>
+          <p class="mt-1 text-[15px] text-muted">9 khách hàng doanh nghiệp nhỏ và startup, làm việc từ xa</p>
+          <ul class="mt-4 max-w-prose list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-ink marker:text-neon">
+            <li>Nhận yêu cầu, ước lượng và bàn giao 11 ứng dụng web từ thiết kế đến triển khai, 100% đúng hạn đã cam kết.</li>
+            <li>Xây API và trang quản trị cho chuỗi cửa hàng Mộc Trà, phòng khám nha khoa và dịch vụ đặt sân thể thao.</li>
+          </ul>
+          <p class="mt-4 font-mono text-xs text-muted">React · Node.js · PostgreSQL · Docker</p>
+        </li>
+
+        <li data-reveal="up" class="relative pb-12 pl-10">
+          <span class="absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-2 border-neon bg-void" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-center gap-3">
+            <p class="font-mono text-sm text-neon">07/2021 - 12/2023</p>
+            <span class="rounded-md border border-line px-2 py-0.5 font-mono text-xs text-muted">Toàn thời gian</span>
+          </div>
+          <h3 class="mt-3 font-display text-2xl font-semibold">Software Engineer</h3>
+          <p class="mt-1 text-[15px] text-muted">Hikari Tech Vietnam, TP. Hồ Chí Minh · outsource cho khách hàng Nhật Bản</p>
+          <ul class="mt-4 max-w-prose list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-ink marker:text-neon">
+            <li>Phát triển hệ thống quản lý kho cho chuỗi siêu thị tại Osaka, phục vụ 60 điểm bán.</li>
+            <li>Viết test tích hợp cho 30+ API quan trọng, nâng độ phủ test từ 38% lên 82%.</li>
+            <li>Tối ưu truy vấn báo cáo cuối ngày, thời gian chạy giảm từ 25 phút xuống 3 phút.</li>
+            <li>Được bình chọn "Kỹ sư của quý" Q3/2023.</li>
+          </ul>
+          <p class="mt-4 font-mono text-xs text-muted">TypeScript · React · Express · MySQL</p>
+        </li>
+
+        <li data-reveal="up" class="relative pl-10">
+          <span class="absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-2 border-neon bg-void" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-center gap-3">
+            <p class="font-mono text-sm text-neon">01/2021 - 06/2021</p>
+            <span class="rounded-md border border-line px-2 py-0.5 font-mono text-xs text-muted">Thực tập</span>
+          </div>
+          <h3 class="mt-3 font-display text-2xl font-semibold">Thực tập sinh Web Developer</h3>
+          <p class="mt-1 text-[15px] text-muted">Pixelgate Agency, TP. Hồ Chí Minh</p>
+          <ul class="mt-4 max-w-prose list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-ink marker:text-neon">
+            <li>Dựng giao diện 8 landing page từ bản thiết kế Figma, sửa lỗi hiển thị trên điện thoại.</li>
+            <li>Làm quen quy trình Git, code review và triển khai; xếp loại xuất sắc cuối kỳ thực tập.</li>
+          </ul>
+          <p class="mt-4 font-mono text-xs text-muted">HTML · CSS · JavaScript · Git</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" data-section="features-numbered" class="border-t border-line bg-panel py-16 lg:py-20">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <h2 data-reveal="up" class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl"><span class="font-mono text-[0.6em] font-medium text-neon mr-2">~/</span>Học vấn</h2>
+        <p data-reveal="up" class="mt-4 max-w-sm text-[15px] leading-relaxed text-muted">Bằng kỹ sư, chứng chỉ chuyên môn và ngoại ngữ đang dùng trong công việc.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:col-span-8">
+        <div data-reveal="up" class="rounded-lg border border-line bg-card p-6 sm:p-7">
+          <div class="flex items-center justify-between gap-3">
+            <p class="font-mono text-sm text-neon">2017 - 2021</p>
+            <span class="rounded-md border border-neon/40 px-2 py-0.5 font-mono text-xs text-neon">GPA 3.42 / 4</span>
+          </div>
+          <h3 class="mt-4 font-display text-2xl font-semibold">Kỹ sư Kỹ thuật phần mềm</h3>
+          <p class="mt-2 text-[15px] text-muted">Trường Đại học Công nghệ Thông tin, ĐHQG TP.HCM</p>
+          <p class="mt-4 text-[15px] leading-relaxed text-ink">Đồ án tốt nghiệp: "Hệ thống đặt lịch khám trực tuyến có nhắc hẹn qua Zalo", đạt 9.2/10. Môn trọng tâm: cấu trúc dữ liệu, cơ sở dữ liệu, kiến trúc phần mềm.</p>
+          <p class="mt-3 text-sm leading-relaxed text-muted">Giải Ba cuộc thi lập trình sinh viên cấp trường 2019; thành viên CLB Lập trình ứng dụng.</p>
+        </div>
+        <ul data-reveal="up" class="divide-y divide-line rounded-lg border border-line bg-card">
+          <li class="flex items-start justify-between gap-4 p-5">
+            <div><p class="font-display text-lg font-semibold">AWS Certified Developer – Associate</p><p class="mt-1 text-sm text-muted">Amazon Web Services</p></div>
+            <span class="shrink-0 font-mono text-xs text-muted">2024</span>
+          </li>
+          <li class="flex items-start justify-between gap-4 p-5">
+            <div><p class="font-display text-lg font-semibold">Meta Front-End Developer</p><p class="mt-1 text-sm text-muted">Meta, qua Coursera</p></div>
+            <span class="shrink-0 font-mono text-xs text-muted">2022</span>
+          </li>
+          <li class="flex items-start justify-between gap-4 p-5">
+            <div><p class="font-display text-lg font-semibold">IELTS Academic 7.0</p><p class="mt-1 text-sm text-muted">British Council · tiếng Nhật JLPT N3 (2022)</p></div>
+            <span class="shrink-0 font-mono text-xs text-muted">2023</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" data-section="contact-split" class="relative overflow-hidden border-t border-neon/40 bg-void py-20 lg:py-28">
+    <div class="tech-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:gap-16 2xl:px-16">
+      <div class="min-w-0 lg:col-span-5">
+        <h2 data-reveal="up" class="font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl 2xl:text-7xl">Bạn đang có dự án <span class="text-neon">cần triển khai?</span></h2>
+        <p data-reveal="up" class="mt-6 max-w-prose text-[17px] leading-relaxed text-muted">Tôi nhận vị trí toàn thời gian, hợp đồng freelance và hợp tác phát triển phần mềm. Gửi vài dòng về công việc, tôi sẽ đọc kỹ.</p>
+
+        <dl data-reveal="up" class="mt-10 grid gap-5 border-t border-line pt-8">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div><dt class="font-mono text-xs text-muted">email</dt><dd class="mt-1"><a href="mailto:hello@devnex.dev" class="font-display text-xl text-ink hover:text-neon transition-colors duration-300">hello@devnex.dev</a></dd></div>
+            <button type="button" data-copy="hello@devnex.dev" class="inline-flex h-11 items-center gap-2 rounded-lg border border-line px-4 text-sm text-ink transition duration-300 hover:border-neon hover:text-neon focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              Sao chép
+            </button>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div><dt class="font-mono text-xs text-muted">github</dt><dd class="mt-1 text-[15px] text-muted">Chưa cấu hình liên kết</dd></div>
+            <div><dt class="font-mono text-xs text-muted">linkedin</dt><dd class="mt-1 text-[15px] text-muted">Chưa cấu hình liên kết</dd></div>
+            <div><dt class="font-mono text-xs text-muted">địa_điểm</dt><dd class="mt-1 text-[15px] text-ink">TP. Hồ Chí Minh, Việt Nam</dd></div>
+            <div><dt class="font-mono text-xs text-muted">trạng_thái</dt><dd class="mt-1 inline-flex items-center gap-2 text-[15px] text-ink"><span class="status-dot h-2 w-2 rounded-full bg-neon" aria-hidden="true"></span>Sẵn sàng nhận dự án</dd></div>
+          </div>
+        </dl>
+      </div>
+
+      <div class="min-w-0 lg:col-span-7">
+        <form data-form="lien-he" data-reveal="up" class="rounded-lg border border-line bg-card p-6 sm:p-8 2xl:p-10" novalidate>
+          <div class="flex items-center gap-2 border-b border-line pb-4 font-mono text-xs text-muted">
+            <span class="text-neon">POST</span> /contact
+          </div>
+          <div class="mt-6 grid gap-5 sm:grid-cols-2">
+            <div class="grid gap-2">
+              <label for="f-name" class="text-sm font-medium text-ink">Họ tên</label>
+              <input id="f-name" name="name" type="text" required minlength="2" autocomplete="name" placeholder="Nguyễn Văn An" class="h-12 rounded-lg border border-line bg-raised px-4 text-ink placeholder:text-[#7D8A99] transition duration-300 focus:border-neon focus:outline-none focus:ring-2 focus:ring-neon/30">
+            </div>
+            <div class="grid gap-2">
+              <label for="f-email" class="text-sm font-medium text-ink">Email</label>
+              <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="ban@congty.vn" class="h-12 rounded-lg border border-line bg-raised px-4 text-ink placeholder:text-[#7D8A99] transition duration-300 focus:border-neon focus:outline-none focus:ring-2 focus:ring-neon/30">
+            </div>
+            <div class="grid gap-2 sm:col-span-2">
+              <label for="f-subject" class="text-sm font-medium text-ink">Chủ đề</label>
+              <input id="f-subject" name="subject" type="text" required minlength="3" placeholder="Tuyển vị trí Full-stack / Thuê làm dự án" class="h-12 rounded-lg border border-line bg-raised px-4 text-ink placeholder:text-[#7D8A99] transition duration-300 focus:border-neon focus:outline-none focus:ring-2 focus:ring-neon/30">
+            </div>
+            <div class="grid gap-2 sm:col-span-2">
+              <label for="f-message" class="text-sm font-medium text-ink">Nội dung</label>
+              <textarea id="f-message" name="message" rows="5" required minlength="10" placeholder="Mô tả ngắn công việc, thời gian và cách liên hệ" class="rounded-lg border border-line bg-raised px-4 py-3 text-ink placeholder:text-[#7D8A99] transition duration-300 focus:border-neon focus:outline-none focus:ring-2 focus:ring-neon/30"></textarea>
+            </div>
+          </div>
+          <div class="mt-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p class="max-w-sm text-sm leading-relaxed text-muted">Bản demo: biểu mẫu chưa kết nối máy chủ nên tin nhắn không được gửi đi. Hãy liên hệ trực tiếp qua email hello@devnex.dev.</p>
+            <button type="submit" class="inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-neon px-7 font-semibold text-void transition duration-300 hover:bg-neon-soft active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-card sm:w-auto">Gửi tin nhắn</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Hộp thoại: CV -->
+<dialog id="cv-modal" class="w-[min(92vw,560px)] rounded-lg border border-line bg-card p-0 text-ink">
+  <div class="flex items-center justify-between border-b border-line px-6 py-4">
+    <p class="font-mono text-sm text-muted">devnex-cv.pdf</p>
+    <button type="button" data-modal-close aria-label="Đóng" class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-2xl text-muted hover:text-ink">×</button>
+  </div>
+  <div class="px-6 py-7">
+    <h2 class="font-display text-2xl font-bold">Tệp CV chưa được tải lên</h2>
+    <p class="mt-3 text-[15px] leading-relaxed text-muted">Đây là bản giao diện mẫu. Khi có tệp PDF thật, nút này sẽ tải CV trực tiếp. Trong lúc chờ, bạn có thể xem phần kinh nghiệm hoặc liên hệ qua email.</p>
+    <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+      <a href="#experience" data-modal-close class="inline-flex h-11 items-center justify-center rounded-lg bg-neon px-5 text-sm font-semibold text-void hover:bg-neon-soft transition duration-300">Xem kinh nghiệm</a>
+      <button type="button" data-copy="hello@devnex.dev" class="inline-flex h-11 items-center justify-center rounded-lg border border-line px-5 text-sm text-ink hover:border-neon hover:text-neon transition duration-300">Sao chép email</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Hộp thoại: case study Realtime Chat -->
+<dialog id="case-chat" class="w-[min(94vw,760px)] rounded-lg border border-line bg-card p-0 text-ink">
+  <div class="flex items-center justify-between border-b border-line px-6 py-4">
+    <p class="font-mono text-sm text-muted">case-study/realtime-chat.md</p>
+    <button type="button" data-modal-close aria-label="Đóng" class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-2xl text-muted hover:text-ink">×</button>
+  </div>
+  <div class="max-h-[70vh] overflow-y-auto px-6 py-7">
+    <h2 class="font-display text-3xl font-bold">Realtime Chat</h2>
+    <p class="mt-2 text-[15px] text-muted">Khách hàng: Orbis Studio · 03/2025 – 07/2025 · Nhóm 3 người</p>
+    <dl class="mt-6 grid grid-cols-3 gap-3 rounded-lg border border-line bg-panel p-4">
+      <div><dt class="font-mono text-[11px] text-muted">độ_trễ</dt><dd class="mt-1 font-display text-xl font-bold text-neon">4s → 150ms</dd></div>
+      <div><dt class="font-mono text-[11px] text-muted">chi_phí_server</dt><dd class="mt-1 font-display text-xl font-bold text-ink">−35%</dd></div>
+      <div><dt class="font-mono text-[11px] text-muted">uptime</dt><dd class="mt-1 font-display text-xl font-bold text-ink">99,9%</dd></div>
+    </dl>
+    <div class="mt-6 grid gap-6 text-[15px] leading-relaxed">
+      <div><h3 class="font-mono text-xs text-neon">bối_cảnh</h3><p class="mt-2 text-ink">120 nhân sự làm việc lai giữa văn phòng và từ xa, trao đổi qua 4 công cụ chat khác nhau, thông tin dự án thất lạc và không kiểm soát được dữ liệu khách hàng.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">thiết_kế</h3><p class="mt-2 text-ink">Máy chủ Express giữ kết nối WebSocket theo phòng, dùng Redis Pub/Sub để chạy nhiều tiến trình; tin nhắn ghi vào MongoDB rồi phát tới các thành viên. Giao diện React hiển thị trạng thái trực tuyến, đang nhập và đã đọc; tệp đính kèm lưu trên S3.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">khó_khăn</h3><p class="mt-2 text-ink">Kết nối rơi khi mạng yếu. Giải quyết bằng cơ chế tự kết nối lại theo backoff và đồng bộ tin nhắn bị lỡ theo mốc thời gian; kiểm thử tải bằng k6 với 2.000 kết nối đồng thời.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">tiến_độ</h3><p class="mt-2 text-ink">Tuần 1–2 khảo sát và thiết kế; tuần 3–10 xây dựng theo sprint 2 tuần; tuần 11–12 thử nghiệm với 2 phòng ban rồi mở cho toàn công ty.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">bài_học</h3><p class="mt-2 text-ink">Đặt giới hạn tần suất gửi tin và kiểm thử với nhiều kết nối đồng thời ngay từ sớm; ghi log theo mã phòng giúp tìm lỗi nhanh gấp nhiều lần.</p></div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Hộp thoại: case study Shop API -->
+<dialog id="case-shop" class="w-[min(94vw,760px)] rounded-lg border border-line bg-card p-0 text-ink">
+  <div class="flex items-center justify-between border-b border-line px-6 py-4">
+    <p class="font-mono text-sm text-muted">case-study/shop-api.md</p>
+    <button type="button" data-modal-close aria-label="Đóng" class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-2xl text-muted hover:text-ink">×</button>
+  </div>
+  <div class="max-h-[70vh] overflow-y-auto px-6 py-7">
+    <h2 class="font-display text-3xl font-bold">Shop API cho chuỗi Mộc Trà</h2>
+    <p class="mt-2 text-[15px] text-muted">Khách hàng: Mộc Trà · 02/2024 – 06/2024 · Nhóm 3 người</p>
+    <dl class="mt-6 grid grid-cols-3 gap-3 rounded-lg border border-line bg-panel p-4">
+      <div><dt class="font-mono text-[11px] text-muted">lệch_tồn_kho</dt><dd class="mt-1 font-display text-xl font-bold text-neon">6% → 0,3%</dd></div>
+      <div><dt class="font-mono text-[11px] text-muted">đơn/ngày</dt><dd class="mt-1 font-display text-xl font-bold text-ink">3.000</dd></div>
+      <div><dt class="font-mono text-[11px] text-muted">p95</dt><dd class="mt-1 font-display text-xl font-bold text-ink">180ms</dd></div>
+    </dl>
+    <div class="mt-6 grid gap-6 text-[15px] leading-relaxed">
+      <div><h3 class="font-mono text-xs text-neon">bối_cảnh</h3><p class="mt-2 text-ink">Đơn hàng từ website, Shopee và máy POS tại 18 cửa hàng nằm ở ba hệ thống rời. Mỗi tối nhân viên đối soát tay, vẫn thường bán quá số hàng còn trong kho.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">thiết_kế</h3><p class="mt-2 text-ink">Một REST API thống nhất cho sản phẩm, tồn kho, đơn hàng và thanh toán. Giữ hàng bằng giao dịch PostgreSQL có khóa dòng; Redis cache danh mục; webhook nhận đơn Shopee; tài liệu OpenAPI cho 42 endpoint.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">khó_khăn</h3><p class="mt-2 text-ink">Đợt khuyến mãi 11/11 tải tăng gấp 8 lần. Thêm hàng đợi xử lý đơn và giới hạn tốc độ theo kênh, hệ thống chạy ổn suốt đợt cao điểm.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">bài_học</h3><p class="mt-2 text-ink">Thống nhất mã sản phẩm giữa các kênh trước khi viết code tiết kiệm nhiều thời gian hơn bất kỳ tối ưu kỹ thuật nào.</p></div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Hộp thoại: case study Insight Board -->
+<dialog id="case-insight" class="w-[min(94vw,760px)] rounded-lg border border-line bg-card p-0 text-ink">
+  <div class="flex items-center justify-between border-b border-line px-6 py-4">
+    <p class="font-mono text-sm text-muted">case-study/insight-board.md</p>
+    <button type="button" data-modal-close aria-label="Đóng" class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-2xl text-muted hover:text-ink">×</button>
+  </div>
+  <div class="max-h-[70vh] overflow-y-auto px-6 py-7">
+    <h2 class="font-display text-3xl font-bold">Insight Board</h2>
+    <p class="mt-2 text-[15px] text-muted">Khách hàng: Vinamove Logistics · 05/2023 – 09/2023 · Nhóm 4 người</p>
+    <dl class="mt-6 grid grid-cols-3 gap-3 rounded-lg border border-line bg-panel p-4">
+      <div><dt class="font-mono text-[11px] text-muted">báo_cáo_tuần</dt><dd class="mt-1 font-display text-xl font-bold text-neon">6h → 15p</dd></div>
+      <div><dt class="font-mono text-[11px] text-muted">biểu_đồ</dt><dd class="mt-1 font-display text-xl font-bold text-ink">24</dd></div>
+      <div><dt class="font-mono text-[11px] text-muted">người_dùng</dt><dd class="mt-1 font-display text-xl font-bold text-ink">35/ngày</dd></div>
+    </dl>
+    <div class="mt-6 grid gap-6 text-[15px] leading-relaxed">
+      <div><h3 class="font-mono text-xs text-neon">bối_cảnh</h3><p class="mt-2 text-ink">Phòng kinh doanh tổng hợp 12 file Excel mỗi thứ Hai để họp tuần, số liệu thường sai lệch giữa các khu vực và luôn chậm một tuần.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">thiết_kế</h3><p class="mt-2 text-ink">Dashboard React + TypeScript với bộ lọc kết hợp ngày, kênh, khu vực, sản phẩm; trạng thái lọc lưu trên URL để chia sẻ đúng góc nhìn. Dữ liệu tổng hợp sẵn theo giờ trong MySQL, xuất PDF một chạm.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">khó_khăn</h3><p class="mt-2 text-ink">Bảng 2 triệu dòng làm biểu đồ tải chậm. Chuyển sang bảng tổng hợp và phân trang phía máy chủ, thời gian tải dưới 1 giây.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">bài_học</h3><p class="mt-2 text-ink">Ngồi cùng người dùng một buổi họp tuần cho biết nên làm 5 biểu đồ nào trước, thay vì làm cả 24 cùng lúc.</p></div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Hộp thoại: case study Nex UI Kit -->
+<dialog id="case-uikit" class="w-[min(94vw,760px)] rounded-lg border border-line bg-card p-0 text-ink">
+  <div class="flex items-center justify-between border-b border-line px-6 py-4">
+    <p class="font-mono text-sm text-muted">case-study/nex-ui-kit.md</p>
+    <button type="button" data-modal-close aria-label="Đóng" class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-2xl text-muted hover:text-ink">×</button>
+  </div>
+  <div class="max-h-[70vh] overflow-y-auto px-6 py-7">
+    <h2 class="font-display text-3xl font-bold">Nex UI Kit</h2>
+    <p class="mt-2 text-[15px] text-muted">Dự án mã nguồn mở cá nhân · 2022 – nay · 7 người đóng góp</p>
+    <dl class="mt-6 grid grid-cols-3 gap-3 rounded-lg border border-line bg-panel p-4">
+      <div><dt class="font-mono text-[11px] text-muted">component</dt><dd class="mt-1 font-display text-xl font-bold text-neon">28</dd></div>
+      <div><dt class="font-mono text-[11px] text-muted">độ_phủ_test</dt><dd class="mt-1 font-display text-xl font-bold text-ink">91%</dd></div>
+      <div><dt class="font-mono text-[11px] text-muted">dung_lượng</dt><dd class="mt-1 font-display text-xl font-bold text-ink">18kb</dd></div>
+    </dl>
+    <div class="mt-6 grid gap-6 text-[15px] leading-relaxed">
+      <div><h3 class="font-mono text-xs text-neon">bối_cảnh</h3><p class="mt-2 text-ink">Mỗi dự án freelance lại viết lại nút, form, bảng và hộp thoại; màu và trạng thái focus lệch nhau, khó bảo trì khi khách đổi nhận diện.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">thiết_kế</h3><p class="mt-2 text-ink">Design token bằng CSS variables (màu, khoảng cách, bo góc), component Vue 3 không phụ thuộc thư viện ngoài, tài liệu Storybook có ví dụ cho từng trạng thái, test bằng Vitest.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">khó_khăn</h3><p class="mt-2 text-ink">Giữ khả năng truy cập bằng bàn phím cho combobox và hộp thoại; kiểm tra theo WAI-ARIA Authoring Practices và thử với trình đọc màn hình NVDA.</p></div>
+      <div><h3 class="font-mono text-xs text-neon">bài_học</h3><p class="mt-2 text-ink">Đặt tên token theo vai trò (primary, surface) thay vì theo màu giúp đổi thương hiệu chỉ mất vài phút.</p></div>
+    </div>
+  </div>
+</dialog>
+
+<!-- @partial footer -->
+<footer id="footer" class="border-t border-line bg-void">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr] lg:px-10 2xl:px-16">
+    <div>
+      <a href="#hero" class="inline-flex items-center gap-2 font-display text-2xl font-bold text-ink"><span class="font-mono text-lg text-neon">&lt;/&gt;</span>DEVNEX</a>
+      <p class="mt-3 max-w-sm text-sm leading-relaxed text-muted">Portfolio và CV trực tuyến của một lập trình viên full-stack. Viết code rõ ràng, xây sản phẩm chạy thật.</p>
+    </div>
+    <nav aria-label="Liên kết chân trang">
+      <p class="font-mono text-xs text-muted">sections/</p>
+      <ul class="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-ink">
+        <li><a href="#about" class="hover:text-neon transition-colors duration-300">Giới thiệu</a></li>
+        <li><a href="#skills" class="hover:text-neon transition-colors duration-300">Kỹ năng</a></li>
+        <li><a href="#projects" class="hover:text-neon transition-colors duration-300">Dự án</a></li>
+        <li><a href="#experience" class="hover:text-neon transition-colors duration-300">Kinh nghiệm</a></li>
+        <li><a href="#education" class="hover:text-neon transition-colors duration-300">Học vấn</a></li>
+        <li><a href="#contact" class="hover:text-neon transition-colors duration-300">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="font-mono text-xs text-muted">contact/</p>
+      <ul class="mt-3 grid gap-2 text-sm">
+        <li><a href="mailto:hello@devnex.dev" class="text-ink hover:text-neon transition-colors duration-300">hello@devnex.dev</a></li>
+        <li class="text-muted">TP. Hồ Chí Minh, nhận việc từ xa</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-line">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 px-4 py-5 font-mono text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+      <p>© 2026 DEVNEX. Dữ liệu cá nhân trên trang là nội dung mẫu.</p>
+      <a href="#hero" class="hover:text-neon transition-colors duration-300">Về đầu trang ↑</a>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

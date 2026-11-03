@@ -1,0 +1,136 @@
+{
+  "brand": "TIDELINE",
+  "language": "vi",
+  "preset": "gallery",
+  "motionLevel": 1,
+  "visualIdea": "Đường chân trời mảnh màu Terracotta: một nét kẻ ngang tự vẽ dần chạy qua mọi trang, chia đất nung và đại dương như mép vách đá; ảnh lớn góc vuông kèm chú thích nhỏ in nghiêng kiểu tạp chí kiến trúc",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nơi đất liền gặp đại dương",
+    "description": "Giao diện thương hiệu resort ven biển phong cách Desert Coastal Retreat, tông đất nung và kiến trúc điêu khắc."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu bản sắc Desert Coastal Retreat, dẫn sang Khu nghỉ, Lưu trú và Trải nghiệm",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Where Earth Meets the Ocean, tiêu đề lệch trái-dưới, CTA Discover TIDELINE cuộn tới #intro" },
+        { "id": "intro", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Brand Introduction: Rooted in the Landscape, hai cột không cân xứng + ảnh bề mặt đất nung" },
+        { "id": "architecture", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Architecture in Earth: 1 ảnh lớn + 2 ảnh chi tiết, chú thích tạp chí, lightbox, nền Sandstone" },
+        { "id": "stays", "catalog": "collections", "variant": "teaser-row", "source": "ba", "note": "Stay Collection: 3 ảnh kích thước khác nhau, link sang pages/stays.html#…" },
+        { "id": "elements", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "The Elements: 4 tiện ích, lưới bất đối xứng, nền Deep Plum" },
+        { "id": "escape", "catalog": "gallery", "variant": "quote-full", "source": "ba", "note": "Full-Width Gallery: A Different Kind of Escape" },
+        { "id": "statement", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Brand Statement: Find Your Own Horizon, nền Burnt Copper" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "red cliffs ocean", "file": "https://images.unsplash.com/photo-1622993829691-85d51ba029c2?w=2400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "intro", "query": "terracotta architecture", "file": "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-lon", "query": "terracotta architecture", "file": "https://images.unsplash.com/photo-1533541589358-4b1083f8929b?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-nho-1", "query": "terracotta architecture", "file": "https://images.unsplash.com/photo-1632399593344-7f96512c0c86?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-nho-2", "query": "terracotta architecture", "file": "https://images.unsplash.com/photo-1552853519-1793ff886074?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "stays-ocean-suite", "query": "earth tone interior", "file": "https://images.unsplash.com/photo-1738585608732-49294c24ece0?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "stays-horizon-villa", "query": "terrace sea view", "file": "https://images.unsplash.com/photo-1694350639569-6706d403a30d?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "stays-coastal-residence", "query": "earth tone interior", "file": "https://images.unsplash.com/photo-1707329196116-ca454e0c5799?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "elements-ocean-pool", "query": "infinity pool ocean", "file": "https://images.unsplash.com/photo-1735770517146-e95c872226fc?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "elements-earth-table", "query": "outdoor dining sunset", "file": "https://images.unsplash.com/photo-1780914117972-7997f4459523?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "elements-stone-spa", "query": "stone spa", "file": "https://images.unsplash.com/photo-1781455495578-944c2dcbd2de?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "elements-sunset-lounge", "query": "sunset building mountain", "file": "https://images.unsplash.com/photo-1782367807681-2289f10c7309?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "escape", "query": "red cliffs ocean", "file": "https://images.unsplash.com/photo-1548130648-c7d462f2b54b?w=2400&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Khu nghỉ (The Retreat)",
+      "purpose": "Kể triết lý thiết kế: địa hình, vật liệu, ánh sáng, kiến trúc và giá trị thương hiệu",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Designed by the Elements" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Our Philosophy: typography lớn + 3 đoạn ngắn so le" },
+        { "id": "materials", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "The Materials: Earth / Stone / Light, ảnh so le theo chiều dọc, nền Sandstone" },
+        { "id": "architecture-landscape", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Architecture & Landscape: 5 ảnh editorial bất đối xứng, chú thích ngắn, lightbox" },
+        { "id": "values", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Brand Values: 4 giá trị typography lớn trên nền Terracotta" },
+        { "id": "next", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn sang Stays" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "stone building cliff sea", "file": "https://images.unsplash.com/photo-1541953747-d09e945b9083?w=2400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "materials-earth", "query": "terracotta facade", "file": "https://images.unsplash.com/photo-1497334251732-c0eb68e26827?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "materials-stone", "query": "rock formation sea", "file": "https://images.unsplash.com/photo-1741848613519-1024f262de07?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "materials-light", "query": "plaster wall shadow", "file": "https://images.unsplash.com/photo-1771086604156-5832dafe4854?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-1", "query": "desert architecture dunes", "file": "https://images.unsplash.com/photo-1780303036823-649d1992dbac?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-2", "query": "desert courtyard", "file": "https://images.unsplash.com/photo-1760261799672-2469a6c4c6f3?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-3", "query": "courtyard pool", "file": "https://images.unsplash.com/photo-1760262645776-633204d88ded?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-4", "query": "arched courtyard", "file": "https://images.unsplash.com/photo-1777027796404-2fee261818da?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-5", "query": "adobe sandstone cliffs", "file": "https://images.unsplash.com/photo-1791812455370-4250b4adb509?w=1800&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/stays.html",
+      "title": "Lưu trú (Stays)",
+      "purpose": "Trình bày ba hạng lưu trú (mô tả, đặc điểm thiết kế, tiện nghi, không giá) và năm tiện ích khu nghỉ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Spaces with a Sense of Place + thanh điều hướng trong trang (scrollspy)" },
+        { "id": "ocean-suite", "catalog": "collections", "variant": "detail-article", "source": "ba", "note": "Ảnh lớn + ảnh cửa sổ chồng lệch, accordion đặc điểm / tiện nghi" },
+        { "id": "horizon-villa", "catalog": "collections", "variant": "detail-article", "source": "ba", "note": "Ảnh ngang tràn khung, chữ 3 cột, nền Sandstone" },
+        { "id": "coastal-residence", "catalog": "collections", "variant": "detail-article", "source": "ba", "note": "Chữ trái, 2 ảnh so le phải, accordion" },
+        { "id": "facilities", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Resort Facilities: 5 tiện ích, lưới ngang dài + dọc + ô chữ Terracotta, lightbox" },
+        { "id": "next", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn sang Experiences" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "ocean view from building", "file": "https://images.unsplash.com/photo-1707576156867-212a2fcf6698?w=2400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "ocean-suite-chinh", "query": "earthy hotel room", "file": "https://images.unsplash.com/photo-1734456416941-416c08f0778e?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "ocean-suite-cua-so", "query": "balcony ocean dusk", "file": "https://images.unsplash.com/photo-1767555027401-6829988ca9df?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "horizon-villa-chinh", "query": "deck rocky coastline", "file": "https://images.unsplash.com/photo-1758907749704-7ad4e48b2aa0?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "horizon-villa-phu", "query": "terrace sofa", "file": "https://images.unsplash.com/photo-1705095605806-4b2936e90471?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "coastal-residence-chinh", "query": "dark wood bedroom garden", "file": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "coastal-residence-phong-khach", "query": "earth tone living room", "file": "https://images.unsplash.com/photo-1564137799581-baca1aa17f5d?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "facilities-ocean-pool", "query": "infinity pool", "file": "https://images.unsplash.com/photo-1562407132-e23789f81bb7?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "facilities-earth-table", "query": "fine dining table", "file": "https://images.unsplash.com/photo-1731941465921-eb4285693713?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "facilities-stone-spa", "query": "steam room stone", "file": "https://images.unsplash.com/photo-1761470575018-135c213340eb?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "facilities-sunset-lounge", "query": "sunset terrace lounge", "file": null, "status": "none" },
+        { "slot": "facilities-movement-studio", "query": "movement studio natural", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Trải nghiệm (Experiences)",
+      "purpose": "Giới thiệu trải nghiệm: khám phá bờ biển, ẩm thực, thư giãn, vận động, hoàng hôn; không CTA đặt phòng",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Beyond the Ordinary Coast" },
+        { "id": "coastal-discovery", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ba", "note": "Ảnh toàn cảnh + ảnh phụ + 3 hoạt động theo thời điểm" },
+        { "id": "dining", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "The Art of Dining: 3 ảnh so le, nền Sandstone" },
+        { "id": "slow-rituals", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Bố cục thoáng, ảnh đá ấm + accordion 3 nghi thức" },
+        { "id": "movement", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Movement & Wellness: tabs Bình minh / Ban ngày / Chiều tà" },
+        { "id": "sunset-hour", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "The Sunset Hour: tiêu đề cực lớn trên nền Deep Plum" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Closing: Let the Landscape Set the Pace, không CTA giao dịch" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "sunset cliff sea", "file": "https://images.unsplash.com/photo-1749370568433-659414fdabcd?w=2400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "coastal-discovery-toan-canh", "query": "red canyon water", "file": "https://images.unsplash.com/photo-1645149837372-b83658b3f6c0?w=2400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "coastal-discovery-phu", "query": "red cliffs ocean", "file": "https://images.unsplash.com/photo-1668653893803-0b645b9257a1?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "dining-mon-ca", "query": "fine dining plate", "file": "https://images.unsplash.com/photo-1676471926534-d5c9771909fa?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "dining-mon-toi", "query": "fine dining plate", "file": "https://images.unsplash.com/photo-1750943036999-81e666b2296c?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "dining-ban-an", "query": "outdoor dining sea", "file": "https://images.unsplash.com/photo-1615234590668-43416e63bf2c?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "slow-rituals", "query": "hot stone spa", "file": "https://images.unsplash.com/photo-1745327883348-8d78cb4661b0?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "movement", "query": "yoga outdoor terrace", "file": null, "status": "none" },
+        { "slot": "sunset-hour", "query": "sunset terrace sea", "file": null, "status": "none" },
+        { "slot": "closing-gallery", "query": "coastal landscape panorama", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Theo chú thích BA: dựng đúng 4 trang (Home, The Retreat, Stays, Experiences); trang con đặt trong pages/ (about.html, stays.html, experiences.html) theo chuẩn thư mục của tool",
+    "Theo chú thích BA: có nút chuyển VI/EN thật cho toàn bộ nội dung, menu, nút, footer, alt ảnh, title, meta (mặc định tiếng Việt, bản EN trong thuộc tính data-en*), lưu lựa chọn bằng localStorage khi chuyển trang / tải lại; ghi đè dòng 'không tạo bộ chuyển ngôn ngữ' của concept.md",
+    "Màu theo BA: Terracotta #B65F45, Burnt Copper #754638, Sandstone #D9C5A7, Warm Chalk #F3EDE3, Deep Plum #49323B; thêm Terracotta đậm #97492F cho chữ nhỏ / nút để đạt tương phản AA trên nền Warm Chalk",
+    "Font theo BA: Cormorant Garamond (tiêu đề) + Be Vietnam Pro (nội dung) thay Montserrat của preset",
+    "Tiêu đề tiếng Anh BA đưa (Where Earth Meets the Ocean…) dùng cho chế độ EN; chế độ VI dịch sang tiếng Việt, tên riêng hạng phòng / tiện ích giữ nguyên",
+    "Thư viện ảnh openverse lỗi quá thời gian / không có ảnh đúng phong cách → dùng link ảnh Unsplash đã kiểm qua link_image; ảnh có hàng cọ / nhiệt đới bị loại theo yêu cầu BA",
+    "Không có ảnh phù hợp cho Sunset Lounge (trang Stays), Movement Studio, Movement & Wellness, The Sunset Hour và Closing Gallery → bố cục chữ lớn trên màu thương hiệu; Closing Gallery của BA cần ảnh cảnh quan toàn chiều rộng (chờ ảnh thật từ khách)",
+    "Hai file assets/img/exp-slow-rituals.jpg, exp-slow-rituals-2.jpg tải thử từ openverse là mặt ngoài nhà tắm cổ, không đúng chủ đề nên không dùng",
+    "Địa điểm mẫu: bờ biển Mũi Dinh, Ninh Thuận (vùng ven biển khô cằn có vách đá); số điện thoại / email là thông tin mẫu"
+  ],
+  "limitations": [
+    "Website chỉ giới thiệu thương hiệu: không đặt phòng, đặt lịch, giỏ hàng hay thanh toán (theo yêu cầu BA); không hiển thị giá, lịch phòng",
+    "Thông tin liên hệ và mạng xã hội là dữ liệu mẫu",
+    "Ảnh dùng link ngoài (Unsplash), cần mạng để hiển thị; ảnh lỗi tự chuyển sang khung dự phòng màu Sandstone"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "brand": "THE TEA LIBRARY",
+  "language": "en",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Website như một cuốn sách trong thư viện cổ: số chương La Mã, đường kẻ mảnh vẽ dần, chú thích ảnh kiểu trang sách, nền kem giấy xen dải xanh rừng",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Mỗi tách trà là một câu chuyện",
+    "description": "Giao diện thương hiệu trà và bánh mang cảm hứng thư viện cổ và phòng trà châu Âu."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu thương hiệu, món nổi bật, nghệ thuật thưởng trà, không gian phòng trà; dẫn sang Menu và About",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Nhãn A House of Tea & Pastry, headline Every Cup Has a Story, ảnh phòng trà bên phải" },
+        { "id": "favorites", "catalog": "collections", "variant": "teaser-row", "source": "ba", "note": "A Few Favorites: 3 món, ảnh tỷ lệ khác nhau, số thứ tự; link sang pages/menu.html" },
+        { "id": "art-of-tea", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "The Art of Tea: hai cột, ảnh tách trà + nội dung" },
+        { "id": "rituals", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "Bốn bước pha trà đánh số, nền xanh rừng" },
+        { "id": "tea-room", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh ngang lớn + chú thích kiểu trang sách; link sang pages/about.html" },
+        { "id": "visit", "catalog": "contact", "variant": "contact-split", "source": "ai", "note": "Địa chỉ, giờ mở cửa, gọi điện, sao chép địa chỉ; không có form" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "tea room vintage", "file": "https://images.unsplash.com/photo-1780245995094-fc2a9860451b?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "favorites-1", "query": "teacup book", "file": "https://images.unsplash.com/photo-1585185160068-8175b6a39d84?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "favorites-2", "query": "scones tea", "file": "https://images.unsplash.com/photo-1777016844333-3641b8dc7f19?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "favorites-3", "query": "milk tea", "file": "https://images.unsplash.com/photo-1788016284568-2cfdc5994fd5?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "art-of-tea", "query": "cup teapot tray", "file": "https://images.unsplash.com/photo-1561668131-a6e7450dc65e?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "tea-room", "query": "cozy cafe wooden interior", "file": "https://images.unsplash.com/photo-1785302710677-69cc4ea97bee?w=2000&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/menu.html",
+      "title": "Menu",
+      "purpose": "Mục lục trà và bánh: Tea Selection, Milk Tea, Fruit Infusions, Pastries theo kiểu biên tập",
+      "sections": [
+        { "id": "index-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Như trang mục lục: số chương + The Tea & Pastry Index" },
+        { "id": "tea-selection", "catalog": "collections", "variant": "list-editorial", "source": "ba", "note": "Chương I" },
+        { "id": "milk-tea", "catalog": "collections", "variant": "list-editorial", "source": "ba", "note": "Chương II, bố cục đảo" },
+        { "id": "fruit-infusions", "catalog": "collections", "variant": "list-editorial", "source": "ba", "note": "Chương III, nền xanh rừng" },
+        { "id": "pastries", "catalog": "collections", "variant": "list-editorial", "source": "ba", "note": "Chương IV" },
+        { "id": "menu-cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Mời ghé phòng trà, link sang About và Visit" }
+      ],
+      "images": [
+        { "slot": "tea-selection", "query": "loose leaf tea", "file": "https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "milk-tea", "query": "milk tea", "file": "https://images.unsplash.com/photo-1595434091143-b375ced5fe5c?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "fruit-infusions", "query": "fruit tea", "file": "https://images.unsplash.com/photo-1647894111500-4ea0cea3bfe6?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "pastries", "query": "pastries tea", "file": "https://images.unsplash.com/photo-1710077717714-976db5604dd7?w=1400&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Câu chuyện thương hiệu kiểu tạp chí, văn hóa trà, trà và bánh, không gian, gallery có chú thích",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh không gian thư viện + A Place to Pause" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Bài viết tạp chí, drop cap, trích dẫn kéo ra lề" },
+        { "id": "chapters", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Văn hóa trà / trà và bánh (2 cặp zigzag)" },
+        { "id": "quote", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Không gian thưởng thức: ảnh cửa sổ + câu lớn trên nền xanh rừng" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "6 ảnh có chú thích + số La Mã, lightbox" },
+        { "id": "about-cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn sang Visit và Menu" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "old library interior", "file": "https://images.unsplash.com/photo-1759968646998-d94b93904082?w=2000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "story", "query": "book and teacup", "file": "https://images.unsplash.com/photo-1474366521946-c3d4b507abf2?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "chapters-culture", "query": "tea set wooden table", "file": "https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "chapters-pairing", "query": "tea and bread", "file": "https://images.unsplash.com/photo-1553595854-34a134b890c8?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "quote-space", "query": "room window garden", "file": "https://images.unsplash.com/photo-1783085938835-ed3c145c44ec?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-1", "query": "teacup white flowers", "file": "https://images.unsplash.com/photo-1523920290228-4f321a939b4c?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-2", "query": "glass teapots", "file": "https://images.unsplash.com/photo-1766232574096-4c4380105cc7?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-3", "query": "wooden bookshelf", "file": "https://images.unsplash.com/photo-1620130674275-d709994ed7c8?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-4", "query": "wooden table window", "file": "https://images.unsplash.com/photo-1610375233775-6e0166927193?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-5", "query": "dried green tea leaves", "file": "https://images.unsplash.com/photo-1763617702099-d956f3fd8324?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-6", "query": "cake and tea", "file": "https://images.unsplash.com/photo-1673530598977-ee0eda88f0a2?w=1200&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Tối đa 3 trang theo chú thích BA: Home, Menu, About; liên hệ / giờ mở cửa ở section Visit trang chủ và footer, không có trang Contact riêng",
+    "BA yêu cầu song ngữ Việt–Anh có nút chuyển ngôn ngữ (ghi đè mục 'không tạo bộ chuyển ngôn ngữ' của concept): tiếng Anh mặc định, nút EN / VI trên header đổi toàn bộ chữ, alt ảnh, title, meta description bằng site.js (thuộc tính data-vi), đổi <html lang>, nhớ lựa chọn bằng localStorage",
+    "Font: đổi Fraunces/Manrope của preset sang Cormorant Garamond (heading serif cổ điển) + Be Vietnam Pro (body), cả hai có bộ ký tự tiếng Việt, tránh lỗi phông",
+    "Màu theo art direction của BA: xanh rừng #203D32, burgundy #6E2938, kem giấy #F0E7D5, nâu gỗ #604832 thay bảng màu preset",
+    "Chuyển động theo BA: chuyển trang fade chậm vừa phải, ảnh hiện dần (clip), đường kẻ mảnh vẽ dần; parallax rất nhẹ 0.08 chỉ ở ảnh hero; bỏ data-particles / data-float của atmos.js vì BA tránh animation liên tục",
+    "Không có form: BA cấm đặt hàng / giỏ hàng / form giao dịch; liên hệ bằng tel:, mailto: và nút sao chép địa chỉ",
+    "Công cụ search_images (openverse) quá thời gian chờ → mọi ảnh dùng link Unsplash đã kiểm qua link_image"
+  ],
+  "limitations": [
+    "Website chỉ giới thiệu thương hiệu và menu; không đặt hàng, thanh toán",
+    "Địa chỉ, số điện thoại, giờ mở cửa, giá món là nội dung mẫu cần khách xác nhận",
+    "Ảnh là ảnh stock dùng bằng link ngoài; cần thay bằng ảnh thật của quán"
+  ]
+}

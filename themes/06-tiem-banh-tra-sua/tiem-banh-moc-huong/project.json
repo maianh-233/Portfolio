@@ -1,0 +1,99 @@
+{
+  "slug": "tiem-banh-moc-huong",
+  "name": "Tiệm bánh Mộc Hương",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website tiệm bánh thủ công",
+    "brand": "Mộc Hương Bakery",
+    "purpose": "Giới thiệu tiệm bánh, thực đơn bánh và thông tin liên hệ / đặt bánh",
+    "audience": "Người trẻ và gia đình ở Hội An thích bánh tươi làm thủ công",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [
+      {
+        "id": "hero",
+        "description": ""
+      },
+      {
+        "id": "story",
+        "description": ""
+      },
+      {
+        "id": "services",
+        "description": "Thực đơn: bánh mì, bánh ngọt, bánh kem đặt trước"
+      },
+      {
+        "id": "contact",
+        "description": ""
+      }
+    ],
+    "notes": "Website CHỈ 3 TRANG: Trang chủ (index.html), Menu (pages/menu.html), Liên hệ (pages/contact.html). Không tạo thêm trang chi tiết hay trang khác. Form đặt bánh chỉ là giao diện minh họa.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-23T14:52:17.344Z",
+  "updatedAt": "2026-10-23T15:09:55.764Z",
+  "screen": "done",
+  "request": "Website tiệm bánh thủ công",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\tiem-banh-moc-huong\\web",
+    "builtAt": "2026-10-23T15:09:39.275Z",
+    "pages": [
+      "index.html",
+      "pages/contact.html",
+      "pages/menu.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/contact.html": [],
+      "pages/menu.html": []
+    }
+  },
+  "job": {
+    "id": "80855ccc-3587-441d-a2b1-138c663b3665",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\tiem-banh-moc-huong\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 217379,
+      "outputTokens": 109482,
+      "cacheReadTokens": 4832011,
+      "cacheCreationTokens": 205070,
+      "costUsd": 4.059257,
+      "numTurns": 100,
+      "durationMs": 1037632
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-23T15:09:52.337Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 9
+  }
+}

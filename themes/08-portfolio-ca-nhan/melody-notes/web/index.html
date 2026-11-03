@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KOMOREBI — Nhặt nhạnh khoảnh khắc nhỏ giữa hàng cây và ánh sáng</title>
+<meta name="description" content="KOMOREBI là portfolio và nhật ký hình ảnh của một nữ nhiếp ảnh gia yêu rừng cây, ảnh film và những khoảnh khắc đời thường.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400&text=%E6%9C%A8%E6%BC%8F%E3%82%8C%E6%97%A5&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="font-body text-ink">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-transparent bg-cream/0 transition-colors duration-500 [&.is-scrolled]:border-line [&.is-scrolled]:bg-cream/90 [&.is-scrolled]:backdrop-blur-sm">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="#hero" class="group flex min-w-0 items-baseline gap-3 text-ink">
+      <span class="font-display text-2xl font-semibold tracking-[0.18em] lg:text-[1.7rem]">KOMOREBI</span>
+      <span class="hidden font-display text-[15px] italic text-bark sm:inline">Photography &amp; Visual Diary</span>
+    </a>
+    <nav data-scrollspy aria-label="Điều hướng chính" class="hidden items-center gap-7 text-[13px] font-medium uppercase tracking-[0.14em] text-ink/80 lg:flex">
+      <a href="#hero" class="relative py-2 transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-forest [&.is-active]:after:scale-x-100">Trang đầu</a>
+      <a href="#gallery" class="relative py-2 transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-forest [&.is-active]:after:scale-x-100">Thư viện ảnh</a>
+      <a href="#stories" class="relative py-2 transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-forest [&.is-active]:after:scale-x-100">Câu chuyện</a>
+      <a href="#about" class="relative py-2 transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-forest [&.is-active]:after:scale-x-100">Về tôi</a>
+      <a href="#journey" class="relative py-2 transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-forest [&.is-active]:after:scale-x-100">Hành trình</a>
+      <a href="#contact" class="relative py-2 transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-forest [&.is-active]:after:scale-x-100">Liên hệ</a>
+    </nav>
+    <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="inline-flex h-11 w-11 items-center justify-center border border-line text-ink transition-colors duration-300 hover:border-forest hover:text-forest lg:hidden">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-line bg-cream p-6 shadow-print lg:hidden">
+    <p class="font-jp text-sm text-bark">木漏れ日</p>
+    <nav aria-label="Điều hướng trên điện thoại" class="mt-3 flex flex-col divide-y divide-line font-display text-2xl text-ink">
+      <a href="#hero" class="py-3">Trang đầu</a>
+      <a href="#gallery" class="py-3">Thư viện ảnh</a>
+      <a href="#stories" class="py-3">Câu chuyện</a>
+      <a href="#about" class="py-3">Về tôi</a>
+      <a href="#journey" class="py-3">Hành trình</a>
+      <a href="#contact" class="py-3">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-offset" class="relative overflow-hidden bg-cream">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 pb-16 pt-8 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12 lg:items-center lg:gap-10 lg:px-10 lg:pb-12 lg:pt-6 2xl:px-16">
+      <div class="lg:col-span-5">
+        <p data-reveal="fade" class="flex items-baseline gap-3 text-bark">
+          <span class="font-jp text-lg">木漏れ日</span>
+          <span class="font-display text-lg italic">nắng xuyên qua kẽ lá</span>
+        </p>
+        <h1 data-reveal="up" class="mt-5 max-w-full font-display text-[clamp(3.5rem,5.9vw,6.2rem)] font-medium leading-[0.95] tracking-[0.03em] text-forest">KOMOREBI</h1>
+        <p data-reveal="up" class="mt-6 max-w-xl pb-1 font-display text-[1.65rem] italic leading-[1.25] text-ink sm:text-3xl 2xl:text-[2.4rem]">Nhặt nhạnh những khoảnh khắc nhỏ, ở đâu đó giữa hàng cây và ánh sáng.</p>
+        <p data-reveal="up" class="mt-5 max-w-md text-base leading-relaxed text-ink/85">Tôi chụp những nơi yên tĩnh, ánh sáng dịu và vẻ đẹp đời thường, gom lại từng mảnh thiên nhiên và ký ức.</p>
+        <div data-reveal="up" data-reveal-delay="250" class="mt-9 flex flex-wrap items-center gap-6">
+          <a href="#gallery" class="group inline-flex min-h-[48px] w-full items-center justify-center gap-3 bg-forest px-7 text-[13px] font-semibold uppercase tracking-[0.16em] text-cream transition-colors duration-300 hover:bg-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest active:scale-[.98] sm:w-auto">
+            Dạo qua thư viện ảnh
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
+          <a href="#stories" class="font-display text-xl italic text-bark underline decoration-rose decoration-1 underline-offset-[6px] transition-colors duration-300 hover:text-forest">đọc nhật ký</a>
+        </div>
+      </div>
+
+      <div class="relative lg:col-span-7">
+        <div class="relative mx-auto w-full max-w-[760px] pb-10 pt-6 lg:pb-14">
+          <figure data-reveal="fade" class="print relative ml-auto w-[76%] sm:w-[64%] lg:w-[60%]">
+            <a href="assets/img/hero-nang-xuyen-la.webp" data-lightbox="hero" data-caption="Nắng sớm xuyên qua tán thông" class="group block overflow-hidden bg-paper">
+              <img src="assets/img/hero-nang-xuyen-la.webp" alt="Những vệt nắng vàng xuyên qua tán thông trong khu rừng sương sớm" width="1200" height="1500" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="absolute bottom-2 left-4 right-4 font-display text-[15px] italic text-bark lg:bottom-3 lg:text-base">Đâu đó ở Nhật Bản, dưới tán cây buổi chiều.</figcaption>
+          </figure>
+
+          <figure data-reveal="up" class="print tape absolute left-0 top-0 w-[40%] -rotate-[4deg] sm:w-[34%] lg:top-[4%] lg:w-[32%]">
+            <a href="assets/img/hero-co-gai-trong-rung.jpg" data-lightbox="hero" data-caption="Một ngày đi bộ trong khu rừng rêu" class="relative block aspect-square overflow-hidden bg-paper">
+              <img src="assets/img/hero-co-gai-trong-rung.jpg" alt="Cô gái đeo máy ảnh đi giữa con đường rừng phủ rêu" width="839" height="1024" class="absolute left-[-8%] top-[-8.5%] w-[116%] max-w-none">
+            </a>
+            <figcaption class="absolute bottom-1.5 left-3 font-display text-sm italic text-bark lg:bottom-2.5">rừng rêu, tháng Mười</figcaption>
+          </figure>
+
+          <figure data-reveal="up" class="print absolute bottom-0 left-[6%] w-[44%] rotate-[3deg] sm:w-[38%] lg:left-[4%] lg:w-[36%]">
+            <a href="assets/img/hero-hoa-ep.webp" data-lightbox="hero" data-caption="Hai trang hoa dại ép khô" class="group block overflow-hidden bg-paper">
+              <img src="assets/img/hero-hoa-ep.webp" alt="Hai tờ giấy ghim cành hoa dại ép khô trên vách gỗ" width="1024" height="756" class="aspect-[4/3] w-full object-cover grayscale-[20%]">
+            </a>
+            <figcaption class="absolute bottom-1.5 left-3 font-display text-sm italic text-bark lg:bottom-2.5">hoa dại ép trong sổ</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" data-section="gallery-lookbook" class="bg-cream py-20 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div data-reveal="up" class="max-w-3xl">
+        <h2 class="font-display text-4xl font-medium leading-[1.05] text-forest sm:text-5xl lg:text-6xl 2xl:text-7xl">Những mảnh nhỏ của đời sống</h2>
+        <p class="mt-5 max-w-[60ch] text-base leading-relaxed text-ink/85 lg:text-lg">Bốn bộ ảnh, bốn góc của cùng một thế giới. Chạm vào ảnh để xem lớn kèm ghi chú.</p>
+      </div>
+
+      <!-- Bộ 01 -->
+      <article id="bo-01" class="mt-16 grid gap-6 border-t border-line pt-10 lg:mt-24 lg:grid-cols-12 lg:gap-10 lg:pt-14">
+        <a href="assets/img/bo01-loi-mon-rung.jpg" data-lightbox="bo-01" data-caption="Rừng thì thầm, 01: bậc đá phủ rêu dẫn tới cây cầu đỏ" data-reveal="up" class="group block overflow-hidden bg-paper lg:col-span-5">
+          <img src="assets/img/bo01-loi-mon-rung.jpg" alt="Bậc đá phủ rêu xanh dẫn lên cây cầu gỗ đỏ giữa rừng phong" width="681" height="1024" loading="lazy" class="aspect-[2/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+        </a>
+        <div class="flex flex-col gap-10 lg:col-span-7 lg:pl-6">
+          <div data-reveal="up" class="max-w-xl">
+            <p class="font-display text-7xl leading-none text-moss lg:text-8xl">01</p>
+            <h3 class="mt-3 font-display text-3xl italic text-ink lg:text-4xl">Rừng thì thầm</h3>
+            <p class="mt-4 text-base leading-relaxed text-ink/85">Nắng xuyên tán lá, những lối mòn nhỏ, rêu xanh và khoảng lặng giữa thiên nhiên. Màu của bộ ảnh là rêu, nâu gỗ và kem.</p>
+            <p class="mt-3 font-display text-lg italic text-bark">lối mòn sau mưa, một buổi sáng tháng Năm</p>
+          </div>
+          <div class="grid grid-cols-7 items-start gap-4 lg:gap-6">
+            <a href="assets/img/bo01-la-duong-xi.jpg" data-lightbox="bo-01" data-caption="Rừng thì thầm, 02: lá dương xỉ đón nắng" data-reveal="up" class="group col-span-3 mt-10 block overflow-hidden bg-paper">
+              <img src="assets/img/bo01-la-duong-xi.jpg" alt="Cận cảnh lá dương xỉ xanh với hậu cảnh mờ" width="1024" height="681" loading="lazy" class="aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <a href="assets/img/bo01-rung-ngang.jpg" data-lightbox="bo-01" data-caption="Rừng thì thầm, 03: khu vườn rêu yên lặng" data-reveal="up" class="group col-span-4 block overflow-hidden bg-paper">
+              <img src="assets/img/bo01-rung-ngang.jpg" alt="Lối đi trong khu vườn rêu xanh rợp bóng cây" width="1024" height="681" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Bộ 02: dải giấy ngà -->
+    <article id="bo-02" class="mt-20 bg-paper/60 py-16 lg:mt-32 lg:py-24">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 2xl:px-16">
+        <div data-reveal="up" class="lg:col-span-3">
+          <p class="font-display text-7xl leading-none text-moss lg:text-8xl">02</p>
+          <h3 class="mt-3 font-display text-3xl italic text-ink lg:text-4xl">Cô gái trong áo linen</h3>
+          <p class="mt-4 text-base leading-relaxed text-ink/85">Váy linen nhiều lớp, cardigan len, túi vải và những khoảnh khắc không tạo dáng: đọc sách bên cửa sổ, đi dạo trong vườn.</p>
+          <p class="mt-3 font-display text-lg italic text-bark">tự nhiên, trong trẻo</p>
+        </div>
+        <div class="grid grid-cols-2 items-end gap-5 sm:grid-cols-9 lg:col-span-9 lg:gap-8">
+          <figure data-reveal="up" class="print relative -rotate-[1.5deg] sm:col-span-3">
+            <a href="assets/img/bo02-co-gai-vay-linen.webp" data-lightbox="bo-02" data-caption="Cô gái trong áo linen, 01: chân dung ánh sáng dịu" class="group block overflow-hidden bg-cream">
+              <img src="assets/img/bo02-co-gai-vay-linen.webp" alt="Chân dung cổ điển tông nâu của người phụ nữ mặc áo linen trắng" width="1200" height="1550" loading="lazy" class="aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="absolute bottom-2 left-3 font-display text-sm italic text-bark lg:bottom-3">áo linen trắng</figcaption>
+          </figure>
+          <figure data-reveal="up" class="print relative sm:col-span-4">
+            <a href="assets/img/bo02-doc-sach-ben-cua-so.jpg" data-lightbox="bo-02" data-caption="Cô gái trong áo linen, 02: đọc sách trong vệt nắng bên cửa sổ" class="group block overflow-hidden bg-cream">
+              <img src="assets/img/bo02-doc-sach-ben-cua-so.jpg" alt="Cô gái ngồi đọc sách bên khung cửa sổ, nắng hắt lên sàn gỗ" width="1000" height="1500" loading="lazy" class="aspect-[2/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="absolute bottom-2 left-3 font-display text-sm italic text-bark lg:bottom-3">đọc sách bên cửa sổ</figcaption>
+          </figure>
+          <figure data-reveal="up" class="print relative col-span-2 w-2/3 rotate-[2deg] sm:col-span-2 sm:mb-24 sm:w-full">
+            <a href="assets/img/bo02-chat-lieu-vai.jpg" data-lightbox="bo-02" data-caption="Cô gái trong áo linen, 03: thớ vải len hồng phấn" class="group block overflow-hidden bg-cream">
+              <img src="assets/img/bo02-chat-lieu-vai.jpg" alt="Cận cảnh thớ vải len màu hồng phấn gợn sóng" width="1200" height="800" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="absolute bottom-2 left-3 font-display text-sm italic text-bark lg:bottom-3">thớ len</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- Bộ 03: tĩnh vật nhiều khoảng trắng -->
+    <article id="bo-03" class="mx-auto mt-20 w-full max-w-screen-2xl px-4 sm:px-6 lg:mt-32 lg:px-10 2xl:px-16">
+      <div class="grid gap-8 lg:grid-cols-12 lg:gap-10">
+        <div data-reveal="up" class="lg:col-span-4 lg:pt-10">
+          <p class="font-display text-7xl leading-none text-moss lg:text-8xl">03</p>
+          <h3 class="mt-3 font-display text-3xl italic text-ink lg:text-4xl">Hoa và những lá thư cũ</h3>
+          <p class="mt-4 max-w-md text-base leading-relaxed text-ink/85">Hoa dại, hoa ép, sách cũ, thư tay và bàn gỗ. Những vật nhỏ lưu giữ kỷ niệm, như một trang nhật ký được giữ qua nhiều năm.</p>
+          <p class="mt-3 font-display text-lg italic text-bark">ánh sáng cửa sổ, buổi trưa</p>
+        </div>
+        <a href="assets/img/bo03-hoa-hong-kho.webp" data-lightbox="bo-03" data-caption="Hoa và những lá thư cũ, 01: đóa hồng khô" data-reveal="up" class="group block overflow-hidden bg-paper lg:col-span-6 lg:col-start-6">
+          <img src="assets/img/bo03-hoa-hong-kho.webp" alt="Đóa hồng khô cánh nâu nhạt đặt trên mặt phẳng sáng" width="1200" height="928" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+        </a>
+        <a href="assets/img/bo03-hoa-kho-dong-ho.jpg" data-lightbox="bo-03" data-caption="Hoa và những lá thư cũ, 02: mặt đồng hồ cũ và cánh hoa khô trên trang thư" data-reveal="up" class="group block overflow-hidden bg-paper lg:col-span-4 lg:col-start-2 lg:-mt-10">
+          <img src="assets/img/bo03-hoa-kho-dong-ho.jpg" alt="Mặt đồng hồ cổ hình bầu dục bên cánh hoa khô màu tím trên trang giấy viết tay" width="1024" height="683" loading="lazy" class="aspect-[3/2] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+        </a>
+        <figure data-reveal="up" class="print relative w-2/3 rotate-[2deg] sm:w-1/2 lg:col-span-3 lg:col-start-8 lg:mt-12 lg:w-full">
+          <a href="assets/img/bo03-hoa-kho-film.jpg" data-lightbox="bo-03" data-caption="Hoa và những lá thư cũ, 03: cẩm tú cầu khô cuối đông" class="group block overflow-hidden bg-cream">
+            <img src="assets/img/bo03-hoa-kho-film.jpg" alt="Bụi cẩm tú cầu khô màu nâu vàng chụp bằng film" width="1024" height="851" loading="lazy" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+          <figcaption class="absolute bottom-2 left-3 font-display text-sm italic text-bark lg:bottom-3">cẩm tú cầu khô</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Bộ 04: toàn cảnh + chuỗi ảnh nhỏ -->
+    <article id="bo-04" class="mt-20 lg:mt-32">
+      <a href="assets/img/bo04-nha-go-canh-dong.jpg" data-lightbox="bo-04" data-caption="Những ngày yên ả nơi miền quê, 01: căn nhà gỗ giữa đồng cỏ" data-reveal="fade" class="group block overflow-hidden bg-paper">
+        <img src="assets/img/bo04-nha-go-canh-dong.jpg" alt="Căn nhà gỗ nhỏ giữa đồng cỏ nhiều màu dưới bầu trời trắng" width="1600" height="1067" loading="lazy" class="aspect-[16/9] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] lg:aspect-[21/8]">
+      </a>
+      <div class="mx-auto mt-10 grid w-full max-w-screen-2xl gap-8 px-4 sm:px-6 lg:mt-14 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+        <div data-reveal="up" class="lg:col-span-4">
+          <p class="font-display text-7xl leading-none text-moss lg:text-8xl">04</p>
+          <h3 class="mt-3 font-display text-3xl italic text-ink lg:text-4xl">Những ngày yên ả nơi miền quê</h3>
+          <p class="mt-4 max-w-md text-base leading-relaxed text-ink/85">Căn nhà gỗ, khu vườn, khung cửa sổ cũ và những buổi chiều chậm rãi. Một chuỗi khoảnh khắc đời thường, gần gũi với thiên nhiên.</p>
+        </div>
+        <div class="grid grid-cols-2 items-start gap-5 lg:col-span-7 lg:col-start-6 lg:grid-cols-12 lg:gap-8">
+          <figure data-reveal="up" class="print relative col-span-2 lg:col-span-5">
+            <a href="assets/img/bo04-nha-go-cua-so.jpg" data-lightbox="bo-04" data-caption="Những ngày yên ả nơi miền quê, 02: khung cửa sổ nhà gỗ lúc hoàng hôn" class="group block overflow-hidden bg-cream">
+              <img src="assets/img/bo04-nha-go-cua-so.jpg" alt="Hai khung cửa sổ trên đầu hồi căn nhà gỗ trắng nhìn ra đồi xa" width="1024" height="683" loading="lazy" class="aspect-[3/2] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="absolute bottom-2 left-3 font-display text-sm italic text-bark lg:bottom-3">cửa sổ hướng đồi</figcaption>
+          </figure>
+          <figure data-reveal="up" class="print relative col-span-2 mt-6 w-[64%] justify-self-end rotate-[1.5deg] lg:col-span-3 lg:mt-8 lg:w-full lg:justify-self-stretch">
+            <a href="assets/img/bo04-nang-tren-san-nha.jpg" data-lightbox="bo-04" data-caption="Những ngày yên ả nơi miền quê, 03: chú mèo nằm phơi nắng chiều" class="group block overflow-hidden bg-cream">
+              <img src="assets/img/bo04-nang-tren-san-nha.jpg" alt="Chú mèo xám nằm phơi nắng trên tấm chăn hoa hồng nhạt" width="375" height="500" loading="lazy" class="aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="absolute bottom-2 left-3 font-display text-sm italic text-bark lg:bottom-3">nắng chiều trên chăn</figcaption>
+          </figure>
+          <figure data-reveal="up" class="print relative col-span-2 mt-6 w-[86%] lg:col-span-4 lg:mt-16 lg:w-full">
+            <a href="assets/img/bo04-dong-co-mua-ha.jpg" data-lightbox="bo-04" data-caption="Những ngày yên ả nơi miền quê, 04: đồng cỏ sau nhà lúc mặt trời lặn" class="group block overflow-hidden bg-cream">
+              <img src="assets/img/bo04-dong-co-mua-ha.jpg" alt="Đồng cỏ hoa dại vàng tím dưới ánh hoàng hôn cuối chân đồi" width="1600" height="1067" loading="lazy" class="aspect-[3/2] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="absolute bottom-2 left-3 font-display text-sm italic text-bark lg:bottom-3">đồng cỏ sau nhà</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- STORIES -->
+  <section id="stories" data-section="story-letter" class="border-t border-line bg-cream py-20 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div data-reveal="up" class="max-w-3xl">
+        <h2 class="font-display text-4xl font-medium leading-[1.05] text-forest sm:text-5xl lg:text-6xl 2xl:text-7xl">Ghi chép từ thế giới nhỏ của tôi</h2>
+        <p class="mt-5 max-w-[60ch] text-base leading-relaxed text-ink/85">Câu chuyện phía sau những tấm ảnh. Các trang dưới đây là nội dung mẫu, dễ thay bằng ghi chép thật.</p>
+      </div>
+
+      <div class="mt-16 space-y-20 lg:mt-24 lg:space-y-32">
+        <article class="grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-10">
+          <a href="assets/img/story-buoi-sang-duoi-tan-cay.jpg" data-lightbox="stories" data-caption="Một buổi sáng dưới tán cây" data-reveal="up" class="group block overflow-hidden bg-paper lg:col-span-7">
+            <img src="assets/img/story-buoi-sang-duoi-tan-cay.jpg" alt="Lối bậc đá phủ rêu dẫn sâu vào khu rừng xanh rậm" width="1600" height="1200" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+          <div data-reveal="up" class="ruled border-l-2 border-rose bg-[#FBF8F1] p-7 shadow-print lg:col-span-4 lg:col-start-9 lg:p-10">
+            <p class="font-display text-lg italic text-bark">thứ Bảy, 6 giờ 40 sáng</p>
+            <h3 class="mt-2 font-display text-3xl leading-tight text-forest lg:text-4xl">Một buổi sáng dưới tán cây</h3>
+            <p class="mt-4 text-base leading-[36px] text-ink/90">Tôi đi bộ vào rừng khi sương còn đọng trên rêu. Nắng xuyên qua từng tán lá và mọi thứ bỗng yên tĩnh đến mức nghe được tiếng mình thở.</p>
+          </div>
+        </article>
+
+        <article class="grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-10">
+          <div data-reveal="up" class="ruled order-2 border-l-2 border-rose bg-[#FBF8F1] p-7 shadow-print lg:order-1 lg:col-span-4 lg:col-start-2 lg:p-10">
+            <p class="font-display text-lg italic text-bark">chiều thứ Ba, trời âm u</p>
+            <h3 class="mt-2 font-display text-3xl leading-tight text-forest lg:text-4xl">Khung cửa gỗ cũ</h3>
+            <p class="mt-4 text-base leading-[36px] text-ink/90">Một góc cửa sổ, tách trà còn ấm và ánh sáng dịu trên mặt bàn gỗ. Tôi chụp ba khung hình rồi ngồi yên, để trà nguội dần.</p>
+          </div>
+          <a href="assets/img/story-tach-tra-ban-go.webp" data-lightbox="stories" data-caption="Khung cửa gỗ cũ" data-reveal="up" class="group order-1 block overflow-hidden bg-paper lg:order-2 lg:col-span-6 lg:col-start-7">
+            <img src="assets/img/story-tach-tra-ban-go.webp" alt="Tách trà trắng trên bàn gỗ tròn sau tấm rèm voan mỏng" width="1500" height="1000" loading="lazy" class="aspect-[3/2] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+        </article>
+
+        <article class="grid gap-8 lg:grid-cols-12 lg:gap-10">
+          <a href="assets/img/story-hoa-dai-trong-tui-ao.jpg" data-lightbox="stories" data-caption="Hoa dại trong túi áo" data-reveal="up" class="group block overflow-hidden bg-paper lg:col-span-8 lg:col-start-3">
+            <img src="assets/img/story-hoa-dai-trong-tui-ao.jpg" alt="Cành hoa dại nhỏ đặt trên trang sách về hoa dại bên cuộn dây gai" width="1600" height="1067" loading="lazy" class="aspect-[16/9] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+          <div data-reveal="up" class="grid gap-4 sm:grid-cols-2 sm:gap-10 lg:col-span-8 lg:col-start-3">
+            <div>
+              <p class="font-display text-lg italic text-bark">trên đường về, cuối tháng Tư</p>
+              <h3 class="mt-2 font-display text-3xl leading-tight text-forest lg:text-4xl">Hoa dại trong túi áo</h3>
+            </div>
+            <p class="text-base leading-relaxed text-ink/90">Vài bông hoa dại nhỏ nhặt được bên vệ đường, kẹp vào sách cho khỏi dập. Chúng trở thành cảm hứng cho cả một bộ ảnh tĩnh vật sau đó.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- AESTHETIC MOODBOARD -->
+  <section id="aesthetic" data-section="features-bento" class="bg-paper/50 py-20 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-3xl font-display text-4xl font-medium leading-[1.05] text-forest sm:text-5xl lg:text-6xl 2xl:text-7xl">Những điều nuôi dưỡng tôi</h2>
+
+      <div data-reveal-stagger="90" class="mt-12 grid gap-5 md:grid-cols-6 lg:mt-16 lg:grid-cols-12 lg:gap-6">
+        <div class="bg-cream p-7 md:col-span-3 lg:col-span-4 lg:p-9">
+          <h3 class="font-display text-2xl italic text-ink lg:text-3xl">Những màu tôi thương</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink/80">Rừng cây, giấy cũ, gỗ, hoa khô và nắng chiều.</p>
+          <ul class="mt-7 grid grid-cols-4 gap-x-3 gap-y-5 text-[13px] text-ink/85 sm:grid-cols-7 md:grid-cols-4 2xl:grid-cols-7">
+            <li><span class="block aspect-square border border-line bg-cream"></span><span class="mt-2 block">Kem sữa</span></li>
+            <li><span class="block aspect-square bg-paper"></span><span class="mt-2 block">Giấy ngà</span></li>
+            <li><span class="block aspect-square bg-moss"></span><span class="mt-2 block">Rêu</span></li>
+            <li><span class="block aspect-square bg-forest"></span><span class="mt-2 block">Rừng</span></li>
+            <li><span class="block aspect-square bg-bark"></span><span class="mt-2 block">Nâu gỗ</span></li>
+            <li><span class="block aspect-square bg-rose"></span><span class="mt-2 block">Hồng phấn</span></li>
+            <li><span class="block aspect-square bg-ink"></span><span class="mt-2 block">Mực</span></li>
+          </ul>
+        </div>
+
+        <figure class="md:col-span-3 lg:col-span-5">
+          <div class="overflow-hidden bg-cream">
+            <img src="assets/img/mood-chat-lieu-len.webp" alt="Cận cảnh mặt vải len đan sọc, màu đã dịu lại theo tông ảnh film" width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full object-cover saturate-[.45]">
+          </div>
+          <figcaption class="mt-4">
+            <span class="font-display text-2xl italic text-ink">Chất liệu</span>
+            <span class="mt-1 block text-[15px] text-ink/80">Linen, len, gỗ thô, giấy sần, lá cây và bề mặt phủ rêu.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="md:col-span-2 lg:col-span-3 lg:row-span-2">
+          <div class="overflow-hidden bg-cream">
+            <img src="assets/img/mood-bong-la-tren-tuong.jpg" alt="Bóng lá cây in trên bức tường lúc chiều muộn" width="1024" height="683" loading="lazy" class="aspect-[3/4] w-full object-cover lg:aspect-[3/5]">
+          </div>
+          <figcaption class="mt-4">
+            <span class="font-display text-2xl italic text-ink">Ánh sáng và bóng</span>
+            <span class="mt-1 block text-[15px] text-ink/80">Nắng cửa sổ, bóng lá, ánh cuối ngày.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="md:col-span-4 lg:col-span-6">
+          <div class="overflow-hidden bg-cream">
+            <img src="assets/img/mood-may-anh-film.jpg" alt="Máy ảnh film, cuộn phim và đóa hồng khô trên cuốn album ảnh cũ" width="1200" height="800" loading="lazy" class="aspect-[16/9] w-full object-cover">
+          </div>
+          <figcaption class="mt-4">
+            <span class="font-display text-2xl italic text-ink">Đồ vật nhỏ</span>
+            <span class="mt-1 block text-[15px] text-ink/80">Sách cũ, máy ảnh film, hoa ép, sổ tay, túi vải và đồ vintage.</span>
+          </figcaption>
+        </figure>
+
+        <div class="flex flex-col justify-between bg-forest p-7 text-cream md:col-span-6 lg:col-span-3 lg:p-9">
+          <p class="font-jp text-3xl text-rose">木漏れ日</p>
+          <p class="mt-8 font-display text-2xl italic leading-snug lg:text-[1.7rem]">Từ tiếng Nhật chỉ thứ ánh nắng lọt qua kẽ lá. Cả cuốn nhật ký này được đặt theo nó.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" data-section="timeline" class="bg-forest py-20 text-cream lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-3xl font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:text-6xl">Cách một bức ảnh ra đời</h2>
+      <ol data-reveal-stagger="100" class="mt-14 grid gap-0 border-l border-cream/30 lg:mt-20 lg:grid-cols-5 lg:border-l-0 lg:border-t">
+        <li class="relative pb-10 pl-8 lg:pb-0 lg:pl-0 lg:pr-8 lg:pt-10">
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-rose lg:-top-[5px] lg:left-0"></span>
+          <p class="font-display text-6xl leading-none text-rose lg:text-7xl">01</p>
+          <h3 class="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em]">Quan sát</h3>
+          <p class="mt-3 max-w-xs text-[15px] leading-relaxed text-cream/85">Để ý những chi tiết nhỏ trong thiên nhiên và đời sống thường ngày.</p>
+        </li>
+        <li class="relative pb-10 pl-8 lg:pb-0 lg:pl-0 lg:pr-8 lg:pt-10">
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-rose lg:-top-[5px] lg:left-0"></span>
+          <p class="font-display text-6xl leading-none text-rose lg:text-7xl">02</p>
+          <h3 class="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em]">Gom nhặt</h3>
+          <p class="mt-3 max-w-xs text-[15px] leading-relaxed text-cream/85">Ghi chú, chọn bối cảnh, dựng moodboard cho từng câu chuyện.</p>
+        </li>
+        <li class="relative pb-10 pl-8 lg:pb-0 lg:pl-0 lg:pr-8 lg:pt-10">
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-rose lg:-top-[5px] lg:left-0"></span>
+          <p class="font-display text-6xl leading-none text-rose lg:text-7xl">03</p>
+          <h3 class="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em]">Bấm máy</h3>
+          <p class="mt-3 max-w-xs text-[15px] leading-relaxed text-cream/85">Chụp với sự chú tâm vào ánh sáng, bố cục, màu sắc và cảm xúc.</p>
+        </li>
+        <li class="relative pb-10 pl-8 lg:pb-0 lg:pl-0 lg:pr-8 lg:pt-10">
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-rose lg:-top-[5px] lg:left-0"></span>
+          <p class="font-display text-6xl leading-none text-rose lg:text-7xl">04</p>
+          <h3 class="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em]">Tráng rửa</h3>
+          <p class="mt-3 max-w-xs text-[15px] leading-relaxed text-cream/85">Chọn lọc, xử lý màu và giữ một ngôn ngữ hình ảnh nhất quán.</p>
+        </li>
+        <li class="relative pl-8 lg:pl-0 lg:pt-10">
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-rose lg:-top-[5px] lg:left-0"></span>
+          <p class="font-display text-6xl leading-none text-rose lg:text-7xl">05</p>
+          <h3 class="mt-4 text-[13px] font-semibold uppercase tracking-[0.18em]">Lưu giữ</h3>
+          <p class="mt-3 max-w-xs text-[15px] leading-relaxed text-cream/85">Sắp ảnh thành những câu chuyện có thể giữ lại như một cuốn nhật ký.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" data-section="story-editorial" class="bg-cream py-20 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <figure data-reveal="up" class="print tape relative mx-auto w-4/5 -rotate-[1.5deg] sm:w-3/5 lg:sticky lg:top-28 lg:w-full">
+          <a href="assets/img/about-co-gai-cam-may-anh.jpg" data-lightbox="about" data-caption="Hậu trường: ngồi nghỉ giữa những tảng đá, máy ảnh trong tay" class="group block overflow-hidden bg-paper">
+            <img src="assets/img/about-co-gai-cam-may-anh.jpg" alt="Ảnh tư liệu: người phụ nữ mặc áo dài màu kem đứng giữa những tảng đá lớn" width="655" height="1024" loading="lazy" class="aspect-[2/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+          <figcaption class="absolute bottom-2 left-3 font-display text-sm italic text-bark lg:bottom-3">ảnh minh họa, thay bằng chân dung của bạn</figcaption>
+        </figure>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-6">
+        <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.05] text-forest sm:text-5xl lg:text-6xl">Một tâm hồn lặng lẽ sau ống kính</h2>
+        <div data-reveal="up" class="mt-10 max-w-[62ch] space-y-6 text-[17px] leading-[1.85] text-ink/90">
+          <p class="first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.85] first-letter:text-forest">Tôi lớn lên cùng những buổi chiều đi lang thang trong vườn, nhặt lá rơi và kẹp hoa vào sách. Máy ảnh đến sau, như một cách để giữ lại những điều ấy lâu hơn.</p>
+          <p>Văn hóa thị giác Nhật Bản dạy tôi yêu khoảng trống: một cành hoa trong bình, một vệt nắng trên tường, sự tĩnh lặng giữa hai khung hình.</p>
+          <p>Tôi thích ảnh film vì nó buộc mình chậm lại. Mỗi cuộn phim chỉ có vài chục khung, nên tôi chỉ bấm khi thật sự rung động trước một khoảnh khắc đời thường.</p>
+          <p>Với tôi, chụp ảnh là lưu giữ ký ức. Không phải để khoe một nơi đẹp, mà để nhớ mình đã từng dừng lại ở đó.</p>
+        </div>
+        <blockquote data-reveal="up" class="mt-12 border-l-2 border-rose pl-6 lg:-ml-8 lg:mt-16">
+          <p class="pb-1 font-display text-3xl italic leading-[1.2] text-forest lg:text-[2.6rem]">“Tôi tìm thấy vẻ đẹp ở những điều chẳng đòi hỏi gì, ngoài một chút chú tâm.”</p>
+          <footer class="mt-4 text-[13px] uppercase tracking-[0.16em] text-ink/70">KOMOREBI, sổ tay cá nhân</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY / CV -->
+  <section id="journey" data-section="timeline" class="border-t border-line bg-paper/40 py-20 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div data-reveal="up" class="lg:col-span-4">
+        <h2 class="font-display text-4xl font-medium leading-[1.05] text-forest sm:text-5xl lg:text-6xl">Hành trình sáng tạo</h2>
+        <p class="mt-5 max-w-md text-base leading-relaxed text-ink/85">Hồ sơ ngắn gọn về những gì tôi đã làm và học. Các mốc bên cạnh là khung mẫu để điền thông tin thật.</p>
+        <h3 class="mt-10 font-display text-2xl italic text-ink">Kỹ năng</h3>
+        <ul class="mt-4 flex flex-wrap gap-2 text-[14px] text-ink">
+          <li class="border border-line bg-cream px-3 py-1.5">Chân dung</li>
+          <li class="border border-line bg-cream px-3 py-1.5">Ảnh thiên nhiên</li>
+          <li class="border border-line bg-cream px-3 py-1.5">Ảnh film</li>
+          <li class="border border-line bg-cream px-3 py-1.5">Kể chuyện bằng hình ảnh</li>
+          <li class="border border-line bg-cream px-3 py-1.5">Hậu kỳ ảnh</li>
+          <li class="border border-line bg-cream px-3 py-1.5">Chỉnh màu</li>
+        </ul>
+        <h3 class="mt-8 font-display text-2xl italic text-ink">Công cụ</h3>
+        <p class="mt-3 text-[15px] leading-relaxed text-ink/85">Adobe Lightroom, Adobe Photoshop, máy ảnh film 35mm.</p>
+      </div>
+
+      <div data-accordion data-reveal="up" class="border-t border-ink/20 lg:col-span-7 lg:col-start-6">
+        <div data-acc-item data-open class="border-b border-ink/20">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left">
+            <span class="font-display text-2xl text-ink lg:text-3xl">Kinh nghiệm nhiếp ảnh</span>
+            <span data-acc-icon class="text-2xl text-bark transition-transform duration-300 [.is-open_&]:rotate-45">+</span>
+          </button>
+          <div data-acc-panel>
+            <ul class="space-y-5 pb-8">
+              <li class="grid gap-1 sm:grid-cols-[140px_1fr] sm:gap-6"><span class="font-display text-lg italic text-bark">20XX đến nay</span><span class="text-[15px] leading-relaxed text-ink/90"><strong class="font-semibold">Nhiếp ảnh gia tự do.</strong> Chân dung tự nhiên và ảnh đời thường. Thay bằng mô tả thật.</span></li>
+              <li class="grid gap-1 sm:grid-cols-[140px_1fr] sm:gap-6"><span class="font-display text-lg italic text-bark">20XX</span><span class="text-[15px] leading-relaxed text-ink/90"><strong class="font-semibold">Vị trí hoặc cộng tác.</strong> Một dòng mô tả ngắn về công việc.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div data-acc-item class="border-b border-ink/20">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left">
+            <span class="font-display text-2xl text-ink lg:text-3xl">Dự án cá nhân</span>
+            <span data-acc-icon class="text-2xl text-bark transition-transform duration-300 [.is-open_&]:rotate-45">+</span>
+          </button>
+          <div data-acc-panel>
+            <ul class="space-y-5 pb-8">
+              <li class="grid gap-1 sm:grid-cols-[140px_1fr] sm:gap-6"><span class="font-display text-lg italic text-bark">Đang thực hiện</span><span class="text-[15px] leading-relaxed text-ink/90"><strong class="font-semibold">Rừng thì thầm.</strong> Bộ ảnh về ánh sáng và khoảng lặng trong rừng.</span></li>
+              <li class="grid gap-1 sm:grid-cols-[140px_1fr] sm:gap-6"><span class="font-display text-lg italic text-bark">Đang thực hiện</span><span class="text-[15px] leading-relaxed text-ink/90"><strong class="font-semibold">Hoa và những lá thư cũ.</strong> Chuỗi tĩnh vật với hoa ép và giấy cũ.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div data-acc-item class="border-b border-ink/20">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left">
+            <span class="font-display text-2xl text-ink lg:text-3xl">Triển lãm và ấn phẩm</span>
+            <span data-acc-icon class="text-2xl text-bark transition-transform duration-300 [.is-open_&]:rotate-45">+</span>
+          </button>
+          <div data-acc-panel>
+            <p class="pb-8 text-[15px] leading-relaxed text-ink/80">Mục này để trống cho đến khi có triển lãm hoặc ấn phẩm thật. Không liệt kê thành tích chưa có.</p>
+          </div>
+        </div>
+        <div data-acc-item class="border-b border-ink/20">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left">
+            <span class="font-display text-2xl text-ink lg:text-3xl">Học tập, workshop và khóa học</span>
+            <span data-acc-icon class="text-2xl text-bark transition-transform duration-300 [.is-open_&]:rotate-45">+</span>
+          </button>
+          <div data-acc-panel>
+            <ul class="space-y-5 pb-8">
+              <li class="grid gap-1 sm:grid-cols-[140px_1fr] sm:gap-6"><span class="font-display text-lg italic text-bark">20XX</span><span class="text-[15px] leading-relaxed text-ink/90"><strong class="font-semibold">Tên trường hoặc chương trình.</strong> Chuyên ngành, một dòng mô tả.</span></li>
+              <li class="grid gap-1 sm:grid-cols-[140px_1fr] sm:gap-6"><span class="font-display text-lg italic text-bark">20XX</span><span class="text-[15px] leading-relaxed text-ink/90"><strong class="font-semibold">Tên workshop.</strong> Ví dụ: tráng phim đen trắng tại nhà.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" data-section="cta-type" class="bg-cream py-20 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-8">
+        <p data-reveal="fade" class="font-display text-xl italic text-bark">gửi bạn, người ghé qua</p>
+        <h2 data-reveal="up" class="mt-4 pb-1 font-display text-[clamp(2.5rem,6vw,5.75rem)] font-medium leading-[1.04] text-forest">Nếu thế giới của chúng ta giao nhau, hãy để lại cho tôi một lá thư nhỏ.</h2>
+        <p data-reveal="up" class="mt-8 max-w-[56ch] text-lg leading-relaxed text-ink/90">Bạn có một câu chuyện muốn kể, một nơi muốn khám phá, hay một khoảnh khắc nhỏ muốn lưu giữ? Tôi rất muốn được nghe.</p>
+        <div data-reveal="up" class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <a href="mailto:hello@komorebi-diary.com?subject=M%E1%BB%99t%20l%C3%A1%20th%C6%B0%20nh%E1%BB%8F%20g%E1%BB%ADi%20KOMOREBI" class="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-forest px-8 text-[13px] font-semibold uppercase tracking-[0.16em] text-cream transition-colors duration-300 hover:bg-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest active:scale-[.98]">
+            Viết cho tôi một lá thư
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
+          <button type="button" id="copy-email" data-email="hello@komorebi-diary.com" class="inline-flex min-h-[52px] items-center justify-center border border-ink/30 px-6 text-[14px] text-ink transition-colors duration-300 hover:border-forest hover:text-forest active:scale-[.98]">Sao chép địa chỉ email</button>
+        </div>
+      </div>
+      <aside data-reveal="up" class="self-end border-t-2 border-rose bg-[#FBF8F1] p-7 shadow-print lg:col-span-4 lg:p-9">
+        <dl class="space-y-5 text-[15px]">
+          <div><dt class="font-display text-lg italic text-[#6F5A44]">Email</dt><dd class="mt-1"><a href="mailto:hello@komorebi-diary.com" class="break-words text-ink underline decoration-rose underline-offset-4 transition-colors duration-300 hover:text-forest">hello@komorebi-diary.com</a></dd></div>
+          <div><dt class="font-display text-lg italic text-[#6F5A44]">Instagram</dt><dd class="mt-1"><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-ink underline decoration-rose underline-offset-4 transition-colors duration-300 hover:text-forest">@komorebi.diary</a></dd></div>
+          <div><dt class="font-display text-lg italic text-[#6F5A44]">Behance</dt><dd class="mt-1"><a href="https://www.behance.net/" target="_blank" rel="noopener" class="text-ink underline decoration-rose underline-offset-4 transition-colors duration-300 hover:text-forest">behance.net/komorebi</a></dd></div>
+          <div><dt class="font-display text-lg italic text-[#6F5A44]">Nơi làm việc</dt><dd class="mt-1 text-ink/90">Cập nhật sau, nhận chụp theo lịch hẹn.</dd></div>
+        </dl>
+        <p class="mt-6 text-[13px] text-ink/70">Thông tin liên hệ là nội dung mẫu, thay bằng tài khoản thật.</p>
+      </aside>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="border-t border-line bg-paper/60">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-12 lg:px-10 lg:py-16 2xl:px-16">
+    <div class="md:col-span-5">
+      <p class="font-display text-3xl font-semibold tracking-[0.18em] text-ink">KOMOREBI</p>
+      <p class="mt-1 font-display text-lg italic text-bark">Photography &amp; Visual Diary</p>
+      <p class="mt-6 max-w-sm font-display text-xl italic leading-snug text-forest">Làm chậm rãi, bằng tình yêu và một chút nắng.</p>
+    </div>
+    <nav aria-label="Liên kết cuối trang" class="grid grid-cols-2 gap-x-8 gap-y-3 text-[15px] text-ink/85 md:col-span-4">
+      <a href="#hero" class="py-1 transition-colors duration-300 hover:text-forest">Trang đầu</a>
+      <a href="#gallery" class="py-1 transition-colors duration-300 hover:text-forest">Thư viện ảnh</a>
+      <a href="#stories" class="py-1 transition-colors duration-300 hover:text-forest">Câu chuyện</a>
+      <a href="#about" class="py-1 transition-colors duration-300 hover:text-forest">Về tôi</a>
+      <a href="#journey" class="py-1 transition-colors duration-300 hover:text-forest">Hành trình</a>
+      <a href="#contact" class="py-1 transition-colors duration-300 hover:text-forest">Liên hệ</a>
+    </nav>
+    <div class="flex flex-col gap-3 text-[15px] text-ink/85 md:col-span-3">
+      <a href="mailto:hello@komorebi-diary.com" class="py-1 transition-colors duration-300 hover:text-forest">hello@komorebi-diary.com</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="py-1 transition-colors duration-300 hover:text-forest">Instagram</a>
+      <a href="https://www.behance.net/" target="_blank" rel="noopener" class="py-1 transition-colors duration-300 hover:text-forest">Behance</a>
+    </div>
+  </div>
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 border-t border-line px-4 py-6 text-[13px] text-ink/70 sm:flex-row sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+    <p>© 2026 KOMOREBI. Ảnh minh họa lấy từ thư viện ảnh mở, xem nguồn trong CREDITS.</p>
+    <a href="#hero" data-back-to-top class="transition-colors duration-300 hover:text-forest">Về đầu trang ↑</a>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<script>
+  // Nút sao chép email: dùng UI.toast để thông báo bằng tiếng Việt (ui.js mặc định tiếng Anh).
+  (function () {
+    var b = document.getElementById('copy-email');
+    if (!b) return;
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-email');
+      var ok = function () { UI.toast('Đã sao chép địa chỉ email', 'success'); };
+      var fallback = function () {
+        var ta = document.createElement('textarea');
+        ta.value = v;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); ok(); } catch (e) { UI.toast('Chưa sao chép được, bạn chọn email giúp mình nhé', 'error'); }
+        ta.remove();
+      };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(v).then(ok, fallback);
+      else fallback();
+    });
+  })();
+</script>
+<!-- @partial scripts -->
+<script src="assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

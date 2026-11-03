@@ -1,0 +1,132 @@
+{
+  "brand": "VERDANT SANCTUARY",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Ánh nắng xuyên tán rừng: mọi trang mở bằng ảnh rừng nhiều tầng, đường kẻ Fern mảnh hiện dần như tia sáng, nhịp nền Ivory / Mist / Deep Forest như đi từ bìa rừng vào sâu trong tán cây",
+  "purposeInferred": "Giới thiệu thương hiệu resort sinh thái cao cấp, dẫn khách qua triết lý, không gian lưu trú, tiện ích và trải nghiệm; không có đặt phòng hay thanh toán.",
+  "theme": { "tagline": "Xa hoa, bắt rễ từ thiên nhiên", "description": "Giao diện thương hiệu resort sinh thái cao cấp giữa rừng xanh." },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Tạo ấn tượng đầu tiên về khu nghỉ, giới thiệu triết lý, kiến trúc, bộ sưu tập lưu trú và không gian giữa rừng",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Ảnh toàn màn, parallax nhẹ, tiêu đề Xa hoa, bắt rễ từ thiên nhiên" },
+        { "id": "gioi-thieu", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Hai cột bất đối xứng, ảnh vòm + ảnh vật liệu, drop cap" },
+        { "id": "kien-truc", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh lớn + hai ảnh dọc lệch nhịp, ghi chú hình khối / vật liệu / ánh sáng" },
+        { "id": "luu-tru", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "Ba loại lưu trú với ảnh kích thước khác nhau, dẫn tới trang Lưu trú" },
+        { "id": "khong-gian", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Bốn không gian bằng accordion, ảnh dính bên trái" },
+        { "id": "can-bang", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Nền Deep Forest, ba định hướng vận hành, không tuyên bố môi trường chưa xác thực" },
+        { "id": "ket", "catalog": "cta", "variant": "cta-fullbleed", "source": "ba", "note": "Ảnh rừng cuối ngày, hạt bụi nắng, CTA liên hệ và trải nghiệm" }
+      ],
+      "images": [
+        { "slot": "hero", "file": "https://images.unsplash.com/photo-1761158494764-bbf2a2e2a70d?fm=jpg&q=70&w=2400&auto=format&fit=crop", "status": "link" },
+        { "slot": "intro-villa", "file": "https://images.unsplash.com/photo-1595877244574-e90ce41ce089?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "intro-timber", "file": "https://images.unsplash.com/photo-1770625467980-942f6ee8ebd8?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture", "file": "https://images.unsplash.com/photo-1703782997446-fba282cbfce6?fm=jpg&q=70&w=2000&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-facade", "file": "https://images.unsplash.com/photo-1703783004020-f863bfd3c49a?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture-doorway", "file": "https://images.unsplash.com/photo-1787552541486-f8fa7adbd15a?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "stay-villa", "file": "https://images.unsplash.com/photo-1621771674545-849014cf91fa?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "stay-suite", "file": "https://images.unsplash.com/photo-1786809611876-0f66ab8e1d6a?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "stay-residence", "file": "https://images.unsplash.com/photo-1781328487854-07a1600ab0a8?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "sanctuary-moss", "file": "https://images.unsplash.com/photo-1708022772151-26030f4a4ba4?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "closing", "file": "https://images.unsplash.com/photo-1612821394773-23f0a7d33ede?fm=jpg&q=70&w=2400&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Triết lý",
+      "purpose": "Kể câu chuyện thương hiệu, triết lý thiết kế, vật liệu tự nhiên, ánh sáng và định hướng phát triển có trách nhiệm",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh kiến trúc ẩn trong tán rừng, tiêu đề Designed to Belong" },
+        { "id": "triet-ly", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Đoạn mở đầu ngắn, tiêu đề lớn bên trái, thân bài lệch phải" },
+        { "id": "canh-quan", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Villa, hành lang mở, sân trong và ba ghi chú thiết kế" },
+        { "id": "vat-lieu", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Gỗ, đá, đất với ba khung ảnh kích thước khác nhau" },
+        { "id": "anh-sang", "catalog": "editorial", "variant": "features-alternate", "source": "ba", "note": "Nền Deep Forest, hạt bụi nắng, nhịp sáng trong ngày" },
+        { "id": "trach-nhiem", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Ba định hướng phát triển, ghi rõ không phải chứng nhận" },
+        { "id": "thu-vien", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ba", "note": "Dải ảnh kéo ngang, lightbox, CTA liên hệ" }
+      ],
+      "images": [
+        { "slot": "hero", "file": "https://images.unsplash.com/photo-1703782997454-8eb0d4d94e9c?fm=jpg&q=70&w=2400&auto=format&fit=crop", "status": "link" },
+        { "slot": "architecture", "file": "https://images.unsplash.com/photo-1698994705178-d244d73ea573?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-hall", "file": "https://images.unsplash.com/photo-1704902949428-65e05241291a?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "material-timber", "file": "https://images.unsplash.com/photo-1704200139045-4a056113abb9?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "material-stone", "file": "https://images.unsplash.com/photo-1566724210616-9d957193f2eb?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "material-moss", "file": "https://images.unsplash.com/photo-1596128792411-59494c961279?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "light", "file": "https://images.unsplash.com/photo-1760552267060-7185dd08537b?fm=jpg&q=70&w=2400&auto=format&fit=crop", "status": "link" },
+        { "slot": "responsible", "file": "https://images.unsplash.com/photo-1518064874225-c8a7ba7a373f?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-forest", "file": "https://images.unsplash.com/photo-1566231270035-0aaca1fd2bbf?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-window", "file": "https://images.unsplash.com/photo-1761782797823-2b555af8a226?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-moss", "file": "https://images.unsplash.com/photo-1625345819272-b75fc0cfa541?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "gallery-water", "file": "https://images.unsplash.com/photo-1599520842687-4e2617df7e40?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/stays.html",
+      "title": "Lưu trú",
+      "purpose": "Giới thiệu ba loại hình lưu trú và các tiện ích, không hiển thị giá hay chức năng đặt phòng",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh villa giữa rừng, tiêu đề Private Spaces in Nature" },
+        { "id": "garden-suite", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Ảnh lớn, thông số ánh sáng / vật liệu / tầm nhìn / tiện nghi" },
+        { "id": "forest-villa", "catalog": "story", "variant": "cta-fullbleed", "source": "ba", "note": "Nền ảnh tối, hạt bụi nắng, nhấn mạnh sự riêng tư" },
+        { "id": "eco-residence", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Ảnh lớn đối diện phần chữ, nền Forest Mist" },
+        { "id": "tien-ich", "catalog": "gallery", "variant": "features-bento", "source": "ba", "note": "Năm tiện ích, nền xen kẽ Ivory / Mist / Deep Forest" },
+        { "id": "so-do", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "Sơ đồ minh họa khái niệm, ghi rõ không phải mặt bằng thực tế" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Liên hệ tư vấn, dẫn sang trang Trải nghiệm" }
+      ],
+      "images": [
+        { "slot": "hero", "file": "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?fm=jpg&q=70&w=2400&auto=format&fit=crop", "status": "link" },
+        { "slot": "garden-suite", "file": "https://images.unsplash.com/photo-1760067538083-b9d87cd6706c?fm=jpg&q=70&w=1800&auto=format&fit=crop", "status": "link" },
+        { "slot": "forest-villa", "file": "https://images.unsplash.com/photo-1537197518227-a36efeafd477?fm=jpg&q=70&w=2400&auto=format&fit=crop", "status": "link" },
+        { "slot": "eco-residence", "file": "https://images.unsplash.com/photo-1763338997133-8044829329fa?fm=jpg&q=70&w=1800&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-garden", "file": "https://images.unsplash.com/photo-1582646999786-9afe35c16b40?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-restaurant", "file": "https://images.unsplash.com/photo-1636405189493-181ecf851006?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-spa", "file": "https://images.unsplash.com/photo-1772616748530-7cd73053f326?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-lounge", "file": "https://images.unsplash.com/photo-1711451754044-772080a17a68?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "facility-wellness", "file": "https://images.unsplash.com/photo-1672945479539-5ef876972942?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Trải nghiệm",
+      "purpose": "Giới thiệu các trải nghiệm giữa rừng: khám phá cảnh quan, vườn thực vật, ẩm thực, chăm sóc và nhịp sống chậm",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh nắng xuyên tán rừng, tiêu đề Follow the Rhythm of the Forest" },
+        { "id": "kham-pha", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Hai ảnh lệch nhịp, nội dung về lối đi và đi bộ trong rừng" },
+        { "id": "vuon", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Vườn thực vật, mặt nước, ba ghi chú về lối dương xỉ / thảo mộc / cây bóng mát" },
+        { "id": "am-thuc", "catalog": "story", "variant": "cta-fullbleed", "source": "ba", "note": "Nền ảnh nhà hàng, nội dung không khẳng định hữu cơ hay nguồn gốc chưa xác thực" },
+        { "id": "wellness", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Moss Spa, thiền, sàn bên hồ với hai ảnh chồng lớp" },
+        { "id": "song-cham", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Nền Canopy Green, hạt bụi nắng, tiêu đề Make Space for Stillness" },
+        { "id": "ket", "catalog": "cta", "variant": "cta-fullbleed", "source": "ba", "note": "Ảnh rừng trong nắng dịu, Return to Nature, Return to Yourself" }
+      ],
+      "images": [
+        { "slot": "hero", "file": "https://images.unsplash.com/photo-1746968590517-5408f6d72073?fm=jpg&q=70&w=2400&auto=format&fit=crop", "status": "link" },
+        { "slot": "discovery-path", "file": "https://images.unsplash.com/photo-1703782997446-fba282cbfce6?fm=jpg&q=70&w=2000&auto=format&fit=crop", "status": "link" },
+        { "slot": "discovery-moss", "file": "https://images.unsplash.com/photo-1708022772151-26030f4a4ba4?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "garden", "file": "https://images.unsplash.com/photo-1582646999786-9afe35c16b40?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "garden-water", "file": "https://images.unsplash.com/photo-1599520842687-4e2617df7e40?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "dining", "file": "https://images.unsplash.com/photo-1636405189493-181ecf851006?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "wellness-spa", "file": "https://images.unsplash.com/photo-1772616748530-7cd73053f326?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "wellness-lake", "file": "https://images.unsplash.com/photo-1672945479539-5ef876972942?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "closing", "file": "https://images.unsplash.com/photo-1612821394773-23f0a7d33ede?fm=jpg&q=70&w=2400&auto=format&fit=crop", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA yêu cầu chuyển đổi VI/EN trên mọi nội dung: bản tiếng Việt là mặc định, bản tiếng Anh lưu trong thuộc tính data-en / data-en-alt / data-en-aria-label / data-en-caption và đổi bằng assets/js/site.js; lựa chọn được ghi nhớ qua localStorage khi chuyển trang hoặc tải lại",
+    "Tiêu đề tiếng Anh do BA nêu ('Luxury, Rooted in Nature', 'Private Spaces in Nature', 'Follow the Rhythm of the Forest', 'Make Space for Stillness', 'Return to Nature, Return to Yourself') giữ nguyên ở chế độ EN; chế độ VI dùng bản dịch để không trộn ngôn ngữ",
+    "Bảng màu theo chú thích BA (Deep Forest, Canopy Green, Fern, Moss, Forest Mist, Warm Ivory, Natural Bark) khai báo một lần trong tw-config.js và biến CSS trong site.css",
+    "Font theo gợi ý BA: Cormorant Garamond cho tiêu đề, Manrope cho nội dung; cả hai có đủ ký tự tiếng Việt",
+    "Ảnh thật lấy từ Unsplash dưới dạng link ngoài vì thư viện ảnh chỉ trả về link trong lượt dựng; ảnh dùng cho prototype, cần thay bằng ảnh chính thức khi lên web thật",
+    "Trang Trải nghiệm dùng lại một số ảnh đã chọn cho trang chủ và trang Lưu trú ở các ngữ cảnh khác nhau để giữ tông rừng xanh thống nhất",
+    "Không thêm giá, lịch phòng, giỏ hàng, đặt phòng hay thanh toán theo yêu cầu BA"
+  ],
+  "limitations": [
+    "Thông tin liên hệ, địa chỉ và tên miền email là thông tin mẫu, không phải dữ liệu thật của resort",
+    "Sơ đồ khu nghỉ ở trang Lưu trú là sơ đồ minh họa khái niệm, không theo tỉ lệ và không phải mặt bằng thực tế",
+    "Các tuyên bố về môi trường chỉ là định hướng thiết kế / vận hành, không phải chứng nhận hay kết quả đã đo lường",
+    "Ảnh dùng link ngoài từ Unsplash, giấy phép chưa xác định — chỉ dùng cho prototype",
+    "Nội dung tiếng Anh là bản dịch tham khảo, cần duyệt lại trước khi xuất bản"
+  ]
+}

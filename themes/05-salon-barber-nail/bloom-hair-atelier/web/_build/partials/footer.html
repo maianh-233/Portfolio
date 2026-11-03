@@ -1,0 +1,84 @@
+<footer id="footer" class="relative overflow-hidden bg-plum text-milk">
+  <div class="swatch-strip" aria-hidden="true"><span class="bg-swatch-rose"></span><span class="bg-swatch-lavbrown"></span><span class="bg-lavender"></span><span class="bg-swatch-beige"></span><span class="bg-swatch-pink"></span></div>
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl leading-tight text-milk" data-vi="Salon tóc nghệ thuật cho những ai yêu màu sắc mềm mại và đường nét nữ tính.">An art-led hair salon for people who love soft color and feminine shape.</p>
+        <button type="button" data-modal-open="book" data-vi="Đặt lịch" class="mt-8 inline-flex min-h-[48px] items-center border border-lavender bg-lavender px-7 text-sm font-semibold text-plum transition duration-300 hover:bg-transparent hover:text-lavender active:scale-[.98]">Book a Visit</button>
+      </div>
+      <div class="lg:col-span-2 lg:col-start-6">
+        <p class="text-xs font-semibold uppercase tracking-label text-lavender" data-vi="Trang">Pages</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-milk/80">
+          <li><a href="{{root}}index.html" data-vi="Trang chủ" class="transition-colors duration-300 hover:text-lavender">Home</a></li>
+          <li><a href="{{root}}pages/services.html" data-vi="Dịch vụ" class="transition-colors duration-300 hover:text-lavender">Services</a></li>
+          <li><a href="{{root}}pages/gallery.html" data-vi="Bộ sưu tập" class="transition-colors duration-300 hover:text-lavender">Gallery</a></li>
+          <li><a href="{{root}}pages/about.html" data-vi="Về BLOOM" class="transition-colors duration-300 hover:text-lavender">About</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-xs font-semibold uppercase tracking-label text-lavender" data-vi="Ghé thăm (dữ liệu mẫu)">Visit (sample data)</p>
+        <address class="mt-5 space-y-3 text-[15px] not-italic leading-relaxed text-milk/80">
+          <p>27 Ly Tu Trong Street, District 1<br>Ho Chi Minh City</p>
+          <p><a href="tel:+842838271946" class="transition-colors duration-300 hover:text-lavender">+84 28 3827 1946</a></p>
+          <p><a href="mailto:hello@bloomhairatelier.vn" class="transition-colors duration-300 hover:text-lavender">hello@bloomhairatelier.vn</a></p>
+        </address>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-xs font-semibold uppercase tracking-label text-lavender" data-vi="Mạng xã hội (minh họa)">Social (illustrative)</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-milk/80">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-lavender">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-lavender">TikTok</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-lavender">Facebook</a></li>
+          <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-lavender">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-20 flex flex-wrap items-end justify-between gap-x-8 gap-y-2 select-none" aria-hidden="true">
+      <p class="font-display text-[clamp(3.4rem,15.5vw,17rem)] font-medium leading-[0.8] tracking-[-0.02em] text-lavender/90">BLOOM</p>
+      <p class="pb-3 font-display text-[clamp(1.6rem,4.4vw,4.75rem)] italic leading-none text-milk/70">hair atelier</p>
+    </div>
+    <div class="flex flex-col gap-3 border-t border-milk/15 py-7 text-[13px] text-milk/60 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 BLOOM HAIR ATELIER. <span data-vi="Mọi quyền được bảo lưu.">All rights reserved.</span></p>
+      <p data-vi="Website giới thiệu. Đặt lịch trực tuyến là bản demo.">Showcase website. Online booking is a demo.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="book" class="bloom-modal" aria-labelledby="book-title">
+  <div class="relative">
+    <div class="swatch-strip" aria-hidden="true"><span class="bg-swatch-rose"></span><span class="bg-swatch-lavbrown"></span><span class="bg-lavender"></span><span class="bg-swatch-beige"></span><span class="bg-swatch-pink"></span></div>
+    <button type="button" data-modal-close class="absolute right-3 top-4 inline-flex h-11 w-11 items-center justify-center text-2xl text-plum transition-colors hover:text-lavender-deep" aria-label="Close" data-vi-aria-label="Đóng">&times;</button>
+    <div class="p-7 sm:p-10">
+      <h2 id="book-title" class="font-display text-4xl leading-[1.1] text-plum" data-vi="Đặt lịch <em class='text-lilac'>ghé BLOOM</em>">Book a <em class="text-lilac">visit</em></h2>
+      <p class="mt-3 max-w-[46ch] text-[15px] leading-relaxed text-plum/75" data-vi="Cho chúng tôi biết bạn đang mơ về mái tóc thế nào. Stylist sẽ tư vấn trước khi bắt đầu.">Tell us the hair you are dreaming of. Your stylist will consult with you before anything begins.</p>
+      <form data-form="booking" class="mt-7 grid gap-5 sm:grid-cols-2" novalidate>
+        <label class="grid gap-2 text-sm font-medium text-plum"><span data-vi="Họ tên">Full name</span>
+          <input name="name" required minlength="2" autocomplete="name" class="min-h-[48px] border border-plum/30 bg-white px-4 text-base text-plum placeholder:text-plum/45 focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60" placeholder="Nguyen Minh Chau">
+        </label>
+        <label class="grid gap-2 text-sm font-medium text-plum"><span data-vi="Số điện thoại">Phone</span>
+          <input name="phone" type="tel" required minlength="9" autocomplete="tel" class="min-h-[48px] border border-plum/30 bg-white px-4 text-base text-plum placeholder:text-plum/45 focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60" placeholder="0908 214 637">
+        </label>
+        <label class="grid gap-2 text-sm font-medium text-plum"><span data-vi="Dịch vụ">Service</span>
+          <select name="service" required class="min-h-[48px] border border-plum/30 bg-white px-4 text-base text-plum focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60">
+            <option value="" data-vi="Chọn dịch vụ">Choose a service</option>
+            <option value="cut" data-vi="Cắt &amp; tạo kiểu">Haircut &amp; Styling</option>
+            <option value="color" data-vi="Nhuộm màu">Hair Coloring</option>
+            <option value="perm" data-vi="Uốn &amp; tạo sóng">Perm &amp; Texture</option>
+            <option value="care" data-vi="Phục hồi tóc">Hair Treatment</option>
+            <option value="consult" data-vi="Chỉ tư vấn">Consultation only</option>
+          </select>
+        </label>
+        <label class="grid gap-2 text-sm font-medium text-plum"><span data-vi="Ngày mong muốn">Preferred date</span>
+          <input name="date" type="date" required class="min-h-[48px] border border-plum/30 bg-white px-4 text-base text-plum focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60">
+        </label>
+        <label class="grid gap-2 text-sm font-medium text-plum sm:col-span-2"><span data-vi="Ghi chú (không bắt buộc)">Notes (optional)</span>
+          <textarea name="note" rows="3" class="border border-plum/30 bg-white px-4 py-3 text-base text-plum placeholder:text-plum/45 focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60" placeholder="Soft lavender brown, shoulder length..." data-vi-placeholder="Nâu lavender nhẹ, dài ngang vai..."></textarea>
+        </label>
+        <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+          <button type="submit" data-vi="Gửi yêu cầu" class="inline-flex min-h-[48px] items-center justify-center border border-plum bg-lavender px-8 text-sm font-semibold text-plum transition duration-300 hover:bg-plum hover:text-milk active:scale-[.98]">Send request</button>
+          <p class="text-[13px] text-plum/70" data-vi="Bản demo: biểu mẫu chưa gửi đi đâu.">Demo only: this form is not sent anywhere.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</dialog>

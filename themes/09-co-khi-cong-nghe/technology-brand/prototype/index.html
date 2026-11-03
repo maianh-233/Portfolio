@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oriel Labs | Engineering What Comes Next</title>
+  <meta name="description" content="Oriel Labs is a technology studio working across AI, digital products, creative technology and data systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#101114',
+            graphite: '#24262B',
+            soft: '#F5F5F2',
+            cool: '#A5A8B0',
+            accent: {
+              50: '#EEF1FF', 100: '#DFE4FF', 200: '#C4CCFF', 300: '#9FAEFF', 400: '#7E93FF',
+              500: '#617CFF', 600: '#4A5EF0', 700: '#3B4AD1', 800: '#3240A8', 900: '#2D3A85'
+            }
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          maxWidth: { prose: '62ch' }
+        }
+      }
+    }
+  </script>
+  <script src="assets/js/ui.js"></script>
+  <style>
+    :root { --ui-accent: #617CFF; }
+    html { -webkit-font-smoothing: antialiased; }
+    ::selection { background: #617CFF; color: #F5F5F2; }
+    .meta { font-family: "Space Grotesk", system-ui, sans-serif; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; }
+    #site-header.is-scrolled { background: rgba(16,17,20,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: rgba(255,255,255,.08); }
+    .hairline { background: linear-gradient(90deg, rgba(165,168,176,.0), rgba(165,168,176,.45) 12%, rgba(165,168,176,.45) 88%, rgba(165,168,176,0)); }
+  </style>
+</head>
+<body id="top" class="bg-obsidian font-sans text-soft">
+
+  <div data-scroll-progress class="fixed inset-x-0 top-0 z-50 h-[2px] origin-left bg-accent-500"></div>
+
+  <!-- Header -->
+  <header id="site-header" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-500">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="#top" class="flex items-center gap-3 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-400" aria-label="Oriel Labs, back to top">
+        <span class="relative block h-6 w-6" aria-hidden="true">
+          <span class="absolute inset-0 rotate-45 border border-soft/80"></span>
+          <span class="absolute inset-[7px] bg-accent-500"></span>
+        </span>
+        <span class="font-display text-lg font-semibold tracking-tight">Oriel Labs</span>
+      </a>
+      <nav data-scrollspy class="hidden items-center gap-9 lg:flex" aria-label="Primary">
+        <a href="#about" class="relative py-2 text-sm text-cool transition-colors duration-300 hover:text-soft after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-accent-500 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-soft [&.is-active]:after:scale-x-100">About</a>
+        <a href="#expertise" class="relative py-2 text-sm text-cool transition-colors duration-300 hover:text-soft after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-accent-500 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-soft [&.is-active]:after:scale-x-100">Expertise</a>
+        <a href="#work" class="relative py-2 text-sm text-cool transition-colors duration-300 hover:text-soft after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-accent-500 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-soft [&.is-active]:after:scale-x-100">Work</a>
+        <a href="#approach" class="relative py-2 text-sm text-cool transition-colors duration-300 hover:text-soft after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-accent-500 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-soft [&.is-active]:after:scale-x-100">Approach</a>
+        <a href="#vision" class="relative py-2 text-sm text-cool transition-colors duration-300 hover:text-soft after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-accent-500 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-soft [&.is-active]:after:scale-x-100">Vision</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden rounded-full border border-soft/25 px-5 py-2.5 text-sm font-medium transition duration-300 hover:border-accent-500 hover:bg-accent-500 active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 sm:inline-flex">Start a conversation</a>
+        <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-soft/20 transition duration-300 hover:border-soft/50 lg:hidden" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-soft/10 bg-graphite p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col" aria-label="Mobile">
+      <a href="#about" class="flex min-h-[48px] items-center border-b border-soft/10 font-display text-2xl">About</a>
+      <a href="#expertise" class="flex min-h-[48px] items-center border-b border-soft/10 font-display text-2xl">Expertise</a>
+      <a href="#work" class="flex min-h-[48px] items-center border-b border-soft/10 font-display text-2xl">Work</a>
+      <a href="#approach" class="flex min-h-[48px] items-center border-b border-soft/10 font-display text-2xl">Approach</a>
+      <a href="#vision" class="flex min-h-[48px] items-center border-b border-soft/10 font-display text-2xl">Vision</a>
+      <a href="#contact" class="mt-6 flex min-h-[48px] items-center justify-center rounded-full bg-accent-500 text-base font-medium">Start a conversation</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- 01 Hero -->
+    <section id="hero" class="relative overflow-hidden bg-obsidian">
+      <div class="mx-auto grid min-h-[100dvh] w-full max-w-screen-2xl grid-cols-1 px-4 pt-24 sm:px-6 lg:grid-cols-12 lg:px-10 lg:pt-0 2xl:px-16">
+        <div class="relative z-10 flex flex-col justify-center pb-12 lg:col-span-6 lg:py-32 xl:col-span-6">
+          <p class="meta mb-8 text-cool" data-reveal="fade">Technology studio, est. 2019</p>
+          <h1 data-split="words" class="font-display text-5xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-7xl 2xl:text-[6.5rem]">Engineering<br>What Comes <span class="text-accent-500">Next.</span></h1>
+          <p class="mt-8 max-w-[34ch] text-lg leading-relaxed text-cool sm:text-xl" data-reveal="up" data-reveal-delay="400">We transform ideas into meaningful digital experiences through technology, design, and innovation.</p>
+          <div class="mt-10" data-reveal="up" data-reveal-delay="550">
+            <a href="#work" data-magnetic="0.25" class="group inline-flex min-h-[52px] items-center gap-3 rounded-full bg-soft px-7 text-base font-medium text-obsidian transition duration-300 hover:bg-accent-500 hover:text-soft active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-400">
+              See the work
+              <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative -mx-4 aspect-[4/5] overflow-hidden sm:-mx-6 lg:absolute lg:inset-y-0 lg:right-0 lg:mx-0 lg:aspect-auto lg:w-[47%]" data-reveal="clip">
+          <div class="absolute inset-x-0 -inset-y-[15%]" data-parallax="0.12">
+            <img src="assets/img/hero-shapes.jpg" alt="Abstract 3D render of layered sculpted dunes in soft light" class="h-full w-full object-cover" width="2880" height="4320" fetchpriority="high">
+          </div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/10 to-transparent lg:via-transparent"></div>
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-obsidian to-transparent lg:hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 About -->
+    <section id="about" class="bg-soft py-20 text-obsidian lg:py-32">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 class="max-w-[22ch] font-display text-4xl font-medium leading-[1.06] tracking-[-0.02em] sm:text-5xl lg:text-6xl 2xl:text-7xl" data-reveal="up">
+          We build technology that has to earn its place in someone's day.
+        </h2>
+
+        <div class="mt-16 grid grid-cols-1 gap-12 lg:mt-24 lg:grid-cols-12 lg:gap-10">
+          <figure class="lg:col-span-6">
+            <div class="aspect-[4/5] overflow-hidden bg-graphite/10 lg:aspect-[6/5]" data-reveal="clip">
+              <img src="assets/img/about-white-block.jpg" alt="White modular facade of stacked open boxes catching sunlight" class="h-full w-full object-cover" width="2973" height="4460" loading="lazy">
+            </div>
+          </figure>
+
+          <div class="flex flex-col justify-between lg:col-span-5 lg:col-start-8">
+            <p class="max-w-prose text-lg leading-relaxed text-graphite/80 sm:text-xl" data-reveal="up">
+              Oriel Labs is a team of 28 engineers, designers and researchers. We work with organisations that want technology to feel considered: fast where it matters, quiet where it should be, and clear about what it does.
+            </p>
+
+            <dl class="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2" data-reveal-stagger="90">
+              <div class="border-t border-obsidian/15 pt-5">
+                <dt class="font-display text-lg font-semibold">What we see</dt>
+                <dd class="mt-2 leading-relaxed text-graphite/75">Most software is built faster than it is understood. People inherit the complexity.</dd>
+              </div>
+              <div class="border-t border-obsidian/15 pt-5">
+                <dt class="font-display text-lg font-semibold">How we work</dt>
+                <dd class="mt-2 leading-relaxed text-graphite/75">Small senior teams. Research before code. Prototypes in weeks, not quarters.</dd>
+              </div>
+              <div class="border-t border-obsidian/15 pt-5">
+                <dt class="font-display text-lg font-semibold">What we value</dt>
+                <dd class="mt-2 leading-relaxed text-graphite/75">Precision, honesty about trade-offs, and systems that stay legible as they grow.</dd>
+              </div>
+              <div class="border-t border-obsidian/15 pt-5">
+                <dt class="font-display text-lg font-semibold">Where we are going</dt>
+                <dd class="mt-2 leading-relaxed text-graphite/75">Intelligent tools that extend human judgement instead of replacing it.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Technology & Expertise -->
+    <section id="expertise" class="bg-obsidian py-20 lg:py-32">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 class="max-w-[18ch] font-display text-4xl font-medium leading-[1.06] tracking-[-0.02em] sm:text-5xl lg:text-6xl" data-reveal="up">Four fields, one practice.</h2>
+        <p class="mt-6 max-w-prose text-lg leading-relaxed text-cool" data-reveal="up">Each field is its own room. Walk through them in any order.</p>
+
+        <div data-tabs class="mt-14 lg:mt-20">
+          <div class="relative -mx-4 flex gap-1 overflow-x-auto border-b border-soft/10 px-4 sm:mx-0 sm:px-0" role="tablist">
+            <button type="button" data-tab="ai" class="min-h-[52px] shrink-0 whitespace-nowrap px-4 font-display text-base text-cool transition-colors duration-300 hover:text-soft sm:px-6 sm:text-lg [&.is-active]:text-soft">Artificial Intelligence</button>
+            <button type="button" data-tab="product" class="min-h-[52px] shrink-0 whitespace-nowrap px-4 font-display text-base text-cool transition-colors duration-300 hover:text-soft sm:px-6 sm:text-lg [&.is-active]:text-soft">Digital Products</button>
+            <button type="button" data-tab="creative" class="min-h-[52px] shrink-0 whitespace-nowrap px-4 font-display text-base text-cool transition-colors duration-300 hover:text-soft sm:px-6 sm:text-lg [&.is-active]:text-soft">Creative Technology</button>
+            <button type="button" data-tab="data" class="min-h-[52px] shrink-0 whitespace-nowrap px-4 font-display text-base text-cool transition-colors duration-300 hover:text-soft sm:px-6 sm:text-lg [&.is-active]:text-soft">Data &amp; Intelligent Systems</button>
+            <span data-tab-indicator class="bottom-0 h-0.5 bg-accent-500"></span>
+          </div>
+
+          <div data-tab-panel="ai" class="grid grid-cols-1 gap-10 pt-12 lg:grid-cols-12 lg:gap-12 lg:pt-16">
+            <div class="group aspect-[16/10] overflow-hidden bg-graphite lg:col-span-7">
+              <img src="assets/img/hero-particles.jpg" alt="Two particle streams in blue and coral light meeting in darkness" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="5184" height="3456" loading="lazy">
+            </div>
+            <div class="flex flex-col justify-center lg:col-span-5">
+              <h3 class="font-display text-3xl font-medium tracking-tight sm:text-4xl">Artificial Intelligence</h3>
+              <p class="mt-5 max-w-prose text-lg leading-relaxed text-cool">Applied models that sit inside real workflows: retrieval, classification and assistants that show their reasoning and know when to hand back to a person.</p>
+              <ul class="mt-8 space-y-3 text-soft/90">
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Language and vision models, fine-tuned on your domain</li>
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Evaluation suites before anything ships</li>
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Private deployment on your own infrastructure</li>
+              </ul>
+            </div>
+          </div>
+
+          <div data-tab-panel="product" class="grid grid-cols-1 gap-10 pt-12 lg:grid-cols-12 lg:gap-12 lg:pt-16">
+            <div class="group aspect-[16/10] overflow-hidden bg-graphite lg:col-span-7">
+              <img src="assets/img/exp-glass.jpg" alt="Macro photograph of air bubbles suspended in green glass" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1024" height="576" loading="lazy">
+            </div>
+            <div class="flex flex-col justify-center lg:col-span-5">
+              <h3 class="font-display text-3xl font-medium tracking-tight sm:text-4xl">Digital Products</h3>
+              <p class="mt-5 max-w-prose text-lg leading-relaxed text-cool">Web and mobile products designed and engineered by the same team, so nothing is lost between the idea and the interface.</p>
+              <ul class="mt-8 space-y-3 text-soft/90">
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Product strategy and interaction design</li>
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Design systems built to be maintained</li>
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Performance budgets set on day one</li>
+              </ul>
+            </div>
+          </div>
+
+          <div data-tab-panel="creative" class="grid grid-cols-1 gap-10 pt-12 lg:grid-cols-12 lg:gap-12 lg:pt-16">
+            <div class="group aspect-[16/10] overflow-hidden bg-graphite lg:col-span-7">
+              <img src="assets/img/exp-wave.jpg" alt="Translucent ribbons of light flowing across a dark background" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="2990" height="1671" loading="lazy">
+            </div>
+            <div class="flex flex-col justify-center lg:col-span-5">
+              <h3 class="font-display text-3xl font-medium tracking-tight sm:text-4xl">Creative Technology</h3>
+              <p class="mt-5 max-w-prose text-lg leading-relaxed text-cool">Real-time graphics, spatial interfaces and installations, where engineering is used to make people stop and look.</p>
+              <ul class="mt-8 space-y-3 text-soft/90">
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>WebGL and real-time 3D</li>
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Interactive spaces and exhibitions</li>
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Generative visual identity</li>
+              </ul>
+            </div>
+          </div>
+
+          <div data-tab-panel="data" class="grid grid-cols-1 gap-10 pt-12 lg:grid-cols-12 lg:gap-12 lg:pt-16">
+            <div class="group aspect-[16/10] overflow-hidden bg-graphite lg:col-span-7">
+              <img src="assets/img/exp-wavy-black.webp" alt="Monochrome curved metal facade with a repeating wave pattern" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="2500" height="3749" loading="lazy">
+            </div>
+            <div class="flex flex-col justify-center lg:col-span-5">
+              <h3 class="font-display text-3xl font-medium tracking-tight sm:text-4xl">Data &amp; Intelligent Systems</h3>
+              <p class="mt-5 max-w-prose text-lg leading-relaxed text-cool">The plumbing behind good decisions: pipelines, platforms and sensing systems that turn scattered signals into something a team can act on.</p>
+              <ul class="mt-8 space-y-3 text-soft/90">
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Event streaming and data platforms</li>
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>IoT and edge sensing</li>
+                <li class="flex gap-3"><span class="mt-[11px] h-px w-5 shrink-0 bg-accent-500"></span>Forecasting and anomaly detection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Featured Projects -->
+    <section id="work" class="bg-graphite py-20 lg:py-32">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <h2 class="font-display text-4xl font-medium leading-[1.06] tracking-[-0.02em] sm:text-5xl lg:col-span-8 lg:text-6xl" data-reveal="up">Selected work</h2>
+        </div>
+        <p class="mt-6 max-w-prose leading-relaxed text-cool" data-reveal="up">The three studies below are simulated concept projects, created to show how we think. They are not client engagements.</p>
+
+        <div class="mt-16 grid grid-cols-1 gap-16 lg:mt-24 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-28">
+          <!-- Project 1 -->
+          <article class="lg:col-span-7">
+            <a href="assets/img/proj-architecture.jpg" data-lightbox="work" data-caption="Lattice, concept study" class="group block aspect-[4/5] overflow-hidden bg-obsidian focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-400" data-reveal="clip">
+              <img src="assets/img/proj-architecture.jpg" alt="Steel and glass roof lattice seen from below" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="2593" height="3458" loading="lazy">
+            </a>
+            <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-12">
+              <div class="sm:col-span-5">
+                <h3 class="font-display text-3xl font-medium tracking-tight">Lattice</h3>
+                <p class="meta mt-3 text-cool">Data &amp; Intelligent Systems</p>
+                <p class="meta mt-1 text-accent-400">Concept study, 2026</p>
+              </div>
+              <div class="space-y-4 text-cool sm:col-span-7">
+                <p><span class="text-soft">Idea.</span> Large glass buildings lose energy in ways that are hard to see. What if a facade could report its own condition?</p>
+                <p><span class="text-soft">Approach.</span> A sensor mesh mapped to a live structural model, with anomaly detection that flags panels before they fail.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="lg:col-span-5 lg:mt-48">
+            <a href="assets/img/proj-flowing.jpg" data-lightbox="work" data-caption="Undergrowth, concept study" class="group block aspect-[4/3] overflow-hidden bg-obsidian focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-400" data-reveal="clip">
+              <img src="assets/img/proj-flowing.jpg" alt="Green particle strands drifting through dark space" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1920" height="1080" loading="lazy">
+            </a>
+            <div class="mt-8">
+              <h3 class="font-display text-3xl font-medium tracking-tight">Undergrowth</h3>
+              <p class="meta mt-3 text-cool">Creative Technology</p>
+              <p class="meta mt-1 text-accent-400">Concept study, 2025</p>
+              <div class="mt-6 space-y-4 text-cool">
+                <p><span class="text-soft">Idea.</span> Make soil health visible to people walking through a city park.</p>
+                <p><span class="text-soft">Approach.</span> A real-time particle installation driven by moisture and nutrient readings from buried sensors.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: full width -->
+          <article class="lg:col-span-12">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+              <a href="assets/img/proj-tunnel.webp" data-lightbox="work" data-caption="Corridor, concept study" class="group block aspect-[16/9] overflow-hidden bg-obsidian focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-400 lg:col-span-8" data-reveal="clip">
+                <img src="assets/img/proj-tunnel.webp" alt="Road tunnel at dusk with a blue sky framed by the exit" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="4608" height="3072" loading="lazy">
+              </a>
+              <div class="flex flex-col justify-end lg:col-span-4">
+                <h3 class="font-display text-3xl font-medium tracking-tight">Corridor</h3>
+                <p class="meta mt-3 text-cool">Artificial Intelligence</p>
+                <p class="meta mt-1 text-accent-400">Concept study, 2026</p>
+                <div class="mt-6 space-y-4 text-cool">
+                  <p><span class="text-soft">Idea.</span> Tunnel lighting runs at full power all night, whether or not anyone is driving through.</p>
+                  <p><span class="text-soft">Approach.</span> On-device vision that predicts traffic a few seconds ahead and adjusts light levels zone by zone.</p>
+                  <p><span class="text-soft">Value.</span> Designed to cut wasted energy without dimming in front of a driver. Not yet field-tested.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Our Approach -->
+    <section id="approach" class="bg-soft py-20 text-obsidian lg:py-32">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 class="max-w-[16ch] font-display text-4xl font-medium leading-[1.06] tracking-[-0.02em] sm:text-5xl lg:text-6xl" data-reveal="up">How a problem becomes a product.</h2>
+
+        <ol class="relative mt-16 grid grid-cols-1 gap-12 lg:mt-24 lg:grid-cols-4 lg:gap-10" data-reveal-stagger="120">
+          <span class="absolute bottom-4 left-[7px] top-4 w-px bg-obsidian/15 lg:inset-x-0 lg:bottom-auto lg:left-0 lg:top-[7px] lg:h-px lg:w-auto" aria-hidden="true"></span>
+          <li class="relative pl-10 lg:pl-0 lg:pt-12">
+            <span class="absolute left-0 top-1 h-[15px] w-[15px] rounded-full border-2 border-accent-600 bg-soft lg:top-0" aria-hidden="true"></span>
+            <h3 class="font-display text-2xl font-semibold tracking-tight sm:text-3xl">Discover</h3>
+            <p class="mt-3 max-w-[34ch] leading-relaxed text-graphite/75">We spend time with the people affected and map where the real problem and opportunity sit.</p>
+            <p class="mt-5 text-sm font-medium text-accent-700">Two to three weeks</p>
+          </li>
+          <li class="relative pl-10 lg:pl-0 lg:pt-12">
+            <span class="absolute left-0 top-1 h-[15px] w-[15px] rounded-full border-2 border-accent-600 bg-soft lg:top-0" aria-hidden="true"></span>
+            <h3 class="font-display text-2xl font-semibold tracking-tight sm:text-3xl">Research</h3>
+            <p class="mt-3 max-w-[34ch] leading-relaxed text-graphite/75">We test technical options against the constraints and choose a direction we can defend.</p>
+            <p class="mt-5 text-sm font-medium text-accent-700">Feasibility notes and a working spike</p>
+          </li>
+          <li class="relative pl-10 lg:pl-0 lg:pt-12">
+            <span class="absolute left-0 top-1 h-[15px] w-[15px] rounded-full border-2 border-accent-600 bg-accent-600 lg:top-0" aria-hidden="true"></span>
+            <h3 class="font-display text-2xl font-semibold tracking-tight sm:text-3xl">Design &amp; Build</h3>
+            <p class="mt-3 max-w-[34ch] leading-relaxed text-graphite/75">Design and engineering run side by side in short cycles, with something real to review every week.</p>
+            <p class="mt-5 text-sm font-medium text-accent-700">Weekly releases to a staging space</p>
+          </li>
+          <li class="relative pl-10 lg:pl-0 lg:pt-12">
+            <span class="absolute left-0 top-1 h-[15px] w-[15px] rounded-full border-2 border-accent-600 bg-soft lg:top-0" aria-hidden="true"></span>
+            <h3 class="font-display text-2xl font-semibold tracking-tight sm:text-3xl">Refine</h3>
+            <p class="mt-3 max-w-[34ch] leading-relaxed text-graphite/75">We measure what happens in use, then tune, simplify and hand over a system your team can own.</p>
+            <p class="mt-5 text-sm font-medium text-accent-700">Handover with documentation</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 06 Vision -->
+    <section id="vision" class="relative isolate overflow-hidden bg-obsidian">
+      <div class="absolute inset-x-0 -inset-y-[15%] -z-10" data-parallax="0.15">
+        <img src="assets/img/vision-swirl.jpg" alt="" class="h-full w-full object-cover opacity-70" width="5000" height="3000" loading="lazy">
+      </div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-obsidian via-obsidian/40 to-obsidian"></div>
+      <div class="mx-auto flex min-h-[90dvh] w-full max-w-screen-2xl flex-col justify-center px-4 py-28 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-split="words" class="max-w-[14ch] font-display text-5xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-8xl 2xl:text-[8.5rem]">Technology Should Move Humanity Forward.</h2>
+        <div class="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-12">
+          <p class="max-w-prose text-lg leading-relaxed text-soft/85 sm:text-xl lg:col-span-6 lg:col-start-7" data-reveal="up">Forward means useful, fair and understandable. We would rather ship one tool that people trust than ten that impress for a week.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Contact -->
+    <section id="contact" class="bg-obsidian pt-20 lg:pt-32">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-7">
+            <h2 class="font-display text-5xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-7xl 2xl:text-8xl" data-reveal="up">Let's Build<br>What Matters.</h2>
+            <p class="mt-8 max-w-prose text-lg leading-relaxed text-cool" data-reveal="up">Tell us what you are working on. We reply to every message within two working days.</p>
+          </div>
+          <div class="flex flex-col justify-end gap-10 lg:col-span-5" data-reveal="up">
+            <div>
+              <p class="meta text-cool">Email</p>
+              <div class="mt-3 flex flex-wrap items-center gap-4">
+                <a href="mailto:hello@oriellabs.com?subject=Start%20a%20conversation" class="break-all font-display text-2xl font-medium text-soft underline decoration-accent-500 decoration-1 underline-offset-8 transition-colors duration-300 hover:text-accent-400 sm:text-3xl">hello@oriellabs.com</a>
+                <button type="button" data-copy="hello@oriellabs.com" class="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-soft/20 px-4 text-sm text-cool transition duration-300 hover:border-soft/60 hover:text-soft active:scale-[.98]">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                  Copy
+                </button>
+              </div>
+            </div>
+            <div>
+              <p class="meta text-cool">Elsewhere</p>
+              <ul class="mt-3 flex flex-wrap gap-3">
+                <li><a href="https://www.linkedin.com/company/oriel-labs" target="_blank" rel="noopener" data-magnetic="0.3" class="inline-flex min-h-[44px] items-center rounded-full border border-soft/20 px-5 text-sm transition duration-300 hover:border-accent-500 hover:bg-accent-500">LinkedIn</a></li>
+                <li><a href="https://github.com/oriel-labs" target="_blank" rel="noopener" data-magnetic="0.3" class="inline-flex min-h-[44px] items-center rounded-full border border-soft/20 px-5 text-sm transition duration-300 hover:border-accent-500 hover:bg-accent-500">GitHub</a></li>
+                <li><a href="https://www.instagram.com/oriel.labs" target="_blank" rel="noopener" data-magnetic="0.3" class="inline-flex min-h-[44px] items-center rounded-full border border-soft/20 px-5 text-sm transition duration-300 hover:border-accent-500 hover:bg-accent-500">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <footer class="mt-24 border-t border-soft/10 py-10 lg:mt-32">
+          <div class="flex flex-col gap-6 text-sm text-cool sm:flex-row sm:items-center sm:justify-between">
+            <a href="#top" class="flex items-center gap-3 text-soft">
+              <span class="relative block h-5 w-5" aria-hidden="true">
+                <span class="absolute inset-0 rotate-45 border border-soft/70"></span>
+                <span class="absolute inset-[6px] bg-accent-500"></span>
+              </span>
+              <span class="font-display font-semibold">Oriel Labs</span>
+            </a>
+            <p>Technology studio. Ho Chi Minh City and remote.</p>
+            <p>&copy; 2026 Oriel Labs</p>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-30 inline-flex h-12 w-12 items-center justify-center rounded-full border border-soft/20 bg-obsidian/80 text-soft backdrop-blur transition duration-300 hover:border-accent-500 hover:bg-accent-500" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

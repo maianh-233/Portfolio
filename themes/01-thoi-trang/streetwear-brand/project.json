@@ -1,0 +1,44 @@
+{
+  "slug": "web-gioi-thieu-local-brand-thoi-trang-streetwear",
+  "name": "Web giới thiệu local brand thời trang streetwear",
+  "projectType": "website",
+  "flow": "quick",
+  "createdAt": "2026-10-15T02:12:01.418Z",
+  "updatedAt": "2026-10-15T02:40:10.043Z",
+  "screen": "done",
+  "request": "Là một Local Brand Streetwear siêu nỗi tiếng làm một Landing Page giới thiệu  về lacal brand . Có các trang chính là trang chủ , about me, collection , Chỉ giưới thiệu không bán không gì cả . Phong cách thất chất màu đen trắng (đen chủ đạo).  Tên local brand là The Mission . trong các collection có giới thiệu về ý tưởng về collection các hình chụp sản phẩm , hình chụp với các model của collection đó . Họ muốn một trang web có thể thể hiện chất ngông nghênh bụi bụi của brand họ",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\web-gioi-thieu-local-brand-thoi-trang-streetwear\\prototype",
+    "builtAt": "2026-10-15T02:30:59.928Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/collection.html"
+    ]
+  },
+  "job": {
+    "id": "f9d93674-877b-40ab-8898-573ec010cfab",
+    "kind": "quick-revise",
+    "status": "running",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\web-gioi-thieu-local-brand-thoi-trang-streetwear\\prototype",
+    "feedback": "Có mấy chỗ chữ bị lỗi phông khách muốn đổi sang tiêng anh hết . Có mấy câu tuyên ngôn hơi mất dạy bạn có thể đổi không . Với mấy cái chữ màu trắng lớn title nó bị quá trắng bị chói khi trên nền đen. Còn lại là ok rồi"
+  },
+  "qa": {
+    "createdAt": "2026-10-15T02:31:09.007Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 9
+  }
+}

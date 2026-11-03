@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bộ sưu tập — GEARFORGE</title>
+  <meta name="description" content="Bộ sưu tập phụ kiện GEARFORGE: mâm, cổ pô, cần số, đèn LED, ghi đông, đồng hồ và mô hình xe. Lọc theo danh mục, tìm kiếm và xem chi tiết từng sản phẩm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-charcoal font-sans text-silver antialiased">
+
+  <header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-300">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="../index.html" class="font-display text-2xl font-extrabold tracking-[0.12em] text-silver transition-colors duration-300 hover:text-ember" aria-label="GEARFORGE - Trang chủ">GEAR<span class="text-ember">FORGE</span></a>
+      <nav class="hidden items-center gap-10 lg:flex" aria-label="Điều hướng chính">
+        <a href="../index.html" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver/70 transition-colors duration-300 hover:text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-ember after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Trang chủ</a>
+        <a href="collections.html" aria-current="page" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:bg-ember after:transition-transform after:duration-500">Bộ sưu tập</a>
+        <a href="showcase.html" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver/70 transition-colors duration-300 hover:text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-ember after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Showcase</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button type="button" data-modal-open="tu-van" class="chamfer hidden min-h-[44px] items-center bg-ember px-5 font-display text-base font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ember sm:inline-flex">Liên hệ tư vấn</button>
+        <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center border border-silver/20 text-silver transition-colors duration-300 hover:border-ember hover:text-ember lg:hidden">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-silver/10 bg-gunmetal p-6 lg:hidden">
+      <nav class="grid gap-1" aria-label="Menu điện thoại">
+        <a href="../index.html" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-silver hover:text-ember">Trang chủ</a>
+        <a href="collections.html" aria-current="page" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-ember">Bộ sưu tập</a>
+        <a href="showcase.html" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-silver hover:text-ember">Showcase</a>
+      </nav>
+      <button type="button" data-modal-open="tu-van" class="chamfer mt-6 flex min-h-[48px] w-full items-center justify-center bg-ember font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal">Liên hệ tư vấn</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section id="page-hero" data-section="page-hero" class="blueprint relative overflow-hidden bg-charcoal pt-16 lg:pt-[72px]">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 pb-14 pt-16 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 lg:pb-20 lg:pt-24 2xl:px-16">
+        <div class="lg:col-span-8">
+          <h1 data-reveal="up" class="font-display text-[clamp(3.25rem,8vw,8rem)] font-extrabold uppercase italic leading-[0.9] tracking-tight pb-1">Bộ sưu tập <span class="text-ember">phụ kiện</span></h1>
+          <p data-reveal="fade" class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Mười hai dòng sản phẩm cho ô tô và xe máy. Lọc theo nhóm, gõ tên món bạn tìm, mở từng thẻ để xem chất liệu và dòng xe tương thích.</p>
+        </div>
+        <dl data-reveal="fade" class="grid grid-cols-3 border-t border-silver/15 pt-6 lg:col-span-4">
+          <div><dt class="text-xs uppercase tracking-[0.18em] text-muted">Sản phẩm</dt><dd class="mt-2 font-display text-4xl font-extrabold"><span data-count-to="12">12</span></dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.18em] text-muted">Nhóm</dt><dd class="mt-2 font-display text-4xl font-extrabold"><span data-count-to="6">6</span></dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.18em] text-muted">Chi tiết</dt><dd class="mt-2 font-display text-4xl font-extrabold text-ember"><span data-count-to="3">3</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <section id="catalog" data-section="list-cards" class="border-t border-silver/10 bg-charcoal pb-24 pt-10 lg:pb-32">
+      <div data-filter-group class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="sticky top-16 z-30 -mx-4 border-b border-silver/10 bg-charcoal/95 px-4 py-4 backdrop-blur sm:-mx-6 sm:px-6 lg:top-[72px] lg:-mx-10 lg:px-10 2xl:-mx-16 2xl:px-16">
+          <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+            <div class="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 xl:pb-0" role="group" aria-label="Lọc theo danh mục">
+              <button type="button" data-filter="all" class="is-active min-h-[44px] shrink-0 border border-silver/15 px-4 font-display text-base font-semibold uppercase tracking-[0.08em] text-silver/80 transition-colors duration-300 hover:border-ember hover:text-silver [&.is-active]:border-ember [&.is-active]:bg-ember [&.is-active]:text-charcoal">Tất cả</button>
+              <button type="button" data-filter="oto" class="min-h-[44px] shrink-0 border border-silver/15 px-4 font-display text-base font-semibold uppercase tracking-[0.08em] text-silver/80 transition-colors duration-300 hover:border-ember hover:text-silver [&.is-active]:border-ember [&.is-active]:bg-ember [&.is-active]:text-charcoal">Ô tô</button>
+              <button type="button" data-filter="xe-may" class="min-h-[44px] shrink-0 border border-silver/15 px-4 font-display text-base font-semibold uppercase tracking-[0.08em] text-silver/80 transition-colors duration-300 hover:border-ember hover:text-silver [&.is-active]:border-ember [&.is-active]:bg-ember [&.is-active]:text-charcoal">Xe máy</button>
+              <button type="button" data-filter="ngoai-that" class="min-h-[44px] shrink-0 border border-silver/15 px-4 font-display text-base font-semibold uppercase tracking-[0.08em] text-silver/80 transition-colors duration-300 hover:border-ember hover:text-silver [&.is-active]:border-ember [&.is-active]:bg-ember [&.is-active]:text-charcoal">Ngoại thất</button>
+              <button type="button" data-filter="noi-that" class="min-h-[44px] shrink-0 border border-silver/15 px-4 font-display text-base font-semibold uppercase tracking-[0.08em] text-silver/80 transition-colors duration-300 hover:border-ember hover:text-silver [&.is-active]:border-ember [&.is-active]:bg-ember [&.is-active]:text-charcoal">Nội thất</button>
+              <button type="button" data-filter="cong-nghe" class="min-h-[44px] shrink-0 border border-silver/15 px-4 font-display text-base font-semibold uppercase tracking-[0.08em] text-silver/80 transition-colors duration-300 hover:border-ember hover:text-silver [&.is-active]:border-ember [&.is-active]:bg-ember [&.is-active]:text-charcoal">Công nghệ</button>
+              <button type="button" data-filter="do-choi" class="min-h-[44px] shrink-0 border border-silver/15 px-4 font-display text-base font-semibold uppercase tracking-[0.08em] text-silver/80 transition-colors duration-300 hover:border-ember hover:text-silver [&.is-active]:border-ember [&.is-active]:bg-ember [&.is-active]:text-charcoal">Đồ chơi xe</button>
+            </div>
+            <div class="flex items-center gap-4">
+              <label class="relative block w-full xl:w-80">
+                <span class="sr-only">Tìm sản phẩm</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+                <input type="search" data-search placeholder="Tìm: mâm, cổ pô, đèn LED..." class="block min-h-[44px] w-full border border-silver/15 bg-gunmetal/60 pl-10 pr-3 text-base text-silver placeholder:text-muted focus:border-ember focus:outline-none">
+              </label>
+              <p class="shrink-0 text-sm text-muted"><span data-result-count class="font-display text-lg font-bold text-silver">12</span> món</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal-stagger="60" class="mt-10 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+
+          <article data-category="oto ngoai-that" data-keywords="mam forged vortex wheel 19 inch banh xe" class="group flex flex-col">
+            <a href="showcase.html" class="block aspect-[4/3] overflow-hidden bg-gunmetal">
+              <img src="../assets/img/sp-mam-vortex.webp" alt="Mâm forged Vortex 19 inch màu bạc lắp trên xe trắng, cùm phanh vàng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="474">
+            </a>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-W19 · Mâm ô tô</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Mâm forged Vortex 19</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Rèn nguyên khối 10 chấu xoắn, nhẹ hơn mâm đúc cùng cỡ để xe vào cua chính xác hơn.</p>
+              <a href="showcase.html" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem chi tiết
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article data-category="xe-may" data-keywords="co po hellion ong xa exhaust pipe titan chrome" class="group flex flex-col">
+            <a href="product-co-po-hellion.html" class="block aspect-[4/3] overflow-hidden bg-gunmetal">
+              <img src="../assets/img/sp-ong-xa-titan.webp" alt="Cổ pô chrome Hellion uốn cong dọc thân xe máy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="600" height="800">
+            </a>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-X88 · Ống xả xe máy</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Cổ pô Hellion</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Thép không gỉ 304 mạ chrome, tiếng pô trầm và đều ở dải vòng tua thấp.</p>
+              <a href="product-co-po-hellion.html" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem chi tiết
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article data-category="oto noi-that" data-keywords="can so torque knob gear shift nhom da" class="group flex flex-col">
+            <a href="product-can-so.html" class="block aspect-[4/3] overflow-hidden bg-gunmetal">
+              <img src="../assets/img/sp-can-so.webp" alt="Đầu cần số Torque Knob mặt đen bóng in sơ đồ số" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="800" height="533">
+            </a>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-S06 · Nội thất ô tô</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Cần số Torque Knob</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Lõi nhôm đặc bọc da đục lỗ, nặng tay vừa đủ để mỗi lần vào số dứt khoát.</p>
+              <a href="product-can-so.html" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem chi tiết
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article data-category="oto ngoai-that" data-keywords="mam duc strata 18 inch wheel den nham" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Mâm đúc Strata 18" data-qv-code="GF-W18" data-qv-type="Mâm ô tô · Ngoại thất" data-qv-img="../assets/img/sp-mam-strata.jpg" data-qv-alt="Mâm Strata 5 chấu kép đen viền phay bạc trên xe coupe xám nhám" data-qv-desc="Năm chấu kép mặt phay xước trên nền đen nhám. Thiết kế hở rộng để lộ cùm phanh và tản nhiệt tốt khi chạy đèo." data-qv-material="Hợp kim nhôm A356 đúc áp suất thấp, mặt chấu phay CNC" data-qv-fit="PCD 5x114.3, ET35-40: Nissan 370Z, Honda Civic, Mazda 3" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Mâm đúc Strata 18">
+              <img src="../assets/img/sp-mam-strata.jpg" alt="Mâm Strata 5 chấu kép đen viền phay bạc trên xe coupe xám nhám" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="960" height="637">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-W18 · Mâm ô tô</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Mâm đúc Strata 18</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Năm chấu kép mặt phay xước, sơn đen nhám, hợp coupe và sedan thể thao.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Mâm đúc Strata 18" data-qv-code="GF-W18" data-qv-type="Mâm ô tô · Ngoại thất" data-qv-img="../assets/img/sp-mam-strata.jpg" data-qv-alt="Mâm Strata 5 chấu kép đen viền phay bạc trên xe coupe xám nhám" data-qv-desc="Năm chấu kép mặt phay xước trên nền đen nhám. Thiết kế hở rộng để lộ cùm phanh và tản nhiệt tốt khi chạy đèo." data-qv-material="Hợp kim nhôm A356 đúc áp suất thấp, mặt chấu phay CNC" data-qv-fit="PCD 5x114.3, ET35-40: Nissan 370Z, Honda Civic, Mazda 3" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article data-category="oto ngoai-that cong-nghe" data-keywords="den pha projector halo led bi-led chieu sang o to" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Đèn pha projector Halo" data-qv-code="GF-L12" data-qv-type="Chiếu sáng ô tô · Công nghệ" data-qv-img="../assets/img/sp-den-pha-led.webp" data-qv-alt="Cụm đèn pha projector trên đầu xe sedan màu đen" data-qv-desc="Thấu kính bi-LED cho đường cắt sáng gọn, không chói xe ngược chiều. Lắp thay thế cụm zin, không cắt dây." data-qv-material="Thấu kính bi-LED 3 inch, vỏ polycarbonate phủ chống ố vàng" data-qv-fit="Mitsubishi Lancer, Toyota Vios, Kia K3 (đối chiếu đời xe khi tư vấn)" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Đèn pha projector Halo">
+              <img src="../assets/img/sp-den-pha-led.webp" alt="Cụm đèn pha projector trên đầu xe sedan màu đen" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-L12 · Chiếu sáng ô tô</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Đèn pha projector Halo</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Thấu kính bi-LED cho đường cắt sáng gọn, lắp thay cụm zin không cắt dây.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Đèn pha projector Halo" data-qv-code="GF-L12" data-qv-type="Chiếu sáng ô tô · Công nghệ" data-qv-img="../assets/img/sp-den-pha-led.webp" data-qv-alt="Cụm đèn pha projector trên đầu xe sedan màu đen" data-qv-desc="Thấu kính bi-LED cho đường cắt sáng gọn, không chói xe ngược chiều. Lắp thay thế cụm zin, không cắt dây." data-qv-material="Thấu kính bi-LED 3 inch, vỏ polycarbonate phủ chống ố vàng" data-qv-fit="Mitsubishi Lancer, Toyota Vios, Kia K3 (đối chiếu đời xe khi tư vấn)" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article data-category="xe-may ngoai-that cong-nghe" data-keywords="den doi twin beam led xe may cruiser chieu sang" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Cụm đèn Twin Beam" data-qv-code="GF-L21" data-qv-type="Chiếu sáng xe máy · Công nghệ" data-qv-img="../assets/img/sp-che-hoa-khi.jpg" data-qv-alt="Xe cruiser đen với cụm đèn pha tròn và hai đèn phụ mạ chrome" data-qv-desc="Đèn pha tròn LED kèm cặp đèn phụ hai bên, trả lại vẻ cổ điển cho cruiser mà vẫn sáng như đèn đời mới." data-qv-material="Chóa nhôm mạ chrome, chip LED công suất 40W, kính cường lực" data-qv-fit="Honda Shadow, Yamaha V-Star, Suzuki Intruder và cruiser có pát đèn 7 inch" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Cụm đèn Twin Beam">
+              <img src="../assets/img/sp-che-hoa-khi.jpg" alt="Xe cruiser đen với cụm đèn pha tròn và hai đèn phụ mạ chrome" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1023" height="681">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-L21 · Chiếu sáng xe máy</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Cụm đèn Twin Beam</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Đèn pha tròn LED kèm cặp đèn phụ, dáng cổ điển, độ sáng đời mới.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Cụm đèn Twin Beam" data-qv-code="GF-L21" data-qv-type="Chiếu sáng xe máy · Công nghệ" data-qv-img="../assets/img/sp-che-hoa-khi.jpg" data-qv-alt="Xe cruiser đen với cụm đèn pha tròn và hai đèn phụ mạ chrome" data-qv-desc="Đèn pha tròn LED kèm cặp đèn phụ hai bên, trả lại vẻ cổ điển cho cruiser mà vẫn sáng như đèn đời mới." data-qv-material="Chóa nhôm mạ chrome, chip LED công suất 40W, kính cường lực" data-qv-fit="Honda Shadow, Yamaha V-Star, Suzuki Intruder và cruiser có pát đèn 7 inch" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article data-category="xe-may ngoai-that" data-keywords="ghi dong drag bar guong cnc tay lai xe may" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Ghi đông Drag Bar &amp; gương CNC" data-qv-code="GF-H03" data-qv-type="Điều khiển xe máy · Ngoại thất" data-qv-img="../assets/img/sp-gia-do-dien-thoai.jpg" data-qv-alt="Ghi đông thấp và gương chiếu hậu CNC trên xe máy độ bình xăng vẽ họa tiết vàng" data-qv-desc="Ghi đông thẳng, hạ thấp tư thế lái cho dáng xe gọn và cảm giác bám đầu xe chắc hơn. Gương CNC góc cạnh đi kèm." data-qv-material="Ống thép crom-molypden 1 inch, gương thân nhôm 6061 phay CNC" data-qv-fit="Harley Sportster, Honda Rebel, xe custom có cổ ghi đông 1 inch" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Ghi đông Drag Bar và gương CNC">
+              <img src="../assets/img/sp-gia-do-dien-thoai.jpg" alt="Ghi đông thấp và gương chiếu hậu CNC trên xe máy độ bình xăng vẽ họa tiết vàng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-H03 · Điều khiển xe máy</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Ghi đông Drag Bar &amp; gương CNC</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Hạ thấp tư thế lái, dáng xe gọn, đi kèm cặp gương nhôm phay góc cạnh.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Ghi đông Drag Bar &amp; gương CNC" data-qv-code="GF-H03" data-qv-type="Điều khiển xe máy · Ngoại thất" data-qv-img="../assets/img/sp-gia-do-dien-thoai.jpg" data-qv-alt="Ghi đông thấp và gương chiếu hậu CNC trên xe máy độ bình xăng vẽ họa tiết vàng" data-qv-desc="Ghi đông thẳng, hạ thấp tư thế lái cho dáng xe gọn và cảm giác bám đầu xe chắc hơn. Gương CNC góc cạnh đi kèm." data-qv-material="Ống thép crom-molypden 1 inch, gương thân nhôm 6061 phay CNC" data-qv-fit="Harley Sportster, Honda Rebel, xe custom có cổ ghi đông 1 inch" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article data-category="xe-may" data-keywords="nhong sen dia 428 chain sprocket truyen dong" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Bộ nhông sên dĩa 428" data-qv-code="GF-C428" data-qv-type="Truyền động xe máy" data-qv-img="../assets/img/sp-nhong-sen-dia.jpg" data-qv-alt="Cận cảnh sên và nhông xe máy ảnh đen trắng" data-qv-desc="Sên phốt cao su giữ mỡ lâu, nhông dĩa tôi cứng răng. Đổi tỉ số truyền để xe bốc hơn khi ra phố hoặc êm hơn khi đi tour." data-qv-material="Sên thép hợp kim có phốt O-ring, nhông dĩa thép C45 tôi cao tần" data-qv-fit="Yamaha Exciter 155, Honda Winner X, Suzuki Raider (chọn số răng theo nhu cầu)" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Bộ nhông sên dĩa 428">
+              <img src="../assets/img/sp-nhong-sen-dia.jpg" alt="Cận cảnh sên và nhông xe máy ảnh đen trắng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="1024">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-C428 · Truyền động xe máy</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Bộ nhông sên dĩa 428</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Sên phốt O-ring giữ mỡ lâu, nhông dĩa tôi cứng, đổi tỉ số theo cách bạn chạy.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Bộ nhông sên dĩa 428" data-qv-code="GF-C428" data-qv-type="Truyền động xe máy" data-qv-img="../assets/img/sp-nhong-sen-dia.jpg" data-qv-alt="Cận cảnh sên và nhông xe máy ảnh đen trắng" data-qv-desc="Sên phốt cao su giữ mỡ lâu, nhông dĩa tôi cứng răng. Đổi tỉ số truyền để xe bốc hơn khi ra phố hoặc êm hơn khi đi tour." data-qv-material="Sên thép hợp kim có phốt O-ring, nhông dĩa thép C45 tôi cao tần" data-qv-fit="Yamaha Exciter 155, Honda Winner X, Suzuki Raider (chọn số răng theo nhu cầu)" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article data-category="oto noi-that" data-keywords="khung long an toan track cage roll cage vo lang track day" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Khung lồng Track Cage" data-qv-code="GF-T01" data-qv-type="Nội thất xe track · Ô tô" data-qv-img="../assets/img/sp-noi-that-race.webp" data-qv-alt="Khoang lái xe track với khung lồng an toàn bằng ống thép và vô lăng thể thao" data-qv-desc="Khung lồng 6 điểm tăng độ cứng thân xe và bảo vệ người lái khi chạy track day. Đi kèm vô lăng da lộn đường kính 350 mm." data-qv-material="Ống thép 4130 đường kính 38 mm, mối hàn TIG, sơn tĩnh điện bạc" data-qv-fit="Nissan 240SX, Mazda MX-5, Toyota GR86 (đo khoang xe trước khi lắp)" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Khung lồng Track Cage">
+              <img src="../assets/img/sp-noi-that-race.webp" alt="Khoang lái xe track với khung lồng an toàn bằng ống thép và vô lăng thể thao" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="681">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-T01 · Nội thất xe track</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Khung lồng Track Cage</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Khung 6 điểm tăng độ cứng thân xe, kèm vô lăng da lộn cho ngày chạy track.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Khung lồng Track Cage" data-qv-code="GF-T01" data-qv-type="Nội thất xe track · Ô tô" data-qv-img="../assets/img/sp-noi-that-race.webp" data-qv-alt="Khoang lái xe track với khung lồng an toàn bằng ống thép và vô lăng thể thao" data-qv-desc="Khung lồng 6 điểm tăng độ cứng thân xe và bảo vệ người lái khi chạy track day. Đi kèm vô lăng da lộn đường kính 350 mm." data-qv-material="Ống thép 4130 đường kính 38 mm, mối hàn TIG, sơn tĩnh điện bạc" data-qv-fit="Nissan 240SX, Mazda MX-5, Toyota GR86 (đo khoang xe trước khi lắp)" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article data-category="oto noi-that cong-nghe" data-keywords="dong ho pulse gauge dashboard man hinh toc do cong nghe" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Cụm đồng hồ Pulse" data-qv-code="GF-D07" data-qv-type="Thiết bị công nghệ · Nội thất" data-qv-img="../assets/img/sp-dong-ho-so.webp" data-qv-alt="Cận cảnh đồng hồ tốc độ ô tô phát sáng trong khoang lái tối" data-qv-desc="Đồng hồ phụ hiển thị nhiệt độ nước, áp suất turbo và vòng tua, kim quét khởi động và đèn báo redline màu cam." data-qv-material="Mặt kính chống chói, vỏ nhôm anod, kết nối cổng OBD-II" data-qv-fit="Xe có cổng OBD-II sản xuất từ 2008 trở lại đây" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Cụm đồng hồ Pulse">
+              <img src="../assets/img/sp-dong-ho-so.webp" alt="Cận cảnh đồng hồ tốc độ ô tô phát sáng trong khoang lái tối" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-D07 · Thiết bị công nghệ</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Cụm đồng hồ Pulse</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Hiển thị nhiệt độ nước, áp suất turbo, vòng tua qua cổng OBD-II.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Cụm đồng hồ Pulse" data-qv-code="GF-D07" data-qv-type="Thiết bị công nghệ · Nội thất" data-qv-img="../assets/img/sp-dong-ho-so.webp" data-qv-alt="Cận cảnh đồng hồ tốc độ ô tô phát sáng trong khoang lái tối" data-qv-desc="Đồng hồ phụ hiển thị nhiệt độ nước, áp suất turbo và vòng tua, kim quét khởi động và đèn báo redline màu cam." data-qv-material="Mặt kính chống chói, vỏ nhôm anod, kết nối cổng OBD-II" data-qv-fit="Xe có cổng OBD-II sản xuất từ 2008 trở lại đây" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article data-category="do-choi" data-keywords="mo hinh f1 lap rap xe dua do choi trung bay" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Mô hình F1 lắp ráp" data-qv-code="GF-M24" data-qv-type="Đồ chơi xe · Trưng bày" data-qv-img="../assets/img/sp-mo-hinh-xe-dua.jpg" data-qv-alt="Mô hình xe đua công thức một lắp ráp màu xanh trắng trên nền xám" data-qv-desc="Bộ lắp ráp xe đua công thức một với hệ treo, cánh gió trước sau và bánh xe tháo rời được. Món quà cho góc trưng bày của người mê xe." data-qv-material="Nhựa ABS ép khuôn chính xác, lốp cao su, khoảng 1.100 chi tiết" data-qv-fit="Từ 14 tuổi trở lên, kệ trưng bày dài tối thiểu 45 cm" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Mô hình F1 lắp ráp">
+              <img src="../assets/img/sp-mo-hinh-xe-dua.jpg" alt="Mô hình xe đua công thức một lắp ráp màu xanh trắng trên nền xám" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="512">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-M24 · Đồ chơi xe</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Mô hình F1 lắp ráp</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Xe đua công thức một với hệ treo và cánh gió tháo rời, cho góc trưng bày.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Mô hình F1 lắp ráp" data-qv-code="GF-M24" data-qv-type="Đồ chơi xe · Trưng bày" data-qv-img="../assets/img/sp-mo-hinh-xe-dua.jpg" data-qv-alt="Mô hình xe đua công thức một lắp ráp màu xanh trắng trên nền xám" data-qv-desc="Bộ lắp ráp xe đua công thức một với hệ treo, cánh gió trước sau và bánh xe tháo rời được. Món quà cho góc trưng bày của người mê xe." data-qv-material="Nhựa ABS ép khuôn chính xác, lốp cao su, khoảng 1.100 chi tiết" data-qv-fit="Từ 14 tuổi trở lên, kệ trưng bày dài tối thiểu 45 cm" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article data-category="do-choi" data-keywords="mo hinh le mans 1:18 die-cast xe dua do choi" class="group flex flex-col">
+            <button type="button" data-modal-open="quickview" data-qv-name="Mô hình Le Mans 1:18" data-qv-code="GF-M18" data-qv-type="Đồ chơi xe · Trưng bày" data-qv-img="../assets/img/sp-den-pha-led.jpg" data-qv-alt="Mô hình xe đua sức bền màu xanh da trời sọc cam đặt trên sa bàn đường pit" data-qv-desc="Mô hình die-cast xe đua sức bền huyền thoại, cửa và nắp capo mở được, khoang lái chi tiết đến dây đai an toàn." data-qv-material="Hợp kim kẽm đúc, chi tiết nhựa, tỉ lệ 1:18 (dài khoảng 26 cm)" data-qv-fit="Kèm đế trưng bày và hộp mica chống bụi" class="block aspect-[4/3] w-full overflow-hidden bg-gunmetal text-left" aria-label="Xem nhanh Mô hình Le Mans 1:18">
+              <img src="../assets/img/sp-den-pha-led.jpg" alt="Mô hình xe đua sức bền màu xanh da trời sọc cam đặt trên sa bàn đường pit" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="576">
+            </button>
+            <div class="flex flex-1 flex-col border-b border-silver/15 pb-5 pt-4">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-M18 · Đồ chơi xe</p>
+              <h2 class="mt-1 font-display text-2xl font-bold uppercase">Mô hình Le Mans 1:18</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">Die-cast xe đua sức bền, cửa và capo mở được, kèm hộp mica trưng bày.</p>
+              <button type="button" data-modal-open="quickview" data-qv-name="Mô hình Le Mans 1:18" data-qv-code="GF-M18" data-qv-type="Đồ chơi xe · Trưng bày" data-qv-img="../assets/img/sp-den-pha-led.jpg" data-qv-alt="Mô hình xe đua sức bền màu xanh da trời sọc cam đặt trên sa bàn đường pit" data-qv-desc="Mô hình die-cast xe đua sức bền huyền thoại, cửa và nắp capo mở được, khoang lái chi tiết đến dây đai an toàn." data-qv-material="Hợp kim kẽm đúc, chi tiết nhựa, tỉ lệ 1:18 (dài khoảng 26 cm)" data-qv-fit="Kèm đế trưng bày và hộp mica chống bụi" class="group/link mt-4 inline-flex min-h-[44px] items-center gap-2 self-start font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">Xem nhanh
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover/link:translate-x-1" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div data-empty hidden class="mt-10 border border-dashed border-silver/20 px-6 py-16 text-center">
+          <p class="font-display text-3xl font-bold uppercase">Chưa có món nào khớp</p>
+          <p class="mx-auto mt-3 max-w-md text-base text-muted">Thử từ khóa ngắn hơn như "mâm" hoặc "đèn", hoặc xem lại toàn bộ bộ sưu tập.</p>
+          <button type="button" data-reset-search class="mt-6 inline-flex min-h-[48px] items-center border border-silver/25 px-6 font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:border-ember hover:text-ember">Xem tất cả sản phẩm</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="tu-van-cta" data-section="cta-type" class="bg-gunmetal/40 py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl items-end gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-display text-[clamp(2.75rem,6vw,6rem)] font-extrabold uppercase leading-[0.9] tracking-tight lg:col-span-8">Không thấy món <span class="text-ember">bạn cần?</span></h2>
+        <div data-reveal="fade" class="lg:col-span-4 lg:pb-2">
+          <p class="text-base leading-relaxed text-muted">Kho của GEARFORGE lớn hơn những gì trưng bày ở đây. Gửi dòng xe, chúng tôi tìm giúp.</p>
+          <button type="button" data-modal-open="tu-van" class="chamfer mt-6 inline-flex min-h-[52px] w-full items-center justify-center bg-ember px-8 font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98] sm:w-auto">Liên hệ tư vấn</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="border-t border-silver/10 bg-deep pt-20">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <a href="../index.html" class="font-display text-3xl font-extrabold tracking-[0.12em]">GEAR<span class="text-ember">FORGE</span></a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">Phụ kiện và đồ chơi xe máy, ô tô phong cách hiệu năng. Chọn bằng kinh nghiệm thợ độ, trình bày như một catalogue cao cấp.</p>
+        </div>
+        <nav class="lg:col-span-2" aria-label="Trang">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Trang</p>
+          <ul class="mt-5 grid gap-1 text-base">
+            <li><a href="../index.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Trang chủ</a></li>
+            <li><a href="collections.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Bộ sưu tập</a></li>
+            <li><a href="showcase.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Showcase</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Liên hệ</p>
+          <ul class="mt-5 grid gap-3 text-base text-silver">
+            <li><a href="tel:+842873006868" class="transition-colors duration-300 hover:text-ember">Hotline: 028 7300 6868</a></li>
+            <li><a href="mailto:tuvan@gearforge.vn" class="transition-colors duration-300 hover:text-ember">tuvan@gearforge.vn</a></li>
+            <li class="text-muted">Showroom: 212 Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh</li>
+            <li class="text-muted">Mở cửa 9:00 - 20:00, thứ Hai đến Chủ nhật</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Mạng xã hội</p>
+          <ul class="mt-5 flex flex-wrap gap-3">
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">Instagram</a></li>
+            <li><a href="https://www.youtube.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">YouTube</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-16 select-none overflow-hidden whitespace-nowrap font-display text-[clamp(4rem,17vw,19rem)] font-extrabold uppercase leading-[0.8] tracking-tight text-gunmetal" aria-hidden="true">GEARFORGE</p>
+      <div class="flex flex-col gap-2 border-t border-silver/10 py-6 text-sm text-muted sm:flex-row sm:justify-between">
+        <p>© 2026 GEARFORGE. Bảo lưu mọi quyền.</p>
+        <a href="#top" class="transition-colors duration-300 hover:text-ember">Về đầu trang</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cửa sổ giới thiệu nhanh -->
+  <dialog id="quickview" class="m-auto w-[min(94vw,980px)] border border-silver/10 bg-gunmetal p-0 text-silver">
+    <div class="relative grid md:grid-cols-2">
+      <button type="button" data-modal-close aria-label="Đóng" class="absolute right-2 top-2 z-10 grid h-11 w-11 place-items-center bg-charcoal/70 text-silver transition-colors duration-300 hover:text-ember">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="aspect-[4/3] bg-charcoal md:aspect-auto md:min-h-[440px]">
+        <img data-qv="img" src="../assets/img/sp-mam-strata.jpg" alt="" class="h-full w-full object-cover" width="960" height="637">
+      </div>
+      <div class="flex flex-col p-6 sm:p-8">
+        <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember"><span data-qv="code"></span> · <span data-qv="type"></span></p>
+        <h2 data-qv="name" class="mt-2 pr-10 font-display text-3xl font-bold uppercase sm:text-4xl"></h2>
+        <p data-qv="desc" class="mt-4 text-base leading-relaxed text-silver/85"></p>
+        <dl class="mt-6 grid gap-4 border-t border-silver/10 pt-5 text-sm">
+          <div><dt class="text-muted">Chất liệu</dt><dd data-qv="material" class="mt-1 text-silver"></dd></div>
+          <div><dt class="text-muted">Dòng xe tương thích</dt><dd data-qv="fit" class="mt-1 text-silver"></dd></div>
+        </dl>
+        <div class="mt-auto flex flex-wrap gap-3 pt-8">
+          <a href="#footer" data-modal-close class="chamfer inline-flex min-h-[48px] items-center bg-ember px-6 font-display text-base font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver">Liên hệ tư vấn</a>
+          <a href="showcase.html" class="inline-flex min-h-[48px] items-center border border-silver/25 px-6 font-display text-base font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:border-ember hover:text-ember">Xem Showcase</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="tu-van" class="m-auto w-[min(92vw,560px)] border border-silver/10 bg-gunmetal p-0 text-silver">
+    <div class="relative p-6 sm:p-8">
+      <button type="button" data-modal-close aria-label="Đóng" class="absolute right-3 top-3 grid h-11 w-11 place-items-center text-silver/70 transition-colors duration-300 hover:text-ember">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h2 class="pr-10 font-display text-3xl font-bold uppercase">Liên hệ tư vấn</h2>
+      <p class="mt-2 text-sm leading-relaxed text-muted">Cho chúng tôi biết dòng xe và phụ kiện bạn quan tâm, kỹ thuật viên GEARFORGE sẽ gợi ý lựa chọn phù hợp.</p>
+      <form data-form="tu-van" class="mt-6 grid gap-4">
+        <label class="block text-sm font-medium">Họ và tên
+          <input type="text" name="name" required minlength="2" autocomplete="name" placeholder="Ví dụ: Trần Minh Khoa" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Số điện thoại
+          <input type="tel" name="phone" required minlength="9" autocomplete="tel" placeholder="Ví dụ: 0908 214 377" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Dòng xe của bạn
+          <input type="text" name="vehicle" required placeholder="Ví dụ: Honda Civic 2022, Yamaha MT-15" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Nhóm phụ kiện quan tâm
+          <select name="topic" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver focus:border-ember focus:outline-none">
+            <option>Phụ kiện ô tô</option>
+            <option>Phụ kiện xe máy</option>
+            <option>Đồ chơi xe</option>
+            <option>Phụ kiện nội thất</option>
+            <option>Thiết bị công nghệ</option>
+          </select>
+        </label>
+        <div class="mt-2 flex flex-wrap items-center gap-4">
+          <button type="submit" class="chamfer inline-flex min-h-[48px] items-center bg-ember px-7 font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98]">Gửi yêu cầu</button>
+          <p class="text-xs text-muted">Bản demo: biểu mẫu chưa gửi đi đâu.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/motion.js"></script>
+</body>
+</html>

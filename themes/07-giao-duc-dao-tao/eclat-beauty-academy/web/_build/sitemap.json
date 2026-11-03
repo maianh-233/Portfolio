@@ -1,0 +1,123 @@
+{
+  "brand": "MAKEUP ÉCLAT BEAUTY ACADEMY",
+  "language": "vi",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Khung ảnh hình vòm như chiếc gương bàn trang điểm, lặp lại xuyên các trang; kết hợp đường kẻ mảnh màu son burgundy và tiêu đề serif nghiêng kiểu tạp chí beauty",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nơi trang điểm trở thành nghệ thuật",
+    "description": "Giao diện website giới thiệu học viện đào tạo trang điểm chuyên nghiệp theo phong cách tạp chí beauty cao cấp: nền kem, điểm nhấn burgundy, tiêu đề serif, gallery tác phẩm học viên có bộ lọc và xem ảnh lớn."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Tạo ấn tượng đầu tiên, truyền tải bản sắc học viện và dẫn sang chương trình đào tạo, portfolio học viên",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "The Art of Beauty — bố cục editorial bất đối xứng, ảnh khung vòm tràn mép phải" },
+        { "id": "beyond", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Introduction — Beyond Makeup" },
+        { "id": "philosophy", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Our Philosophy — 3 giá trị Technique / Aesthetic / Creativity, 3 cột desktop" },
+        { "id": "programs", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "Training Programs — 4 hướng đào tạo, link tới pages/courses.html#<chương trình>" },
+        { "id": "studio", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Learning in Studio — lưới ảnh bất đối xứng trên nền Soft Black" },
+        { "id": "highlights", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "Student Highlights — 4 tác phẩm, CTA Khám phá portfolio" },
+        { "id": "final-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Your Creativity Begins Here" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "beauty portrait makeup closeup", "file": "assets/img/home-highlight-1.jpg", "status": "ok" },
+        { "slot": "beyond", "query": "makeup artist applying model", "file": "assets/img/home-intro-makeup-artist.jpg", "status": "ok" },
+        { "slot": "programs-personal", "query": "beauty portrait makeup closeup", "file": "assets/img/chuong-trinh-ca-nhan.jpg", "status": "ok" },
+        { "slot": "programs-professional", "query": "foundation brush application face", "file": "assets/img/courses-bo-co.jpg", "status": "ok" },
+        { "slot": "programs-bridal", "query": "makeup artist applying model", "file": "assets/img/chuong-trinh-co-dau.webp", "status": "ok" },
+        { "slot": "programs-editorial", "query": "makeup artist applying model", "file": "assets/img/chuong-trinh-editorial.jpg", "status": "ok" },
+        { "slot": "studio-1", "query": "eyeshadow palette brushes", "file": "assets/img/home-studio-thuc-hanh.jpg", "status": "ok" },
+        { "slot": "studio-2", "query": "makeup vanity mirror lights", "file": "assets/img/home-studio-guong.jpg", "status": "ok" },
+        { "slot": "studio-3", "query": "foundation brush application face", "file": "assets/img/courses-hero-dung-cu.webp", "status": "ok" },
+        { "slot": "highlights-1", "query": "beauty portrait makeup closeup", "file": "assets/img/home-highlight-2.jpg", "status": "ok" },
+        { "slot": "highlights-2", "query": "woman portrait makeup glamour", "file": "assets/img/home-highlight-3.jpg", "status": "ok" },
+        { "slot": "highlights-3", "query": "beauty portrait makeup closeup", "file": "assets/img/home-highlight-4.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Về học viện",
+      "purpose": "Giới thiệu câu chuyện, triết lý đào tạo, đội ngũ giảng viên, không gian học tập và giá trị của học viện",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Where Beauty Meets Artistry" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Our Story — hai cột, nội dung mẫu có thể chỉnh sửa" },
+        { "id": "education", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Our Educational Philosophy — 5 nguyên tắc" },
+        { "id": "instructors", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Meet the Instructors — dữ liệu mẫu, khối chữ cái đầu tên thay ảnh chân dung" },
+        { "id": "inside-studio", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Inside the Studio" },
+        { "id": "values", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Our Values + CTA tới Courses" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "makeup artist portrait woman", "file": "assets/img/about-hero-makeup-artist.webp", "status": "ok" },
+        { "slot": "story", "query": "lipstick collection closeup", "file": "assets/img/about-story-my-pham.jpg", "status": "ok" },
+        { "slot": "instructors", "query": "makeup artist portrait woman", "file": null, "status": "none" },
+        { "slot": "inside-studio-1", "query": "makeup vanity mirror lights", "file": "assets/img/about-studio-ban-trang-diem.jpg", "status": "ok" },
+        { "slot": "inside-studio-2", "query": "eyeshadow palette brushes", "file": "assets/img/about-studio-bang-mau.webp", "status": "ok" },
+        { "slot": "inside-studio-3", "query": "eyeshadow palette brushes", "file": "assets/img/about-studio-co.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/courses.html",
+      "title": "Chương trình đào tạo",
+      "purpose": "Giúp người xem hiểu rõ nội dung, đối tượng và định hướng của từng chương trình đào tạo",
+      "sections": [
+        { "id": "courses-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Find Your Makeup Direction" },
+        { "id": "overview", "catalog": "services", "variant": "list-cards", "source": "ba", "note": "Program Overview — 4 chương trình A–D, mỗi chương trình một anchor id" },
+        { "id": "approach", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "Learning Approach — timeline ngang desktop, dọc mobile" },
+        { "id": "outcomes", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Learning Outcomes — không cam kết việc làm" },
+        { "id": "faq", "catalog": "faq", "variant": "faq-accordion", "source": "ba", "note": "FAQ + CTA tới liên hệ, không hiển thị giá" }
+      ],
+      "images": [
+        { "slot": "courses-hero", "query": "beauty portrait makeup closeup", "file": "assets/img/portfolio-hero-bw.jpg", "status": "ok" },
+        { "slot": "program-personal", "query": "beauty portrait makeup closeup", "file": "assets/img/home-hero-chan-dung.jpg", "status": "ok" },
+        { "slot": "program-professional", "query": "makeup artist applying model", "file": "assets/img/studio-co-trang-diem.webp", "status": "ok" },
+        { "slot": "program-bridal", "query": "wedding bride getting ready", "file": "assets/img/courses-co-dau.webp", "status": "ok" },
+        { "slot": "program-editorial", "query": "eye makeup closeup", "file": "assets/img/courses-editorial-mi.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/portfolio.html",
+      "title": "Portfolio học viên",
+      "purpose": "Biến tác phẩm makeup của học viên thành điểm nhấn thị giác lớn nhất và cung cấp thông tin liên hệ học viện",
+      "sections": [
+        { "id": "portfolio-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Every Face Tells a Story" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "Makeup Gallery — masonry + bộ lọc 4 nhóm + lightbox" },
+        { "id": "behind", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Behind the Look — 4 bước kể chuyện bằng ảnh" },
+        { "id": "contact", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Contact the Academy — form demo có kiểm tra dữ liệu" }
+      ],
+      "images": [
+        { "slot": "portfolio-hero", "query": "eye makeup closeup", "file": "assets/img/courses-hero-model.jpg", "status": "ok" },
+        { "slot": "gallery-soft-1", "query": "beauty portrait makeup closeup", "file": "assets/img/portfolio-soft-glam-1.jpg", "status": "ok" },
+        { "slot": "gallery-soft-2", "query": "woman portrait makeup glamour", "file": "assets/img/portfolio-glam-2.jpg", "status": "ok" },
+        { "slot": "gallery-soft-3", "query": "woman portrait makeup glamour", "file": "assets/img/portfolio-glam-3.jpg", "status": "ok" },
+        { "slot": "gallery-bridal-1", "query": "beauty portrait makeup closeup", "file": "assets/img/portfolio-chan-dung-1.jpg", "status": "ok" },
+        { "slot": "gallery-bridal-2", "query": "wedding bride getting ready", "file": "assets/img/portfolio-co-dau-1.webp", "status": "ok" },
+        { "slot": "gallery-creative-1", "query": "makeup artist portrait woman", "file": "assets/img/portfolio-creative-hoa.jpg", "status": "ok" },
+        { "slot": "gallery-creative-2", "query": "makeup artist portrait woman", "file": "assets/img/portfolio-creative-mau.jpg", "status": "ok" },
+        { "slot": "gallery-creative-3", "query": "woman portrait makeup glamour", "file": "assets/img/portfolio-chan-dung-2.jpg", "status": "ok" },
+        { "slot": "gallery-portrait-1", "query": "beauty portrait makeup closeup", "file": "assets/img/portfolio-son-moi.jpg", "status": "ok" },
+        { "slot": "gallery-portrait-2", "query": "eye makeup closeup", "file": "assets/img/portfolio-chan-dung-3.jpg", "status": "ok" },
+        { "slot": "behind-concept", "query": "bride portrait wedding makeup", "file": "assets/img/portfolio-co-dau-2.jpg", "status": "ok" },
+        { "slot": "behind-palette", "query": "lipstick collection closeup", "file": "assets/img/portfolio-behind-son.jpg", "status": "ok" },
+        { "slot": "behind-makeup", "query": "eye makeup closeup", "file": "assets/img/portfolio-behind-mat.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Giữ đúng 4 trang theo chú thích BA (Home, About, Courses, Student Portfolio); không tạo trang chi tiết chương trình riêng vì BA yêu cầu không tự thêm trang — các thẻ chương trình liên kết tới anchor tương ứng trên pages/courses.html",
+    "Nút Contact trên header dẫn tới pages/portfolio.html#contact (khu liên hệ cuối trang Student Portfolio) theo chú thích BA",
+    "Font preset Instrument Serif thiếu ký tự tiếng Việt → thay bằng Cormorant Garamond (serif thanh lịch kiểu tạp chí, đủ tiếng Việt); thân bài giữ Geist",
+    "Dùng bảng màu BA chỉ định (Cream, Nude Beige, Deep Burgundy, Chocolate Brown, Soft Black, Warm White) thay cho bảng màu preset",
+    "Mức chuyển động Level 1: chỉ hiện dần khi cuộn, header đổi nền khi cuộn, hover; theo preset dùng data-split cho tiêu đề hero và data-reveal=clip cho ảnh hero (yêu cầu tiêu đề hiện theo dòng + ảnh fade-in của BA). Không chuyển trang động vì website HTML tĩnh không có framework",
+    "Giảng viên dùng khối chữ cái đầu tên trên nền màu thương hiệu thay ảnh chân dung: không gán ảnh người lạ cho nhân vật mẫu"
+  ],
+  "limitations": [
+    "Form liên hệ là bản demo, chưa có backend — không gửi thông tin đi",
+    "Địa chỉ, số điện thoại, email, mạng xã hội, tên giảng viên và câu chuyện học viện là dữ liệu mẫu, cần thay bằng thông tin thật",
+    "Cần ảnh chân dung thật của giảng viên cho section Meet the Instructors",
+    "Ảnh tác phẩm học viên là ảnh minh họa từ nguồn mở (Openverse), cần thay bằng tác phẩm thật của học viên"
+  ]
+}

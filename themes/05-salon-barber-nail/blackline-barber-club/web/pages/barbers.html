@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Our Barbers | BLACKLINE BARBER CLUB">Đội ngũ barber | BLACKLINE BARBER CLUB</title>
+<meta name="description" content="Câu chuyện, đội ngũ barber và không gian của BLACKLINE BARBER CLUB, barber shop cổ điển dành cho quý ông hiện đại." data-en-content="The story, the barbers and the space of BLACKLINE BARBER CLUB, a classic barber shop for the modern man.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;1,400&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-ink font-sans text-ivory">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-ivory/20 bg-ink/85 backdrop-blur-sm">
+  <div class="hdr-inner mx-auto flex h-[4.75rem] w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="group flex min-w-0 items-center gap-3" aria-label="BLACKLINE BARBER CLUB">
+      <span class="grid h-10 w-10 shrink-0 place-items-center border border-brass font-display text-lg leading-none text-ivory transition-colors duration-300 group-hover:border-ivory">BL</span>
+      <span class="max-w-[9rem] text-[12px] font-semibold uppercase leading-snug tracking-[0.16em] text-ivory sm:max-w-none sm:text-[13px] sm:tracking-[0.22em]">BLACKLINE BARBER CLUB</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Điều hướng chính" data-en-aria-label="Main navigation">
+      <a href="../index.html" class="relative py-2 text-[13px] uppercase tracking-[0.18em] text-ivory/70 transition-colors duration-300 hover:text-ivory aria-[current=page]:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[2px] after:origin-right after:scale-x-0 after:bg-wine after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="../pages/services.html" class="relative py-2 text-[13px] uppercase tracking-[0.18em] text-ivory/70 transition-colors duration-300 hover:text-ivory aria-[current=page]:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[2px] after:origin-right after:scale-x-0 after:bg-wine after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Services">Dịch vụ</a>
+      <a href="../pages/gallery.html" class="relative py-2 text-[13px] uppercase tracking-[0.18em] text-ivory/70 transition-colors duration-300 hover:text-ivory aria-[current=page]:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[2px] after:origin-right after:scale-x-0 after:bg-wine after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Cuts Gallery">Bộ sưu tập</a>
+      <a aria-current="page" href="../pages/barbers.html" class="relative py-2 text-[13px] uppercase tracking-[0.18em] text-ivory/70 transition-colors duration-300 hover:text-ivory aria-[current=page]:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[2px] after:origin-right after:scale-x-0 after:bg-wine after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Our Barbers">Đội ngũ</a>
+    </nav>
+
+    <div class="flex shrink-0 items-center gap-2 sm:gap-4">
+      <div class="flex border border-ivory/25 text-[12px] font-medium tracking-[0.14em]" role="group" aria-label="Ngôn ngữ" data-en-aria-label="Language">
+        <button type="button" data-lang-set="vi" class="h-11 w-11 text-ivory/60 transition-colors duration-300 hover:text-ivory [&.is-active]:bg-ivory [&.is-active]:text-ink">VI</button>
+        <button type="button" data-lang-set="en" class="h-11 w-11 text-ivory/60 transition-colors duration-300 hover:text-ivory [&.is-active]:bg-ivory [&.is-active]:text-ink">EN</button>
+      </div>
+      <button type="button" data-modal-open="book" class="hidden h-11 items-center whitespace-nowrap border border-wine bg-wine px-5 text-[12px] font-semibold uppercase tracking-[0.2em] text-ivory transition-colors duration-300 hover:border-ivory hover:bg-wineDeep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ivory sm:inline-flex" data-en="Book a Visit">Đặt lịch</button>
+      <button type="button" data-menu-toggle="#mnav" class="group grid h-11 w-11 place-items-center border border-ivory/25 lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <span class="flex w-5 flex-col gap-[5px]"><span class="h-px w-full bg-ivory"></span><span class="h-px w-full bg-ivory"></span><span class="h-px w-3/4 bg-ivory"></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-0 top-[4.75rem] z-50 border-b border-t border-ivory/15 bg-ink px-4 pb-8 pt-4 sm:px-6 lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-en-aria-label="Mobile menu">
+      <a href="../index.html" class="flex min-h-[3.5rem] items-center justify-between border-b border-ivory/10 font-display text-2xl text-ivory aria-[current=page]:text-brass" data-en="Home">Trang chủ</a>
+      <a href="../pages/services.html" class="flex min-h-[3.5rem] items-center justify-between border-b border-ivory/10 font-display text-2xl text-ivory aria-[current=page]:text-brass" data-en="Services &amp; Pricing">Dịch vụ &amp; Bảng giá</a>
+      <a href="../pages/gallery.html" class="flex min-h-[3.5rem] items-center justify-between border-b border-ivory/10 font-display text-2xl text-ivory aria-[current=page]:text-brass" data-en="Cuts Gallery">Bộ sưu tập kiểu tóc</a>
+      <a aria-current="page" href="../pages/barbers.html" class="flex min-h-[3.5rem] items-center justify-between border-b border-ivory/10 font-display text-2xl text-ivory aria-[current=page]:text-brass" data-en="Our Barbers">Đội ngũ barber</a>
+    </nav>
+    <button type="button" data-modal-open="book" class="mt-6 flex h-12 w-full items-center justify-center bg-wine text-[13px] font-semibold uppercase tracking-[0.2em] text-ivory active:scale-[.98]" data-en="Book a Visit">Đặt lịch</button>
+  </div>
+</header>
+<!-- /@partial header -->
+
+<main>
+  <!-- HERO -->
+  <section id="barbers-hero" data-section="page-hero" class="relative overflow-hidden bg-ink text-ivory">
+    <img src="https://images.unsplash.com/photo-1792523227995-9ac04cf1d94d?fm=jpg&q=70&w=2000&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Ghế barber đen viền vàng, tường tối và gương vòm trong tiệm" data-en-alt="Black and gold barber chairs, dark walls and arched mirrors in the shop" class="hero-settle absolute inset-0 h-full w-full object-cover" width="2000" height="1333" fetchpriority="high">
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30"></div>
+    <div class="relative mx-auto flex min-h-[82vh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-16 pt-36 sm:px-6 lg:px-10 lg:pb-24 2xl:px-16">
+      <p class="flex items-center gap-4 text-[12px] font-medium uppercase tracking-[0.24em] text-brass" data-reveal="fade"><span class="razor"></span><span data-en="Our Barbers">Đội ngũ barber</span></p>
+      <h1 class="mt-8 max-w-6xl font-display text-[clamp(2.7rem,6.4vw,7rem)] leading-[1] tracking-tight" data-reveal="up" data-en="BUILT ON CRAFT.<br><em class='text-brass'>DEFINED BY CHARACTER.</em>">XÂY TỪ TAY NGHỀ.<br><em class="text-brass">ĐỊNH HÌNH BỞI CÁ TÍNH.</em></h1>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="story" data-section="story-editorial" class="bg-ivory text-ink">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-32 2xl:px-16">
+      <figure class="lg:col-span-6" data-reveal="fade">
+        <div class="aspect-[4/3] overflow-hidden bg-coal/20 lg:aspect-[5/6]">
+          <img src="https://images.unsplash.com/photo-1778676688264-2a5db8886ab3?fm=jpg&q=70&w=1600&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Ghế barber cổ điển trong căn phòng treo tranh" data-en-alt="Vintage barber chair in a room hung with artwork" class="h-full w-full object-cover" width="1600" height="1920" loading="lazy">
+        </div>
+      </figure>
+      <div class="flex flex-col justify-center lg:col-span-5 lg:col-start-8">
+        <span class="razor" data-reveal="fade"></span>
+        <h2 class="mt-8 font-display text-[clamp(2.3rem,4.2vw,4.4rem)] leading-[1.03] tracking-tight" data-reveal="up" data-en="A TRADITION<br>OF PRECISION.">TRUYỀN THỐNG<br>CỦA SỰ CHÍNH XÁC.</h2>
+        <p class="mt-8 text-[17px] leading-relaxed text-ink/75" data-reveal="up" data-en="BLACKLINE started in 2018 with two chairs and a simple idea: men deserve a barber who takes time over every cut.">BLACKLINE bắt đầu năm 2018 với hai chiếc ghế và một ý nghĩ đơn giản: quý ông xứng đáng có một barber dành thời gian cho từng đường cắt.</p>
+        <p class="mt-5 text-[17px] leading-relaxed text-ink/75" data-reveal="up" data-en="We learned the old techniques first: scissor-over-comb, straight-razor shaves, hot towels. Then we added the modern fades our clients asked for.">Chúng tôi học kỹ thuật cũ trước: kéo trên lược, cạo dao thẳng, khăn nóng. Sau đó mới thêm những đường fade hiện đại mà khách hàng tìm đến.</p>
+        <p class="mt-5 text-[17px] leading-relaxed text-ink/75" data-reveal="up" data-en="Today the club is a place to slow down for an hour and leave looking like yourself, only sharper.">Hôm nay, club là nơi bạn chậm lại một giờ và bước ra vẫn là chính mình, chỉ sắc nét hơn.</p>
+        <dl class="mt-12 grid grid-cols-3 border-t border-ink/20 pt-8" data-reveal="up">
+          <div><dt class="text-[12px] uppercase tracking-[0.2em] text-ink/60" data-en="Founded">Thành lập</dt><dd class="mt-2 font-display text-4xl sm:text-5xl">2018</dd></div>
+          <div class="border-l border-ink/15 pl-5"><dt class="text-[12px] uppercase tracking-[0.2em] text-ink/60">Barber</dt><dd class="mt-2 font-display text-4xl sm:text-5xl" data-count-to="3">3</dd></div>
+          <div class="border-l border-ink/15 pl-5"><dt class="text-[12px] uppercase tracking-[0.2em] text-ink/60" data-en="Chairs">Ghế cắt</dt><dd class="mt-2 font-display text-4xl sm:text-5xl" data-count-to="6">6</dd></div>
+        </dl>
+        <p class="mt-4 text-[13px] text-ink/55" data-en="Sample figures.">Số liệu minh họa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET THE TEAM -->
+  <section id="team" data-section="features-alternate" class="bg-ink text-ivory">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <span class="razor" data-reveal="fade"></span>
+      <h2 class="mt-8 font-display text-[clamp(2.4rem,5vw,5.2rem)] leading-[1.02] tracking-tight" data-reveal="up" data-en="MEET THE TEAM">GẶP ĐỘI NGŨ</h2>
+
+      <div class="mt-16 space-y-20 lg:space-y-28">
+        <article class="group grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center lg:gap-12">
+          <div class="overflow-hidden bg-coal lg:col-span-5" data-reveal="fade"><img src="https://images.unsplash.com/photo-1553521041-d168abd31de3?fm=jpg&q=70&w=1200&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Chân dung barber James Carter cầm kéo" data-en-alt="Portrait of barber James Carter holding scissors" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="1500" loading="lazy"></div>
+          <div class="lg:col-span-6 lg:col-start-7" data-reveal="up">
+            <p class="font-display text-6xl text-wine">01</p>
+            <h3 class="mt-4 font-display text-4xl sm:text-5xl">JAMES CARTER</h3>
+            <p class="mt-3 text-[13px] font-semibold uppercase tracking-[0.22em] text-brass">Classic Cuts Specialist</p>
+            <p class="mt-6 max-w-xl text-[17px] leading-relaxed text-ivory/75" data-en="James has spent twelve years with scissors and comb. He reads the growth of your hair before the first cut and builds a shape that still sits right a month later. Ask him for a side part or a gentleman's taper.">James đã gắn bó 12 năm với kéo và lược. Anh đọc hướng mọc của tóc trước nhát cắt đầu tiên và dựng một dáng tóc vẫn đẹp sau một tháng. Hãy tìm anh cho kiểu rẽ ngôi hay taper lịch lãm.</p>
+          </div>
+        </article>
+        <article class="group grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center lg:gap-12">
+          <div class="overflow-hidden bg-coal lg:order-2 lg:col-span-5 lg:col-start-8" data-reveal="fade"><img src="https://images.unsplash.com/photo-1598524374912-6b0b0bab43dd?fm=jpg&q=70&w=1200&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Chân dung barber Daniel Brooks" data-en-alt="Portrait of barber Daniel Brooks" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="1500" loading="lazy"></div>
+          <div class="lg:order-1 lg:col-span-6" data-reveal="up">
+            <p class="font-display text-6xl text-wine">02</p>
+            <h3 class="mt-4 font-display text-4xl sm:text-5xl">DANIEL BROOKS</h3>
+            <p class="mt-3 text-[13px] font-semibold uppercase tracking-[0.22em] text-brass">Fade &amp; Modern Styles</p>
+            <p class="mt-6 max-w-xl text-[17px] leading-relaxed text-ivory/75" data-en="Daniel is the one to see for skin fades and textured crops. He works fast with the clipper but never skips the detail work around the ears and nape. His fades grow out evenly.">Daniel là người bạn nên tìm cho skin fade và textured crop. Anh làm tông đơ nhanh tay nhưng không bỏ qua chi tiết quanh tai và gáy. Những đường fade của anh mọc lại vẫn đều.</p>
+          </div>
+        </article>
+        <article class="group grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center lg:gap-12">
+          <div class="overflow-hidden bg-coal lg:col-span-5" data-reveal="fade"><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?fm=jpg&q=70&w=1200&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Barber Alex Morgan tỉa râu cho khách bằng kéo" data-en-alt="Barber Alex Morgan trimming a beard with scissors" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="1500" loading="lazy"></div>
+          <div class="lg:col-span-6 lg:col-start-7" data-reveal="up">
+            <p class="font-display text-6xl text-wine">03</p>
+            <h3 class="mt-4 font-display text-4xl sm:text-5xl">ALEX MORGAN</h3>
+            <p class="mt-3 text-[13px] font-semibold uppercase tracking-[0.22em] text-brass">Beard Grooming Expert</p>
+            <p class="mt-6 max-w-xl text-[17px] leading-relaxed text-ivory/75" data-en="Alex shapes beards to the bone structure of the face, then finishes with a straight razor and hot towel. He also runs our traditional shave, the slowest and calmest forty minutes in the shop.">Alex định hình râu theo cấu trúc xương mặt, rồi hoàn thiện bằng dao cạo thẳng và khăn nóng. Anh cũng phụ trách dịch vụ cạo mặt truyền thống, bốn mươi phút chậm rãi và thư thái nhất trong tiệm.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIDE THE CLUB -->
+  <section id="inside" data-section="gallery-lookbook" class="bg-coal text-ivory">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 class="font-display text-[clamp(2.4rem,5vw,5.2rem)] leading-[1.02] tracking-tight" data-reveal="up" data-en="INSIDE <em class='text-brass'>THE CLUB</em>">BÊN TRONG <em class="text-brass">CLUB</em></h2>
+      <div class="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-12 lg:gap-6">
+        <figure class="relative col-span-2 aspect-[4/5] lg:col-span-7 lg:row-span-2 lg:aspect-auto" data-reveal="fade">
+          <a href="https://images.unsplash.com/photo-1775494165568-42c0fbb4c782?fm=jpg&q=70&w=1400&auto=format&fit=crop" data-lightbox="club" data-caption="Ghế barber cổ điển" data-en-data-caption="The classic barber chair" class="group absolute inset-0 block overflow-hidden bg-ink">
+            <img src="https://images.unsplash.com/photo-1775494165568-42c0fbb4c782?fm=jpg&q=70&w=1400&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Ghế barber cổ điển dưới ánh nắng" data-en-alt="Vintage barber chair in sunlight" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1400" height="1750" loading="lazy">
+          </a>
+        </figure>
+        <figure class="col-span-1 lg:col-span-5" data-reveal="fade">
+          <a href="../assets/img/club-tools-scissors.jpg" data-lightbox="club" data-caption="Bộ dụng cụ cắt tóc" data-en-data-caption="The tools of the trade" class="group block overflow-hidden bg-ink">
+            <img src="../assets/img/club-tools-scissors.jpg" alt="Kéo và lược barber đặt chéo nhau" data-en-alt="Barber scissors and comb crossed" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04] lg:aspect-[16/10]" width="2304" height="2146" loading="lazy">
+          </a>
+        </figure>
+        <figure class="col-span-1 lg:col-span-5" data-reveal="fade">
+          <a href="https://images.unsplash.com/photo-1754294437661-129b86f868ea?fm=jpg&q=70&w=1400&auto=format&fit=crop" data-lightbox="club" data-caption="Quầy gương và bàn làm việc" data-en-data-caption="Mirror station and workbench" class="group block overflow-hidden bg-ink">
+            <img src="https://images.unsplash.com/photo-1754294437661-129b86f868ea?fm=jpg&q=70&w=1400&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Quầy gương barber với dụng cụ" data-en-alt="Barber mirror station with tools" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04] lg:aspect-[16/10]" width="1400" height="875" loading="lazy">
+          </a>
+        </figure>
+        <figure class="col-span-1 lg:col-span-6" data-reveal="fade">
+          <a href="https://images.unsplash.com/photo-1781925856343-c97d0d44f94c?fm=jpg&q=70&w=1400&auto=format&fit=crop" data-lightbox="club" data-caption="Không gian chờ" data-en-data-caption="The waiting lounge" class="group block overflow-hidden bg-ink">
+            <img src="https://images.unsplash.com/photo-1781925856343-c97d0d44f94c?fm=jpg&q=70&w=1400&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Ghế sofa và tạp chí ở khu chờ" data-en-alt="Sofa and magazines in the waiting area" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1400" height="1050" loading="lazy">
+          </a>
+        </figure>
+        <figure class="col-span-1 lg:col-span-6" data-reveal="fade">
+          <a href="https://images.unsplash.com/photo-1792792899240-208d73a64449?fm=jpg&q=70&w=1400&auto=format&fit=crop" data-lightbox="club" data-caption="Kệ tông đơ và dụng cụ chuyên nghiệp" data-en-data-caption="Shelf of professional clippers and trimmers" class="group block overflow-hidden bg-ink">
+            <img src="https://images.unsplash.com/photo-1792792899240-208d73a64449?fm=jpg&q=70&w=1400&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Tông đơ và máy tỉa xếp trên kệ đen" data-en-alt="Clippers and trimmers arranged on a black shelf" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1400" height="1050" loading="lazy">
+          </a>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT US -->
+  <section id="visit" data-section="contact-split" class="bg-ivory text-ink">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="lg:col-span-5">
+        <span class="razor" data-reveal="fade"></span>
+        <h2 class="mt-8 font-display text-[clamp(2.4rem,4.6vw,4.8rem)] leading-[1.02] tracking-tight" data-reveal="up" data-en="VISIT US">GHÉ THĂM</h2>
+        <p class="mt-4 inline-block border border-wine px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.2em] text-wine" data-en="Sample data, not a real location">Dữ liệu mẫu, không phải địa điểm thật</p>
+        <dl class="mt-10 divide-y divide-ink/15 border-y border-ink/15 text-[16px]" data-reveal="up">
+          <div class="grid grid-cols-[7rem_1fr] gap-4 py-5"><dt class="text-[12px] uppercase tracking-[0.2em] text-ink/60" data-en="Address">Địa chỉ</dt><dd data-en="128 Hai Ba Trung St., District 1, Ho Chi Minh City">128 Hai Bà Trưng, Quận 1, TP. Hồ Chí Minh</dd></div>
+          <div class="grid grid-cols-[7rem_1fr] gap-4 py-5"><dt class="text-[12px] uppercase tracking-[0.2em] text-ink/60" data-en="Phone">Điện thoại</dt><dd><a href="tel:02838220147" class="underline-offset-4 hover:text-wine hover:underline">028 3822 0147</a></dd></div>
+          <div class="grid grid-cols-[7rem_1fr] gap-4 py-5"><dt class="text-[12px] uppercase tracking-[0.2em] text-ink/60" data-en="Hours">Giờ mở cửa</dt><dd data-en="Mon - Fri: 10:00 - 21:00<br>Sat - Sun: 09:00 - 21:00">Thứ 2 - Thứ 6: 10:00 - 21:00<br>Thứ 7 - CN: 09:00 - 21:00</dd></div>
+          <div class="grid grid-cols-[7rem_1fr] gap-4 py-5"><dt class="text-[12px] uppercase tracking-[0.2em] text-ink/60">Email</dt><dd class="min-w-0 break-words"><a href="mailto:booking@blackline.example" class="underline-offset-4 hover:text-wine hover:underline">booking@blackline.example</a></dd></div>
+          <div class="grid grid-cols-[7rem_1fr] gap-4 py-5"><dt class="text-[12px] uppercase tracking-[0.2em] text-ink/60" data-en="Social">Mạng xã hội</dt><dd class="flex flex-wrap gap-x-5 gap-y-2"><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="underline-offset-4 hover:text-wine hover:underline">Instagram</a><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="underline-offset-4 hover:text-wine hover:underline">Facebook</a><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="underline-offset-4 hover:text-wine hover:underline">TikTok</a></dd></div>
+        </dl>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row" data-reveal="up">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Hai+Ba+Trung+District+1+Ho+Chi+Minh+City" target="_blank" rel="noopener" class="group inline-flex h-14 items-center justify-center gap-3 whitespace-nowrap bg-ink px-8 text-[12px] font-semibold uppercase tracking-[0.2em] text-ivory transition-colors duration-300 hover:bg-wine active:scale-[.98]"><span data-en="Get directions">Chỉ đường</span><span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span></a>
+          <button type="button" data-modal-open="book" class="inline-flex h-14 items-center justify-center whitespace-nowrap border border-ink px-8 text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 hover:border-wine hover:bg-wine hover:text-ivory active:scale-[.98]" data-en="Book a Visit">Đặt lịch</button>
+        </div>
+        <p class="mt-4 text-[13px] text-ink/55" data-en="Directions link is illustrative (general area on Google Maps).">Liên kết chỉ đường mang tính minh họa (khu vực chung trên Google Maps).</p>
+      </div>
+      <div class="min-h-[22rem] overflow-hidden border border-ink/15 bg-coal/10 lg:col-span-6 lg:col-start-7" data-reveal="fade">
+        <iframe title="Bản đồ khu vực Hai Bà Trưng, Quận 1 (minh họa)" data-en-title="Map of Hai Ba Trung area, District 1 (illustrative)" src="https://maps.google.com/maps?q=Hai%20Ba%20Trung%2C%20District%201%2C%20Ho%20Chi%20Minh%20City&amp;z=15&amp;output=embed" class="h-full min-h-[22rem] w-full grayscale" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @partial footer -->
+<footer id="footer" class="relative border-t-2 border-wine bg-ink text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <p class="font-display text-[clamp(2.4rem,7.5vw,7.5rem)] leading-[1.02] tracking-tight" data-reveal="up" data-en="STAY SHARP.<br><em class='text-brass'>STAY YOURSELF.</em>">LUÔN SẮC NÉT.<br><em class="text-brass">LUÔN LÀ CHÍNH MÌNH.</em></p>
+
+    <div class="mt-16 grid grid-cols-1 gap-12 border-t border-ivory/15 pt-14 sm:grid-cols-2 lg:mt-20 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <a href="../index.html" class="inline-flex items-center gap-3">
+          <span class="grid h-12 w-12 place-items-center border border-brass font-display text-xl">BL</span>
+          <span class="text-[13px] font-semibold uppercase tracking-[0.22em]">BLACKLINE BARBER CLUB</span>
+        </a>
+        <p class="mt-6 font-display text-xl italic text-ivory/90" data-en="Precision cuts, a style that is yours.">Đường cắt chuẩn xác, phong cách của riêng bạn.</p>
+        <p class="mt-4 max-w-sm text-[15px] leading-relaxed text-ivory/65" data-en="A classic barber shop for men's haircuts, beard work and traditional shaves since 2018.">Barber shop cổ điển chuyên cắt tóc nam, tạo kiểu râu và cạo mặt truyền thống từ năm 2018.</p>
+      </div>
+
+      <nav class="lg:col-span-2" aria-label="Điều hướng chân trang" data-en-aria-label="Footer navigation">
+        <p class="text-[12px] uppercase tracking-[0.22em] text-brass" data-en="Explore">Khám phá</p>
+        <ul class="mt-5 space-y-3 text-[15px]">
+          <li><a href="../index.html" class="text-ivory/75 underline-offset-4 transition-colors duration-300 hover:text-ivory hover:underline" data-en="Home">Trang chủ</a></li>
+          <li><a href="../pages/services.html" class="text-ivory/75 underline-offset-4 transition-colors duration-300 hover:text-ivory hover:underline" data-en="Services &amp; Pricing">Dịch vụ &amp; Bảng giá</a></li>
+          <li><a href="../pages/gallery.html" class="text-ivory/75 underline-offset-4 transition-colors duration-300 hover:text-ivory hover:underline" data-en="Cuts Gallery">Bộ sưu tập kiểu tóc</a></li>
+          <li><a aria-current="page" href="../pages/barbers.html" class="text-ivory/75 underline-offset-4 transition-colors duration-300 hover:text-ivory hover:underline" data-en="Our Barbers">Đội ngũ barber</a></li>
+        </ul>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <p class="text-[12px] uppercase tracking-[0.22em] text-brass" data-en="Visit (sample data)">Ghé thăm (dữ liệu mẫu)</p>
+        <address class="mt-5 space-y-3 text-[15px] not-italic leading-relaxed text-ivory/75">
+          <span class="block" data-en="128 Hai Ba Trung St., District 1, Ho Chi Minh City">128 Hai Bà Trưng, Quận 1, TP. Hồ Chí Minh</span>
+          <span class="block" data-en="Mon - Fri: 10:00 - 21:00<br>Sat - Sun: 09:00 - 21:00">Thứ 2 - Thứ 6: 10:00 - 21:00<br>Thứ 7 - CN: 09:00 - 21:00</span>
+          <a href="tel:02838220147" class="block hover:text-ivory">028 3822 0147</a>
+          <a href="mailto:booking@blackline.example" class="block hover:text-ivory">booking@blackline.example</a>
+        </address>
+      </div>
+
+      <div class="lg:col-span-3">
+        <p class="text-[12px] uppercase tracking-[0.22em] text-brass" data-en="Follow">Theo dõi</p>
+        <ul class="mt-5 flex flex-wrap gap-x-6 gap-y-3 text-[15px]">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-ivory/75 underline-offset-4 hover:text-ivory hover:underline">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="text-ivory/75 underline-offset-4 hover:text-ivory hover:underline">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="text-ivory/75 underline-offset-4 hover:text-ivory hover:underline">TikTok</a></li>
+        </ul>
+        <button type="button" data-modal-open="book" class="mt-8 inline-flex h-12 items-center whitespace-nowrap bg-wine px-7 text-[12px] font-semibold uppercase tracking-[0.2em] text-ivory transition-colors duration-300 hover:bg-wineDeep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ivory" data-en="Book a Visit">Đặt lịch</button>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-3 border-t border-ivory/15 py-8 text-[13px] text-ivory/55 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 BLACKLINE BARBER CLUB</p>
+      <p class="flex items-center gap-3"><span class="razor !w-8"></span><span data-en="Precision. Tradition. Character.">Chính xác. Truyền thống. Cá tính.</span></p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="book" class="m-auto w-[min(92vw,34rem)] border border-ivory/20 bg-coal p-0 text-ivory" aria-labelledby="book-title">
+  <div class="flex items-start justify-between gap-4 border-b border-ivory/15 px-6 py-5 sm:px-8">
+    <div>
+      <span class="razor"></span>
+      <h2 id="book-title" class="mt-4 font-display text-3xl" data-en="Book a visit">Đặt lịch ghé tiệm</h2>
+      <p class="mt-2 text-[14px] leading-relaxed text-ivory/70" data-en="Demo only: this form is not sent and no appointment is created.">Bản minh họa: form này không gửi đi và không tạo lịch hẹn thật.</p>
+    </div>
+    <button type="button" data-modal-close class="grid h-11 w-11 shrink-0 place-items-center border border-ivory/25 text-2xl leading-none hover:border-ivory" aria-label="Đóng" data-en-aria-label="Close">×</button>
+  </div>
+  <form data-form="dat-lich" class="grid grid-cols-1 gap-5 px-6 py-6 sm:grid-cols-2 sm:px-8" novalidate>
+    <label class="flex flex-col gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory/80 sm:col-span-2"><span data-en="Full name">Họ tên</span>
+      <input name="name" required minlength="2" autocomplete="name" class="h-12 border border-ivory/25 bg-ink px-4 text-base normal-case tracking-normal text-ivory placeholder:text-ivory/45 focus:border-brass focus:outline-none" placeholder="Nguyễn Minh Khoa" data-en-placeholder="Your name">
+    </label>
+    <label class="flex flex-col gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory/80"><span data-en="Phone">Số điện thoại</span>
+      <input name="phone" type="tel" required minlength="9" autocomplete="tel" class="h-12 border border-ivory/25 bg-ink px-4 text-base normal-case tracking-normal text-ivory placeholder:text-ivory/45 focus:border-brass focus:outline-none" placeholder="0901 234 567">
+    </label>
+    <label class="flex flex-col gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory/80"><span data-en="Date">Ngày</span>
+      <input name="date" type="date" required class="h-12 border border-ivory/25 bg-ink px-4 text-base normal-case tracking-normal text-ivory [color-scheme:dark] focus:border-brass focus:outline-none">
+    </label>
+    <label class="flex flex-col gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory/80"><span data-en="Service">Dịch vụ</span>
+      <select name="service" required class="h-12 border border-ivory/25 bg-ink px-4 text-base normal-case tracking-normal text-ivory focus:border-brass focus:outline-none">
+        <option value="classic">Classic Cut</option>
+        <option value="fade">Skin Fade</option>
+        <option value="beard">Beard Grooming</option>
+        <option value="shave">Traditional Shave</option>
+        <option value="combo">Haircut + Wash + Styling</option>
+      </select>
+    </label>
+    <label class="flex flex-col gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory/80"><span data-en="Barber">Barber</span>
+      <select name="barber" class="h-12 border border-ivory/25 bg-ink px-4 text-base normal-case tracking-normal text-ivory focus:border-brass focus:outline-none">
+        <option value="any" data-en="Any barber">Bất kỳ ai</option>
+        <option value="james">James Carter</option>
+        <option value="daniel">Daniel Brooks</option>
+        <option value="alex">Alex Morgan</option>
+      </select>
+    </label>
+    <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-[13px] text-ivory/60" data-en="Demo form, not sent.">Form demo, chưa gửi đi.</p>
+      <button type="submit" class="h-12 whitespace-nowrap bg-wine px-8 text-[12px] font-semibold uppercase tracking-[0.2em] text-ivory transition-colors duration-300 hover:bg-wineDeep active:scale-[.98]" data-en="Request booking">Gửi yêu cầu</button>
+    </div>
+  </form>
+</dialog>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

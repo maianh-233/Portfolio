@@ -1,0 +1,132 @@
+{
+  "brand": "THE GRAND AUREL",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Khung cửa vòm dinh thự viền vàng mảnh đối xứng: mỗi ảnh như một bức tranh treo trong đại sảnh, kèm chú thích kiểu tạp chí kiến trúc",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Dinh thự di sản châu Âu, nghỉ dưỡng vượt thời gian",
+    "description": "Giao diện thương hiệu resort cao cấp phong cách dinh thự và khu vườn hoàng gia châu Âu."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu thương hiệu, kiến trúc, ba hạng phòng và bốn trải nghiệm; dẫn sang các trang riêng",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "European Heritage Resort / An Extraordinary Sense of Time" },
+        { "id": "intro", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Brand Introduction" },
+        { "id": "architecture", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "A Legacy in Every Detail" },
+        { "id": "suites", "catalog": "collections", "variant": "teaser-row", "source": "ba", "note": "3 hạng phòng, link sang pages/stays.html" },
+        { "id": "art-of-living", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "4 trải nghiệm, link sang pages/experiences.html" },
+        { "id": "statement", "catalog": "cta", "variant": "quote-full", "source": "ba", "note": "Elegance Beyond Time, nền Royal Blue" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "french formal garden chateau", "file": "https://images.unsplash.com/photo-1760458695992-b87db08d43bb?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "intro", "query": "palace interior arched doorway", "file": "https://images.unsplash.com/photo-1784460843438-ff907f72dc3f?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "architecture-main", "query": "chateau facade fountain", "file": "https://images.unsplash.com/photo-1713291185595-9f0cbcedb15f?auto=format&fit=crop&w=1600&q=80", "status": "link" },
+        { "slot": "architecture-staircase", "query": "palace staircase", "file": "https://images.unsplash.com/photo-1767460775489-be2fd312eaf8?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "architecture-column", "query": "classical column detail", "file": "https://images.unsplash.com/photo-1758820736219-8b4932f67918?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "suites-grand-suite", "query": "classic luxury bedroom", "file": "https://images.unsplash.com/photo-1767050387941-b97f0d5a3232?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "suites-garden-residence", "query": "classic living room antique", "file": "https://images.unsplash.com/photo-1779505576192-803dd8c9b55a?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "suites-signature-villa", "query": "classic living room antique", "file": "https://images.unsplash.com/photo-1780245994710-23f2642c7403?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "art-fine-dining", "query": "elegant restaurant table setting", "file": "https://images.unsplash.com/photo-1766832255363-c9f060ade8b0?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "art-palace-spa", "query": "luxury spa stone", "file": "https://images.unsplash.com/photo-1781795035627-fa93f2863bba?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "art-royal-garden", "query": "french formal garden", "file": "https://images.unsplash.com/photo-1776696123814-5f9c8fd67424?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "art-heritage-lounge", "query": "fireplace lounge classic", "file": "https://images.unsplash.com/photo-1780245992686-1f5c341655c2?auto=format&fit=crop&w=1600&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Di sản (Our Heritage)",
+      "purpose": "Câu chuyện thương hiệu, bốn giá trị cốt lõi, chi tiết kiến trúc",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "A Heritage of Distinction" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Our Story, không tự nhận lịch sử hàng trăm năm" },
+        { "id": "values", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Heritage, Craftsmanship, Hospitality, Timeless Elegance" },
+        { "id": "details", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Architectural Details, lightbox" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-fullbleed", "source": "ba", "note": "Closing Section, link sang stays.html" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "chateau facade", "file": "https://images.unsplash.com/photo-1735752601476-67707748a6ed?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "story", "query": "classical columns detail", "file": "https://images.unsplash.com/photo-1759307407469-aac7d9236d6f?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "details-staircase", "query": "palace staircase", "file": "https://images.unsplash.com/photo-1767460775310-025fcba42aa9?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "details-chandelier", "query": "palace interior", "file": "https://images.unsplash.com/photo-1764776709803-942446e4b749?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "details-gallery", "query": "palace corridor", "file": "https://images.unsplash.com/photo-1776696123099-96e10b4c0b4b?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "details-ceiling", "query": "palace corridor", "file": "https://images.unsplash.com/photo-1705781787152-1b897d748932?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "details-salon", "query": "classic living room antique", "file": "https://images.unsplash.com/photo-1790163086018-f9319ba1ae0a?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "closing", "query": "palace interior", "file": "https://images.unsplash.com/photo-1761409337593-4fd5a5ddf4e9?auto=format&fit=crop&w=2000&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/stays.html",
+      "title": "Suites & Villas",
+      "purpose": "Giới thiệu ba hạng phòng như một bộ sưu tập và năm tiện ích của resort (không giá, không đặt phòng)",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Private Worlds of Elegance" },
+        { "id": "grand-suite", "catalog": "collections", "variant": "story-split", "source": "ba", "note": "Grand Suite, ảnh chính + ảnh phụ, lightbox; mục lục dính scrollspy phía trên" },
+        { "id": "garden-residence", "catalog": "collections", "variant": "story-split-reverse", "source": "ba", "note": "Nền Forest Green" },
+        { "id": "signature-villa", "catalog": "collections", "variant": "feature-wide", "source": "ba", "note": "Ảnh tràn ngang + 4 đặc điểm" },
+        { "id": "facilities", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "5 tiện ích dạng tabs, mỗi tab bố cục riêng" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn sang Trải nghiệm + mailto concierge" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "chateau bedroom canopy bed", "file": "https://images.unsplash.com/photo-1727633091121-ff97a90679b1?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "grand-suite-main", "query": "chateau bedroom canopy", "file": "https://images.unsplash.com/photo-1669247164841-9d9867d652f0?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "grand-suite-detail", "query": "gilded bed frame", "file": "https://images.unsplash.com/photo-1664998357520-a4b3d2829097?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "garden-residence-main", "query": "window garden view", "file": "https://images.unsplash.com/photo-1720434566416-3818933b7ad3?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "garden-residence-detail", "query": "bedroom large window", "file": "https://images.unsplash.com/photo-1685787773514-90e8e14af797?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "signature-villa-main", "query": "chateau living room chandelier", "file": "https://images.unsplash.com/photo-1727633091107-7227fd52ce20?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "signature-villa-detail", "query": "fireplace salon armchairs", "file": "https://images.unsplash.com/photo-1669247164832-8764a86a6ac9?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "facilities-restaurant", "query": "palace dining room", "file": "https://images.unsplash.com/photo-1760037580064-d5260aa8ce32?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "facilities-spa", "query": "marble spa bath", "file": "https://images.unsplash.com/photo-1494520787307-9d24ab287b36?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "facilities-lounge", "query": "fireplace salon", "file": "https://images.unsplash.com/photo-1669247164767-b0e195947a4c?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "facilities-garden", "query": "versailles garden fountain", "file": "https://images.unsplash.com/photo-1690652576140-16ba32788202?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "facilities-pool", "query": "neoclassical pool columns", "file": "https://images.unsplash.com/photo-1767662416910-1b0f8232ddaf?auto=format&fit=crop&w=1400&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Trải nghiệm (Experiences)",
+      "purpose": "Kể các trải nghiệm như những chương tạp chí: ẩm thực, trà chiều, khu vườn, kiến trúc, thư giãn",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "The Art of Unhurried Living, khung vòm" },
+        { "id": "fine-dining", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Fine Dining" },
+        { "id": "afternoon-tea", "catalog": "editorial", "variant": "editorial-spread", "source": "ba", "note": "Afternoon Tea kiểu trang tạp chí" },
+        { "id": "royal-garden", "catalog": "features", "variant": "feature-split", "source": "ba", "note": "Nền Forest Green" },
+        { "id": "architecture-discovery", "catalog": "gallery", "variant": "gallery-carousel", "source": "ba", "note": "Carousel kéo ngang + lightbox" },
+        { "id": "wellness", "catalog": "features", "variant": "features-accordion", "source": "ba", "note": "Wellness & Relaxation, accordion" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-fullbleed", "source": "ba", "note": "A World Apart, Beyond Time — không CTA giao dịch" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "versailles garden fountain", "file": "https://images.unsplash.com/photo-1699303088143-b04d23643bd9?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "fine-dining-main", "query": "palace dining room chandelier", "file": "https://images.unsplash.com/photo-1782256529708-ff4392075981?auto=format&fit=crop&w=1600&q=80", "status": "link" },
+        { "slot": "fine-dining-table", "query": "palace dining table", "file": "https://images.unsplash.com/photo-1652234779738-cc980e2705bc?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "afternoon-tea-set", "query": "afternoon tea set", "file": "https://images.unsplash.com/photo-1722324260745-867e1f19ec89?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "afternoon-tea-pastries", "query": "afternoon tea pastries", "file": "https://images.unsplash.com/photo-1576831438461-6d0e6a13b0ce?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "afternoon-tea-cups", "query": "floral teacups", "file": "https://images.unsplash.com/photo-1766399654239-56935ded1335?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "royal-garden-avenue", "query": "versailles garden walkway", "file": "https://images.unsplash.com/photo-1692651763004-fabed1b9a602?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "royal-garden-pool", "query": "formal garden reflecting pool", "file": "https://images.unsplash.com/photo-1791821696157-35360c826ffc?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "discovery-staircase", "query": "grand staircase", "file": "https://images.unsplash.com/photo-1548847923-f040a5441de6?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "discovery-arch", "query": "arched doorway room", "file": "https://images.unsplash.com/photo-1667425288209-d7a0216737be?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "discovery-window", "query": "palace window", "file": "https://images.unsplash.com/photo-1535383749833-770a4e09edec?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "discovery-mural", "query": "gilded room mural", "file": "https://images.unsplash.com/photo-1761116191941-fe3915e57d8b?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "wellness-spa", "query": "spa bath flowers", "file": "https://images.unsplash.com/photo-1716893917077-5b320c1ecfec?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "wellness-lounge", "query": "salon chandelier chairs", "file": "https://images.unsplash.com/photo-1661006101181-14c803259c83?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "closing", "query": "palace fountain panorama", "file": "https://images.unsplash.com/photo-1689861717931-34772037a15c?auto=format&fit=crop&w=2000&q=80", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Kho ảnh openverse không phản hồi → dùng link ảnh Unsplash đã kiểm qua link_image; ảnh lỗi có nền dự phòng (site.js + site.css)",
+    "BA yêu cầu about.html / stays.html / experiences.html ở gốc; theo chuẩn theme đặt trong pages/",
+    "BA yêu cầu nút VI/EN hoạt động thật: tiếng Việt là mặc định (theo concept.md), tiếng Anh qua data-en + site.js, giữ lựa chọn bằng localStorage và ?lang=en trên link",
+    "Tên hạng phòng / tiện ích giữ nguyên tiếng Anh như tên riêng (Grand Suite, Palace Spa…)"
+  ],
+  "limitations": [
+    "Website chỉ giới thiệu thương hiệu: không có đặt phòng, kiểm tra phòng trống, đặt lịch spa hay thanh toán",
+    "Thông tin liên hệ, địa chỉ là dữ liệu minh họa",
+    "Ảnh dùng bằng link ngoài chỉ cho prototype; cần thay bằng ảnh có giấy phép khi đưa lên web thật"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "website-thoi-trang",
+  "name": "Website thời trang",
+  "projectType": "website",
+  "flow": "quick",
+  "createdAt": "2026-10-15T02:57:28.815Z",
+  "updatedAt": "2026-10-15T03:22:10.802Z",
+  "screen": "done",
+  "request": "Một local brand muốn tạo landing page giới thiệu về brand của học chỉ thuần giới thiệu . Đây là một brand thời trang theo phong cách ballet core chuyên đồ tập cho nữ . Những cô nàng thể thao nhưng không kém phần nữ tính . Phong cách ngọt ngào , sang trọng dễ thu hút các bạn nữ",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\website-thoi-trang\\prototype",
+    "builtAt": "2026-10-15T03:22:02.512Z",
+    "pages": [
+      "index.html"
+    ]
+  },
+  "job": {
+    "id": "9b94f230-4f3f-4653-9952-de09b02d02a4",
+    "kind": "quick-revise",
+    "status": "done",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\website-thoi-trang\\prototype",
+    "feedback": "Phần slider đầu tiên họ muốn thay đổi họ muôn có nhiều hình nó tự chuyển hoạc người dùng nhân để chuyển nó . Khi hình bắt đầu hiện ra thì các chữu như Train linke a dancer ... nó lần lượt trồi lên . Còn lại là ok rồi"
+  },
+  "qa": {
+    "createdAt": "2026-10-15T03:22:10.796Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 3
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-15T03:22:02.509Z",
+      "text": "Phần slider đầu tiên họ muốn thay đổi họ muôn có nhiều hình nó tự chuyển hoạc người dùng nhân để chuyển nó . Khi hình bắt đầu hiện ra thì các chữu như Train linke a dancer ... nó lần lượt trồi lên . Còn lại là ok rồi"
+    }
+  ]
+}

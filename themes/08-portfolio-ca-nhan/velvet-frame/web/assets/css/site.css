@@ -1,0 +1,59 @@
+:root {
+  --ink: #151313;
+  --cream: #F2EADF;
+  --sand: #EAE0D3;
+  --wine: #702B3B;
+  --blush: #C9A9AF;
+  --cocoa: #513A32;
+  --smoke: #A7A09A;
+  --font-mark: "Bodoni Moda", "Noto Serif Display", Georgia, system-ui, serif;
+  --font-display: "Noto Serif Display", Georgia, system-ui, serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --ui-accent: #702B3B;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { font-family: var(--font-body); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--wine); color: var(--cream); }
+
+/* Header: chữ kem trên bìa tối, nền kem đặc khi đã cuộn (motion.js thêm .is-scrolled) */
+#top { color: var(--cream); transition: background-color .4s ease, border-color .4s ease, color .4s ease; }
+#top.is-scrolled { background-color: rgba(242, 234, 223, .96); border-color: rgba(21, 19, 19, .12); color: var(--ink); }
+#top #mnav { color: var(--ink); }
+
+/* Chữ dọc kiểu gáy tạp chí */
+.vtext { writing-mode: vertical-rl; transform: rotate(180deg); }
+
+/* Masthead bìa: đảo màu khi đè lên ảnh, luôn đọc được */
+.masthead { mix-blend-mode: difference; color: var(--cream); }
+
+/* Ảnh tư liệu: đơn sắc ngả nâu, rê chuột thì "về hiện tại" */
+.archive img { filter: grayscale(1) sepia(.35) contrast(1.05); transition: filter 1.2s cubic-bezier(.16,1,.3,1), transform 1.2s cubic-bezier(.16,1,.3,1); }
+.archive:hover img, .archive:focus-within img { filter: grayscale(0) sepia(0) contrast(1); }
+
+/* Ảnh nhỏ chèn giữa dòng chữ tuyên ngôn */
+.inline-shot { display: inline-block; vertical-align: middle; overflow: hidden; height: .78em; width: 1.5em; margin: 0 .12em; transform: translateY(-.06em); }
+.inline-shot img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Accordion: + xoay thành × */
+[data-acc-item].is-open [data-acc-icon] { transform: rotate(45deg); }
+[data-acc-icon] { transition: transform .5s cubic-bezier(.16,1,.3,1); display: inline-block; }
+
+/* Bìa: tiêu đề hiện theo từng lớp khi tải trang (CSS, chạy một lần) */
+@keyframes vf-rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+.vf-rise { animation: vf-rise 1.1s cubic-bezier(.16,1,.3,1) both; }
+.vf-rise-2 { animation-delay: .15s; }
+.vf-rise-3 { animation-delay: .3s; }
+.vf-rise-4 { animation-delay: .45s; }
+
+/* Thanh cuộn ngang của dải thời đại trên điện thoại */
+.no-bar { scrollbar-width: none; }
+.no-bar::-webkit-scrollbar { display: none; }
+
+dialog::backdrop { background: rgba(21, 19, 19, .7); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .vf-rise { animation: none; }
+  [data-acc-icon], .archive img { transition: none; }
+}

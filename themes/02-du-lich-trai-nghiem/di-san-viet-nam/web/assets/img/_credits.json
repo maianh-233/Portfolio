@@ -1,0 +1,935 @@
+[
+  {
+    "file": "assets/img/quangtri-cau-hien-luong.jpg",
+    "purpose": "pages/di-san.html — chuyên đề Quảng Trị, cầu Hiền Lương",
+    "source": "openverse",
+    "id": "openverse-4bfc9dca-c6cc-44c5-8c76-1d6bd19e0ae8",
+    "title": "Hien Luong Bridge",
+    "creator": "Frank Fujimoto",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/11881702@N00/54186429774"
+  },
+  {
+    "file": "assets/img/home-loi-vao-ban-do.jpg",
+    "purpose": "index.html — thẻ lối vào Bản đồ GIS",
+    "source": "openverse",
+    "id": "openverse-ace163fa-9bca-4209-b9fb-992d76a4e5a3",
+    "title": "topographic map of mountainous region",
+    "creator": "Etienne-G",
+    "license": "CC BY-SA 2.0",
+    "page": "https://www.flickr.com/photos/60662646@N00/54262637208"
+  },
+  {
+    "file": "assets/img/quangtri-dia-dao-vinh-moc.jpg",
+    "purpose": "pages/di-san.html — chuyên đề Quảng Trị, địa đạo Vịnh Mốc",
+    "source": "openverse",
+    "id": "openverse-ef0add12-b5b1-4cc4-b0b5-5bb175a4d8d7",
+    "title": "Vinh Moc Tunnels",
+    "creator": "Frank Fujimoto",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/11881702@N00/54185271997"
+  },
+  {
+    "file": "assets/img/congtrinh-vinh-moc-ham.jpg",
+    "purpose": "index.html — thẻ công trình 14 (địa đạo Vịnh Mốc)",
+    "source": "openverse",
+    "id": "openverse-13a8e0a7-1895-4bae-b652-8c7323588e87",
+    "title": "37. Vinh Moc tunnels",
+    "creator": "PANGEA Travel",
+    "license": "CC BY-NC-SA 2.0",
+    "page": "https://www.flickr.com/photos/8541815@N07/54082354451"
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/0/09/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg",
+    "purpose": "index.html — hero, cổng Thành cổ Quảng Trị",
+    "source": "web",
+    "id": "web-105ox5j",
+    "title": "Cổng chính (cổng Nam) Thành cổ Quảng Trị",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Citadel_of_Qu%E1%BA%A3ng_Tr%E1%BB%8B",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_Foto.jpg",
+    "purpose": "index.html — thẻ công trình 8 (Thành cổ Quảng Trị)",
+    "source": "web",
+    "id": "web-1hnaoqn",
+    "title": "Thành cổ Quảng Trị toàn cảnh",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Citadel_of_Qu%E1%BA%A3ng_Tr%E1%BB%8B",
+    "remote": true
+  },
+  {
+    "file": "assets/img/home-loi-vao-thu-vien.webp",
+    "purpose": "index.html — thẻ lối vào Thư viện nghiên cứu",
+    "source": "openverse",
+    "id": "openverse-019a9fff-07ab-4a47-9150-ac5bd4bf4b1e",
+    "title": "Library filled bookshelves blurred light",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/3292459/free-photo-image-paris-background-academic"
+  },
+  {
+    "file": "assets/img/bando-mo-hinh-3d.jpg",
+    "purpose": "pages/ban-do.html — mục Mô hình 3D (đám mây điểm quét laser)",
+    "source": "openverse",
+    "id": "openverse-5f6aa9dc-ad30-4547-8c6c-3bf5894c596b",
+    "title": "Ruodan Lu: Point cloud of Addenbrooke Bridge",
+    "creator": "Engineering at Cambridge",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/49681564@N06/51299033060"
+  },
+  {
+    "file": "assets/img/congtrinh-anh-vien-tham.jpg",
+    "purpose": "pages/cong-trinh.html — minh họa dữ liệu viễn thám",
+    "source": "openverse",
+    "id": "openverse-a97a6732-1584-44bd-bc05-cabefaea6621",
+    "title": "Delta del Irawadi, Myanmar (24-02-2023)",
+    "creator": "migmasat",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/197415759@N06/52743647548"
+  },
+  {
+    "file": "assets/img/disan-unesco-ha-long.jpg",
+    "purpose": "pages/di-san.html — UNESCO, vịnh Hạ Long",
+    "source": "openverse",
+    "id": "openverse-e2da4153-6e91-421a-a0b2-730bdbac20ad",
+    "title": "Ha Long Bay, Vietnam, UNESCO World Heritage site",
+    "creator": "kitmasterbloke",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/58415659@N00/54432069505"
+  },
+  {
+    "file": "assets/img/disan-unesco-hoi-an.jpg",
+    "purpose": "pages/di-san.html — UNESCO, đô thị cổ Hội An",
+    "source": "openverse",
+    "id": "openverse-966d7c11-fb49-4c4f-bd5e-870da28309bd",
+    "title": "Evening in the UNESCO old town, Hoi An, Vietnam",
+    "creator": "Tasmanian.Kris",
+    "license": "CC BY-NC-SA 2.0",
+    "page": "https://www.flickr.com/photos/57541585@N05/52582892638"
+  },
+  {
+    "file": "assets/img/disan-unesco-trang-an.jpg",
+    "purpose": "pages/di-san.html — UNESCO, quần thể danh thắng Tràng An",
+    "source": "openverse",
+    "id": "openverse-6b3218b2-93de-40b6-a2fc-a718a31b5a91",
+    "title": "The Valleys of Ninh Bihn",
+    "creator": "virtualwayfarer",
+    "license": "CC BY-NC 2.0",
+    "page": "https://www.flickr.com/photos/32368927@N02/52363739653"
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/b/b9/%C4%90%E1%BA%A1i_n%E1%BB%99i.jpg",
+    "purpose": "index.html — thẻ lối vào Khám phá di sản (Quần thể di tích Cố đô Huế)",
+    "source": "web",
+    "id": "web-19la7qo",
+    "title": "Ngọ Môn, cổng phía nam Hoàng thành Huế (2024)",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Imperial_City_of_Hu%E1%BA%BF",
+    "remote": true
+  },
+  {
+    "file": "assets/img/hero-slide-ngo-mon-hue.webp",
+    "purpose": "index.html — slider banner: Ngọ Môn, Hoàng thành Huế",
+    "source": "openverse",
+    "id": "openverse-a59f4a5b-9188-4772-b769-0e3a726b77e0",
+    "title": "Free Meridian Gate image",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/5924387/photo-image-public-domain-water-free"
+  },
+  {
+    "file": "assets/img/hero-slide-hien-luong.jpg",
+    "purpose": "index.html — slider banner: cầu Hiền Lương, Quảng Trị",
+    "source": "openverse",
+    "id": "openverse-c8e058ad-19cf-48a5-88bb-6da3180f9067",
+    "title": "Hien Luong Bridge",
+    "creator": "Frank Fujimoto",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/11881702@N00/54186413183"
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_3.jpg",
+    "purpose": "index.html — slider banner",
+    "source": "web",
+    "id": "web-1s7zd85",
+    "title": "Lối đi chính trong Thành cổ Quảng Trị",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Quảng_Trị_Citadel",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/7/75/Vinh_Moc_tunnels%2C_Vietnam%2C_South_China_Sea_exit.jpg",
+    "purpose": "index.html — slider banner",
+    "source": "web",
+    "id": "web-jodold",
+    "title": "Lối ra biển của địa đạo Vịnh Mốc, Quảng Trị",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Vịnh_Mốc_tunnels",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg/1920px-Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg",
+    "purpose": "index.html — slider banner slide 1",
+    "source": "web",
+    "id": "web-1p1d8cc",
+    "title": "Cổng Nam Thành cổ Quảng Trị",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Quảng_Trị_Citadel",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Vinh_Moc_tunnels%2C_Vietnam%2C_South_China_Sea_exit.jpg/1920px-Vinh_Moc_tunnels%2C_Vietnam%2C_South_China_Sea_exit.jpg",
+    "purpose": "index.html — slider banner",
+    "source": "web",
+    "id": "web-1rw2uha",
+    "title": "Lối ra biển địa đạo Vịnh Mốc",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Vịnh_Mốc_tunnels",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_3.jpg/1280px-Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_3.jpg",
+    "purpose": "index.html — slider banner",
+    "source": "web",
+    "id": "web-1vrf9lc",
+    "title": "Lối đi chính Thành cổ Quảng Trị",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Quảng_Trị_Citadel",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_Foto.jpg/1280px-Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_Foto.jpg",
+    "purpose": "index.html — tri-thuc công trình 8",
+    "source": "web",
+    "id": "web-4velt1",
+    "title": "Thành cổ Quảng Trị",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Quảng_Trị_Citadel",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/%C4%90%E1%BA%A1i_n%E1%BB%99i.jpg/1280px-%C4%90%E1%BA%A1i_n%E1%BB%99i.jpg",
+    "purpose": "index.html — loi-vao Khám phá di sản",
+    "source": "web",
+    "id": "web-opf8zf",
+    "title": "Đại Nội Huế",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Imperial_City_of_Huế",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Prof_ng%C3%B4_b%E1%BA%A3o_ch%C3%A2u.jpg/960px-Prof_ng%C3%B4_b%E1%BA%A3o_ch%C3%A2u.jpg",
+    "purpose": "pages/ho-so-chuyen-gia.html — ảnh chân dung hồ sơ chuyên gia (demo)",
+    "source": "web",
+    "id": "web-ltmvbm",
+    "title": "Chân dung nhà khoa học Việt Nam (GS. Ngô Bảo Châu) — ảnh demo",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:Prof_ng%C3%B4_b%E1%BA%A3o_ch%C3%A2u.jpg",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_2.jpg/1920px-Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_2.jpg",
+    "purpose": "pages/ban-do.html — ảnh minh họa thẻ VR360",
+    "source": "web",
+    "id": "web-gfurt8",
+    "title": "Toàn cảnh Thành cổ Quảng Trị",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_2.jpg",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Ngo_Bau_Chau_MFO.jpg",
+    "purpose": "pages/ho-so-chuyen-gia.html — ảnh chân dung hồ sơ chuyên gia (demo)",
+    "source": "web",
+    "id": "web-1moj8n5",
+    "title": "Chân dung nhà khoa học Việt Nam (GS. Ngô Bảo Châu, ảnh Oberwolfach) — ảnh demo",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:Ngo_Bau_Chau_MFO.jpg",
+    "remote": true
+  },
+  {
+    "file": "assets/img/quangtri-thanh-co-ngay-nay.jpg",
+    "purpose": "pages/di-san.html + ban-do.html — Thành cổ Quảng Trị (hào nước, cổng thành)",
+    "source": "wikimedia",
+    "id": "commons-Thành cổ Quảng Trị ngày nay.jpg",
+    "title": "Thành cổ Quảng Trị ngày nay.jpg",
+    "creator": "Bùi Thụy Đào Nguyên",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_ng%C3%A0y_nay.jpg"
+  },
+  {
+    "file": "assets/img/quangtri-thanh-co-cong.jpg",
+    "purpose": "pages/di-san.html — slider Thành cổ Quảng Trị",
+    "source": "wikimedia",
+    "id": "commons-Thanh co Quang Tri 2012.JPG",
+    "title": "Thanh co Quang Tri 2012.JPG",
+    "creator": "Cdvchelsea",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Thanh_co_Quang_Tri_2012.JPG"
+  },
+  {
+    "file": "assets/img/quangtri-thanh-co-tuong-niem.jpg",
+    "purpose": "pages/di-san.html — slider Thành cổ Quảng Trị",
+    "source": "wikimedia",
+    "id": "commons-Thành cổ Quảng Trị (quang cảnh khu tưởng niệm), Tết năm 2018 (59).jpg",
+    "title": "Thành cổ Quảng Trị (quang cảnh khu tưởng niệm), Tết năm 2018 (59).jpg",
+    "creator": "Phương Huy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_(quang_c%E1%BA%A3nh_khu_t%C6%B0%E1%BB%9Fng_ni%E1%BB%87m),_T%E1%BA%BFt_n%C4%83m_2018_(59).jpg"
+  },
+  {
+    "file": "assets/img/quangtri-hien-luong-bo-nam.jpg",
+    "purpose": "pages/di-san.html + ban-do.html — cầu Hiền Lương",
+    "source": "wikimedia",
+    "id": "commons-Cầu Hiền Lương (nhìn từ bờ Nam).JPG",
+    "title": "Cầu Hiền Lương (nhìn từ bờ Nam).JPG",
+    "creator": "Bút Chiến at Vietnamese Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:C%E1%BA%A7u_Hi%E1%BB%81n_L%C6%B0%C6%A1ng_(nh%C3%ACn_t%E1%BB%AB_b%E1%BB%9D_Nam).JPG"
+  },
+  {
+    "file": "assets/img/quangtri-ben-hai-cong.jpg",
+    "purpose": "pages/di-san.html + ban-do.html — cổng bờ Bắc sông Bến Hải",
+    "source": "wikimedia",
+    "id": "commons-Benhai04.JPG",
+    "title": "Benhai04.JPG",
+    "creator": "Đỗ Tuấn Hưng",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Benhai04.JPG"
+  },
+  {
+    "file": "assets/img/quangtri-ben-hai-bo-bac.jpg",
+    "purpose": "pages/di-san.html — slider cầu Hiền Lương",
+    "source": "wikimedia",
+    "id": "commons-Benhai03.JPG",
+    "title": "Benhai03.JPG",
+    "creator": "Đỗ Tuấn Hưng",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Benhai03.JPG"
+  },
+  {
+    "file": "assets/img/quangtri-vinh-moc-cua-ham.jpg",
+    "purpose": "pages/di-san.html + ban-do.html — cửa hầm địa đạo Vịnh Mốc",
+    "source": "wikimedia",
+    "id": "commons-Entrance to Vinh Moc Tunnels.JPG",
+    "title": "Entrance to Vinh Moc Tunnels.JPG",
+    "creator": "LÊ TẤN LỘC",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Entrance_to_Vinh_Moc_Tunnels.JPG"
+  },
+  {
+    "file": "assets/img/quangtri-vinh-moc-phong.jpg",
+    "purpose": "pages/di-san.html — slider địa đạo Vịnh Mốc",
+    "source": "wikimedia",
+    "id": "commons-Vinh Moc tunnels, family room.jpg",
+    "title": "Vinh Moc tunnels, family room.jpg",
+    "creator": "Margrethe Store from Norway",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Vinh_Moc_tunnels,_family_room.jpg"
+  },
+  {
+    "file": "assets/img/quangtri-truong-son.jpg",
+    "purpose": "pages/ban-do.html — bộ sưu tập, Nghĩa trang liệt sĩ quốc gia Trường Sơn",
+    "source": "wikimedia",
+    "id": "commons-Nghĩa trang liệt sĩ Trường Sơn.JPG",
+    "title": "Nghĩa trang liệt sĩ Trường Sơn.JPG",
+    "creator": "Liftold (thảo luận)",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ngh%C4%A9a_trang_li%E1%BB%87t_s%C4%A9_Tr%C6%B0%E1%BB%9Dng_S%C6%A1n.JPG"
+  },
+  {
+    "file": "assets/img/quangtri-la-vang.jpg",
+    "purpose": "pages/ban-do.html — bộ sưu tập, Trung tâm hành hương La Vang",
+    "source": "wikimedia",
+    "id": "commons-Toàn cảnh quảng trường La Vang.JPG",
+    "title": "Toàn cảnh quảng trường La Vang.JPG",
+    "creator": "Hoangvantoanajc",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:To%C3%A0n_c%E1%BA%A3nh_qu%E1%BA%A3ng_tr%C6%B0%E1%BB%9Dng_La_Vang.JPG"
+  },
+  {
+    "file": "assets/img/quangtri-cua-tung.jpg",
+    "purpose": "pages/ban-do.html — bộ sưu tập, sông Cửa Tùng",
+    "source": "wikimedia",
+    "id": "commons-Quang cảnh sông Cửa Tùng, Gio Linh.JPG",
+    "title": "Quang cảnh sông Cửa Tùng, Gio Linh.JPG",
+    "creator": "Phương Huy  (thảo luận)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Quang_c%E1%BA%A3nh_s%C3%B4ng_C%E1%BB%ADa_T%C3%B9ng,_Gio_Linh.JPG"
+  },
+  {
+    "file": "assets/img/quangtri-dakrong.jpg",
+    "purpose": "pages/ban-do.html — bộ sưu tập, cầu treo Đakrông",
+    "source": "wikimedia",
+    "id": "commons-Cầu Đa Krông.jpg",
+    "title": "Cầu Đa Krông.jpg",
+    "creator": "Ian Armstrong from Travelling the world at moment, Australia",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:C%E1%BA%A7u_%C4%90a_Kr%C3%B4ng.jpg"
+  },
+  {
+    "file": "assets/img/disan-unesco-ha-long-2.jpg",
+    "purpose": "pages/di-san.html — slider vịnh Hạ Long",
+    "source": "wikimedia",
+    "id": "commons-Halong Bay in Vietnam.jpg",
+    "title": "Halong Bay in Vietnam.jpg",
+    "creator": "Thomas Hirsch / User:Ravn",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Halong_Bay_in_Vietnam.jpg"
+  },
+  {
+    "file": "assets/img/disan-unesco-ha-long-3.jpg",
+    "purpose": "pages/di-san.html — slider vịnh Hạ Long",
+    "source": "wikimedia",
+    "id": "commons-Ha Long Bay 24.jpg",
+    "title": "Ha Long Bay 24.jpg",
+    "creator": "Shyamal",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ha_Long_Bay_24.jpg"
+  },
+  {
+    "file": "assets/img/disan-unesco-hoi-an-2.jpg",
+    "purpose": "pages/di-san.html — slider Hội An",
+    "source": "wikimedia",
+    "id": "commons-Hội An, Ancient Town, 2020-01 CN-06.jpg",
+    "title": "Hội An, Ancient Town, 2020-01 CN-06.jpg",
+    "creator": "Steffen Schmitz (more photos)",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:H%E1%BB%99i_An,_Ancient_Town,_2020-01_CN-06.jpg"
+  },
+  {
+    "file": "assets/img/disan-unesco-hoi-an-3.jpg",
+    "purpose": "pages/di-san.html — slider Hội An",
+    "source": "wikimedia",
+    "id": "commons-Hội An, Ancient Town, 2020-01 CN-11.jpg",
+    "title": "Hội An, Ancient Town, 2020-01 CN-11.jpg",
+    "creator": "Steffen Schmitz (more photos)",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:H%E1%BB%99i_An,_Ancient_Town,_2020-01_CN-11.jpg"
+  },
+  {
+    "file": "assets/img/disan-unesco-trang-an-2.jpg",
+    "purpose": "pages/di-san.html — slider Tràng An",
+    "source": "wikimedia",
+    "id": "commons-Trang An Landscape Complex, Ninh Binh Province, Vietnam, 20240202 1456 5313.jpg",
+    "title": "Trang An Landscape Complex, Ninh Binh Province, Vietnam, 20240202 1456 5313.jpg",
+    "creator": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Trang_An_Landscape_Complex,_Ninh_Binh_Province,_Vietnam,_20240202_1456_5313.jpg"
+  },
+  {
+    "file": "assets/img/disan-unesco-trang-an-3.jpg",
+    "purpose": "pages/di-san.html — slider Tràng An",
+    "source": "wikimedia",
+    "id": "commons-Trang An Landscape Complex in Ninh Binh.jpg",
+    "title": "Trang An Landscape Complex in Ninh Binh.jpg",
+    "creator": "VN.NguyenDucDuy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Trang_An_Landscape_Complex_in_Ninh_Binh.jpg"
+  },
+  {
+    "file": "assets/img/unesco/dia-chat-01.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (dia-chat #1)",
+    "source": "wikimedia",
+    "id": "commons-Bãi_đá_mặt_trăng_Đồng_Văn_-_NKS.jpg",
+    "title": "Bãi_đá_mặt_trăng_Đồng_Văn_-_NKS.jpg",
+    "creator": "NKSTTSSHNVN",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:B%C3%A3i_%C4%91%C3%A1_m%E1%BA%B7t_tr%C4%83ng_%C4%90%E1%BB%93ng_V%C4%83n_-_NKS.jpg"
+  },
+  {
+    "file": "assets/img/unesco/dia-chat-02.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (dia-chat #2)",
+    "source": "wikimedia",
+    "id": "commons-Ban_Gioc_-_Detian_Falls4.jpg",
+    "title": "Ban_Gioc_-_Detian_Falls4.jpg",
+    "creator": "kenner116",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ban_Gioc_-_Detian_Falls4.jpg"
+  },
+  {
+    "file": "assets/img/unesco/dia-chat-03.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (dia-chat #3)",
+    "source": "wikimedia",
+    "id": "commons-Draysap02.JPG",
+    "title": "Draysap02.JPG",
+    "creator": "Dotuanhungdaklak at Vietnamese Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Draysap02.JPG"
+  },
+  {
+    "file": "assets/img/unesco/dia-chat-04.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (dia-chat #4)",
+    "source": "wikimedia",
+    "id": "commons-Quymon.JPG",
+    "title": "Quymon.JPG",
+    "creator": "Viethavvh at vi.wikipedia",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Quymon.JPG"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-01.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #1)",
+    "source": "wikimedia",
+    "id": "commons-The-chamber-music-ensemble-performing-at-Queen-Nam-Phuongs-Dien-Tho-Palace.jpg",
+    "title": "The-chamber-music-ensemble-performing-at-Queen-Nam-Phuongs-Dien-Tho-Palace.jpg",
+    "creator": "Unknown authorUnknown author",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:The-chamber-music-ensemble-performing-at-Queen-Nam-Phuongs-Dien-Tho-Palace.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-02.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #2)",
+    "source": "wikimedia",
+    "id": "commons-Bộ_cồng_chiêng.jpg",
+    "title": "Bộ_cồng_chiêng.jpg",
+    "creator": "Bùi Thụy Đào Nguyên",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:B%E1%BB%99_c%E1%BB%93ng_chi%C3%AAng.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-03.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #3)",
+    "source": "wikimedia",
+    "id": "commons-Quan_ho_bac_ninh_o_ha_noi.jpg",
+    "title": "Quan_ho_bac_ninh_o_ha_noi.jpg",
+    "creator": "Vanminhhanoi at Vietnamese Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Quan_ho_bac_ninh_o_ha_noi.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-04.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #4)",
+    "source": "wikimedia",
+    "id": "commons-Ca_trù.jpg",
+    "title": "Ca_trù.jpg",
+    "creator": "Kien1980v at vi.wikipedia.",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Ca_tr%C3%B9.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-05.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #5)",
+    "source": "wikimedia",
+    "id": "commons-Hội_Gióng1.jpg",
+    "title": "Hội_Gióng1.jpg",
+    "creator": "Hoangvantoanajc",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:H%E1%BB%99i_Gi%C3%B3ng1.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-06.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #6)",
+    "source": "wikimedia",
+    "id": "commons-Hatxoan.jpg",
+    "title": "Hatxoan.jpg",
+    "creator": "Tungdino1997",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hatxoan.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-07.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #7)",
+    "source": "wikimedia",
+    "id": "commons-RuocThanh.jpg",
+    "title": "RuocThanh.jpg",
+    "creator": "Pierre Alex",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:RuocThanh.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-08.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #8)",
+    "source": "wikimedia",
+    "id": "commons-Ban_nhạc_đờn_ca_tài_tử_Sài_Gòn_(1911).jpeg",
+    "title": "Ban_nhạc_đờn_ca_tài_tử_Sài_Gòn_(1911).jpeg",
+    "creator": "không rõ",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Ban_nh%E1%BA%A1c_%C4%91%E1%BB%9Dn_ca_t%C3%A0i_t%E1%BB%AD_S%C3%A0i_G%C3%B2n_(1911).jpeg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-09.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #9) — ảnh minh họa",
+    "source": "wikimedia",
+    "id": "commons-Toancanhthixa.jpg",
+    "title": "Toancanhthixa.jpg",
+    "creator": "Kieuminhtu",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Toancanhthixa.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-10.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #10)",
+    "source": "wikimedia",
+    "id": "commons-Kéo_Co_nữ.jpg",
+    "title": "Kéo_Co_nữ.jpg",
+    "creator": "Nguyenxuanvan",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:K%C3%A9o_Co_n%E1%BB%AF.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-11.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #11)",
+    "source": "wikimedia",
+    "id": "commons-Hầu Đồng art performance.jpg",
+    "title": "Hầu Đồng art performance.jpg",
+    "creator": "Facinate",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A7u_%C4%90%E1%BB%93ng_art_performance.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-12.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #12)",
+    "source": "wikimedia",
+    "id": "commons-Nông_Thi_Lìm_nghệ_nhân_hát_Then.jpg",
+    "title": "Nông_Thi_Lìm_nghệ_nhân_hát_Then.jpg",
+    "creator": "Jean-Pierre Dalbéra",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:N%C3%B4ng_Thi_L%C3%ACm_ngh%E1%BB%87_nh%C3%A2n_h%C3%A1t_Then.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-13.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #13)",
+    "source": "wikimedia",
+    "id": "commons-Ambassador_Ted_Osius’s_Visit_to_HIV_AIDS_Programs_in_Dien_Bien_(29564030532).jpg",
+    "title": "Ambassador_Ted_Osius’s_Visit_to_HIV_AIDS_Programs_in_Dien_Bien_(29564030532).jpg",
+    "creator": "USAID Vietnam",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Ambassador_Ted_Osius%E2%80%99s_Visit_to_HIV_AIDS_Programs_in_Dien_Bien_(29564030532).jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-14.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #14)",
+    "source": "wikimedia",
+    "id": "commons-Làng_gốm_Bầu_Trúc,_Phước_Dân,_Ninh_Phước.jpg",
+    "title": "Làng_gốm_Bầu_Trúc,_Phước_Dân,_Ninh_Phước.jpg",
+    "creator": "Windrain",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:L%C3%A0ng_g%E1%BB%91m_B%E1%BA%A7u_Tr%C3%BAc,_Ph%C6%B0%E1%BB%9Bc_D%C3%A2n,_Ninh_Ph%C6%B0%E1%BB%9Bc.jpg"
+  },
+  {
+    "file": "assets/img/unesco/phi-vat-the-15.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (phi-vat-the #15)",
+    "source": "wikimedia",
+    "id": "commons-Mieuba2.jpg",
+    "title": "Mieuba2.jpg",
+    "creator": "Bùi Thuỵ Đào Nguyên (thảo luận)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Mieuba2.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-01.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #1)",
+    "source": "wikimedia",
+    "id": "commons-Lo_ren_river.jpg",
+    "title": "Lo_ren_river.jpg",
+    "creator": "Tho nau",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lo_ren_river.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-02.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #2)",
+    "source": "wikimedia",
+    "id": "commons-BenCu_forest_structure_23Dec08.jpg",
+    "title": "BenCu_forest_structure_23Dec08.jpg",
+    "creator": "Roy Bateman",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:BenCu_forest_structure_23Dec08.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-03.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #3)",
+    "source": "wikimedia",
+    "id": "commons-QD_Catba2.jpg",
+    "title": "QD_Catba2.jpg",
+    "creator": "Viethavvh",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:QD_Catba2.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-04.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #4)",
+    "source": "wikimedia",
+    "id": "commons-MatnuocSongHong-06112008333.JPG",
+    "title": "MatnuocSongHong-06112008333.JPG",
+    "creator": "vi:User:Newone",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:MatnuocSongHong-06112008333.JPG"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-05.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #5)",
+    "source": "wikimedia",
+    "id": "commons-Bến_cá_Ba_Hòn.jpg",
+    "title": "Bến_cá_Ba_Hòn.jpg",
+    "creator": "Bùi Thụy Đào Nguyên",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:B%E1%BA%BFn_c%C3%A1_Ba_H%C3%B2n.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-06.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #6)",
+    "source": "wikimedia",
+    "id": "commons-Giang River in Pu Mat National Park.jpg",
+    "title": "Giang River in Pu Mat National Park.jpg",
+    "creator": "KoheiU",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Giang_River_in_Pu_Mat_National_Park.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-07.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #7)",
+    "source": "wikimedia",
+    "id": "commons-Tuongdaimuicamau.jpg",
+    "title": "Tuongdaimuicamau.jpg",
+    "creator": "Thanhminh2000",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tuongdaimuicamau.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-08.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #8)",
+    "source": "wikimedia",
+    "id": "commons-Cu Lao Cham.JPG",
+    "title": "Cu Lao Cham.JPG",
+    "creator": "Original uploaded by Lê Thy (Transfered by Phó Nháy)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Cu_Lao_Cham.JPG"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-09.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #9)",
+    "source": "wikimedia",
+    "id": "commons-Scenery from Liang Biang Mountain, Da Lat - panoramio.jpg",
+    "title": "Scenery from Liang Biang Mountain, Da Lat - panoramio.jpg",
+    "creator": "The Erica Chang",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Scenery_from_Liang_Biang_Mountain,_Da_Lat_-_panoramio.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-10.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #10)",
+    "source": "wikimedia",
+    "id": "commons-Lo_O_Stream,_Nui_Chua_National_Park.jpg",
+    "title": "Lo_O_Stream,_Nui_Chua_National_Park.jpg",
+    "creator": "Suriya Vij",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Lo_O_Stream,_Nui_Chua_National_Park.jpg"
+  },
+  {
+    "file": "assets/img/unesco/sinh-quyen-11.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (sinh-quyen #11) — ảnh minh họa",
+    "source": "wikimedia",
+    "id": "commons-Orestes sp. Kon Ka Kinh - pair.jpg",
+    "title": "Orestes sp. Kon Ka Kinh - pair.jpg",
+    "creator": "Drägü",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Orestes_sp._Kon_Ka_Kinh_-_pair.jpg"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-01.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #1)",
+    "source": "wikimedia",
+    "id": "commons-Du_khách_viếng_thăm_Lầu_Ngũ_Phụng.JPG",
+    "title": "Du_khách_viếng_thăm_Lầu_Ngũ_Phụng.JPG",
+    "creator": "LÊ TẤN LỘC at Vietnamese Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Du_kh%C3%A1ch_vi%E1%BA%BFng_th%C4%83m_L%E1%BA%A7u_Ng%C5%A9_Ph%E1%BB%A5ng.JPG"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-02.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #2)",
+    "source": "wikimedia",
+    "id": "commons-Vịnh_Hạ_Long_-_NKS.jpg",
+    "title": "Vịnh_Hạ_Long_-_NKS.jpg",
+    "creator": "NKSTTSSHNVN",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:V%E1%BB%8Bnh_H%E1%BA%A1_Long_-_NKS.jpg"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-03.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #3)",
+    "source": "wikimedia",
+    "id": "commons-PhoCoHoiAn.jpg",
+    "title": "PhoCoHoiAn.jpg",
+    "creator": "Crazy3108",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:PhoCoHoiAn.jpg"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-04.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #4)",
+    "source": "wikimedia",
+    "id": "commons-2024_-_Mỹ_Sơn_Group_B,_C_and_D_-_img_23.jpg",
+    "title": "2024_-_Mỹ_Sơn_Group_B,_C_and_D_-_img_23.jpg",
+    "creator": "Chainwit.",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:2024_-_M%E1%BB%B9_S%C6%A1n_Group_B,_C_and_D_-_img_23.jpg"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-05.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #5)",
+    "source": "wikimedia",
+    "id": "commons-Phongnhakebang6.jpg",
+    "title": "Phongnhakebang6.jpg",
+    "creator": "Genghiskhanviet",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Phongnhakebang6.jpg"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-06.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #6)",
+    "source": "wikimedia",
+    "id": "commons-Thang Long Citadel.jpg",
+    "title": "Thang Long Citadel.jpg",
+    "creator": "Minhle817",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Thang_Long_Citadel.jpg"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-07.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #7)",
+    "source": "wikimedia",
+    "id": "commons-Cổng_Nam.jpg",
+    "title": "Cổng_Nam.jpg",
+    "creator": "Cổng Nam Thành Nhà Hồ",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:C%E1%BB%95ng_Nam.jpg"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-08.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #8)",
+    "source": "wikimedia",
+    "id": "commons-Muaxuantamcoc.jpg",
+    "title": "Muaxuantamcoc.jpg",
+    "creator": "Kien1980v (thảo luận)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Muaxuantamcoc.jpg"
+  },
+  {
+    "file": "assets/img/unesco/the-gioi-09.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (the-gioi #9)",
+    "source": "wikimedia",
+    "id": "commons-Vườn tháp Huệ Quang, chùa Đồng, Yên Tử.jpg",
+    "title": "Vườn tháp Huệ Quang, chùa Đồng, Yên Tử.jpg",
+    "creator": "Thang Nguyen from Nottingham, United Kingdom",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:V%C6%B0%E1%BB%9Dn_th%C3%A1p_Hu%E1%BB%87_Quang,_ch%C3%B9a_%C4%90%E1%BB%93ng,_Y%C3%AAn_T%E1%BB%AD.jpg"
+  },
+  {
+    "file": "assets/img/unesco/tu-lieu-01.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (tu-lieu #1)",
+    "source": "wikimedia",
+    "id": "commons-Woodblocks_of_the_Nguyễn_Dynasty_01.jpg",
+    "title": "Woodblocks_of_the_Nguyễn_Dynasty_01.jpg",
+    "creator": "Diane Selwyn",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Woodblocks_of_the_Nguy%E1%BB%85n_Dynasty_01.jpg"
+  },
+  {
+    "file": "assets/img/unesco/tu-lieu-02.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (tu-lieu #2)",
+    "source": "wikimedia",
+    "id": "commons-Van Mieu Hanoi 4.jpg",
+    "title": "Van Mieu Hanoi 4.jpg",
+    "creator": "Gryffindor",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Van_Mieu_Hanoi_4.jpg"
+  },
+  {
+    "file": "assets/img/unesco/tu-lieu-03.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (tu-lieu #3)",
+    "source": "wikimedia",
+    "id": "commons-Chùa_Vĩnh_Nghiêm_-_Yên_Dũng_-_Bắc_Giang_-_panoramio_(24).jpg",
+    "title": "Chùa_Vĩnh_Nghiêm_-_Yên_Dũng_-_Bắc_Giang_-_panoramio_(24).jpg",
+    "creator": "ngocchat1014",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ch%C3%B9a_V%C4%A9nh_Nghi%C3%AAm_-_Y%C3%AAn_D%C5%A9ng_-_B%E1%BA%AFc_Giang_-_panoramio_(24).jpg"
+  },
+  {
+    "file": "assets/img/unesco/tu-lieu-04.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (tu-lieu #4) — ảnh minh họa",
+    "source": "wikimedia",
+    "id": "commons-Ngọ_Môn_Huế_-_NKS.jpg",
+    "title": "Ngọ_Môn_Huế_-_NKS.jpg",
+    "creator": "NKSTTSSHNVN",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ng%E1%BB%8D_M%C3%B4n_Hu%E1%BA%BF_-_NKS.jpg"
+  },
+  {
+    "file": "assets/img/unesco/tu-lieu-05.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (tu-lieu #5)",
+    "source": "wikimedia",
+    "id": "commons-Palace of Supreme Harmony (Dien Thai Hoa), Nguyen Dynasty Forbidden City, Hue (15436857392).jpg",
+    "title": "Palace of Supreme Harmony (Dien Thai Hoa), Nguyen Dynasty Forbidden City, Hue (15436857392).jpg",
+    "creator": "Gary Todd from Xinzheng, China",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Palace_of_Supreme_Harmony_(Dien_Thai_Hoa),_Nguyen_Dynasty_Forbidden_City,_Hue_(15436857392).jpg"
+  },
+  {
+    "file": "assets/img/unesco/tu-lieu-06.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (tu-lieu #6) — ảnh minh họa",
+    "source": "wikimedia",
+    "id": "commons-Hoàng Việt tăng san tân luật (皇越增刊新律) Nguyen Tuan Cuong (阮俊强).jpg",
+    "title": "Hoàng Việt tăng san tân luật (皇越增刊新律) Nguyen Tuan Cuong (阮俊强).jpg",
+    "creator": "The imperial government of the Nguyễn Dynasty.",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Ho%C3%A0ng_Vi%E1%BB%87t_t%C4%83ng_san_t%C3%A2n_lu%E1%BA%ADt_(%E7%9A%87%E8%B6%8A%E5%A2%9E%E5%88%8A%E6%96%B0%E5%BE%8B)_Nguyen_Tuan_Cuong_(%E9%98%AE%E4%BF%8A%E5%BC%BA).jpg"
+  },
+  {
+    "file": "assets/img/unesco/tu-lieu-07.jpg",
+    "purpose": "pages/di-san.html — danh mục UNESCO (tu-lieu #7) — ảnh minh họa",
+    "source": "wikimedia",
+    "id": "commons-Hoàng Việt tăng san tân luật (皇越增刊新律) Nguyen Tuan Cuong (阮俊强) tờ 68a.jpg",
+    "title": "Hoàng Việt tăng san tân luật (皇越增刊新律) Nguyen Tuan Cuong (阮俊强) tờ 68a.jpg",
+    "creator": "The imperial government of the Nguyễn Dynasty.",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Ho%C3%A0ng_Vi%E1%BB%87t_t%C4%83ng_san_t%C3%A2n_lu%E1%BA%ADt_(%E7%9A%87%E8%B6%8A%E5%A2%9E%E5%88%8A%E6%96%B0%E5%BE%8B)_Nguyen_Tuan_Cuong_(%E9%98%AE%E4%BF%8A%E5%BC%BA)_t%E1%BB%9D_68a.jpg"
+  },
+  {
+    "file": "assets/img/album-gis-2024.jpg",
+    "purpose": "pages/hoi-thao.html — album: Hội thảo Ứng dụng GIS toàn quốc 2024 (ảnh minh họa, Trường ĐH Cần Thơ)",
+    "source": "wikimedia",
+    "id": "commons-Can Tho University (41696358552).jpg",
+    "title": "Can Tho University (41696358552).jpg",
+    "creator": "Tran Anh Khoa (zorrotran)",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Can_Tho_University_(41696358552).jpg"
+  },
+  {
+    "file": "assets/img/album-cdsd-2023.jpg",
+    "purpose": "pages/hoi-thao.html — album: CDSD 2023 (ảnh minh họa phiên hội thảo quốc tế)",
+    "source": "wikimedia",
+    "id": "commons-2nd CTBT Science Diplomacy Symposium (42404298441).jpg",
+    "title": "2nd CTBT Science Diplomacy Symposium (42404298441).jpg",
+    "creator": "The Official CTBTO Photostream",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:2nd_CTBT_Science_Diplomacy_Symposium_(42404298441).jpg"
+  },
+  {
+    "file": "assets/img/album-dia-ly-xv.jpg",
+    "purpose": "pages/hoi-thao.html — album: Hội nghị Khoa học Địa lý lần thứ XV (ảnh minh họa, TP. Hồ Chí Minh)",
+    "source": "wikimedia",
+    "id": "commons-Điểm nhìn thành phố từ Trường Đại học Sư phạm Thành phố Hồ Chí Minh.jpg",
+    "title": "Điểm nhìn thành phố từ Trường Đại học Sư phạm Thành phố Hồ Chí Minh.jpg",
+    "creator": "Kwozyn",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:%C4%90i%E1%BB%83m_nh%C3%ACn_th%C3%A0nh_ph%E1%BB%91_t%E1%BB%AB_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.jpg"
+  }
+]

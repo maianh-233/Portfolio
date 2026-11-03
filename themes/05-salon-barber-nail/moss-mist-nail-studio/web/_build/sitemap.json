@@ -1,0 +1,129 @@
+{
+  "brand": "MOSS & MIST NAIL STUDIO",
+  "language": "en",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Nhãn tiêu bản thực vật (herbarium label): mỗi mẫu nail / dịch vụ được trình bày như một tiêu bản ép lá, có tên in nghiêng và dải chấm màu chủ đạo; khung ảnh vòm / bo cong hữu cơ như ô cửa nhà kính xuyên suốt các trang",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Một chút thiên nhiên trên đầu ngón tay",
+    "description": "Giao diện nail studio phong cách thực vật, tông xanh rêu và kem."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu thương hiệu, triết lý, dịch vụ nổi bật, dẫn sang dịch vụ, bộ sưu tập và studio",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Tiêu đề A Little Nature at Your Fingertips, ảnh bo cong tràn mép phải, nhãn tiêu bản nổi" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Our Philosophy + 3 giá trị Natural Beauty, Thoughtful Care, Artful Details" },
+        { "id": "services", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "3 dịch vụ Signature, ảnh + mô tả + giá tham khảo, link sang pages/services.html" },
+        { "id": "collection", "catalog": "collections", "variant": "gallery-filmstrip", "source": "ba", "note": "Dải ảnh kéo ngang, link sang pages/collection.html" },
+        { "id": "studio", "catalog": "story", "variant": "features-alternate", "source": "ba", "note": "The Studio: không gian, chất liệu, đội ngũ; link sang pages/studio.html" },
+        { "id": "voices", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "Trích dẫn khách trên nền rêu, bụi nắng" },
+        { "id": "book", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Mở modal đặt lịch (bản demo)" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "floral nails holding plant", "file": "https://images.unsplash.com/photo-1769687209448-025548dfca8b?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "philosophy", "query": "manicure holding flower", "file": "https://images.unsplash.com/photo-1736434518489-0eb84070017f?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "services-botanical", "query": "green marble nails roses", "file": "https://images.unsplash.com/photo-1792776043465-bfa9d2bf8881?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "services-natural", "query": "light pink manicure", "file": "https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "services-gel", "query": "green gel manicure", "file": "https://images.unsplash.com/photo-1606168054091-74617220d1db?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "collection-1", "query": "green manicure ring", "file": "https://images.unsplash.com/photo-1584566006505-8923576e70d4?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "collection-2", "query": "ombre nails", "file": "https://images.unsplash.com/photo-1746607242420-12fc2604775d?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "collection-3", "query": "pink manicure textile", "file": "https://images.unsplash.com/photo-1612887390768-fb02affea7a6?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-window", "query": "plants sunlit window", "file": "https://images.unsplash.com/photo-1601985705806-5b9a71f6004f?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-artist", "query": "nail salon manicure", "file": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=1200&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Services & Pricing",
+      "purpose": "Trình bày 5 nhóm dịch vụ, phong cách nail art thực vật, bảng giá và hướng dẫn chăm sóc sau dịch vụ",
+      "sections": [
+        { "id": "intro", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Thoughtful Nail Care" },
+        { "id": "menu", "catalog": "services", "variant": "features-tabs", "source": "ba", "note": "5 nhóm: Natural Manicure, Pedicure, Gel Polish, Nail Extensions, Botanical Nail Art; ảnh, mô tả, thời lượng, giá" },
+        { "id": "styles", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Phong cách nail art lấy cảm hứng thực vật" },
+        { "id": "prices", "catalog": "pricing", "variant": "pricing-list", "source": "ba", "note": "Bảng giá nhóm theo khối, đường chấm dẫn" },
+        { "id": "aftercare", "catalog": "faq", "variant": "accordion-split", "source": "ba", "note": "Hướng dẫn chăm sóc móng sau dịch vụ" },
+        { "id": "book", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "intro", "query": "applying nail polish", "file": "https://images.unsplash.com/photo-1753285310651-6974a839c992?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-natural", "query": "white nail polish hands", "file": "https://images.unsplash.com/photo-1633955726992-2b7c0d2d2a69?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-pedicure", "query": "feet with flowers", "file": "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-gel", "query": "green nail polish", "file": "https://images.unsplash.com/photo-1708036632171-ffff12627ffc?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-extensions", "query": "manicurist artificial nails", "file": "https://images.unsplash.com/photo-1753285311550-154917dab783?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-botanical", "query": "green marble almond nails", "file": "https://images.unsplash.com/photo-1792776043433-9b4963ba6b4c?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "styles", "query": "hand holding palmate leaf", "file": "https://images.unsplash.com/photo-1573508938932-098bc908f25c?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "aftercare", "query": "manicure tools towel", "file": "https://images.unsplash.com/photo-1779636198585-658170ee0283?w=1200&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/collection.html",
+      "title": "Botanical Collection",
+      "purpose": "Gallery các mẫu móng theo cảm hứng thực vật, có bộ lọc và lightbox, kết bằng phần cảm hứng thiết kế",
+      "sections": [
+        { "id": "intro", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Inspired by Nature" },
+        { "id": "designs", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "Lọc Floral, Leaves, Earth Tones, Minimal, Seasonal; tên mẫu, màu chủ đạo, mô tả; lightbox" },
+        { "id": "inspiration", "catalog": "editorial", "variant": "cta-fullbleed", "source": "ba", "note": "Cảm hứng thiết kế cuối trang" },
+        { "id": "book", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "intro", "query": "light polish orange flower", "file": "https://images.unsplash.com/photo-1790220324053-32194b82e0fe?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-morning-daisy", "query": "french manicure small flower", "file": "https://images.unsplash.com/photo-1762373349045-c2decd4ec3f3?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-marigold", "query": "orange flower manicure", "file": "https://images.unsplash.com/photo-1790220324002-60488d033597?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-peony", "query": "hands pink flower", "file": "https://images.unsplash.com/photo-1674383600495-bfa0405f3c93?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-fallen-leaf", "query": "dried leaf hand", "file": "https://images.unsplash.com/photo-1602447521540-7f57157d6d8d?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-lagoon-fern", "query": "blue green nails", "file": "https://images.unsplash.com/photo-1645340609551-2dcba8ca1e56?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-tortoise", "query": "tortoiseshell nails", "file": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-river-clay", "query": "orange nails rock", "file": "https://images.unsplash.com/photo-1635791283756-f1b4fbd920ae?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-woven-reed", "query": "nude nails woven basket", "file": "https://images.unsplash.com/photo-1588359953494-0c215e3cedc6?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-linen", "query": "white manicure", "file": "https://images.unsplash.com/photo-1630843599725-32ead7671867?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-bare-blush", "query": "pink manicure", "file": "https://images.unsplash.com/photo-1643648854897-7b5845b4c04c?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-ginkgo", "query": "hand yellow maple leaf", "file": "https://images.unsplash.com/photo-1603665042076-7f06e46f1042?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-mustard", "query": "yellow grey manicure", "file": "https://images.unsplash.com/photo-1634819088706-b660a7aa48b0?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "designs-frost", "query": "glitter nails knit sweater", "file": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "inspiration", "query": "green plants leaves", "file": "https://images.unsplash.com/photo-1527341944416-23e85b614715?w=1600&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/studio.html",
+      "title": "Our Studio",
+      "purpose": "Câu chuyện thương hiệu, đội ngũ nail artist, không gian & vật liệu, trải nghiệm tại studio, liên hệ và giờ mở cửa",
+      "sections": [
+        { "id": "intro", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh không gian cây xanh, ánh sáng tự nhiên" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Không có ảnh chân dung phù hợp → khối chữ cái đầu tên" },
+        { "id": "space", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Bàn làm móng, vật liệu, chi tiết nội thất; lightbox" },
+        { "id": "experience", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Trải nghiệm tại studio" },
+        { "id": "contact", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Địa chỉ mẫu, giờ mở cửa, bản đồ, form demo" }
+      ],
+      "images": [
+        { "slot": "intro", "query": "plants window shelf", "file": "https://images.unsplash.com/photo-1566836610593-62a64888a216?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "story", "query": "wooden table plants window", "file": "https://images.unsplash.com/photo-1633169744241-a4323857e7dc?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "team", "query": "nail artist portrait", "file": null, "status": "none" },
+        { "slot": "space-salon", "query": "nail salon chairs counter", "file": "https://images.unsplash.com/photo-1652869122685-c7792ef56ee2?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "space-shelves", "query": "nail polish shelves", "file": "https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "space-polishes", "query": "nail polish colours", "file": "https://images.unsplash.com/photo-1636019411401-82485711b6ba?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "space-table-plant", "query": "plant wooden table", "file": "https://images.unsplash.com/photo-1617202009609-74a52df21011?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "space-mirror-plant", "query": "plant mirror interior", "file": "https://images.unsplash.com/photo-1609762751666-4ba213fb0b5f?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "experience", "query": "nail salon client", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA yêu cầu song ngữ Việt – Anh và nút chuyển VI / EN, nhưng concept.md chốt ngôn ngữ English và cấm bộ chuyển ngôn ngữ (lỗi phông, QA kiểm không trộn ngôn ngữ) → dựng bản tiếng Anh đầy đủ, chưa có nút VI / EN; bản tiếng Việt cần làm ở bước sau",
+    "Giữ đúng 4 trang BA mô tả (Home, Services & Pricing, Botanical Collection, Our Studio); thông tin liên hệ đặt ở cuối trang Our Studio và footer thay vì trang Contact riêng",
+    "Công cụ ảnh (openverse) không phản hồi → toàn bộ ảnh dùng link Unsplash đã kiểm qua link_image",
+    "Đội ngũ nail artist không có ảnh chân dung phù hợp → khối chữ cái đầu tên trên nền màu thương hiệu",
+    "Thêm khối trích dẫn khách và CTA đặt lịch cuối mỗi trang chính"
+  ],
+  "limitations": [
+    "Nút Book a visit mở form đặt lịch bản demo, không xử lý lịch hẹn",
+    "Form liên hệ là bản demo, chưa có backend",
+    "Không bán sản phẩm, không thanh toán, không đăng nhập",
+    "Chưa có phiên bản tiếng Việt / nút chuyển ngôn ngữ",
+    "Địa chỉ, số điện thoại, giá và tên nail artist là nội dung mẫu"
+  ]
+}

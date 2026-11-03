@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang chủ · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+</head>
+<body data-screen="SCR-HOME-001" data-module="HOME" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/permissions.js"></script>
+  <script src="assets/js/workflows.js"></script>
+  <script src="assets/js/mock-data/master.js"></script>
+  <script src="assets/js/mock-data/book.js"></script>
+  <script src="assets/js/mock-data/review.js"></script>
+  <script src="assets/js/mock-data/news.js"></script>
+  <script src="assets/js/demo-store.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+  /* SCR-HOME-001 Trang chủ: Hero → Chọn theo thú cưng → Bán chạy → Pate chay → Combo → Ưu đãi → Câu chuyện → Đánh giá → Bài viết.
+   * Khối không có dữ liệu thì ẩn (FR-HOME-001); khối lỗi hiện Alert "Không tải được mục này." + Thử lại. */
+  Layout.mount({ title: 'Trang chủ', active: 'home' }, function (main) {
+    var U = Perm.url, esc = UI.esc;
+    /* Dải thẻ: mobile cuộn ngang (thấy ~1,5 thẻ), từ md trở lên là lưới */
+    function rail(items, grid) {
+      return '<div class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 no-scrollbar md:mx-0 md:grid md:overflow-visible md:px-0 md:pb-0 ' + grid + '">' +
+        items.map(function (h) { return '<div class="w-2/3 shrink-0 snap-start sm:w-5/12 md:w-auto">' + h + '</div>'; }).join('') + '</div>';
+    }
+    function safe(fn) {
+      try { return fn() || ''; } catch (e) {
+        return '<div class="mx-auto max-w-content px-4 py-6 md:px-6 lg:px-8">' + UI.alert({ tone: 'danger', text: 'Không tải được mục này.', actions: UI.button({ label: 'Thử lại', size: 'sm', variant: 'outline', attrs: { onclick: 'location.reload()' } }) }) + '</div>';
+      }
+    }
+    var s = MOCK.settings;
+
+    var hero = UI.hero({
+      title: 'Tiểu Bạch: đồ ăn ngon cho Boss, tận tâm như cho con mèo nhà mình',
+      text: 'Hạt, pate, bánh thưởng chính hãng cho chó, mèo và thú nhỏ. Pate chay làm tay theo đơn mỗi ngày.',
+      img: MOCK.photo('cat,petshop', 7, 1200, 1200), imgAlt: 'Cửa hàng Tiểu Bạch Pet Shop',
+      actions: UI.button({ label: 'Xem sản phẩm', size: 'lg', href: U('pages/san-pham.html'), iconRight: 'arrow-right' }) +
+        UI.button({ label: 'Pate chay tự làm', variant: 'link', href: U('pages/san-pham.html?nhom=pate-chay'), iconRight: 'arrow-right' }),
+      points: ['Miễn phí giao hàng từ 400.000đ', 'Tích điểm 1.000đ = 1 điểm']
+    });
+
+    var pets = safe(function () {
+      var list = MOCK.petTypes.filter(function (t) { return t.hien_thi; }).sort(function (a, b) { return a.thu_tu - b.thu_tu; });
+      if (!list.length) return '';
+      return UI.section({ title: 'Boss nhà bạn là…', body: '<div class="grid grid-cols-3 gap-3 md:gap-6" data-reveal>' + list.map(function (t) {
+        return UI.petTypeTile({ label: t.ten, sub: t.full !== t.ten ? t.full : '', img: t.img, href: U('pages/san-pham.html?thu-cung=' + t.id), bg: t.bg, fg: t.fg });
+      }).join('') + '</div>' });
+    });
+
+    var best = safe(function () {
+      var list = App.products().filter(function (p) { return !p.la_pate; }).sort(function (a, b) { return b.sold30 - a.sold30; }).slice(0, 8);
+      if (!list.length) return '';
+      return UI.section({ id: 'ban-chay', title: 'Sản phẩm bán chạy', link: { label: 'Xem tất cả', href: U('pages/san-pham.html?sap-xep=ban-chay') }, tone: 'white',
+        body: '<div data-best>' + UI.skeletonCards(4, 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4') + '</div>' });
+    });
+
+    var pate = safe(function () {
+      var list = App.products().filter(function (p) { return p.la_pate; });
+      if (!list.length) return '';
+      var first = list[0];
+      return UI.section({ id: 'pate-chay', tone: 'mint', body:
+        '<div class="grid items-center gap-8 lg:grid-cols-12" data-reveal>' +
+        '<div class="lg:col-span-5 flex flex-col gap-4"><h2 class="text-2xl lg:text-3xl font-extrabold text-neutral-800">Pate chay tự làm</h2>' +
+        '<p class="text-base text-neutral-700 max-w-prose">Nấu từ rau củ, đậu gà và yến mạch, không chất bảo quản. Mỗi hũ được làm sau khi cửa hàng gọi xác nhận đơn.</p>' +
+        '<ul class="flex flex-col gap-2">' + ['Làm tay mỗi ngày', 'Có giấy chứng nhận ATTP', 'Giao sau khoảng 7 ngày'].map(function (t) { return '<li class="flex items-center gap-2 text-base font-bold text-neutral-800"><span class="inline-flex size-7 items-center justify-center rounded-full bg-secondary-300 text-secondary-800">' + UI.icon('check', 'size-4') + '</span>' + t + '</li>'; }).join('') + '</ul>' +
+        UI.patePolicyNotice('inline') +
+        '<div>' + UI.button({ label: 'Đặt trước ngay', size: 'lg', href: App.productHref(first), icon: 'calendar-heart' }) + '</div></div>' +
+        '<div class="lg:col-span-7 grid grid-cols-2 gap-4">' + list.slice(0, 2).map(App.productCard).join('') + '</div></div>' });
+    });
+
+    var combos = safe(function () {
+      var list = App.combos().slice(0, 3);
+      if (!list.length) return '';
+      return UI.section({ title: 'Combo tiết kiệm', link: { label: 'Xem tất cả', href: U('pages/san-pham.html?nhom=combo') },
+        body: rail(list.map(function (c) { return UI.comboCard(App.comboVM(c)); }), 'md:grid-cols-3') });
+    });
+
+    var vouchers = safe(function () {
+      var now = new Date();
+      var list = DemoStore.list('vouchers').filter(function (v) { return v.loai === 'MA_CHUNG' && v.trang_thai === 'BAT' && new Date(v.bat_dau) <= now && new Date(v.ket_thuc) >= now && (v.tong_luot == null || v.da_dung < v.tong_luot); }).slice(0, 4);
+      if (!list.length) return '';
+      return UI.section({ title: 'Ưu đãi đang có', tone: 'white', body: rail(list.map(function (v) {
+        return UI.voucherCard({
+          value: v.kieu === 'PHAN_TRAM' ? v.gia_tri + '%' : UI.fmt.compact(v.gia_tri), unit: 'giảm', title: v.ten,
+          cond: v.don_toi_thieu ? 'Đơn từ ' + UI.fmt.money(v.don_toi_thieu) : 'Áp dụng mọi đơn', expires: UI.fmt.date(v.ket_thuc), code: v.ma, state: 'available',
+          action: UI.button({ label: 'Sao chép mã', icon: 'copy', size: 'sm', variant: 'outline', attrs: { 'data-copy': v.ma, 'data-copy-msg': 'Đã sao chép mã ' + v.ma } })
+        });
+      }), 'md:grid-cols-2') });
+    });
+
+    var story = safe(function () {
+      return UI.section({ body:
+        '<div class="grid items-center gap-8 md:grid-cols-2 lg:gap-16" data-reveal>' +
+        '<div class="order-2 md:order-1 flex flex-col gap-4"><h2 class="text-2xl lg:text-3xl font-extrabold text-neutral-800">Câu chuyện Tiểu Bạch</h2>' +
+        '<p class="text-base text-neutral-700 max-w-prose">Tiểu Bạch là một chú mèo đen, đen tuyền dù tên là Bạch. Vì thương bé kén ăn và hay đau bụng, chúng mình bắt đầu tìm hiểu kỹ từng món ăn cho thú cưng.</p>' +
+        '<p class="text-base text-neutral-700 max-w-prose">Từ căn bếp nhỏ ấy, cửa hàng ra đời: bán đồ ăn chính hãng và tự nấu pate chay cho những Boss cần ăn nhẹ bụng.</p>' +
+        '<div>' + UI.button({ label: 'Đọc câu chuyện', variant: 'outline', href: U('pages/gioi-thieu.html') }) + '</div></div>' +
+        '<div class="order-1 md:order-2 relative"><div class="aspect-video md:aspect-square overflow-hidden rounded-2xl bg-primary-100 md:rotate-1 shadow-md">' + UI.img({ src: MOCK.photo('blackcat', 5, 900, 900), alt: 'Chú mèo đen Tiểu Bạch' }) + '</div>' +
+        '<span class="absolute -bottom-6 -left-4 hidden md:block" aria-hidden="true">' + UI.mascot(96) + '</span></div></div>' });
+    });
+
+    var reviews = safe(function () {
+      var list = DemoStore.list('reviews').filter(function (r) { return r.state === 'VISIBLE' && r.so_sao === 5 && r.noi_dung.length >= 40; })
+        .sort(function (a, b) { return a.tao_luc < b.tao_luc ? 1 : -1; }).slice(0, 6);
+      if (!list.length) return '';
+      return UI.section({ title: 'Sen nói gì về Tiểu Bạch', tone: 'pink', body: '<div class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 no-scrollbar lg:mx-0 lg:px-0">' + list.map(function (r) {
+        var p = App.product(r.product_id);
+        return '<div class="w-5/6 shrink-0 snap-start sm:w-1/2 lg:w-1/3">' + UI.testimonial({ name: App.maskName(r.ho_ten), stars: r.so_sao, text: r.noi_dung, product: p ? p.ten : '', productHref: p ? App.productHref(p) : '#' }) + '</div>';
+      }).join('') + '</div>' });
+    });
+
+    var posts = safe(function () {
+      var list = DemoStore.list('posts').filter(function (p) { return p.state === 'PUBLISHED'; }).sort(function (a, b) { return a.ngay_dang < b.ngay_dang ? 1 : -1; }).slice(0, 3);
+      if (!list.length) return '';
+      return UI.section({ title: 'Bài viết chia sẻ', link: { label: 'Xem tất cả', href: U('pages/bai-viet.html') }, body: rail(list.map(function (p) {
+        return UI.postCard({ href: U('pages/chi-tiet-bai-viet.html?id=' + p.slug), title: p.tieu_de, img: p.anh_bia, category: p.chuyen_muc, summary: p.tom_tat, date: p.ngay_dang, readMin: p.phut_doc });
+      }), 'md:grid-cols-3') });
+    });
+
+    main.innerHTML = hero + pets + best + pate + combos + vouchers + story + reviews + posts;
+
+    // Bán chạy: Skeleton ~400ms rồi hiện 8 thẻ
+    var bestEl = main.querySelector('[data-best]');
+    if (bestEl) setTimeout(function () {
+      var list = App.products().filter(function (p) { return !p.la_pate; }).sort(function (a, b) { return b.sold30 - a.sold30; }).slice(0, 8);
+      bestEl.innerHTML = rail(list.map(App.productCard), 'md:grid-cols-3 lg:grid-cols-4');
+    }, 400);
+  });
+  </script>
+</body>
+</html>

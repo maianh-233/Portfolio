@@ -1,0 +1,141 @@
+{
+  "brand": "KIRI HOUSE",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Khung cửa trượt shoji: ảnh được đóng trong khung kẻ mảnh như ô cửa, lưới tỷ lệ chiếu tatami bất đối xứng, đường kẻ mảnh màu gỗ tuyết tùng nối các trang",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nghệ thuật sống tĩnh lặng",
+    "description": "Giao diện giới thiệu resort nghỉ dưỡng cao cấp theo phong cách tối giản Nhật Bản."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Tạo cảm giác tĩnh lặng ngay lần đầu, giới thiệu triết lý, kiến trúc, ba loại hình lưu trú, tiện ích và ba giá trị; dẫn sang Lưu trú và Trải nghiệm",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Ảnh phòng gỗ nhìn ra vườn, khung shoji mảnh bên trong, chữ lệch trái dưới, nút dẫn tới #philosophy" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Câu lớn + đoạn mô tả + ảnh chi tiết gỗ; một section có bụi nắng" },
+        { "id": "architecture", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh kiến trúc lớn + ảnh chi tiết, chú thích ngắn, lệch trục" },
+        { "id": "stays", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "Japanese Suite, Garden Villa, Signature Residence bố cục xen kẽ, link sang pages/stays.html" },
+        { "id": "amenities", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "5 tiện ích dạng tab dọc, mỗi tab một ảnh" },
+        { "id": "values", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Stillness, Harmony, Simplicity trên nền Sage nhạt, cột kẻ mảnh lệch nhịp" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Khối kết dẫn sang Trải nghiệm, liền với footer tối" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "japanese room garden view", "file": "https://images.unsplash.com/photo-1759310706740-e486ec5622c9?auto=format&fit=crop&w=2000&q=70", "status": "link" },
+        { "slot": "philosophy", "query": "wooden low table japanese", "file": "https://images.unsplash.com/photo-1572186891466-4bbfec8838dc?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "architecture-large", "query": "wooden house sliding door garden", "file": "https://images.unsplash.com/photo-1490713575234-cbe010982904?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "architecture-detail", "query": "window lattice tree", "file": "https://images.unsplash.com/photo-1688047974819-a8a680ecc7f8?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "stays-suite", "query": "tatami room windows", "file": "https://images.unsplash.com/photo-1496113329550-ce8886d06d54?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "stays-villa", "query": "japanese villa night garden", "file": "https://images.unsplash.com/photo-1788287997368-8b72dd6ce668?auto=format&fit=crop&w=1600&q=70", "status": "link" },
+        { "slot": "stays-residence", "query": "japanese house lush garden", "file": "https://images.unsplash.com/photo-1760301719767-5574393ea437?auto=format&fit=crop&w=1600&q=70", "status": "link" },
+        { "slot": "amenities-tea", "query": "tea ceremony kettle cups", "file": "https://images.unsplash.com/photo-1757507423608-ae47cddef75f?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "amenities-zen", "query": "zen rock garden", "file": "https://images.unsplash.com/photo-1669954807964-6e98112a6b86?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "amenities-spa", "query": "japanese outdoor foot bath", "file": "https://images.unsplash.com/photo-1785057707873-68aada1c09dd?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "amenities-dining", "query": "japanese table plates bowls", "file": "https://images.unsplash.com/photo-1740982931610-9309b6e88f30?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "amenities-water", "query": "pond rocks trees", "file": "https://images.unsplash.com/photo-1719462932338-50922d824392?auto=format&fit=crop&w=1200&q=70", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Giới thiệu",
+      "purpose": "Kể triết lý không gian, kiến trúc và vật liệu, triết lý hiếu khách; dẫn sang Lưu trú",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Tiêu đề trên nền giấy, dải ảnh hành lang gỗ tràn viền bên dưới" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Hai cột bất đối xứng, không bịa lịch sử / giải thưởng" },
+        { "id": "materials", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ba", "note": "5 yếu tố vật liệu, dải ngang kéo được" },
+        { "id": "hospitality", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "3 giá trị hiếu khách" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Lưới lệch nhịp + lightbox" },
+        { "id": "about-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Find Your Quiet Place, nút sang pages/stays.html, bụi nắng" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "wooden hallway sliding doors", "file": "https://images.unsplash.com/photo-1714070704786-8137952f7b84?auto=format&fit=crop&w=2000&q=70", "status": "link" },
+        { "slot": "story", "query": "japanese garden wooden house", "file": "https://images.unsplash.com/photo-1785641891392-780f6ff76c04?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "materials-wood", "query": "wooden bench window", "file": "https://images.unsplash.com/photo-1512972972907-6d71529c5e92?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "materials-shoji", "query": "shoji sliding door", "file": "https://images.unsplash.com/photo-1572177496244-bc5824e820f0?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "materials-stone", "query": "stone river water", "file": "https://images.unsplash.com/photo-1605931564352-5d216e28f0f1?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "materials-light", "query": "sunlight window dark room", "file": "https://images.unsplash.com/photo-1745813083487-455c70e15557?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "materials-transition", "query": "open window garden view", "file": "https://images.unsplash.com/photo-1672599871583-c7fa8c5bcc8a?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "gallery-1", "query": "japanese hallway lamp", "file": "https://images.unsplash.com/photo-1698239307081-375b3f3da4c0?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "gallery-2", "query": "empty room sliding doors", "file": "https://images.unsplash.com/photo-1712232907812-4bd219a99a49?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "gallery-3", "query": "garden through wooden fence", "file": "https://images.unsplash.com/photo-1785641890997-a578e691bc04?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "gallery-4", "query": "window tree close up", "file": "https://images.unsplash.com/photo-1688047974819-a8a680ecc7f8?auto=format&fit=crop&w=1200&q=70", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/stays.html",
+      "title": "Lưu trú",
+      "purpose": "Giới thiệu Japanese Suite, Garden Villa, Signature Residence, tiện ích và chi tiết kiến trúc; không giá, không đặt phòng",
+      "sections": [
+        { "id": "stays-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Chữ trái, ảnh tràn mép phải" },
+        { "id": "suite", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Ảnh lớn + nội dung gọn + danh sách tiện nghi" },
+        { "id": "villa", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Đảo chiều so với Suite, nền Sage nhạt" },
+        { "id": "residence", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Ảnh ngang lớn + ảnh dọc chi tiết; ghi chú Private Onsen Villa là lựa chọn bổ sung" },
+        { "id": "facilities", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "5 tiện ích, lưới 7+5 / 4+4+4" },
+        { "id": "details", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Ảnh cận cảnh trên nền Ink, lightbox" },
+        { "id": "stays-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "A Space to Simply Be, nút về trang chủ và Giới thiệu" }
+      ],
+      "images": [
+        { "slot": "stays-hero", "query": "japanese garden from building", "file": "https://images.unsplash.com/photo-1785641891348-bb5704866af3?auto=format&fit=crop&w=2000&q=70", "status": "link" },
+        { "slot": "suite-large", "query": "japanese room traditional", "file": "https://images.unsplash.com/photo-1753552502151-93914d36ecf2?auto=format&fit=crop&w=1600&q=70", "status": "link" },
+        { "slot": "suite-detail", "query": "room table vase", "file": "https://images.unsplash.com/photo-1722510154425-abad1f97b362?auto=format&fit=crop&w=1000&q=70", "status": "link" },
+        { "slot": "villa-large", "query": "japanese house sliding doors night garden", "file": "https://images.unsplash.com/photo-1788287997368-8b72dd6ce668?auto=format&fit=crop&w=1600&q=70", "status": "link" },
+        { "slot": "villa-detail", "query": "room sliding glass door", "file": "https://images.unsplash.com/photo-1693664681816-f7f8422758f0?auto=format&fit=crop&w=1000&q=70", "status": "link" },
+        { "slot": "residence-wide", "query": "ryokan building tree", "file": "https://images.unsplash.com/photo-1686933021211-19a669f3acb2?auto=format&fit=crop&w=1800&q=70", "status": "link" },
+        { "slot": "residence-vertical", "query": "wooden door concrete floor", "file": "https://images.unsplash.com/photo-1628843481844-23e13541c57c?auto=format&fit=crop&w=1000&q=70", "status": "link" },
+        { "slot": "facilities-tea", "query": "tea ceremony kettle cups", "file": "https://images.unsplash.com/photo-1757507423608-ae47cddef75f?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "facilities-zen", "query": "zen rock garden", "file": "https://images.unsplash.com/photo-1669954807964-6e98112a6b86?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "facilities-spa", "query": "japanese outdoor foot bath", "file": "https://images.unsplash.com/photo-1785057707873-68aada1c09dd?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "facilities-restaurant", "query": "japanese table plates bowls", "file": "https://images.unsplash.com/photo-1740982931610-9309b6e88f30?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "facilities-water", "query": "pond rocks trees", "file": "https://images.unsplash.com/photo-1719462932338-50922d824392?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "details-shoji", "query": "gridded window", "file": "https://images.unsplash.com/photo-1757507423552-94e7b4221f7e?auto=format&fit=crop&w=1000&q=70", "status": "link" },
+        { "slot": "details-wood", "query": "wooden framed window", "file": "https://images.unsplash.com/photo-1612014449419-ac12de2f2181?auto=format&fit=crop&w=1000&q=70", "status": "link" },
+        { "slot": "details-door", "query": "wooden framed glass door", "file": "https://images.unsplash.com/photo-1610333684078-c89bd57f2e46?auto=format&fit=crop&w=1400&q=70", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Trải nghiệm",
+      "purpose": "Giới thiệu trà đạo, thiền và vườn thiền, ẩm thực theo mùa, chăm sóc bản thân, khám phá văn hóa; không đặt lịch",
+      "sections": [
+        { "id": "exp-hero", "catalog": "hero", "variant": "hero-scene", "source": "ba", "note": "Ảnh vườn sỏi + lớp sương mây mỏng (atmos)" },
+        { "id": "tea", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Tea Ritual" },
+        { "id": "meditation", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh rộng + khoảng trắng" },
+        { "id": "dining", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Seasonal Dining, không tuyên bố nguồn nguyên liệu" },
+        { "id": "wellness", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Wellness & Reconnection" },
+        { "id": "culture", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Không có dữ liệu địa điểm → khối chữ, không bịa địa danh" },
+        { "id": "exp-gallery", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Bố cục tự do, hover nhẹ, lightbox" },
+        { "id": "exp-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Return to What Matters, nút về trang chủ" }
+      ],
+      "images": [
+        { "slot": "exp-hero", "query": "raked gravel garden trees", "file": "https://images.unsplash.com/photo-1776439993069-05fbfe3b1a6a?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "tea", "query": "tea set teapot wooden table", "file": "https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "meditation-wide", "query": "zen garden raked sand", "file": "https://images.unsplash.com/photo-1762876244984-f9d493cf4aa1?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "meditation-moss", "query": "green moss close up", "file": "https://images.unsplash.com/photo-1580873317794-1e8b7816efbb?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "dining", "query": "japanese multi course meal", "file": "https://images.unsplash.com/photo-1766582931800-fd79665257fa?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "wellness", "query": "wooden bathtub japanese", "file": "https://images.unsplash.com/photo-1786343453481-3e53d1aa7108?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "culture", "query": "local culture", "file": null, "status": "none" },
+        { "slot": "gallery-pond", "query": "pond green trees", "file": "https://images.unsplash.com/photo-1635934962593-2bb931058a71?auto=format&fit=crop&w=1400&q=70", "status": "link" },
+        { "slot": "gallery-light", "query": "tatami room sunlight sliding doors", "file": "https://images.unsplash.com/photo-1712232907812-4bd219a99a49?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "gallery-tea", "query": "tea ceremony", "file": "https://images.unsplash.com/photo-1757507423608-ae47cddef75f?auto=format&fit=crop&w=1200&q=70", "status": "link" },
+        { "slot": "gallery-food", "query": "japanese food", "file": "https://images.unsplash.com/photo-1740982931610-9309b6e88f30?auto=format&fit=crop&w=1200&q=70", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Đúng 4 trang theo chú thích BA (index, about, stays, experiences); không có trang Liên hệ riêng, thông tin liên hệ mẫu nằm ở footer",
+    "BA yêu cầu công tắc VI / EN (localStorage, giữ trang đang xem, đổi thuộc tính lang) → ghi đè mục 'không tạo bộ chuyển ngôn ngữ' của concept; mặc định tiếng Việt, lang=vi",
+    "Các tiêu đề BA viết bằng tiếng Anh (The Art of Quiet Living…) hiển thị nguyên văn ở chế độ EN, chế độ VI dùng bản dịch tiếng Việt",
+    "Màu và font theo BA (Ink Black, Rice Paper, Cedar, Sage, Vermilion; Cormorant Garamond + Be Vietnam Pro) thay cho bảng màu / font preset Nature; góc vuông toàn bộ (BA tránh bo góc lớn) thay cho ảnh vòm của preset",
+    "Công cụ tìm ảnh lỗi 403 → toàn bộ ảnh dùng link Unsplash đã kiểm qua link_image; tool giới hạn 40 link nên ảnh tiện ích ở trang chủ dùng lại ảnh tiện ích của trang Lưu trú (cùng một khu), ảnh teaser Garden Villa / chi tiết kiến trúc ở trang chủ dùng lại ảnh của trang Lưu trú / Giới thiệu, và gallery trang Trải nghiệm tổng hợp lại vài ảnh từ các trang khác; bỏ 2 ảnh lệch tông (chùa sặc sỡ, bóng cửa tím) sau khi tự xem",
+    "Không có hiệu ứng bay / xoay / parallax mạnh theo BA: chỉ fade, clip ảnh, parallax 0.08 ở hero, bụi nắng mỏng ở một section mỗi trang (mây atmos ở hero Trải nghiệm trông như hoạt hình nên đổi sang sương bằng gradient)",
+    "Cultural Discovery không có dữ liệu địa điểm → khối chữ nêu hướng khám phá chung, không nêu địa danh"
+  ],
+  "limitations": [
+    "Không có đặt phòng, đặt lịch spa / trà đạo / thiền, giỏ hàng, thanh toán (theo yêu cầu BA)",
+    "Số điện thoại, email, địa chỉ ở footer là thông tin mẫu",
+    "Ảnh là link ngoài từ Unsplash, cần thay bằng ảnh thật của resort khi có"
+  ]
+}

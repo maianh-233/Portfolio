@@ -1,0 +1,98 @@
+{
+  "brand": "CLOUD NINE BAKERY",
+  "language": "en",
+  "preset": "dreamy",
+  "motionLevel": 3,
+  "visualIdea": "Bánh lơ lửng giữa mây: ảnh sản phẩm đặt trong khung bo mềm như đám mây trôi nhẹ trên bầu trời pastel (xanh trời, lavender, hồng phấn) đổi sắc khi cuộn, kết trang bằng bầu trời đêm có sao",
+  "purposeInferred": "",
+  "theme": { "tagline": "Một chút mộng mơ trong từng miếng bánh", "description": "Giao diện tiệm bánh và trà sữa phong cách mộng mơ trên mây, tông pastel." },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu thương hiệu bằng cảnh bánh lơ lửng trên mây, dẫn sang thực đơn và câu chuyện, kết bằng thông tin ghé tiệm",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-scene", "source": "ai", "note": "Headline 'A Little Dream in Every Bite' theo chú thích BA; bánh nổi trong khung mây, data-clouds + dust + data-layers" },
+        { "id": "welcome", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Lời ngỏ ngắn từ căn bếp, link sang About qua hero" },
+        { "id": "scene", "catalog": "story", "variant": "story-pinned", "source": "ai", "note": "Cảnh ghim 3 câu về meringue" },
+        { "id": "signatures", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ai", "note": "4 món đặc trưng, kéo ngang, link sang pages/menu.html" },
+        { "id": "voices", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "Carousel 3 đánh giá" },
+        { "id": "visit", "catalog": "cta", "variant": "cta-sky", "source": "ai", "note": "Địa chỉ, giờ mở cửa, gọi điện, sao chép số, bản đồ; data-particles stars" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "strawberry cream cake", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_Cake_I.jpg?width=1600", "status": "link" },
+        { "slot": "hero-meringue", "query": "meringue kisses", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavender_meringue_%285895316063%29.jpg?width=700", "status": "link" },
+        { "slot": "hero-mousse", "query": "pink mousse cake", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Starbucks_rose_flavored_%26_white_peach_mousse_cake_%281%29.jpg?width=700", "status": "link" },
+        { "slot": "welcome", "query": "baker piping cream", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Piping_mini_cream_puffs.jpg?width=1000", "status": "link" },
+        { "slot": "scene", "query": "toasted meringue texture", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Meringue_dream_topping.jpg?width=1920", "status": "link" },
+        { "slot": "signatures-1", "query": "strawberry cream cake whole", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_Cream_Cake.jpg?width=1000", "status": "link" },
+        { "slot": "signatures-2", "query": "raspberry mousse cake", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Cake_Kobo_Raspberry_Mousse_%2831228687021%29.jpg?width=1000", "status": "link" },
+        { "slot": "signatures-3", "query": "berry fruit tart", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Blueberry_Strawberry_Fruit_Tart_1_2016-05-23.jpg?width=1000", "status": "link" },
+        { "slot": "signatures-4", "query": "pearl milk tea", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Pearl_Milk_Tea_in_Chun_Shui_Tang.jpg?width=1000", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/menu.html",
+      "title": "Menu",
+      "purpose": "Thực đơn dạng gallery thẻ không đều, lọc theo bánh kem / mousse / pastry / đồ uống, gợi ý kết hợp bánh và trà",
+      "sections": [
+        { "id": "menu-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "menu", "catalog": "gallery", "variant": "gallery-filter", "source": "ai", "note": "Masonry 15 món, data-filter-group + lightbox, theo chú thích BA" },
+        { "id": "pairings", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "3 cặp bánh + đồ uống" },
+        { "id": "visit", "catalog": "cta", "variant": "cta-sky", "source": "ai", "note": "Nói rõ thực đơn chỉ để xem, không đặt hàng online" }
+      ],
+      "images": [
+        { "slot": "menu-strawberry-slice", "query": "strawberry cake slice", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_cream_cake_-_Rawlab_2025-08-31.jpg?width=1000", "status": "link" },
+        { "slot": "menu-berry-mousse", "query": "berry mousse cake", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Mousse_cake_7.jpg?width=1000", "status": "link" },
+        { "slot": "menu-meringue", "query": "homemade meringues", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Homemade_meringues_%2816961016019%29.jpg?width=1000", "status": "link" },
+        { "slot": "menu-milk-tea", "query": "classic milk tea", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Classic_bubble_tea.jpg?width=1000", "status": "link" },
+        { "slot": "menu-crepe-cake", "query": "strawberry crepe cake", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_crape_shortcake2.jpg?width=1000", "status": "link" },
+        { "slot": "menu-macarons", "query": "pastel macarons", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Macarons_Pixabay.jpg?width=1000", "status": "link" },
+        { "slot": "menu-passion-dome", "query": "passion fruit mousse", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Blackberry_passionfruit_mousse_-_Jacob%27s_Bakery_%2B_Cafe_2025-06-19.jpg?width=1000", "status": "link" },
+        { "slot": "menu-matcha-milk-tea", "query": "matcha bubble tea", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Matcha_Bubble_Milk_Tea%2C_Apr_2026.jpg?width=1000", "status": "link" },
+        { "slot": "menu-cream-puffs", "query": "cream puffs choux", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Choux_%C3%A0_la_cr%C3%A8me_%2819387655069%29.jpg?width=1000", "status": "link" },
+        { "slot": "menu-celebration-cake", "query": "celebration layer cake", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beautifully_arranged_dessert_table_features_a_macaron_tower_and_a_multi-layered_cake%2C_set_in_a_garden_during_a_spring_celebration.jpg?width=1000", "status": "link" },
+        { "slot": "menu-mango-mousse", "query": "mango mousse cake", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_mousse_cake_%288201823494%29.jpg?width=1000", "status": "link" },
+        { "slot": "menu-croissant", "query": "butter croissant", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Croissant%2C_whole.jpg?width=1000", "status": "link" },
+        { "slot": "menu-matcha-latte", "query": "matcha latte art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Matcha_tea_latte_with_rosetta_latte_art.jpg?width=1000", "status": "link" },
+        { "slot": "menu-eclair", "query": "pistachio eclair", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Pistachio_eclair_-_Milfey_Patisserie_2026-05-02.jpg?width=1000", "status": "link" },
+        { "slot": "menu-fruit-tart", "query": "strawberry kiwi tart", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%2C_kiwi_and_blueberry_tart_by_rmkoske.jpg?width=1000", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Cảm hứng sáng tạo, câu chuyện đằng sau những chiếc bánh và không gian tiệm",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "inspiration", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Cảm hứng sáng tạo, câu chuyện tiệm" },
+        { "id": "space", "catalog": "features", "variant": "features-bento", "source": "ai", "note": "Không gian tiệm, 5 ô" },
+        { "id": "day", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Một ngày làm bánh" },
+        { "id": "faq", "catalog": "faq", "variant": "accordion", "source": "ai", "note": "" },
+        { "id": "visit", "catalog": "cta", "variant": "cta-sky", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "bakery cafe interior", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Tatte_Bakery%2C_Beacon_Hill.jpg?width=1400", "status": "link" },
+        { "slot": "inspiration", "query": "meringue strawberries", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Yummy_yummy_in_my_tummy_meringue_drops_with_strawberries.jpg?width=1000", "status": "link" },
+        { "slot": "space-counter", "query": "patisserie interior counter", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Interior_of_Vete-Katten_on_Kungsgatan%2C_Stockholm%2C_2022.jpg?width=1200", "status": "link" },
+        { "slot": "space-seating", "query": "bakery seating corner", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Seattle_-_Stone_House_Cafe%2C_Bar%2C_and_Bakery_11_-_bakery_interior.jpg?width=1000", "status": "link" },
+        { "slot": "space-whisk", "query": "whisking meringue", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Making_meringue_-_whisking.jpg?width=1000", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ 3 trang (Home, Menu, About) theo chú thích BA 'tối đa 3 trang'",
+    "Thêm nút chuyển EN / VI trên header mọi trang (chú thích BA yêu cầu song ngữ, ghi đè mục 'không tạo bộ chuyển ngôn ngữ'); mặc định tiếng Anh, lang='en', bản tiếng Việt lưu trong data-vi và đổi lang='vi' khi chọn",
+    "Đổi font preset (Shippori Mincho / Zen Kaku Gothic New thiếu dấu tiếng Việt) sang Cormorant Garamond (serif mềm, thanh thoát) + Nunito, cả hai đủ ký tự tiếng Việt",
+    "Màu dùng theo art direction BA: #C9E4F5, #DCD2F4, #FFFDFB, #F7DDE6; thêm dusk #4E4A7E cho chữ nút / điểm nhấn để đạt tương phản AA",
+    "Chuyển động Level 3 nhưng nhẹ theo chú thích BA: mây trôi, ảnh trôi chậm, fade-in, một cảnh ghim; không tilt / 3D / con trỏ tùy biến",
+    "Không có giỏ hàng, thanh toán, form đặt bánh (theo chú thích BA); bánh sinh nhật chỉ hướng dẫn gọi điện / ghé tiệm",
+    "Công cụ search_images (openverse) quá thời gian chờ nên toàn bộ ảnh dùng link Wikimedia Commons đã kiểm qua link_image"
+  ],
+  "limitations": [
+    "Thực đơn và giá là nội dung mẫu, cần khách xác nhận",
+    "Địa chỉ, số điện thoại, email là dữ liệu mẫu",
+    "Ảnh là ảnh Wikimedia Commons dùng bằng link ngoài, nên thay bằng ảnh sản phẩm thật của tiệm",
+    "Lựa chọn ngôn ngữ lưu bằng localStorage của trình duyệt"
+  ]
+}

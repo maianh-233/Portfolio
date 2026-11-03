@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt bánh thành công | Tiệm Bánh Kem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-006 Đặt bánh thành công: FR-016, FR-018. Confetti (CMP-16) chạy 1 lần. -->
+<body data-screen="SCR-006" data-layout="public" data-nav="cakes" class="bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="mx-auto max-w-2xl px-4 md:px-6 pt-10 md:pt-14">
+    <div class="text-center">
+      <div id="cake-icon" class="mx-auto grid place-items-center w-24 h-24 rounded-full bg-primary-soft text-primary-strong text-5xl shadow-soft"><i class="ph-fill ph-cake" aria-hidden="true"></i></div>
+      <h1 class="mt-6 font-display font-bold text-[34px] md:text-[44px] leading-[1.15] text-primary-strong pb-1" data-i18n="ok.title">Yay! Tiệm nhận được đơn của bạn rồi nè!</h1>
+      <p class="mt-3 text-[17px] leading-relaxed text-ink-muted max-w-[52ch] mx-auto" data-i18n="ok.msg"></p>
+    </div>
+
+    <div id="result" class="mt-8 space-y-4"></div>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:justify-center">
+      <a id="btn-track" href="tra-cuu-don.html" class="btn btn-primary h-12 px-7"><i class="ph ph-magnifying-glass" aria-hidden="true"></i><span data-i18n="nav.track">Tra cứu đơn</span></a>
+      <a href="index.html" class="btn btn-secondary h-12 px-7" data-i18n="cta.home">Về trang chủ</a>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script>
+    /* SCR-006: vào thẳng khi không có đơn vừa tạo -> về trang chủ. Tải lại không chạy lại confetti. */
+    App.onReady(function () {
+      var last = Store.get('last_order', null);
+      var o = last && Orders.byCode(last.code);
+      if (!o) { location.replace('index.html'); return; }
+      var S = DB.get('settings');
+
+      function render() {
+        var c = Orders.calc(o);
+        var items = o.items.map(function (it) {
+          return '<li class="flex gap-3"><img src="' + it.image + '" alt="" class="w-14 h-14 rounded-xl object-cover bg-beige"><div class="flex-1"><p class="font-bold">' + Fmt.esc(it.cakeName) + ' · ' + it.sizeLabel + ' · x' + it.qty + '</p>' +
+            (it.message ? '<p class="text-sm text-ink-muted">Lời chúc: “' + Fmt.esc(it.message) + '”</p>' : '') + '</div><p class="font-bold tabular-nums">' + Fmt.money(it.unitPrice * it.qty) + '</p></li>';
+        }).join('');
+        function line(l, v, cls) { return '<div class="flex justify-between gap-3 ' + (cls || '') + '"><dt>' + l + '</dt><dd class="tabular-nums text-right">' + v + '</dd></div>'; }
+        var guide;
+        if (o.payment.method === 'bank') {
+          guide = '<div class="flex gap-4 mt-3"><button type="button" id="qr" class="shrink-0 w-24 h-24 rounded-xl overflow-hidden bg-white" aria-label="Phóng to mã QR"><img src="' + S.qrImage + '" alt="Mã QR chuyển khoản (ảnh minh họa)" class="w-full h-full object-cover"></button>' +
+            '<dl class="text-[15px] space-y-0.5"><div><dt class="inline text-ink-muted">Ngân hàng: </dt><dd class="inline font-bold">' + S.bank.name + '</dd></div><div><dt class="inline text-ink-muted">Số TK: </dt><dd class="inline font-bold tabular-nums">' + S.bank.accountNo + '</dd></div><div><dt class="inline text-ink-muted">Chủ TK: </dt><dd class="inline font-bold">' + S.bank.accountName + '</dd></div><div><dt class="inline text-ink-muted">Nội dung: </dt><dd class="inline font-extrabold">' + o.code + '</dd></div></dl></div>';
+        } else if (o.payment.method === 'wallet') {
+          guide = '<dl class="mt-3 text-[15px] space-y-0.5"><div><dt class="inline text-ink-muted">MoMo: </dt><dd class="inline font-bold tabular-nums">' + Fmt.phone(S.momo) + '</dd></div><div><dt class="inline text-ink-muted">ZaloPay: </dt><dd class="inline font-bold tabular-nums">' + Fmt.phone(S.zalopay) + '</dd></div><div><dt class="inline text-ink-muted">Nội dung: </dt><dd class="inline font-extrabold">' + o.code + '</dd></div></dl>';
+        } else {
+          guide = '<p class="mt-2 text-[15px]">Bạn chọn trả tiền mặt. Tiệm sẽ trao đổi cách đặt cọc khi gọi xác nhận đơn.</p>';
+        }
+
+        $('#result').innerHTML =
+          /* Mã đơn */
+          '<div class="rounded-3xl bg-white shadow-soft p-5 md:p-6">' +
+          '<div class="flex flex-wrap items-center justify-between gap-3"><div><p class="text-sm font-bold text-ink-muted">Mã đơn của bạn</p><p class="text-[28px] font-extrabold tracking-wide tabular-nums">' + o.code + '</p></div>' +
+          '<button type="button" class="btn btn-secondary h-11 px-5" data-action="copy" data-copy="' + o.code + '" data-copy-msg="Đã sao chép mã đơn"><i class="ph ph-copy" aria-hidden="true"></i>Sao chép</button></div>' +
+          '<p class="mt-3 flex flex-wrap gap-x-2 text-[15px]"><span class="font-bold">' + Fmt.date(o.delivery.date) + '</span><span>· ' + o.delivery.slot + '</span><span>· ' + (o.delivery.type === 'delivery' ? 'Giao tận nơi' : 'Nhận tại tiệm') + '</span></p>' +
+          '<ul class="mt-4 pt-4 border-t border-beige space-y-3">' + items + '</ul>' +
+          '<dl class="mt-4 pt-4 border-t border-beige space-y-1.5 text-[15px]">' +
+          line('Tạm tính', Fmt.money(c.subtotal)) +
+          (c.discount ? line('Giảm giá', '-' + Fmt.money(c.discount), 'text-primary-strong') : '') +
+          (c.points ? line('Dùng điểm', '-' + Fmt.money(c.points), 'text-mint-strong') : '') +
+          line('Phí giao', c.ship == null ? 'Tiệm báo khi gọi xác nhận' : Fmt.money(c.ship)) +
+          line('<b>Tiền cọc (' + o.depositRate + '%)</b>', '<b>' + Fmt.money(c.deposit) + '</b>') +
+          line('Còn lại khi nhận bánh', Fmt.money(Math.max(0, c.total - c.deposit)) + (c.ship == null ? ' + phí giao' : ''), 'text-ink-muted') +
+          '</dl></div>' +
+          /* Hướng dẫn cọc */
+          '<div class="rounded-3xl bg-mint/60 polka-mint p-5 md:p-6"><h2 class="flex items-center gap-2 font-extrabold text-mint-strong"><i class="ph-fill ph-hand-coins text-2xl" aria-hidden="true"></i>Hướng dẫn đặt cọc</h2>' +
+          '<p class="mt-1 text-[15px]">Sau khi tiệm gọi xác nhận, bạn chuyển cọc tới:</p>' + guide + '</div>' +
+          (o.customer.email ? '<p class="text-center text-sm text-ink-muted flex justify-center gap-2"><i class="ph ph-envelope-simple text-lg" aria-hidden="true"></i>Tiệm đã gửi xác nhận về email ' + Fmt.esc(o.customer.email) + '</p>' : '');
+
+        var qr = $('#qr'); if (qr) qr.onclick = function () { Lightbox.open([{ src: S.qrImage, alt: 'Mã QR chuyển khoản' }], 0); };
+        $('#btn-track').href = 'tra-cuu-don.html?code=' + o.code + '&phone=' + o.customer.phone;
+      }
+      render();
+      document.addEventListener('langchange', render);
+
+      if (last.fresh) {
+        var played = Confetti.fire();
+        if (!played) $('#cake-icon').classList.add('bounce-once'); // giảm chuyển động: không confetti, bánh nhún nhẹ
+        last.fresh = false; Store.set('last_order', last);
+      }
+    });
+  </script>
+</body>
+</html>

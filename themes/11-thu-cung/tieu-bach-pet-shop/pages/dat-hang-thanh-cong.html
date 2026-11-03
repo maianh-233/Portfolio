@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt hàng thành công · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-004" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-004 Đặt hàng thành công: mã đơn, giao dự kiến, PaymentQR (CK / QR), điểm sẽ cộng, gợi ý mua thêm; đơn pate chay nhắc điều kiện lần cuối. ?id=<orderId> */
+  (function () {
+    if (Perm.role() === 'ROLE-02' && !App.param('id')) { location.replace(Perm.url('pages/don-hang-cua-toi.html')); return; }
+    Layout.mount({ title: 'Đặt hàng thành công', breadcrumb: [['Đơn hàng của tôi', 'pages/don-hang-cua-toi.html'], ['Đặt hàng thành công']] }, function (main) {
+      var U = Perm.url, esc = UI.esc, S = MOCK.settings;
+      var cus = App.customer();
+      var o = DemoStore.get('orders', App.param('id'));
+      if (!o || !cus || o.customerId !== cus.id) {
+        main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 py-6 md:px-6 lg:px-8"><div class="rounded-xl border border-neutral-200 bg-white">' + UI.emptyState({ title: 'Không tìm thấy đơn hàng', action: UI.button({ label: 'Đơn hàng của tôi', href: U('pages/don-hang-cua-toi.html') }) }) + '</div></div>');
+        return;
+      }
+      var pate = o.loai_don === 'PATE_CHAY', bank = o.cach_thanh_toan === 'CHUYEN_KHOAN' || o.cach_thanh_toan === 'QR';
+      function eta() {
+        if (pate) return UI.fmt.date(o.ngay_giao_du_kien);
+        if (o.cach_giao === 'TU_LAY') return 'Cửa hàng sẽ gọi khi hàng sẵn sàng';
+        if (o.cach_giao === 'TU_GIAO') return 'Trong ngày hoặc hôm sau';
+        return '2 đến 4 ngày';
+      }
+      main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-6 pt-6 md:px-6 lg:px-8" data-root>' + UI.skeleton(4) + '</div><div data-suggest></div>');
+
+      function paint() {
+        o = DemoStore.get('orders', o.id);
+        var head = '<div class="flex flex-col items-center gap-3 text-center anim-in"><span class="inline-flex size-28 items-center justify-center rounded-full bg-primary-100" data-hero-cat>' + UI.mascot(84, 'happy') + '</span>' +
+          '<h1 class="text-3xl font-extrabold text-neutral-800">' + (pate ? 'Đã gửi đặt trước pate chay!' : 'Đặt hàng thành công!') + '</h1>' +
+          '<p class="max-w-md text-base text-neutral-600">' + (pate ? 'Cửa hàng sẽ gọi điện xác nhận với bạn.' : 'Cảm ơn bạn đã tin chọn Tiểu Bạch. Cửa hàng sẽ xác nhận đơn sớm nhất.') + '</p>' +
+          '<p class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm"><span class="text-sm text-neutral-600">Mã đơn</span><span class="font-mono text-lg font-extrabold text-neutral-800">' + esc(o.code) + '</span>' + UI.iconButton({ icon: 'copy', label: 'Sao chép mã đơn', size: 'sm', attrs: { 'data-copy': o.code, 'data-copy-msg': 'Đã sao chép' } }) + '</p></div>';
+        var info = UI.card({ title: 'Thông tin đơn', body: UI.descriptionList([
+          { label: pate ? 'Ngày giao dự kiến' : 'Giao dự kiến', value: '<b>' + esc(eta()) + '</b>' },
+          { label: 'Cách nhận', value: o.cach_giao === 'TU_LAY' ? 'Nhận tại cửa hàng' : esc(App.SHIP[o.cach_giao]) + (o.dia_chi_giao ? '<span class="block text-sm text-neutral-600">' + esc(o.dia_chi_giao) + '</span>' : '') , full: true },
+          { label: 'Cách thanh toán', value: esc(App.PAY_METHOD[o.cach_thanh_toan]) },
+          { label: pate ? 'Tạm tính (chưa gồm phí giao)' : 'Tổng cộng', value: '<b class="text-xl font-extrabold tabular-nums">' + UI.fmt.money(o.tong_cong) + '</b>' },
+          pate ? { label: 'Tiền cọc sau khi xác nhận', value: '<b>' + UI.fmt.money(o.tien_coc) + '</b>' } : { label: 'Điểm tích lũy', value: '<span class="inline-flex items-center gap-1.5 rounded-full bg-secondary-100 px-3 py-1 text-sm font-bold text-secondary-700">' + UI.icon('gift', 'size-4') + '+' + UI.fmt.number(o.diem) + ' điểm sẽ được cộng khi đơn giao thành công</span>', full: true }
+        ], 1) });
+        var side = pate ? UI.patePolicyNotice('alert', { title: 'Bước tiếp theo', items: ['Cửa hàng sẽ gọi điện xác nhận trong giờ mở cửa', 'Bạn chuyển cọc 200.000đ (thông tin chuyển khoản hiện trong chi tiết đơn sau khi xác nhận)', 'Nhận pate sau khoảng 7 ngày (dự kiến ' + UI.fmt.dm(o.ngay_giao_du_kien) + ')', 'Pate chay không áp dụng đổi trả'] })
+          : bank ? UI.paymentQR({ bank: S.bank, account: S.account, holder: S.holder, amount: o.tong_cong, content: o.code, reported: !!o.bao_da_ck, paid: o.trang_thai_thanh_toan === 'DA_THANH_TOAN' })
+            : UI.alert({ tone: 'info', title: 'Thanh toán khi nhận hàng', text: 'Bạn chuẩn bị ' + UI.fmt.money(o.tong_cong) + ' khi nhận hàng nhé.' });
+        main.querySelector('[data-root]').innerHTML = head +
+          '<div class="mt-8 grid gap-5 md:grid-cols-2"><div class="order-2 md:order-1 min-w-0">' + info + '</div><div class="order-1 md:order-2 min-w-0">' + side + '</div></div>' +
+          '<div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">' + UI.button({ label: 'Xem đơn hàng', size: 'lg', href: U('pages/chi-tiet-don.html?id=' + o.id), cls: 'w-full sm:w-auto' }) + UI.button({ label: 'Tiếp tục mua sắm', size: 'lg', variant: 'outline', href: U('pages/san-pham.html'), cls: 'w-full sm:w-auto' }) + '</div>';
+      }
+      setTimeout(function () {
+        paint();
+        UI.confetti(main.querySelector('[data-hero-cat]'), 36);
+        var bought = o.items.map(function (i) { return i.productId; }), pets = {};
+        o.items.forEach(function (i) { var p = i.productId && App.product(i.productId); if (p) p.pet_type_ids.forEach(function (t) { pets[t] = 1; }); });
+        var sug = App.products().filter(function (p) { return !p.la_pate && !App.isOut(p) && bought.indexOf(p.id) < 0 && (!Object.keys(pets).length || p.pet_type_ids.some(function (t) { return pets[t]; })); }).sort(function (a, b) { return b.sold30 - a.sold30; }).slice(0, 4);
+        if (sug.length) main.querySelector('[data-suggest]').innerHTML = UI.section({ title: 'Gợi ý mua thêm cho Boss', body: '<div class="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 no-scrollbar md:mx-0 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:px-0 lg:grid-cols-4">' + sug.map(function (p) { return '<div class="w-1/2 shrink-0 snap-start md:w-auto">' + App.productCard(p) + '</div>'; }).join('') + '</div>' });
+      }, 400);
+      main.addEventListener('click', function (e) {
+        if (e.target.closest('[data-paid-report]')) {
+          DemoStore.update('orders', o.id, { bao_da_ck: new Date().toISOString() });
+          UI.toast('Đã báo cửa hàng. Cửa hàng sẽ kiểm tra và xác nhận sớm.', 'success'); paint();
+        }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

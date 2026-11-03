@@ -1,0 +1,84 @@
+{
+  "slug": "azure-haven",
+  "name": "AZURE HAVEN",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "AZURE HAVEN",
+    "purpose": "Xây dựng website giới thiệu AZURE HAVEN, một resort nghỉ dưỡng nhiệt đới cao cấp bên bờ biển. Website phải truyền tải cảm giác thư giãn, tự do, riêng tư và sang trọng thông qua hình ảnh thiên nhiên, không gian mở và bố cục giàu tính thẩm mỹ.\n\nĐây là website giới thiệu thương hiệu, không phải nền tảng giao dịch.",
+    "audience": "Nhắm đến khách du lịch muốn lưu trú",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Bảng màu chủ đạo:\n- Deep Ocean: #123B46\n- Turquoise: #55B9B2\n- Sand Beige: #E9D9BE\n- Warm White: #FAF8F2\n- Palm Green: #667C59\nART DIRECTION\nPhong cách Tropical Luxury kết hợp Contemporary Resort Design.\nSử dụng hình ảnh biển xanh ngọc, bãi cát sáng, hàng dừa, hồ bơi vô cực và villa mở ra đại dương.\nBảng màu gồm Deep Ocean #123B46, Turquoise #55B9B2, Sand Beige #E9D9BE, Warm White #FAF8F2 và Palm Green #667C59.\nTypography kết hợp serif thanh lịch cho tiêu đề và sans-serif hiện đại cho nội dung. Tiêu đề lớn, khoảng cách chữ thoáng, hạn chế chữ in hoa toàn bộ.\n\n3. TRANG CHỦ — INDEX.HTML\n\nHeader nền trong suốt khi bắt đầu, chuyển sang nền sáng khi cuộn.\n\nLogo AZURE HAVEN đặt bên trái; menu và công tắc VI/EN đặt bên phải.\n\nHero toàn màn hình sử dụng ảnh resort ven biển chất lượng cao.\n\nTiêu đề lớn: “Where the Ocean Meets Serenity”.\n\nNội dung giới thiệu ngắn về thiên đường nghỉ dưỡng nhiệt đới.\n\nNút điều hướng “Khám phá resort”, dẫn đến trang giới thiệu.\n\nSection giới thiệu resort sử dụng bố cục hai cột bất đối xứng: một ảnh lớn, một đoạn văn ngắn.\n\nSection phòng nghỉ và villa trình bày bằng các thẻ ảnh lớn, có tên, mô tả và nút xem chi tiết.\n\nSection tiện ích giới thiệu hồ bơi vô cực, nhà hàng, spa và khu vườn nhiệt đới.\n\nSection trải nghiệm nổi bật sử dụng ảnh tràn chiều rộng và chữ phủ nhẹ trên ảnh.\n\nFooter nền Deep Ocean, chứa logo, giới thiệu ngắn, điều hướng và thông tin liên hệ.\n\n4. TRANG GIỚI THIỆU — PAGES/ABOUT.HTML\n\nHero sử dụng ảnh hàng dừa và kiến trúc resort.\n\nTiêu đề: “A Sanctuary by the Sea”.\n\nKể câu chuyện thương hiệu qua các đoạn văn ngắn, giàu cảm xúc.\n\nSection triết lý nghỉ dưỡng: thiên nhiên, sự riêng tư và trải nghiệm cá nhân.\n\nSection kiến trúc và cảnh quan với ảnh lớn, bố cục xen kẽ trái – phải.\n\nSection giá trị thương hiệu sử dụng typography nổi bật và các khối nội dung tối giản.\n\nKết thúc bằng ảnh toàn cảnh resort và lời giới thiệu ngắn.\n\n5. PHÒNG, VILLA & TIỆN ÍCH — PAGES/ACCOMMODATION.HTML\n\nHero giới thiệu không gian lưu trú.\n\nPhần đầu phân biệt rõ phòng nghỉ, bungalow và villa.\n\nDanh sách loại phòng bằng các thẻ ảnh lớn, ưu tiên tỷ lệ ngang.\n\nMỗi thẻ có tên, diện tích minh họa, sức chứa tham khảo và mô tả không gian.\n\nSection villa riêng tư với ảnh lớn và phần mô tả bên cạnh.\n\nSection tiện ích sử dụng lưới hình ảnh gồm hồ bơi, spa, nhà hàng, bãi biển riêng và khu vườn.\n\nKhông hiển thị giá, tình trạng phòng, lịch trống hoặc nút đặt phòng.\n\nTRẢI NGHIỆM & KHÁM PHÁ — PAGES/EXPERIENCES.HTML\nHero thể hiện cảnh biển lúc bình minh.\nGiới thiệu các trải nghiệm: ngắm hoàng hôn, yoga bên biển, khám phá thiên nhiên, ẩm thực nhiệt đới và thư giãn tại spa.\nSử dụng gallery ảnh lớn với tỷ lệ đa dạng.\nMỗi trải nghiệm có tiêu đề, mô tả và hình ảnh riêng.\nCuối trang là section giới thiệu vẻ đẹp thiên nhiên xung quanh resort.\n\nMOTION & INTERACTION\nHero image zoom nhẹ khi tải trang.\nNội dung xuất hiện bằng fade-up khi cuộn.\nẢnh có hiệu ứng zoom nhẹ khi hover.\nCác section ảnh có thể sử dụng hiệu ứng parallax rất nhẹ.\nMenu mobile dạng drawer.\nNút chuyển ngôn ngữ hoạt động trên toàn bộ bốn trang.\n\nRÀNG BUỘC\nKhông tạo đặt phòng, đặt lịch, biểu mẫu đặt dịch vụ, giỏ hàng hoặc thanh toán.\nKhông sử dụng một bố cục lặp lại cho tất cả section. Ưu tiên hình ảnh chất lượng cao, khoảng trắng rộng và thiết kế responsive.\nSử dụng HTML, CSS và JavaScript thuần. Các liên kết nội bộ phải hoạt động chính xác. Yêu cầu có nút chuyển đổi giữa 2 ngôn ngữ Tiếng Anh và Tiếng Việt",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-28T01:45:25.292Z",
+  "updatedAt": "2026-10-28T02:13:50.048Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\azure-haven\\web",
+    "builtAt": "2026-10-28T02:13:37.344Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/accommodation.html",
+      "pages/experiences.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/accommodation.html": [],
+      "pages/experiences.html": []
+    }
+  },
+  "job": {
+    "id": "79633f12-5864-43d8-b63f-0dfec7f1ba27",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\azure-haven\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 148590,
+      "outputTokens": 172660,
+      "cacheReadTokens": 13343454,
+      "cacheCreationTokens": 343593,
+      "costUsd": 7.508119099999999,
+      "numTurns": 118,
+      "durationMs": 1437863
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-28T02:13:47.349Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 12
+  }
+}

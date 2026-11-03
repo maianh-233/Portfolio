@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết đơn · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-006" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-006 Chi tiết đơn của tôi: OrderStepper (tô bước hiện tại — q22), Alert tình huống, sản phẩm + Đánh giá, OrderSummary, PaymentQR,
+   * nhận hàng, thanh toán & hoàn tiền, đổi trả, Timeline (không hiện tên quản trị). Hành động lấy từ Workflow.actions + yêu cầu hủy pate + đổi trả.
+   * ?id=<orderId>; không có id → đơn mới nhất của tôi. */
+  (function () {
+    if (!Perm.role() || Perm.role() === 'ROLE-01') { location.replace(App.loginHref()); return; }
+    Layout.mount({ title: 'Chi tiết đơn', breadcrumb: [['Tài khoản', 'pages/tai-khoan.html'], ['Đơn hàng của tôi', 'pages/don-hang-cua-toi.html'], ['Chi tiết đơn']], account: 'orders' }, function (main) {
+      var U = Perm.url, esc = UI.esc, ic = UI.icon, S = MOCK.settings, me = App.me();
+      var mine = DemoStore.list('orders').filter(function (o) { return o.ownerId === me.id; }).sort(function (a, b) { return a.tao_luc < b.tao_luc ? 1 : -1; });
+      var id = App.param('id') || (mine[0] && mine[0].id);
+      var o = DemoStore.get('orders', id);
+      if (!o || o.ownerId !== me.id) {
+        main.innerHTML = '<div class="rounded-xl border border-neutral-200 bg-white">' + UI.emptyState({ title: 'Không tìm thấy đơn hàng', action: UI.button({ label: 'Về đơn hàng của tôi', href: U('pages/don-hang-cua-toi.html') }) }) + '</div>';
+        return;
+      }
+      var doc = App.docOf(o), pate = doc === 'DOC-BOOK-PATE_ORDER';
+      var crumb = main.closest('main').querySelector('[aria-current="page"]'); if (crumb) crumb.textContent = o.code;
+      main.innerHTML = UI.skeleton(3) + '<div class="mt-4">' + UI.skeletonBlock('h-20 rounded-xl') + '</div><div class="mt-4 grid gap-4 lg:grid-cols-3">' + UI.skeletonBlock('h-64 rounded-xl lg:col-span-2') + UI.skeletonBlock('h-64 rounded-xl') + '</div>';
+
+      function canReturn() { return !pate && o.state === 'DELIVERED' && !o.return_id && o.thoi_diem_giao && (Date.now() - new Date(o.thoi_diem_giao)) <= 24 * 3600e3 && Perm.can('BOOK.MY_RETURN.CREATE'); }
+      function reviewed(pid) { return DemoStore.list('reviews').some(function (r) { return r.product_id === pid && r.ma_don === o.code; }); }
+      function showQR() { return o.state !== 'CANCELLED' && o.trang_thai_thanh_toan === 'CHUA_THANH_TOAN' && (pate ? o.state === 'CONFIRMED' : (o.cach_thanh_toan === 'CHUYEN_KHOAN' || o.cach_thanh_toan === 'QR')); }
+
+      function actionsHtml(mobile) {
+        var b = [];
+        Workflow.actions(doc, o.state).forEach(function (t) { b.push(UI.button({ label: 'Hủy đơn', icon: 'circle-x', variant: 'danger-outline', full: mobile, attrs: { 'data-cancel': t.event, 'data-permission': t.permission } })); });
+        if (pate && ['NEW', 'CONFIRMED', 'MAKING'].indexOf(o.state) >= 0 && !o.yeu_cau_huy) b.push(UI.button({ label: 'Yêu cầu hủy', icon: 'circle-x', variant: 'danger-outline', full: mobile, attrs: { 'data-req-cancel': '', 'data-permission': 'BOOK.MY_ORDER.UPDATE' } }));
+        if (canReturn()) b.push(UI.button({ label: 'Yêu cầu đổi trả', icon: 'rotate-ccw', variant: 'outline', full: mobile, href: U('pages/yeu-cau-doi-tra.html?id=' + o.id), attrs: { 'data-permission': 'BOOK.MY_RETURN.CREATE' } }));
+        return b.join('');
+      }
+      function situation() {
+        var a = [];
+        if (pate && o.state === 'NEW') a.push(UI.alert({ tone: 'info', text: 'Cửa hàng sẽ gọi điện xác nhận với bạn trong giờ mở cửa.' }));
+        if (pate && o.state === 'CONFIRMED' && o.trang_thai_thanh_toan === 'CHUA_THANH_TOAN') a.push(UI.alert({ tone: 'warning', text: 'Vui lòng chuyển cọc 200.000đ để cửa hàng bắt đầu làm pate.' }));
+        if (o.yeu_cau_huy && o.state !== 'CANCELLED') a.push(UI.alert({ tone: 'warning', text: 'Bạn đã gửi yêu cầu hủy. Cửa hàng sẽ liên hệ xác nhận.' }));
+        var paid = (o.payments || []).reduce(function (s, p) { return s + p.so_tien; }, 0), refunded = (o.refunds || []).reduce(function (s, r) { return s + r.so_tien; }, 0);
+        if ((o.state === 'CANCELLED' || o.state === 'RETURNED') && paid > refunded) a.push(UI.alert({ tone: 'info', text: 'Cửa hàng sẽ hoàn tiền cho bạn trong thời gian sớm nhất.' }));
+        return a.join('');
+      }
+      function timeline() {
+        return UI.timeline((o.history || []).slice().reverse().map(function (h) {
+          var s = h.to ? Workflow.state(doc, h.to) : null;
+          return { at: h.at, title: h.log ? esc(h.event) : esc(s ? s.name : h.event), tone: s ? s.tone : 'info', note: h.role === 'ROLE-02' || !h.log ? h.note : '' };
+        }));
+      }
+      function paint() {
+        o = DemoStore.get('orders', o.id);
+        var ret = o.return_id ? DemoStore.get('returns', o.return_id) : null;
+        var canRate = o.state === 'DELIVERED' && Perm.can('REVIEW.REVIEW.CREATE');
+        var feeTxt = o.cach_giao === 'TU_LAY' || (o.cach_giao === 'TU_GIAO' && !o.phi_ship) ? 'Miễn phí' : o.cua_hang_chiu_ship ? 'Cửa hàng chịu phí ship' : UI.fmt.money(o.phi_ship);
+        var summary = UI.orderSummary({ title: 'Thanh toán', rows: [
+          { label: 'Tạm tính', value: UI.fmt.money(o.tam_tinh) },
+          o.giam_gia ? { label: 'Giảm giá (' + esc(o.ma_giam_gia) + ')', value: '−' + UI.fmt.money(o.giam_gia), tone: 'success' } : null,
+          { label: 'Phí giao hàng', value: pate && !o.phi_ship && o.cach_giao !== 'TU_LAY' ? 'Cửa hàng báo khi xác nhận' : feeTxt },
+          pate ? { label: 'Tiền cọc', value: UI.fmt.money(o.tien_coc) } : null],
+          total: o.tong_cong, points: pate ? '' : (o.diem_da_cong ? 'Đã cộng ' + UI.fmt.number(o.diem) + ' điểm' : '+' + UI.fmt.number(o.diem) + ' điểm khi đơn giao thành công') });
+        var qr = showQR() ? UI.paymentQR({ title: pate ? 'Chuyển cọc 200.000đ' : 'Chuyển khoản / quét mã QR', bank: S.bank, account: S.account, holder: S.holder, amount: pate ? o.tien_coc : o.tong_cong, content: o.code, reported: !!o.bao_da_ck }) : '';
+        var mobileActs = actionsHtml(true);
+
+        main.innerHTML = UI.detailHeader({ code: o.code, tags: App.typeTag(o), status: App.stateBadge(doc, o.state, 'md'), meta: 'Đặt lúc ' + UI.fmt.datetime(o.tao_luc) + (pate && o.ngay_giao_du_kien ? ' · Giao dự kiến ' + UI.fmt.date(o.ngay_giao_du_kien) : ''), actions: '<span class="hidden md:contents">' + actionsHtml(false) + '</span>' }) +
+          '<div class="rounded-xl border border-neutral-200 bg-white p-4 md:p-6">' + App.stepper(o) + '</div>' +
+          (situation() ? '<div class="mt-4 flex flex-col gap-2">' + situation() + '</div>' : '') +
+          '<div class="mt-4 grid gap-4 lg:grid-cols-3"><div class="order-2 flex min-w-0 flex-col gap-4 lg:order-1 lg:col-span-2">' +
+          UI.card({ title: 'Sản phẩm', body: '<div data-items></div>' }) +
+          UI.card({ title: 'Nhận hàng', body: UI.descriptionList([{ label: 'Người nhận', value: esc(o.ho_ten_nhan) }, { label: 'Số điện thoại', value: esc(o.so_dien_thoai_nhan) },
+            { label: 'Cách giao', value: esc(App.SHIP[o.cach_giao]) }, o.cach_giao === 'TU_LAY' ? { label: 'Nhận tại', value: esc(S.address) } : { label: 'Địa chỉ giao', value: esc(o.dia_chi_giao) },
+            o.state === 'SHIPPING' && o.don_vi_van_chuyen ? { label: 'Đơn vị vận chuyển', value: esc(o.don_vi_van_chuyen) + ' · <span class="font-mono">' + esc(o.ma_van_don) + '</span>' } : null,
+            { label: 'Ghi chú', value: esc(o.ghi_chu), full: true }]) }) +
+          UI.card({ title: 'Thanh toán & hoàn tiền', body: UI.descriptionList([{ label: 'Cách thanh toán', value: esc(App.PAY_METHOD[o.cach_thanh_toan]) }, { label: 'Trạng thái', value: App.payTag(o.trang_thai_thanh_toan) },
+            { label: 'Đã thanh toán', full: true, value: (o.payments || []).length ? '<ul class="flex flex-col gap-1">' + o.payments.map(function (p) { return '<li>' + UI.fmt.date(p.at) + ' · ' + esc(p.loai) + ' ' + UI.fmt.money(p.so_tien) + ' (' + esc(p.cach) + ')</li>'; }).join('') + '</ul>' : 'Chưa có' },
+            (o.refunds || []).length ? { label: 'Hoàn tiền', full: true, value: '<ul class="flex flex-col gap-1">' + o.refunds.map(function (r) { return '<li>' + UI.fmt.date(r.at) + ' · ' + UI.fmt.money(r.so_tien) + ' · ' + esc(r.ly_do) + '</li>'; }).join('') + '</ul>' } : null]) }) +
+          (ret ? UI.card({ title: 'Đổi trả', body: '<div class="flex flex-wrap items-center gap-2"><span class="font-mono font-extrabold">' + esc(ret.code) + '</span>' + App.stateBadge('DOC-BOOK-RETURN', ret.state) + '</div>' +
+            UI.descriptionList([{ label: 'Hình thức', value: ret.hinh_thuc === 'DOI_HANG' ? 'Đổi hàng' : 'Trả hàng, hoàn tiền' }, { label: 'Lý do', value: ret.ly_do === 'GIAO_NHAM' ? 'Giao nhầm sản phẩm' : 'Hàng bị lỗi' },
+              ret.ket_qua ? { label: 'Kết quả', value: esc(ret.ket_qua), full: true } : null, ret.ly_do_tu_choi ? { label: 'Lý do từ chối', value: esc(ret.ly_do_tu_choi), full: true } : null]) }) : '') +
+          UI.card({ title: 'Lịch sử', body: timeline() }) +
+          '<p class="text-sm text-neutral-600">Cần hỗ trợ? <a class="font-bold text-primary-700 hover:underline" href="' + U('pages/lien-he.html') + '">Liên hệ cửa hàng</a> hoặc <a class="font-bold text-primary-700 hover:underline" target="_blank" rel="noopener" href="' + esc(S.zalo) + '">nhắn Zalo</a>.</p></div>' +
+          '<aside class="order-1 lg:order-2"><div class="flex flex-col gap-4 lg:sticky lg:top-24">' + summary + qr + (canReturn() ? '<div class="hidden lg:block">' + UI.button({ label: 'Yêu cầu đổi trả', icon: 'rotate-ccw', variant: 'outline', full: true, href: U('pages/yeu-cau-doi-tra.html?id=' + o.id) }) + '</div>' : '') + '</div></aside></div>';
+
+        UI.lineItems(main.querySelector('[data-items]'), { rows: o.items.map(function (it, i) { return Object.assign({ id: i }, it); }), columns: [
+          { key: 'name', label: 'Sản phẩm', type: 'custom', render: function (it) {
+            var p = it.productId ? App.product(it.productId) : null, href = p ? App.productHref(p, it.variantId) : (it.comboId ? App.comboHref({ id: it.comboId }) : '#');
+            return '<a href="' + href + '" class="flex items-center gap-3"><span class="size-14 shrink-0 overflow-hidden rounded-md bg-neutral-100">' + UI.img({ src: it.anh, alt: '' }) + '</span><span class="min-w-0"><span class="block font-bold text-neutral-800 line-clamp-2 hover:text-primary-700">' + esc(it.ten_hang) + '</span><span class="block text-sm text-neutral-600">' + esc(it.ten_bien_the) + '</span>' +
+              (it.mon ? '<span class="block text-xs text-neutral-600">' + it.mon.map(esc).join(' · ') + '</span>' : '') + '</span></a>';
+          } },
+          { key: 'don_gia', label: 'Đơn giá', type: 'custom', align: 'right', render: function (it) { return UI.fmt.money(it.don_gia); } },
+          { key: 'so_luong', label: 'SL', type: 'custom', align: 'right', render: function (it) { return '× ' + it.so_luong; } },
+          { key: 'tt', label: 'Thành tiền', type: 'custom', align: 'right', render: function (it) { return '<b class="tabular-nums">' + UI.fmt.money(it.don_gia * it.so_luong) + '</b>'; } },
+          { key: 'rv', label: 'Đánh giá', type: 'custom', align: 'right', render: function (it) {
+            if (!canRate || !it.productId) return '<span class="text-neutral-400">—</span>';
+            return reviewed(it.productId) ? UI.tag('Đã đánh giá', 'success', 'check') : UI.button({ label: 'Đánh giá', icon: 'star', size: 'sm', variant: 'secondary', attrs: { 'data-rate': it.productId, 'data-variant': it.ten_bien_the, 'data-permission': 'REVIEW.REVIEW.CREATE' } });
+          } }] });
+
+        var old = document.getElementById('ui-sticky'); if (old) old.remove();
+        if (mobileActs) UI.stickyBar('<div class="flex gap-2">' + mobileActs + '</div>');
+      }
+
+      /* Hủy đơn (DOC-BOOK-ORDER — "Khách hủy đơn") */
+      function cancel(event) {
+        UI.confirm({ title: 'Hủy đơn ' + o.code + '?', message: 'Bạn chắc chắn muốn hủy đơn này?', confirmLabel: 'Hủy đơn', cancelLabel: 'Không hủy', danger: true,
+          reason: { label: 'Lý do hủy', required: true, options: ['Đổi ý', 'Đặt nhầm', 'Muốn đổi sản phẩm', 'Khác'], errorMsg: 'Vui lòng chọn lý do hủy', noteLabel: 'Ghi chú thêm (bắt buộc khi chọn Khác)' } })
+          .then(function (r) {
+            if (!r) return;
+            var fresh = DemoStore.get('orders', o.id);
+            if (fresh.state !== o.state) { UI.toast('Trạng thái đơn đã thay đổi, vui lòng tải lại', 'error'); return; }
+            if (fresh.state === 'SHIPPING') { UI.toast('Đơn đã giao cho đơn vị vận chuyển, không thể hủy', 'error'); return; }
+            try {
+              var next = Workflow.apply(doc, fresh, event, { note: r.note });
+              DemoStore.update('orders', o.id, next);
+              var fx = App.orderEffects(fresh, next);
+              UI.toast('Đã hủy đơn ' + o.code + fx, 'success'); paint();
+            } catch (e) { UI.toast(e.message, 'error'); }
+          });
+      }
+      function reqCancel() {
+        UI.confirm({ title: 'Yêu cầu hủy ' + o.code + '?', message: 'Cửa hàng sẽ liên hệ xác nhận và hoàn cọc nếu bạn đã cọc.', confirmLabel: 'Gửi yêu cầu hủy', danger: true, reason: { label: 'Lý do hủy', required: true, placeholder: 'Ví dụ: đổi ý, muốn đặt vị khác', errorMsg: 'Vui lòng nhập lý do' } })
+          .then(function (r) { if (!r) return; DemoStore.update('orders', o.id, { yeu_cau_huy: { at: new Date().toISOString(), reason: r.note } }); UI.toast('Đã gửi yêu cầu hủy. Cửa hàng sẽ liên hệ với bạn.', 'success'); paint(); });
+      }
+      /* Modal đánh giá (FR-REVIEW-001) */
+      function rate(pid, variant) {
+        var p = App.product(pid);
+        var body = '<form novalidate class="flex flex-col gap-4" data-rv-form><div class="flex flex-col gap-1.5" data-field="so_sao"><span class="text-sm font-bold text-neutral-800">Boss chấm mấy sao? <span class="text-danger-600">*</span></span>' + UI.ratingPicker({ name: 'so_sao' }) + '<p class="hidden items-center gap-1 text-xs font-bold text-danger-700" data-err id="' + UI.uid('e') + '"></p></div>' +
+          UI.field({ name: 'noi_dung', label: 'Cảm nhận của bạn', type: 'textarea', required: true, rows: 4, maxlength: 1000, placeholder: 'Boss ăn có hợp không? Đóng gói, giao hàng thế nào?' }) +
+          UI.fileUpload({ name: 'anh', label: 'Ảnh Boss thưởng thức', optional: true, kind: 'image', multiple: true, max: 5, maxMB: 5, hint: 'Tối đa 5 ảnh, mỗi ảnh ≤ 5MB (JPG, PNG, WEBP)', sizeMsg: 'Tối đa 5 ảnh, mỗi ảnh không quá 5MB (JPG, PNG, WEBP)' }) + '</form>';
+        UI.modal({ title: 'Đánh giá ' + esc(p.ten), size: 'md', body: body, actions: [{ label: 'Để sau', variant: 'ghost' }, { label: 'Gửi đánh giá', icon: 'send', onClick: function (api) {
+          var f = api.body.querySelector('[data-rv-form]');
+          var ok = UI.validate(f, { so_sao: [UI.rules.custom(function (v) { return +v >= 1 && +v <= 5; }, 'Vui lòng chọn số sao')], noi_dung: [UI.rules.custom(function (v) { return String(v || '').length >= 10; }, 'Vui lòng nhập ít nhất 10 ký tự')] });
+          if (!ok) return false;
+          var d = UI.formData(f), now = new Date().toISOString(), cus = App.customer();
+          DemoStore.insert('reviews', { id: 'rv' + Date.now(), product_id: pid, variant: variant, customer_id: cus.id, ownerId: me.id, ho_ten: cus.ho_ten, ma_don: o.code, so_sao: +d.so_sao, noi_dung: d.noi_dung, anh: (d.anh || []).map(function (x) { return x.url; }), tao_luc: now, state: Workflow.initial('DOC-REVIEW-REVIEW'), ly_do_an: '',
+            history: [{ at: now, role: 'ROLE-02', roleName: Perm.roleName(), by: cus.ho_ten, event: 'Gửi đánh giá', from: null, to: Workflow.initial('DOC-REVIEW-REVIEW'), note: '' }] });
+          UI.toast('Cảm ơn bạn đã đánh giá! 💕', 'success'); setTimeout(paint, 50);
+        } }] });
+      }
+
+      document.addEventListener('click', function (e) {
+        var c = e.target.closest('[data-cancel]'); if (c) { cancel(c.getAttribute('data-cancel')); return; }
+        if (e.target.closest('[data-req-cancel]')) { reqCancel(); return; }
+        var r = e.target.closest('[data-rate]'); if (r) { rate(r.getAttribute('data-rate'), r.getAttribute('data-variant')); return; }
+        if (e.target.closest('[data-paid-report]')) { DemoStore.update('orders', o.id, { bao_da_ck: new Date().toISOString() }); UI.toast('Đã báo cửa hàng. Cửa hàng sẽ kiểm tra và xác nhận sớm.', 'success'); paint(); }
+      });
+      setTimeout(paint, 400);
+    });
+  })();
+  </script>
+</body>
+</html>

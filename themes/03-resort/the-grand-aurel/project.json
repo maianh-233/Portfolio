@@ -1,0 +1,84 @@
+{
+  "slug": "the-grand-aurel",
+  "name": "THE GRAND AUREL",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "THE GRAND AUREL",
+    "purpose": "Xây dựng website giới thiệu THE GRAND AUREL, một resort cao cấp lấy cảm hứng từ những cung điện, dinh thự quý tộc và khu vườn hoàng gia châu Âu.\n\nThương hiệu đại diện cho vẻ đẹp di sản, nghệ thuật kiến trúc và phong cách nghỉ dưỡng thanh lịch vượt thời gian. Website cần mang lại cảm giác như đang bước vào một dinh thự châu Âu được gìn giữ qua nhiều thế hệ.\n\nPhong cách chủ đạo: European Heritage Luxury kết hợp Classical Palace Elegance.\n\nKhông sử dụng phong cách hiện đại tối giản, thiết kế công nghệ hoặc bố cục resort nhiệt đới thông thường. Tránh biến website thành một trang giới thiệu khách sạn đại trà.",
+    "audience": "Khách hàng du lịch muốn lưu trú",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. ART DIRECTION — COLOR PALETTE\n\nSử dụng bảng màu mới gồm:\n\nRoyal Blue #263B5A: Xanh hoàng gia, màu nhận diện chính cho các section quan trọng, tiêu đề nổi bật và một số mảng nền.\n\nAntique Gold #B69A62: Vàng cổ, dùng cho đường viền, biểu tượng, đường phân cách và chi tiết trang trí.\n\nWarm Ivory #F4EFE5: Trắng ngà ấm, dùng làm nền chính để tạo cảm giác thanh lịch và cổ điển.\n\nForest Green #34483A: Xanh rừng sâu, dành cho các section về khu vườn, cảnh quan và trải nghiệm nghỉ dưỡng.\n\nEspresso Brown #40332C: Nâu gỗ trầm, dùng cho nội dung phụ, chi tiết nội thất và những khu vực cần cảm giác ấm áp.\n\nNguyên tắc phối màu:\n\nWarm Ivory chiếm phần lớn diện tích giao diện, giúp tổng thể sáng và thoáng.\n\nRoyal Blue tạo dấu ấn thị giác mạnh, đặc biệt ở hero, section giới thiệu thương hiệu và footer.\n\nAntique Gold chỉ dùng làm điểm nhấn, không phủ vàng quá nhiều.\n\nForest Green dành riêng cho các nội dung gắn với khu vườn và thiên nhiên.\n\nEspresso Brown bổ sung chiều sâu cho các chi tiết mang tính di sản.\n\nKhông sử dụng gradient neon, màu pastel ngọt ngào hoặc các mảng màu rực rỡ làm mất đi vẻ cổ điển.\n\n3. TYPOGRAPHY & DECORATIVE DETAILS\n\nTypography:\n\nTiêu đề: Cormorant Garamond hoặc Playfair Display, tạo cảm giác cổ điển và sang trọng.\n\nNội dung: Be Vietnam Pro hoặc một sans-serif thanh lịch, dễ đọc và hỗ trợ tiếng Việt tốt.\n\nCó thể sử dụng chữ in hoa với khoảng cách ký tự rộng cho tên thương hiệu, nhãn section và các dòng giới thiệu ngắn.\n\nTiêu đề chính cần có kích thước lớn, cách trình bày giàu tính editorial.\n\nChi tiết trang trí:\n\nĐường viền Antique Gold mảnh.\n\nKhung ảnh cổ điển, đường phân cách đối xứng và họa tiết hình học lấy cảm hứng từ kiến trúc châu Âu.\n\nCác chi tiết trang trí dạng huy hiệu hoặc monogram có thể xuất hiện quanh logo, nhưng phải tiết chế.\n\nSử dụng khoảng trắng có chủ đích, kết hợp bố cục đối xứng với một số layout lệch trục tinh tế.\n\nCó thể sử dụng họa tiết giấy dập nổi hoặc vân giấy nhẹ ở một vài khu vực.\n\nKhông lạm dụng hoa văn baroque, họa tiết hoàng gia hoặc khung viền dày đặc. Mục tiêu là sang trọng, không nặng nề.\n\n4. IMAGE ART DIRECTION\n\nƯu tiên hình ảnh có tính điện ảnh, ánh sáng tự nhiên và chiều sâu kiến trúc.\n\nNhóm hình ảnh cần có:\n\nDinh thự châu Âu với mặt tiền đối xứng, cột đá và cửa sổ cao.\n\nĐại sảnh với cầu thang đá, đèn chùm và trần cao.\n\nPhòng nghỉ có nội thất cổ điển, rèm vải cao cấp và đồ nội thất gỗ.\n\nKhu vườn kiểu Pháp với lối đi đối xứng, hàng cây được cắt tỉa và đài phun nước.\n\nNhà hàng thanh lịch với bàn ăn được chuẩn bị tinh tế.\n\nSpa sử dụng đá tự nhiên, ánh sáng ấm và vật liệu cao cấp.\n\nLounge với lò sưởi, ghế bọc vải và chi tiết kiến trúc cổ điển.\n\nHình ảnh cần có màu sắc hài hòa với Royal Blue, Antique Gold và Warm Ivory.\n\nKhông sử dụng ảnh resort biển nhiệt đới, khách sạn kính hiện đại, nội thất tối giản kiểu Nhật hoặc hình ảnh cung điện quá rực rỡ như bối cảnh cổ tích.\n\nNếu sử dụng ảnh từ nguồn bên ngoài, cần có ảnh dự phòng hoặc màu nền thay thế khi ảnh không tải được.\n\n5. TRANG CHỦ — HOME\n\nHeader\n\nNền Warm Ivory.\n\nLogo THE GRAND AUREL ở vị trí trung tâm hoặc căn trái tùy bố cục.\n\nMenu gồm Home, Our Heritage, Suites & Villas, Experiences.\n\nNút chuyển đổi ngôn ngữ VI/EN.\n\nHeader có thể chuyển sang nền bán trong suốt khi nằm trên hero, sau đó trở về nền sáng khi cuộn trang.\n\nThiết kế thanh lịch, không sử dụng quá nhiều biểu tượng.\n\nHero Section\n\nSử dụng ảnh lớn toàn chiều rộng về dinh thự hoặc khu vườn hoàng gia.\n\nTiêu đề chính: “An Extraordinary Sense of Time”.\n\nĐoạn giới thiệu ngắn về nghệ thuật nghỉ dưỡng mang dấu ấn di sản.\n\nCó một nhãn nhỏ phía trên tiêu đề: “EUROPEAN HERITAGE RESORT”.\n\nCTA chỉ phục vụ điều hướng nội bộ, ví dụ “Discover Our Heritage”.\n\nTypography lớn, bố cục cân đối và hình ảnh đóng vai trò chủ đạo.\n\nBrand Introduction\n\nBố cục editorial gồm tiêu đề lớn, đoạn giới thiệu ngắn và ảnh kiến trúc.\n\nGiới thiệu triết lý kết hợp di sản kiến trúc, nghệ thuật thủ công và dịch vụ nghỉ dưỡng.\n\nCó thể sử dụng một đường kẻ Antique Gold để phân tách nội dung.\n\nKhông trình bày quá nhiều chữ.\n\nThe Architecture\n\nMột ảnh kiến trúc lớn kết hợp ảnh chi tiết về cầu thang, cột đá, cửa sổ hoặc hoa văn.\n\nTiêu đề: “A Legacy in Every Detail”.\n\nMô tả ngắn về cảm hứng kiến trúc và cách các chi tiết cổ điển tạo nên bản sắc của resort.\n\nBố cục bất đối xứng có chủ đích để tránh cảm giác quá cứng nhắc.\n\nSuites & Villas\n\nGiới thiệu ba hạng phòng như một bộ sưu tập riêng:\n\nGrand Suite.\n\nGarden Residence.\n\nSignature Villa.\n\nMỗi hạng có ảnh, tên, mô tả ngắn và liên kết đến trang Suites & Villas.\n\nDùng ảnh lớn, typography serif và khoảng cách rộng.\n\nKhông hiển thị giá, lịch phòng hoặc nút đặt phòng.\n\nThe Art of Living\n\nGiới thiệu bốn trải nghiệm: Fine Dining, Palace Spa, Royal Garden và Heritage Lounge.\n\nMỗi trải nghiệm có ảnh riêng, tiêu đề và một đoạn mô tả ngắn.\n\nCó thể dùng bố cục xen kẽ ảnh trái/phải hoặc các khối ảnh kích thước khác nhau.\n\nBrand Statement\n\nNền Royal Blue.\n\nChữ Warm Ivory, điểm nhấn Antique Gold.\n\nTiêu đề: “Elegance Beyond Time”.\n\nNội dung khẳng định triết lý nghỉ dưỡng lấy di sản, sự tinh tế và lòng hiếu khách làm trọng tâm.\n\nFooter\n\nNền Royal Blue hoặc Espresso Brown.\n\nLogo, menu, thông tin liên hệ mẫu và liên kết mạng xã hội.\n\nĐường phân cách Antique Gold mảnh.\n\nBố cục cân đối, trang trọng và nhất quán với toàn bộ website.\n\n6. TRANG OUR HERITAGE — GIỚI THIỆU\n\nHero\n\nẢnh mặt tiền dinh thự với bố cục cân đối.\n\nTiêu đề: “A Heritage of Distinction”.\n\nGiới thiệu ngắn về tinh thần và nguồn cảm hứng của THE GRAND AUREL.\n\nOur Story\n\nBố cục hai cột gồm nội dung và ảnh kiến trúc.\n\nKể câu chuyện thương hiệu theo hướng trang trọng, tập trung vào di sản, kiến trúc và nghệ thuật hiếu khách.\n\nKhông tự khẳng định resort có lịch sử hàng trăm năm nếu đây chỉ là thương hiệu giả định.\n\nOur Values\nTrình bày bốn giá trị cốt lõi:\n\nHeritage: Tôn trọng tinh thần kiến trúc và giá trị truyền thống.\n\nCraftsmanship: Đề cao chất lượng vật liệu, chi tiết và nghệ thuật chế tác.\n\nHospitality: Mang đến trải nghiệm nghỉ dưỡng chu đáo và tinh tế.\n\nTimeless Elegance: Duy trì vẻ đẹp thanh lịch không phụ thuộc xu hướng nhất thời.\n\nMỗi giá trị có tiêu đề serif, mô tả ngắn và chi tiết trang trí nhỏ.\n\nArchitectural Details\n\nGallery về cầu thang đá, cửa vòm, hành lang, đèn chùm và nội thất.\n\nKết hợp ảnh ngang lớn với các ảnh chi tiết nhỏ hơn.\n\nCó thể sử dụng chú thích ảnh theo phong cách tạp chí kiến trúc.\n\nClosing Section\n\nẢnh khu vườn hoặc đại sảnh.\n\nMột thông điệp ngắn về sự kết nối giữa kiến trúc, thiên nhiên và nghệ thuật nghỉ dưỡng.\n\n7. TRANG SUITES & VILLAS — PHÒNG NGHỈ VÀ TIỆN ÍCH\n\nHero\n\nẢnh phòng nghỉ cổ điển với ánh sáng tự nhiên.\n\nTiêu đề: “Private Worlds of Elegance”.\n\nMô tả ngắn về không gian nghỉ dưỡng được thiết kế chú trọng sự riêng tư và tiện nghi.\n\nAccommodation Collection\n\nGrand Suite\n\nKhông gian thanh lịch, nội thất cổ điển và tông màu ấm.\n\nNhấn mạnh sự cân bằng giữa tiện nghi hiện đại và ngôn ngữ thiết kế di sản.\n\nGarden Residence\n\nKhông gian hướng ra khu vườn, sử dụng vật liệu tự nhiên và màu sắc dịu.\n\nNhấn mạnh sự kết nối với cảnh quan xanh.\n\nSignature Villa\n\nKhông gian nghỉ dưỡng riêng tư, có phòng khách rộng và các chi tiết nội thất được tuyển chọn.\n\nNhấn mạnh tính độc đáo trong thiết kế và trải nghiệm nghỉ dưỡng.\n\nMỗi hạng phòng cần có:\n\nMột ảnh chính nổi bật.\n\nTên hạng phòng.\n\nMô tả ngắn.\n\nMột số đặc điểm không gian và tiện nghi.\n\nCác ảnh phụ nếu phù hợp.\n\nĐường phân cách hoặc nhãn trang trí Antique Gold.\n\nKhông tự đưa ra thông số diện tích, số phòng hoặc tiện ích chưa được xác định. Nội dung chỉ mang tính giới thiệu thương hiệu.\n\nResort Facilities\nGiới thiệu các tiện ích bằng bố cục riêng biệt:\n\nThe Grand Restaurant: Không gian ẩm thực thanh lịch.\n\nPalace Spa: Khu vực thư giãn với vật liệu tự nhiên và ánh sáng dịu.\n\nHeritage Lounge: Lounge dành cho thưởng trà và thư giãn.\n\nRoyal Garden: Khu vườn cổ điển với lối đi và cảnh quan được chăm chút.\n\nGarden Pool: Hồ bơi hòa hợp với kiến trúc và cảnh quan.\n\nMỗi tiện ích có hình ảnh, tiêu đề và đoạn mô tả ngắn. Không biến trang này thành danh sách tiện nghi khô cứng.\n\n8. TRANG EXPERIENCES — TRẢI NGHIỆM\n\nHero\n\nẢnh khu vườn kiểu Pháp hoặc đài phun nước.\n\nTiêu đề: “The Art of Unhurried Living”.\n\nTập trung vào cảm giác thư thái, khám phá và tận hưởng vẻ đẹp của không gian.\n\nFine Dining\n\nẢnh nhà hàng thanh lịch, bàn ăn được chuẩn bị tinh tế và ánh sáng ấm.\n\nMô tả trải nghiệm ẩm thực trong không gian mang dấu ấn châu Âu.\n\nAfternoon Tea\n\nẢnh trà, bánh ngọt và bộ ấm tách cổ điển.\n\nThiết kế như một trang tạp chí phong cách sống, sử dụng typography nổi bật và nhiều khoảng trắng.\n\nThe Royal Garden\n\nẢnh lối đi đối xứng, hàng cây cắt tỉa và đài phun nước.\n\nGiới thiệu hoạt động dạo vườn, ngắm cảnh và tận hưởng không gian ngoài trời.\n\nArchitecture Discovery\n\nGallery giới thiệu các chi tiết kiến trúc đặc trưng.\n\nKết hợp chú thích ảnh ngắn để tạo cảm giác như đang khám phá một công trình nghệ thuật.\n\nWellness & Relaxation\n\nẢnh spa, lounge và không gian nghỉ ngơi.\n\nNội dung nhấn mạnh sự thư giãn trong một môi trường thanh lịch, yên tĩnh.\n\nClosing Panorama\n\nẢnh toàn cảnh dinh thự hoặc khu vườn vào cuối ngày.\n\nTiêu đề: “A World Apart, Beyond Time”.\n\nKết thúc bằng một đoạn giới thiệu thương hiệu ngắn, không có CTA giao dịch.\n\n9. MOTION & INTERACTION\n\nSử dụng chuyển động chậm, tinh tế và có chủ đích:\n\nFade-in khi các section đi vào vùng hiển thị.\n\nTiêu đề xuất hiện nhẹ nhàng theo từng dòng.\n\nẢnh có hiệu ứng zoom rất nhẹ khi hover.\n\nĐường kẻ Antique Gold có thể xuất hiện dần khi cuộn trang.\n\nChuyển trang và trạng thái menu mượt mà.\n\nHeader có thay đổi nhẹ khi cuộn, không gây phân tâm.\n\nKhông sử dụng parallax quá mạnh, hiệu ứng 3D phô trương, animation liên tục, con trỏ tùy biến gây khó chịu hoặc hiệu ứng neon.\n\n10. TECHNICAL REQUIREMENTS\n\nXây dựng bốn trang HTML riêng biệt bằng HTML, CSS và JavaScript thuần.\n\nCấu trúc gồm index.html, about.html, stays.html và experiences.html.\n\nCó CSS và JavaScript dùng chung để duy trì nhận diện xuyên suốt.\n\nHỗ trợ tiếng Việt và tiếng Anh đầy đủ cho menu, tiêu đề, nội dung, nút và footer.\n\nCó nút chuyển ngôn ngữ VI/EN hoạt động thực tế, giữ lựa chọn ngôn ngữ khi chuyển trang và tải lại.\n\nĐiều hướng giữa bốn trang phải hoạt động chính xác.\n\nResponsive trên desktop, tablet và mobile.\n\nHình ảnh sử dụng đúng tỷ lệ, không bị méo hoặc cắt mất chủ thể quan trọng.\n\nCó trạng thái dự phòng nếu ảnh không tải được.\n\nTối ưu kích thước ảnh, khả năng đọc và khả năng truy cập.\n\nKhông sử dụng dữ liệu hoặc tuyên bố lịch sử giả như sự thật đã được xác minh.\n\nGiới hạn chức năng:\nĐây là website giới thiệu thương hiệu resort. Không xây dựng chức năng đặt phòng, kiểm tra phòng trống, đặt lịch spa, thanh toán, giỏ hàng hoặc giao dịch.\n\n11. FINAL DESIGN GOAL\n\nTHE GRAND AUREL phải tạo được dấu ấn khác biệt với những resort còn lại trong bộ sưu tập.\n\nWebsite cần gợi lên hình ảnh một dinh thự châu Âu thanh lịch với Royal Blue sâu, Antique Gold cổ điển, nền Ivory ấm và những khu vườn xanh trầm.\n\nƯu tiên kiến trúc, hình ảnh, typography và cách trình bày giàu tính editorial. Mỗi trang cần có bố cục riêng nhưng vẫn thống nhất về màu sắc, kiểu chữ, chi tiết trang trí và trải nghiệm điều hướng.\n\nKết quả cuối cùng phải giống website thương hiệu của một European Palace Resort cao cấp, không phải giao diện khách sạn đại trà được thay màu.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-29T03:18:43.887Z",
+  "updatedAt": "2026-10-29T06:48:02.078Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\the-grand-aurel\\web",
+    "builtAt": "2026-10-29T06:47:46.271Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/experiences.html",
+      "pages/stays.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/experiences.html": [],
+      "pages/stays.html": []
+    }
+  },
+  "job": {
+    "id": "df020923-a41a-499c-b52b-87b85492ce0f",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\the-grand-aurel\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 1,
+      "missing": 0,
+      "inputTokens": 136329,
+      "outputTokens": 65315,
+      "cacheReadTokens": 4044148,
+      "cacheCreationTokens": 241224,
+      "costUsd": 3.7661363999999997,
+      "numTurns": 81,
+      "durationMs": 682851
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-29T06:47:58.555Z",
+    "critical": 0,
+    "major": 47,
+    "minor": 1,
+    "screenshots": 12
+  }
+}

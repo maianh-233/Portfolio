@@ -1,0 +1,29 @@
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-ink/10 bg-cream/95 backdrop-blur-sm transition-shadow duration-300">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="group flex items-baseline gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-4 focus-visible:ring-offset-cream" aria-label="Minh An, về trang chủ">
+      <span class="font-display text-2xl leading-none tracking-tight text-ink">Minh An</span>
+      <span class="hidden text-[13px] font-medium tracking-[0.16em] text-olive sm:inline">FORM / SPACE</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Điều hướng chính">
+      <a href="{{root}}pages/works.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Công trình</a>
+      <a href="{{root}}pages/materials.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Vật liệu</a>
+      <a href="{{root}}pages/about.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Về Minh An</a>
+      <a href="{{root}}pages/contact.html" class="inline-flex h-11 items-center rounded-full bg-olive px-6 text-[15px] font-medium text-cream transition-all duration-300 hover:bg-olive-dark active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2 focus-visible:ring-offset-cream aria-[current=page]:bg-ink">Liên hệ</a>
+    </nav>
+
+    <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors duration-300 hover:bg-ink/5 lg:hidden" aria-label="Mở menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h11"/></svg>
+    </button>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-cream p-8 shadow-2xl shadow-ink/20 lg:hidden">
+    <nav class="flex flex-col" aria-label="Điều hướng trên điện thoại">
+      <a href="{{root}}index.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Trang chủ</a>
+      <a href="{{root}}pages/works.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Công trình</a>
+      <a href="{{root}}pages/materials.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Vật liệu</a>
+      <a href="{{root}}pages/about.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Về Minh An</a>
+      <a href="{{root}}pages/contact.html" class="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-olive px-6 text-base font-medium text-cream">Liên hệ</a>
+    </nav>
+  </div>
+</header>

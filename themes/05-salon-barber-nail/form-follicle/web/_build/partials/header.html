@@ -1,0 +1,37 @@
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-silver bg-paper transition-colors duration-300 [&.is-scrolled]:border-ink">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center gap-4 px-4 sm:px-6 lg:gap-8 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="font-display text-base font-extrabold uppercase tracking-tight text-ink sm:text-lg" aria-label="FORM & FOLLICLE">FORM <span class="text-cobalt">&amp;</span> FOLLICLE</a>
+
+    <nav class="ml-auto hidden lg:block" aria-label="Điều hướng chính" data-en-aria-label="Main navigation">
+      <ul class="flex items-center gap-8">
+        <li><a href="{{root}}index.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">01</span><span data-en="Home">Trang chủ</span></a></li>
+        <li><a href="{{root}}pages/services.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">02</span><span data-en="Services">Dịch vụ</span></a></li>
+        <li><a href="{{root}}pages/archive.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">03</span><span>Archive</span></a></li>
+        <li><a href="{{root}}pages/studio.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">04</span><span>Studio</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="ml-auto flex items-center gap-3 lg:ml-0">
+      <div class="flex border border-ink text-xs font-semibold" role="group" aria-label="Chọn ngôn ngữ" data-en-aria-label="Choose language">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="h-10 w-10 transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="h-10 w-10 border-l border-ink transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white">EN</button>
+      </div>
+      <button type="button" data-modal-open="booking" class="hidden h-11 items-center gap-2 bg-cobalt px-5 text-[13px] font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobalt active:scale-[.98] sm:inline-flex"><span data-en="Book a Visit">Đặt lịch</span>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink transition-colors duration-300 hover:bg-ink hover:text-white lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-0 top-[72px] z-50 max-h-[calc(100dvh-72px)] overflow-y-auto border-b border-ink bg-paper px-4 pb-8 pt-4 sm:px-6 lg:hidden">
+    <ul class="divide-y divide-silver border-y border-silver">
+      <li><a href="{{root}}index.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">01</span><span data-en="Home">Trang chủ</span></a></li>
+      <li><a href="{{root}}pages/services.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">02</span><span data-en="Services">Dịch vụ</span></a></li>
+      <li><a href="{{root}}pages/archive.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">03</span><span>Archive</span></a></li>
+      <li><a href="{{root}}pages/studio.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">04</span><span>Studio</span></a></li>
+    </ul>
+    <button type="button" data-modal-open="booking" class="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 bg-cobalt text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric"><span data-en="Book a Visit">Đặt lịch</span></button>
+  </div>
+</header>

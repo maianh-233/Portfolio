@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-en="Products &amp; Menu - MILKY DAY">Sản phẩm &amp; Menu - MILKY DAY</title>
+  <meta name="description" content="Menu MILKY DAY: trà sữa, trà trái cây, bánh ngọt, cookie và cupcake. Lọc theo danh mục để tìm món bạn thích." data-en-content="The MILKY DAY menu: milk tea, fruit tea, pastries, cookies and cupcakes. Filter by category to find your favourite.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Be+Vietnam+Pro:wght@400;500;600&family=Patrick+Hand&display=swap&subset=vietnamese" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-milk font-sans text-cocoa antialiased">
+
+  <!-- ============ HEADER (giống nhau mọi trang) ============ -->
+  <header id="top" data-header="shrink" class="sticky top-0 z-40 bg-milk/95 backdrop-blur-sm">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-3 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="../index.html" class="group flex items-center gap-1.5 font-display text-xl font-black tracking-tight text-cocoa sm:text-2xl" aria-label="MILKY DAY - Trang chủ" data-en-aria-label="MILKY DAY - Home">
+        MILKY DAY
+        <svg class="h-4 w-4 text-blush-deep transition-transform duration-300 group-hover:scale-125" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 5.4 3.2 1.8-2 3.3-3.2 5.4-3.2 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+      </a>
+      <nav class="hidden items-center gap-1 font-display text-[15px] font-bold lg:flex" aria-label="Điều hướng chính" data-en-aria-label="Main navigation">
+        <a href="../index.html" class="nav-link rounded-full px-4 py-2.5 transition-colors duration-300 hover:bg-blush-soft" data-en="Home">Trang chủ</a>
+        <a href="menu.html" aria-current="page" class="nav-link rounded-full px-4 py-2.5 transition-colors duration-300 hover:bg-blush-soft" data-en="Products &amp; Menu">Sản phẩm &amp; Menu</a>
+        <a href="about.html" class="nav-link rounded-full px-4 py-2.5 transition-colors duration-300 hover:bg-blush-soft" data-en="About us">Về chúng tôi</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <div class="inline-flex rounded-full bg-blush-soft p-1 font-display text-sm font-extrabold" role="group" aria-label="Chọn ngôn ngữ" data-en-aria-label="Choose language">
+          <button type="button" data-lang-set="vi" aria-pressed="true" class="min-h-[36px] rounded-full px-3 transition-colors duration-300 aria-pressed:bg-cocoa aria-pressed:text-milk">VI</button>
+          <button type="button" data-lang-set="en" aria-pressed="false" class="min-h-[36px] rounded-full px-3 transition-colors duration-300 aria-pressed:bg-cocoa aria-pressed:text-milk">EN</button>
+        </div>
+        <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full bg-blush transition duration-300 hover:bg-blush-deep active:scale-[.97] lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-4xl bg-milk p-6 shadow-lift lg:hidden">
+      <nav class="flex flex-col gap-1 font-display text-2xl font-extrabold" aria-label="Điều hướng điện thoại" data-en-aria-label="Mobile navigation">
+        <a href="../index.html" class="rounded-3xl px-5 py-4 hover:bg-blush-soft" data-en="Home">Trang chủ</a>
+        <a href="menu.html" aria-current="page" class="rounded-3xl bg-blush-soft px-5 py-4" data-en="Products &amp; Menu">Sản phẩm &amp; Menu</a>
+        <a href="about.html" class="rounded-3xl px-5 py-4 hover:bg-blush-soft" data-en="About us">Về chúng tôi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO NGẮN ============ -->
+    <section id="menu-hero" data-section="page-hero" class="relative overflow-hidden bg-blush">
+      <div class="relative mx-auto grid w-full max-w-screen-2xl gap-6 px-4 pb-20 pt-12 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 lg:pb-24 lg:pt-16 2xl:px-16">
+        <div class="lg:col-span-7">
+          <p class="inline-block -rotate-2 rounded-full bg-milk px-4 py-1 font-hand text-xl" data-en="9 favourites, 4 categories">9 món, 4 danh mục</p>
+          <h1 data-split="words" class="mt-4 font-display text-[2.6rem] font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl" data-en="Products &amp; Menu">Sản phẩm &amp; Menu</h1>
+        </div>
+        <p class="max-w-md text-lg leading-relaxed lg:col-span-5 lg:pb-2" data-reveal="up" data-en="From creamy milk tea to light fruit tea and freshly baked treats. Pick a category below to narrow it down.">Từ trà sữa béo thơm, trà trái cây mát lạnh đến bánh nướng mỗi ngày. Chọn danh mục bên dưới để lọc nhanh.</p>
+      </div>
+      <svg class="sticker absolute right-[8%] top-8 h-10 w-10 text-butter" data-float="6" data-float-rotate="6" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1.5c.6 4.8 2.7 8 9.5 10.5-6.8 2.5-8.9 5.7-9.5 10.5-.6-4.8-2.7-8-9.5-10.5C9.3 9.5 11.4 6.3 12 1.5z"/></svg>
+      <svg class="sticker absolute bottom-14 left-[54%] hidden h-7 w-7 text-milk lg:block" data-float="5" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 5.4 3.2 1.8-2 3.3-3.2 5.4-3.2 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+      <svg class="absolute inset-x-0 bottom-0 h-8 w-full text-milk sm:h-12" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 48c120 30 240-34 360-8s240 40 360 12 240-44 360-14 240 36 360 8v34H0z"/></svg>
+    </section>
+
+    <!-- ============ LƯỚI MENU + LỌC ============ -->
+    <section id="thuc-don" data-section="gallery-filter" class="bg-milk pb-20 pt-6 lg:pb-28" data-filter-group>
+      <div class="sticky top-16 z-30 bg-milk/95 py-3 backdrop-blur-sm lg:top-[72px]">
+        <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+          <div class="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 font-display font-extrabold" role="toolbar" aria-label="Lọc theo danh mục" data-en-aria-label="Filter by category">
+            <button type="button" data-filter="all" class="is-active min-h-[44px] shrink-0 rounded-full border-2 border-cocoa/15 px-5 transition duration-300 hover:border-cocoa/40 [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-milk" data-en="All">Tất cả</button>
+            <button type="button" data-filter="tra-sua" class="min-h-[44px] shrink-0 rounded-full border-2 border-cocoa/15 px-5 transition duration-300 hover:border-cocoa/40 [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-milk" data-en="Milk tea">Trà sữa</button>
+            <button type="button" data-filter="tra-trai-cay" class="min-h-[44px] shrink-0 rounded-full border-2 border-cocoa/15 px-5 transition duration-300 hover:border-cocoa/40 [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-milk" data-en="Fruit tea">Trà trái cây</button>
+            <button type="button" data-filter="banh-ngot" class="min-h-[44px] shrink-0 rounded-full border-2 border-cocoa/15 px-5 transition duration-300 hover:border-cocoa/40 [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-milk" data-en="Pastries">Bánh ngọt</button>
+            <button type="button" data-filter="cookie-cupcake" class="min-h-[44px] shrink-0 rounded-full border-2 border-cocoa/15 px-5 transition duration-300 hover:border-cocoa/40 [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-milk">Cookie &amp; Cupcake</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-8 grid w-full max-w-screen-2xl grid-cols-1 gap-6 px-4 xs:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:gap-8 lg:px-10 2xl:px-16" aria-live="polite">
+        <!-- Trà sữa -->
+        <article data-category="tra-sua" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/A_bubble_tea_with_tapioca_pearls%2C_July_2018.jpg/960px-A_bubble_tea_with_tapioca_pearls%2C_July_2018.jpg" referrerpolicy="no-referrer" alt="Ly trà sữa trân châu đen nhìn cận cảnh" data-en-alt="Close-up of a milk tea with black tapioca pearls" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="rounded-full bg-blush-soft px-3 py-0.5 text-sm font-semibold" data-en="Milk tea">Trà sữa</span>
+              <span class="rounded-full bg-butter px-3 py-0.5 text-sm font-semibold" data-en="Best seller">Bán chạy</span>
+            </div>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Milky pearl milk tea">Trà sữa trân châu Milky</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="Bold black tea, fresh milk and black pearls slow-cooked in syrup, soft and chewy.">Hồng trà đậm, sữa tươi và trân châu đen nấu đường mật, dai mềm.</p>
+          </div>
+        </article>
+        <article data-category="tra-sua" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Taipei_pearlmilktea.jpg/960px-Taipei_pearlmilktea.jpg" referrerpolicy="no-referrer" alt="Ly trà sữa đầy trân châu" data-en-alt="A cup of milk tea full of tapioca pearls" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <span class="rounded-full bg-blush-soft px-3 py-0.5 text-sm font-semibold" data-en="Milk tea">Trà sữa</span>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Brown sugar milk tea">Trà sữa đường nâu</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="Cold fresh milk with brown sugar syrup swirling down the cup, rich caramel notes.">Sữa tươi lạnh, siro đường nâu sóng sánh quanh thành ly, thơm mùi caramel.</p>
+          </div>
+        </article>
+        <article data-category="tra-sua" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/2009-12-30_cups_of_bubble_tea_at_a_Chunshuitang_in_Taipei.jpg/960px-2009-12-30_cups_of_bubble_tea_at_a_Chunshuitang_in_Taipei.jpg" referrerpolicy="no-referrer" alt="Những ly trà sữa trên bàn" data-en-alt="Cups of milk tea on a table" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <span class="rounded-full bg-blush-soft px-3 py-0.5 text-sm font-semibold" data-en="Milk tea">Trà sữa</span>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Oolong milk tea, sea salt cream">Ô long sữa kem muối</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="Lightly roasted oolong under a salty-creamy cap. Sip it without stirring.">Ô long rang nhẹ, phủ lớp kem muối béo mặn, uống không cần khuấy.</p>
+          </div>
+        </article>
+
+        <!-- Trà trái cây -->
+        <article data-category="tra-trai-cay" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="../assets/img/menu-lemon-tea.jpg" alt="Hũ trà trái cây đá với ống hút trong nắng chiều" data-en-alt="An iced fruit tea in a glass jar with a straw at sunset" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <span class="rounded-full bg-butter-soft px-3 py-0.5 text-sm font-semibold" data-en="Fruit tea">Trà trái cây</span>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Peach, orange &amp; lemongrass tea">Trà đào cam sả</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="Iced green tea with soaked peach, orange and fresh lemongrass. Cool and fragrant.">Trà xanh lạnh, đào ngâm, cam vàng và sả tươi, mát và thơm.</p>
+          </div>
+        </article>
+        <article data-category="tra-trai-cay" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="../assets/img/menu-berry-tea.webp" alt="Hai ly đồ uống ba tầng dâu, kiwi và sữa chua cạnh dâu tây" data-en-alt="Two three-layer strawberry, kiwi and yoghurt drinks beside strawberries" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="rounded-full bg-butter-soft px-3 py-0.5 text-sm font-semibold" data-en="Fruit tea">Trà trái cây</span>
+              <span class="rounded-full bg-blush px-3 py-0.5 text-sm font-semibold" data-en="New">Mới</span>
+            </div>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Three-layer strawberry kiwi">Dâu kiwi ba tầng</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="Strawberry purée, blended kiwi and yoghurt. Sweet, tangy and very photogenic.">Dâu nghiền, kiwi xay và sữa chua, chua ngọt và rất ăn ảnh.</p>
+          </div>
+        </article>
+
+        <!-- Bánh ngọt -->
+        <article data-category="banh-ngot" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="../assets/img/menu-cheesecake.webp" alt="Lát cheesecake dâu phủ sốt dâu trên đĩa trắng" data-en-alt="A slice of strawberry cheesecake with berry sauce on a white plate" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <span class="rounded-full bg-blush-soft px-3 py-0.5 text-sm font-semibold" data-en="Pastries">Bánh ngọt</span>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Strawberry cheesecake">Cheesecake dâu tây</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="A thin sponge base, smooth cream cheese and our house-made strawberry sauce.">Cốt bông lan mỏng, kem phô mai mịn, phủ sốt dâu nấu tại tiệm.</p>
+          </div>
+        </article>
+        <article data-category="banh-ngot" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="../assets/img/menu-strip-cake.webp" alt="Bánh mousse dâu hồng phấn với dâu tươi trên đĩa" data-en-alt="Pastel pink strawberry mousse cake topped with fresh strawberries" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="rounded-full bg-blush-soft px-3 py-0.5 text-sm font-semibold" data-en="Pastries">Bánh ngọt</span>
+              <span class="rounded-full bg-butter px-3 py-0.5 text-sm font-semibold" data-en="Mini cake">Bánh kem mini</span>
+            </div>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Mini strawberry mousse">Mousse dâu mini</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="Pink strawberry mousse on a buttery biscuit base, finished with toasted coconut.">Mousse dâu hồng phấn, đế bánh quy bơ, rắc dừa sấy.</p>
+          </div>
+        </article>
+
+        <!-- Cookie & Cupcake -->
+        <article data-category="cookie-cupcake" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="../assets/img/menu-macaron.webp" alt="Bốn chiếc macaron hồng xếp chồng" data-en-alt="Four pink macarons stacked in a row" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <span class="rounded-full bg-milk-deep px-3 py-0.5 text-sm font-semibold">Cookie &amp; Cupcake</span>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Lychee rose macaron">Macaron hồng vải</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="Crisp shells filled with lychee buttercream and a hint of rose.">Vỏ giòn tan, nhân kem bơ vải thoang thoảng hương hoa hồng.</p>
+          </div>
+        </article>
+        <article data-category="cookie-cupcake" class="menu-item group rounded-4xl bg-white/75 p-3 shadow-soft ring-1 ring-cocoa/5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <div class="relative aspect-square overflow-hidden rounded-[24px] bg-blush-soft">
+            <img src="../assets/img/menu-cupcake-strawberry.jpg" alt="Ba chiếc cupcake kem bơ dâu với trái tim socola trắng" data-en-alt="Three strawberry buttercream cupcakes with white chocolate hearts" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="700" height="700">
+          </div>
+          <div class="px-2 pb-3 pt-4">
+            <span class="rounded-full bg-milk-deep px-3 py-0.5 text-sm font-semibold">Cookie &amp; Cupcake</span>
+            <h2 class="mt-3 font-display text-xl font-extrabold" data-en="Strawberry buttercream cupcake">Cupcake dâu kem bơ</h2>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-cocoa/85" data-en="Vanilla sponge, swirled strawberry buttercream and a white chocolate heart.">Cốt vani, kem bơ dâu xoắn, thêm trái tim socola trắng.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ TÙY CHỈNH LY ============ -->
+    <section id="tuy-chinh" data-section="faq-split" class="bg-butter-soft py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <div class="lg:col-span-4" data-reveal="up">
+          <h2 class="font-display text-3xl font-black leading-tight sm:text-4xl lg:text-5xl" data-en="Make the cup yours">Tùy chỉnh ly của bạn</h2>
+          <p class="mt-4 max-w-sm text-lg leading-relaxed text-cocoa/85" data-en="Tell the staff at the counter, we are happy to adjust every drink.">Cứ nói với bạn nhân viên ở quầy, ly nào tiệm cũng chỉnh được.</p>
+          <p class="mt-6 inline-block rotate-[-3deg] rounded-2xl bg-blush px-4 py-2 font-hand text-xl" data-en="no extra charge for sugar &amp; ice">chỉnh đường, đá không tính thêm</p>
+        </div>
+        <div class="lg:col-span-7 lg:col-start-6" data-accordion>
+          <div data-acc-item data-open class="border-b border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-4 text-left font-display text-xl font-extrabold">
+              <span data-en="How sweet can I go?">Độ ngọt chọn thế nào?</span>
+              <span data-acc-icon class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-milk text-xl transition-transform duration-300 [&.is-open]:rotate-45">+</span>
+            </button>
+            <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-cocoa/85" data-en="Choose 0, 30, 50, 70 or 100% sugar. Most regulars order 50%, which we also recommend for first-timers.">Bạn chọn 0, 30, 50, 70 hoặc 100% đường. Khách quen hay gọi 50%, cũng là mức tiệm gợi ý cho lần đầu.</div></div>
+          </div>
+          <div data-acc-item class="border-b border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-4 text-left font-display text-xl font-extrabold">
+              <span data-en="Less ice, or no ice?">Ít đá hay không đá?</span>
+              <span data-acc-icon class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-milk text-xl transition-transform duration-300 [&.is-open]:rotate-45">+</span>
+            </button>
+            <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-cocoa/85" data-en="Normal, less or no ice. Milk teas can also be served warm on rainy days.">Đá bình thường, ít đá hoặc không đá. Trà sữa cũng có bản nóng cho ngày mưa.</div></div>
+          </div>
+          <div data-acc-item class="border-b border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-4 text-left font-display text-xl font-extrabold">
+              <span data-en="What toppings are there?">Có những topping nào?</span>
+              <span data-acc-icon class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-milk text-xl transition-transform duration-300 [&.is-open]:rotate-45">+</span>
+            </button>
+            <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-cocoa/85" data-en="Black pearls, white pearls, lychee jelly, egg pudding and sea salt cream.">Trân châu đen, trân châu trắng, thạch vải, pudding trứng và kem muối.</div></div>
+          </div>
+          <div data-acc-item class="border-b border-cocoa/15">
+            <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-4 text-left font-display text-xl font-extrabold">
+              <span data-en="Can I swap to plant milk?">Đổi sang sữa thực vật được không?</span>
+              <span data-acc-icon class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-milk text-xl transition-transform duration-300 [&.is-open]:rotate-45">+</span>
+            </button>
+            <div data-acc-panel><div class="pb-6 text-lg leading-relaxed text-cocoa/85" data-en="Yes, oat milk is available for all milk teas and lattes. Please let us know about any allergies.">Được, tiệm có sữa yến mạch cho mọi món trà sữa và latte. Nhớ báo nhân viên nếu bạn dị ứng thành phần nào.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DẢI ẢNH + CTA VỀ TRANG CHỦ ============ -->
+    <section id="dai-anh" data-section="cta-strip" class="bg-milk py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <div data-reveal="clip" class="aspect-[4/3] overflow-hidden rounded-4xl bg-blush-soft lg:col-span-5 lg:aspect-auto lg:min-h-[340px]">
+          <img src="../assets/img/menu-fruit-tart.webp" alt="Bánh tart trái cây với dâu, việt quất và kiwi" data-en-alt="A fruit tart topped with strawberries, blueberries and kiwi" loading="lazy" class="h-full w-full object-cover" width="900" height="700">
+        </div>
+        <div data-reveal="clip" class="aspect-[4/3] overflow-hidden rounded-4xl bg-blush-soft lg:col-span-4 lg:aspect-auto">
+          <img src="../assets/img/menu-strip-macarons.webp" alt="Bát macaron nhiều màu bên bó oải hương" data-en-alt="A bowl of colourful macarons beside dried lavender" loading="lazy" class="h-full w-full object-cover" width="800" height="600">
+        </div>
+        <div class="flex flex-col justify-between rounded-4xl bg-blush p-7 sm:col-span-2 lg:col-span-3 lg:p-8" data-reveal="up">
+          <h2 class="font-display text-3xl font-black leading-tight" data-en="Picked your cup for today?">Đã chọn được ly cho hôm nay chưa?</h2>
+          <div>
+            <p class="mt-4 leading-relaxed" data-en="Head back home to meet the shop and our customer favourites.">Quay lại trang chủ để xem thêm về tiệm và các món được yêu thích.</p>
+            <a href="../index.html" class="group mt-6 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-cocoa px-6 font-display font-extrabold text-milk transition duration-300 hover:-translate-y-0.5 hover:bg-cocoa-deep active:scale-[.98]">
+              <svg class="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+              <span data-en="Back to Home">Về Trang chủ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER (giống nhau mọi trang) ============ -->
+  <footer id="footer" class="relative overflow-hidden bg-blush-soft pt-16 lg:pt-20">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <a href="../index.html" class="inline-flex items-center gap-1.5 font-display text-2xl font-black">MILKY DAY
+          <svg class="h-4 w-4 text-blush-deep" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 5.4 3.2 1.8-2 3.3-3.2 5.4-3.2 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+        </a>
+        <p class="mt-4 max-w-sm leading-relaxed text-cocoa/85" data-en="Milk tea and pastries for students and young people. Fresh, sweet and happy, every single day.">Trà sữa và bánh ngọt cho học sinh, sinh viên và người trẻ. Tươi, ngọt và vui, mỗi ngày.</p>
+      </div>
+      <nav class="lg:col-span-2" aria-label="Liên kết chân trang" data-en-aria-label="Footer links">
+        <p class="font-display font-extrabold" data-en="Pages">Trang</p>
+        <ul class="mt-4 space-y-1">
+          <li><a href="../index.html" class="inline-block py-1.5 transition-colors duration-300 hover:text-cocoa-deep hover:underline" data-en="Home">Trang chủ</a></li>
+          <li><a href="menu.html" class="inline-block py-1.5 transition-colors duration-300 hover:text-cocoa-deep hover:underline" data-en="Products &amp; Menu">Sản phẩm &amp; Menu</a></li>
+          <li><a href="about.html" class="inline-block py-1.5 transition-colors duration-300 hover:text-cocoa-deep hover:underline" data-en="About us">Về chúng tôi</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <p class="font-display font-extrabold" data-en="Contact (sample)">Liên hệ (mẫu)</p>
+        <ul class="mt-4 space-y-2">
+          <li data-en="214 Phan Xich Long, Phu Nhuan, HCMC">214 Phan Xích Long, Phú Nhuận, TP.HCM</li>
+          <li class="flex flex-wrap items-center gap-2">
+            <a href="tel:0909214386" class="py-1 font-semibold hover:underline">0909 214 386</a>
+            <button type="button" data-copy="0909 214 386" class="min-h-[36px] rounded-full bg-milk px-3 text-sm font-semibold transition duration-300 hover:bg-blush active:scale-[.97]" data-en="Copy">Sao chép</button>
+          </li>
+          <li><a href="mailto:hello@milkyday.vn" class="py-1 hover:underline">hello@milkyday.vn</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="font-display font-extrabold" data-en="Opening hours">Giờ mở cửa</p>
+        <p class="mt-4" data-en="Monday to Sunday">Thứ Hai - Chủ Nhật</p>
+        <p class="font-display text-2xl font-black">8:00 - 22:00</p>
+      </div>
+    </div>
+    <p class="mx-auto mt-10 w-full max-w-screen-2xl select-none whitespace-nowrap px-4 font-display text-[14vw] font-black leading-[0.85] tracking-tighter text-blush sm:px-6 lg:px-10 2xl:px-16 2xl:text-[13.5rem]" aria-hidden="true">MILKY DAY</p>
+    <div class="relative border-t border-cocoa/10 bg-blush-soft">
+      <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 px-4 py-6 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+        <p data-en="© 2026 MILKY DAY. All rights reserved.">© 2026 MILKY DAY. Bảo lưu mọi quyền.</p>
+        <p class="font-hand text-lg" data-en="made with milk &amp; love">làm bằng sữa và thật nhiều thương</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" data-back-to-top class="fixed bottom-5 right-5 z-30 grid h-12 w-12 place-items-center rounded-full bg-cocoa text-milk shadow-lift transition duration-300 hover:-translate-y-0.5" aria-label="Về đầu trang" data-en-aria-label="Back to top">
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/motion.js"></script>
+  <script src="../assets/js/atmos.js"></script>
+</body>
+</html>

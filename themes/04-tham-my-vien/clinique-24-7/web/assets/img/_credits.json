@@ -1,0 +1,72 @@
+[
+  {
+    "file": "assets/img/home-hero-consultation.jpg",
+    "purpose": "index.html — hero, bác sĩ tư vấn",
+    "source": "openverse",
+    "id": "openverse-c5bfd157-c7e9-4661-b050-63199812400b",
+    "title": "Doctor Patient",
+    "creator": "Direct Media",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/doctor-patient-QK9POJNL5Z"
+  },
+  {
+    "file": "assets/img/services-laser-cheek.jpg",
+    "purpose": "pages/services.html — nhóm điều trị da (laser)",
+    "source": "openverse",
+    "id": "openverse-ce8ddddb-39dd-418e-8a1b-cd2c88a41678",
+    "title": "CO2 Fractional Laser on Cheek",
+    "creator": "ama regen med",
+    "license": "CC BY-SA 2.0",
+    "page": "https://www.flickr.com/photos/198265846@N07/52883039705"
+  },
+  {
+    "file": "assets/img/services-intensive-care.jpg",
+    "purpose": "pages/services.html — nhóm chăm sóc da chuyên sâu",
+    "source": "openverse",
+    "id": "openverse-4c4cd71b-13a0-4ed7-9775-0bacfaff770f",
+    "title": "Beauty Skincare",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/beauty-skincare-LRSAT4NCLS"
+  },
+  {
+    "file": "assets/img/services-non-surgical.jpg",
+    "purpose": "pages/services.html — nhóm thẩm mỹ không phẫu thuật",
+    "source": "openverse",
+    "id": "openverse-ff075f38-71f8-4dc0-b930-5e383c2bc8a7",
+    "title": "Woman Skin",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/woman-skin-HIZNJOUVSY"
+  },
+  {
+    "file": "assets/img/about-intake.jpg",
+    "purpose": "pages/about.html — quy trình tiếp nhận",
+    "source": "openverse",
+    "id": "openverse-07858221-90b9-4dd2-bf71-04a47cc89302",
+    "title": "Doctor Patient",
+    "creator": "Direct Media",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/doctor-patient-N9YCBA2UBU"
+  },
+  {
+    "file": "assets/img/home-skin-laser-forehead.jpg",
+    "purpose": "index.html — định hướng chuyên môn",
+    "source": "openverse",
+    "id": "openverse-80c5e24b-02e0-45c3-823e-0359215480cb",
+    "title": "CO2 Fractional Laser on Forehead",
+    "creator": "ama regen med",
+    "license": "CC BY-SA 2.0",
+    "page": "https://www.flickr.com/photos/198265846@N07/52883039500"
+  },
+  {
+    "file": "assets/img/about-facility-corridor.jpg",
+    "purpose": "pages/about.html — cơ sở vật chất (phòng điều trị)",
+    "source": "openverse",
+    "id": "openverse-dab1d2b0-961a-4b5b-9d6e-c7cb27fb3c22",
+    "title": "Clinic Doctor",
+    "creator": "Mali Maeder",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/clinic-doctor-6C4YTOELUE"
+  }
+]

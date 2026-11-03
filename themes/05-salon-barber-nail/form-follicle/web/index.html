@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FORM & FOLLICLE — Mỗi mái tóc là một hình khối</title>
+<meta name="description" content="FORM & FOLLICLE là salon tóc hiện đại cho người trẻ: cắt chính xác, kết cấu có chủ đích và màu nhuộm thời trang.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/site.js"></script>
+<!-- /@partial head -->
+</head>
+<body data-title-en="FORM & FOLLICLE | Every head of hair has a form">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-silver bg-paper transition-colors duration-300 [&.is-scrolled]:border-ink">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center gap-4 px-4 sm:px-6 lg:gap-8 lg:px-10 2xl:px-16">
+    <a aria-current="page" href="index.html" class="font-display text-base font-extrabold uppercase tracking-tight text-ink sm:text-lg" aria-label="FORM & FOLLICLE">FORM <span class="text-cobalt">&amp;</span> FOLLICLE</a>
+
+    <nav class="ml-auto hidden lg:block" aria-label="Điều hướng chính" data-en-aria-label="Main navigation">
+      <ul class="flex items-center gap-8">
+        <li><a aria-current="page" href="index.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">01</span><span data-en="Home">Trang chủ</span></a></li>
+        <li><a href="pages/services.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">02</span><span data-en="Services">Dịch vụ</span></a></li>
+        <li><a href="pages/archive.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">03</span><span>Archive</span></a></li>
+        <li><a href="pages/studio.html" class="relative inline-flex items-baseline gap-1.5 py-2 text-[13px] font-semibold uppercase tracking-[.12em] text-ink transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-cobalt hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cobalt aria-[current=page]:after:scale-x-100"><span class="text-xs text-graphite">04</span><span>Studio</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="ml-auto flex items-center gap-3 lg:ml-0">
+      <div class="flex border border-ink text-xs font-semibold" role="group" aria-label="Chọn ngôn ngữ" data-en-aria-label="Choose language">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="h-10 w-10 transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="h-10 w-10 border-l border-ink transition-colors duration-300 hover:bg-mist [&.is-active]:bg-ink [&.is-active]:text-white">EN</button>
+      </div>
+      <button type="button" data-modal-open="booking" class="hidden h-11 items-center gap-2 bg-cobalt px-5 text-[13px] font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobalt active:scale-[.98] sm:inline-flex"><span data-en="Book a Visit">Đặt lịch</span>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink transition-colors duration-300 hover:bg-ink hover:text-white lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-0 top-[72px] z-50 max-h-[calc(100dvh-72px)] overflow-y-auto border-b border-ink bg-paper px-4 pb-8 pt-4 sm:px-6 lg:hidden">
+    <ul class="divide-y divide-silver border-y border-silver">
+      <li><a aria-current="page" href="index.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">01</span><span data-en="Home">Trang chủ</span></a></li>
+      <li><a href="pages/services.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">02</span><span data-en="Services">Dịch vụ</span></a></li>
+      <li><a href="pages/archive.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">03</span><span>Archive</span></a></li>
+      <li><a href="pages/studio.html" class="flex items-baseline gap-4 py-4 font-display text-3xl font-extrabold uppercase aria-[current=page]:text-cobalt"><span class="text-xs font-semibold text-graphite">04</span><span>Studio</span></a></li>
+    </ul>
+    <button type="button" data-modal-open="booking" class="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 bg-cobalt text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric"><span data-en="Book a Visit">Đặt lịch</span></button>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-type" class="relative overflow-hidden bg-paper">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 pb-16 pt-10 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-14 lg:pt-14 2xl:px-16">
+      <div class="flex min-w-0 flex-col justify-center lg:col-span-7">
+        <div class="flex items-center gap-4 text-xs font-semibold uppercase tracking-[.2em]" data-reveal="fade">
+          <span class="h-px w-10 bg-ink"></span>
+          <span>Cut <span class="text-cobalt">/</span> Color <span class="text-cobalt">/</span> Texture</span>
+        </div>
+        <h1 class="font-display display-tight mt-8 text-[3.3rem] font-black uppercase sm:text-7xl lg:text-[6rem] xl:text-[7rem] 2xl:text-[8.5rem]" data-reveal="up" data-en="Hair has<br>a form<span class='text-cobalt'>.</span>">Tóc có<br>hình khối<span class="text-cobalt">.</span></h1>
+        <p class="mt-8 max-w-[34rem] text-lg leading-relaxed text-graphite lg:text-xl" data-reveal="up" data-en="Precise cuts, deliberate texture and color that dares to stand out. A salon for hair with a point of view.">Cắt chính xác, kết cấu có chủ đích, màu nhuộm dám khác biệt. Salon cho những mái tóc có quan điểm.</p>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row" data-reveal="up" data-reveal-delay="150">
+          <a href="pages/services.html" class="group inline-flex h-14 items-center justify-center gap-3 bg-cobalt px-8 text-sm font-semibold uppercase tracking-[.14em] text-white transition-colors duration-300 hover:bg-electric focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobalt active:scale-[.98]"><span data-en="Explore Services">Xem dịch vụ</span>
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="pages/archive.html" class="inline-flex h-14 items-center justify-center border border-ink px-8 text-sm font-semibold uppercase tracking-[.14em] text-ink transition-colors duration-300 hover:bg-ink hover:text-white active:scale-[.98]" data-en="View Archive">Xem Archive</a>
+        </div>
+      </div>
+
+      <div class="relative min-w-0 lg:col-span-5 lg:-mr-10 2xl:-mr-16">
+        <div class="absolute right-0 top-0 h-[82%] w-[78%] bg-cobalt grid-lines" aria-hidden="true"></div>
+        <div class="relative z-10 pt-10 lg:pt-16">
+          <div class="aspect-[4/5] w-[82%] overflow-hidden bg-mist lg:w-[80%]">
+            <img src="https://images.unsplash.com/photo-1779350676620-fde279b1d023?fm=jpg&q=70&w=1600&auto=format&fit=crop" alt="Mái tóc nâu thẳng bóng mượt nhìn từ phía sau" data-en-alt="Sleek straight brown hair seen from behind" width="1200" height="1500" referrerpolicy="no-referrer" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-4 flex w-[82%] items-baseline justify-between gap-4 border-t border-ink pt-3 text-xs font-semibold uppercase tracking-[.16em] lg:w-[80%]">
+            <span>FF-A000</span>
+            <span class="font-display text-base normal-case tracking-normal">Sleek Line</span>
+            <span class="text-graphite" data-en="Cut">Cắt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section id="manifesto" data-section="quote-full" class="relative bg-cobalt text-white">
+    <div class="grid-lines absolute inset-0" aria-hidden="true"></div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-36 2xl:px-16">
+      <p class="text-xs font-semibold uppercase tracking-[.2em] text-white/80 lg:col-span-12">Manifesto</p>
+      <h2 class="font-display display-tight text-[3.2rem] font-black uppercase sm:text-7xl lg:col-span-9 lg:text-[7.5rem] 2xl:text-[9.5rem]" data-reveal="up" data-en="Hair is an<br>attitude.">Tóc là<br>thái độ.</h2>
+      <div class="lg:col-span-5 lg:col-start-8" data-reveal="up">
+        <p class="border-t border-white/60 pt-6 text-xl leading-relaxed lg:text-2xl" data-en="Hair speaks before you do. We cut, color and texture it so it says exactly what you mean: clear, confident, no permission needed.">Mái tóc lên tiếng trước khi bạn kịp mở lời. Chúng tôi cắt, nhuộm và tạo kết cấu để nó nói đúng điều bạn muốn: rõ ràng, tự tin, không cần xin phép.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE INDEX -->
+  <section id="service-index" data-section="features-numbered" class="bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 class="font-display display-tight text-5xl font-black uppercase sm:text-6xl lg:text-8xl" data-reveal="up" data-en="Service index">Chỉ mục dịch vụ</h2>
+
+      <ol class="mt-14 border-b border-ink" data-reveal-stagger="80">
+        <li>
+          <a href="pages/services.html#cut" class="group grid grid-cols-[3.5rem_1fr_auto] items-center gap-x-4 gap-y-3 border-t border-ink py-6 lg:grid-cols-12 lg:gap-8 lg:py-8">
+            <span class="font-display text-2xl font-bold text-cobalt lg:col-span-1 lg:text-4xl">01</span>
+            <span class="font-display text-4xl font-black uppercase transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-3 group-hover:text-cobalt lg:col-span-4 lg:text-6xl" data-en="Cut">Cắt</span>
+            <svg class="h-7 w-7 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-cobalt lg:order-last lg:col-span-1 lg:justify-self-end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span class="col-span-3 max-w-xl text-base leading-relaxed text-graphite lg:col-span-6" data-en="Precision cutting built around bone structure and density: bob, wolf cut, mullet, layers.">Cắt chính xác theo cấu trúc khuôn mặt và độ dày tóc: bob, wolf cut, mullet, layer.</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/services.html#color" class="group grid grid-cols-[3.5rem_1fr_auto] items-center gap-x-4 gap-y-3 border-t border-ink py-6 lg:grid-cols-12 lg:gap-8 lg:py-8">
+            <span class="font-display text-2xl font-bold text-cobalt lg:col-span-1 lg:text-4xl">02</span>
+            <span class="font-display text-4xl font-black uppercase transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-3 group-hover:text-cobalt lg:col-span-4 lg:text-6xl" data-en="Color">Nhuộm màu</span>
+            <svg class="h-7 w-7 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-cobalt lg:order-last lg:col-span-1 lg:justify-self-end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span class="col-span-3 max-w-xl text-base leading-relaxed text-graphite lg:col-span-6" data-en="From root touch-ups to balayage and creative color, mixed for your skin tone and routine.">Từ dặm chân tóc đến balayage và màu sáng tạo, pha theo tông da và nhịp sống của bạn.</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/services.html#texture" class="group grid grid-cols-[3.5rem_1fr_auto] items-center gap-x-4 gap-y-3 border-t border-ink py-6 lg:grid-cols-12 lg:gap-8 lg:py-8">
+            <span class="font-display text-2xl font-bold text-cobalt lg:col-span-1 lg:text-4xl">03</span>
+            <span class="font-display text-4xl font-black uppercase transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-3 group-hover:text-cobalt lg:col-span-4 lg:text-6xl" data-en="Texture">Kết cấu</span>
+            <svg class="h-7 w-7 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-cobalt lg:order-last lg:col-span-1 lg:justify-self-end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span class="col-span-3 max-w-xl text-base leading-relaxed text-graphite lg:col-span-6" data-en="Natural and digital perms plus styling that gives hair a movement of its own.">Uốn tự nhiên, uốn kỹ thuật số và tạo kiểu để mái tóc có chuyển động riêng.</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/services.html#treatment" class="group grid grid-cols-[3.5rem_1fr_auto] items-center gap-x-4 gap-y-3 border-t border-ink py-6 lg:grid-cols-12 lg:gap-8 lg:py-8">
+            <span class="font-display text-2xl font-bold text-cobalt lg:col-span-1 lg:text-4xl">04</span>
+            <span class="font-display text-4xl font-black uppercase transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-3 group-hover:text-cobalt lg:col-span-4 lg:text-6xl" data-en="Treatment">Phục hồi</span>
+            <svg class="h-7 w-7 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-cobalt lg:order-last lg:col-span-1 lg:justify-self-end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span class="col-span-3 max-w-xl text-base leading-relaxed text-graphite lg:col-span-6" data-en="Conditioning, repair and scalp care that keep color lasting and hair healthy.">Hấp dưỡng, phục hồi hư tổn và chăm sóc da đầu để màu bền, tóc khỏe.</span>
+          </a>
+        </li>
+      </ol>
+
+      <div class="mt-20 grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-12 lg:items-end lg:gap-8">
+        <a href="pages/services.html#cut" class="group col-span-2 block lg:col-span-6" data-reveal="up">
+          <div class="aspect-[4/5] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1700760934268-8aa0ef52ce0a?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Stylist đang cắt tóc cho khách bằng kéo" data-en-alt="Stylist cutting a client's hair with scissors" width="1200" height="1500" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+          <p class="mt-4 flex items-baseline gap-3 border-t border-ink pt-3"><span class="text-xs font-semibold text-cobalt">01</span><span class="font-display text-xl font-bold uppercase" data-en="Precision cut">Cắt chính xác</span></p>
+        </a>
+        <a href="pages/services.html#color" class="group block lg:col-span-3" data-reveal="up">
+          <div class="aspect-square overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1554519515-242161756769?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Cô gái với mái tóc nhuộm nhiều màu" data-en-alt="Woman with multicolored dyed hair" width="900" height="900" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+          <p class="mt-4 flex items-baseline gap-3 border-t border-ink pt-3"><span class="text-xs font-semibold text-cobalt">02</span><span class="font-display text-xl font-bold uppercase" data-en="Fashion color">Màu thời trang</span></p>
+        </a>
+        <a href="pages/services.html#texture" class="group block lg:col-span-3 lg:mb-28" data-reveal="up">
+          <div class="aspect-[3/4] overflow-hidden bg-mist">
+            <img src="https://images.unsplash.com/photo-1554519880-ffe46861d570?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Mái tóc xoăn nâu có độ phồng tự nhiên" data-en-alt="Brown curly hair with natural volume" width="900" height="1200" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+          <p class="mt-4 flex items-baseline gap-3 border-t border-ink pt-3"><span class="text-xs font-semibold text-cobalt">03</span><span class="font-display text-xl font-bold uppercase" data-en="Natural texture">Kết cấu tự nhiên</span></p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHIVE PREVIEW -->
+  <section id="archive-preview" data-section="gallery-lookbook" class="bg-mist">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="max-w-3xl" data-reveal="up">
+        <h2 class="font-display display-tight text-5xl font-black uppercase sm:text-6xl lg:text-8xl" data-en="From the<br>archive">Từ<br>Archive</h2>
+        <p class="mt-6 max-w-prose text-lg leading-relaxed text-graphite" data-en="Shapes, textures and colors made in the studio, each one filed with its own code.">Những hình khối, kết cấu và màu nhuộm thực hiện tại studio, mỗi kiểu được lưu bằng một mã riêng.</p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-12">
+        <figure class="group lg:col-span-5" data-reveal="up">
+          <a href="pages/archive.html" class="block aspect-[3/4] overflow-hidden bg-silver">
+            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Cô gái tóc nhuộm tím tựa vào tường" data-en-alt="Woman with violet dyed hair leaning on a wall" width="900" height="1200" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3">
+            <span class="text-xs font-semibold tracking-[.12em]">FF-A013</span>
+            <span class="font-display text-xl font-bold uppercase">Ultraviolet</span>
+            <span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Color">Màu</span>
+          </figcaption>
+        </figure>
+        <figure class="group lg:col-span-4 lg:mt-32" data-reveal="up">
+          <a href="pages/archive.html" class="block aspect-[4/5] overflow-hidden bg-silver">
+            <img src="https://images.unsplash.com/photo-1785970151269-1c77b401afb6?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Người mẫu tóc mullet ngắn đeo kính tựa cột đá" data-en-alt="Model with a short mullet and glasses leaning on a stone pillar" width="1000" height="1250" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3">
+            <span class="text-xs font-semibold tracking-[.12em]">FF-A014</span>
+            <span class="font-display text-xl font-bold uppercase">Soft Mullet</span>
+            <span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Cut">Cắt</span>
+          </figcaption>
+        </figure>
+        <figure class="group lg:col-span-3" data-reveal="up">
+          <a href="pages/archive.html" class="block aspect-[3/4] overflow-hidden bg-silver">
+            <img src="https://images.unsplash.com/photo-1586266195531-76cfa365cb43?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Cô gái với mái tóc nhuộm đỏ" data-en-alt="Woman with dyed red hair" width="900" height="1200" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3">
+            <span class="text-xs font-semibold tracking-[.12em]">FF-A015</span>
+            <span class="font-display text-xl font-bold uppercase">Scarlet Gloss</span>
+            <span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Color">Màu</span>
+          </figcaption>
+        </figure>
+        <figure class="group lg:col-span-6 lg:col-start-4" data-reveal="up">
+          <a href="pages/archive.html" class="block aspect-[16/10] overflow-hidden bg-silver">
+            <img src="https://images.unsplash.com/photo-1788534931891-20c9d11c2aa5?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Cô gái tóc xoăn ngắn màu nâu trước tường gạch" data-en-alt="Woman with short curly brown hair against a brick wall" width="1400" height="875" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </a>
+          <figcaption class="mt-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-ink pt-3">
+            <span class="text-xs font-semibold tracking-[.12em]">FF-A016</span>
+            <span class="font-display text-xl font-bold uppercase">Curl Crop</span>
+            <span class="text-xs font-semibold uppercase tracking-[.14em] text-graphite" data-en="Texture">Kết cấu</span>
+          </figcaption>
+        </figure>
+        <div class="flex flex-col justify-end sm:col-span-2 lg:col-span-3" data-reveal="up">
+          <p class="text-base leading-relaxed text-graphite" data-en="Twelve looks, filterable by cut, color and texture.">Mười hai kiểu tóc, lọc theo cắt, màu và kết cấu.</p>
+          <a href="pages/archive.html" class="group mt-6 inline-flex h-14 items-center justify-between gap-3 bg-ink px-6 text-sm font-semibold uppercase tracking-[.14em] text-white transition-colors duration-300 hover:bg-cobalt active:scale-[.98]"><span data-en="Explore the Archive">Khám phá Archive</span>
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO SNAPSHOT -->
+  <section id="studio-snapshot" data-section="story-letter" class="bg-paper">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="relative lg:col-span-6" data-reveal="up">
+        <div class="aspect-[4/5] overflow-hidden bg-mist">
+          <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Stylist sấy và tạo kiểu tóc cho khách bằng lược tròn" data-en-alt="Stylist blow-drying a client's hair with a round brush" width="1200" height="1500" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover">
+        </div>
+        <div class="absolute -bottom-6 left-6 h-24 w-24 bg-cobalt sm:h-32 sm:w-32" aria-hidden="true"></div>
+      </div>
+      <div class="flex flex-col justify-between gap-12 lg:col-span-5 lg:col-start-8">
+        <div data-reveal="up">
+          <h2 class="font-display display-tight text-5xl font-black uppercase sm:text-6xl lg:text-7xl" data-en="A workshop<br>for hair.">Một xưởng<br>cho mái tóc.</h2>
+          <p class="mt-8 max-w-prose text-lg leading-relaxed text-graphite" data-en="We start with how your hair grows, moves and how you actually style it each morning. Then we cut, color and texture with that in mind, so the shape still works weeks later.">Chúng tôi bắt đầu từ cách tóc bạn mọc, chuyển động và cách bạn thực sự chải nó mỗi sáng. Sau đó mới cắt, nhuộm và tạo kết cấu, để hình khối vẫn đứng vững nhiều tuần sau.</p>
+          <a href="pages/studio.html" class="group mt-10 inline-flex items-center gap-3 border-b-2 border-ink pb-1 text-sm font-semibold uppercase tracking-[.14em] transition-colors duration-300 hover:border-cobalt hover:text-cobalt"><span data-en="About the Studio">Về Studio</span>
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <figure data-reveal="up">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-mist sm:w-4/5 lg:w-full">
+            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Ba ghế cắt tóc màu đen trước gương tròn trên tường tối" data-en-alt="Three black salon chairs facing round mirrors on a dark wall" width="1200" height="900" loading="lazy" referrerpolicy="no-referrer" class="h-full w-full object-cover">
+          </div>
+          <figcaption class="mt-3 text-sm text-graphite" data-en="The cutting floor: three chairs, round mirrors, steel and black.">Khu cắt tóc: ba ghế, gương tròn, thép và đen.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" data-section="cta-type" class="relative overflow-hidden bg-cobalt text-white">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 lg:py-32 2xl:px-16">
+      <h2 class="font-display display-tight text-[3rem] font-black uppercase sm:text-7xl lg:col-span-9 lg:text-[7rem] 2xl:text-[8.5rem]" data-reveal="up" data-en="Ready for<br>a new form?">Sẵn sàng cho<br>hình khối mới?</h2>
+      <div class="lg:col-span-3" data-reveal="up">
+        <p class="text-lg leading-relaxed text-white/90" data-en="Every appointment starts with a 15-minute consultation.">Mỗi lịch hẹn bắt đầu bằng 15 phút tư vấn.</p>
+        <button type="button" data-modal-open="booking" class="group mt-6 inline-flex h-14 w-full items-center justify-between gap-3 bg-paper px-6 text-sm font-semibold uppercase tracking-[.14em] text-cobalt transition-colors duration-300 hover:bg-ink hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[.98]"><span data-en="Book a Visit">Đặt lịch</span>
+          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="bg-ink text-white">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-20 sm:px-6 lg:px-10 lg:pt-24 2xl:px-16">
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-5">
+        <p class="font-display display-tight text-5xl font-extrabold uppercase sm:text-6xl 2xl:text-7xl">FORM <span class="text-electric">&amp;</span><br>FOLLICLE</p>
+        <p class="mt-6 max-w-sm text-base leading-relaxed text-white/75" data-en="A hair studio for precise cuts, deliberate texture and fashion-forward color.">Studio tóc cho đường cắt chính xác, kết cấu có chủ đích và màu nhuộm thời trang.</p>
+        <button type="button" data-modal-open="booking" class="mt-8 inline-flex h-12 items-center gap-3 bg-cobalt px-6 text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[.98]"><span data-en="Book a Visit">Đặt lịch</span>
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+
+      <nav class="lg:col-span-2" aria-label="Liên kết chân trang" data-en-aria-label="Footer links">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Navigation">Điều hướng</p>
+        <ul class="mt-5 space-y-3 text-base">
+          <li><a aria-current="page" href="index.html" class="transition-colors duration-300 hover:text-electric" data-en="Home">Trang chủ</a></li>
+          <li><a href="pages/services.html" class="transition-colors duration-300 hover:text-electric" data-en="Services &amp; pricing">Dịch vụ &amp; bảng giá</a></li>
+          <li><a href="pages/archive.html" class="transition-colors duration-300 hover:text-electric">Style Archive</a></li>
+          <li><a href="pages/studio.html" class="transition-colors duration-300 hover:text-electric">Studio</a></li>
+        </ul>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Contact">Liên hệ</p>
+        <ul class="mt-5 space-y-3 text-base leading-relaxed text-white/85">
+          <li data-en="24 Ton That Thiep, District 1, Ho Chi Minh City">24 Tôn Thất Thiệp, Quận 1, TP. Hồ Chí Minh</li>
+          <li data-en="Tue to Sun, 09:00 - 20:00">Thứ 3 đến Chủ nhật, 09:00 - 20:00</li>
+          <li><a href="tel:+842838224719" class="transition-colors duration-300 hover:text-electric">028 3822 4719</a></li>
+          <li><a href="mailto:hello@formandfollicle.vn" class="break-words transition-colors duration-300 hover:text-electric">hello@formandfollicle.vn</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="border-t border-white/30 pt-4 text-xs font-semibold uppercase tracking-[.16em] text-white/60" data-en="Social">Mạng xã hội</p>
+        <ul class="mt-5 space-y-3 text-base">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">TikTok</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-electric">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-3 border-t border-white/20 pt-6 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 FORM &amp; FOLLICLE</p>
+      <p data-en="Address, hours, phone, email and social links are sample data.">Địa chỉ, giờ mở cửa, điện thoại, email và mạng xã hội là dữ liệu mẫu.</p>
+    </div>
+  </div>
+
+  <dialog id="booking" class="bg-paper text-ink" aria-labelledby="booking-title">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-6 border-b border-ink pb-4">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[.16em] text-cobalt">CUT / COLOR / TEXTURE</p>
+          <h2 id="booking-title" class="mt-2 font-display text-3xl font-extrabold uppercase" data-en="Book a Visit">Đặt lịch</h2>
+        </div>
+        <button type="button" data-modal-close class="grid h-11 w-11 shrink-0 place-items-center border border-ink text-xl transition-colors duration-300 hover:bg-ink hover:text-white" aria-label="Đóng" data-en-aria-label="Close">×</button>
+      </div>
+      <form data-form="dat-lich" class="mt-6 grid gap-5 sm:grid-cols-2" novalidate>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Full name">Họ và tên</span>
+          <input type="text" name="name" required minlength="2" autocomplete="name" class="h-12 border border-graphite bg-paper px-3 text-base outline-none transition-colors focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Phone">Điện thoại</span>
+          <input type="tel" name="phone" required minlength="9" autocomplete="tel" class="h-12 border border-graphite bg-paper px-3 text-base outline-none transition-colors focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Service">Dịch vụ</span>
+          <select name="service" required class="h-12 border border-graphite bg-paper px-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+            <option value="" data-en="Choose a service">Chọn dịch vụ</option>
+            <option value="cut" data-en="01 Cut">01 Cắt</option>
+            <option value="color" data-en="02 Color">02 Nhuộm màu</option>
+            <option value="texture" data-en="03 Texture">03 Kết cấu</option>
+            <option value="treatment" data-en="04 Treatment">04 Phục hồi</option>
+            <option value="consult" data-en="Not sure yet, need advice">Chưa chắc, cần tư vấn</option>
+          </select>
+        </label>
+        <label class="grid gap-2 text-sm font-medium"><span data-en="Preferred date">Ngày mong muốn</span>
+          <input type="date" name="date" required class="h-12 border border-graphite bg-paper px-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30">
+        </label>
+        <label class="grid gap-2 text-sm font-medium sm:col-span-2"><span data-en="Notes (current hair, reference style)">Ghi chú (tình trạng tóc, kiểu tham khảo)</span>
+          <textarea name="note" rows="3" class="border border-graphite bg-paper p-3 text-base outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/30"></textarea>
+        </label>
+        <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
+          <button type="submit" class="inline-flex h-12 items-center justify-center bg-cobalt px-7 text-sm font-semibold uppercase tracking-[.12em] text-white transition-colors duration-300 hover:bg-electric active:scale-[.98]" data-en="Send request">Gửi yêu cầu</button>
+          <p class="text-sm text-graphite" data-en="Demo only: this form is not connected to a booking system and sends nothing.">Bản minh họa: form chưa kết nối hệ thống đặt lịch, không gửi đi.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

@@ -1,0 +1,121 @@
+{
+  "brand": "CANDY COAT NAIL CLUB",
+  "language": "vi",
+  "preset": "bold",
+  "motionLevel": 2,
+  "visualIdea": "Bảng sticker scrapbook: mọi trang như một tấm bảng dán, ảnh nail đóng khung viền mực dày + bóng cứng lệch, sticker sao / hoa / tim dán có chủ đích ở góc khung, khối màu fuchsia – vàng bơ – xanh baby đổi theo từng section",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Móng xinh theo mood, chất riêng theo cách bạn",
+    "description": "Giao diện thương hiệu nail art phong cách pop art × Y2K, song ngữ Việt – Anh."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Ấn tượng đầu tiên: giới thiệu tinh thần club, 4 phong cách đặc trưng, moodboard và nghệ sĩ, dẫn sang Playground và đặt lịch",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ai", "note": "NAILS THAT POP! — collage 3 ảnh + sticker" },
+        { "id": "intro", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "A little extra is a good thing — từ khóa lệch kiểu tạp chí" },
+        { "id": "styles", "catalog": "features", "variant": "features-bento", "source": "ai", "note": "4 Signature Nail Styles, link sang pages/playground.html" },
+        { "id": "vibe", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "Moodboard Pick your vibe, lightbox" },
+        { "id": "besties", "catalog": "team", "variant": "teaser-row", "source": "ai", "note": "3 nghệ sĩ mẫu, link sang pages/artists.html" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Ready for a fresh set? nền vàng bơ" }
+      ],
+      "images": [
+        { "slot": "hero-main", "query": "Wikimedia Commons: Gel Nails Pink Orange and White Design", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Gel_Nails_Pink_Orange_and_White_Design.jpg?width=1200", "status": "link" },
+        { "slot": "hero-small-1", "query": "Wikimedia Commons: Neon Nails", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Neon_Nails.jpg?width=900", "status": "link" },
+        { "slot": "hero-small-2", "query": "Wikimedia Commons: Starburst nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Starburst_nail_art.jpg?width=900", "status": "link" },
+        { "slot": "intro", "query": "Wikimedia Commons: A woman with nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/A_woman_with_nail_art.jpg?width=1200", "status": "link" },
+        { "slot": "styles-fruity", "query": "Wikimedia Commons: Watermelon nails", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Watermelon_nails_(4494973509).jpg?width=900", "status": "link" },
+        { "slot": "styles-flower", "query": "Wikimedia Commons: Flower nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Flower_nail_art.jpg?width=1200", "status": "link" },
+        { "slot": "styles-chrome", "query": "Wikimedia Commons: Hologram nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Hologram_nail_art.jpg?width=700", "status": "link" },
+        { "slot": "styles-charm", "query": "Wikimedia Commons: Acrylic nail art with crystal", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Acrylic_nail_art_with_crystal.jpg?width=900", "status": "link" },
+        { "slot": "vibe-pink", "query": "Wikimedia Commons: Manikyr rosa pink", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Manikyr_rosa_pink.jpg?width=900", "status": "link" },
+        { "slot": "vibe-french", "query": "Wikimedia Commons: French tip nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/French_tip_nail_art.jpg?width=900", "status": "link" },
+        { "slot": "vibe-flower", "query": "Wikimedia Commons: Spring on nails", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Spring_on_nails.jpg?width=641", "status": "link" },
+        { "slot": "vibe-metallic", "query": "Wikimedia Commons: Blue cat eye nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_cat_eye_nail_art.jpg?width=900", "status": "link" },
+        { "slot": "vibe-pastel", "query": "Wikimedia Commons: Matte spotted turquoise nails", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Matte_spotted_turquoise_nails_(15403309163).jpg?width=900", "status": "link" },
+        { "slot": "besties-1", "query": "Wikimedia Commons: Esthéticienne faisant une Manucure", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Esth%C3%A9ticienne_faisant_une_Manucure.jpg?width=900", "status": "link" },
+        { "slot": "besties-2", "query": "Wikimedia Commons: PAOLA MANICURA (3)", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/20052024-20240520_PAOLA_MANICURA_(3).jpg?width=900", "status": "link" },
+        { "slot": "besties-3", "query": "Wikimedia Commons: Capacitacion de manicura 0029", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Capacitacion_de_manicura_en_el_marco_del_Fondo_Por_Mas_-_20230529dicimouyaf0029.jpg?width=900", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ & bảng giá",
+      "purpose": "Trình bày 5 nhóm dịch vụ với mô tả, thời lượng và giá minh họa bằng VND, dẫn tới đặt lịch",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Good nails start here" },
+        { "id": "menu", "catalog": "pricing", "variant": "features-tabs", "source": "ai", "note": "5 nhóm dịch vụ trong tabs, giá mẫu" },
+        { "id": "good-to-know", "catalog": "faq", "variant": "quote-full", "source": "ai", "note": "Ghi chú giá mẫu + accordion câu hỏi" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Found your next set?" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "Wikimedia Commons: Nail extensions with nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Nail_extensions_with_nail_art.jpg?width=1024", "status": "link" },
+        { "slot": "tab-care", "query": "Wikimedia Commons: Manikyr", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Manikyr.jpg?width=900", "status": "link" },
+        { "slot": "tab-gel", "query": "Wikimedia Commons: Pink nail polish", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Pink_nail_polish.jpg?width=900", "status": "link" },
+        { "slot": "tab-extension", "query": "Wikimedia Commons: Longnail", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Longnail.jpg?width=900", "status": "link" },
+        { "slot": "tab-art", "query": "Wikimedia Commons: Complex nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Complex_nail_art.jpg?width=1024", "status": "link" },
+        { "slot": "tab-removal", "query": "Wikimedia Commons: Manikyr FAVN", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Manikyr_FAVN.jpg?width=900", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/playground.html",
+      "title": "Nail Playground",
+      "purpose": "Bảng cảm hứng nail art: bộ lọc theo phong cách, gallery collage có lightbox, moodboard Sugar Rush",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Welcome to the Nail Playground + nhãn sticker" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-filter", "source": "ai", "note": "7 bộ lọc, 14 mẫu, lightbox" },
+        { "id": "obsession", "catalog": "editorial", "variant": "gallery-lookbook", "source": "ai", "note": "Current obsession: SUGAR RUSH" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Spotted a look you love?" }
+      ],
+      "images": [
+        { "slot": "gallery-1", "query": "Wikimedia Commons: Nail of Hakata Gal Union1", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Nail_of_Hakata_Gal_Union1.jpg?width=900", "status": "link" },
+        { "slot": "gallery-2", "query": "Wikimedia Commons: Nailart", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Nailart.jpg?width=900", "status": "link" },
+        { "slot": "gallery-3", "query": "Wikimedia Commons: Stripes nails", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Stripes_nails.jpg?width=900", "status": "link" },
+        { "slot": "gallery-4", "query": "Wikimedia Commons: Matte black and white polkadot nails", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Matte_black_and_white_polkadot_nails_(16476158115).jpg?width=900", "status": "link" },
+        { "slot": "gallery-5", "query": "Wikimedia Commons: Galaxies nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Galaxies_nail_art.jpg?width=982", "status": "link" },
+        { "slot": "gallery-6", "query": "Wikimedia Commons: Nail art Feather", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Nail_art_Feather_-_Colorama_Flor_do_Deserto.jpg?width=900", "status": "link" },
+        { "slot": "gallery-7", "query": "Wikimedia Commons: French Manicure with Glitter", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/French_Manicure_with_Glitter_nail_art_on_ring_finger.jpg?width=900", "status": "link" },
+        { "slot": "obsession-1", "query": "Wikimedia Commons: Sugar Nails", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Sugar_Nails.jpg?width=751", "status": "link" },
+        { "slot": "obsession-2", "query": "Wikimedia Commons: Pretty nail (Sakaki)", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Pretty_nail_(Sakaki)_(4496244385).jpg?width=900", "status": "link" },
+        { "slot": "obsession-3", "query": "Wikimedia Commons: Swirly purple konad nail art", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Swirly_purple_konad_nail_art.jpg?width=900", "status": "link" },
+        { "slot": "obsession-4", "query": "Wikimedia Commons: Nail of Hakata Gal Union2", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Nail_of_Hakata_Gal_Union2.jpg?width=900", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/artists.html",
+      "title": "Gặp nghệ sĩ",
+      "purpose": "Giới thiệu câu chuyện, 3 nghệ sĩ mẫu, không gian studio và thông tin ghé thăm (dữ liệu minh họa)",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Meet your nail besties" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Our story" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ai", "note": "3 hồ sơ khác màu, khác bố cục" },
+        { "id": "inside", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ai", "note": "Inside the Club, kéo ngang" },
+        { "id": "visit", "catalog": "contact", "variant": "contact-split", "source": "ai", "note": "Địa chỉ / SĐT / giờ / mạng xã hội mẫu, không form gửi" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "Wikimedia Commons: ネイルサロン 2人制", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%8D%E3%82%A4%E3%83%AB%E3%82%B5%E3%83%AD%E3%83%B3_2%E4%BA%BA%E5%88%B6_(8705461667).jpg?width=1400", "status": "link" },
+        { "slot": "story", "query": "Wikimedia Commons: Dazznailstudio", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Dazznailstudio.jpg?width=900", "status": "link" },
+        { "slot": "inside-1", "query": "Wikimedia Commons: Antony Nails Bar", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Antony_Nails_Bar.jpg?width=900", "status": "link" },
+        { "slot": "inside-2", "query": "Wikimedia Commons: Nailpolishes", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Nailpolishes.jpg?width=900", "status": "link" },
+        { "slot": "inside-3", "query": "Wikimedia Commons: Nail art kit (1)", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Nail_art_kit_(1).jpg?width=900", "status": "link" },
+        { "slot": "inside-4", "query": "Wikimedia Commons: アートチップ", "file": "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A2%E3%83%BC%E3%83%88%E3%83%81%E3%83%83%E3%83%97.jpg?width=900", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Website 4 trang đúng menu BA đặt (Home, Services, Nail Playground, Meet the Artists); không thêm trang chi tiết vì BA chỉ định bốn trang.",
+    "Concept.md ghi không tạo bộ chuyển ngôn ngữ, nhưng chú thích BA yêu cầu rõ song ngữ VI / EN → làm theo BA: mặc định tiếng Việt (html lang=vi), nút VI / EN ở header và menu mobile, từ điển tiếng Anh tập trung trong assets/js/i18n.js, lưu lựa chọn bằng localStorage.",
+    "Công cụ tìm ảnh (openverse) quá thời gian chờ → toàn bộ ảnh dùng link Wikimedia Commons qua link_image (status link).",
+    "Gallery Nail Playground là kho tổng hợp mẫu nên dùng lại 7 ảnh đã xuất hiện ở trang chủ (Signature Styles, moodboard, hero); ảnh hồ sơ nghệ sĩ dùng lại ảnh xem trước ở trang chủ cho cùng người.",
+    "Nghệ sĩ hiển thị bằng ảnh thao tác làm móng (không dùng ảnh chân dung người thật gắn tên giả).",
+    "Tiêu đề khẩu hiệu 'NAILS THAT POP!' giữ nguyên ở cả hai ngôn ngữ như slogan thương hiệu."
+  ],
+  "limitations": [
+    "Nút Đặt lịch mở form đặt lịch bản demo (không gửi dữ liệu, không tạo lịch hẹn thật).",
+    "Giá, thời lượng, địa chỉ, số điện thoại, giờ mở cửa, mạng xã hội và hồ sơ nghệ sĩ là dữ liệu minh họa, cần thay bằng dữ liệu thật.",
+    "Ảnh tải trực tiếp từ Wikimedia Commons (link ngoài); cần ảnh thật của studio khi triển khai."
+  ]
+}

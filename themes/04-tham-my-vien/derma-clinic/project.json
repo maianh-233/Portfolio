@@ -1,0 +1,85 @@
+{
+  "slug": "derma-clinic",
+  "name": "DERMA CLINIC",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "DERMA CLINIC",
+    "purpose": "Thiết kế website giới thiệu phòng khám thẩm mỹ và chăm sóc da DERMA CLINIC theo phong cách Clinical Modern, nhấn mạnh tính khoa học, chuyên nghiệp và minh bạch.\n\nArt direction: Trắng chủ đạo, xanh mint, xanh teal và xám lạnh. Giao diện sạch, đường nét gọn, icon y khoa tối giản, hình ảnh chuyên gia và thiết bị thực tế. Tránh cảm giác website bệnh viện khô cứng.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Giới thiệu phòng khám, định hướng chăm sóc da, nhóm dịch vụ chính, quy trình thăm khám và điểm nổi bật về chuyên môn.\n\nDịch vụ thẩm mỹ & Bảng giá: Danh mục điều trị mụn, chăm sóc da chuyên sâu, hỗ trợ cải thiện sắc tố, trẻ hóa da và các dịch vụ thẩm mỹ phù hợp. Mỗi mục có mô tả, đối tượng phù hợp và giá tham khảo nếu có dữ liệu.\n\nVề chúng tôi: Giới thiệu phòng khám, chuyên gia, trang thiết bị, quy trình tư vấn và tiêu chuẩn vệ sinh.\n\nThiết kế điều hướng dễ sử dụng, ưu tiên khả năng đọc và tra cứu. Có công tắc Việt – English với nội dung đầy đủ bằng hai thứ tiếng. Nút “Đặt lịch tư vấn / Book a Consultation” mở form tư vấn, xuất hiện tại header, cuối trang và dạng nút nổi trên mobile.\n\nChỉ giới thiệu dịch vụ và thương hiệu; không bán sản phẩm, không giỏ hàng, không checkout. Không tự tạo chứng chỉ, bằng cấp, số liệu hiệu quả điều trị hoặc tuyên bố y khoa chưa được cung cấp.\n\nCó nút chuyển đổi tiếng Việt – English, toàn bộ nội dung được biên soạn đầy đủ bằng cả hai ngôn ngữ. Nút “Đặt lịch tư vấn / Book a Consultation” mở form nhập họ tên, số điện thoại hoặc email, dịch vụ quan tâm, thời gian mong muốn và ghi chú. Đặt nút ở header, cuối trang và dạng nút nổi trên điện thoại.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-20T08:10:00.777Z",
+  "updatedAt": "2026-10-21T01:45:15.937Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\derma-clinic\\web",
+    "builtAt": "2026-10-21T01:45:03.721Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "5558fddb-3e87-4446-884c-c2b9c687d140",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\derma-clinic\\web",
+    "feedback": "Vì ảnh đang là ảnh tự tạo bạn có thể lên Pinterest để lấy link ảnh bỏ vô không .",
+    "page": "index.html",
+    "status": "done"
+  },
+  "external": {
+    "tool": "cursor",
+    "mode": "quick-prototype",
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\derma-clinic",
+    "preparedAt": "2026-10-20T08:11:11.057Z"
+  },
+  "qa": {
+    "createdAt": "2026-10-21T01:45:13.205Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 9
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-20T08:34:17.601Z",
+      "text": "Nội dung đã được duyệt và ok . Nhưng ảnh đang bị lỗi . Bnạ tìm đại ảnh da và phòng khám , vật tư ý tế bỏ vô cho đúng"
+    },
+    {
+      "createdAt": "2026-10-21T01:45:03.713Z",
+      "text": "Vì ảnh đang là ảnh tự tạo bạn có thể lên Pinterest để lấy link ảnh bỏ vô không ."
+    }
+  ]
+}

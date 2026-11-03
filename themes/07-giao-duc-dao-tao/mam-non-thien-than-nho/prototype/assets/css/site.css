@@ -1,0 +1,78 @@
+/* THIÊN THẦN NHỎ — style dùng chung
+   Quy tắc hình khối: nút = pill, thẻ = bo 2rem, ảnh = khung hữu cơ (.blob-*) hoặc bo 2rem. */
+:root {
+  --cream: #FFF9F0;
+  --cream-deep: #FBEFDD;
+  --leaf: #B8D8B0;
+  --leaf-100: #E3F0DE;
+  --leaf-700: #4A7343;
+  --sun: #F9D982;
+  --sun-100: #FDF3D3;
+  --peach: #F3B7A5;
+  --peach-100: #FDEDE7;
+  --ink: #2E3A2B;
+  --ui-accent: #4A7343;
+  --font-display: "Baloo 2", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Nunito, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); }
+
+/* Header dính: trạng thái đã cuộn (motion.js thêm .is-scrolled) */
+#top { transition: background-color .4s ease, box-shadow .4s ease; }
+#top.is-scrolled { background-color: rgba(255, 249, 240, .96); box-shadow: 0 10px 30px -18px rgba(46, 58, 43, .35); }
+
+/* Mục menu đang xem: gạch dưới dạng nét lượn */
+.nav-link[aria-current="page"] { color: var(--leaf-700); }
+.nav-link[aria-current="page"]::after { transform: scaleX(1); }
+
+/* Khung ảnh hữu cơ */
+.blob-1 { border-radius: 58% 42% 46% 54% / 52% 44% 56% 48%; }
+.blob-2 { border-radius: 42% 58% 60% 40% / 46% 55% 45% 54%; }
+.blob-3 { border-radius: 50% 50% 38% 62% / 60% 42% 58% 40%; }
+.arch { border-radius: 999px 999px 2rem 2rem; }
+
+/* Mép mây vỏ sò ở đỉnh section — đặt --edge = màu nền của section */
+.edge-cloud { position: relative; }
+.edge-cloud::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -23px;
+  height: 24px;
+  background: radial-gradient(circle at 26px 26px, var(--edge, var(--cream)) 25px, transparent 26px) repeat-x;
+  background-size: 52px 26px;
+  pointer-events: none;
+}
+
+/* Hoa văn chấm bi nhẹ */
+.dots {
+  background-image: radial-gradient(rgba(74, 115, 67, .16) 1.5px, transparent 1.6px);
+  background-size: 22px 22px;
+}
+
+/* Trang trí trôi nhẹ ở hero (yêu cầu BA: chuyển động chậm, không gây mất tập trung) */
+@keyframes tt-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(3deg); } }
+@keyframes tt-drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(22px); } }
+@keyframes tt-twinkle { 0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; } 50% { transform: scale(.86) rotate(12deg); opacity: .75; } }
+.float-slow { animation: tt-float 7s ease-in-out infinite; }
+.float-mid { animation: tt-float 5.5s ease-in-out infinite; animation-delay: -2s; }
+.drift { animation: tt-drift 14s ease-in-out infinite; }
+.drift-rev { animation: tt-drift 18s ease-in-out infinite reverse; }
+.twinkle { animation: tt-twinkle 4.5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .float-slow, .float-mid, .drift, .drift-rev, .twinkle { animation: none !important; }
+}
+
+/* Ẩn thanh cuộn của dải ảnh kéo ngang */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

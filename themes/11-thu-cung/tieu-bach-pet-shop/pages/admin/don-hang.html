@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đơn hàng · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-008" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-008 Đơn hàng (quản trị) — màn hình mặc định ROLE-03 (q25). Tabs nhóm trạng thái + DataTable (chọn nhiều, lọc, ColumnToggle)
+   * + nút chuyển trạng thái chính trên dòng và "⋯" (q27). Thao tác lấy từ App.orderActions (Workflow.actions + thanh toán / hoàn tiền). */
+  Layout.mount({ area: 'admin', title: 'Đơn hàng', active: 'orders', breadcrumb: [['Bán hàng'], ['Đơn hàng']] }, function (main) {
+    var U = Perm.url, esc = UI.esc;
+    var GROUPS = [
+      { id: 'moi', label: 'Mới đặt', test: function (o) { return o.state === 'NEW'; } },
+      { id: 'xu-ly', label: 'Đang xử lý', test: function (o) { return o.state === 'CONFIRMED' || o.state === 'MAKING'; } },
+      { id: 'giao', label: 'Đang giao', test: function (o) { return o.state === 'SHIPPING'; } },
+      { id: 'chu-y', label: 'Cần chú ý', test: App.needsAttention },
+      { id: 'tat-ca', label: 'Tất cả', test: function () { return true; } }];
+    var urlState = App.param('trang-thai');
+    var group = urlState === 'NEW' || !urlState ? 'moi' : (GROUPS.filter(function (g) { return g.id === urlState; })[0] ? urlState : 'tat-ca');
+    var tbl, tabs;
+    function orders() { return DemoStore.list('orders'); }
+    function rowsOf(g) { var t = GROUPS.filter(function (x) { return x.id === g; })[0]; return orders().filter(t.test); }
+    function newCount() { return orders().filter(function (o) { return o.state === 'NEW'; }).length; }
+    var states = [];
+    ['DOC-BOOK-ORDER', 'DOC-BOOK-PATE_ORDER'].forEach(function (d) { Object.keys(Workflow.docs[d].states).forEach(function (k) { var n = Workflow.state(d, k).name; if (!states.some(function (s) { return s.label === n; })) states.push({ value: k, label: n }); }); });
+
+    main.innerHTML = '<div data-head></div><div class="mb-4" data-tabs></div><div data-tbl>' + UI.skeleton(5) + '</div>';
+    function paintHead() { main.querySelector('[data-head]').innerHTML = UI.pageHeader({ title: 'Đơn hàng', description: newCount() + ' đơn mới cần xử lý' }); }
+    function syncSidebar() {
+      var n = Layout.counts().orders;
+      document.querySelectorAll('aside [data-scr="SCR-BOOK-008"]').forEach(function (a) { var b = a.querySelector('.rounded-full.bg-primary-500'); if (b && b.textContent !== undefined && !b.classList.contains('size-2')) { b.textContent = n; b.classList.toggle('hidden', !n); } });
+    }
+    function counts() { var m = {}; GROUPS.forEach(function (g) { m[g.id] = rowsOf(g.id).length; }); return m; }
+    function refresh(changedId) {
+      paintHead(); tabs.setCounts(counts());
+      tbl.setRows(rowsOf(group)); syncSidebar();
+      if (changedId) setTimeout(function () { tbl.flash(changedId); }, 30);
+    }
+
+    var cols = [
+      { key: 'code', label: 'Mã đơn & loại', sortable: true, mobile: 'title', width: 'w-48', render: function (o) {
+        return '<div class="flex items-center gap-2">' + (o.state === 'NEW' ? '<span class="size-2 shrink-0 rounded-full bg-info-500" aria-label="Đơn mới"></span>' : '') + '<a href="' + U('pages/admin/chi-tiet-don.html?id=' + o.id) + '" class="font-mono text-sm ' + (o.state === 'NEW' ? 'font-extrabold' : 'font-bold') + ' text-neutral-800 hover:text-primary-700">' + esc(o.code) + '</a></div>' +
+          '<div class="mt-1 flex flex-wrap gap-1">' + App.typeTag(o) + App.orderFlags(o) + '</div>'; } },
+      { key: 'ho_ten_nhan', label: 'Khách & SĐT', width: 'w-52', render: function (o) { return '<p class="font-bold text-neutral-800">' + esc(o.ho_ten_nhan) + '</p><a href="tel:' + esc(o.so_dien_thoai_nhan) + '" class="text-xs text-primary-700 hover:underline">' + esc(o.so_dien_thoai_nhan) + '</a>'; } },
+      { key: 'tong_cong', label: 'Tổng tiền', sortable: true, align: 'right', render: function (o) { return '<b class="tabular-nums">' + UI.fmt.money(o.tong_cong) + '</b>'; } },
+      { key: 'trang_thai_thanh_toan', label: 'Tình trạng tiền', render: function (o) { return App.payTag(o.trang_thai_thanh_toan) + '<p class="mt-0.5 text-xs text-neutral-600">' + ({ COD: 'COD', CHUYEN_KHOAN: 'CK', QR: 'QR' }[o.cach_thanh_toan] || '') + '</p>'; } },
+      { key: 'state', label: 'Trạng thái đơn', sortable: true, mobile: 'badge', sortValue: function (o) { return Workflow.state(App.docOf(o), o.state).name; }, render: function (o) { return App.stateBadge(App.docOf(o), o.state); } },
+      { key: 'tao_luc', label: 'Thời gian đặt', sortable: true, render: function (o) { return '<span class="whitespace-nowrap text-neutral-700">' + UI.fmt.rel(o.tao_luc) + '</span>'; } },
+      { key: 'cach_giao', label: 'Cách giao', hideBelow: 'xl', render: function (o) { return esc({ TU_LAY: 'Tự lấy', TU_GIAO: 'Cửa hàng tự giao', DVVC: 'ĐVVC' }[o.cach_giao] || ''); } },
+      { key: 'ngay_giao_du_kien', label: 'Giao dự kiến', sortable: true, hideBelow: 'xl', render: function (o) { return o.loai_don === 'PATE_CHAY' && o.ngay_giao_du_kien ? UI.fmt.dm(o.ngay_giao_du_kien) : '<span class="text-neutral-400">—</span>'; } }
+    ];
+    function rowActions(o) {
+      var acts = App.orderActions(o).map(function (a) {
+        return { label: a.label, icon: a.icon, primary: a.primary, variant: 'primary', danger: a.danger, disabled: a.disabled, tooltip: a.tooltip, permission: a.permission, onClick: function (row) { App.runOrderAction(DemoStore.get('orders', row.id), a, function (n) { refresh(n.id); }); } };
+      });
+      acts.push({ label: 'Mở chi tiết', icon: 'external-link', href: U('pages/admin/chi-tiet-don.html?id=' + o.id), onClick: function () { location.href = U('pages/admin/chi-tiet-don.html?id=' + o.id); } });
+      acts.push({ label: 'Gọi khách', icon: 'phone', onClick: function () { location.href = 'tel:' + o.so_dien_thoai_nhan; } });
+      return acts;
+    }
+    function card(o, acts) {
+      return '<div class="rounded-lg border border-neutral-200 bg-white p-4"><div class="flex items-start justify-between gap-2"><div class="min-w-0"><p class="font-mono text-base font-extrabold">' + esc(o.code) + '</p><div class="mt-1 flex flex-wrap gap-1">' + App.typeTag(o) + App.orderFlags(o) + '</div></div>' + App.stateBadge(App.docOf(o), o.state) + '</div>' +
+        '<p class="mt-2 text-sm"><b>' + esc(o.ho_ten_nhan) + '</b> · <a href="tel:' + esc(o.so_dien_thoai_nhan) + '" class="font-bold text-primary-700">' + esc(o.so_dien_thoai_nhan) + '</a></p>' +
+        '<p class="mt-1 flex flex-wrap items-center gap-2 text-sm"><b class="tabular-nums">' + UI.fmt.money(o.tong_cong) + '</b>' + App.payTag(o.trang_thai_thanh_toan) + '<span class="text-neutral-600">' + UI.fmt.rel(o.tao_luc) + '</span></p><div class="mt-3">' + acts + '</div></div>';
+    }
+
+    setTimeout(function () {
+      try {
+        paintHead();
+        tabs = UI.tabs(main.querySelector('[data-tabs]'), { panelCls: 'hidden', active: group, tabs: GROUPS.map(function (g) { return { id: g.id, label: g.label, count: rowsOf(g.id).length }; }),
+          onChange: function (id) {
+            group = id; App.setParams({ 'trang-thai': id === 'moi' ? 'NEW' : id });
+            if (!tbl) return;
+            tbl.state.sort = { key: 'tao_luc', dir: id === 'moi' ? 'asc' : 'desc' };
+            tbl.setRows(rowsOf(id));
+          } });
+        tbl = UI.table(main.querySelector('[data-tbl]'), {
+          rows: rowsOf(group), pageSize: 20, selectable: true, columnToggle: true, sort: { key: 'tao_luc', dir: group === 'moi' ? 'asc' : 'desc' },
+          searchKeys: ['code', 'so_dien_thoai_nhan', 'ho_ten_nhan'], searchPlaceholder: 'Tìm mã đơn, SĐT, tên khách…',
+          filters: [
+            { key: 'loai_don', label: 'Loại đơn', type: 'select', options: [{ value: 'THUONG', label: 'Thường' }, { value: 'PATE_CHAY', label: 'Pate chay' }] },
+            { key: 'trang_thai_thanh_toan', label: 'Thanh toán', type: 'select', options: Object.keys(App.PAY).map(function (k) { return { value: k, label: App.PAY[k][0] }; }) },
+            { key: 'state', label: 'Trạng thái', type: 'select', options: states },
+            { key: 'tao_luc', label: 'Ngày đặt', type: 'date-range' }],
+          columns: cols, rowActions: rowActions, card: card,
+          onRowClick: function (o) { location.href = U('pages/admin/chi-tiet-don.html?id=' + o.id); },
+          bulkActions: [{ label: 'Xác nhận đơn', icon: 'circle-check', permission: 'BOOK.ORDER.APPROVE', onClick: function (sel, api) {
+            var ok = sel.filter(function (o) { return o.loai_don === 'THUONG' && o.state === 'NEW'; });
+            if (!ok.length) { UI.toast('Chỉ xác nhận hàng loạt được đơn thường đang Mới đặt', 'error'); return; }
+            UI.confirm({ title: 'Xác nhận ' + ok.length + ' đơn?', message: 'Các đơn thường Mới đặt sẽ được xác nhận và trừ tồn kho. Đơn pate chay cần gọi điện nên không xác nhận hàng loạt.', confirmLabel: 'Xác nhận đơn' }).then(function (r) {
+              if (!r) return;
+              var n = 0;
+              ok.forEach(function (o) {
+                var fresh = DemoStore.get('orders', o.id); if (fresh.state !== 'NEW') return;
+                var next = Workflow.apply('DOC-BOOK-ORDER', fresh, 'Xác nhận đơn', { note: 'Xác nhận hàng loạt' }); next.history[next.history.length - 1].by = App.adminName();
+                DemoStore.update('orders', o.id, next); App.orderEffects(fresh, next); n++;
+              });
+              UI.toast('Đã xác nhận ' + n + ' đơn (đã trừ tồn kho)', 'success'); api.clearSelection(); refresh();
+            });
+          } }],
+          empty: { title: 'Chưa có đơn mới. Tiểu Bạch sẽ báo ngay khi có khách đặt!' },
+          emptyFiltered: { title: 'Không có đơn phù hợp bộ lọc' }
+        });
+      } catch (e) {
+        main.querySelector('[data-tbl]').innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.', actions: UI.button({ label: 'Thử lại', size: 'sm', variant: 'outline', attrs: { onclick: 'location.reload()' } }) });
+      }
+    }, 400);
+
+    // Tự làm mới mỗi 60 giây: báo đơn mới
+    var last = newCount();
+    setInterval(function () { var n = newCount(); if (n > last) UI.toast('Có ' + (n - last) + ' đơn mới', 'info', { action: { label: 'Xem', onClick: function () { tabs.set('moi'); } } }); last = n; if (tbl) refresh(); }, 60000);
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "slug": "elan-creative",
+  "name": "ÉLAN CREATIVE",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website portfolio cá nhân",
+    "brand": "ÉLAN CREATIVE",
+    "purpose": "Giới thiệu portfolio cá nhân thui . Là một mẫu cho các khách hàng của tui tham khảo",
+    "audience": "",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Thiết kế landing page Portfolio & CV cho một Graphic Designer hoặc Visual Designer mang thương hiệu cá nhân ÉLAN CREATIVE.\n\n**1. Phong cách thiết kế**\n\nTheo đuổi phong cách Swiss Editorial kết hợp Creative Art Direction. Website phải trông giống một ấn phẩm thiết kế đương đại, không giống giao diện công ty thông thường.\n\n- Màu chủ đạo: trắng ngà, đen tuyền và đỏ cam.\n- Font chữ: sans-serif hiện đại kết hợp typography cỡ lớn.\n- Bố cục bất đối xứng, khoảng trắng rộng, tiêu đề lớn và hình ảnh dự án nổi bật.\n- Sử dụng số thứ tự, đường kẻ và nhãn nhỏ để tạo nhịp điệu thị giác.\n\n**2. Bố cục landing page**\n\n- Header: Tên thương hiệu, menu Work, About, Resume và Contact.\n- Hero: Tên designer hiển thị thật lớn, chức danh Creative Designer và một câu giới thiệu thể hiện tư duy sáng tạo.\n- Selected Works: Trình bày 4 dự án với kích thước hình ảnh khác nhau, gồm thiết kế nhận diện thương hiệu, poster, editorial và chiến dịch hình ảnh.\n- Design Philosophy: Giới thiệu quan điểm thiết kế và quy trình sáng tạo.\n- Skills: Branding, Typography, Layout Design, Art Direction và các công cụ chuyên môn.\n- Resume: Kinh nghiệm làm việc, học vấn, chứng chỉ và thành tựu.\n- Contact: Email, LinkedIn và lời mời hợp tác.\n- Footer: Thiết kế tối giản, có dòng chữ thể hiện dấu ấn cá nhân.\n\n**3. Hiệu ứng**\n\nCác dự án có hiệu ứng hover làm thay đổi kích thước hoặc vị trí hình ảnh nhẹ. Tiêu đề xuất hiện theo từng nhóm khi cuộn trang. Có thể sử dụng con trỏ tùy chỉnh trên desktop nhưng phải giữ khả năng sử dụng thông thường.\n\n**4. Yêu cầu đầu ra**\n\nTất cả nội dung nằm trên một landing page duy nhất. Ưu tiên chất lượng trình bày dự án và khả năng thể hiện cá tính thiết kế. Không thêm chức năng bán sản phẩm.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-24T04:04:09.524Z",
+  "updatedAt": "2026-10-24T04:15:38.314Z",
+  "screen": "done",
+  "request": "Website portfolio cá nhân",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\elan-creative\\web",
+    "builtAt": "2026-10-24T04:15:24.225Z",
+    "pages": [
+      "index.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": []
+    }
+  },
+  "job": {
+    "id": "c864f107-6b20-4be1-8529-169610698084",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\elan-creative\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 50,
+      "outputTokens": 38849,
+      "cacheReadTokens": 3317002,
+      "cacheCreationTokens": 160053,
+      "costUsd": 2.7210044000000004,
+      "numTurns": 66,
+      "durationMs": 609841
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-24T04:15:35.121Z",
+    "critical": 0,
+    "major": 1,
+    "minor": 1,
+    "screenshots": 3
+  }
+}

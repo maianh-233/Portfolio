@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildroute Expeditions | Small-group adventure tours in Vietnam</title>
+  <meta name="description" content="Trekking, mountain climbing, camping and cave expeditions across Vietnam with local guides and small groups.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            moss: '#18392E',   /* forest green (brand) */
+            ink: '#171B18',    /* charcoal */
+            mist: '#F4F1E8',   /* ivory */
+            ochre: '#D77B43',  /* earth orange (single accent) */
+            fern: '#6F8B5E',
+            sand: '#E9E1D1',
+            bark: '#5A4636',
+            sky: '#BFD3D6'
+          },
+          fontFamily: {
+            display: ['Anton', 'Impact', 'sans-serif'],
+            body: ['Manrope', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="assets/js/ui.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>:root { --ui-accent: #D77B43; }</style>
+</head>
+<body class="bg-mist font-body text-[17px] text-ink antialiased selection:bg-ochre selection:text-ink">
+
+<!-- Shape rule: photos are sharp-edged (documentary frames), buttons are full pills. -->
+
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-50 text-mist [&.is-scrolled]:bg-ink/90 [&.is-scrolled]:backdrop-blur-md [&.is-scrolled]:shadow-[0_10px_30px_rgba(23,27,24,.35)]">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="#hero" class="flex items-baseline gap-2" aria-label="Wildroute Expeditions home">
+      <span class="font-display text-2xl tracking-wide">WILDROUTE</span>
+      <span class="hidden text-[11px] font-bold uppercase tracking-[0.3em] text-ochre sm:inline">Expeditions</span>
+    </a>
+    <nav data-scrollspy class="hidden items-center gap-8 text-sm font-semibold lg:flex" aria-label="Main">
+      <a href="#expeditions" class="relative py-2 transition-colors duration-300 hover:text-ochre after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ochre after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Expeditions</a>
+      <a href="#adventures" class="relative py-2 transition-colors duration-300 hover:text-ochre after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ochre after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Adventures</a>
+      <a href="#journey" class="relative py-2 transition-colors duration-300 hover:text-ochre after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ochre after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">The Journey</a>
+      <a href="#why" class="relative py-2 transition-colors duration-300 hover:text-ochre after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ochre after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Why Wildroute</a>
+      <a href="#notes" class="relative py-2 transition-colors duration-300 hover:text-ochre after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ochre after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Field Notes</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="hidden rounded-full bg-ochre px-6 py-3 text-sm font-bold text-ink transition duration-300 hover:bg-mist active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist sm:inline-flex">Plan a Trip</a>
+      <button data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-mist/30 transition duration-300 hover:border-ochre hover:text-ochre lg:hidden" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-2xl bg-ink p-6 text-mist shadow-2xl lg:hidden">
+    <nav class="grid gap-1 text-lg font-semibold" aria-label="Mobile">
+      <a href="#expeditions" class="rounded-lg px-3 py-3 transition hover:bg-mist/10 hover:text-ochre">Expeditions</a>
+      <a href="#adventures" class="rounded-lg px-3 py-3 transition hover:bg-mist/10 hover:text-ochre">Adventures</a>
+      <a href="#journey" class="rounded-lg px-3 py-3 transition hover:bg-mist/10 hover:text-ochre">The Journey</a>
+      <a href="#why" class="rounded-lg px-3 py-3 transition hover:bg-mist/10 hover:text-ochre">Why Wildroute</a>
+      <a href="#notes" class="rounded-lg px-3 py-3 transition hover:bg-mist/10 hover:text-ochre">Field Notes</a>
+      <a href="#contact" class="mt-3 rounded-full bg-ochre px-5 py-3 text-center font-bold text-ink transition hover:bg-mist">Plan a Trip</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO: cinematic full-bleed, camera push-in, line clip reveal -->
+<section id="hero" data-section="hero-cinematic" class="relative min-h-[100dvh] overflow-hidden bg-ink text-mist">
+  <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[12%]">
+    <img src="assets/img/hero-sea-of-clouds.jpg" alt="Sea of clouds at dusk seen from a snow-dusted mountain ridge" class="hero-zoom h-full w-full object-cover object-[50%_75%] saturate-[.9]" width="2048" height="1536" fetchpriority="high">
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-ink/50"></div>
+  <div class="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-ink/60 to-transparent lg:w-2/3"></div>
+
+  <div class="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-16 pt-28 sm:px-6 lg:px-10 lg:pb-20 2xl:px-16">
+    <p class="hero-late d1 mb-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-bold uppercase tracking-[0.28em] text-mist/85 sm:text-xs">
+      <span>Vietnam</span><span class="h-px w-6 bg-ochre"></span><span>Outdoor Adventures</span><span class="h-px w-6 bg-ochre"></span><span>Small Group Tours</span>
+    </p>
+    <h1 class="font-display uppercase leading-[0.9] tracking-tight text-[clamp(3.6rem,12vw,11.5rem)]">
+      <span class="line-mask"><span>Go beyond</span></span>
+      <span class="line-mask"><span>the <span class="text-ochre">map.</span></span></span>
+    </h1>
+    <div class="mt-8 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+      <div class="max-w-xl">
+        <p class="hero-late d2 text-lg text-mist/85 sm:text-xl">Leave the ordinary behind. Find your wild.</p>
+        <a href="#expeditions" class="hero-late d3 group mt-7 inline-flex w-full items-center justify-center gap-3 rounded-full bg-ochre px-8 py-4 font-bold text-ink transition duration-300 hover:bg-mist active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mist sm:w-auto">
+          Explore Expeditions
+          <svg class="transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-1.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <a href="#expeditions" class="hero-late d3 hidden flex-col items-center gap-3 text-mist/70 transition hover:text-ochre sm:flex" aria-label="Go to featured expeditions">
+        <span class="scroll-guide block h-24 w-px bg-mist/25"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED EXPEDITIONS: asymmetric offset grid + filter -->
+<section id="expeditions" data-section="gallery-lookbook" data-filter-group class="bg-mist py-24 lg:py-32">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+      <div class="lg:col-span-7">
+        <h2 data-split="words" class="font-display text-5xl uppercase leading-[0.95] sm:text-6xl lg:text-7xl 2xl:text-8xl">Featured expeditions</h2>
+        <p data-reveal="up" class="mt-6 max-w-[56ch] text-ink/70">Four routes our guides know by heart, from the limestone passes of the far north to the caves of Phong Nha.</p>
+      </div>
+      <div data-reveal="up" class="flex flex-wrap gap-2 lg:col-span-5 lg:justify-end" role="group" aria-label="Filter expeditions">
+        <button data-filter="all" class="is-active min-h-[44px] rounded-full border border-ink/20 px-5 text-sm font-bold transition duration-300 hover:border-ink [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">All</button>
+        <button data-filter="trekking" class="min-h-[44px] rounded-full border border-ink/20 px-5 text-sm font-bold transition duration-300 hover:border-ink [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Trekking</button>
+        <button data-filter="camping" class="min-h-[44px] rounded-full border border-ink/20 px-5 text-sm font-bold transition duration-300 hover:border-ink [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Camping</button>
+        <button data-filter="climbing" class="min-h-[44px] rounded-full border border-ink/20 px-5 text-sm font-bold transition duration-300 hover:border-ink [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Climbing</button>
+        <button data-filter="caves" class="min-h-[44px] rounded-full border border-ink/20 px-5 text-sm font-bold transition duration-300 hover:border-ink [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Caves</button>
+      </div>
+    </div>
+
+    <div class="mt-14 grid gap-x-8 gap-y-14 lg:mt-20 lg:grid-cols-12 lg:items-start 2xl:gap-x-12">
+
+      <article data-category="trekking camping" class="group lg:col-span-7">
+        <div data-reveal="clip" class="relative aspect-[4/3] overflow-hidden bg-moss sm:aspect-[16/11]">
+          <div class="h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <img src="assets/img/tour-ha-giang.jpg" alt="Ma Pi Leng pass winding above the Nho Que river on the Ha Giang Loop" class="h-full w-full object-cover saturate-[.9]" width="1024" height="683" loading="lazy">
+          </div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-mist sm:p-8">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-ochre">Ha Giang, far north</p>
+            <h3 class="mt-2 font-display text-4xl uppercase leading-none sm:text-5xl 2xl:text-6xl">Ha Giang Loop</h3>
+            <p class="mt-3 max-w-md text-sm text-mist/85 transition duration-500 ease-[cubic-bezier(.16,1,.3,1)] sm:text-base lg:translate-y-3 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">Limestone passes, Hmong villages and the Nho Que canyon, ridden with local easy-riders and walked where the road ends.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-5 border-b border-ink/15 py-5">
+          <dl class="grid grid-cols-3 gap-6 text-sm">
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">Duration</dt><dd class="mt-1 font-bold">4D / 3N</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">Difficulty</dt><dd class="mt-1 font-bold">Moderate</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">From</dt><dd class="mt-1 font-bold">6,900,000 ₫</dd></div>
+          </dl>
+          <button data-modal-open="tour-modal" data-tour="ha-giang" class="group/btn inline-flex min-h-[44px] items-center gap-2 rounded-full bg-ink px-6 text-sm font-bold text-mist transition duration-300 hover:bg-moss active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ochre">View Expedition <svg class="transition-transform duration-500 group-hover/btn:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+
+      <article data-category="trekking camping" class="group lg:col-span-5 lg:mt-28">
+        <div data-reveal="clip" class="relative aspect-[4/5] overflow-hidden bg-moss">
+          <div class="h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <img src="assets/img/tour-ta-nang.jpg" alt="Tents pitched on a grassy highland ridge under a blue sky" class="h-full w-full object-cover saturate-[.9]" width="1600" height="1067" loading="lazy">
+          </div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-mist sm:p-8">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-ochre">Lam Dong and Binh Thuan</p>
+            <h3 class="mt-2 font-display text-4xl uppercase leading-none sm:text-5xl">Ta Nang to Phan Dung</h3>
+            <p class="mt-3 max-w-md text-sm text-mist/85 transition duration-500 ease-[cubic-bezier(.16,1,.3,1)] sm:text-base lg:translate-y-3 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">28 km of rolling grass hills and a wild camp on the ridge under clear southern skies.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-5 border-b border-ink/15 py-5">
+          <dl class="grid grid-cols-3 gap-6 text-sm">
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">Duration</dt><dd class="mt-1 font-bold">2D / 1N</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">Difficulty</dt><dd class="mt-1 font-bold">Challenging</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">From</dt><dd class="mt-1 font-bold">2,850,000 ₫</dd></div>
+          </dl>
+          <button data-modal-open="tour-modal" data-tour="ta-nang" class="group/btn inline-flex min-h-[44px] items-center gap-2 rounded-full bg-ink px-6 text-sm font-bold text-mist transition duration-300 hover:bg-moss active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ochre">View Expedition <svg class="transition-transform duration-500 group-hover/btn:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+
+      <article data-category="climbing trekking" class="group lg:col-span-5">
+        <div data-reveal="clip" class="relative aspect-[4/5] overflow-hidden bg-moss">
+          <div class="h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <img src="assets/img/tour-fansipan.jpg" alt="Sea of clouds below the summit temple of Fansipan" class="h-full w-full object-cover object-[30%_50%] saturate-[.9]" width="1024" height="683" loading="lazy">
+          </div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-mist sm:p-8">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-ochre">Hoang Lien Son, 3,143 m</p>
+            <h3 class="mt-2 font-display text-4xl uppercase leading-none sm:text-5xl">Fansipan Summit</h3>
+            <p class="mt-3 max-w-md text-sm text-mist/85 transition duration-500 ease-[cubic-bezier(.16,1,.3,1)] sm:text-base lg:translate-y-3 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">A slow two-camp ascent via Tram Ton, timed for sunrise above the clouds on the roof of Indochina.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-5 border-b border-ink/15 py-5">
+          <dl class="grid grid-cols-3 gap-6 text-sm">
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">Duration</dt><dd class="mt-1 font-bold">3D / 2N</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">Difficulty</dt><dd class="mt-1 font-bold">Challenging</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">From</dt><dd class="mt-1 font-bold">4,450,000 ₫</dd></div>
+          </dl>
+          <button data-modal-open="tour-modal" data-tour="fansipan" class="group/btn inline-flex min-h-[44px] items-center gap-2 rounded-full bg-ink px-6 text-sm font-bold text-mist transition duration-300 hover:bg-moss active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ochre">View Expedition <svg class="transition-transform duration-500 group-hover/btn:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+
+      <article data-category="caves camping" class="group lg:col-span-7 lg:mt-28">
+        <div data-reveal="clip" class="relative aspect-[4/3] overflow-hidden bg-moss sm:aspect-[16/11]">
+          <div class="h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            <img src="assets/img/tour-cave.jpg" alt="An explorer standing beneath the huge jungle-lit entrance of Hang Tien cave" class="h-full w-full object-cover saturate-[.9]" width="1024" height="683" loading="lazy">
+          </div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 text-mist sm:p-8">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-ochre">Phong Nha, Quang Binh</p>
+            <h3 class="mt-2 font-display text-4xl uppercase leading-none sm:text-5xl 2xl:text-6xl">Hang Tien Cave</h3>
+            <p class="mt-3 max-w-md text-sm text-mist/85 transition duration-500 ease-[cubic-bezier(.16,1,.3,1)] sm:text-base lg:translate-y-3 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">Jungle trek, river crossings and two nights camping inside the Phong Nha-Ke Bang cave system.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-5 border-b border-ink/15 py-5">
+          <dl class="grid grid-cols-3 gap-6 text-sm">
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">Duration</dt><dd class="mt-1 font-bold">3D / 2N</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">Difficulty</dt><dd class="mt-1 font-bold">Hard</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-ink/55">From</dt><dd class="mt-1 font-bold">7,800,000 ₫</dd></div>
+          </dl>
+          <button data-modal-open="tour-modal" data-tour="phong-nha" class="group/btn inline-flex min-h-[44px] items-center gap-2 rounded-full bg-ink px-6 text-sm font-bold text-mist transition duration-300 hover:bg-moss active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ochre">View Expedition <svg class="transition-transform duration-500 group-hover/btn:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CHOOSE YOUR ADVENTURE: bento of 4 big images, different sizes -->
+<section id="adventures" data-section="features-bento" class="bg-ink py-24 text-mist lg:py-32">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 data-split="words" class="max-w-4xl font-display text-5xl uppercase leading-[0.95] sm:text-6xl lg:text-7xl 2xl:text-8xl">Choose your <span class="text-ochre">adventure</span></h2>
+    <p data-reveal="up" class="mt-6 max-w-[52ch] text-mist/70">Pick the way you want to move. Tap a style to see the expeditions built around it.</p>
+
+    <div data-reveal-stagger="90" class="mt-14 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-12 lg:grid-rows-[repeat(2,minmax(0,24rem))] 2xl:grid-rows-[repeat(2,minmax(0,28rem))] 2xl:gap-5">
+      <a href="#expeditions" data-adventure="trekking" class="group relative block aspect-[4/5] overflow-hidden bg-moss sm:col-span-1 lg:col-span-5 lg:row-span-2 lg:aspect-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ochre">
+        <img src="assets/img/adv-trekking.jpg" alt="A hiker celebrating on a rocky summit ridge under heavy clouds" class="absolute inset-0 h-full w-full object-cover saturate-[.85] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="768" height="1024" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 sm:p-8">
+          <div>
+            <h3 class="font-display text-5xl uppercase leading-none sm:text-6xl 2xl:text-7xl">Trekking</h3>
+            <p class="mt-3 max-w-xs text-sm text-mist/80">Multi-day ridge walks with homestays and wild camps.</p>
+          </div>
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-mist/40 transition duration-500 group-hover:border-ochre group-hover:bg-ochre group-hover:text-ink"><svg class="transition-transform duration-500 group-hover:translate-x-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a href="#expeditions" data-adventure="climbing" class="group relative block aspect-[4/5] overflow-hidden bg-moss sm:aspect-[4/5] lg:col-span-7 lg:aspect-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ochre">
+        <img src="assets/img/adv-climbing.jpg" alt="A climber on a sea cliff above the clouds" class="absolute inset-0 h-full w-full object-cover saturate-[.85] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1600" height="1067" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 sm:p-8">
+          <div>
+            <h3 class="font-display text-4xl uppercase leading-none sm:text-5xl 2xl:text-6xl">Mountain Climbing</h3>
+            <p class="mt-3 max-w-xs text-sm text-mist/80">Summit pushes on Fansipan, Ta Chi Nhu and Bach Moc Luong Tu.</p>
+          </div>
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-mist/40 transition duration-500 group-hover:border-ochre group-hover:bg-ochre group-hover:text-ink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a href="#expeditions" data-adventure="camping" class="group relative block aspect-[4/3] overflow-hidden bg-moss lg:col-span-4 lg:aspect-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ochre">
+        <img src="assets/img/adv-camping.jpg" alt="Friends around a lit tent in a dark forest under the stars" class="absolute inset-0 h-full w-full object-cover saturate-[.85] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1600" height="1067" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6">
+          <h3 class="font-display text-4xl uppercase leading-none sm:text-5xl">Camping</h3>
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-mist/40 transition duration-500 group-hover:border-ochre group-hover:bg-ochre group-hover:text-ink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a href="#expeditions" data-adventure="caves" class="group relative block aspect-[4/3] overflow-hidden bg-moss lg:col-span-3 lg:aspect-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ochre">
+        <img src="assets/img/adv-cave.jpg" alt="Light falling into a green jungle cave entrance in Phong Nha" class="absolute inset-0 h-full w-full object-cover saturate-[.85] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1024" height="683" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6">
+          <h3 class="font-display text-4xl uppercase leading-none">Cave Exploration</h3>
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-mist/40 transition duration-500 group-hover:border-ochre group-hover:bg-ochre group-hover:text-ink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- THE JOURNEY: sticky image + timeline with a line drawn on scroll -->
+<section id="journey" data-section="timeline" class="bg-moss py-24 text-mist lg:py-32">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:gap-20 2xl:px-16">
+    <div class="lg:col-span-5">
+      <div class="lg:sticky lg:top-28">
+        <h2 data-split="words" class="font-display text-5xl uppercase leading-[0.95] sm:text-6xl lg:text-7xl 2xl:text-8xl">The journey</h2>
+        <p data-reveal="up" class="mt-6 max-w-[48ch] text-mist/75">A sample three days on Fansipan via Tram Ton, the route our guides walk most often. Every expedition follows the same rhythm.</p>
+        <div data-reveal="clip" class="mt-10 aspect-[4/3] overflow-hidden bg-ink lg:aspect-[5/4]">
+          <img src="assets/img/journey-sapa-dawn.jpg" alt="Clouds rolling through the valleys of Sa Pa at dawn" class="h-full w-full object-cover saturate-[.9]" width="1024" height="683" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <ol data-scrub class="relative space-y-14 pl-10 sm:pl-14 lg:pt-4">
+        <span aria-hidden="true" class="absolute bottom-0 left-[11px] top-2 w-px bg-mist/15 sm:left-[15px]"></span>
+        <span aria-hidden="true" class="trail-draw absolute bottom-0 left-[11px] top-2 w-px bg-ochre sm:left-[15px]"></span>
+
+        <li data-reveal="up" class="relative">
+          <span class="absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full border border-ochre bg-moss sm:-left-14 sm:h-8 sm:w-8"><span class="h-2 w-2 rounded-full bg-ochre"></span></span>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-ochre">Before you go</p>
+          <h3 class="mt-2 font-display text-4xl uppercase sm:text-5xl">Prepare</h3>
+          <p class="mt-4 max-w-[58ch] text-mist/75">A 30-minute video call with your lead guide, a fitness check and a packing list sent two weeks ahead. Rental boots and jackets are fitted in Sa Pa the evening before.</p>
+          <ul class="mt-5 flex flex-wrap gap-2 text-sm">
+            <li class="rounded-full border border-mist/20 px-4 py-2">Gear fitting 7:00 PM</li>
+            <li class="rounded-full border border-mist/20 px-4 py-2">Safety briefing</li>
+          </ul>
+        </li>
+
+        <li data-reveal="up" class="relative">
+          <span class="absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full border border-ochre bg-moss sm:-left-14 sm:h-8 sm:w-8"><span class="h-2 w-2 rounded-full bg-ochre"></span></span>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-ochre">Day 1</p>
+          <h3 class="mt-2 font-display text-4xl uppercase sm:text-5xl">Depart</h3>
+          <p class="mt-4 max-w-[58ch] text-mist/75">Drive to Tram Ton pass at 1,900 m and start walking by 8:00 AM. Bamboo forest and old-growth rhododendron lead up to Camp 1, where the porters already have tea on.</p>
+          <ul class="mt-5 flex flex-wrap gap-2 text-sm">
+            <li class="rounded-full border border-mist/20 px-4 py-2">7.5 km</li>
+            <li class="rounded-full border border-mist/20 px-4 py-2">+300 m</li>
+            <li class="rounded-full border border-mist/20 px-4 py-2">Camp 1 at 2,200 m</li>
+          </ul>
+        </li>
+
+        <li data-reveal="up" class="relative">
+          <span class="absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full border border-ochre bg-moss sm:-left-14 sm:h-8 sm:w-8"><span class="h-2 w-2 rounded-full bg-ochre"></span></span>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-ochre">Day 2</p>
+          <h3 class="mt-2 font-display text-4xl uppercase sm:text-5xl">Explore</h3>
+          <p class="mt-4 max-w-[58ch] text-mist/75">The steepest day. Ladders and granite slabs up the ridge to Camp 2, then an afternoon free to photograph the cloud line before an early dinner.</p>
+          <ul class="mt-5 flex flex-wrap gap-2 text-sm">
+            <li class="rounded-full border border-mist/20 px-4 py-2">5 km</li>
+            <li class="rounded-full border border-mist/20 px-4 py-2">+600 m</li>
+            <li class="rounded-full border border-mist/20 px-4 py-2">Camp 2 at 2,800 m</li>
+          </ul>
+        </li>
+
+        <li data-reveal="up" class="relative">
+          <span class="absolute -left-10 top-1 flex h-6 w-6 items-center justify-center rounded-full border border-ochre bg-ochre sm:-left-14 sm:h-8 sm:w-8"><span class="h-2 w-2 rounded-full bg-ink"></span></span>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-ochre">Day 3</p>
+          <h3 class="mt-2 font-display text-4xl uppercase sm:text-5xl">Summit and return</h3>
+          <p class="mt-4 max-w-[58ch] text-mist/75">Headlamps on at 4:00 AM for the last 343 m. Sunrise at 3,143 m, hot noodles at camp, then the long descent to Sa Pa for a well-earned dinner by 7:00 PM.</p>
+          <ul class="mt-5 flex flex-wrap gap-2 text-sm">
+            <li class="rounded-full border border-mist/20 px-4 py-2">11 km</li>
+            <li class="rounded-full border border-mist/20 px-4 py-2">Summit 3,143 m</li>
+            <li class="rounded-full border border-mist/20 px-4 py-2">Back in Sa Pa</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WILDROUTE: numbered list + image + figures -->
+<section id="why" data-section="features-numbered" class="bg-mist py-24 lg:py-32">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-14 lg:grid-cols-12 2xl:gap-20">
+      <div class="lg:col-span-5">
+        <div data-reveal="clip" class="aspect-[4/5] overflow-hidden bg-moss lg:aspect-[3/4]">
+          <img src="assets/img/why-small-group.webp" alt="A small group of hikers with backpacks walking a mountain ridge trail" class="h-full w-full object-cover object-[40%_50%] saturate-[.9]" width="1600" height="1067" loading="lazy">
+        </div>
+      </div>
+      <div class="lg:col-span-7">
+        <h2 data-split="words" class="font-display text-5xl uppercase leading-[0.95] sm:text-6xl lg:text-7xl 2xl:text-8xl">Why Wildroute</h2>
+        <ol data-reveal-stagger="90" class="mt-10 border-t border-ink/15">
+          <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-b border-ink/15 py-7 transition-colors duration-300 hover:bg-sand/60 sm:grid-cols-[5rem_1fr_auto] sm:px-4">
+            <span class="font-display text-4xl leading-none text-ochre sm:text-5xl">01</span>
+            <div><h3 class="text-xl font-extrabold sm:text-2xl">Small groups, never crowds</h3><p class="mt-2 max-w-[56ch] text-ink/70">Eight guests at most, so we camp where buses cannot go and the trail stays quiet.</p></div>
+            <span class="hidden self-center text-sm font-bold text-ink/50 sm:block">Max 8</span>
+          </li>
+          <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-b border-ink/15 py-7 transition-colors duration-300 hover:bg-sand/60 sm:grid-cols-[5rem_1fr_auto] sm:px-4">
+            <span class="font-display text-4xl leading-none text-ochre sm:text-5xl">02</span>
+            <div><h3 class="text-xl font-extrabold sm:text-2xl">Local guides who grew up here</h3><p class="mt-2 max-w-[56ch] text-ink/70">Hmong, Dao and Bru-Van Kieu guides who know the weather, the families and the shortcuts.</p></div>
+            <span class="hidden self-center text-sm font-bold text-ink/50 sm:block">14 guides</span>
+          </li>
+          <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-b border-ink/15 py-7 transition-colors duration-300 hover:bg-sand/60 sm:grid-cols-[5rem_1fr_auto] sm:px-4">
+            <span class="font-display text-4xl leading-none text-ochre sm:text-5xl">03</span>
+            <div><h3 class="text-xl font-extrabold sm:text-2xl">Safety prepared, not improvised</h3><p class="mt-2 max-w-[56ch] text-ink/70">Wilderness first-aid certified leads, satellite messengers, oxygen on high routes and a written evacuation plan for every trip.</p></div>
+            <span class="hidden self-center text-sm font-bold text-ink/50 sm:block">1 guide : 4</span>
+          </li>
+          <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-b border-ink/15 py-7 transition-colors duration-300 hover:bg-sand/60 sm:grid-cols-[5rem_1fr_auto] sm:px-4">
+            <span class="font-display text-4xl leading-none text-ochre sm:text-5xl">04</span>
+            <div><h3 class="text-xl font-extrabold sm:text-2xl">We leave no trace</h3><p class="mt-2 max-w-[56ch] text-ink/70">Refill bottles, pack-out bags and 5% of every booking paid to the communities whose land we cross.</p></div>
+            <span class="hidden self-center text-sm font-bold text-ink/50 sm:block">5% back</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIELD NOTES: draggable filmstrip -->
+<section id="notes" data-section="gallery-filmstrip" class="overflow-hidden bg-sand py-24 lg:py-32">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <h2 data-split="words" class="font-display text-5xl uppercase leading-[0.95] sm:text-6xl lg:text-7xl 2xl:text-8xl">Field notes</h2>
+      <p data-reveal="up" class="max-w-[40ch] text-ink/70">Journals from the trail, trekking advice and what to pack. Drag to browse.</p>
+    </div>
+    <div data-drag-scroll class="-mx-4 mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-6 sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10 2xl:-mx-16 2xl:px-16 [scrollbar-width:thin]">
+      <article class="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[40%] 2xl:w-[34%]">
+        <div class="aspect-[16/10] overflow-hidden bg-moss">
+          <img src="assets/img/note-ta-van.jpg" alt="Looking out over the mountains from Ta Van village, Sa Pa" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1024" height="512" loading="lazy">
+        </div>
+        <p class="mt-5 text-sm font-bold text-bark">Journal | 6 min read</p>
+        <h3 class="mt-2 text-2xl font-extrabold leading-snug">Chasing clouds above Ta Van</h3>
+        <p class="mt-2 max-w-[48ch] text-ink/70">Why the best cloud mornings in Sa Pa follow a rainy, windless night.</p>
+        <button data-modal-open="note-modal" data-note="clouds" class="group/btn mt-4 inline-flex min-h-[44px] items-center gap-2 font-bold text-moss transition hover:text-ochre">Read note <svg class="transition-transform duration-500 group-hover/btn:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </article>
+      <article class="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[40%] 2xl:w-[34%]">
+        <div class="aspect-[16/10] overflow-hidden bg-moss">
+          <img src="assets/img/note-highland.jpg" alt="Tents in a valley camp at the foot of forested mountains" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1600" height="900" loading="lazy">
+        </div>
+        <p class="mt-5 text-sm font-bold text-bark">Trekking tips | 4 min read</p>
+        <h3 class="mt-2 text-2xl font-extrabold leading-snug">Five things first-time trekkers get wrong</h3>
+        <p class="mt-2 max-w-[48ch] text-ink/70">New boots, heavy packs and a fast start. Our guides on the classic mistakes.</p>
+        <button data-modal-open="note-modal" data-note="tips" class="group/btn mt-4 inline-flex min-h-[44px] items-center gap-2 font-bold text-moss transition hover:text-ochre">Read note <svg class="transition-transform duration-500 group-hover/btn:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </article>
+      <article class="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[40%] 2xl:w-[34%]">
+        <div class="aspect-[16/10] overflow-hidden bg-moss">
+          <img src="assets/img/note-gear.jpg" alt="Hiking backpack, lantern, hat and camping gear laid out on the floor" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1600" height="1190" loading="lazy">
+        </div>
+        <p class="mt-5 text-sm font-bold text-bark">Packing guide | 5 min read</p>
+        <h3 class="mt-2 text-2xl font-extrabold leading-snug">The 9 kg pack for a 3-day trek</h3>
+        <p class="mt-2 max-w-[48ch] text-ink/70">Exactly what goes in our guides' bags, and what the porters carry for you.</p>
+        <button data-modal-open="note-modal" data-note="packing" class="group/btn mt-4 inline-flex min-h-[44px] items-center gap-2 font-bold text-moss transition hover:text-ochre">Read note <svg class="transition-transform duration-500 group-hover/btn:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA: full-bleed photo, sun dust through the forest -->
+<section id="cta" data-section="cta-fullbleed" data-particles="dust" data-particles-color="#F4D9B8" data-particles-density="0.7" class="relative isolate overflow-hidden bg-ink text-mist">
+  <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[15%] -z-10">
+    <img src="assets/img/cta-campfire.webp" alt="Tents in a pine forest with campfire smoke drifting through shafts of light" class="h-full w-full object-cover saturate-[.85]" width="1600" height="1067" loading="lazy">
+  </div>
+  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/65 to-ink/30"></div>
+  <div class="relative z-10 mx-auto flex min-h-[80vh] w-full max-w-screen-2xl flex-col justify-center px-4 py-28 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 data-split="words" class="max-w-5xl font-display text-[clamp(3.4rem,10vw,10rem)] uppercase leading-[0.9]">The wild is <span class="text-ochre">calling.</span></h2>
+    <p data-reveal="up" class="mt-6 max-w-[44ch] text-lg text-mist/80">Departures run every week from September to April. Groups fill fastest in October.</p>
+    <a data-reveal="up" href="#expeditions" class="group mt-10 inline-flex w-full items-center justify-center gap-3 self-start rounded-full bg-ochre px-8 py-4 font-bold text-ink transition duration-300 hover:bg-mist active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mist sm:w-auto">
+      Find Your Next Expedition
+      <svg class="transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-1.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT: info + map left, trip request form right -->
+<section id="contact" data-section="contact-split" class="bg-mist py-24 lg:py-32">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:gap-20 2xl:px-16">
+    <div class="lg:col-span-5">
+      <h2 data-split="words" class="font-display text-5xl uppercase leading-[0.95] sm:text-6xl lg:text-7xl">Plan your trip</h2>
+      <p data-reveal="up" class="mt-6 max-w-[46ch] text-ink/70">Tell us where and when. A trip planner replies within one working day with dates, gear advice and a final price.</p>
+      <dl data-reveal="up" class="mt-10 grid gap-6 sm:grid-cols-2">
+        <div><dt class="text-xs font-bold uppercase tracking-wider text-ink/55">Call or Zalo</dt><dd class="mt-1 flex flex-wrap items-center gap-3"><a href="tel:+84912486730" class="text-lg font-bold transition hover:text-ochre">+84 912 486 730</a><button data-copy="+84 912 486 730" class="min-h-[36px] rounded-full border border-ink/20 px-3 text-xs font-bold transition hover:border-ochre hover:text-ochre">Copy</button></dd></div>
+        <div><dt class="text-xs font-bold uppercase tracking-wider text-ink/55">Email</dt><dd class="mt-1"><a href="mailto:hello@wildroute.vn" class="text-lg font-bold transition hover:text-ochre">hello@wildroute.vn</a></dd></div>
+        <div><dt class="text-xs font-bold uppercase tracking-wider text-ink/55">Base camp office</dt><dd class="mt-1 text-ink/80">28 Hang Be Street, Hoan Kiem, Hanoi</dd></div>
+        <div><dt class="text-xs font-bold uppercase tracking-wider text-ink/55">Office hours</dt><dd class="mt-1 text-ink/80">Mon to Sat, 8:30 AM to 6:00 PM</dd></div>
+      </dl>
+      <div data-reveal="up" class="mt-10 aspect-[16/10] overflow-hidden bg-sand">
+        <iframe title="Wildroute office map, Hang Be Street, Hanoi" src="https://www.google.com/maps?q=28+Hang+Be,+Hoan+Kiem,+Hanoi&output=embed" class="h-full w-full grayscale-[.4]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <form data-form="trip-request" data-success="Request received. A trip planner will reply within one working day." class="bg-ink p-6 text-mist sm:p-10 2xl:p-14" novalidate>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <label class="grid gap-2 text-sm font-bold">Full name
+            <input name="name" required minlength="2" autocomplete="name" class="min-h-[48px] rounded-xl border border-mist/25 bg-ink px-4 text-base font-medium text-mist placeholder:text-mist/50 focus:border-ochre focus:outline-none focus:ring-2 focus:ring-ochre/40" placeholder="Tran Minh Anh">
+          </label>
+          <label class="grid gap-2 text-sm font-bold">Email
+            <input name="email" type="email" required autocomplete="email" class="min-h-[48px] rounded-xl border border-mist/25 bg-ink px-4 text-base font-medium text-mist placeholder:text-mist/50 focus:border-ochre focus:outline-none focus:ring-2 focus:ring-ochre/40" placeholder="you@example.com">
+          </label>
+          <label class="grid gap-2 text-sm font-bold">Phone or Zalo
+            <input name="phone" type="tel" required minlength="9" autocomplete="tel" class="min-h-[48px] rounded-xl border border-mist/25 bg-ink px-4 text-base font-medium text-mist placeholder:text-mist/50 focus:border-ochre focus:outline-none focus:ring-2 focus:ring-ochre/40" placeholder="0912 486 730">
+          </label>
+          <label class="grid gap-2 text-sm font-bold">Expedition
+            <select id="f-expedition" name="expedition" required class="min-h-[48px] rounded-xl border border-mist/25 bg-ink px-4 text-base font-medium text-mist focus:border-ochre focus:outline-none focus:ring-2 focus:ring-ochre/40">
+              <option value="">Choose a route</option>
+              <option value="ha-giang">Ha Giang Loop, 4D / 3N</option>
+              <option value="ta-nang">Ta Nang to Phan Dung, 2D / 1N</option>
+              <option value="fansipan">Fansipan Summit, 3D / 2N</option>
+              <option value="phong-nha">Hang Tien Cave, 3D / 2N</option>
+              <option value="custom">Something custom</option>
+            </select>
+          </label>
+          <label class="grid gap-2 text-sm font-bold">Group size
+            <input name="group" type="number" min="1" max="12" value="2" required class="min-h-[48px] rounded-xl border border-mist/25 bg-ink px-4 text-base font-medium text-mist focus:border-ochre focus:outline-none focus:ring-2 focus:ring-ochre/40">
+          </label>
+          <label class="grid gap-2 text-sm font-bold">Preferred month
+            <input name="month" type="month" required class="min-h-[48px] rounded-xl border border-mist/25 bg-ink px-4 text-base font-medium text-mist [color-scheme:dark] focus:border-ochre focus:outline-none focus:ring-2 focus:ring-ochre/40">
+          </label>
+          <label class="grid gap-2 text-sm font-bold sm:col-span-2">Anything we should know?
+            <textarea name="message" rows="4" class="rounded-xl border border-mist/25 bg-ink px-4 py-3 text-base font-medium text-mist placeholder:text-mist/50 focus:border-ochre focus:outline-none focus:ring-2 focus:ring-ochre/40" placeholder="Fitness level, dietary needs, first multi-day trek..."></textarea>
+          </label>
+        </div>
+        <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
+          <p class="text-sm text-mist/65">No payment now. Free changes up to 14 days before departure.</p>
+          <button type="submit" class="inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-ochre px-8 font-bold text-ink transition duration-300 hover:bg-mist active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist sm:w-auto">Send Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="footer" data-section="footer-big" class="overflow-hidden bg-ink pb-24 pt-20 text-mist lg:pb-0">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-10 border-b border-mist/15 pb-14 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl tracking-wide">WILDROUTE</p>
+        <p class="mt-3 max-w-[30ch] text-sm text-mist/65">Small-group trekking, climbing, camping and cave expeditions across Vietnam since 2017.</p>
+      </div>
+      <div>
+        <p class="text-sm font-bold text-ochre">Explore</p>
+        <ul class="mt-4 grid gap-2 text-sm text-mist/80">
+          <li><a href="#expeditions" class="transition hover:text-ochre">Expeditions</a></li>
+          <li><a href="#adventures" class="transition hover:text-ochre">Adventure styles</a></li>
+          <li><a href="#journey" class="transition hover:text-ochre">A sample journey</a></li>
+          <li><a href="#notes" class="transition hover:text-ochre">Field notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm font-bold text-ochre">Contact</p>
+        <ul class="mt-4 grid gap-2 text-sm text-mist/80">
+          <li><a href="tel:+84912486730" class="transition hover:text-ochre">+84 912 486 730</a></li>
+          <li><a href="mailto:hello@wildroute.vn" class="transition hover:text-ochre">hello@wildroute.vn</a></li>
+          <li>28 Hang Be Street, Hoan Kiem, Hanoi</li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm font-bold text-ochre">Follow</p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://www.instagram.com/wildroute.expeditions" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-11 w-11 items-center justify-center rounded-full border border-mist/25 transition duration-300 hover:border-ochre hover:bg-ochre hover:text-ink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/wildroute.expeditions" target="_blank" rel="noopener" aria-label="Facebook" class="flex h-11 w-11 items-center justify-center rounded-full border border-mist/25 transition duration-300 hover:border-ochre hover:bg-ochre hover:text-ink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg></a>
+          <a href="https://www.youtube.com/@wildroute" target="_blank" rel="noopener" aria-label="YouTube" class="flex h-11 w-11 items-center justify-center rounded-full border border-mist/25 transition duration-300 hover:border-ochre hover:bg-ochre hover:text-ink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg></a>
+          <a href="https://zalo.me/0912486730" target="_blank" rel="noopener" aria-label="Zalo" class="flex h-11 items-center justify-center rounded-full border border-mist/25 px-4 text-xs font-extrabold transition duration-300 hover:border-ochre hover:bg-ochre hover:text-ink">Zalo</a>
+        </div>
+        <p class="mt-6 text-xs text-mist/55">Wildroute Expeditions Co., Ltd. International tour operator licence 01-1187/2021/TCDL-GP LHQT</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-between gap-4 py-6 text-xs text-mist/55">
+      <p>© 2026 Wildroute Expeditions</p>
+      <a href="#hero" class="transition hover:text-ochre">Back to top</a>
+    </div>
+    <p aria-hidden="true" class="select-none whitespace-nowrap font-display uppercase leading-[0.8] text-mist/[0.07] text-[clamp(4rem,19vw,22rem)] -mb-[0.12em]">Wildroute</p>
+  </div>
+</footer>
+
+<!-- Mobile contact bar -->
+<div class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 border-t border-mist/10 bg-ink text-mist lg:hidden">
+  <a href="tel:+84912486730" class="flex min-h-[56px] items-center justify-center gap-2 text-sm font-bold transition hover:text-ochre"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a href="https://zalo.me/0912486730" target="_blank" rel="noopener" class="flex min-h-[56px] items-center justify-center border-x border-mist/10 text-sm font-bold transition hover:text-ochre">Zalo</a>
+  <a href="#contact" class="flex min-h-[56px] items-center justify-center bg-ochre text-sm font-bold text-ink">Plan a Trip</a>
+</div>
+
+<!-- Expedition detail modal (filled from WR_TOURS in site.js) -->
+<dialog id="tour-modal" aria-labelledby="tm-title" style="max-width:min(94vw,960px)" class="bg-mist text-ink">
+  <div class="relative grid max-h-[88dvh] overflow-y-auto md:grid-cols-[5fr_7fr]">
+    <button data-modal-close aria-label="Close" class="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-ink text-mist transition hover:bg-ochre hover:text-ink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="relative aspect-[4/3] bg-moss md:aspect-auto">
+      <img data-t="img" src="assets/img/tour-ha-giang.jpg" alt="Ma Pi Leng pass on the Ha Giang Loop" class="absolute inset-0 h-full w-full object-cover">
+    </div>
+    <div class="p-6 sm:p-9">
+      <p data-t="region" class="text-xs font-bold uppercase tracking-[0.2em] text-ochre">Ha Giang, far north</p>
+      <h3 id="tm-title" data-t="title" class="mt-2 pr-12 font-display text-4xl uppercase leading-none sm:text-5xl">Ha Giang Loop</h3>
+      <p data-t="intro" class="mt-4 text-ink/75"></p>
+      <dl class="mt-6 grid grid-cols-2 gap-4 text-sm sm:grid-cols-3">
+        <div><dt class="text-xs uppercase tracking-wider text-ink/55">Duration</dt><dd data-t="days" class="mt-1 font-bold"></dd></div>
+        <div><dt class="text-xs uppercase tracking-wider text-ink/55">Difficulty</dt><dd data-t="difficulty" class="mt-1 font-bold"></dd></div>
+        <div><dt class="text-xs uppercase tracking-wider text-ink/55">Group</dt><dd data-t="group" class="mt-1 font-bold"></dd></div>
+        <div><dt class="text-xs uppercase tracking-wider text-ink/55">Best season</dt><dd data-t="season" class="mt-1 font-bold"></dd></div>
+        <div><dt class="text-xs uppercase tracking-wider text-ink/55">From, per person</dt><dd data-t="price" class="mt-1 font-bold"></dd></div>
+      </dl>
+      <p class="mt-7 text-sm font-extrabold">Day by day</p>
+      <ol data-t="plan" class="mt-2 text-sm"></ol>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a id="tour-request" href="#contact" class="inline-flex min-h-[48px] items-center rounded-full bg-ochre px-6 font-bold text-ink transition hover:bg-ink hover:text-mist">Request this expedition</a>
+        <button data-modal-close class="inline-flex min-h-[48px] items-center rounded-full border border-ink/20 px-6 font-bold transition hover:border-ink">Close</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Field note modal (filled from WR_NOTES in site.js) -->
+<dialog id="note-modal" aria-labelledby="nm-title" style="max-width:min(94vw,720px)" class="bg-mist text-ink">
+  <div class="relative max-h-[88dvh] overflow-y-auto">
+    <button data-modal-close aria-label="Close" class="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-ink text-mist transition hover:bg-ochre hover:text-ink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="aspect-[16/9] bg-moss"><img data-n="img" src="assets/img/note-ta-van.jpg" alt="Mountains seen from Ta Van village" class="h-full w-full object-cover"></div>
+    <div class="p-6 sm:p-9">
+      <p data-n="meta" class="text-sm font-bold text-bark"></p>
+      <h3 id="nm-title" data-n="title" class="mt-2 text-3xl font-extrabold leading-tight"></h3>
+      <div data-n="body" class="mt-4 space-y-4 text-ink/80"></div>
+      <a href="#contact" data-modal-close class="mt-7 inline-flex min-h-[48px] items-center rounded-full bg-ink px-6 font-bold text-mist transition hover:bg-ochre hover:text-ink">Plan a Trip</a>
+    </div>
+  </div>
+</dialog>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+</body>
+</html>

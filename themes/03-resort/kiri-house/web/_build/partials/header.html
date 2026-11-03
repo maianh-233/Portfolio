@@ -1,0 +1,34 @@
+<header id="top" data-header="shrink" class="group/h sticky top-0 z-40 border-b border-transparent bg-paper transition-[border-color,box-shadow] duration-500 [&.is-scrolled]:border-ink/10 [&.is-scrolled]:shadow-[0_10px_30px_-22px_rgba(40,42,40,.45)]">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 transition-[height] duration-500 group-[.is-scrolled]/h:h-[62px] sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="py-3 text-[14px] font-medium tracking-wordmark text-ink transition-colors duration-300 hover:text-cedar-dark focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-cedar">KIRI HOUSE</a>
+
+    <nav class="hidden items-center gap-11 lg:flex" aria-label="Điều hướng chính" data-en-label="Main navigation">
+      <a href="{{root}}index.html" data-en="Home" class="relative py-2 text-[14px] text-ink/70 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-ink hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Trang chủ</a>
+      <a href="{{root}}pages/about.html" data-en="About" class="relative py-2 text-[14px] text-ink/70 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-ink hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Giới thiệu</a>
+      <a href="{{root}}pages/stays.html" data-en="Stays" class="relative py-2 text-[14px] text-ink/70 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-ink hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Lưu trú</a>
+      <a href="{{root}}pages/experiences.html" data-en="Experiences" class="relative py-2 text-[14px] text-ink/70 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-ink hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Trải nghiệm</a>
+    </nav>
+
+    <div class="flex items-center gap-2 sm:gap-4">
+      <div class="flex items-center text-[12px] tracking-[0.22em]" role="group" aria-label="Ngôn ngữ" data-en-label="Language">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="min-h-[44px] px-2.5 text-ink/45 transition-colors duration-300 hover:text-ink [&.is-active]:text-ink focus-visible:outline focus-visible:outline-1 focus-visible:outline-cedar">VI</button>
+        <span class="h-3 w-px bg-ink/25" aria-hidden="true"></span>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="min-h-[44px] px-2.5 text-ink/45 transition-colors duration-300 hover:text-ink [&.is-active]:text-ink focus-visible:outline focus-visible:outline-1 focus-visible:outline-cedar">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" data-en-label="Open menu" class="group/m flex h-11 w-11 flex-col items-center justify-center gap-[7px] lg:hidden">
+        <span class="block h-px w-6 bg-ink transition-transform duration-500 group-[.is-open]/m:translate-y-[4px] group-[.is-open]/m:rotate-45"></span>
+        <span class="block h-px w-6 bg-ink transition-transform duration-500 group-[.is-open]/m:-translate-y-[4px] group-[.is-open]/m:-rotate-45"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-0 bottom-0 top-[62px] z-50 flex flex-col justify-between border-t border-ink/10 bg-paper px-6 pb-10 pt-10 lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-en-label="Mobile menu">
+      <a href="{{root}}index.html" data-en="Home" class="border-b border-ink/10 py-4 font-display text-4xl text-ink/80 aria-[current=page]:text-ink">Trang chủ</a>
+      <a href="{{root}}pages/about.html" data-en="About" class="border-b border-ink/10 py-4 font-display text-4xl text-ink/80 aria-[current=page]:text-ink" style="--ui-d:60ms">Giới thiệu</a>
+      <a href="{{root}}pages/stays.html" data-en="Stays" class="border-b border-ink/10 py-4 font-display text-4xl text-ink/80 aria-[current=page]:text-ink" style="--ui-d:120ms">Lưu trú</a>
+      <a href="{{root}}pages/experiences.html" data-en="Experiences" class="border-b border-ink/10 py-4 font-display text-4xl text-ink/80 aria-[current=page]:text-ink" style="--ui-d:180ms">Trải nghiệm</a>
+    </nav>
+    <p class="text-sm leading-relaxed text-ink/60" data-en="A contemporary Japanese-inspired resort of gardens, timber and light.">Resort nghỉ dưỡng theo tinh thần kiến trúc Nhật Bản đương đại, giữa vườn, gỗ và ánh sáng.</p>
+  </div>
+</header>

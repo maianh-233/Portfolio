@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viết đánh giá | Tiệm Bánh Kem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-008 Viết đánh giá: FR-023. Vào từ SCR-007 (đơn Hoàn thành): ?code=...&phone=... -->
+<body data-screen="SCR-008" data-layout="public" data-nav="track" class="bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="mx-auto max-w-2xl px-4 md:px-6 pt-10 md:pt-14">
+    <h1 class="font-display font-bold text-[34px] md:text-[44px] leading-[1.15] text-primary-strong pb-1">Bánh có ngon không nè?</h1>
+    <p id="order-meta" class="mt-2 font-semibold text-ink-muted"></p>
+    <div id="cards" class="mt-6 space-y-5"></div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script>
+    /* SCR-008: mỗi bánh chưa đánh giá là 1 thẻ, gửi từng thẻ. Chỉ đơn Hoàn thành mới vào được (E-DG-01). */
+    App.onReady(function () {
+      var LABELS = ['Tệ', 'Chưa ổn', 'Bình thường', 'Ngon', 'Tuyệt vời'];
+      var auth = Store.get('track_auth', {});
+      var code = App.param('code') || auth.code, phone = App.param('phone') || auth.phone;
+      var o = Orders.byCode(code);
+      var box = $('#cards');
+
+      if (!o || o.customer.phone !== String(phone || '').replace(/\D/g, '') || o.status !== 'done') {
+        $('#order-meta').textContent = '';
+        box.innerHTML = '<div class="rounded-3xl bg-white shadow-soft">' + UI.empty({ icon: 'ph-lock-simple', title: 'Đơn này chưa thể đánh giá', text: 'Chỉ đơn đã hoàn thành mới viết được đánh giá. Bạn tra cứu lại đơn giúp tiệm nha.', action: '<a href="tra-cuu-don.html" class="btn btn-primary h-11 px-6">Về Tra cứu đơn</a>' }) + '</div>';
+        return;
+      }
+      $('#order-meta').textContent = 'Đơn ' + o.code + ' · Nhận ngày ' + Fmt.date(o.delivery.date);
+      var drafts = {};
+
+      function render() {
+        var pending = o.items.map(function (it, i) { return i; }).filter(function (i) { return !o.reviewed[i]; });
+        if (!pending.length && !Object.keys(drafts).some(function (k) { return drafts[k].sent; })) {
+          box.innerHTML = '<div class="rounded-3xl bg-white shadow-soft">' + UI.empty({ icon: 'ph-heart', title: 'Bạn đã đánh giá hết rồi, cảm ơn bạn nhiều nha!', action: '<a href="danh-sach-banh.html" class="btn btn-primary h-11 px-6">Xem bánh khác</a>' }) + '</div>';
+          return;
+        }
+        box.innerHTML = o.items.map(function (it, i) {
+          var d = drafts[i] || (drafts[i] = { rating: 0, content: '', files: [] });
+          var head = '<div class="flex gap-4 items-center"><img src="' + it.image + '" alt="' + Fmt.esc(it.cakeName) + '" class="w-16 h-16 rounded-2xl object-cover bg-beige"><div><h2 class="font-extrabold text-lg leading-snug">' + Fmt.esc(it.cakeName) + '</h2><p class="text-sm text-ink-muted">' + it.sizeLabel + '</p></div></div>';
+          if (d.sent) return '<article class="rounded-3xl bg-white shadow-soft p-5 md:p-6">' + head + '<div class="mt-4 rounded-2xl bg-mint/60 p-4 flex gap-3"><i class="ph-fill ph-check-circle text-2xl text-mint-strong" aria-hidden="true"></i><div><p class="font-extrabold text-mint-strong">Cảm ơn bạn đã đánh giá</p>' + (DB.get('settings').reviewApproval ? '<p class="text-sm">Đánh giá sẽ hiển thị sau khi tiệm duyệt.</p>' : '') + '</div></div></article>';
+          if (o.reviewed[i]) return '<article class="rounded-3xl bg-white/70 p-5 md:p-6 flex items-center justify-between gap-3">' + head + '<span class="badge bg-mint text-mint-strong shrink-0"><i class="ph-bold ph-check" aria-hidden="true"></i>Đã đánh giá</span></article>';
+          var stars = [1, 2, 3, 4, 5].map(function (n) {
+            return '<button type="button" role="radio" aria-checked="' + (d.rating === n) + '" data-i="' + i + '" data-star="' + n + '" class="star grid place-items-center w-11 h-11 rounded-full text-[32px] ' + (n <= d.rating ? 'text-[#E0A100]' : 'text-[#D9C7BF]') + ' hover:scale-110 transition-transform" aria-label="' + n + ' sao, ' + LABELS[n - 1] + '"><i class="' + (n <= d.rating ? 'ph-fill' : 'ph') + ' ph-star" aria-hidden="true"></i></button>';
+          }).join('');
+          return '<article class="rounded-3xl bg-white shadow-soft p-5 md:p-6" data-card="' + i + '">' + head +
+            '<form class="mt-5 space-y-5" data-form="' + i + '" novalidate>' +
+            '<div><p class="field-label" id="st-l-' + i + '">Chấm sao <span class="text-danger">*</span></p><div class="mt-1 flex items-center gap-1 flex-wrap" role="radiogroup" aria-labelledby="st-l-' + i + '" aria-describedby="st-err-' + i + '">' + stars +
+            '<span class="ml-2 font-bold text-primary-strong" aria-live="polite">' + (d.rating ? LABELS[d.rating - 1] : '<span class="text-ink-muted font-semibold text-sm">Chạm để chọn</span>') + '</span></div><p id="st-err-' + i + '" class="field-error hidden"></p></div>' +
+            '<div class="field"><div class="flex justify-between"><label class="field-label" for="ct-' + i + '">Cảm nhận của bạn</label><span id="ct-c-' + i + '" class="text-sm text-ink-muted tabular-nums"></span></div>' +
+            '<textarea id="ct-' + i + '" data-ct="' + i + '" rows="4" maxlength="1000" class="field-input" placeholder="Bánh có vừa ngọt không, kem có mịn không...">' + Fmt.esc(d.content) + '</textarea></div>' +
+            '<div><p class="field-label mb-2">Ảnh thật <span class="font-semibold text-ink-muted">(không bắt buộc)</span></p><div data-up="' + i + '"></div></div>' +
+            '<button type="submit" class="btn btn-primary h-12 w-full sm:w-auto px-8">Gửi đánh giá</button></form></article>';
+        }).join('');
+
+        $all('[data-star]', box).forEach(function (b) {
+          b.onclick = function () { drafts[+b.dataset.i].rating = +b.dataset.star; render(); $('[data-i="' + b.dataset.i + '"][data-star="' + b.dataset.star + '"]').focus(); };
+        });
+        $all('[data-ct]', box).forEach(function (t) { var i = +t.dataset.ct; FormUI.counter(t, $('#ct-c-' + i), 1000); t.oninput = function () { drafts[i].content = t.value; }; });
+        $all('[data-up]', box).forEach(function (h) { var i = +h.dataset.up; Uploader.mount(h, { max: 3, files: drafts[i].files, onChange: function (f) { drafts[i].files = f; } }); });
+        $all('[data-form]', box).forEach(function (f) {
+          f.onsubmit = function (e) {
+            e.preventDefault();
+            var i = +f.dataset.form, d = drafts[i];
+            var err = $('#st-err-' + i);
+            if (!d.rating) { err.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Vui lòng chọn từ 1 đến 5 sao.'; err.classList.remove('hidden'); $('[data-i="' + i + '"][data-star="1"]').focus(); return; } // E-DG-03
+            if (d.content.length > 1000) return; // E-DG-04 (maxlength đã chặn)
+            var btn = $('button[type=submit]', f);
+            FormUI.busy(btn, true, 'Đang gửi...');
+            setTimeout(function () {
+              var it = o.items[i];
+              DB.get('reviews').unshift({ id: Date.now(), cakeId: it.cakeId, sizeLabel: it.sizeLabel, name: o.customer.name.split(' ').pop().charAt(0) + '***' + o.customer.name.slice(-1), rating: d.rating, content: d.content.trim(), images: d.files.map(function (x) { return x.src; }), date: MOCK.today, orderCode: o.code, status: DB.get('settings').reviewApproval ? 'pending' : 'visible' });
+              DB.save('reviews');
+              o.reviewed[i] = true; Orders.save();
+              d.sent = true;
+              render();
+              Toast.show('Cảm ơn bạn đã đánh giá', 'success');
+            }, 600);
+          };
+        });
+      }
+      render();
+    });
+  </script>
+</body>
+</html>

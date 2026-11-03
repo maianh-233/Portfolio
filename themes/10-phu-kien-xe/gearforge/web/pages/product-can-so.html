@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cần số Torque Knob — GEARFORGE</title>
+  <meta name="description" content="Cần số Torque Knob GF-S06 của GEARFORGE: lõi nhôm đặc bọc da đục lỗ, mặt in sơ đồ số. Câu chuyện thiết kế, thông số và dòng xe ô tô tương thích.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-charcoal font-sans text-silver antialiased">
+
+  <header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-300">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="../index.html" class="font-display text-2xl font-extrabold tracking-[0.12em] text-silver transition-colors duration-300 hover:text-ember" aria-label="GEARFORGE - Trang chủ">GEAR<span class="text-ember">FORGE</span></a>
+      <nav class="hidden items-center gap-10 lg:flex" aria-label="Điều hướng chính">
+        <a href="../index.html" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver/70 transition-colors duration-300 hover:text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-ember after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Trang chủ</a>
+        <a href="collections.html" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver/70 transition-colors duration-300 hover:text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-ember after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Bộ sưu tập</a>
+        <a href="showcase.html" class="relative py-2 text-sm font-medium uppercase tracking-[0.14em] text-silver/70 transition-colors duration-300 hover:text-silver after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-ember after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Showcase</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button type="button" data-modal-open="tu-van" class="chamfer hidden min-h-[44px] items-center bg-ember px-5 font-display text-base font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ember sm:inline-flex">Liên hệ tư vấn</button>
+        <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center border border-silver/20 text-silver transition-colors duration-300 hover:border-ember hover:text-ember lg:hidden">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-silver/10 bg-gunmetal p-6 lg:hidden">
+      <nav class="grid gap-1" aria-label="Menu điện thoại">
+        <a href="../index.html" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-silver hover:text-ember">Trang chủ</a>
+        <a href="collections.html" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-silver hover:text-ember">Bộ sưu tập</a>
+        <a href="showcase.html" class="flex min-h-[48px] items-center justify-between border-b border-silver/10 font-display text-2xl font-bold uppercase tracking-wide text-silver hover:text-ember">Showcase</a>
+      </nav>
+      <button type="button" data-modal-open="tu-van" class="chamfer mt-6 flex min-h-[48px] w-full items-center justify-center bg-ember font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal">Liên hệ tư vấn</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SẢN PHẨM -->
+    <section id="san-pham" data-section="page-hero" class="relative overflow-hidden bg-charcoal pt-16 lg:pt-[72px]">
+      <div class="blueprint absolute inset-0" aria-hidden="true"></div>
+      <div class="relative grid lg:min-h-[calc(88dvh-72px)] lg:grid-cols-12">
+        <div class="flex flex-col justify-center px-4 py-12 sm:px-6 lg:col-span-5 lg:py-16 lg:pl-10 lg:pr-8 2xl:pl-16">
+          <nav aria-label="Đường dẫn" class="text-sm text-muted">
+            <ol class="flex flex-wrap items-center gap-2">
+              <li><a href="../index.html" class="transition-colors duration-300 hover:text-ember">Trang chủ</a></li>
+              <li aria-hidden="true">/</li>
+              <li><a href="collections.html" class="transition-colors duration-300 hover:text-ember">Bộ sưu tập</a></li>
+              <li aria-hidden="true">/</li>
+              <li class="text-silver">Cần số Torque Knob</li>
+            </ol>
+          </nav>
+          <p data-reveal="fade" class="mt-10 font-display text-base font-semibold uppercase tracking-[0.18em] text-ember">GF-S06 · Phụ kiện nội thất · Ô tô</p>
+          <h1 data-reveal="up" class="mt-3 font-display text-[clamp(3.25rem,6.5vw,7rem)] font-extrabold uppercase italic leading-[0.9] tracking-tight pb-1">Torque Knob</h1>
+          <p data-reveal="up" class="mt-6 max-w-lg text-lg leading-relaxed text-muted">Lõi nhôm đặc bọc da đục lỗ. Nặng tay vừa đủ để mỗi lần vào số ngắn và dứt khoát.</p>
+          <div data-reveal="up" data-reveal-delay="150" class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <button type="button" data-modal-open="tu-van" class="chamfer inline-flex min-h-[52px] items-center justify-center bg-ember px-8 font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98]">Liên hệ tư vấn</button>
+            <a href="#thong-so" class="inline-flex min-h-[52px] items-center justify-center border border-silver/25 px-8 font-display text-lg font-semibold uppercase tracking-[0.1em] text-silver transition duration-300 hover:border-ember hover:text-ember">Tìm hiểu thêm</a>
+          </div>
+        </div>
+        <div class="relative min-h-[42vh] lg:col-span-7 lg:min-h-0">
+          <a href="../assets/img/sp-can-so.webp" data-lightbox="torque" data-caption="Torque Knob GF-S06, mặt in sơ đồ số" class="group absolute inset-0 block overflow-hidden bg-gunmetal" aria-label="Phóng to ảnh cần số Torque Knob">
+            <img src="../assets/img/sp-can-so.webp" alt="Đầu cần số Torque Knob mặt đen bóng in sơ đồ số, cận cảnh trong khoang lái" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="800" height="533">
+            <span class="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-transparent to-transparent" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÂU CHUYỆN THIẾT KẾ -->
+    <section id="cau-chuyen" data-section="story-letter" class="border-t border-silver/10 bg-gunmetal/40 py-20 lg:py-32">
+      <div class="mx-auto grid w-full max-w-screen-2xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <figure data-reveal="up" class="min-w-0 lg:col-span-7">
+          <a href="../assets/img/den-led-can-canh-1.webp" data-lightbox="torque" data-caption="Viền nhôm phay và lớp da đục lỗ của Torque Knob" class="group block aspect-[4/3] overflow-hidden bg-gunmetal">
+            <img src="../assets/img/den-led-can-canh-1.webp" alt="Cận cảnh đầu cần số bọc da đục lỗ, viền nhôm sáng và vòng chỉ đỏ quanh mặt số" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+          </a>
+          <figcaption class="mt-3 text-sm text-muted">Viền nhôm phay, vòng chỉ cam và lớp da đục lỗ thoáng tay.</figcaption>
+        </figure>
+        <div class="min-w-0 lg:col-span-5">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold uppercase leading-[0.95] tracking-tight sm:text-5xl">Thiết kế cho <span class="text-ember">lòng bàn tay</span></h2>
+          <div data-reveal="fade" class="mt-8 grid gap-6 text-lg leading-relaxed text-muted">
+            <p>Chúng tôi thử hơn chục dáng cầu trước khi chốt Torque Knob. Đường kính 52 mm vừa khum tay, trọng tâm đặt thấp để cần số tự trượt vào rãnh mà không cần ép.</p>
+            <p>Lõi nhôm đặc làm tăng quán tính, giúp hành trình vào số ngắn hơn cảm giác thực tế. Da đục lỗ bọc ngoài cho tay không trơn khi trời nóng.</p>
+          </div>
+          <ul class="mt-10 grid gap-4 border-t border-silver/15 pt-8">
+            <li class="flex gap-4"><span class="mt-2 h-[3px] w-6 shrink-0 bg-ember" aria-hidden="true"></span><span><strong class="font-display text-xl font-bold uppercase">Công dụng.</strong> <span class="text-muted">Thay núm số zin, vào số chính xác hơn khi chạy đèo hoặc track.</span></span></li>
+            <li class="flex gap-4"><span class="mt-2 h-[3px] w-6 shrink-0 bg-ember" aria-hidden="true"></span><span><strong class="font-display text-xl font-bold uppercase">Điểm nổi bật.</strong> <span class="text-muted">Mặt số khắc laser không phai, bộ ren chuyển đổi đi kèm hộp.</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- THÔNG SỐ -->
+    <section id="thong-so" data-section="specs-grouped" class="bg-charcoal py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="redline font-display text-4xl font-bold uppercase leading-none tracking-tight sm:text-5xl">Thông số kỹ thuật</h2>
+        <div data-reveal-stagger="80" class="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="border border-silver/15 p-6">
+            <p class="font-display text-5xl font-extrabold leading-none text-ember">52 mm</p>
+            <p class="mt-5 font-display text-xl font-bold uppercase">Đường kính</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Cao 58 mm, khối lượng khoảng 320 g.</p>
+          </div>
+          <div class="border border-silver/15 p-6">
+            <p class="font-display text-5xl font-extrabold leading-none">6061</p>
+            <p class="mt-5 font-display text-xl font-bold uppercase">Chất liệu</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Lõi nhôm 6061 phay CNC, bọc da bò đục lỗ, viền anod bạc.</p>
+          </div>
+          <div class="border border-silver/15 p-6">
+            <p class="font-display text-5xl font-extrabold leading-none">4 ren</p>
+            <p class="mt-5 font-display text-xl font-bold uppercase">Đầu ren kèm theo</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted">M10x1.25, M10x1.5, M12x1.25, M12x1.5.</p>
+          </div>
+          <div class="bg-ember p-6 text-charcoal">
+            <p class="font-display text-xl font-bold uppercase">Dòng xe tương thích</p>
+            <p class="mt-4 text-base leading-relaxed">Honda Civic, Mazda MX-5, Toyota GR86, Subaru BRZ, Ford Ranger số sàn và hầu hết xe số sàn dùng ren phổ thông.</p>
+            <p class="mt-4 text-sm text-charcoal/80">Đời xe cụ thể sẽ được đối chiếu khi tư vấn.</p>
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-muted">Thông số minh họa cho bản demo, sẽ thay bằng dữ liệu kỹ thuật chính thức của GEARFORGE.</p>
+      </div>
+    </section>
+
+    <!-- SẢN PHẨM LIÊN QUAN -->
+    <section id="lien-quan" data-section="teaser-row" class="border-t border-silver/10 bg-gunmetal/40 py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold uppercase leading-none tracking-tight sm:text-5xl">Sản phẩm liên quan</h2>
+          <a href="collections.html" class="group inline-flex min-h-[44px] items-center gap-2 font-display text-lg font-semibold uppercase tracking-[0.1em] text-silver transition-colors duration-300 hover:text-ember">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            Quay lại bộ sưu tập
+          </a>
+        </div>
+        <div data-reveal-stagger="100" class="mt-12 grid gap-5 md:grid-cols-2">
+          <a href="product-co-po-hellion.html" class="group grid overflow-hidden border border-silver/10 bg-charcoal/60 transition duration-300 hover:border-ember/60 sm:grid-cols-[2fr_3fr]">
+            <div class="aspect-[4/3] overflow-hidden bg-gunmetal sm:aspect-auto">
+              <img src="../assets/img/sp-ong-xa-titan.webp" alt="Cổ pô chrome Hellion uốn cong dọc thân xe máy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="600" height="800">
+            </div>
+            <div class="flex flex-col justify-between gap-6 p-6 lg:p-8">
+              <div>
+                <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-X88 · Xe máy</p>
+                <h3 class="mt-2 font-display text-3xl font-bold uppercase">Cổ pô Hellion</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted">Thép không gỉ 304 uốn liền mạch, tiếng pô trầm và đều.</p>
+              </div>
+              <span class="inline-flex items-center gap-2 font-display text-base font-semibold uppercase tracking-[0.1em]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+                Sản phẩm trước
+              </span>
+            </div>
+          </a>
+          <a href="showcase.html" class="group grid overflow-hidden border border-silver/10 bg-charcoal/60 transition duration-300 hover:border-ember/60 sm:grid-cols-[2fr_3fr]">
+            <div class="aspect-[4/3] overflow-hidden bg-gunmetal sm:aspect-auto">
+              <img src="../assets/img/sp-mam-vortex.webp" alt="Mâm forged Vortex 19 màu bạc với cùm phanh vàng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="474">
+            </div>
+            <div class="flex flex-col justify-between gap-6 p-6 lg:p-8">
+              <div>
+                <p class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-ember">GF-W19 · Ô tô</p>
+                <h3 class="mt-2 font-display text-3xl font-bold uppercase">Mâm forged Vortex 19</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted">Rèn nguyên khối 10 chấu xoắn, sản phẩm chủ lực của Showcase.</p>
+              </div>
+              <span class="inline-flex items-center gap-2 font-display text-base font-semibold uppercase tracking-[0.1em]">Sản phẩm tiếp theo
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" data-section="cta-type" class="blueprint border-t border-silver/10 bg-charcoal py-24 lg:py-32">
+      <div class="mx-auto grid w-full max-w-screen-2xl items-end gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="font-display text-[clamp(2.75rem,6.5vw,7rem)] font-extrabold uppercase leading-[0.9] tracking-tight lg:col-span-8">Cầm thử trước khi <span class="text-ember">quyết định</span></h2>
+        <div data-reveal="fade" class="lg:col-span-4 lg:pb-2">
+          <p class="text-base leading-relaxed text-muted">Showroom Quận 7 có sẵn mẫu trưng bày. Gửi dòng xe để chúng tôi chuẩn bị đúng đầu ren.</p>
+          <button type="button" data-modal-open="tu-van" class="chamfer mt-6 inline-flex min-h-[52px] w-full items-center justify-center bg-ember px-8 font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98] sm:w-auto">Liên hệ tư vấn</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="border-t border-silver/10 bg-deep pt-20">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <a href="../index.html" class="font-display text-3xl font-extrabold tracking-[0.12em]">GEAR<span class="text-ember">FORGE</span></a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">Phụ kiện và đồ chơi xe máy, ô tô phong cách hiệu năng. Chọn bằng kinh nghiệm thợ độ, trình bày như một catalogue cao cấp.</p>
+        </div>
+        <nav class="lg:col-span-2" aria-label="Trang">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Trang</p>
+          <ul class="mt-5 grid gap-1 text-base">
+            <li><a href="../index.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Trang chủ</a></li>
+            <li><a href="collections.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Bộ sưu tập</a></li>
+            <li><a href="showcase.html" class="inline-flex min-h-[40px] items-center text-silver transition-colors duration-300 hover:text-ember">Showcase</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Liên hệ</p>
+          <ul class="mt-5 grid gap-3 text-base text-silver">
+            <li><a href="tel:+842873006868" class="transition-colors duration-300 hover:text-ember">Hotline: 028 7300 6868</a></li>
+            <li><a href="mailto:tuvan@gearforge.vn" class="transition-colors duration-300 hover:text-ember">tuvan@gearforge.vn</a></li>
+            <li class="text-muted">Showroom: 212 Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh</li>
+            <li class="text-muted">Mở cửa 9:00 - 20:00, thứ Hai đến Chủ nhật</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="font-display text-sm font-bold uppercase tracking-[0.2em] text-silver/60">Mạng xã hội</p>
+          <ul class="mt-5 flex flex-wrap gap-3">
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">Instagram</a></li>
+            <li><a href="https://www.youtube.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">YouTube</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center border border-silver/15 px-4 text-sm text-silver transition-colors duration-300 hover:border-ember hover:text-ember">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-16 select-none overflow-hidden whitespace-nowrap font-display text-[clamp(4rem,17vw,19rem)] font-extrabold uppercase leading-[0.8] tracking-tight text-gunmetal" aria-hidden="true">GEARFORGE</p>
+      <div class="flex flex-col gap-2 border-t border-silver/10 py-6 text-sm text-muted sm:flex-row sm:justify-between">
+        <p>© 2026 GEARFORGE. Bảo lưu mọi quyền.</p>
+        <a href="#top" class="transition-colors duration-300 hover:text-ember">Về đầu trang</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="tu-van" class="m-auto w-[min(92vw,560px)] border border-silver/10 bg-gunmetal p-0 text-silver">
+    <div class="relative p-6 sm:p-8">
+      <button type="button" data-modal-close aria-label="Đóng" class="absolute right-3 top-3 grid h-11 w-11 place-items-center text-silver/70 transition-colors duration-300 hover:text-ember">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-5 w-5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h2 class="pr-10 font-display text-3xl font-bold uppercase">Liên hệ tư vấn</h2>
+      <p class="mt-2 text-sm leading-relaxed text-muted">Cho chúng tôi biết dòng xe và phụ kiện bạn quan tâm, kỹ thuật viên GEARFORGE sẽ gợi ý lựa chọn phù hợp.</p>
+      <form data-form="tu-van" class="mt-6 grid gap-4">
+        <label class="block text-sm font-medium">Họ và tên
+          <input type="text" name="name" required minlength="2" autocomplete="name" placeholder="Ví dụ: Trần Minh Khoa" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Số điện thoại
+          <input type="tel" name="phone" required minlength="9" autocomplete="tel" placeholder="Ví dụ: 0908 214 377" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Dòng xe của bạn
+          <input type="text" name="vehicle" required placeholder="Ví dụ: Honda Civic 2022, Yamaha MT-15" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver placeholder:text-muted/70 focus:border-ember focus:outline-none">
+        </label>
+        <label class="block text-sm font-medium">Nhóm phụ kiện quan tâm
+          <select name="topic" class="mt-2 block min-h-[48px] w-full border border-silver/15 bg-charcoal px-4 text-base text-silver focus:border-ember focus:outline-none">
+            <option>Phụ kiện ô tô</option>
+            <option>Phụ kiện xe máy</option>
+            <option>Đồ chơi xe</option>
+            <option>Phụ kiện nội thất</option>
+            <option>Thiết bị công nghệ</option>
+          </select>
+        </label>
+        <div class="mt-2 flex flex-wrap items-center gap-4">
+          <button type="submit" class="chamfer inline-flex min-h-[48px] items-center bg-ember px-7 font-display text-lg font-bold uppercase tracking-[0.1em] text-charcoal transition duration-300 hover:bg-silver active:scale-[.98]">Gửi yêu cầu</button>
+          <p class="text-xs text-muted">Bản demo: biểu mẫu chưa gửi đi đâu.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="../assets/js/motion.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* MECHAVANCE — biến màu / font + vài style Tailwind không làm được */
+:root {
+  --void: #0E1012;
+  --panel: #16191C;
+  --line: #2B3036;
+  --ink: #E8EBEE;
+  --muted: #A1AAB4;
+  --steel: #C3CAD1;
+  --accent: #F26A1B;
+  --ui-accent: #F26A1B;
+  --font-display: "Unbounded", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, system-ui, "Segoe UI", Roboto, Arial, monospace;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { background: var(--void); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--void); }
+
+/* Lưới bản vẽ kỹ thuật mảnh */
+.bp-grid {
+  background-image:
+    linear-gradient(to right, rgba(232, 235, 238, .045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 235, 238, .045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Xử lý ảnh kim loại: đơn sắc, tương phản; hover hé màu + zoom nhẹ */
+.img-steel {
+  filter: grayscale(1) contrast(1.12) brightness(.9);
+  transition: filter .8s ease, transform 1.2s cubic-bezier(.16, 1, .3, 1);
+}
+.group:hover .img-steel { filter: grayscale(.2) contrast(1.05) brightness(.95); transform: scale(1.04); }
+
+/* Góc định vị kiểu bản vẽ CAD */
+.marks { position: relative; }
+.marks::before, .marks::after {
+  content: ""; position: absolute; width: 16px; height: 16px; pointer-events: none; z-index: 3;
+}
+.marks::before { top: -1px; left: -1px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+.marks::after { bottom: -1px; right: -1px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+
+/* Đường nét CAD vẽ dần (dùng pathLength="1") */
+.cad-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: cad-draw 1.8s cubic-bezier(.16, 1, .3, 1) forwards; animation-delay: var(--d, .4s); }
+.cad-fade { opacity: 0; animation: cad-fade .8s ease forwards; animation-delay: var(--d, 1.4s); }
+@keyframes cad-draw { to { stroke-dashoffset: 0; } }
+@keyframes cad-fade { to { opacity: 1; } }
+
+.cad-text { font-family: var(--font-mono); letter-spacing: .06em; }
+
+/* Ẩn thanh cuộn của dải tab trên điện thoại */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cad-line { animation: none; stroke-dashoffset: 0; }
+  .cad-fade { animation: none; opacity: 1; }
+  .img-steel, .group:hover .img-steel { transition: none; transform: none; }
+}

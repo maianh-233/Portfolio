@@ -1,0 +1,42 @@
+:root {
+  --ink: #111111;
+  --graphite: #333333;
+  --mid: #858585;
+  --line: #E5E5E5;
+  --canvas: #F7F7F5;
+  --paper: #FFFFFF;
+  --font-display: "Inter Tight", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ui-accent: #111111;
+}
+
+html { scroll-padding-top: 96px; }
+body { background: var(--canvas); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+
+/* Ảnh: xử lý đen trắng thống nhất cho toàn website */
+.mg-photo, .ui-lb img { filter: grayscale(1) contrast(1.06); }
+
+/* Header: sticky, thu gọn khi cuộn */
+.mg-header-inner { height: 84px; transition: height .4s cubic-bezier(.16,1,.3,1); }
+header.is-scrolled .mg-header-inner { height: 64px; }
+header.is-scrolled { box-shadow: 0 1px 0 var(--line); }
+
+/* Gạch chân tinh tế cho link chữ */
+.mg-link { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .5s cubic-bezier(.16,1,.3,1); }
+.mg-link:hover, .mg-link:focus-visible { background-size: 100% 1px; }
+
+/* Nút ngôn ngữ đang chọn */
+[data-lang-set][aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+/* Lưới portfolio: chỉ báo khi lọc rỗng không cần; mũi tên hover */
+.mg-arrow { opacity: 0; transform: translate(-4px, 4px); transition: opacity .3s, transform .5s cubic-bezier(.16,1,.3,1); }
+.group:hover .mg-arrow, .group:focus-visible .mg-arrow { opacity: 1; transform: none; }
+
+/* Thanh đặt lịch nổi trên điện thoại: chừa chỗ để không che nội dung */
+@media (max-width: 1023px) {
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mg-header-inner, .mg-link, .mg-arrow { transition: none !important; }
+}

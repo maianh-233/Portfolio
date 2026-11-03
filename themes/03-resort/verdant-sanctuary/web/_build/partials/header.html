@@ -1,0 +1,30 @@
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-forest focus:px-5 focus:py-3 focus:text-ivory" data-en="Skip to content">Bỏ qua tới nội dung</a>
+<header id="top" data-header="shrink" class="group sticky top-0 z-40 border-b border-forest/10 bg-ivory text-forest transition-colors duration-500 [&.is-scrolled]:border-fern/25 [&.is-scrolled]:bg-forest [&.is-scrolled]:text-ivory">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="min-w-0 shrink font-display text-base font-semibold leading-[1.05] tracking-[0.16em] sm:text-xl sm:tracking-[0.22em]" aria-label="VERDANT SANCTUARY, trang chủ" data-en-aria-label="VERDANT SANCTUARY, home"><span class="block sm:inline">VERDANT</span> <span class="block sm:inline">SANCTUARY</span></a>
+    <nav class="hidden items-center gap-10 text-[15px] font-medium lg:flex" aria-label="Điều hướng chính" data-en-aria-label="Main navigation">
+      <a href="{{root}}index.html" class="relative py-2 transition-colors duration-300 hover:text-canopy group-[.is-scrolled]:hover:text-fern after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="{{root}}pages/about.html" class="relative py-2 transition-colors duration-300 hover:text-canopy group-[.is-scrolled]:hover:text-fern after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Our Philosophy">Triết lý</a>
+      <a href="{{root}}pages/stays.html" class="relative py-2 transition-colors duration-300 hover:text-canopy group-[.is-scrolled]:hover:text-fern after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Stays">Lưu trú</a>
+      <a href="{{root}}pages/experiences.html" class="relative py-2 transition-colors duration-300 hover:text-canopy group-[.is-scrolled]:hover:text-fern after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+    <div class="flex shrink-0 items-center gap-2 sm:gap-3">
+      <div class="flex items-center rounded-full border border-forest/25 p-1 text-xs font-bold tracking-[0.12em] group-[.is-scrolled]:border-ivory/30" role="group" aria-label="Chọn ngôn ngữ" data-en-aria-label="Choose language">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="h-9 min-w-[2.75rem] rounded-full px-3 transition-colors duration-300 hover:text-canopy aria-pressed:bg-forest aria-pressed:text-ivory group-[.is-scrolled]:hover:text-fern group-[.is-scrolled]:aria-pressed:bg-ivory group-[.is-scrolled]:aria-pressed:text-forest">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="h-9 min-w-[2.75rem] rounded-full px-3 transition-colors duration-300 hover:text-canopy aria-pressed:bg-forest aria-pressed:text-ivory group-[.is-scrolled]:hover:text-fern group-[.is-scrolled]:aria-pressed:bg-ivory group-[.is-scrolled]:aria-pressed:text-forest">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full border border-forest/25 transition-colors duration-300 hover:bg-forest hover:text-ivory group-[.is-scrolled]:border-ivory/30 group-[.is-scrolled]:hover:bg-ivory group-[.is-scrolled]:hover:text-forest lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-3xl bg-forest p-7 text-ivory shadow-2xl shadow-forest/40 lg:hidden">
+  <nav class="flex flex-col" aria-label="Điều hướng trên điện thoại" data-en-aria-label="Mobile navigation">
+    <a href="{{root}}index.html" class="flex min-h-[52px] items-center justify-between border-b border-fern/25 font-display text-3xl aria-[current=page]:text-fern" data-en="Home">Trang chủ</a>
+    <a href="{{root}}pages/about.html" class="flex min-h-[52px] items-center justify-between border-b border-fern/25 font-display text-3xl aria-[current=page]:text-fern" data-en="Our Philosophy">Triết lý</a>
+    <a href="{{root}}pages/stays.html" class="flex min-h-[52px] items-center justify-between border-b border-fern/25 font-display text-3xl aria-[current=page]:text-fern" data-en="Stays">Lưu trú</a>
+    <a href="{{root}}pages/experiences.html" class="flex min-h-[52px] items-center justify-between font-display text-3xl aria-[current=page]:text-fern" data-en="Experiences">Trải nghiệm</a>
+  </nav>
+  <p class="mt-6 text-sm text-ivory/70" data-en="An enchanted forest retreat. Information on this website is for introduction only.">Một chốn nghỉ giữa rừng xanh. Thông tin trên website chỉ mang tính giới thiệu.</p>
+</div>

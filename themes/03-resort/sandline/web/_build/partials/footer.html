@@ -1,0 +1,86 @@
+<footer id="footer" class="bg-umber text-bone">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 border-b border-bone/15 pb-16 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="max-w-sm font-display text-3xl leading-tight lg:text-4xl">Architecture shaped by the land, and the light that crosses it.</p>
+        <button type="button" data-modal-open="enquire" class="mt-8 inline-flex min-h-[48px] items-center bg-sand px-7 text-sm font-medium uppercase tracking-[0.16em] text-umber transition-colors duration-300 hover:bg-bone active:scale-[.98]">Enquire</button>
+      </div>
+      <div class="md:col-span-2">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-sand">Pages</p>
+        <ul class="mt-5 space-y-3 text-[15px]">
+          <li><a href="{{root}}index.html" class="transition-colors duration-300 hover:text-sand">Home</a></li>
+          <li><a href="{{root}}pages/about.html" class="transition-colors duration-300 hover:text-sand">About</a></li>
+          <li><a href="{{root}}pages/accommodation.html" class="transition-colors duration-300 hover:text-sand">Accommodation</a></li>
+          <li><a href="{{root}}pages/experiences.html" class="transition-colors duration-300 hover:text-sand">Experiences</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-sand">Visit</p>
+        <address class="mt-5 not-italic text-[15px] leading-relaxed text-bone/85">Km 14, Camino de los Llanos<br>04200 Tabernas, Almería<br>Spain</address>
+        <p class="mt-4 text-[15px] text-bone/85">Two hours by road from Málaga airport.</p>
+      </div>
+      <div class="md:col-span-2">
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-sand">Contact</p>
+        <ul class="mt-5 space-y-3 text-[15px]">
+          <li><a href="tel:+34950418273" class="transition-colors duration-300 hover:text-sand">+34 950 418 273</a></li>
+          <li><a href="mailto:stay@sandline-resort.com" class="break-words transition-colors duration-300 hover:text-sand">stay@sandline-resort.com</a></li>
+          <li><button type="button" data-copy="+34 950 418 273" class="text-bone/70 underline decoration-bone/30 underline-offset-4 transition-colors duration-300 hover:text-sand">Copy number</button></li>
+        </ul>
+      </div>
+    </div>
+    <p class="select-none overflow-hidden pt-10 font-display text-[19vw] leading-[0.8] tracking-[0.04em] text-bone/[0.08] lg:text-[16.5vw] 2xl:text-[15rem]" aria-hidden="true">SANDLINE</p>
+    <div class="flex flex-col gap-3 border-t border-bone/15 py-7 text-sm text-bone/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 SANDLINE. All rights reserved.</p>
+      <p>Prototype website for presentation.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="enquire" class="w-[min(92vw,640px)] bg-bone p-0 text-umber">
+  <div class="p-6 sm:p-10">
+    <div class="flex items-start justify-between gap-6">
+      <div>
+        <p class="font-display text-3xl sm:text-4xl">Plan your stay</p>
+        <p class="mt-2 text-[15px] text-stone">Tell us when you would like to come. Our reservations team replies within one working day.</p>
+      </div>
+      <button type="button" data-modal-close aria-label="Close" class="inline-flex h-11 w-11 shrink-0 items-center justify-center border border-line transition-colors duration-300 hover:bg-umber hover:text-bone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <form data-form="enquire" class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2" novalidate>
+      <div class="flex flex-col gap-2 sm:col-span-2">
+        <label for="enq-name" class="text-sm font-medium">Full name</label>
+        <input id="enq-name" name="name" required minlength="2" autocomplete="name" class="min-h-[48px] border border-stone/50 bg-white/60 px-4 text-base text-umber placeholder:text-stone focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="enq-email" class="text-sm font-medium">Email</label>
+        <input id="enq-email" name="email" type="email" required autocomplete="email" class="min-h-[48px] border border-stone/50 bg-white/60 px-4 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="enq-stay" class="text-sm font-medium">Residence</label>
+        <select id="enq-stay" name="residence" class="min-h-[48px] border border-stone/50 bg-white/60 px-3 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+          <option>Desert Suite</option>
+          <option>Courtyard Villa</option>
+          <option>Horizon Residence</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="enq-in" class="text-sm font-medium">Arrival</label>
+        <input id="enq-in" name="arrival" type="date" required class="min-h-[48px] border border-stone/50 bg-white/60 px-4 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="enq-nights" class="text-sm font-medium">Nights</label>
+        <input id="enq-nights" name="nights" type="number" min="1" max="30" value="3" required class="min-h-[48px] border border-stone/50 bg-white/60 px-4 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta">
+      </div>
+      <div class="flex flex-col gap-2 sm:col-span-2">
+        <label for="enq-note" class="text-sm font-medium">Anything we should know</label>
+        <textarea id="enq-note" name="note" rows="3" class="border border-stone/50 bg-white/60 px-4 py-3 text-base text-umber focus:border-umber focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"></textarea>
+      </div>
+      <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-sm text-stone">Demo form. Nothing is sent from this prototype.</p>
+        <button type="submit" class="min-h-[48px] bg-umber px-8 text-sm font-medium uppercase tracking-[0.16em] text-bone transition-colors duration-300 hover:bg-rust active:scale-[.98]">Send enquiry</button>
+      </div>
+    </form>
+  </div>
+</dialog>

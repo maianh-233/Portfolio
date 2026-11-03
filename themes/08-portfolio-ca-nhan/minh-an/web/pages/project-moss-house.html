@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moss House — Minh An</title>
+<meta name="description" content="Moss House, dự án ý tưởng của Minh An: nhà mái xanh tại Đà Lạt hòa vào đồi cỏ và cảnh quan.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-cream font-sans text-ink">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-ink/10 bg-cream/95 backdrop-blur-sm transition-shadow duration-300">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="group flex items-baseline gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-4 focus-visible:ring-offset-cream" aria-label="Minh An, về trang chủ">
+      <span class="font-display text-2xl leading-none tracking-tight text-ink">Minh An</span>
+      <span class="hidden text-[13px] font-medium tracking-[0.16em] text-olive sm:inline">FORM / SPACE</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Điều hướng chính">
+      <a href="../pages/works.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Công trình</a>
+      <a href="../pages/materials.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Vật liệu</a>
+      <a href="../pages/about.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Về Minh An</a>
+      <a href="../pages/contact.html" class="inline-flex h-11 items-center rounded-full bg-olive px-6 text-[15px] font-medium text-cream transition-all duration-300 hover:bg-olive-dark active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2 focus-visible:ring-offset-cream aria-[current=page]:bg-ink">Liên hệ</a>
+    </nav>
+
+    <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors duration-300 hover:bg-ink/5 lg:hidden" aria-label="Mở menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h11"/></svg>
+    </button>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-cream p-8 shadow-2xl shadow-ink/20 lg:hidden">
+    <nav class="flex flex-col" aria-label="Điều hướng trên điện thoại">
+      <a href="../index.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Trang chủ</a>
+      <a href="../pages/works.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Công trình</a>
+      <a href="../pages/materials.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Vật liệu</a>
+      <a href="../pages/about.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Về Minh An</a>
+      <a href="../pages/contact.html" class="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-olive px-6 text-base font-medium text-cream">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+<!-- /@partial header -->
+
+<main>
+  <section id="page-hero" data-section="page-hero" class="bg-cream pt-10 lg:pt-14">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <nav aria-label="Đường dẫn" class="text-sm text-ink/60">
+        <a href="../index.html" class="hover:text-clay">Trang chủ</a> <span aria-hidden="true">/</span>
+        <a href="works.html" class="hover:text-clay">Công trình</a> <span aria-hidden="true">/</span>
+        <span class="text-ink">Moss House</span>
+      </nav>
+      <div class="mt-8 grid gap-8 lg:grid-cols-12 lg:items-end">
+        <h1 data-split="words" class="pb-2 font-display text-[clamp(3.25rem,9vw,9rem)] leading-[0.98] tracking-tight lg:col-span-8">Moss <em class="text-clay">House</em></h1>
+        <p class="max-w-md text-lg leading-relaxed text-ink/75 lg:col-span-4" data-reveal="up">Nhà mái xanh hòa vào cảnh quan.</p>
+      </div>
+      <a href="../assets/img/project-moss-house.jpg" data-lightbox="moss" data-caption="Moss House: mái cỏ liền với đồi phía sau" class="group mt-12 block">
+        <div data-reveal="clip" class="aspect-[16/10] overflow-hidden rounded-[2rem] rounded-tl-[10rem] bg-cream-deep sm:aspect-[2/1]">
+          <img src="../assets/img/project-moss-house.jpg" alt="Ngôi nhà gỗ tối màu với mái phủ cỏ dày, tường đá bên dưới, đồi cỏ phía sau" class="img-warm h-full w-full object-cover object-[65%_45%] transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.03]" width="1024" height="683">
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="noi-dung" data-section="detail-article" class="bg-cream py-20 lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <aside class="lg:col-span-3">
+        <dl class="grid grid-cols-2 gap-x-6 gap-y-6 rounded-[2rem] bg-cream-deep p-7 lg:sticky lg:top-28 lg:grid-cols-1">
+          <div><dt class="text-sm text-ink/55">Địa điểm</dt><dd class="mt-1 font-medium">Đà Lạt, Lâm Đồng</dd></div>
+          <div><dt class="text-sm text-ink/55">Năm</dt><dd class="mt-1 font-medium">2022</dd></div>
+          <div><dt class="text-sm text-ink/55">Diện tích sàn</dt><dd class="mt-1 font-medium">160 m²</dd></div>
+          <div><dt class="text-sm text-ink/55">Vật liệu chính</dt><dd class="mt-1 font-medium">Gỗ thông xử lý nhiệt, đá suối, mái cỏ</dd></div>
+          <div class="col-span-2 lg:col-span-1"><dt class="text-sm text-ink/55">Trạng thái</dt><dd class="mt-1 font-medium text-clay-dark">Dự án ý tưởng</dd></div>
+        </dl>
+      </aside>
+
+      <article class="lg:col-span-7 lg:col-start-5">
+        <p class="font-display text-2xl leading-snug sm:text-3xl" data-reveal="up">Một thung lũng nhỏ có sương mù đến 9 giờ sáng. Yêu cầu của chủ nhà rất ngắn: đứng ở đồi đối diện, gần như không nhìn thấy ngôi nhà.</p>
+
+        <h2 class="mt-14 font-display text-3xl tracking-tight">Ý tưởng</h2>
+        <p class="mt-4 max-w-prose text-[17px] leading-[1.8] text-ink/80">Mái dốc 35 độ phủ lớp đất trồng dày 25 cm, gieo cỏ và dương xỉ bản địa. Mái nối thẳng vào sườn đồi phía sau, để cỏ trên đồi và trên mái mọc thành một dải liền.</p>
+
+        <figure class="mt-14 lg:-mr-[20%]">
+          <a href="../assets/img/hero-turf-house.webp" data-lightbox="moss" data-caption="Dãy nhà mái cỏ nối nhau theo sườn dốc" class="group block">
+            <div data-reveal="clip" class="aspect-[3/2] overflow-hidden rounded-arch bg-cream-deep">
+              <img src="../assets/img/hero-turf-house.webp" alt="Dãy nhà đầu hồi gỗ nối nhau, mái và tường phủ cỏ chạy dọc sườn dốc" class="img-warm h-full w-full object-cover object-[40%_60%] transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]" width="5472" height="3648" loading="lazy">
+            </div>
+          </a>
+          <figcaption class="mt-4 text-sm text-ink/60">Ảnh tham khảo tinh thần: nhà mái cỏ nối nhau theo sườn dốc.</figcaption>
+        </figure>
+
+        <h2 class="mt-14 font-display text-3xl tracking-tight">Vật liệu</h2>
+        <p class="mt-4 max-w-prose text-[17px] leading-[1.8] text-ink/80">Vách gỗ thông xử lý nhiệt sẫm màu dần theo năm tháng. Chân tường xếp đá suối nhặt trong thung lũng, mạch không trát để rêu bám vào.</p>
+
+        <blockquote class="mt-12 border-l-2 border-clay pl-6" data-reveal="up">
+          <p class="font-display text-2xl leading-snug sm:text-3xl">“Mái nhà là phần đồi được mượn tạm.”</p>
+        </blockquote>
+
+        <h2 class="mt-14 font-display text-3xl tracking-tight">Không gian</h2>
+        <p class="mt-4 max-w-prose text-[17px] leading-[1.8] text-ink/80">Lớp đất trên mái giữ nhiệt độ trong nhà ổn định quanh 20 độ. Những ô cửa sổ trắng nhỏ đóng khung từng mảnh thung lũng như những bức tranh treo tường.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="du-an-khac" data-section="teaser-row" class="bg-olive py-20 text-cream lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl items-center gap-10 px-4 sm:px-6 md:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="md:col-span-7">
+        <p class="text-sm text-cream/65">Quay lại dự án đầu</p>
+        <a href="project-earth-house.html" class="group mt-3 inline-flex items-center gap-4 font-display text-4xl tracking-tight transition-colors duration-300 hover:text-clay-light sm:text-6xl">
+          Earth House
+          <span aria-hidden="true" class="text-3xl transition-transform duration-300 group-hover:translate-x-2">→</span>
+        </a>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="works.html" class="inline-flex h-12 items-center rounded-full border border-cream/30 px-6 text-[15px] font-medium transition-colors duration-300 hover:bg-cream hover:text-olive">Tất cả công trình</a>
+          <a href="contact.html" class="inline-flex h-12 items-center rounded-full bg-cream px-6 text-[15px] font-semibold text-olive transition-colors duration-300 hover:bg-clay hover:text-cream">Liên hệ hợp tác</a>
+        </div>
+      </div>
+      <a href="project-earth-house.html" class="group block md:col-span-4 md:col-start-9" aria-label="Xem Earth House">
+        <div class="aspect-[4/5] overflow-hidden rounded-arch bg-olive-dark">
+          <img src="../assets/img/project-earth-house.jpg" alt="Ngôi nhà có cửa tròn nép vào sườn đồi phủ cỏ" class="img-warm h-full w-full object-cover object-[45%_50%] transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]" width="5575" height="3137" loading="lazy">
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- @partial footer -->
+<footer id="footer" data-section="footer-big" class="relative overflow-hidden bg-ink text-cream">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="max-w-sm font-display text-2xl leading-snug text-cream/90 lg:text-3xl">Kiến trúc bắt đầu từ việc lắng nghe <em class="text-clay-light">mảnh đất</em>.</p>
+        <a href="mailto:studio@formspace.vn" class="mt-8 inline-flex h-12 items-center gap-3 rounded-full border border-cream/25 px-6 text-[15px] font-medium text-cream transition-colors duration-300 hover:border-clay hover:bg-clay focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream">
+          Gửi email
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="md:col-span-3 md:col-start-7">
+        <p class="text-sm font-medium text-cream/50">Trang</p>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li><a href="../index.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Trang chủ</a></li>
+          <li><a href="../pages/works.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Công trình</a></li>
+          <li><a href="../pages/materials.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Vật liệu</a></li>
+          <li><a href="../pages/about.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Về Minh An</a></li>
+          <li><a href="../pages/contact.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <p class="text-sm font-medium text-cream/50">Studio</p>
+        <ul class="mt-4 space-y-3 text-[15px] text-cream/85">
+          <li><a href="mailto:studio@formspace.vn" class="transition-colors duration-300 hover:text-clay-light">studio@formspace.vn</a></li>
+          <li><a href="tel:+84905418273" class="transition-colors duration-300 hover:text-clay-light">+84 905 418 273</a></li>
+          <li>42 Nguyễn Phúc Chu, Hội An, Quảng Nam</li>
+          <li>Thứ Hai đến Thứ Sáu, 8:30 - 17:30</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mt-20 select-none font-display text-[clamp(4.5rem,19vw,19rem)] leading-[0.82] tracking-tight text-cream/[0.07]" aria-hidden="true">Minh An</p>
+
+    <div class="flex flex-col gap-2 border-t border-cream/10 py-6 text-[13px] text-cream/55 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 Minh An · FORM / SPACE. Các dự án trên website là nội dung minh họa.</p>
+      <a href="#top" class="transition-colors duration-300 hover:text-cream">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FADE DISTRICT — Barber studio cho thế hệ streetwear</title>
+<meta name="description" content="FADE DISTRICT là barber studio dành cho người trẻ yêu streetwear: Skin Fade, Textured Crop, Buzz Cut, Modern Mullet." data-en-content="FADE DISTRICT is a barber studio for the streetwear generation: Skin Fade, Textured Crop, Buzz Cut, Modern Mullet.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=JetBrains+Mono:wght@500&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-paper font-body text-ink antialiased" data-en-title="FADE DISTRICT — Barber studio for the streetwear generation">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b-[3px] border-ink bg-paper text-ink">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-3 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a aria-current="page" href="index.html" class="group flex shrink-0 items-center gap-2 font-display text-[1.6rem] font-black uppercase leading-none tracking-tight sm:text-3xl">
+      <span class="inline-block h-5 w-5 border-[3px] border-ink bg-signal transition-transform duration-300 group-hover:rotate-45"></span>FADE DISTRICT
+    </a>
+    <nav class="hidden items-center gap-7 xl:gap-10 lg:flex" aria-label="Menu chính" data-en-aria-label="Main menu">
+      <a aria-current="page" href="index.html" class="relative font-display text-lg font-bold uppercase tracking-wide after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-signal after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="pages/services.html" class="relative font-display text-lg font-bold uppercase tracking-wide after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-signal after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Services">Dịch vụ</a>
+      <a href="pages/gallery.html" class="relative font-display text-lg font-bold uppercase tracking-wide after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-signal after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Style Gallery">Thư viện kiểu tóc</a>
+      <a href="pages/district.html" class="relative font-display text-lg font-bold uppercase tracking-wide after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-signal after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="The District">Về District</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex border-[3px] border-ink font-mono text-xs" role="group" aria-label="Chọn ngôn ngữ" data-en-aria-label="Choose language">
+        <button type="button" data-set-lang="vi" aria-pressed="true" class="h-9 w-10 transition-colors duration-200 hover:bg-signal">VI</button>
+        <button type="button" data-set-lang="en" aria-pressed="false" class="h-9 w-10 border-l-[3px] border-ink transition-colors duration-200 hover:bg-signal">EN</button>
+      </div>
+      <button type="button" data-book class="hidden items-center gap-3 border-[3px] border-ink bg-signal px-4 py-2 font-display text-lg font-extrabold uppercase tracking-wide text-ink transition-colors duration-200 hover:border-signal hover:bg-ink hover:text-signal active:translate-y-px sm:inline-flex">
+        <span data-en="Book a visit">Đặt lịch</span><span aria-hidden="true">→</span>
+      </button>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border-[3px] border-ink bg-ink text-paper transition-colors duration-200 hover:bg-signal hover:text-ink lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <span class="block h-[3px] w-5 bg-current shadow-[0_-7px_0_currentColor,0_7px_0_currentColor]"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-0 top-16 z-50 border-y-[3px] border-ink bg-ink px-4 pb-8 pt-4 text-paper lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-en-aria-label="Mobile menu">
+      <a aria-current="page" href="index.html" class="flex items-center justify-between border-b-2 border-paper/20 py-4 font-display text-4xl font-black uppercase aria-[current=page]:text-signal"><span data-en="Home">Trang chủ</span><span aria-hidden="true" class="text-signal">01</span></a>
+      <a href="pages/services.html" class="flex items-center justify-between border-b-2 border-paper/20 py-4 font-display text-4xl font-black uppercase aria-[current=page]:text-signal"><span data-en="Services">Dịch vụ</span><span aria-hidden="true" class="text-signal">02</span></a>
+      <a href="pages/gallery.html" class="flex items-center justify-between border-b-2 border-paper/20 py-4 font-display text-4xl font-black uppercase aria-[current=page]:text-signal"><span data-en="Style Gallery">Thư viện kiểu tóc</span><span aria-hidden="true" class="text-signal">03</span></a>
+      <a href="pages/district.html" class="flex items-center justify-between border-b-2 border-paper/20 py-4 font-display text-4xl font-black uppercase aria-[current=page]:text-signal"><span data-en="The District">Về District</span><span aria-hidden="true" class="text-signal">04</span></a>
+    </nav>
+    <button type="button" data-book class="mt-6 flex h-14 w-full items-center justify-between border-[3px] border-signal bg-signal px-5 font-display text-2xl font-extrabold uppercase text-ink transition-colors duration-200 hover:bg-ink hover:text-signal">
+      <span data-en="Book a visit">Đặt lịch</span><span aria-hidden="true">→</span>
+    </button>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-offset" class="relative overflow-hidden bg-ink text-paper">
+    <p class="pointer-events-none absolute -left-4 top-1/2 -translate-y-1/2 select-none whitespace-nowrap font-display text-[24vw] font-black uppercase leading-none tracking-tighter text-paper/[0.05]" aria-hidden="true">FADE DISTRICT</p>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 pb-14 pt-10 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12 lg:items-center lg:gap-6 lg:px-10 lg:pb-16 lg:pt-12 2xl:px-16">
+      <div class="lg:col-span-7">
+        <div class="flex flex-wrap gap-2 text-concrete" data-reveal="fade">
+          <span class="stamp text-signal">District 001</span>
+          <span class="stamp" data-en="Street culture">Văn hóa đường phố</span>
+          <span class="stamp">Est. 2022</span>
+        </div>
+        <p class="mt-8 font-mono text-sm uppercase tracking-[0.25em] text-signal" data-en="Your hair. Your rules.">Tóc của bạn. Luật của bạn.</p>
+        <h1 data-split="words" class="mt-4 font-display text-[clamp(3.6rem,10.5vw,6.5rem)] font-black uppercase leading-[0.92] tracking-tight lg:text-[clamp(5rem,7.6vw,9.5rem)]" data-en="Fresh<br>fade.<br><span class=&quot;text-signal&quot;>No rules.</span>">Fade<br>thật gắt.<br><span class="text-signal">Không luật lệ.</span></h1>
+        <p class="mt-6 max-w-[34rem] text-lg leading-relaxed text-paper/80" data-reveal="up" data-en="A barber studio for people who like to experiment with style, show who they are and are not afraid to stand out.">Một barber studio dành cho những người thích thử nghiệm phong cách, thể hiện cá tính và không ngại khác biệt.</p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal="up" data-reveal-delay="200">
+          <a href="pages/gallery.html" class="inline-flex items-center justify-between gap-6 border-[3px] border-paper px-6 py-3.5 font-display text-xl font-extrabold uppercase tracking-wide text-paper transition-colors duration-200 hover:border-signal hover:bg-signal hover:text-ink active:translate-y-px">
+            <span data-en="Find your style">Tìm phong cách</span><span aria-hidden="true">+</span>
+          </a>
+          <button type="button" data-book data-magnetic="0.25" class="inline-flex items-center justify-between gap-6 border-[3px] border-signal bg-signal px-6 py-3.5 font-display text-xl font-extrabold uppercase tracking-wide text-ink transition-colors duration-200 hover:bg-ink hover:text-signal active:translate-y-px">
+            <span data-en="Book a visit">Đặt lịch</span><span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+      <div class="relative lg:col-span-5">
+        <div class="absolute -right-4 top-8 h-[88%] w-[78%] border-[3px] border-ink bg-signal sm:-right-6 lg:-right-10 2xl:-right-16" aria-hidden="true"></div>
+        <div class="relative mr-6 overflow-hidden border-[3px] border-paper bg-concrete sm:mr-10" data-reveal="zoom">
+          <img src="https://images.unsplash.com/photo-1599834562135-b6fc90e642ca?w=1600&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Chân dung chàng trai trẻ với kiểu tóc fade ngắn, áo khoác đen" data-en-alt="Portrait of a young man with a short fade haircut in a black jacket" width="1200" height="1500" class="aspect-[4/5] h-full w-full object-cover grayscale-[20%] contrast-[1.1]">
+        </div>
+        <div class="absolute -left-2 bottom-10 sm:-left-6" data-float="10" data-float-rotate="3">
+          <span class="block -rotate-6 border-[3px] border-ink bg-acid px-4 py-2 font-display text-2xl font-black uppercase text-ink shadow-hard">Skin Fade</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVING STREET BANNER -->
+  <section id="street-banner" data-section="marquee-band" class="border-y-[3px] border-ink bg-signal py-3 text-ink" aria-label="Khẩu hiệu" data-en-aria-label="Slogan">
+    <div data-marquee="55">
+      <p class="whitespace-nowrap pr-8 font-display text-3xl font-black uppercase tracking-tight sm:text-4xl lg:text-5xl" data-en="Stay fresh &nbsp;+&nbsp; Stay different &nbsp;+&nbsp; Own your style &nbsp;+&nbsp; Stay fresh &nbsp;+&nbsp; Stay different &nbsp;+&nbsp; Own your style &nbsp;+">Luôn tươi mới &nbsp;+&nbsp; Luôn khác biệt &nbsp;+&nbsp; Làm chủ phong cách &nbsp;+&nbsp; Luôn tươi mới &nbsp;+&nbsp; Luôn khác biệt &nbsp;+&nbsp; Làm chủ phong cách &nbsp;+</p>
+    </div>
+  </section>
+
+  <!-- THE DISTRICT ATTITUDE -->
+  <section id="attitude" data-section="story-editorial" class="bg-concrete text-ink">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-10 lg:py-24 2xl:px-16">
+      <div class="lg:col-span-7">
+        <div class="relative h-full overflow-hidden border-[3px] border-ink bg-ink" data-reveal="clip">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1600&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Barber có hình xăm đang tỉa đường tóc bằng dao cạo" data-en-alt="Tattooed barber detailing a hairline with a straight razor" width="1400" height="1200" class="aspect-[4/3] h-full w-full object-cover lg:aspect-auto lg:min-h-[640px]">
+          <span class="stamp absolute left-4 top-4 bg-paper text-ink">District 001</span>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center lg:col-span-5">
+        <h2 class="font-display text-[clamp(2.75rem,6vw,5.5rem)] font-black uppercase leading-[0.9] tracking-tight" data-reveal="up" data-en="Not just a cut.<br><span class=&quot;bg-ink px-2 text-signal&quot;>It's your identity.</span>">Không chỉ là cắt tóc.<br><span class="bg-ink px-2 text-signal">Đó là bản sắc.</span></h2>
+        <ol class="mt-10 border-t-[3px] border-ink" data-reveal-stagger="90">
+          <li class="group grid grid-cols-[auto_1fr] gap-5 border-b-[3px] border-ink py-6 transition-colors duration-200 hover:bg-paper/40">
+            <span class="outline-ink font-display text-6xl font-black leading-none transition-colors duration-200 group-hover:text-signal">01</span>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold uppercase" data-en="No basic cuts">Không cắt rập khuôn</h3>
+              <p class="mt-1 text-base leading-relaxed text-ink/80" data-en="No templates. Every cut is adjusted to the person wearing it.">Không rập khuôn. Mỗi kiểu tóc được điều chỉnh theo cá tính của khách hàng.</p>
+            </div>
+          </li>
+          <li class="group grid grid-cols-[auto_1fr] gap-5 border-b-[3px] border-ink py-6 transition-colors duration-200 hover:bg-paper/40">
+            <span class="outline-ink font-display text-6xl font-black leading-none transition-colors duration-200 group-hover:text-signal">02</span>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold uppercase" data-en="Built on precision">Chính xác từng đường</h3>
+              <p class="mt-1 text-base leading-relaxed text-ink/80" data-en="Clean fades, clear texture and care in every detail.">Đường fade gọn, texture rõ và sự tỉ mỉ trong từng chi tiết.</p>
+            </div>
+          </li>
+          <li class="group grid grid-cols-[auto_1fr] gap-5 border-b-[3px] border-ink py-6 transition-colors duration-200 hover:bg-paper/40">
+            <span class="outline-ink font-display text-6xl font-black leading-none transition-colors duration-200 group-hover:text-signal">03</span>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold uppercase" data-en="Street approved">Chuẩn chất đường phố</h3>
+              <p class="mt-1 text-base leading-relaxed text-ink/80" data-en="Inspired by streetwear, music and today's urban culture.">Lấy cảm hứng từ streetwear, âm nhạc và văn hóa đô thị đương đại.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE STYLES -->
+  <section id="styles" data-section="features-bento" class="bg-ink text-paper">
+    <div class="tape h-3 w-full" aria-hidden="true"></div>
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <h2 data-split="words" class="font-display text-[clamp(3rem,8vw,8rem)] font-black uppercase leading-[0.92] tracking-tight" data-en="Choose your<br><span class=&quot;text-signal&quot;>attitude.</span>">Chọn thái độ<br><span class="text-signal">của bạn.</span></h2>
+        <a href="pages/services.html" class="inline-flex items-center justify-between gap-6 self-start border-[3px] border-signal bg-signal px-6 py-3.5 font-display text-xl font-extrabold uppercase tracking-wide text-ink transition-colors duration-200 hover:bg-ink hover:text-signal active:translate-y-px lg:self-auto">
+          <span data-en="Explore all services">Xem tất cả dịch vụ</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:grid-rows-2" data-reveal-stagger="90">
+        <a href="pages/services.html#menu" class="group relative flex flex-col overflow-hidden border-[3px] border-paper bg-ink transition-colors duration-300 hover:border-signal lg:col-span-7 lg:row-span-2">
+          <div class="relative min-h-0 flex-1 overflow-hidden bg-concrete">
+            <img src="https://images.unsplash.com/photo-1568339434343-2a640a1a9946?w=1200&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Đường skin fade sát da phía sau gáy" data-en-alt="Close skin fade at the back of the head" width="1200" height="1200" class="aspect-square h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05] lg:aspect-auto">
+            <span class="absolute right-4 top-4 translate-y-2 border-[3px] border-ink bg-signal px-3 py-1 font-mono text-xs uppercase tracking-widest text-ink opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100" data-en="From 180k">Từ 180k</span>
+          </div>
+          <div class="flex items-end justify-between gap-4 border-t-[3px] border-paper p-5 transition-colors duration-300 group-hover:border-signal">
+            <div>
+              <span class="font-mono text-xs text-concrete">01</span>
+              <h3 class="font-display text-5xl font-black uppercase leading-none transition duration-300 group-hover:translate-x-2 group-hover:text-signal sm:text-6xl">Skin Fade</h3>
+              <p class="mt-2 text-paper/75" data-en="A skin-tight transition, sharp and modern.">Đường chuyển tiếp sát da, sắc nét và hiện đại.</p>
+            </div>
+            <span class="font-display text-4xl text-signal transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="pages/services.html#menu" class="group grid grid-cols-[2fr_3fr] overflow-hidden border-[3px] border-paper transition-colors duration-300 hover:border-signal lg:col-span-5">
+          <div class="relative overflow-hidden bg-concrete">
+            <img src="https://images.unsplash.com/photo-1673118306590-0a82988ba2c3?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Chàng trai mặc hoodie đen với tóc textured crop" data-en-alt="Young man in a black hoodie with a textured crop" width="800" height="1000" class="aspect-[4/5] h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]">
+          </div>
+          <div class="flex flex-col justify-between gap-4 p-5">
+            <span class="self-start border-2 border-signal px-2 py-1 font-mono text-xs uppercase tracking-widest text-signal transition-colors duration-300 group-hover:bg-signal group-hover:text-ink">02 / Texture</span>
+            <div>
+              <h3 class="font-display text-4xl font-black uppercase leading-none transition duration-300 group-hover:translate-x-2 group-hover:text-signal xl:text-5xl">Textured Crop</h3>
+              <p class="mt-2 text-paper/75" data-en="Natural texture, movement and an easy-going look.">Texture tự nhiên, tạo chuyển động và vẻ ngoài phóng khoáng.</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="pages/services.html#menu" class="group grid grid-cols-[2fr_3fr] overflow-hidden border-[3px] border-paper bg-paper text-ink transition-colors duration-300 hover:border-signal lg:col-span-5">
+          <div class="relative overflow-hidden bg-concrete">
+            <img src="https://images.unsplash.com/photo-1644199161554-f9e84cd64b7b?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Chân dung đen trắng người đàn ông tóc buzz cut" data-en-alt="Black and white portrait of a man with a buzz cut" width="800" height="1000" class="aspect-[4/5] h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]">
+          </div>
+          <div class="flex flex-col justify-between gap-4 p-5">
+            <span class="self-start border-2 border-ink px-2 py-1 font-mono text-xs uppercase tracking-widest transition-colors duration-300 group-hover:border-signal group-hover:bg-signal">03 / Minimal</span>
+            <div>
+              <h3 class="font-display text-4xl font-black uppercase leading-none transition duration-300 group-hover:translate-x-2 group-hover:text-signal xl:text-5xl">Buzz Cut</h3>
+              <p class="mt-2 text-ink/75" data-en="Short, strong, minimal and easy to look after.">Gọn, mạnh mẽ, tối giản và dễ chăm sóc.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <a href="pages/services.html#menu" class="group mt-5 grid grid-cols-1 overflow-hidden border-[3px] border-signal bg-signal text-ink sm:grid-cols-12" data-reveal="up">
+        <div class="relative overflow-hidden bg-concrete sm:col-span-5 lg:col-span-4">
+          <img src="https://images.unsplash.com/photo-1785970151269-1c77b401afb6?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Người trẻ đeo kính với kiểu modern mullet ngắn" data-en-alt="Young person in glasses with a short modern mullet" width="1000" height="800" class="aspect-[5/4] h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.05]">
+        </div>
+        <div class="flex flex-col justify-center gap-3 p-6 sm:col-span-7 lg:col-span-8 lg:p-10">
+          <span class="font-mono text-xs uppercase tracking-widest">04 / No rules</span>
+          <h3 class="font-display text-[clamp(3rem,8vw,8.5rem)] font-black uppercase leading-[0.85] tracking-tight transition duration-300 group-hover:translate-x-3">Modern Mullet</h3>
+          <p class="max-w-xl text-lg" data-en="Bold, eye-catching and rooted in street culture.">Cá tính, nổi bật và mang hơi hướng street culture.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- STYLE GALLERY PREVIEW -->
+  <section id="lookbook" data-section="gallery-lookbook" class="bg-paper text-ink">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
+        <h2 class="font-display text-[clamp(3rem,8vw,8rem)] font-black uppercase leading-[0.86] tracking-tight lg:col-span-8" data-reveal="up" data-en="Seen on<br>the <span class=&quot;outline-ink&quot;>streets.</span>">Bắt gặp<br>trên <span class="outline-ink">phố.</span></h2>
+        <div class="lg:col-span-4 lg:justify-self-end">
+          <a href="pages/gallery.html" class="inline-flex items-center justify-between gap-6 border-[3px] border-ink bg-signal px-6 py-3.5 font-display text-xl font-extrabold uppercase tracking-wide text-ink transition-colors duration-200 hover:border-signal hover:bg-ink hover:text-signal active:translate-y-px">
+            <span data-en="View the gallery">Xem thư viện</span><span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 items-start gap-x-4 gap-y-8 lg:grid-cols-12 lg:gap-x-6 lg:gap-y-12">
+        <figure class="col-span-2 lg:col-span-5">
+          <div class="overflow-hidden border-[3px] border-ink bg-concrete" data-reveal="clip"><img src="https://images.unsplash.com/photo-1629189784191-9afdcbcb0398?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Kiểu fade gọn với râu đen dày" data-en-alt="Clean fade paired with a full black beard" width="1000" height="1250" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.04]"></div>
+          <figcaption class="mt-3 flex items-center justify-between gap-2"><span class="font-display text-xl font-bold uppercase">Low fade + beard</span><span class="stamp">Fade</span></figcaption>
+        </figure>
+        <figure class="lg:col-span-4 lg:mt-24">
+          <div class="overflow-hidden border-[3px] border-ink bg-concrete" data-reveal="clip"><img src="https://images.unsplash.com/photo-1673118306786-317c5a6531bc?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Chàng trai mặc hoodie với tóc texture tự nhiên" data-en-alt="Young man in a hoodie with natural texture" width="800" height="1000" class="aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.04]"></div>
+          <figcaption class="mt-3 flex items-center justify-between gap-2"><span class="font-display text-xl font-bold uppercase">Textured crop</span><span class="stamp">Texture</span></figcaption>
+        </figure>
+        <figure class="lg:col-span-3 lg:mt-40">
+          <div class="overflow-hidden border-[3px] border-ink bg-concrete" data-reveal="clip"><img src="https://images.unsplash.com/photo-1724022057448-15024eaf2341?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Người đàn ông tóc cạo sát đi trên phố" data-en-alt="Man with a shaved head walking down the street" width="800" height="1000" class="aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.04]"></div>
+          <figcaption class="mt-3 flex items-center justify-between gap-2"><span class="font-display text-xl font-bold uppercase">Buzz cut</span><span class="stamp bg-acid">District look</span></figcaption>
+        </figure>
+        <figure class="lg:col-span-3">
+          <div class="overflow-hidden border-[3px] border-ink bg-concrete" data-reveal="clip"><img src="https://images.unsplash.com/photo-1785970151283-e5484bdbc5d7?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Người trẻ tóc nhuộm xanh kiểu mullet, đeo kính" data-en-alt="Young person with a blue-dyed mullet and glasses" width="800" height="1000" class="aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.04]"></div>
+          <figcaption class="mt-3 flex items-center justify-between gap-2"><span class="font-display text-xl font-bold uppercase">Color mullet</span><span class="stamp">No rules</span></figcaption>
+        </figure>
+        <figure class="lg:col-span-4 lg:mt-16">
+          <div class="overflow-hidden border-[3px] border-ink bg-concrete" data-reveal="clip"><img src="https://images.unsplash.com/photo-1783908688260-0c47404926f3?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Barber đeo găng đen đang cắt tóc cho khách" data-en-alt="Barber in black gloves cutting a client's hair" width="1000" height="800" class="aspect-[5/4] w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.04]"></div>
+          <figcaption class="mt-3 flex items-center justify-between gap-2"><span class="font-display text-xl font-bold uppercase" data-en="In the chair">Trên ghế cắt</span><span class="stamp">Fade</span></figcaption>
+        </figure>
+        <figure class="col-span-2 lg:col-span-5">
+          <div class="overflow-hidden border-[3px] border-ink bg-concrete" data-reveal="clip"><img src="https://images.unsplash.com/photo-1686543972602-da0c7ea61ce2?w=1000&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Chàng trai đeo kính, áo đen, tóc texture" data-en-alt="Young man in glasses and a black shirt with textured hair" width="1000" height="1000" class="aspect-square w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.04]"></div>
+          <figcaption class="mt-3 flex items-center justify-between gap-2"><span class="font-display text-xl font-bold uppercase">Messy texture</span><span class="stamp">Texture</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET THE BARBERS -->
+  <section id="crew" data-section="team-grid" class="relative overflow-hidden bg-ink text-paper" data-particles="dust" data-particles-color="#FF5A1F" data-particles-density="0.6">
+    <div class="relative z-10 mx-auto w-full max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-16">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <h2 class="font-display text-[clamp(3rem,7.5vw,7.5rem)] font-black uppercase leading-[0.86] tracking-tight text-signal" data-reveal="up" data-en="The crew<br>behind the cut.">Đội ngũ<br>đứng sau mỗi đường cắt.</h2>
+        <a href="pages/district.html#crew" class="inline-flex items-center justify-between gap-6 self-start border-[3px] border-paper px-6 py-3.5 font-display text-xl font-extrabold uppercase tracking-wide text-paper transition-colors duration-200 hover:border-signal hover:bg-signal hover:text-ink active:translate-y-px lg:self-auto">
+          <span data-en="Meet the crew">Gặp đội ngũ</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6" data-reveal-stagger="110">
+        <article class="group">
+          <div class="relative overflow-hidden border-[3px] border-paper bg-concrete transition-colors duration-300 group-hover:border-signal">
+            <img src="https://images.unsplash.com/photo-1553521041-d168abd31de3?w=900&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Minh Khoa cầm kéo cắt tóc" data-en-alt="Minh Khoa holding barber scissors" width="900" height="1125" class="aspect-[4/5] w-full object-cover grayscale transition duration-[1200ms] group-hover:scale-[1.04] group-hover:grayscale-0">
+            <span class="absolute left-0 top-0 border-b-[3px] border-r-[3px] border-ink bg-signal px-3 py-1 font-display text-3xl font-black text-ink">01</span>
+          </div>
+          <h3 class="mt-4 font-display text-5xl font-black uppercase leading-none">Minh Khoa</h3>
+          <p class="mt-1 font-mono text-xs uppercase tracking-[0.2em] text-signal" data-en="Fade Specialist">Chuyên gia Fade</p>
+          <p class="mt-3 max-w-sm text-paper/75" data-en="Skin fade and low fade specialist. Khoa believes a clean transition is the base of every good cut.">Chuyên skin fade và low fade. Khoa tin một đường chuyển tiếp sạch là nền móng của mọi kiểu tóc.</p>
+        </article>
+        <article class="group lg:mt-20">
+          <div class="relative overflow-hidden border-[3px] border-paper bg-concrete transition-colors duration-300 group-hover:border-signal">
+            <img src="https://images.unsplash.com/photo-1598524374912-6b0b0bab43dd?w=900&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Jay Nguyen mặc áo thun đen trong studio" data-en-alt="Jay Nguyen in a black t-shirt in the studio" width="900" height="1125" class="aspect-[4/5] w-full object-cover grayscale transition duration-[1200ms] group-hover:scale-[1.04] group-hover:grayscale-0">
+            <span class="absolute left-0 top-0 border-b-[3px] border-r-[3px] border-ink bg-signal px-3 py-1 font-display text-3xl font-black text-ink">02</span>
+          </div>
+          <h3 class="mt-4 font-display text-5xl font-black uppercase leading-none">Jay Nguyen</h3>
+          <p class="mt-1 font-mono text-xs uppercase tracking-[0.2em] text-signal" data-en="Texture &amp; Modern Cuts">Texture &amp; kiểu hiện đại</p>
+          <p class="mt-3 max-w-sm text-paper/75" data-en="Into natural texture and shapes that move. Jay usually starts by asking what you wear every day.">Mê texture tự nhiên và những form tóc có chuyển động. Jay thường bắt đầu bằng câu hỏi bạn hay mặc gì mỗi ngày.</p>
+        </article>
+        <article class="group sm:col-span-2 sm:max-w-[50%] lg:col-span-1 lg:max-w-none">
+          <div class="relative overflow-hidden border-[3px] border-paper bg-concrete transition-colors duration-300 group-hover:border-signal">
+            <img src="https://images.unsplash.com/photo-1673118306669-ba0aa4189636?w=900&q=70&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Alex Tran mặc áo khoác trắng nhìn thẳng ống kính" data-en-alt="Alex Tran in a white jacket looking at the camera" width="900" height="1125" class="aspect-[4/5] w-full object-cover grayscale transition duration-[1200ms] group-hover:scale-[1.04] group-hover:grayscale-0">
+            <span class="absolute left-0 top-0 border-b-[3px] border-r-[3px] border-ink bg-signal px-3 py-1 font-display text-3xl font-black text-ink">03</span>
+          </div>
+          <h3 class="mt-4 font-display text-5xl font-black uppercase leading-none">Alex Tran</h3>
+          <p class="mt-1 font-mono text-xs uppercase tracking-[0.2em] text-signal" data-en="Creative Barber">Barber sáng tạo</p>
+          <p class="mt-3 max-w-sm text-paper/75" data-en="Handles the experimental side: modern mullets, line designs and the harder requests.">Phụ trách mảng thử nghiệm: modern mullet, line design và những yêu cầu khó.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING STATEMENT -->
+  <section id="closing" data-section="cta-type" class="relative overflow-hidden border-t-[3px] border-ink bg-signal text-ink">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-end gap-8 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-24 2xl:px-16">
+      <div class="lg:col-span-10">
+        <h2 data-split="words" class="font-display text-[clamp(2.5rem,8.2vw,9rem)] font-black uppercase leading-[0.92] tracking-tight" data-en="Your style.<br>Your district.">Phong cách của bạn.<br>District của bạn.</h2>
+        <p class="mt-6 max-w-xl text-lg font-medium" data-reveal="up" data-en="Come in, talk it through with the crew and find the cut that fits who you are.">Ghé studio, trò chuyện cùng đội ngũ và tìm kiểu tóc hợp với cá tính của bạn.</p>
+        <button type="button" data-book data-magnetic="0.3" class="mt-8 inline-flex items-center gap-6 border-[3px] border-ink bg-ink px-7 py-4 font-display text-2xl font-extrabold uppercase tracking-wide text-signal transition-colors duration-200 hover:bg-paper hover:text-ink active:translate-y-px" data-reveal="up">
+          <span data-en="Book a visit">Đặt lịch</span><span aria-hidden="true">→</span>
+        </button>
+      </div>
+      <p class="hidden select-none text-right font-display text-[14rem] font-black leading-[0.7] lg:col-span-2 lg:block" aria-hidden="true">↘</p>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden border-t-[3px] border-ink bg-ink pb-16 text-paper sm:pb-0">
+  <div class="tape h-3 w-full" aria-hidden="true"></div>
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 pt-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-4">
+      <p class="max-w-sm font-display text-3xl font-extrabold uppercase leading-[1.05]" data-en="Your hair.<br>Your rules.">Tóc của bạn.<br>Luật của bạn.</p>
+      <button type="button" data-book class="mt-6 inline-flex items-center gap-3 border-[3px] border-signal bg-signal px-5 py-3 font-display text-lg font-extrabold uppercase tracking-wide text-ink transition-colors duration-200 hover:bg-ink hover:text-signal active:translate-y-px">
+        <span data-en="Book a visit">Đặt lịch</span><span aria-hidden="true">→</span>
+      </button>
+    </div>
+    <div class="lg:col-span-2">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-concrete" data-en="Pages">Các trang</p>
+      <ul class="mt-4 space-y-2 font-display text-xl font-bold uppercase">
+        <li><a aria-current="page" href="index.html" class="transition-colors duration-200 hover:text-signal" data-en="Home">Trang chủ</a></li>
+        <li><a href="pages/services.html" class="transition-colors duration-200 hover:text-signal" data-en="Services">Dịch vụ</a></li>
+        <li><a href="pages/gallery.html" class="transition-colors duration-200 hover:text-signal" data-en="Style Gallery">Thư viện kiểu tóc</a></li>
+        <li><a href="pages/district.html" class="transition-colors duration-200 hover:text-signal" data-en="The District">Về District</a></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-3">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-concrete" data-en="Visit (sample data)">Ghé thăm (dữ liệu mẫu)</p>
+      <ul class="mt-4 space-y-2 text-paper/85">
+        <li data-en="00 Sample Street, District X, Ho Chi Minh City">00 Đường Mẫu, Quận X, TP. Hồ Chí Minh</li>
+        <li><a href="tel:0900000000" class="font-mono transition-colors duration-200 hover:text-signal">0900 000 000</a></li>
+        <li><a href="mailto:hello@example.com" class="transition-colors duration-200 hover:text-signal">hello@example.com</a></li>
+        <li data-en="Tue to Sun, 10:00 to 21:00">Thứ 3 đến Chủ nhật, 10:00 đến 21:00</li>
+      </ul>
+    </div>
+    <div class="lg:col-span-3">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-concrete" data-en="Social (illustration)">Mạng xã hội (minh họa)</p>
+      <ul class="mt-4 flex flex-wrap gap-2 font-mono text-xs uppercase">
+        <li class="border-2 border-paper/40 px-3 py-2">Instagram</li>
+        <li class="border-2 border-paper/40 px-3 py-2">TikTok</li>
+        <li class="border-2 border-paper/40 px-3 py-2">Facebook</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <p class="mt-14 select-none whitespace-nowrap font-display text-[17.5vw] font-black uppercase leading-[0.8] tracking-tighter text-signal 2xl:text-[16.5vw]" aria-hidden="true">FADE DISTRICT</p>
+    <div class="flex flex-col gap-2 border-t-2 border-paper/20 py-6 font-mono text-xs uppercase tracking-[0.14em] text-concrete sm:flex-row sm:justify-between">
+      <p>© 2026 FADE DISTRICT</p>
+      <p data-en="Prototype website. Booking and contact info are samples.">Website minh họa. Đặt lịch và thông tin liên hệ là dữ liệu mẫu.</p>
+    </div>
+  </div>
+  <div class="fixed inset-x-0 bottom-0 z-30 border-t-[3px] border-ink bg-signal sm:hidden">
+    <button type="button" data-book class="flex h-14 w-full items-center justify-center gap-3 font-display text-xl font-extrabold uppercase text-ink">
+      <span data-en="Book a visit">Đặt lịch</span><span aria-hidden="true">→</span>
+    </button>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

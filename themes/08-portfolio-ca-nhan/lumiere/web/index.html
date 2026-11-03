@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUMIÈRE | Ánh sáng kể chuyện con người và nơi chốn</title>
+<meta name="description" content="LUMIÈRE, nhiếp ảnh gia và người kể chuyện bằng hình ảnh: chân dung, thời trang, phong cảnh và khoảnh khắc đời thường, trình bày như một triển lãm trực tuyến.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-ink font-sans text-ivory">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 text-ivory transition-colors duration-500 [&.is-scrolled]:bg-ink/95 [&.is-scrolled]:backdrop-blur-sm [&.is-scrolled]:border-b [&.is-scrolled]:border-line">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a aria-current="page" href="index.html" class="flex items-baseline gap-4">
+      <span class="font-display text-2xl tracking-[0.18em] lg:text-[1.7rem]">LUMIÈRE</span>
+      <span class="hidden text-xs uppercase tracking-label text-mute xl:inline">Nhiếp ảnh gia / Nghệ sĩ thị giác</span>
+    </a>
+    <nav data-scrollspy aria-label="Điều hướng chính" class="hidden lg:block">
+      <ul class="flex items-center gap-10 text-[12px] uppercase tracking-label">
+        <li><a href="#tac-pham" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-ivory after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ivory [&.is-active]:after:scale-x-100">Tác phẩm</a></li>
+        <li><a href="#gioi-thieu" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-ivory after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ivory [&.is-active]:after:scale-x-100">Giới thiệu</a></li>
+        <li><a href="#kinh-nghiem" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-ivory after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ivory [&.is-active]:after:scale-x-100">Kinh nghiệm</a></li>
+        <li><a href="#lien-he" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-ivory after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ivory [&.is-active]:after:scale-x-100">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="-mr-2 flex h-11 w-11 items-center justify-center lg:hidden">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+    </button>
+  </div>
+  <div id="mnav" class="fixed inset-x-0 top-16 z-50 border-t border-line bg-ink px-6 pb-10 pt-6 lg:hidden">
+    <ul class="flex flex-col font-display text-3xl">
+      <li><a href="#tac-pham" class="block border-b border-line py-4">Tác phẩm</a></li>
+      <li><a href="#gioi-thieu" class="block border-b border-line py-4">Giới thiệu</a></li>
+      <li><a href="#kinh-nghiem" class="block border-b border-line py-4">Kinh nghiệm</a></li>
+      <li><a href="#lien-he" class="block py-4">Liên hệ</a></li>
+    </ul>
+    <p class="mt-8 text-xs uppercase tracking-label text-mute">Nhiếp ảnh gia / Nghệ sĩ thị giác</p>
+  </div>
+</header>
+<!-- /@partial header -->
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-cinematic" class="relative min-h-[100dvh] overflow-hidden bg-ink">
+    <img src="assets/img/hero-nui-suong.jpg" alt="Dãy núi chìm trong mây, những vệt nắng xuyên qua và con đường đèo uốn cong" width="5363" height="3575" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover object-[center_60%]">
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-ink/40" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/10 to-transparent" aria-hidden="true"></div>
+
+    <div class="relative mx-auto flex min-h-[100dvh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 lg:px-10 lg:pb-20 2xl:px-16">
+      <div class="grid items-end gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-8">
+          <p data-reveal="fade" class="text-xs uppercase tracking-label text-ivory/80 sm:text-xs">Nhiếp ảnh gia / Người kể chuyện bằng hình ảnh</p>
+          <h1 data-reveal="up" class="mt-5 font-display text-[clamp(4rem,13vw,11.5rem)] font-normal leading-[0.9] tracking-[0.04em]">LUMIÈRE</h1>
+          <p data-reveal="up" class="mt-6 max-w-[34rem] text-base leading-relaxed text-ivory/85 sm:text-lg">Tôi chụp những khoảnh khắc ánh sáng chạm vào con người và nơi chốn, lặng lẽ và chân thật.</p>
+          <a data-reveal="up" href="#tac-pham" class="group mt-9 inline-flex min-h-[48px] items-center gap-4 border border-ivory/70 px-7 text-[12px] uppercase tracking-label transition-colors duration-300 hover:bg-ivory hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ivory active:scale-[.98]">
+            Xem tác phẩm
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="hidden justify-end lg:col-span-4 lg:flex">
+          <a href="#tac-pham" class="flex flex-col items-center gap-4 text-xs uppercase tracking-label text-ivory/70 transition-colors duration-300 hover:text-ivory">
+            <span>Cuộn xuống</span>
+            <span class="scroll-line block h-16 w-px bg-ivory/25" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÁC SERIES -->
+  <section id="tac-pham" data-section="gallery-lookbook" class="bg-ink py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+
+      <div class="grid gap-6 border-b border-line pb-12 lg:grid-cols-12">
+        <h2 data-reveal="up" class="font-display text-5xl font-normal leading-[1.05] sm:text-6xl lg:col-span-7 2xl:text-7xl">Các series chọn lọc</h2>
+        <p data-reveal="up" class="max-w-md self-end text-base leading-relaxed text-mute lg:col-span-4 lg:col-start-9">Bốn series, mỗi series là một căn phòng riêng. Nhấn vào ảnh để xem cỡ lớn, dùng phím mũi tên hoặc vuốt để chuyển ảnh.</p>
+      </div>
+
+      <!-- Series 01: ảnh lớn + ảnh nhỏ -->
+      <article id="series-chuyen-nguoi" class="pt-20 lg:pt-28">
+        <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <header data-reveal="up" class="lg:col-span-3">
+            <p class="font-display text-6xl leading-none text-mute/60">01</p>
+            <h3 class="mt-4 font-display text-4xl leading-tight lg:text-5xl">Chuyện người</h3>
+            <dl class="mt-6 grid grid-cols-3 gap-3 border-t border-line pt-5 text-sm lg:grid-cols-1">
+              <div><dt class="text-xs uppercase tracking-label text-mute">Năm</dt><dd class="mt-1">2021-2024</dd></div>
+              <div><dt class="text-xs uppercase tracking-label text-mute">Thể loại</dt><dd class="mt-1">Chân dung tư liệu</dd></div>
+              <div><dt class="text-xs uppercase tracking-label text-mute">Số ảnh</dt><dd class="mt-1">24 ảnh</dd></div>
+            </dl>
+            <p class="mt-6 max-w-sm text-base leading-relaxed text-ivory/75">Những người lạ tôi gặp ở quầy hàng, góc phố, ô cửa bếp. Tôi chờ đến lúc họ quên chiếc máy ảnh để nhìn thấy con người thật.</p>
+          </header>
+          <figure class="lg:col-span-9">
+            <a href="assets/img/series1-bat-doi-xung.jpg" data-lightbox="trien-lam" data-caption="Người đứng giữa hai ô cửa. Chuyện người, 2022" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[3/2]"><img src="assets/img/series1-bat-doi-xung.jpg" alt="Cô gái mặc áo khoác dài đứng tựa bức tường trắng giữa hai ô cửa sổ, ảnh đen trắng" width="1024" height="683" loading="lazy" decoding="async"></div>
+            </a>
+            <figcaption class="mt-4 flex flex-wrap items-baseline justify-between gap-2"><span class="font-display text-lg italic">Người đứng giữa hai ô cửa</span><span class="text-xs uppercase tracking-label text-mute">2022 · Đen trắng</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:mt-20 lg:grid-cols-12 lg:gap-8">
+          <figure class="lg:col-span-3 lg:col-start-2">
+            <a href="assets/img/series1-nguoi-ke-chuyen.jpg" data-lightbox="trien-lam" data-caption="Quầy hàng đêm đông. Chuyện người, 2021" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[2/3]"><img src="assets/img/series1-nguoi-ke-chuyen.jpg" alt="Người phụ nữ đeo khẩu trang đứng sau cửa kính quầy hàng, tay cầm tờ giấy, ảnh đen trắng" width="683" height="1024" loading="lazy" decoding="async"></div>
+            </a>
+            <figcaption class="mt-3"><span class="block font-display text-base italic sm:text-lg">Quầy hàng đêm đông</span><span class="mt-1 block text-xs uppercase tracking-label text-mute">2021</span></figcaption>
+          </figure>
+          <figure class="lg:col-span-3 lg:mt-28">
+            <a href="assets/img/series1-man-tuyn.jpg" data-lightbox="trien-lam" data-caption="Sau lớp lưới. Chuyện người, 2023" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[2/3]"><img src="assets/img/series1-man-tuyn.jpg" alt="Người phụ nữ trong gian bếp nhìn ra qua lớp lưới cửa, phía sau là người đàn ông đang rửa bát" width="683" height="1024" loading="lazy" decoding="async"></div>
+            </a>
+            <figcaption class="mt-3"><span class="block font-display text-base italic sm:text-lg">Sau lớp lưới</span><span class="mt-1 block text-xs uppercase tracking-label text-mute">2023</span></figcaption>
+          </figure>
+          <figure class="col-span-2 lg:col-span-4 lg:col-start-9 lg:self-end">
+            <a href="assets/img/series1-anh-sang-trua.jpg" data-lightbox="trien-lam" data-caption="Đọc báo buổi trưa. Chuyện người, 2024" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[3/2]"><img src="assets/img/series1-anh-sang-trua.jpg" alt="Người phụ nữ lớn tuổi đeo kính đọc báo bên cửa sổ ngập nắng, ảnh đen trắng" width="1024" height="769" loading="lazy" decoding="async" class="!object-top"></div>
+            </a>
+            <figcaption class="mt-3 flex items-baseline justify-between gap-2"><span class="font-display text-lg italic">Đọc báo buổi trưa</span><span class="text-xs uppercase tracking-label text-mute">2024</span></figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Series 02: cặp ảnh dọc -->
+      <article id="series-thoi-trang" class="mt-28 border-t border-line pt-20 lg:mt-40 lg:pt-28">
+        <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <div class="order-2 grid grid-cols-2 gap-4 sm:gap-6 lg:order-1 lg:col-span-8 lg:gap-8">
+            <figure>
+              <a href="assets/img/series2-thoi-trang-1.jpg" data-lightbox="trien-lam" data-caption="Áo choàng màu lá non. Thời trang và Hình khối, 2023" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+                <div data-reveal="fade" class="frame aspect-[2/3]"><img src="assets/img/series2-thoi-trang-1.jpg" alt="Người mẫu nam đội mũ đan, khoác áo choàng xanh nhạt trước bức tường đá" width="680" height="1024" loading="lazy" decoding="async"></div>
+              </a>
+              <figcaption class="mt-3"><span class="block font-display text-base italic sm:text-lg">Áo choàng màu lá non</span><span class="mt-1 block text-xs uppercase tracking-label text-mute">2023 · Biên tập</span></figcaption>
+            </figure>
+            <figure class="mt-16 lg:mt-32">
+              <a href="assets/img/series2-thoi-trang-3.jpg" data-lightbox="trien-lam" data-caption="Chàm và gỗ. Thời trang và Hình khối, 2023" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+                <div data-reveal="fade" class="frame aspect-[2/3]"><img src="assets/img/series2-thoi-trang-3.jpg" alt="Người mẫu nữ tóc xoăn mặc váy chàm đứng cạnh cánh cửa gỗ đỏ dưới nắng" width="684" height="1024" loading="lazy" decoding="async"></div>
+              </a>
+              <figcaption class="mt-3"><span class="block font-display text-base italic sm:text-lg">Chàm và gỗ</span><span class="mt-1 block text-xs uppercase tracking-label text-mute">2023 · Biên tập</span></figcaption>
+            </figure>
+          </div>
+          <div class="order-1 flex flex-col lg:order-2 lg:col-span-3 lg:col-start-10">
+            <header data-reveal="up">
+              <p class="font-display text-6xl leading-none text-mute/60">02</p>
+              <h3 class="mt-4 font-display text-4xl leading-tight lg:text-5xl">Thời trang &amp; Hình khối</h3>
+              <dl class="mt-6 grid grid-cols-3 gap-3 border-t border-line pt-5 text-sm lg:grid-cols-1">
+                <div><dt class="text-xs uppercase tracking-label text-mute">Năm</dt><dd class="mt-1">2023</dd></div>
+                <div><dt class="text-xs uppercase tracking-label text-mute">Thể loại</dt><dd class="mt-1">Biên tập thời trang</dd></div>
+                <div><dt class="text-xs uppercase tracking-label text-mute">Số ảnh</dt><dd class="mt-1">18 ảnh</dd></div>
+              </dl>
+              <p class="mt-6 max-w-sm text-base leading-relaxed text-ivory/75">Trang phục như một kiến trúc mềm: nếp vải, bóng đổ và tư thế được dựng chậm rãi dưới ánh sáng tự nhiên.</p>
+            </header>
+            <figure class="mt-10 hidden w-2/3 lg:mt-auto lg:block">
+              <a href="assets/img/series2-thoi-trang-2.jpg" data-lightbox="trien-lam" data-caption="Mũ đan, chiều hè. Thời trang và Hình khối, 2023" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+                <div data-reveal="fade" class="frame aspect-[2/3]"><img src="assets/img/series2-thoi-trang-2.jpg" alt="Người mẫu đội mũ đan che mặt, áo ba lỗ trắng và quần kẻ sọc, đứng cạnh cầu thang sắt" width="680" height="1024" loading="lazy" decoding="async"></div>
+              </a>
+              <figcaption class="mt-3"><span class="block font-display text-base italic">Mũ đan, chiều hè</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Series 03: ảnh ngang toàn chiều rộng + masonry -->
+    <article id="series-noi-chon" class="mt-28 lg:mt-40">
+      <div class="mx-auto w-full max-w-screen-2xl border-t border-line px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+        <header data-reveal="up" class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-5">
+            <p class="font-display text-6xl leading-none text-mute/60">03</p>
+            <h3 class="mt-4 font-display text-4xl leading-tight lg:text-5xl">Nơi chốn &amp; Ánh sáng</h3>
+          </div>
+          <dl class="grid grid-cols-3 gap-3 text-sm lg:col-span-4">
+            <div><dt class="text-xs uppercase tracking-label text-mute">Năm</dt><dd class="mt-1">2019-2025</dd></div>
+            <div><dt class="text-xs uppercase tracking-label text-mute">Thể loại</dt><dd class="mt-1">Phong cảnh</dd></div>
+            <div><dt class="text-xs uppercase tracking-label text-mute">Số ảnh</dt><dd class="mt-1">32 ảnh</dd></div>
+          </dl>
+          <p class="max-w-sm text-base leading-relaxed text-ivory/75 lg:col-span-3">Tôi quay lại một nơi nhiều lần, ở những giờ khác nhau, cho đến khi ánh sáng nói điều mà mắt thường bỏ qua.</p>
+        </header>
+      </div>
+      <figure class="mt-12 lg:mt-16">
+        <a href="assets/img/series3-ho-binh-minh.jpg" data-lightbox="trien-lam" data-caption="Sương trên hồ lúc rạng đông. Nơi chốn và Ánh sáng, 2024" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-[-4px] focus-visible:outline-ivory">
+          <div data-reveal="fade" class="frame aspect-[4/3] sm:aspect-[21/9]"><img src="assets/img/series3-ho-binh-minh.jpg" alt="Mặt trời mọc sau rặng đồi, sương bốc lên trên mặt hồ nhuộm vàng" width="6144" height="4096" loading="lazy" decoding="async"></div>
+        </a>
+        <figcaption class="mx-auto mt-4 flex w-full max-w-screen-2xl items-baseline justify-between gap-2 px-4 sm:px-6 lg:px-10 2xl:px-16"><span class="font-display text-lg italic">Sương trên hồ lúc rạng đông</span><span class="text-xs uppercase tracking-label text-mute">2024 · Màu</span></figcaption>
+      </figure>
+      <div class="mx-auto mt-12 w-full max-w-screen-2xl px-4 sm:px-6 lg:mt-16 lg:px-10 2xl:px-16">
+        <div class="columns-1 gap-6 sm:columns-2 lg:columns-3 lg:gap-8 [&>figure]:mb-8 [&>figure]:break-inside-avoid">
+          <figure>
+            <a href="assets/img/series3-dong-suong.webp" data-lightbox="trien-lam" data-caption="Những lớp núi. Nơi chốn và Ánh sáng, 2021" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[3/2]"><img src="assets/img/series3-dong-suong.webp" alt="Những lớp núi xanh chồng lên nhau trong sương, chân trời cam lúc hoàng hôn" width="5000" height="3333" loading="lazy" decoding="async"></div>
+            </a>
+            <figcaption class="mt-3 flex items-baseline justify-between gap-2"><span class="font-display text-lg italic">Những lớp núi</span><span class="text-xs uppercase tracking-label text-mute">2021</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/series3-vinh-hep.jpg" data-lightbox="trien-lam" data-caption="Đỉnh núi trong mây. Nơi chốn và Ánh sáng, 2019" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[2/3]"><img src="assets/img/series3-vinh-hep.jpg" alt="Đỉnh núi đá sắc nhọn nhô lên khỏi biển mây, ảnh đen trắng" width="683" height="1024" loading="lazy" decoding="async"></div>
+            </a>
+            <figcaption class="mt-3 flex items-baseline justify-between gap-2"><span class="font-display text-lg italic">Đỉnh núi trong mây</span><span class="text-xs uppercase tracking-label text-mute">2019</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/series3-tam-coc.jpg" data-lightbox="trien-lam" data-caption="Mặt trời lặn ở Tam Cốc. Nơi chốn và Ánh sáng, 2025" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[3/2]"><img src="assets/img/series3-tam-coc.jpg" alt="Mặt trời đỏ lặn giữa những dãy núi đá vôi ở Tam Cốc, Ninh Bình" width="1024" height="683" loading="lazy" decoding="async"></div>
+            </a>
+            <figcaption class="mt-3 flex items-baseline justify-between gap-2"><span class="font-display text-lg italic">Mặt trời lặn ở Tam Cốc</span><span class="text-xs uppercase tracking-label text-mute">2025</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- Series 04: lưới bất đối xứng -->
+    <article id="series-thuong-nhat" class="mx-auto mt-20 w-full max-w-screen-2xl px-4 sm:px-6 lg:mt-32 lg:px-10 2xl:px-16">
+      <div class="border-t border-line pt-20 lg:pt-28">
+        <div class="grid gap-6 lg:grid-cols-12 lg:gap-8">
+          <div class="lg:col-span-5 lg:row-span-2">
+          <figure>
+            <a href="assets/img/series4-hem-dem.jpg" data-lightbox="trien-lam" data-caption="Quán nhỏ cuối hẻm. Khoảnh khắc thường nhật, 2023" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[4/5]"><img src="assets/img/series4-hem-dem.jpg" alt="Quán nhỏ sáng đèn vàng trong con hẻm đêm, một người đàn ông bước ngang qua" width="819" height="1024" loading="lazy" decoding="async"></div>
+            </a>
+            <figcaption class="mt-3 flex items-baseline justify-between gap-2"><span class="font-display text-lg italic">Quán nhỏ cuối hẻm</span><span class="text-xs uppercase tracking-label text-mute">2023</span></figcaption>
+          </figure>
+          <figure class="mt-10 sm:ml-auto sm:w-3/4 lg:mt-16">
+            <a href="assets/img/series4-nhip-pho.jpg" data-lightbox="trien-lam" data-caption="Chợ hoa sáng Chủ nhật. Khoảnh khắc thường nhật, 2024" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+              <div data-reveal="fade" class="frame aspect-[4/3]"><img src="assets/img/series4-nhip-pho.jpg" alt="Người bán hoa bó những cành hướng dương dưới tán cây trong phiên chợ sáng" width="1024" height="683" loading="lazy" decoding="async"></div>
+            </a>
+            <figcaption class="mt-3 flex items-baseline justify-between gap-2"><span class="font-display text-lg italic">Chợ hoa sáng Chủ nhật</span><span class="text-xs uppercase tracking-label text-mute">2024</span></figcaption>
+          </figure>
+          </div>
+          <header data-reveal="up" class="lg:col-span-6 lg:col-start-7">
+            <p class="font-display text-6xl leading-none text-mute/60">04</p>
+            <h3 class="mt-4 font-display text-4xl leading-tight lg:text-5xl">Khoảnh khắc thường nhật</h3>
+            <dl class="mt-6 grid max-w-md grid-cols-3 gap-3 border-t border-line pt-5 text-sm">
+              <div><dt class="text-xs uppercase tracking-label text-mute">Năm</dt><dd class="mt-1">2020 đến nay</dd></div>
+              <div><dt class="text-xs uppercase tracking-label text-mute">Thể loại</dt><dd class="mt-1">Ảnh đường phố</dd></div>
+              <div><dt class="text-xs uppercase tracking-label text-mute">Số ảnh</dt><dd class="mt-1">40 ảnh</dd></div>
+            </dl>
+            <p class="mt-6 max-w-md text-base leading-relaxed text-ivory/75">Những điều nhỏ xảy ra mỗi ngày: một ô cửa sáng đèn, chiếc xe dựng tạm bên tường, một ánh nhìn ngang qua.</p>
+          </header>
+          <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:col-span-7 lg:grid-cols-7 lg:gap-8">
+            <figure class="col-span-2 lg:col-span-4">
+              <a href="assets/img/series4-pho-yen.jpg" data-lightbox="trien-lam" data-caption="Phố yên sau mười giờ. Khoảnh khắc thường nhật, 2022" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+                <div data-reveal="fade" class="frame aspect-[4/3]"><img src="assets/img/series4-pho-yen.jpg" alt="Góc phố đêm với ngôi nhà gỗ cổ, ánh đèn tỏa thành tia và chiếc xe đạp dựng bên tường" width="1024" height="768" loading="lazy" decoding="async"></div>
+              </a>
+              <figcaption class="mt-3"><span class="block font-display text-base italic sm:text-lg">Phố yên sau mười giờ</span><span class="mt-1 block text-xs uppercase tracking-label text-mute">2022</span></figcaption>
+            </figure>
+            <figure class="col-span-2 ml-auto w-3/4 lg:col-span-3 lg:ml-0 lg:mt-24 lg:w-auto">
+              <a href="assets/img/series4-con-ngo.jpg" data-lightbox="trien-lam" data-caption="Ánh nhìn trong ngõ. Khoảnh khắc thường nhật, 2021" class="work block focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+                <div data-reveal="fade" class="frame aspect-[3/4]"><img src="assets/img/series4-con-ngo.jpg" alt="Người phụ nữ trùm khăn ngoái nhìn trong con ngõ có tường vàng và chiếc xe máy dựng" width="738" height="1024" loading="lazy" decoding="async"></div>
+              </a>
+              <figcaption class="mt-3"><span class="block font-display text-base italic sm:text-lg">Ánh nhìn trong ngõ</span><span class="mt-1 block text-xs uppercase tracking-label text-mute">2021</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- PHOTOGRAPHER STATEMENT (nền sáng) -->
+  <section id="gioi-thieu" data-section="story-letter" class="bg-ivory py-24 text-ink lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+      <figure class="max-w-xs sm:max-w-sm lg:col-span-3 lg:col-start-2 lg:max-w-none lg:pt-4">
+        <div data-reveal="fade" class="aspect-[4/5] overflow-hidden bg-[#E4E0D6]">
+          <img src="assets/img/statement-chan-dung.jpg" alt="Nhiếp ảnh gia ngồi trên mỏm đá bên hồ, đưa máy ảnh lên ngắm" width="3887" height="5830" loading="lazy" decoding="async" class="h-full w-full object-cover object-[center_45%]">
+        </div>
+        <figcaption class="mt-3 text-xs uppercase tracking-label text-stone">Chân dung tác giả</figcaption>
+      </figure>
+      <div class="lg:col-span-6 lg:col-start-6">
+        <h2 data-reveal="up" class="font-display text-5xl font-normal italic leading-[1.1] pb-1 sm:text-6xl 2xl:text-7xl">Nhiếp ảnh là một cách để chú tâm.</h2>
+        <div data-reveal="up" class="mt-10 max-w-[62ch] space-y-5 text-[17px] leading-[1.75] text-ink/85">
+          <p class="first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.8]">Tôi là LUMIÈRE, nhiếp ảnh gia sống và làm việc tại Hà Nội. Mười năm qua, tôi chụp chân dung, thời trang và ảnh tư liệu cho tạp chí, thương hiệu và những người muốn giữ lại một khoảnh khắc thật.</p>
+          <p>Tôi tin một bức ảnh tốt bắt đầu từ sự chú tâm: lắng nghe người trước ống kính, chờ ánh sáng đổi hướng, để không gian tự kể phần của nó. Tôi ưu tiên ánh sáng tự nhiên, bố cục tiết chế và màu sắc trung thực.</p>
+          <p>Cảm hứng của tôi đến từ điện ảnh châu Á, hội họa cổ điển và những buổi sáng sớm ở chợ. Với mỗi dự án, tôi dành thời gian trò chuyện trước khi bấm máy, vì khi con người thấy thoải mái, ánh sáng mới thật sự có ý nghĩa.</p>
+        </div>
+        <p class="mt-10 font-display text-2xl italic">LUMIÈRE, Hà Nội</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KINH NGHIỆM & CỘNG TÁC -->
+  <section id="kinh-nghiem" data-section="timeline" class="bg-charcoal py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-5xl font-normal leading-[1.05] sm:text-6xl">Kinh nghiệm &amp; cộng tác</h2>
+          <p class="mt-6 inline-block border border-mute/50 px-3 py-2 text-[12px] text-mute">Nội dung minh họa, sẽ thay bằng dữ liệu thật của tác giả</p>
+        </div>
+      </div>
+      <div class="lg:col-span-7 lg:col-start-6">
+        <ol data-reveal="up" class="relative border-l border-line">
+          <li class="relative pb-12 pl-8 sm:pl-12">
+            <span class="absolute -left-px top-2 h-8 w-px bg-ivory" aria-hidden="true"></span>
+            <p class="font-display text-2xl text-mute">2024 đến nay</p>
+            <h3 class="mt-2 text-lg font-medium">Nhiếp ảnh gia tự do</h3>
+            <p class="mt-2 max-w-[60ch] leading-relaxed text-ivory/70">Chân dung cá nhân, chiến dịch thời trang và ảnh biên tập cho các ấn phẩm in và số.</p>
+          </li>
+          <li class="relative pb-12 pl-8 sm:pl-12">
+            <p class="font-display text-2xl text-mute">2020-2024</p>
+            <h3 class="mt-2 text-lg font-medium">Phóng viên ảnh, tạp chí đời sống</h3>
+            <p class="mt-2 max-w-[60ch] leading-relaxed text-ivory/70">Thực hiện phóng sự ảnh về con người và đô thị, chụp chân dung nhân vật cho chuyên mục hằng tháng.</p>
+          </li>
+          <li class="relative pb-12 pl-8 sm:pl-12">
+            <p class="font-display text-2xl text-mute">2018-2020</p>
+            <h3 class="mt-2 text-lg font-medium">Trợ lý ánh sáng, studio quảng cáo</h3>
+            <p class="mt-2 max-w-[60ch] leading-relaxed text-ivory/70">Dựng ánh sáng cho các buổi chụp sản phẩm và thời trang, học cách làm việc cùng ê-kíp lớn.</p>
+          </li>
+        </ol>
+
+        <div class="mt-6 grid gap-10 border-t border-line pt-12 sm:grid-cols-2 xl:grid-cols-3">
+          <div data-reveal="up">
+            <h3 class="text-xs uppercase tracking-label text-mute">Triển lãm</h3>
+            <ul class="mt-4 space-y-3 leading-relaxed">
+              <li><span class="font-display text-xl italic">Nơi chốn &amp; Ánh sáng</span><br><span class="text-sm text-ivory/65">Triển lãm cá nhân, Hà Nội, 2025</span></li>
+              <li><span class="font-display text-xl italic">Người thành phố</span><br><span class="text-sm text-ivory/65">Triển lãm nhóm, TP. Hồ Chí Minh, 2022</span></li>
+            </ul>
+          </div>
+          <div data-reveal="up">
+            <h3 class="text-xs uppercase tracking-label text-mute">Đã cộng tác cùng</h3>
+            <ul class="mt-4 space-y-2 text-sm leading-relaxed text-ivory/80">
+              <li>Tạp chí thời trang in và số</li>
+              <li>Thương hiệu may mặc trong nước</li>
+              <li>Đơn vị tổ chức sự kiện văn hóa</li>
+              <li>Tổ chức phi lợi nhuận về giáo dục</li>
+            </ul>
+          </div>
+          <div data-reveal="up">
+            <h3 class="text-xs uppercase tracking-label text-mute">Giải thưởng</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-relaxed text-ivory/80">
+              <li>Vào vòng chung khảo một giải ảnh tư liệu khu vực, 2023</li>
+              <li>Ảnh chọn đăng trong tuyển tập ảnh đường phố, 2021</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KỸ NĂNG -->
+  <section id="ky-nang" data-section="features-numbered" class="bg-ink py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-5xl font-normal leading-[1.05] sm:text-6xl">Kỹ năng</h2>
+      <ol data-reveal="up" class="mt-14 grid gap-x-16 md:grid-cols-2">
+        <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line py-7 transition-colors duration-300 hover:border-ivory/40 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl leading-none text-mute/70 sm:text-5xl">01</span>
+          <div><h3 class="font-display text-2xl sm:text-3xl">Chụp chân dung</h3><p class="mt-2 max-w-[48ch] leading-relaxed text-ivory/70">Dẫn dắt người được chụp thả lỏng, tìm góc ánh sáng hợp với gương mặt và câu chuyện riêng.</p></div>
+        </li>
+        <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line py-7 transition-colors duration-300 hover:border-ivory/40 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl leading-none text-mute/70 sm:text-5xl">02</span>
+          <div><h3 class="font-display text-2xl sm:text-3xl">Ảnh thời trang</h3><p class="mt-2 max-w-[48ch] leading-relaxed text-ivory/70">Lên ý tưởng, chọn bối cảnh và phối hợp cùng stylist, trang điểm, người mẫu.</p></div>
+        </li>
+        <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line py-7 transition-colors duration-300 hover:border-ivory/40 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl leading-none text-mute/70 sm:text-5xl">03</span>
+          <div><h3 class="font-display text-2xl sm:text-3xl">Ảnh tư liệu</h3><p class="mt-2 max-w-[48ch] leading-relaxed text-ivory/70">Quan sát dài hơi, kể chuyện bằng chuỗi ảnh, tôn trọng nhân vật và bối cảnh.</p></div>
+        </li>
+        <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line py-7 transition-colors duration-300 hover:border-ivory/40 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl leading-none text-mute/70 sm:text-5xl">04</span>
+          <div><h3 class="font-display text-2xl sm:text-3xl">Ánh sáng</h3><p class="mt-2 max-w-[48ch] leading-relaxed text-ivory/70">Làm chủ ánh sáng tự nhiên và đèn studio, từ một nguồn sáng đơn đến sơ đồ nhiều đèn.</p></div>
+        </li>
+        <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line py-7 transition-colors duration-300 hover:border-ivory/40 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl leading-none text-mute/70 sm:text-5xl">05</span>
+          <div><h3 class="font-display text-2xl sm:text-3xl">Chỉnh màu</h3><p class="mt-2 max-w-[48ch] leading-relaxed text-ivory/70">Xây dựng bảng màu nhất quán cho cả series, giữ tông da tự nhiên.</p></div>
+        </li>
+        <li class="group grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line py-7 transition-colors duration-300 hover:border-ivory/40 sm:grid-cols-[5rem_1fr]">
+          <span class="font-display text-4xl leading-none text-mute/70 sm:text-5xl">06</span>
+          <div><h3 class="font-display text-2xl sm:text-3xl">Hậu kỳ ảnh</h3><p class="mt-2 max-w-[48ch] leading-relaxed text-ivory/70">Chọn ảnh, retouch tiết chế và chuẩn bị tệp cho in ấn lẫn hiển thị số.</p></div>
+        </li>
+      </ol>
+      <p class="mt-4 border-t border-line pt-7 text-sm leading-relaxed text-mute">Thiết bị: máy ảnh full-frame, ba ống kính một tiêu cự, đèn flash studio và bộ tản sáng di động.</p>
+    </div>
+  </section>
+
+  <!-- HỒ SƠ (CV) -->
+  <section id="ho-so" data-section="accordion-cv" class="bg-charcoal py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <h2 data-reveal="up" class="font-display text-5xl font-normal leading-[1.05] sm:text-6xl">Hồ sơ năng lực</h2>
+        <p class="mt-6 max-w-sm leading-relaxed text-ivory/70">Tóm tắt quá trình học tập và làm việc. Nội dung đang là bản minh họa.</p>
+        <button type="button" disabled aria-describedby="cv-note" class="mt-8 inline-flex min-h-[48px] cursor-not-allowed items-center gap-3 border border-line px-6 text-[12px] uppercase tracking-label text-mute">
+          Tải CV (PDF)
+        </button>
+        <p id="cv-note" class="mt-3 text-sm text-mute">Tệp CV đang được cập nhật, nút sẽ hoạt động khi có tệp thật.</p>
+      </div>
+      <div data-accordion class="border-t border-line lg:col-span-7 lg:col-start-6">
+        <div data-acc-item data-open class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl sm:text-3xl">Học vấn <span data-acc-icon class="text-2xl text-mute" aria-hidden="true">+</span></button>
+          <div data-acc-panel><div class="grid gap-4 pb-8 text-ivory/75 sm:grid-cols-[9rem_1fr]">
+            <p class="text-sm text-mute">2013-2017</p><p>Cử nhân Mỹ thuật ứng dụng, chuyên ngành Nhiếp ảnh.</p>
+            <p class="text-sm text-mute">2019</p><p>Khóa học ngắn hạn về ánh sáng chân dung và thời trang.</p>
+          </div></div>
+        </div>
+        <div data-acc-item class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl sm:text-3xl">Kinh nghiệm <span data-acc-icon class="text-2xl text-mute" aria-hidden="true">+</span></button>
+          <div data-acc-panel><div class="grid gap-4 pb-8 text-ivory/75 sm:grid-cols-[9rem_1fr]">
+            <p class="text-sm text-mute">2024 đến nay</p><p>Nhiếp ảnh gia tự do: chân dung, thời trang, ảnh biên tập.</p>
+            <p class="text-sm text-mute">2020-2024</p><p>Phóng viên ảnh tại một tạp chí đời sống.</p>
+            <p class="text-sm text-mute">2018-2020</p><p>Trợ lý ánh sáng tại studio quảng cáo.</p>
+          </div></div>
+        </div>
+        <div data-acc-item class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl sm:text-3xl">Workshop &amp; chương trình chuyên môn <span data-acc-icon class="text-2xl text-mute" aria-hidden="true">+</span></button>
+          <div data-acc-panel><div class="grid gap-4 pb-8 text-ivory/75 sm:grid-cols-[9rem_1fr]">
+            <p class="text-sm text-mute">2023</p><p>Workshop kể chuyện bằng chuỗi ảnh tư liệu.</p>
+            <p class="text-sm text-mute">2022</p><p>Diễn giả khách mời buổi chia sẻ về ảnh chân dung ánh sáng tự nhiên.</p>
+          </div></div>
+        </div>
+        <div data-acc-item class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl sm:text-3xl">Thành tích <span data-acc-icon class="text-2xl text-mute" aria-hidden="true">+</span></button>
+          <div data-acc-panel><div class="grid gap-4 pb-8 text-ivory/75 sm:grid-cols-[9rem_1fr]">
+            <p class="text-sm text-mute">2025</p><p>Triển lãm cá nhân đầu tiên "Nơi chốn &amp; Ánh sáng".</p>
+            <p class="text-sm text-mute">2023</p><p>Vào vòng chung khảo một giải ảnh tư liệu khu vực.</p>
+          </div></div>
+        </div>
+        <div data-acc-item class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-2xl sm:text-3xl">Dự án nổi bật <span data-acc-icon class="text-2xl text-mute" aria-hidden="true">+</span></button>
+          <div data-acc-panel><div class="grid gap-4 pb-8 text-ivory/75 sm:grid-cols-[9rem_1fr]">
+            <p class="text-sm text-mute">Chuyện người</p><p>Chuỗi chân dung tư liệu về người lao động đô thị, thực hiện trong ba năm.</p>
+            <p class="text-sm text-mute">Thời trang</p><p>Lookbook mùa hè cho một thương hiệu may mặc trong nước.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section id="lien-he" data-section="cta-type" class="bg-ink pb-20 pt-24 lg:pb-28 lg:pt-40">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-[16ch] font-display text-[clamp(2.75rem,7vw,7rem)] font-normal leading-[1.02]">Có một câu chuyện cần kể bằng <em class="italic">ánh sáng</em>?</h2>
+      <div data-reveal="up" class="mt-10 flex flex-wrap items-center gap-6">
+        <button type="button" data-modal-open="yeu-cau" class="group inline-flex min-h-[52px] items-center gap-4 bg-ivory px-8 text-[12px] font-medium uppercase tracking-label text-ink transition-colors duration-300 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ivory active:scale-[.98]">
+          Gửi yêu cầu dự án
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+        </button>
+        <p class="text-sm text-mute">Thường phản hồi trong 2 ngày làm việc.</p>
+      </div>
+
+      <dl class="mt-20 grid gap-10 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <dt class="text-xs uppercase tracking-label text-mute">Email</dt>
+          <dd class="mt-3 flex flex-wrap items-center gap-4">
+            <a href="mailto:hello@lumiere.vn" class="font-display text-2xl underline decoration-line underline-offset-8 transition-colors duration-300 hover:decoration-ivory sm:text-3xl">hello@lumiere.vn</a>
+            <button type="button" data-copy="hello@lumiere.vn" class="min-h-[44px] text-xs uppercase tracking-label text-mute transition-colors duration-300 hover:text-ivory">Sao chép</button>
+          </dd>
+        </div>
+        <div class="lg:col-span-4">
+          <dt class="text-xs uppercase tracking-label text-mute">Instagram</dt>
+          <dd class="mt-3 flex flex-wrap items-center gap-4">
+            <span class="font-display text-2xl sm:text-3xl">@lumiere.frames</span>
+            <button type="button" data-copy="@lumiere.frames" class="min-h-[44px] text-xs uppercase tracking-label text-mute transition-colors duration-300 hover:text-ivory">Sao chép</button>
+          </dd>
+        </div>
+        <div class="lg:col-span-4">
+          <dt class="text-xs uppercase tracking-label text-mute">Địa điểm làm việc</dt>
+          <dd class="mt-3 font-display text-2xl sm:text-3xl">Hà Nội</dd>
+          <dd class="mt-1 text-sm text-ivory/70">Nhận dự án trong và ngoài nước.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<!-- Modal: yêu cầu dự án (bản demo) -->
+<dialog id="yeu-cau" aria-labelledby="yeu-cau-title" class="text-ivory">
+  <div class="p-6 sm:p-10">
+    <div class="flex items-start justify-between gap-6">
+      <h2 id="yeu-cau-title" class="font-display text-3xl sm:text-4xl">Yêu cầu dự án</h2>
+      <button type="button" data-modal-close aria-label="Đóng" class="-mr-2 -mt-2 flex h-11 w-11 items-center justify-center text-2xl text-ivory/80 hover:text-ivory">×</button>
+    </div>
+    <form data-form="yeu-cau-du-an" class="mt-8 grid gap-5" novalidate>
+      <div class="grid gap-2">
+        <label for="f-ten" class="text-[12px] uppercase tracking-label text-ivory/80">Họ và tên</label>
+        <input id="f-ten" name="ten" type="text" required minlength="2" autocomplete="name" class="min-h-[48px] border border-line bg-ink px-4 text-ivory placeholder:text-mute focus:border-ivory focus:outline-none">
+      </div>
+      <div class="grid gap-2">
+        <label for="f-email" class="text-[12px] uppercase tracking-label text-ivory/80">Email</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email" class="min-h-[48px] border border-line bg-ink px-4 text-ivory placeholder:text-mute focus:border-ivory focus:outline-none">
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div class="grid gap-2">
+          <label for="f-loai" class="text-[12px] uppercase tracking-label text-ivory/80">Loại dự án</label>
+          <select id="f-loai" name="loai" required class="min-h-[48px] border border-line bg-ink px-4 text-ivory focus:border-ivory focus:outline-none">
+            <option value="">Chọn loại dự án</option>
+            <option>Chân dung cá nhân</option>
+            <option>Thời trang, thương hiệu</option>
+            <option>Biên tập tạp chí</option>
+            <option>Sự kiện</option>
+            <option>Hợp tác sáng tạo</option>
+            <option>Tuyển dụng</option>
+          </select>
+        </div>
+        <div class="grid gap-2">
+          <label for="f-thoigian" class="text-[12px] uppercase tracking-label text-ivory/80">Thời gian dự kiến</label>
+          <input id="f-thoigian" name="thoigian" type="text" placeholder="Ví dụ: tháng 12/2026" class="min-h-[48px] border border-line bg-ink px-4 text-ivory placeholder:text-mute focus:border-ivory focus:outline-none">
+        </div>
+      </div>
+      <div class="grid gap-2">
+        <label for="f-mota" class="text-[12px] uppercase tracking-label text-ivory/80">Mô tả ngắn</label>
+        <textarea id="f-mota" name="mota" rows="4" required minlength="10" class="border border-line bg-ink px-4 py-3 text-ivory placeholder:text-mute focus:border-ivory focus:outline-none"></textarea>
+      </div>
+      <div class="mt-2 flex flex-wrap items-center gap-4">
+        <button type="submit" class="inline-flex min-h-[48px] items-center bg-ivory px-7 text-[12px] font-medium uppercase tracking-label text-ink transition-colors duration-300 hover:bg-white active:scale-[.98]">Gửi yêu cầu</button>
+        <p class="text-sm text-mute">Bản demo: biểu mẫu chưa gửi đi.</p>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<!-- @partial footer -->
+<footer id="footer" class="border-t border-line bg-ink text-ivory">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-12 md:items-end lg:px-10 2xl:px-16">
+    <div class="md:col-span-4">
+      <a aria-current="page" href="index.html" class="font-display text-3xl tracking-[0.18em]">LUMIÈRE</a>
+      <p class="mt-2 text-sm text-mute">Ánh sáng kể chuyện con người và nơi chốn.</p>
+    </div>
+    <nav aria-label="Liên kết cuối trang" class="md:col-span-5">
+      <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] uppercase tracking-label text-ivory/80">
+        <li><a href="#tac-pham" class="transition-colors duration-300 hover:text-ivory">Tác phẩm</a></li>
+        <li><a href="#gioi-thieu" class="transition-colors duration-300 hover:text-ivory">Giới thiệu</a></li>
+        <li><a href="#kinh-nghiem" class="transition-colors duration-300 hover:text-ivory">Kinh nghiệm</a></li>
+        <li><a href="#ho-so" class="transition-colors duration-300 hover:text-ivory">Hồ sơ</a></li>
+        <li><a href="#lien-he" class="transition-colors duration-300 hover:text-ivory">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="text-sm text-mute md:col-span-3 md:text-right">
+      <a href="mailto:hello@lumiere.vn" class="text-ivory/90 underline decoration-line underline-offset-4 transition-colors duration-300 hover:decoration-ivory">hello@lumiere.vn</a>
+      <p class="mt-2">© 2026 LUMIÈRE. Bảo lưu mọi quyền.</p>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

@@ -1,0 +1,120 @@
+{
+  "brand": "MONOCHROME GENTLEMEN",
+  "language": "vi",
+  "preset": "minimal",
+  "motionLevel": 1,
+  "visualIdea": "Lưới Swiss 12 cột lộ ra bằng đường kẻ mảnh và số thứ tự lớn 01 02 03; mọi ảnh xử lý đen trắng, nhịp nền off-white xen một vài dải đen có chủ đích",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Ít hơn, nhưng tốt hơn. Cắt tóc nam chính xác",
+    "description": "Giao diện barber studio tối giản đen trắng theo phong cách Swiss, song ngữ Việt – Anh."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Truyền tải tinh thần thương hiệu, giới thiệu kiểu tóc chủ đạo, triết lý, portfolio và đội ngũ, dẫn sang các trang con và CTA đặt lịch",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Chữ 45% trái, chân dung 55% phải" },
+        { "id": "statement", "catalog": "story", "variant": "quote-full", "source": "ba", "note": "Nền đen, số 01 lớn" },
+        { "id": "signature", "catalog": "features", "variant": "teaser-row", "source": "ba", "note": "3 kiểu tóc, link sang portfolio" },
+        { "id": "philosophy", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Ảnh trái + danh sách đánh số" },
+        { "id": "work", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "5 ảnh, 1 ảnh lớn, link VIEW ALL WORK" },
+        { "id": "barbers", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "3 barber, link sang studio" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Nền đen, nút trắng" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "man portrait black and white", "file": "https://images.unsplash.com/photo-1768742466927-42153b867e8b?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-classic", "query": "men haircut portrait", "file": "https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-fade", "query": "fade haircut", "file": "https://images.unsplash.com/photo-1599834562135-b6fc90e642ca?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-textured", "query": "men haircut", "file": "https://images.unsplash.com/photo-1568339434343-2a640a1a9946?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "philosophy", "query": "barber thinning shears comb", "file": "https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "work-1", "query": "man profile beard", "file": "https://images.unsplash.com/photo-1630827020718-3433092696e7?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "work-2", "query": "man white collared shirt", "file": "https://images.unsplash.com/photo-1618049049816-43a00d5b0c3d?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "work-3", "query": "man sharp collar", "file": "https://images.unsplash.com/photo-1764592358977-a181a6e71af4?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "work-4", "query": "man portrait black and white", "file": "https://images.unsplash.com/photo-1587397845856-e6cf49176c70?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "barber-minh-anh", "query": "man portrait grayscale", "file": "https://images.unsplash.com/photo-1558730234-d8b2281b0d00?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "barber-quang-minh", "query": "man portrait grayscale", "file": "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "barber-daniel-tran", "query": "man portrait grayscale", "file": "https://images.unsplash.com/photo-1567186937675-a5131c8a89ea?w=900&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ & Bảng giá",
+      "purpose": "Trình bày menu dịch vụ, thời lượng, giá tham khảo và cách làm việc; dẫn tới đặt lịch (demo)",
+      "sections": [
+        { "id": "services-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Hai cột, ảnh barber đang cắt" },
+        { "id": "menu", "catalog": "pricing", "variant": "features-numbered", "source": "ba", "note": "Bảng giá dạng danh sách Swiss, không thẻ" },
+        { "id": "approach", "catalog": "process", "variant": "features-bento", "source": "ba", "note": "3 yếu tố, mỗi yếu tố 1 ảnh" },
+        { "id": "booking", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Nền xám nhạt" }
+      ],
+      "images": [
+        { "slot": "services-hero", "query": "barber cutting hair", "file": "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "approach-structure", "query": "close up cutting hair", "file": "https://images.unsplash.com/photo-1635273051839-003bf06a8751?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "approach-proportion", "query": "barber comb styling", "file": "https://images.unsplash.com/photo-1761931403667-a6753db21f32?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "approach-finishing", "query": "barber straight razor", "file": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1000&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/portfolio.html",
+      "title": "Bộ sưu tập tóc",
+      "purpose": "Bộ sưu tập kiểu tóc có bộ lọc theo nhóm và lightbox xem chi tiết",
+      "sections": [
+        { "id": "portfolio-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh chân dung lớn + nhãn nhỏ" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "Bộ lọc 5 nhóm, 10 ảnh, lightbox" },
+        { "id": "portfolio-cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Nền đen, dẫn tới đặt lịch" }
+      ],
+      "images": [
+        { "slot": "portfolio-hero", "query": "young man black and white", "file": "https://images.unsplash.com/photo-1578390432942-d323db577792?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "classic-side-part", "query": "man portrait black long sleeve", "file": "https://images.unsplash.com/photo-1598198414976-ddb788ec80c1?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "skin-fade", "query": "fade haircut back of head", "file": "https://images.unsplash.com/photo-1772442088712-df1780cbb709?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "fade-at-work", "query": "barber gloves cutting hair", "file": "https://images.unsplash.com/photo-1783908688260-0c47404926f3?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "textured-crop", "query": "grayscale man face", "file": "https://images.unsplash.com/photo-1618566105831-d604c45a7316?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "slick-back", "query": "grayscale man face", "file": "https://images.unsplash.com/photo-1617746652908-91e66c07499a?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "buzz-cut", "query": "man crew neck portrait", "file": "https://images.unsplash.com/photo-1583674392771-2abf6be75965?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "beard-1", "query": "grayscale beard scissors", "file": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "beard-2", "query": "barber trimming beard", "file": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "barber-at-work", "query": "barber scissors cutting", "file": "https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "texture-close-up", "query": "man haircut barber close", "file": "https://images.unsplash.com/photo-1635273051937-a0ddef9573b6?w=1000&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/studio.html",
+      "title": "The Studio",
+      "purpose": "Giới thiệu không gian, triết lý, đội ngũ barber và thông tin ghé thăm (dữ liệu mẫu)",
+      "sections": [
+        { "id": "studio-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh nội thất rộng" },
+        { "id": "studio-philosophy", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Hai cột chữ + ảnh" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "3 hồ sơ mẫu" },
+        { "id": "inside", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Lưới ảnh không gian + lightbox" },
+        { "id": "visit", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Dữ liệu mẫu, có nhãn rõ ràng" }
+      ],
+      "images": [
+        { "slot": "studio-hero", "query": "barbershop interior chairs mirrors", "file": "https://images.unsplash.com/photo-1781455793310-8427c96454c7?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-philosophy", "query": "barber cutting hair", "file": "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "team-minh-anh", "query": "man portrait grayscale", "file": "https://images.unsplash.com/photo-1558730234-d8b2281b0d00?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "team-quang-minh", "query": "man portrait grayscale", "file": "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "team-daniel-tran", "query": "man portrait grayscale", "file": "https://images.unsplash.com/photo-1567186937675-a5131c8a89ea?w=900&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-sunlight-chair", "query": "vintage barber chair sunlight", "file": "https://images.unsplash.com/photo-1775494165568-42c0fbb4c782?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-mirror", "query": "barbershop mirror", "file": "https://images.unsplash.com/photo-1754294437661-129b86f868ea?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-tools", "query": "scissors and comb", "file": "https://images.unsplash.com/photo-1596362601603-b74f6ef166e4?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-clippers", "query": "barber tools clippers", "file": "https://images.unsplash.com/photo-1761931403807-f33fc582b1f5?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-waiting", "query": "barbershop couch magazines", "file": "https://images.unsplash.com/photo-1781925856343-c97d0d44f94c?w=1000&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-architecture", "query": "row of barber chairs sunlit", "file": "https://images.unsplash.com/photo-1792735207211-a96ca7e6ea77?w=1200&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng đúng 4 trang theo yêu cầu BA (Home, Services & Pricing, Hair Portfolio, The Studio); không thêm trang Contact riêng — thông tin ghé thăm nằm cuối trang The Studio",
+    "BA yêu cầu song ngữ VI / EN (ghi đè dòng 'không tạo bộ chuyển ngôn ngữ' của brief): tiếng Việt là nội dung gốc trong HTML, bản tiếng Anh tập trung trong assets/js/i18n.js, chuyển bằng site.js, lưu localStorage",
+    "Dùng bảng màu đơn sắc của BA thay cho bảng màu preset (bỏ màu nhấn xanh của preset Minimalist)",
+    "Mid Gray #858585 chỉ dùng cho số lớn / chữ trên nền đen để đạt tương phản WCAG AA; nhãn nhỏ trên nền sáng dùng Graphite #333333",
+    "Công cụ tìm ảnh (openverse) quá thời gian chờ → toàn bộ ảnh dùng link Unsplash đã kiểm qua link_image; mọi ảnh được xử lý đen trắng bằng CSS grayscale cho thống nhất",
+    "Cấu trúc file theo chuẩn công ty (assets/js/site.js, i18n.js) thay cho main.js / language.js / portfolio.js gợi ý của BA; bộ lọc và lightbox dùng ui.js"
+  ],
+  "limitations": [
+    "Nút BOOK A VISIT / ĐẶT LỊCH chỉ hiện thông báo minh họa, chưa kết nối hệ thống đặt lịch",
+    "Địa chỉ, số điện thoại, email, giờ mở cửa và mạng xã hội là dữ liệu mẫu",
+    "Ảnh dùng link ngoài (Unsplash) — cần thay bằng ảnh thật của studio trước khi đưa lên thật"
+  ]
+}

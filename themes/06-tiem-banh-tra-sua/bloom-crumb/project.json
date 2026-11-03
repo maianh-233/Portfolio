@@ -1,0 +1,75 @@
+{
+  "slug": "bloom-crumb",
+  "name": "BLOOM & CRUMB",
+  "projectType": "website",
+  "concept": {
+    "topic": "website tiệm bánh",
+    "brand": "BLOOM & CRUMB",
+    "purpose": "1. Tổng quan\n\nThiết kế website giới thiệu BLOOM & CRUMB, thương hiệu bánh thủ công lấy cảm hứng từ khu vườn, nguyên liệu tự nhiên và nhịp sống chậm. Giao diện cần có cảm giác chân thật, tinh tế, gần thiên nhiên; không sử dụng phong cách vintage quá cũ hoặc pastel dễ thương.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Art direction\n\nXanh sage #A6B49A, kem yến mạch #F5F0E5, nâu đất #8B6F52, xanh rừng #384A38.\n\nHeading dùng serif mềm mại; nội dung dùng sans-serif gọn gàng.\n\nHình ảnh: sourdough, croissant, tart trái cây, bánh mì hạt, hoa tươi, bột mì, vải linen và nguyên liệu trên bàn gỗ.\n\nÁnh sáng tự nhiên, bóng đổ mềm, tông màu trung tính.\n\nSử dụng các mảng ảnh lớn, khung hình không đồng đều và đường nét thực vật tối giản.\n\nTránh quá nhiều họa tiết lá, nền xanh toàn bộ hoặc hiệu ứng giấy nhám nặng.\n\n3. Trang chủ\n\nHeader màu kem, logo BLOOM & CRUMB, menu và VI–EN.\n\nHero chia đôi bất đối xứng: ảnh bánh thủ công lớn bên trái, headline “Baked Slowly, Made with Nature” bên phải.\n\nMột đoạn giới thiệu triết lý làm bánh, trình bày với nhiều khoảng trắng.\n\nSection “From Our Oven”: 3 sản phẩm tiêu biểu, mỗi thẻ có ảnh và mô tả nguyên liệu.\n\nSection “Inspired by Nature”: ảnh nguyên liệu, hoa, bàn làm bánh; văn bản ngắn giải thích nguồn cảm hứng.\n\nGallery không gian tiệm dạng ảnh ngang xen ảnh dọc.\n\nFooter nền xanh rừng, chữ kem và điều hướng đơn giản.\n\n4. Trang Sản phẩm & Menu\n\nHero ngắn với ảnh nguyên liệu hoặc khay bánh.\n\nDanh mục Artisan Bread, Viennoiserie, Fruit Tarts, Seasonal Bakes.\n\nDesktop dùng lưới 3 cột; một số sản phẩm nổi bật chiếm hai cột để tạo nhịp điệu.\n\nMỗi sản phẩm có ảnh, tên, mô tả hương vị và nguyên liệu nổi bật nếu phù hợp.\n\nDùng nền kem, đường kẻ mảnh, không đóng khung mọi sản phẩm.\n\n5. Trang Về chúng tôi\n\nHero ảnh bàn làm bánh trong ánh sáng ban mai.\n\nCâu chuyện thương hiệu và triết lý làm bánh thủ công.\n\nBa nội dung biên tập: nguyên liệu, quy trình, cảm hứng theo mùa.\n\nẢnh cận cảnh bột, lớp vỏ bánh, trái cây và không gian.\n\nKhông tự khẳng định hữu cơ, thuần chay hoặc nguồn gốc nguyên liệu nếu chưa có dữ kiện.\n\n6. Chuyển động\n\nẢnh xuất hiện bằng fade nhẹ, đường nét thực vật chuyển động chậm, hover zoom ảnh rất nhẹ. Tôn trọng reduced motion và ưu tiên tải nhanh.\n\n7. Ràng buộc\n\nTối đa 3 trang; Việt–Anh đầy đủ; không có đặt bánh, giỏ hàng, checkout, form mua hàng hoặc chức năng giao dịch. Có nút chuyển trang anh việt",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-23T03:43:32.388Z",
+  "updatedAt": "2026-10-23T04:39:48.901Z",
+  "screen": "done",
+  "request": "website tiệm bánh",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\bloom-crumb\\web",
+    "builtAt": "2026-10-23T04:39:36.437Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/menu.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/menu.html": []
+    }
+  },
+  "job": {
+    "id": "000f7468-022d-4674-8b3a-335d2ec2d9ea",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\bloom-crumb\\web",
+    "feedback": "Cái footer bị hư rồi á nó không hiện đủ chữ của thương hiệu",
+    "page": "index.html",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-23T04:39:46.227Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 9
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-23T04:39:36.433Z",
+      "text": "Cái footer bị hư rồi á nó không hiện đủ chữ của thương hiệu"
+    }
+  ]
+}

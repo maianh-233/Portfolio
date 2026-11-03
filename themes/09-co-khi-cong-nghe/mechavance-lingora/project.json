@@ -1,0 +1,46 @@
+{
+  "slug": "website-giowis-thieu-xuong-co-khi-lingora",
+  "name": "Website Giowis thiệu xưởng cơ khi  LINGORA",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website Giowis thiệu xưởng cơ khí MECHAVANCE",
+    "brand": "MECHAVANCE",
+    "purpose": "Thiết kế Landing Page giới thiệu MECHAVANCE, doanh nghiệp hoạt động trong lĩnh vực cơ khí chính xác, gia công kim loại và chế tạo chi tiết máy công nghiệp.\n\nThông điệp thương hiệu: “Precision in Every Detail.”\n\nWebsite thể hiện năng lực kỹ thuật, độ chính xác trong sản xuất, quy trình kiểm soát chất lượng và tinh thần đổi mới công nghệ. Đối tượng hướng đến là doanh nghiệp sản xuất, đối tác công nghiệp và khách hàng có nhu cầu tìm hiểu năng lực gia công.\n\nĐây là website giới thiệu doanh nghiệp, không phải website thương mại điện tử. Không xây dựng giỏ hàng, thanh toán, đăng nhập, quản lý đơn hàng hoặc chức năng đặt mua máy móc.",
+    "preset": "auto",
+    "motion": "1",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "- Phong cách thiết kế\n\nPhong cách: Industrial Modern, Engineering, Technical Minimalism.\n\nMàu chủ đạo: xám than, đen graphite, trắng bạc; sử dụng cam công nghiệp làm màu nhấn.\n\nTypography mạnh mẽ, hiện đại, rõ ràng, gợi cảm giác chính xác và kỹ thuật.\n\nHình ảnh máy CNC, robot công nghiệp, chi tiết kim loại, bản vẽ kỹ thuật và nhà xưởng hiện đại.\n\nKết hợp lưới bố cục hình học, đường kẻ kỹ thuật, thông số minh họa và các mảng hình ảnh lớn.\n\nGiao diện phải có chiều sâu, chuyên nghiệp, không giống trang bán hàng thiết bị.\n\nTránh lạm dụng gradient, hiệu ứng neon hoặc phong cách công nghệ viễn tưởng quá mức.\nSection 1 — Hero\n\nThiết kế màn hình mở đầu ấn tượng với hình ảnh máy CNC đang gia công kim loại hoặc dây chuyền sản xuất công nghiệp.\n\nTiêu đề chính:\n\n“ENGINEERING PRECISION. BUILDING THE FUTURE.”\n\nMô tả: MECHAVANCE cung cấp giải pháp gia công cơ khí chính xác, chế tạo chi tiết máy và hỗ trợ sản xuất công nghiệp bằng quy trình kỹ thuật chuyên nghiệp.\n\nBao gồm:\n\nLogo MECHAVANCE.\n\nMenu: Trang chủ, Giới thiệu, Năng lực, Công nghệ, Dự án, Liên hệ.\n\nHai CTA: “Khám phá năng lực” và “Tìm hiểu doanh nghiệp”.\n\nMột số đường nét mô phỏng bản vẽ CAD hoặc thông số kỹ thuật làm điểm nhấn.\n\nSection 2 — About the Company\n\nGiới thiệu doanh nghiệp, định hướng phát triển, sứ mệnh và giá trị cốt lõi.\n\nTrình bày các nội dung:\n\nNăng lực kỹ thuật.\n\nTính chính xác trong gia công.\n\nTính ổn định của quy trình sản xuất.\n\nCam kết về chất lượng và an toàn.\n\nBố cục kết hợp hình ảnh nhà xưởng với phần giới thiệu ngắn gọn, rõ ràng. Không tự tạo lịch sử hoạt động, chứng nhận hoặc thành tích chưa có dữ liệu.\n\nSection 3 — Engineering Capabilities\n\nTrình bày các nhóm năng lực dưới dạng card kỹ thuật:\n\nCNC Machining: Gia công phay, tiện CNC và chi tiết cơ khí chính xác.\n\nSheet Metal Fabrication: Gia công, cắt và tạo hình kim loại tấm.\n\nMechanical Components: Chế tạo các chi tiết và bộ phận máy.\n\nIndustrial Fabrication: Gia công kết cấu và cụm chi tiết công nghiệp.\n\nTechnical Design: Thiết kế, đọc hiểu bản vẽ và hỗ trợ triển khai kỹ thuật.\n\nMỗi card gồm hình ảnh thực tế, tiêu đề, mô tả ngắn và hiệu ứng hover nhẹ.\n\nSection 4 — Machinery & Technology\n\nGiới thiệu hệ thống thiết bị và công nghệ gia công.\n\nSử dụng hình ảnh máy CNC, thiết bị đo kiểm, robot công nghiệp và quy trình gia công kim loại.\n\nThiết kế dạng gallery kết hợp thông tin kỹ thuật ngắn. Chỉ đưa tên model máy, thông số và công nghệ cụ thể khi có dữ liệu; nếu không, sử dụng nội dung minh họa có thể chỉnh sửa.\n\nSection 5 — Production Process\n\nMô tả quy trình làm việc theo trình tự trực quan:\n\nTiếp nhận yêu cầu kỹ thuật.\n\nPhân tích bản vẽ và vật liệu.\n\nLập phương án gia công.\n\nTiến hành chế tạo.\n\nKiểm tra chất lượng.\n\nHoàn thiện sản phẩm.\n\nSử dụng sơ đồ tuyến tính, đường nối kỹ thuật và icon đơn giản. Trên mobile, chuyển thành danh sách dọc dễ đọc.\n\nSection 6 — Quality Control\n\nGiới thiệu định hướng kiểm soát chất lượng trong quá trình sản xuất.\n\nTập trung vào:\n\nĐộ chính xác kích thước.\n\nKiểm tra vật liệu và bề mặt.\n\nKiểm soát sai số gia công.\n\nQuy trình kiểm tra và nghiệm thu.\n\nSử dụng hình ảnh thiết bị đo lường, kỹ thuật viên kiểm tra chi tiết máy và các bản vẽ kỹ thuật. Không tuyên bố đạt tiêu chuẩn ISO hoặc chứng nhận cụ thể khi chưa được cung cấp.\n\nSection 7 — Featured Projects\n\nTrưng bày các dự án hoặc sản phẩm cơ khí tiêu biểu dưới dạng portfolio.\n\nMỗi dự án có:\n\nHình ảnh chi tiết máy hoặc sản phẩm gia công.\n\nTên dự án.\n\nNhóm ứng dụng.\n\nMô tả kỹ thuật ngắn.\n\nVật liệu hoặc công nghệ sử dụng nếu có dữ liệu.\n\nƯu tiên bố cục hình ảnh lớn, bất đối xứng, thể hiện rõ kết cấu và độ hoàn thiện của sản phẩm. Dự án mẫu phải được nhận diện là nội dung minh họa.\n\nSection 8 — Industries We Serve\n\nGiới thiệu các lĩnh vực ứng dụng của năng lực cơ khí:\n\nSản xuất công nghiệp.\n\nThiết bị tự động hóa.\n\nMáy móc và thiết bị kỹ thuật.\n\nCông nghiệp phụ trợ.\n\nChế tạo và lắp ráp cơ khí.\n\nSử dụng hình ảnh đại diện cho từng lĩnh vực, kết hợp bố cục dạng lưới hiện đại.\n\nSection 9 — Contact & Footer\n\nGiới thiệu thông tin liên hệ doanh nghiệp, địa chỉ nhà máy, email, số điện thoại và các kênh liên lạc dưới dạng dữ liệu mẫu có thể chỉnh sửa.\n\nTiêu đề CTA:\n\n“LET'S BUILD SOMETHING PRECISE.”\n\nCó nút “Liên hệ với chúng tôi”, dẫn đến khu vực thông tin liên hệ hoặc ứng dụng email. Không triển khai hệ thống báo giá hay đặt hàng tự động.\n\nFooter bao gồm logo, mô tả ngắn, liên kết điều hướng và thông tin doanh nghiệp.\n\n4. Animation và tương tác\n\nHero có hiệu ứng xuất hiện tiêu đề và hình ảnh theo từng lớp.\n\nCác section xuất hiện nhẹ nhàng khi cuộn trang.\n\nHình ảnh máy móc có hiệu ứng zoom nhẹ khi hover.\n\nĐường kẻ kỹ thuật có thể xuất hiện theo chuyển động để gợi cảm giác bản vẽ cơ khí.\n\nCard dự án có chuyển động tinh tế, ưu tiên hình ảnh và nội dung.\n\nMenu điều hướng cuộn đến đúng section.\n\nKhông lạm dụng hiệu ứng 3D nặng, mô phỏng máy móc phức tạp hoặc animation gây chậm trang.\n\n5. Yêu cầu triển khai\n\nXây dựng website hoàn chỉnh, có thể chạy được, không chỉ là mockup tĩnh.\n\nResponsive trên desktop, tablet và mobile.\n\nBảo đảm nội dung dễ đọc, tương phản tốt và bố cục nhất quán.\n\nSử dụng hình ảnh phù hợp với ngành cơ khí công nghiệp.\n\nTạo dữ liệu mẫu có cấu trúc rõ ràng, dễ thay thế.\n\nKiểm tra liên kết, CTA, điều hướng, lỗi hiển thị và hiện tượng tràn ngang.\n\nKhông tự thêm chức năng bán hàng, quản lý kho, báo giá tự động hoặc quản lý sản xuất.\n\nKết quả mong muốn: Một Landing Page giới thiệu doanh nghiệp cơ khí mang diện mạo công nghiệp hiện đại, thể hiện rõ năng lực kỹ thuật, quy trình sản xuất và độ chính xác; chuyên nghiệp, trực quan và có bản sắc riêng.",
+    "mood": "",
+    "reference": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-17T01:46:20.058Z",
+  "updatedAt": "2026-10-17T02:17:33.759Z",
+  "screen": "request",
+  "request": "Website Giowis thiệu xưởng cơ khí MECHAVANCE",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "357914f2-a162-4f31-a184-257789e0a52f",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\website-giowis-thieu-xuong-co-khi-lingora\\prototype",
+    "status": "running"
+  }
+}

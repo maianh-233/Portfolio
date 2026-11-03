@@ -1,0 +1,41 @@
+{
+  "slug": "website-brand-thoitrang",
+  "name": "Website Brand ThoiTrang",
+  "projectType": "website",
+  "flow": "quick",
+  "createdAt": "2026-10-15T03:30:06.710Z",
+  "updatedAt": "2026-10-15T03:39:59.318Z",
+  "screen": "done",
+  "request": "Thiết kế một Landing Page giới thiệu cho local brand chuyên về đồ nội y nữ, hướng đến những cô gái yêu thích phong cách nữ tính, ngọt ngào, dịu dàng và lãng mạn.\n\n**1. Phong cách thiết kế**\n- Style: Feminine, Romantic, Coquette kết hợp Soft Luxury.\n- Màu sắc: Hồng phấn, kem sữa, trắng ngà, nude.\n- Typography: Serif thanh lịch kết hợp sans-serif hiện đại.\n- Hình ảnh: Nội y ren, satin, nơ, hoa và ánh sáng tự nhiên; tạo cảm giác mềm mại, tinh tế, cao cấp.\n\n**2. Cấu trúc Landing Page**\n- **Header:** Logo và menu điều hướng.\n- **Hero:** Ảnh chủ đạo, slogan giàu cảm xúc và CTA khám phá thương hiệu.\n- **About Us:** Giới thiệu thương hiệu và triết lý tôn vinh vẻ đẹp nữ tính.\n- **Collections:** Trưng bày các bộ sưu tập với hình ảnh, tên gọi và mô tả ngắn.\n- **Our Products:** Giới thiệu các dòng sản phẩm như bra, panties, bralette, lingerie sets và sleepwear.\n- **Our Story:** Kể câu chuyện hình thành, cảm hứng và giá trị thương hiệu.\n- **Journal / Inspiration:** Chia sẻ cảm hứng thời trang và phong cách sống.\n- **Instagram Gallery:** Trưng bày hình ảnh thương hiệu.\n- **Footer:** Thông tin liên hệ và mạng xã hội.\n\n**3. Yêu cầu UI/UX**\n- Thiết kế theo phong cách website thời trang editorial, ưu tiên hình ảnh đẹp, khoảng trắng và bố cục sáng tạo.\n- Animation nhẹ nhàng, hiệu ứng hover tinh tế, responsive trên desktop và mobile.\n- Nội dung ngắn gọn, giàu cảm xúc, đồng nhất với định vị thương hiệu.\n- Giao diện phải có bản sắc riêng, tránh thiết kế đại trà.\n\n**4. Yêu cầu kỹ thuật**\nKiểm tra cấu trúc dự án hiện có trước khi triển khai, tận dụng framework và thư viện sẵn có. Viết code sạch, chia component hợp lý và đảm bảo các nút điều hướng hoạt động.\n\n**Lưu ý quan trọng:** Đây chỉ là website giới thiệu thương hiệu, sản phẩm, bộ sưu tập và câu chuyện. Tuyệt đối không có giá bán, giỏ hàng, thanh toán, đặt hàng hoặc chức năng thương mại điện tử. Hãy chủ động hoàn thiện giao diện trực tiếp trong dự án, không chỉ dừng lại ở bản mô tả.",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\website-brand-thoitrang\\prototype",
+    "builtAt": "2026-10-15T03:39:51.199Z",
+    "pages": [
+      "index.html"
+    ]
+  },
+  "job": {
+    "id": "ca04123e-4ebe-4523-aeff-315047e9b239",
+    "kind": "quick-prototype",
+    "status": "done",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\website-brand-thoitrang\\prototype"
+  },
+  "qa": {
+    "createdAt": "2026-10-15T03:39:59.286Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 3
+  }
+}

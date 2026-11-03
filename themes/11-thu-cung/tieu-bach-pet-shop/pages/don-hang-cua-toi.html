@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đơn hàng của tôi · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-005" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-005 Đơn hàng của tôi: Tabs pill có số (gom trạng thái) + thẻ đơn (mã, loại, badge, ngày, số SP, ảnh, thanh toán, tổng, OrderStepper gọn) + "Xem thêm đơn".
+   * Phạm vi own: Perm.scope('BOOK.MY_ORDER') → chỉ đơn có ownerId = người dùng demo. */
+  (function () {
+    if (!Perm.role() || Perm.role() === 'ROLE-01') { location.replace(App.loginHref('don-hang-cua-toi')); return; }
+    Layout.mount({ title: 'Đơn hàng của tôi', breadcrumb: [['Tài khoản', 'pages/tai-khoan.html'], ['Đơn hàng của tôi']], account: 'orders' }, function (main) {
+      var U = Perm.url, esc = UI.esc, me = App.me();
+      var GROUPS = [
+        { id: 'all', label: 'Tất cả', states: null }, { id: 'cho', label: 'Chờ xác nhận', states: ['NEW'] }, { id: 'xu-ly', label: 'Đang xử lý', states: ['CONFIRMED', 'MAKING'] },
+        { id: 'giao', label: 'Đang giao', states: ['SHIPPING'] }, { id: 'da-giao', label: 'Đã giao', states: ['DELIVERED'] }, { id: 'huy', label: 'Đã hủy / trả lại', states: ['CANCELLED', 'RETURNED'] }];
+      var shown = 10, active = 'all';
+      function mine() {
+        var scope = Perm.scope('BOOK.MY_ORDER');
+        return DemoStore.list('orders').filter(function (o) { return scope === 'own' ? o.ownerId === me.id : true; }).sort(function (a, b) { return a.tao_luc < b.tao_luc ? 1 : -1; });
+      }
+      main.innerHTML = UI.pageHeader({ title: 'Đơn hàng của tôi', description: 'Đơn của tôi: đơn thường và đơn pate chay' }) + '<div data-tabs></div><div class="mt-4 flex flex-col gap-3" data-list>' + [1, 2, 3].map(function () { return UI.skeletonBlock('h-40 rounded-xl'); }).join('') + '</div>';
+
+      function card(o) {
+        var doc = App.docOf(o), qty = o.items.reduce(function (s, i) { return s + i.so_luong; }, 0);
+        var ret = o.return_id ? DemoStore.get('returns', o.return_id) : null;
+        var tags = App.typeTag(o) + App.payTag(o.trang_thai_thanh_toan) + (o.yeu_cau_huy ? UI.tag('Đã gửi yêu cầu hủy', 'warning') : '') + (ret && ['PENDING', 'ACCEPTED'].indexOf(ret.state) >= 0 ? UI.tag('Đang đổi trả', 'info') : '');
+        var imgs = o.items.slice(0, 3).map(function (i) { return '<span class="size-12 overflow-hidden rounded-md border border-neutral-200 bg-neutral-100">' + UI.img({ src: i.anh, alt: i.ten_hang }) + '</span>'; }).join('') + (o.items.length > 3 ? '<span class="inline-flex size-12 items-center justify-center rounded-md bg-neutral-100 text-sm font-bold text-neutral-600">+' + (o.items.length - 3) + '</span>' : '');
+        var rebuy = doc === 'DOC-BOOK-ORDER' && (o.state === 'DELIVERED' || o.state === 'CANCELLED') ? UI.button({ label: 'Mua lại', icon: 'repeat', variant: 'outline', size: 'sm', attrs: { 'data-rebuy': o.id, 'data-permission': 'BOOK.CART.CREATE' } }) : '';
+        return '<article class="relative rounded-xl border border-neutral-200 bg-white p-4 transition hover:border-primary-300 hover:shadow-md md:p-5" data-order="' + o.id + '">' +
+          '<div class="flex flex-wrap items-start justify-between gap-2"><div class="flex min-w-0 flex-wrap items-center gap-2"><a href="' + U('pages/chi-tiet-don.html?id=' + o.id) + '" class="font-mono text-base font-extrabold text-neutral-800 hover:text-primary-700">' + esc(o.code) + '</a>' + tags + '</div>' + App.stateBadge(doc, o.state, 'md') + '</div>' +
+          '<p class="mt-1 text-sm text-neutral-600">' + UI.fmt.date(o.tao_luc) + ' · ' + qty + ' sản phẩm' + (o.ngay_giao_du_kien && doc === 'DOC-BOOK-PATE_ORDER' && ['DELIVERED', 'CANCELLED'].indexOf(o.state) < 0 ? ' · <b class="text-secondary-700">Giao dự kiến ' + UI.fmt.dm(o.ngay_giao_du_kien) + '</b>' : '') + '</p>' +
+          '<div class="mt-3 flex items-end justify-between gap-3"><div class="hidden gap-2 sm:flex">' + imgs + '</div><p class="ml-auto text-right"><span class="block text-xs text-neutral-600">Tổng</span><span class="text-lg font-extrabold tabular-nums">' + UI.fmt.money(o.tong_cong) + '</span></p></div>' +
+          '<div class="mt-3 hidden md:block">' + App.stepper(o, true) + '</div>' +
+          '<div class="mt-3 flex flex-wrap justify-end gap-2">' + rebuy + UI.button({ label: 'Xem chi tiết', iconRight: 'arrow-right', variant: 'ghost', size: 'sm', href: U('pages/chi-tiet-don.html?id=' + o.id) }) + '</div></article>';
+      }
+      function paint() {
+        var all = mine();
+        var box = main.querySelector('[data-list]');
+        if (!all.length) { main.querySelector('[data-tabs]').innerHTML = ''; box.innerHTML = '<div class="rounded-xl border border-neutral-200 bg-white">' + UI.emptyState({ title: 'Bạn chưa có đơn hàng nào. Boss đang chờ món ngon đó!', action: UI.button({ label: 'Mua sắm ngay', href: U('pages/san-pham.html') }) }) + '</div>'; return; }
+        UI.tabs(main.querySelector('[data-tabs]'), { variant: 'pill', panelCls: 'hidden', active: active, tabs: GROUPS.map(function (g) { return { id: g.id, label: g.label, count: g.states ? all.filter(function (o) { return g.states.indexOf(o.state) >= 0; }).length : all.length }; }),
+          onChange: function (id) { if (id !== active) { active = id; shown = 10; } list(); } });
+      }
+      function list() {
+        var g = GROUPS.filter(function (x) { return x.id === active; })[0];
+        var l = mine().filter(function (o) { return !g.states || g.states.indexOf(o.state) >= 0; });
+        var box = main.querySelector('[data-list]');
+        box.innerHTML = l.length ? l.slice(0, shown).map(card).join('') + (l.length > shown ? '<div class="flex justify-center pt-2">' + UI.button({ label: 'Xem thêm đơn', variant: 'outline', iconRight: 'chevron-down', attrs: { 'data-more': '' } }) + '</div>' : '')
+          : '<div class="rounded-xl border border-neutral-200 bg-white">' + UI.emptyState({ size: 'sm', title: 'Không có đơn nào ở trạng thái này' }) + '</div>';
+      }
+      setTimeout(function () {
+        try { paint(); } catch (e) { main.querySelector('[data-list]').innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.', actions: UI.button({ label: 'Thử lại', size: 'sm', variant: 'outline', attrs: { onclick: 'location.reload()' } }) }); }
+      }, 400);
+
+      main.addEventListener('click', function (e) {
+        if (e.target.closest('[data-more]')) { shown += 10; list(); return; }
+        var rb = e.target.closest('[data-rebuy]');
+        if (rb) {
+          var o = DemoStore.get('orders', rb.getAttribute('data-rebuy')), n = 0;
+          o.items.forEach(function (i) { var err = i.comboId ? App.cart.add({ comboId: i.comboId, qty: i.so_luong }) : App.cart.add({ productId: i.productId, variantId: i.variantId, qty: i.so_luong }); if (!err) n += i.so_luong; });
+          if (n) UI.addToCartFeedback(rb, { message: 'Đã thêm ' + n + ' sản phẩm vào giỏ', viewHref: U('pages/gio-hang.html') }); else UI.toast('Các sản phẩm trong đơn này đã hết hàng', 'error');
+          return;
+        }
+        if (e.target.closest('a,button')) return;
+        var c = e.target.closest('[data-order]'); if (c) location.href = U('pages/chi-tiet-don.html?id=' + c.getAttribute('data-order'));
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

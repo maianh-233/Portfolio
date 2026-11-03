@@ -1,0 +1,36 @@
+<header id="top" data-header="shrink" class="sticky top-0 z-40">
+  <div class="hdr-inner bg-cream/85 backdrop-blur-md transition-all duration-500">
+    <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <a href="{{root}}index.html" class="group flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-deep">
+        <span class="arch-line grid h-10 w-8 place-items-center bg-rose-deep pt-1 font-display text-sm font-bold text-white transition-transform duration-300 group-hover:-translate-y-0.5">MH</span>
+        <span class="font-display text-xl font-bold tracking-tight text-cocoa">Mộc Hương Bakery</span>
+      </a>
+      <nav aria-label="Điều hướng chính" class="hidden items-center gap-9 lg:flex">
+        <a href="{{root}}index.html" class="relative py-2 font-semibold text-cocoa transition-colors duration-300 hover:text-rose-deep after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-rose after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-rose-deep aria-[current=page]:after:scale-x-100">Trang chủ</a>
+        <a href="{{root}}pages/menu.html" class="relative py-2 font-semibold text-cocoa transition-colors duration-300 hover:text-rose-deep after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-rose after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-rose-deep aria-[current=page]:after:scale-x-100">Menu</a>
+        <a href="{{root}}pages/contact.html" class="relative py-2 font-semibold text-cocoa transition-colors duration-300 hover:text-rose-deep after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-rose after:origin-right after:scale-x-0 after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-rose-deep aria-[current=page]:after:scale-x-100">Liên hệ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="tel:+842353912486" class="hidden items-center gap-2 font-semibold text-cocoa transition-colors duration-300 hover:text-rose-deep xl:flex">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0235 3912 486
+        </a>
+        <a href="{{root}}pages/contact.html#dat-banh-form" class="hidden min-h-[44px] items-center rounded-full bg-rose-deep px-6 font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-cocoa active:scale-[.98] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-rose/30 sm:inline-flex">Đặt bánh</a>
+        <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full bg-white text-cocoa shadow-card lg:hidden" aria-label="Mở menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-white p-6 shadow-2xl lg:hidden">
+    <nav aria-label="Điều hướng điện thoại" class="flex flex-col">
+      <a href="{{root}}index.html" class="rounded-2xl px-4 py-3 font-display text-2xl font-bold text-cocoa hover:bg-cream aria-[current=page]:bg-blush/60">Trang chủ</a>
+      <a href="{{root}}pages/menu.html" class="rounded-2xl px-4 py-3 font-display text-2xl font-bold text-cocoa hover:bg-cream aria-[current=page]:bg-blush/60">Menu</a>
+      <a href="{{root}}pages/contact.html" class="rounded-2xl px-4 py-3 font-display text-2xl font-bold text-cocoa hover:bg-cream aria-[current=page]:bg-blush/60">Liên hệ</a>
+    </nav>
+    <div class="mt-5 grid gap-3 border-t border-blush pt-5">
+      <a href="{{root}}pages/contact.html#dat-banh-form" class="flex min-h-[48px] items-center justify-center rounded-full bg-rose-deep font-semibold text-white">Đặt bánh</a>
+      <a href="tel:+842353912486" class="flex min-h-[48px] items-center justify-center rounded-full bg-cream font-semibold text-cocoa">Gọi 0235 3912 486</a>
+    </div>
+  </div>
+</header>

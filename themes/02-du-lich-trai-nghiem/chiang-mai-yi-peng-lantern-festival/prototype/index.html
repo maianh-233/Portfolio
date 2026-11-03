@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saeng Journeys | Chiang Mai: The Lantern Dream</title>
+  <meta name="description" content="Chiang Mai: The Lantern Dream. A slow, story-led journey to the Yi Peng lantern festival in northern Thailand, planned by Saeng Journeys.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: '#101B38',     // midnight blue - night sky
+            dusk: '#344C78',      // twilight blue
+            twilight: '#26325A',  // deeper twilight between dusk and plum
+            glow: '#FFC978',      // lantern gold - lanterns, accents, CTA only
+            paper: '#FFF3DF',     // warm ivory - text and light surfaces
+            lavender: '#B7AED8',  // lavender mist
+            plum: '#342A48',      // deep plum
+            ink: '#0A1128',       // deepest night
+            ivory: '#F7EFE2',     // warm ivory section surface
+            mist: '#E4DFF0',      // lavender mist section surface
+            ember: '#A8661A'      // lantern gold, darkened for text on light surfaces
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            body: ['Manrope', 'system-ui', 'sans-serif'],
+            label: ['Manrope', 'system-ui', 'sans-serif']
+          },
+          maxWidth: { prose: '62ch' }
+        }
+      }
+    };
+  </script>
+  <script src="assets/js/ui.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>:root { --ui-accent: #FFC978; }</style>
+</head>
+<body class="bg-night font-body text-paper antialiased selection:bg-glow selection:text-night">
+
+<!-- ============ HEADER ============ -->
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 transition-colors duration-500 [&.is-scrolled]:bg-night/85 [&.is-scrolled]:backdrop-blur-md [&.is-scrolled]:shadow-[0_10px_40px_-20px_rgba(10,17,40,.9)]">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-20 lg:px-10 2xl:px-16">
+    <a href="#hero" class="group flex items-center gap-3" aria-label="Saeng Journeys, back to top">
+      <span class="relative grid h-8 w-8 place-items-center">
+        <span class="absolute inset-0 rounded-full bg-glow/25 blur-md transition-opacity duration-500 group-hover:opacity-100"></span>
+        <span class="relative h-4 w-3 rounded-[46%_46%_34%_34%/40%_40%_60%_60%] bg-gradient-to-b from-paper via-glow to-[#E8893A] shadow-[0_0_14px_4px_rgba(255,201,120,.5)]"></span>
+      </span>
+      <span class="font-display text-2xl font-semibold tracking-wide">Saeng <span class="italic font-medium text-lavender">Journeys</span></span>
+    </a>
+    <nav data-scrollspy class="hidden items-center gap-8 text-sm font-medium text-paper/80 lg:flex" aria-label="Main">
+      <a href="#before" class="relative py-2 transition-colors duration-300 hover:text-paper after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-glow after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-paper [&.is-active]:after:scale-x-100">Chiang Mai</a>
+      <a href="#journey" class="relative py-2 transition-colors duration-300 hover:text-paper after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-glow after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-paper [&.is-active]:after:scale-x-100">The Journey</a>
+      <a href="#journeys" class="relative py-2 transition-colors duration-300 hover:text-paper after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-glow after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-paper [&.is-active]:after:scale-x-100">Packages</a>
+      <a href="#more" class="relative py-2 transition-colors duration-300 hover:text-paper after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-glow after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-paper [&.is-active]:after:scale-x-100">Culture</a>
+      <a href="#memories" class="relative py-2 transition-colors duration-300 hover:text-paper after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-glow after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-paper [&.is-active]:after:scale-x-100">Memories</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#plan" class="group hidden items-center gap-2 rounded-full border border-glow/60 px-5 py-2.5 text-sm font-semibold text-glow transition-all duration-300 hover:bg-glow hover:text-night active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper sm:inline-flex">
+        Plan My Journey
+        <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full border border-paper/20 text-paper transition-colors duration-300 hover:border-glow hover:text-glow lg:hidden" aria-label="Open menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-3xl border border-paper/10 bg-ink/95 p-6 shadow-2xl backdrop-blur-md lg:hidden">
+    <nav class="flex flex-col font-display text-3xl" aria-label="Mobile">
+      <a href="#before" class="py-3 transition-colors duration-300 hover:text-glow">Chiang Mai</a>
+      <a href="#journey" class="py-3 transition-colors duration-300 hover:text-glow">The Journey</a>
+      <a href="#journeys" class="py-3 transition-colors duration-300 hover:text-glow">Packages</a>
+      <a href="#more" class="py-3 transition-colors duration-300 hover:text-glow">Culture</a>
+      <a href="#memories" class="py-3 transition-colors duration-300 hover:text-glow">Memories</a>
+    </nav>
+    <a href="#plan" class="mt-6 flex h-12 w-full items-center justify-center rounded-full bg-glow font-semibold text-night transition-transform duration-300 active:scale-[.98]">Plan My Journey</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 01 HERO: The Sky of a Thousand Wishes ============ -->
+<section id="hero" data-section="hero-scene" data-particles="stars" data-particles-color="#FFF3DF" data-particles-density="0.6" class="relative isolate min-h-[100dvh] overflow-hidden bg-ink">
+  <!-- Three depth layers: far sky + distant lanterns, mid lanterns, dark foreground -->
+  <div data-layers class="absolute inset-0" aria-hidden="true">
+    <!-- Far: deep sky, warm light rising from the horizon -->
+    <div data-depth="0.08" class="absolute inset-x-0 -inset-y-[8%]">
+      <div class="hero-light absolute inset-0 bg-[radial-gradient(110%_60%_at_55%_112%,rgba(255,201,120,.42)_0%,rgba(232,137,58,.18)_26%,rgba(52,42,72,.55)_52%,rgba(16,27,56,0)_78%),linear-gradient(to_bottom,#070C1E_0%,#101B38_40%,#2B3F68_100%)]"></div>
+      <div class="hero-glow absolute right-[4%] top-[10%] h-[30vmax] w-[30vmax] rounded-full bg-[radial-gradient(circle,rgba(255,243,223,.20)_0%,rgba(183,174,216,.10)_38%,transparent_70%)]"></div>
+      <div class="hero-lanterns absolute inset-0"><div class="lantern-field" data-lanterns="46" data-lantern-layer="far" data-seed="5"></div></div>
+    </div>
+    <!-- Mid: lanterns at a middle distance -->
+    <div data-depth="0.2" class="absolute inset-x-0 -inset-y-[8%]">
+      <div class="hero-lanterns absolute inset-0"><div class="lantern-field" data-lanterns="14" data-lantern-layer="mid" data-seed="11"></div></div>
+    </div>
+    <!-- Near: a few large, slightly soft lanterns and the dark foreground -->
+    <div data-depth="0.35" class="absolute inset-x-0 -inset-y-[8%]">
+      <div class="hero-lanterns absolute inset-0"><div class="lantern-field" data-lanterns="5" data-lantern-layer="near" data-seed="29"></div></div>
+      <div class="hero-mist absolute inset-x-0 bottom-[6%] h-1/2"></div>
+      <div class="hero-foreground absolute inset-0"></div>
+    </div>
+  </div>
+  <!-- Soft navy scrim so the headline reads without hiding the sky -->
+  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(100deg,rgba(7,12,30,.78)_0%,rgba(7,12,30,.45)_38%,rgba(7,12,30,0)_65%)]"></div>
+
+  <div class="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-12 pt-28 sm:px-6 lg:px-10 lg:pb-16 2xl:px-16">
+    <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+      <div class="min-w-0 lg:col-span-8">
+        <p data-reveal="fade" class="font-label text-xs font-semibold uppercase tracking-[0.32em] text-glow/90">Yi Peng, Chiang Mai</p>
+        <h1 data-split="words" class="mt-6 font-display text-[clamp(3.25rem,8.6vw,8.75rem)] font-medium leading-[0.98] tracking-[-0.015em] text-paper">
+          Tonight, we make<br class="hidden sm:block"> <span class="inline-block pb-2 italic text-glow">a wish.</span>
+        </h1>
+        <p data-reveal="up" data-reveal-delay="500" class="mt-6 max-w-[34ch] text-lg leading-[1.65] text-paper/80 sm:text-xl">
+          A slow journey beneath a sky filled with a thousand glowing dreams.
+        </p>
+      </div>
+      <div data-reveal="up" data-reveal-delay="900" class="flex flex-col gap-4 whitespace-nowrap sm:flex-row sm:items-center lg:col-span-4 lg:justify-end">
+        <a href="#journey" class="group inline-flex h-14 items-center justify-center gap-4 rounded-full bg-glow pl-8 pr-2 font-semibold text-night shadow-[0_18px_40px_-18px_rgba(255,201,120,.7)] transition-[background-color,transform,box-shadow] duration-500 ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-0.5 hover:bg-paper hover:shadow-[0_24px_50px_-18px_rgba(255,201,120,.8)] active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paper">
+          Discover the Journey
+          <span class="grid h-10 w-10 place-items-center rounded-full bg-night text-glow transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-0.5 group-hover:-rotate-45">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+        <a href="#before" class="group relative inline-flex h-14 items-center justify-center px-2 font-semibold text-paper transition-colors duration-300 hover:text-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paper">
+          <span class="hairline-draw pb-1">Explore the Festival</span>
+        </a>
+      </div>
+    </div>
+    <div class="mt-12 flex items-end justify-between gap-8 border-t border-paper/10 pt-6 lg:mt-16">
+      <p data-reveal="fade" data-reveal-delay="1400" class="max-w-[46ch] font-display text-lg italic leading-snug text-lavender sm:text-xl">Somewhere beneath the same sky, a thousand wishes begin to rise.</p>
+      <a href="#before" aria-label="Continue to the story" class="hidden shrink-0 flex-col items-center gap-3 text-paper/60 transition-colors duration-300 hover:text-glow sm:flex">
+        <span class="scroll-line"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 BEFORE THE LIGHTS RISE ============ -->
+<section id="before" data-section="story-letter" class="relative overflow-hidden bg-ivory py-28 text-night lg:py-44">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-16 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-5 lg:sticky lg:top-32 lg:self-start">
+      <h2 data-split="words" class="font-display text-5xl font-medium leading-[1.04] tracking-[-0.01em] sm:text-6xl 2xl:text-7xl">Every magical night begins <span class="inline-block pb-1 italic text-dusk">somewhere.</span></h2>
+      <div class="mt-10 h-px w-24 bg-night/25"></div>
+      <p data-reveal="up" class="mt-8 max-w-[44ch] text-lg leading-[1.75] text-night/75">
+        Before the sky begins to glow, Chiang Mai welcomes you with quiet streets, ancient temples, warm lights and the gentle rhythm of northern Thailand.
+      </p>
+      <p data-reveal="fade" class="mt-8 font-display text-xl italic text-plum/80">Three things to do before the lanterns rise.</p>
+    </div>
+
+    <ol class="lg:col-span-6 lg:col-start-7 lg:pt-28">
+      <li data-reveal="up" class="group relative grid grid-cols-[auto_1fr] gap-x-6 border-t border-night/15 py-10 sm:gap-x-10 lg:mr-20 lg:py-14">
+        <span class="font-display text-5xl italic leading-none text-ember sm:text-6xl">i.</span>
+        <div>
+          <h3 class="font-display text-3xl font-medium leading-tight sm:text-4xl"><span class="hairline-draw pb-1">Wander through Old Chiang Mai</span></h3>
+          <p class="mt-4 max-w-[52ch] leading-[1.75] text-night/70">Walk inside the old moat walls at golden hour, past teak houses, small coffee bars and monks crossing temple courtyards.</p>
+          <p class="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-dusk/70">Golden hour, inside the moat</p>
+        </div>
+      </li>
+      <li data-reveal="up" class="group relative grid grid-cols-[auto_1fr] gap-x-6 border-t border-night/15 py-10 sm:gap-x-10 lg:ml-20 lg:py-14">
+        <span class="font-display text-5xl italic leading-none text-ember sm:text-6xl">ii.</span>
+        <div>
+          <h3 class="font-display text-3xl font-medium leading-tight sm:text-4xl"><span class="hairline-draw pb-1">Discover Lanna culture</span></h3>
+          <p class="mt-4 max-w-[52ch] leading-[1.75] text-night/70">Learn why the north lights lanterns at all: the Lanna calendar, the full moon of the twelfth month, and the wish to let go of the year behind you.</p>
+          <p class="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-dusk/70">With a local guide</p>
+        </div>
+      </li>
+      <li data-reveal="up" class="group relative grid grid-cols-[auto_1fr] gap-x-6 border-y border-night/15 py-10 sm:gap-x-10 lg:mr-8 lg:py-14">
+        <span class="font-display text-5xl italic leading-none text-ember sm:text-6xl">iii.</span>
+        <div>
+          <h3 class="font-display text-3xl font-medium leading-tight sm:text-4xl"><span class="hairline-draw pb-1">Follow the golden lights</span></h3>
+          <p class="mt-4 max-w-[52ch] leading-[1.75] text-night/70">As evening falls, paper lanterns are hung over gates and lanes. You will stroll beneath them before the festival night begins.</p>
+          <p class="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-dusk/70">Tha Phae Gate, after dark</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 03 THE JOURNEY WE DREAM ABOUT ============ -->
+<section id="journey" data-section="timeline" class="relative bg-gradient-to-b from-dusk via-twilight to-plum py-28 lg:py-44">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-6 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <p data-reveal="fade" class="font-label text-xs font-semibold uppercase tracking-[0.3em] text-glow">Three days, five moments</p>
+        <h2 data-split="words" class="mt-5 font-display text-5xl font-semibold leading-[1.02] sm:text-6xl 2xl:text-7xl">The journey we <span class="italic font-medium text-lavender">dream</span> about.</h2>
+      </div>
+    </div>
+
+    <div class="relative mt-16 lg:mt-24">
+      <!-- connecting line -->
+      <div class="absolute bottom-6 left-[11px] top-3 w-px bg-paper/10 lg:left-[calc(25%+11px)]"></div>
+      <div class="journey-line absolute bottom-6 left-[11px] top-3 w-px bg-gradient-to-b from-glow via-glow/70 to-lavender/40 lg:left-[calc(25%+11px)]"></div>
+
+      <ol class="space-y-14 lg:space-y-20">
+        <li data-reveal="up" class="group relative grid gap-3 pl-12 lg:grid-cols-4 lg:gap-10 lg:pl-0">
+          <p class="font-label text-sm font-semibold uppercase tracking-[0.2em] text-lavender lg:pt-2 lg:text-right lg:pr-14">Day 1, afternoon</p>
+          <span class="absolute left-0 top-1.5 grid h-6 w-6 place-items-center rounded-full border border-glow/60 bg-plum lg:left-[25%]"><span class="h-2 w-2 rounded-full bg-glow transition-transform duration-500 group-hover:scale-150"></span></span>
+          <div class="lg:col-span-3 lg:pl-14">
+            <h3 class="inline font-display text-3xl font-semibold bg-gradient-to-r from-glow to-glow bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-700 group-hover:bg-[length:100%_1px] sm:text-4xl lg:text-5xl">01. A Quiet Afternoon</h3>
+            <p class="mt-4 max-w-prose text-lg leading-relaxed text-paper/75">Settle into Chiang Mai slowly. Taste khao soi at a family kitchen, wander the lanes and feel the easy pace of the city.</p>
+            <p class="mt-3 text-sm text-paper/55">About 4 hours</p>
+          </div>
+        </li>
+        <li data-reveal="up" class="group relative grid gap-3 pl-12 lg:grid-cols-4 lg:gap-10 lg:pl-0">
+          <p class="font-label text-sm font-semibold uppercase tracking-[0.2em] text-lavender lg:pt-2 lg:text-right lg:pr-14">Day 1, evening</p>
+          <span class="absolute left-0 top-1.5 grid h-6 w-6 place-items-center rounded-full border border-glow/60 bg-plum lg:left-[25%]"><span class="h-2 w-2 rounded-full bg-glow transition-transform duration-500 group-hover:scale-150"></span></span>
+          <div class="lg:col-span-3 lg:pl-14">
+            <h3 class="inline font-display text-3xl font-semibold bg-gradient-to-r from-glow to-glow bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-700 group-hover:bg-[length:100%_1px] sm:text-4xl lg:text-5xl">02. A City of Lanterns</h3>
+            <p class="mt-4 max-w-prose text-lg leading-relaxed text-paper/75">See traditional Lanna lanterns glowing over temple gates, explore the festival grounds and hear the stories behind them from a local guide.</p>
+            <p class="mt-3 text-sm text-paper/55">About 3 hours</p>
+          </div>
+        </li>
+        <li data-reveal="up" class="group relative grid gap-3 pl-12 lg:grid-cols-4 lg:gap-10 lg:pl-0">
+          <p class="font-label text-sm font-semibold uppercase tracking-[0.2em] text-lavender lg:pt-2 lg:text-right lg:pr-14">Day 2, dusk</p>
+          <span class="absolute left-0 top-1.5 grid h-6 w-6 place-items-center rounded-full border border-glow/60 bg-plum lg:left-[25%]"><span class="h-2 w-2 rounded-full bg-glow transition-transform duration-500 group-hover:scale-150"></span></span>
+          <div class="lg:col-span-3 lg:pl-14">
+            <h3 class="inline font-display text-3xl font-semibold bg-gradient-to-r from-glow to-glow bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-700 group-hover:bg-[length:100%_1px] sm:text-4xl lg:text-5xl">03. The Moment of Light</h3>
+            <p class="mt-4 max-w-prose text-lg leading-relaxed text-paper/75">Join the lantern evening at a licensed event venue. Timing and access follow the official schedule and conditions on the day.</p>
+            <p class="mt-3 text-sm text-paper/55">Evening, schedule confirmed each year</p>
+          </div>
+        </li>
+        <li data-reveal="up" class="group relative grid gap-3 pl-12 lg:grid-cols-4 lg:gap-10 lg:pl-0">
+          <p class="font-label text-sm font-semibold uppercase tracking-[0.2em] text-glow lg:pt-2 lg:text-right lg:pr-14">Day 2, night</p>
+          <span class="absolute left-0 top-1.5 grid h-6 w-6 place-items-center rounded-full border border-glow bg-glow/20 shadow-[0_0_24px_4px_rgba(255,201,120,.45)] lg:left-[25%]"><span class="h-2.5 w-2.5 rounded-full bg-glow transition-transform duration-500 group-hover:scale-150"></span></span>
+          <div class="lg:col-span-3 lg:pl-14">
+            <h3 class="inline font-display text-3xl font-semibold text-glow bg-gradient-to-r from-glow to-glow bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-700 group-hover:bg-[length:100%_1px] sm:text-4xl lg:text-5xl">04. A Thousand Wishes</h3>
+            <p class="mt-4 max-w-prose text-lg leading-relaxed text-paper/75">The moment the lanterns rise together and the whole sky turns gold. Most guests tell us this is the minute they remember first.</p>
+            <p class="mt-3 text-sm text-paper/55">A few unforgettable minutes</p>
+          </div>
+        </li>
+        <li data-reveal="up" class="group relative grid gap-3 pl-12 lg:grid-cols-4 lg:gap-10 lg:pl-0">
+          <p class="font-label text-sm font-semibold uppercase tracking-[0.2em] text-lavender lg:pt-2 lg:text-right lg:pr-14">Day 3, morning</p>
+          <span class="absolute left-0 top-1.5 grid h-6 w-6 place-items-center rounded-full border border-glow/60 bg-plum lg:left-[25%]"><span class="h-2 w-2 rounded-full bg-glow transition-transform duration-500 group-hover:scale-150"></span></span>
+          <div class="lg:col-span-3 lg:pl-14">
+            <h3 class="inline font-display text-3xl font-semibold bg-gradient-to-r from-glow to-glow bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-700 group-hover:bg-[length:100%_1px] sm:text-4xl lg:text-5xl">05. A Morning to Remember</h3>
+            <p class="mt-4 max-w-prose text-lg leading-relaxed text-paper/75">Wake to a calm city. Visit a hilltop temple or a morning market, keep a few souvenirs, then continue your journey.</p>
+            <p class="mt-3 text-sm text-paper/55">About 5 hours</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 THE NIGHT THE SKY COMES ALIVE ============ -->
+<section id="sky" data-section="quote-full" class="relative isolate flex min-h-[115dvh] items-center overflow-hidden bg-gradient-to-b from-plum via-night to-ink py-32 lg:py-40" data-particles="fireflies" data-particles-color="#FFC978" data-particles-density="0.5">
+  <!-- The climax: deeper sky, brighter horizon, the densest lantern field on the page -->
+  <div data-scrub class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="absolute inset-0" style="transform: scale(calc(1.12 - var(--p, 0) * .12)); transform-origin: 50% 100%;">
+      <div class="sky-horizon absolute inset-x-0 bottom-0 h-[75%] bg-[radial-gradient(70%_70%_at_50%_100%,rgba(255,201,120,.38)_0%,rgba(232,137,58,.16)_35%,transparent_72%)]"></div>
+      <div class="lantern-field" data-lanterns="56" data-lantern-layer="far" data-seed="23"></div>
+      <div class="lantern-field" data-lanterns="18" data-lantern-layer="mid" data-seed="41"></div>
+      <div class="lantern-field" data-lanterns="4" data-lantern-layer="near" data-seed="3"></div>
+    </div>
+  </div>
+  <div class="pointer-events-none absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-plum to-transparent"></div>
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent"></div>
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(45%_40%_at_50%_50%,rgba(7,12,30,.55),transparent_75%)]"></div>
+  <div class="relative z-10 mx-auto w-full max-w-screen-2xl px-4 text-center sm:px-6 lg:px-10 2xl:px-16">
+    <p data-reveal="fade" class="font-display text-xl italic text-lavender sm:text-2xl">The night the sky comes alive</p>
+    <h2 data-reveal="blur" data-reveal-delay="400" class="mx-auto mt-8 max-w-6xl font-display text-[clamp(3.25rem,8.4vw,9rem)] font-medium leading-[1.02] tracking-[-0.015em] transition-[filter,opacity,transform] !duration-[2200ms]">And then, the sky becomes <span class="inline-block pb-3 italic text-glow">a dream.</span></h2>
+    <p data-reveal="fade" data-reveal-delay="1400" class="mx-auto mt-12 max-w-[48ch] text-lg leading-[1.75] text-paper/80 sm:text-xl">For one unforgettable moment, the sky is no longer just the sky. It becomes a place for memories, hopes and wishes.</p>
+  </div>
+</section>
+
+<!-- ============ 05 CHOOSE YOUR JOURNEY ============ -->
+<section id="journeys" data-section="features-numbered" class="relative bg-ink py-24 lg:py-36">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 data-split="words" class="font-display text-5xl font-semibold leading-[1.02] sm:text-6xl 2xl:text-7xl">Choose your <span class="italic font-medium text-lavender">journey.</span></h2>
+    <p data-reveal="up" class="mt-6 max-w-prose text-lg leading-relaxed text-paper/75">Three sample itineraries we tailor for every group. Prices are indicative only. Dates follow the official Yi Peng calendar, usually around the November full moon.</p>
+
+    <div class="mt-16 divide-y divide-paper/10 border-y border-paper/10" data-accordion>
+      <!-- Package 1 -->
+      <article data-acc-item class="group grid gap-8 py-10 transition-colors duration-500 hover:bg-paper/[.02] lg:grid-cols-12 lg:gap-10 lg:py-14">
+        <div class="lg:col-span-4">
+          <p class="font-display text-7xl font-semibold leading-none text-paper/15 transition-colors duration-500 group-hover:text-glow/40 2xl:text-8xl">6H</p>
+          <h3 class="mt-4 font-display text-4xl font-semibold 2xl:text-5xl">The Lantern Evening</h3>
+          <p class="mt-2 text-paper/60">One evening, about 6 hours</p>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-lg leading-relaxed text-paper/80">A festival evening for travellers with a short stay. Lantern-lit old town walk, Lanna dinner, then the lantern event at a licensed venue.</p>
+          <button data-acc-trigger class="mt-6 flex w-full items-center justify-between border-t border-paper/10 py-4 text-left font-semibold text-paper transition-colors duration-300 hover:text-glow">What's included <span data-acc-icon class="text-xl text-glow">+</span></button>
+          <div data-acc-panel><ul class="space-y-2 pb-4 text-paper/70"><li>Hotel pick-up and drop-off in Chiang Mai</li><li>English or Vietnamese speaking guide</li><li>Northern Thai set dinner</li><li>Event entry arranged where tickets are offered</li></ul></div>
+        </div>
+        <div class="flex flex-col gap-5 lg:col-span-3 lg:items-end lg:text-right">
+          <p><span class="block text-sm text-paper/55">Sample price, per person</span><span class="font-display text-3xl font-semibold text-glow">from 4,900,000 ₫</span></p>
+          <a href="#plan" data-package="lantern-evening" class="group/btn inline-flex h-12 items-center justify-center gap-3 rounded-full border border-paper/25 px-6 font-semibold transition-all duration-300 hover:border-glow hover:bg-glow hover:text-night active:scale-[.98]">Explore This Journey <svg class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <!-- Package 2 (featured) -->
+      <article data-acc-item data-open class="group relative grid gap-8 py-10 transition-colors duration-500 hover:bg-paper/[.02] lg:grid-cols-12 lg:gap-10 lg:py-14">
+        <div class="pointer-events-none absolute inset-y-0 -left-4 w-px bg-glow sm:-left-6 lg:-left-10"></div>
+        <div class="lg:col-span-4">
+          <p class="font-display text-7xl font-semibold leading-none text-glow/50 2xl:text-8xl">3D2N</p>
+          <h3 class="mt-4 font-display text-4xl font-semibold 2xl:text-5xl">The Chiang Mai Story</h3>
+          <p class="mt-2 text-paper/60">3 days, 2 nights. Our most chosen journey</p>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-lg leading-relaxed text-paper/80">The full story in one trip: the old city, Lanna culture and the festival night, with time to rest between moments.</p>
+          <button data-acc-trigger class="mt-6 flex w-full items-center justify-between border-t border-paper/10 py-4 text-left font-semibold text-paper transition-colors duration-300 hover:text-glow">What's included <span data-acc-icon class="text-xl text-glow">+</span></button>
+          <div data-acc-panel><ul class="space-y-2 pb-4 text-paper/70"><li>2 nights in a boutique hotel inside the old city</li><li>Airport transfers and private transport</li><li>Daily breakfast, 2 dinners</li><li>Temple and lantern-making workshop</li><li>Festival evening as in the itinerary above</li></ul></div>
+        </div>
+        <div class="flex flex-col gap-5 lg:col-span-3 lg:items-end lg:text-right">
+          <p><span class="block text-sm text-paper/55">Sample price, per person</span><span class="font-display text-3xl font-semibold text-glow">from 18,500,000 ₫</span></p>
+          <a href="#plan" data-package="chiang-mai-story" class="group/btn inline-flex h-12 items-center justify-center gap-3 rounded-full bg-glow px-6 font-semibold text-night transition-all duration-300 hover:bg-paper active:scale-[.98]">Explore This Journey <svg class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <!-- Package 3 -->
+      <article data-acc-item class="group grid gap-8 py-10 transition-colors duration-500 hover:bg-paper/[.02] lg:grid-cols-12 lg:gap-10 lg:py-14">
+        <div class="lg:col-span-4">
+          <p class="font-display text-7xl font-semibold leading-none text-paper/15 transition-colors duration-500 group-hover:text-glow/40 2xl:text-8xl">4D3N</p>
+          <h3 class="mt-4 font-display text-4xl font-semibold 2xl:text-5xl">The Northern Thailand Dream</h3>
+          <p class="mt-2 text-paper/60">4 days, 3 nights</p>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-lg leading-relaxed text-paper/80">Chiang Mai and the mountains beyond: Doi Suthep at sunrise, a day in the hills, local crafts and the festival night.</p>
+          <button data-acc-trigger class="mt-6 flex w-full items-center justify-between border-t border-paper/10 py-4 text-left font-semibold text-paper transition-colors duration-300 hover:text-glow">What's included <span data-acc-icon class="text-xl text-glow">+</span></button>
+          <div data-acc-panel><ul class="space-y-2 pb-4 text-paper/70"><li>3 nights: city hotel and a mountain lodge</li><li>All transfers with a private driver</li><li>Daily breakfast, 3 dinners</li><li>Doi Inthanon or Doi Suthep day trip</li><li>Festival evening as in the itinerary above</li></ul></div>
+        </div>
+        <div class="flex flex-col gap-5 lg:col-span-3 lg:items-end lg:text-right">
+          <p><span class="block text-sm text-paper/55">Sample price, per person</span><span class="font-display text-3xl font-semibold text-glow">from 26,900,000 ₫</span></p>
+          <a href="#plan" data-package="northern-dream" class="group/btn inline-flex h-12 items-center justify-center gap-3 rounded-full border border-paper/25 px-6 font-semibold transition-all duration-300 hover:border-glow hover:bg-glow hover:text-night active:scale-[.98]">Explore This Journey <svg class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <p class="mt-6 text-sm text-paper/50">Lantern release is only possible at licensed venues on permitted dates. We never promise participation in ceremonies we cannot confirm.</p>
+  </div>
+</section>
+
+<!-- ============ 06 MORE THAN A FESTIVAL ============ -->
+<section id="more" data-section="features-bento" class="relative bg-gradient-to-b from-ink via-night to-plum py-24 lg:py-36">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 data-split="words" class="max-w-5xl font-display text-5xl font-semibold leading-[1.02] sm:text-6xl 2xl:text-7xl">Some places are beautiful. Others make you <span class="italic font-medium text-lavender">feel</span> something.</h2>
+
+    <div class="mt-16 grid gap-4 md:grid-cols-6 lg:auto-rows-[minmax(220px,auto)]" data-reveal-stagger="100">
+      <article class="group relative flex min-h-[360px] flex-col justify-end overflow-hidden rounded-[28px] bg-gradient-to-br from-dusk via-plum to-night p-8 transition-transform duration-500 hover:-translate-y-1 md:col-span-6 lg:col-span-3 lg:row-span-2 lg:p-12">
+        <div class="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-glow/20 blur-3xl transition-opacity duration-700 group-hover:opacity-80"></div>
+        <p class="relative font-display text-8xl italic leading-none text-glow/30 lg:text-9xl">Wat</p>
+        <h3 class="relative mt-6 font-display text-4xl font-semibold lg:text-5xl">Temples and Lanna architecture</h3>
+        <p class="relative mt-3 max-w-md leading-relaxed text-paper/75">Carved teak gables, naga stairways and the quiet ruins of Wat Chedi Luang, best seen early before the heat.</p>
+      </article>
+      <article class="group relative overflow-hidden rounded-sm bg-ivory p-8 text-night transition-transform duration-500 hover:-translate-y-1 md:col-span-3 lg:p-10">
+        <p class="font-display text-lg italic text-ember">Khantoke</p>
+        <h3 class="mt-2 font-display text-3xl font-medium lg:text-4xl"><span class="hairline-draw pb-1">Northern Thai food</span></h3>
+        <p class="mt-3 max-w-md leading-relaxed text-night/70">Khao soi, sai oua sausage and sticky rice eaten with your hands at a khantoke dinner.</p>
+      </article>
+      <article class="group relative overflow-hidden rounded-[80px_80px_16px_16px] border border-glow/25 bg-glow/[.07] p-8 pt-12 transition-transform duration-500 hover:-translate-y-1 md:col-span-3 lg:px-12 lg:pb-10 lg:pt-14">
+        <h3 class="font-display text-3xl font-semibold text-glow lg:text-4xl">Night markets</h3>
+        <p class="mt-3 max-w-md leading-relaxed text-paper/75">The Sunday Walking Street on Ratchadamnoen Road: handmade crafts, street snacks and live folk music.</p>
+      </article>
+      <article class="group relative overflow-hidden rounded-[28px] bg-lavender p-8 text-night transition-transform duration-500 hover:-translate-y-1 md:col-span-3 lg:col-span-2 lg:p-10">
+        <h3 class="font-display text-3xl font-semibold lg:text-4xl">Lantern-lit streets</h3>
+        <p class="mt-3 leading-relaxed text-night/80">During festival week, Tha Phae Gate and the lanes around it glow with hanging lanterns.</p>
+      </article>
+      <article class="group relative overflow-hidden rounded-[28px] bg-gradient-to-t from-dusk/90 via-night to-night p-8 transition-transform duration-500 hover:-translate-y-1 md:col-span-3 lg:col-span-4 lg:p-10">
+        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-[repeating-linear-gradient(180deg,rgba(255,201,120,.10)_0_2px,transparent_2px_14px)]"></div>
+        <h3 class="relative font-display text-3xl font-semibold lg:text-4xl">Krathong on the water</h3>
+        <p class="relative mt-3 max-w-lg leading-relaxed text-paper/75">When Loy Krathong is held, small floating lanterns of banana leaf and flowers drift along the Ping River.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 A MEMORY YOU CAN KEEP ============ -->
+<section id="memories" data-section="gallery-filmstrip" class="relative overflow-hidden bg-mist py-28 text-night lg:py-44">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <h2 data-split="words" class="font-display text-5xl font-medium leading-[1.06] tracking-[-0.01em] sm:text-6xl 2xl:text-7xl">A memory you <span class="inline-block pb-2 italic text-dusk">can keep.</span></h2>
+        <p data-reveal="up" class="mt-6 max-w-[44ch] font-display text-xl italic leading-snug text-plum/80">Some moments stay with us long after the lights fade.</p>
+      </div>
+      <p class="flex items-center gap-3 text-sm font-medium text-night/60"><span class="h-px w-10 bg-night/30"></span>Drag to browse</p>
+    </div>
+  </div>
+  <div data-drag-scroll class="no-scrollbar mt-14 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-16 pt-2 sm:px-6 lg:px-10 2xl:px-16" data-reveal-stagger="90">
+    <!-- Journal pages: guest notes. Photo slots need real guest photos from the client (see README). -->
+    <figure class="flex min-h-[380px] w-[82%] shrink-0 snap-start flex-col justify-between rounded-[28px] bg-paper p-8 text-night shadow-[0_30px_60px_-30px_rgba(16,27,56,.45)] transition-transform duration-500 hover:-translate-y-2 hover:rotate-[-1deg] sm:w-[46%] lg:w-[30%] lg:p-10 2xl:w-[23%]">
+      <p class="text-sm font-semibold text-dusk">Night one</p>
+      <blockquote class="font-display text-4xl italic leading-[1.1] lg:text-5xl">“The first lantern.”</blockquote>
+      <figcaption class="border-t border-night/15 pt-5"><p class="leading-relaxed text-night/80">My daughter held it so carefully, as if it might break. Then it simply floated away.</p><p class="mt-3 text-sm font-semibold text-night/70">Minh Anh, Hanoi</p></figcaption>
+    </figure>
+    <figure class="flex min-h-[380px] w-[82%] shrink-0 snap-start flex-col justify-between rounded-[28px] bg-dusk p-8 text-paper shadow-[0_30px_60px_-30px_rgba(16,27,56,.45)] transition-transform duration-500 hover:-translate-y-2 hover:rotate-[1deg] sm:w-[46%] lg:w-[30%] lg:p-10 2xl:w-[23%]">
+      <p class="text-sm font-semibold text-glow">Festival night</p>
+      <blockquote class="font-display text-4xl italic leading-[1.1] lg:text-5xl">“A wish beneath the stars.”</blockquote>
+      <figcaption class="border-t border-paper/15 pt-5"><p class="leading-relaxed text-paper/80">We wrote the same wish without telling each other. We found out at breakfast.</p><p class="mt-3 text-sm font-semibold text-paper/70">Quoc Bao and Thu, Da Nang</p></figcaption>
+    </figure>
+    <figure class="flex min-h-[380px] w-[82%] shrink-0 snap-start flex-col justify-between rounded-[28px] bg-paper p-8 text-night shadow-[0_30px_60px_-30px_rgba(16,27,56,.45)] transition-transform duration-500 hover:-translate-y-2 hover:rotate-[-1deg] sm:w-[46%] lg:w-[30%] lg:p-10 2xl:w-[23%]">
+      <p class="text-sm font-semibold text-dusk">Three generations</p>
+      <blockquote class="font-display text-4xl italic leading-[1.1] lg:text-5xl">“A night we will remember.”</blockquote>
+      <figcaption class="border-t border-night/15 pt-5"><p class="leading-relaxed text-night/80">Grandma said she had waited forty years to see this. Nobody spoke for a long time.</p><p class="mt-3 text-sm font-semibold text-night/70">The Pham family, Ho Chi Minh City</p></figcaption>
+    </figure>
+    <figure class="flex min-h-[380px] w-[82%] shrink-0 snap-start flex-col justify-between rounded-[28px] bg-plum p-8 text-paper shadow-[0_30px_60px_-30px_rgba(16,27,56,.45)] transition-transform duration-500 hover:-translate-y-2 hover:rotate-[1deg] sm:w-[46%] lg:w-[30%] lg:p-10 2xl:w-[23%]">
+      <p class="text-sm font-semibold text-lavender">The last evening</p>
+      <blockquote class="font-display text-4xl italic leading-[1.1] lg:text-5xl">“Chiang Mai, you felt like a dream.”</blockquote>
+      <figcaption class="border-t border-paper/15 pt-5"><p class="leading-relaxed text-paper/80">The lanterns over Tha Phae Gate were still glowing when we walked back to the hotel.</p><p class="mt-3 text-sm font-semibold text-paper/70">Lan Huong, Hai Phong</p></figcaption>
+    </figure>
+    <figure class="flex min-h-[380px] w-[82%] shrink-0 snap-start flex-col justify-between rounded-[28px] bg-night p-8 text-paper shadow-[0_30px_60px_-30px_rgba(16,27,56,.45)] ring-1 ring-paper/10 transition-transform duration-500 hover:-translate-y-2 hover:rotate-[-1deg] sm:w-[46%] lg:w-[30%] lg:p-10 2xl:w-[23%]">
+      <p class="text-sm font-semibold text-glow">The morning after</p>
+      <blockquote class="font-display text-4xl italic leading-[1.1] lg:text-5xl">“Coffee by the moat.”</blockquote>
+      <figcaption class="border-t border-paper/15 pt-5"><p class="leading-relaxed text-paper/80">A quiet city, a little paper lantern in my bag, and no hurry at all.</p><p class="mt-3 text-sm font-semibold text-paper/70">Duc Huy, Can Tho</p></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 08 PLAN YOUR DREAM JOURNEY ============ -->
+<section id="plan" data-section="contact-split" class="relative overflow-hidden bg-night py-28 lg:py-44">
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(45%_40%_at_20%_55%,rgba(255,201,120,.08),transparent_70%)]" aria-hidden="true"></div>
+  <div class="lantern-field opacity-70" data-lanterns="12" data-lantern-layer="far" data-seed="17" aria-hidden="true"></div>
+  <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+    <div class="min-w-0 lg:col-span-5">
+      <p data-reveal="fade" class="font-label text-xs font-semibold uppercase tracking-[0.3em] text-glow">Plan with us</p>
+      <h2 data-split="words" class="mt-5 break-words font-display text-[2.75rem] font-medium leading-[1.06] tracking-[-0.01em] sm:text-6xl 2xl:text-7xl">Maybe one day, this will be <span class="inline-block pb-2 italic text-glow">your story.</span></h2>
+      <p data-reveal="up" class="mt-8 max-w-prose text-lg leading-relaxed text-paper/80">Your dream journey to Chiang Mai may begin with a single question. Let us help you explore the possibilities.</p>
+
+      <dl class="mt-12 space-y-6 border-t border-paper/10 pt-8 text-paper/80">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <dt class="w-24 text-sm text-paper/55">Call or Zalo</dt>
+          <dd class="flex items-center gap-3"><a href="tel:+84903418276" class="font-semibold text-paper transition-colors duration-300 hover:text-glow">+84 903 418 276</a><button data-copy="+84 903 418 276" class="rounded-full border border-paper/20 px-3 py-1.5 text-xs font-semibold transition-colors duration-300 hover:border-glow hover:text-glow">Copy</button></dd>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <dt class="w-24 text-sm text-paper/55">Email</dt>
+          <dd><a href="mailto:hello@saengjourneys.com" class="font-semibold text-paper transition-colors duration-300 hover:text-glow">hello@saengjourneys.com</a></dd>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <dt class="w-24 text-sm text-paper/55">Hours</dt>
+          <dd>Mon to Sat, 8:30 to 18:00 (GMT+7)</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="min-w-0 lg:col-span-6 lg:col-start-7">
+      <form data-form="plan-journey" data-success="Demo only: this prototype has no backend, so nothing was sent." class="rounded-[28px] border border-paper/10 bg-ink/60 p-6 backdrop-blur-sm sm:p-10">
+        <div class="mb-8 flex gap-3 rounded-2xl border border-glow/40 bg-glow/10 p-4 text-sm leading-relaxed text-paper">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-glow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
+          <p><strong class="font-semibold text-glow">Prototype demo.</strong> This form is not connected to our team yet. Your request will not be sent. Please call or email us instead.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 [&>label]:min-w-0">
+          <label class="flex flex-col gap-2 text-sm font-medium text-paper/85">Full name
+            <input name="name" required minlength="2" autocomplete="name" class="h-12 w-full min-w-0 rounded-xl border border-paper/20 bg-night/60 px-4 text-base text-paper placeholder:text-paper/45 transition-colors duration-300 focus:border-glow focus:outline-none focus:ring-2 focus:ring-glow/40" placeholder="Nguyen Minh Anh">
+          </label>
+          <label class="flex flex-col gap-2 text-sm font-medium text-paper/85">Email or phone
+            <input name="contact" required minlength="6" class="h-12 w-full min-w-0 rounded-xl border border-paper/20 bg-night/60 px-4 text-base text-paper placeholder:text-paper/45 transition-colors duration-300 focus:border-glow focus:outline-none focus:ring-2 focus:ring-glow/40" placeholder="you@email.com">
+          </label>
+          <label class="flex flex-col gap-2 text-sm font-medium text-paper/85">Travellers
+            <select name="travellers" required class="h-12 w-full min-w-0 rounded-xl border border-paper/20 bg-night/60 px-4 text-base text-paper transition-colors duration-300 focus:border-glow focus:outline-none focus:ring-2 focus:ring-glow/40">
+              <option value="">Select</option><option>1 person</option><option>2 people</option><option>3 to 4 people</option><option>5 to 8 people</option><option>9 or more</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-2 text-sm font-medium text-paper/85">Preferred time
+            <select name="time" required class="h-12 w-full min-w-0 rounded-xl border border-paper/20 bg-night/60 px-4 text-base text-paper transition-colors duration-300 focus:border-glow focus:outline-none focus:ring-2 focus:ring-glow/40">
+              <option value="">Select</option><option>Yi Peng 2026 (November)</option><option>Yi Peng 2027</option><option>Other dates, not the festival</option><option>Not sure yet</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-2 text-sm font-medium text-paper/85 sm:col-span-2">Journey you are interested in
+            <select id="f-package" name="package" class="h-12 w-full min-w-0 rounded-xl border border-paper/20 bg-night/60 px-4 text-base text-paper transition-colors duration-300 focus:border-glow focus:outline-none focus:ring-2 focus:ring-glow/40">
+              <option value="">Not sure yet</option><option value="lantern-evening">The Lantern Evening</option><option value="chiang-mai-story">The Chiang Mai Story (3D2N)</option><option value="northern-dream">The Northern Thailand Dream (4D3N)</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-2 text-sm font-medium text-paper/85 sm:col-span-2">Message
+            <textarea name="message" rows="4" class="w-full min-w-0 rounded-xl border border-paper/20 bg-night/60 px-4 py-3 text-base text-paper placeholder:text-paper/45 transition-colors duration-300 focus:border-glow focus:outline-none focus:ring-2 focus:ring-glow/40" placeholder="Tell us who is travelling and what you hope to feel."></textarea>
+          </label>
+        </div>
+        <button type="submit" class="group mt-8 inline-flex h-14 w-full items-center justify-center gap-3 rounded-full bg-glow px-8 font-semibold text-night shadow-[0_0_40px_-8px_rgba(255,201,120,.6)] transition-all duration-300 hover:bg-paper active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paper sm:w-auto">
+          Let's Plan My Journey
+          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <div data-form-success class="py-6">
+          <p class="font-display text-4xl font-semibold">Thank you for <span class="italic text-glow">dreaming with us.</span></p>
+          <p class="mt-4 max-w-prose leading-relaxed text-paper/80">This is a demo page, so your request was <strong class="text-paper">not sent</strong>. To start planning for real, call or Zalo <a href="tel:+84903418276" class="text-glow underline underline-offset-4">+84 903 418 276</a> or email <a href="mailto:hello@saengjourneys.com" class="text-glow underline underline-offset-4">hello@saengjourneys.com</a>.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 09 FOOTER ============ -->
+<footer id="footer" data-section="footer-big" class="relative overflow-hidden bg-night pt-20">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-12 border-t border-paper/10 pt-14 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl font-semibold">Saeng <span class="italic font-medium text-lavender">Journeys</span></p>
+        <p class="mt-3 font-display text-xl italic text-paper/70">Find wonder in every journey.</p>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold text-paper/55">Contact</p>
+        <ul class="mt-4 space-y-2 text-paper/80">
+          <li><a href="tel:+84903418276" class="transition-colors duration-300 hover:text-glow">+84 903 418 276</a></li>
+          <li><a href="mailto:hello@saengjourneys.com" class="transition-colors duration-300 hover:text-glow">hello@saengjourneys.com</a></li>
+          <li>27 Nguyen Thi Minh Khai, District 1, Ho Chi Minh City</li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-sm font-semibold text-paper/55">Explore</p>
+        <ul class="mt-4 space-y-2 text-paper/80">
+          <li><a href="#journey" class="transition-colors duration-300 hover:text-glow">The Journey</a></li>
+          <li><a href="#journeys" class="transition-colors duration-300 hover:text-glow">Packages</a></li>
+          <li><a href="#more" class="transition-colors duration-300 hover:text-glow">Culture</a></li>
+          <li><a href="#plan" class="transition-colors duration-300 hover:text-glow">Plan My Journey</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold text-paper/55">Follow</p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-11 w-11 place-items-center rounded-full border border-paper/20 transition-colors duration-300 hover:border-glow hover:text-glow"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="grid h-11 w-11 place-items-center rounded-full border border-paper/20 transition-colors duration-300 hover:border-glow hover:text-glow"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg></a>
+          <a href="https://zalo.me/0903418276" target="_blank" rel="noopener" aria-label="Zalo" class="grid h-11 w-11 place-items-center rounded-full border border-paper/20 text-xs font-bold transition-colors duration-300 hover:border-glow hover:text-glow">Zalo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p aria-hidden="true" class="mt-16 select-none whitespace-nowrap text-center font-display text-[18vw] font-semibold italic leading-[0.8] text-paper/[.05]">Saeng</p>
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-3 border-t border-paper/10 px-4 py-6 text-sm text-paper/55 sm:flex-row sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+    <p>© 2026 Saeng Journeys Co., Ltd. International tour operator licence 79-1184/2024/TCDL-GP LHQT (sample).</p>
+    <p><a href="#plan" class="transition-colors duration-300 hover:text-paper">Privacy policy</a> <span class="mx-2">/</span> <a href="#plan" class="transition-colors duration-300 hover:text-paper">Terms</a></p>
+  </div>
+</footer>
+
+<a href="#hero" data-back-to-top aria-label="Back to top" class="fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center rounded-full border border-glow/50 bg-night/80 text-glow backdrop-blur transition-all duration-300 hover:bg-glow hover:text-night">
+  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+</body>
+</html>

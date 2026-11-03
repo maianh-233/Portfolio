@@ -1,0 +1,119 @@
+{
+  "brand": "AZURE HAVEN",
+  "language": "vi",
+  "preset": "luxury",
+  "motionLevel": 2,
+  "visualIdea": "Đường chân trời: một vạch mảnh màu xanh ngọc chia trời và biển xuất hiện ở mọi tiêu đề, khung ảnh và chân trang; nhịp chậm như thủy triều, sắc Deep Ocean và cát sáng",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nơi đại dương chạm vào bình yên",
+    "description": "Giao diện giới thiệu resort nghỉ dưỡng nhiệt đới cao cấp bên bờ biển, có chuyển đổi Tiếng Việt / English."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Tạo ấn tượng đầu tiên về resort, dẫn sang trang giới thiệu, phòng & villa và trải nghiệm",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Ảnh toàn màn, zoom nhẹ khi tải, nút Khám phá resort dẫn tới pages/about.html" },
+        { "id": "intro", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Hai cột bất đối xứng: ảnh lớn + đoạn văn ngắn" },
+        { "id": "stay", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "3 thẻ ảnh lớn phòng / bungalow / villa, nút xem chi tiết tới pages/accommodation.html#..." },
+        { "id": "amenities", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Hồ bơi vô cực, nhà hàng, spa, vườn nhiệt đới bằng data-tabs" },
+        { "id": "highlight", "catalog": "editorial", "variant": "cta-fullbleed", "source": "ba", "note": "Trải nghiệm nổi bật: ảnh tràn chiều rộng, chữ phủ nhẹ, hạt bụi nắng" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-split", "source": "ai", "note": "Liên hệ tư vấn bằng tel / mailto, không đặt phòng" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "Maldives jetty turquoise palm", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-09.jpg/1920px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-09.jpg", "status": "link" },
+        { "slot": "intro", "query": "palm hammock white beach", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-07.jpg/1280px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-07.jpg", "status": "link" },
+        { "slot": "stay-room", "query": "hotel room ocean view", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Hardrock_Hotel_-_5th_floor_ocean-pool_view_room_-_panoramio.jpg/960px-Hardrock_Hotel_-_5th_floor_ocean-pool_view_room_-_panoramio.jpg", "status": "link" },
+        { "slot": "stay-bungalow", "query": "thatched bungalow beach Phu Quoc", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/1_Phu_Quoc_beach_Saigon_Phu_Quoc_Resort_and_Spa.jpg/1280px-1_Phu_Quoc_beach_Saigon_Phu_Quoc_Resort_and_Spa.jpg", "status": "link" },
+        { "slot": "stay-villa", "query": "overwater villas Maldives", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-03.jpg/1280px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-03.jpg", "status": "link" },
+        { "slot": "amenities-pool", "query": "infinity pool ocean resort", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Infinity_pool_at_Coco_Ocean_Resort_%26_Spa_%28The_Gambia%29_%2823202380634%29.jpg/960px-Infinity_pool_at_Coco_Ocean_Resort_%26_Spa_%28The_Gambia%29_%2823202380634%29.jpg", "status": "link" },
+        { "slot": "amenities-restaurant", "query": "overwater restaurant night Maldives", "file": "https://upload.wikimedia.org/wikipedia/commons/9/91/El_iconico_restaurante_Lighthouse_de_Baros_%28Maldivas%29.jpg", "status": "link" },
+        { "slot": "amenities-spa", "query": "resort spa massage room", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Spa_massage_parlor_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/1280px-Spa_massage_parlor_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg", "status": "link" },
+        { "slot": "amenities-garden", "query": "pergola path palm garden", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/DZ6_2428_Sunlight_filters_through_a_shaded_pergola_as_a_peaceful_pathway_winds_past_palm_trees_and_gardens.jpg/960px-DZ6_2428_Sunlight_filters_through_a_shaded_pergola_as_a_peaceful_pathway_winds_past_palm_trees_and_gardens.jpg", "status": "link" },
+        { "slot": "highlight", "query": "palm silhouette sunset sea", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/DFC_1534_Two_palm_trees_silhouetted_against_a_calm_sea_and_a_soft_golden_sunset.jpg/1920px-DFC_1534_Two_palm_trees_silhouetted_against_a_calm_sea_and_a_soft_golden_sunset.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Giới thiệu",
+      "purpose": "Kể câu chuyện thương hiệu, triết lý nghỉ dưỡng, kiến trúc cảnh quan và giá trị của resort",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh hàng dừa, tiêu đề A Sanctuary by the Sea" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Đoạn văn ngắn giàu cảm xúc, drop cap, trích dẫn" },
+        { "id": "philosophy", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Thiên nhiên, sự riêng tư, trải nghiệm cá nhân" },
+        { "id": "architecture", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Hai cặp ảnh lớn xen kẽ trái phải" },
+        { "id": "values", "catalog": "editorial", "variant": "values-type", "source": "ba", "note": "Typography nổi bật trên nền Deep Ocean, hạt bụi nắng" },
+        { "id": "panorama", "catalog": "cta", "variant": "cta-fullbleed", "source": "ba", "note": "Ảnh toàn cảnh resort + lời giới thiệu ngắn" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "palm trees white beach Seychelles", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cote_D%27Or_Beach_-_Anse_Volbert_-_Praslin_-_Seychelles.jpg/1920px-Cote_D%27Or_Beach_-_Anse_Volbert_-_Praslin_-_Seychelles.jpg", "status": "link" },
+        { "slot": "story", "query": "sunrise quiet beach", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Sunrise_on_the_beach%2C_Koh_Yao_Noi_%28island%29%2C_Phang_Nga_Bay%2C_Thailand.jpg/960px-Sunrise_on_the_beach%2C_Koh_Yao_Noi_%28island%29%2C_Phang_Nga_Bay%2C_Thailand.jpg", "status": "link" },
+        { "slot": "architecture-1", "query": "wooden walkway water villas", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-14.jpg/960px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-14.jpg", "status": "link" },
+        { "slot": "architecture-2", "query": "water villas lagoon boat", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-05.jpg/960px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-05.jpg", "status": "link" },
+        { "slot": "panorama", "query": "aerial beach resort Phu Quoc", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Jw-marriott-phu-quoc-bai-kem.jpg/1920px-Jw-marriott-phu-quoc-bai-kem.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/accommodation.html",
+      "title": "Phòng, villa & tiện ích",
+      "purpose": "Giới thiệu các loại hình lưu trú và tiện ích, không hiển thị giá hay nút đặt phòng",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "types", "catalog": "features", "variant": "compare-columns", "source": "ba", "note": "Phân biệt phòng nghỉ, bungalow, villa" },
+        { "id": "rooms", "catalog": "services", "variant": "list-cards", "source": "ba", "note": "Thẻ ảnh ngang: tên, diện tích minh họa, sức chứa tham khảo, mô tả" },
+        { "id": "private-villa", "catalog": "story", "variant": "split-dark", "source": "ba", "note": "Ảnh lớn + mô tả bên cạnh, nền Deep Ocean, hạt bụi nắng" },
+        { "id": "facilities", "catalog": "gallery", "variant": "features-bento", "source": "ba", "note": "Lưới 5 ảnh: hồ bơi, spa, nhà hàng, bãi biển riêng, khu vườn" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-split", "source": "ai", "note": "Liên hệ tư vấn" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "water villa deck turquoise", "file": "https://upload.wikimedia.org/wikipedia/commons/9/92/The_Residence_MALDIVES_water_villas.jpg", "status": "link" },
+        { "slot": "rooms-ocean", "query": "ocean view room balcony", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ocean-View_Room.jpg/960px-Ocean-View_Room.jpg", "status": "link" },
+        { "slot": "rooms-bungalow", "query": "beach bungalows", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-11.jpg/960px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-11.jpg", "status": "link" },
+        { "slot": "rooms-villa", "query": "jetty overwater villa", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-04.jpg/960px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-04.jpg", "status": "link" },
+        { "slot": "private-villa", "query": "beach villa pink sky", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-02.jpg/1920px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-02.jpg", "status": "link" },
+        { "slot": "facilities-pool", "query": "infinity pool sea", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/JW_Marriott_Canc%C3%BAn_%2851689366806%29.jpg/960px-JW_Marriott_Canc%C3%BAn_%2851689366806%29.jpg", "status": "link" },
+        { "slot": "facilities-spa", "query": "private spa cottage", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/11_Private_SPA_Cottage.jpg/960px-11_Private_SPA_Cottage.jpg", "status": "link" },
+        { "slot": "facilities-restaurant", "query": "waterfront terrace evening", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Conrad_Maldives_Rangali_Island_Resort_%E2%80%94_waterfront_and_terrace_%28evening%29_2016-06-23.jpg/960px-Conrad_Maldives_Rangali_Island_Resort_%E2%80%94_waterfront_and_terrace_%28evening%29_2016-06-23.jpg", "status": "link" },
+        { "slot": "facilities-beach", "query": "turquoise sea island", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-01.jpg/960px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-01.jpg", "status": "link" },
+        { "slot": "facilities-garden", "query": "thatched sala palm seaside", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Infinity_Edge_Pool%2C_Mauritius.JPG/960px-Infinity_Edge_Pool%2C_Mauritius.JPG", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Trải nghiệm & khám phá",
+      "purpose": "Giới thiệu các trải nghiệm tại resort và vẻ đẹp thiên nhiên xung quanh",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Cảnh biển lúc bình minh" },
+        { "id": "experiences", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Gallery ảnh lớn tỷ lệ đa dạng, mỗi trải nghiệm có tiêu đề, mô tả, ảnh; lightbox" },
+        { "id": "day", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Một ngày gợi ý tại resort" },
+        { "id": "nature", "catalog": "editorial", "variant": "cta-sky", "source": "ba", "note": "Vẻ đẹp thiên nhiên quanh resort; gradient trôi + hạt bụi nắng, không ảnh (hết hạn mức link ảnh)" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-split", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "sunrise coast palm Seychelles", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Sunrise_on_the_coast_of_Anse_Royale_-_Mahe_-_Seychelles_-_2025_-_01.jpg/1920px-Sunrise_on_the_coast_of_Anse_Royale_-_Mahe_-_Seychelles_-_2025_-_01.jpg", "status": "link" },
+        { "slot": "exp-sunset", "query": "sunset Phu Quoc", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sunset_at_Phu_Quoc.jpg/960px-Sunset_at_Phu_Quoc.jpg", "status": "link" },
+        { "slot": "exp-yoga", "query": "meditation yoga beach", "file": "https://upload.wikimedia.org/wikipedia/commons/1/18/A_meditation_yoga_on_a_beach.jpg", "status": "link" },
+        { "slot": "exp-nature", "query": "snorkeling coral reef", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GBR-snorkeling-chris-brown.jpg/960px-GBR-snorkeling-chris-brown.jpg", "status": "link" },
+        { "slot": "exp-cuisine", "query": "tropical fruit breakfast buffet", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Frutas_tropicais_para_caf%C3%A9_da_manh%C3%A3.jpg/960px-Frutas_tropicais_para_caf%C3%A9_da_manh%C3%A3.jpg", "status": "link" },
+        { "slot": "exp-spa", "query": "outdoor massage resort spa", "file": null, "status": "none" },
+        { "slot": "nature", "query": "tropical island jetty aerial", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Thư viện ảnh (openverse) quá thời gian chờ ở cả hai lần tìm, nên chuyển sang link ảnh Wikimedia Commons đã qua link_image",
+    "BA yêu cầu nút chuyển VI / EN trên cả bốn trang: nội dung mặc định tiếng Việt (html lang=vi), bản tiếng Anh lưu trong thuộc tính data-en và đổi bằng assets/js/site.js; lựa chọn được ghi nhớ giữa các trang",
+    "Tiêu đề BA ghi bằng tiếng Anh ('Where the Ocean Meets Serenity', 'A Sanctuary by the Sea') hiển thị nguyên văn ở chế độ EN; chế độ VI dùng bản dịch để không trộn ngôn ngữ",
+    "Website giữ đúng 4 trang BA nêu; nút 'xem chi tiết' của thẻ phòng dẫn tới từng mục trong pages/accommodation.html thay vì trang chi tiết riêng",
+    "Bảng màu theo BA (Deep Ocean, Turquoise, Sand Beige, Warm White, Palm Green) thay cho bảng màu preset; tên màu preset vẫn khai báo làm bí danh trong tw-config.js",
+    "Turquoise #55B9B2 chỉ dùng làm điểm nhấn / nền chữ tối vì không đủ tương phản cho chữ nhỏ trên nền sáng; chữ nhấn dùng sắc đậm hơn #2A746E",
+    "Trải nghiệm spa và section thiên nhiên cuối trang Trải nghiệm dựng không ảnh vì đã hết hạn mức link ảnh trong lượt"
+  ],
+  "limitations": [
+    "Không có đặt phòng, đặt lịch, biểu mẫu, giỏ hàng hay thanh toán theo yêu cầu BA; liên hệ qua số điện thoại / email mẫu",
+    "Diện tích và sức chứa phòng là số minh họa",
+    "Ảnh dùng link ngoài từ Wikimedia Commons, cần thay bằng ảnh thật của resort"
+  ]
+}

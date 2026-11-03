@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Collections — MOTION DISTRICT</title>
+  <meta name="description" content="Browse the MOTION DISTRICT collection: motorcycle accessories, helmets, protective gear, mounted bags and style pieces for street riders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-paper text-ink">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 bg-paper/95 transition-shadow duration-300">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-poster text-2xl leading-none tracking-tight sm:text-[1.7rem]" aria-label="MOTION DISTRICT home">MOTION<span class="text-brick">/</span>DISTRICT</a>
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 text-[15px] font-semibold after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brick after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Home</a>
+      <a href="collections.html" aria-current="page" class="relative py-2 text-[15px] font-semibold after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brick after:origin-left after:scale-x-100">Collections</a>
+      <a href="product-showcase.html" class="relative py-2 text-[15px] font-semibold after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brick after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Product Showcase</a>
+      <button type="button" data-modal-open="contact-modal" class="bg-ink px-5 py-2.5 text-[15px] font-semibold text-paper transition-colors duration-300 hover:bg-moss focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brick active:scale-[.98]">Contact</button>
+    </nav>
+    <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink/20 lg:hidden" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 bg-paper p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col" aria-label="Mobile">
+      <a href="../index.html" class="font-poster border-b border-ink/15 py-3 text-3xl">Home</a>
+      <a href="collections.html" aria-current="page" class="font-poster border-b border-ink/15 py-3 text-3xl text-brick">Collections</a>
+      <a href="product-showcase.html" class="font-poster border-b border-ink/15 py-3 text-3xl">Product Showcase</a>
+      <button type="button" data-modal-open="contact-modal" class="mt-5 min-h-[48px] bg-ink px-5 text-base font-semibold text-paper">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section id="page-hero" data-section="page-hero" class="relative overflow-hidden bg-moss text-paper">
+    <div class="poster-lines absolute inset-0" aria-hidden="true"></div>
+    <div class="relative mx-auto grid w-full max-w-screen-2xl gap-8 px-4 pb-14 pt-16 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 lg:pb-20 lg:pt-24 2xl:px-16">
+      <div class="lg:col-span-8">
+        <h1 data-split="words" class="font-poster text-[clamp(3.6rem,12vw,10rem)] leading-[0.85]">The collection</h1>
+        <p data-reveal="up" class="mt-6 max-w-xl text-lg leading-relaxed text-paper/85 sm:text-xl">Thirteen pieces across five categories. Filter, search, then open any piece for the full design story.</p>
+      </div>
+      <div class="flex items-end justify-between gap-6 lg:col-span-4 lg:flex-col lg:items-end">
+        <p class="font-editorial text-2xl text-paper/85 lg:text-right">No prices, no cart.<br>Just gear worth a closer look.</p>
+        <div class="sticker h-28 w-28 shrink-0 rotate-[-8deg] bg-brick p-3 text-white sm:h-32 sm:w-32" aria-hidden="true"><span class="font-poster text-xl">Ride<br>tested</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION GRID -->
+  <section id="collection" data-section="list-cards" data-filter-group class="bg-paper">
+    <div class="sticky top-16 z-30 border-b border-ink/15 bg-paper/95 backdrop-blur lg:top-[72px]">
+      <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10 2xl:px-16">
+        <div class="flex min-w-0 gap-2 overflow-x-auto pb-1 [scrollbar-width:none]" role="group" aria-label="Filter by category">
+          <button type="button" data-filter="all" class="is-active min-h-[44px] shrink-0 border border-ink px-4 text-sm font-semibold transition-colors duration-300 hover:bg-ink/10 [&.is-active]:bg-ink [&.is-active]:text-paper">All</button>
+          <button type="button" data-filter="accessories" class="min-h-[44px] shrink-0 border border-ink px-4 text-sm font-semibold transition-colors duration-300 hover:bg-ink/10 [&.is-active]:bg-ink [&.is-active]:text-paper">Bike accessories</button>
+          <button type="button" data-filter="helmets" class="min-h-[44px] shrink-0 border border-ink px-4 text-sm font-semibold transition-colors duration-300 hover:bg-ink/10 [&.is-active]:bg-ink [&.is-active]:text-paper">Helmets</button>
+          <button type="button" data-filter="protection" class="min-h-[44px] shrink-0 border border-ink px-4 text-sm font-semibold transition-colors duration-300 hover:bg-ink/10 [&.is-active]:bg-ink [&.is-active]:text-paper">Protective gear</button>
+          <button type="button" data-filter="bags" class="min-h-[44px] shrink-0 border border-ink px-4 text-sm font-semibold transition-colors duration-300 hover:bg-ink/10 [&.is-active]:bg-ink [&.is-active]:text-paper">Mounted bags</button>
+          <button type="button" data-filter="style" class="min-h-[44px] shrink-0 border border-ink px-4 text-sm font-semibold transition-colors duration-300 hover:bg-ink/10 [&.is-active]:bg-ink [&.is-active]:text-paper">Style &amp; bike toys</button>
+        </div>
+        <div class="flex items-end gap-4">
+          <div class="grid flex-1 gap-1 lg:w-80 lg:flex-none">
+            <label for="search" class="text-sm font-semibold">Search the collection</label>
+            <input id="search" type="search" placeholder="Helmet, gloves, mirror..." autocomplete="off" class="min-h-[44px] w-full border border-ink/40 bg-white px-4 text-base placeholder:text-muted focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50">
+          </div>
+          <p id="result-count" class="shrink-0 pb-3 text-sm font-semibold text-muted" aria-live="polite">13 pieces</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-16">
+      <div class="grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+
+        <article data-category="helmets" data-search="starline 3/4 helmet helmets open face star" class="group flex flex-col">
+          <button type="button" data-quick="starline-helmet" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden bg-stone text-left" aria-label="Quick view: Starline 3/4 Helmet">
+            <img src="../assets/img/product-helmet-star.webp" alt="Open-face helmet with a white star graphic resting on a scooter handlebar" class="film h-full w-full object-cover object-[45%_center] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1920" height="1280">
+          </button>
+          <p class="mt-4 text-sm text-muted">Helmets</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Starline 3/4 Helmet</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">A three-quarter shell with a hand-sprayed star for city runs and night loops.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=starline-helmet" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="starline-helmet" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="helmets" data-search="riot paint open-face helmet helmets custom skull flake" class="group flex flex-col">
+          <button type="button" data-quick="riot-paint-helmet" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden bg-stone text-left" aria-label="Quick view: Riot Paint Open-Face">
+            <img src="../assets/img/product-helmet-biker.webp" alt="Glossy open-face helmet painted with a flag-pattern skull and silver rings" class="film h-full w-full object-cover object-[55%_center] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1920" height="1280">
+          </button>
+          <p class="mt-4 text-sm text-muted">Helmets</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Riot Paint Open-Face</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">A metal-flake open-face shell with a loud custom skull, made to be spotted.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=riot-paint-helmet" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="riot-paint-helmet" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="protection" data-search="grip shift leather gloves protective gear gloves" class="group flex flex-col">
+          <button type="button" data-quick="grip-shift-gloves" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden bg-stone text-left" aria-label="Quick view: Grip Shift Leather Gloves">
+            <img src="../assets/img/product-gloves-rider.jpg" alt="Pair of black and red leather riding gloves with knuckle armour lying on a motorcycle tank" class="film h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1024" height="683">
+          </button>
+          <p class="mt-4 text-sm text-muted">Protective gear</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Grip Shift Leather Gloves</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">Full-gauntlet leather with hard knuckle shells and a pre-curved palm.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=grip-shift-gloves" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="grip-shift-gloves" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="protection" data-search="night shift riding jacket protective gear jacket waxed" class="group flex flex-col">
+          <button type="button" data-quick="night-shift-jacket" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: Night Shift Riding Jacket">
+            <span class="poster-lines flex h-full w-full flex-col justify-between bg-moss p-6 text-paper"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-P02</span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Riding<br>jacket</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Protective gear</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Night Shift Riding Jacket</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">Waxed cotton that looks like streetwear, with hidden armour pockets.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=night-shift-jacket" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="night-shift-jacket" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="protection" data-search="knee guard sleeves protective gear knee pads" class="group flex flex-col">
+          <button type="button" data-quick="knee-guard-sleeves" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: Knee Guard Sleeves">
+            <span class="poster-lines flex h-full w-full flex-col justify-between bg-ink p-6 text-paper"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-P03</span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Knee<br>guards</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Protective gear</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Knee Guard Sleeves</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">Slim sleeves that slide under jeans, with pads that stay in place.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=knee-guard-sleeves" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="knee-guard-sleeves" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="bags" data-search="long way pannier set mounted bags panniers touring side bags" class="group flex flex-col">
+          <button type="button" data-quick="long-way-panniers" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden bg-stone text-left" aria-label="Quick view: Long Way Pannier Set">
+            <img src="../assets/img/product-helmet-open-face.webp" alt="Yellow adventure motorcycle with black side panniers parked on a misty mountain road" class="film h-full w-full object-cover object-[64%_center] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" loading="lazy" width="1920" height="1282">
+          </button>
+          <p class="mt-4 text-sm text-muted">Mounted bags</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Long Way Pannier Set</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">Semi-rigid side bags that click onto a rack and lift off as a carry bag.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=long-way-panniers" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="long-way-panniers" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="bags" data-search="sling tank bag mounted bags magnetic phone" class="group flex flex-col">
+          <button type="button" data-quick="sling-tank-bag" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: Sling Tank Bag">
+            <span class="poster-lines flex h-full w-full flex-col justify-between bg-brick p-6 text-white"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-B02</span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Tank<br>bag</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Mounted bags</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Sling Tank Bag</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">A magnetic tank bag with a phone window that unclips into a sling.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=sling-tank-bag" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="sling-tank-bag" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="bags" data-search="tail roll bag mounted bags seat roll-top" class="group flex flex-col">
+          <button type="button" data-quick="tail-roll-bag" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: Tail Roll Bag">
+            <span class="poster-lines flex h-full w-full flex-col justify-between bg-ink p-6 text-paper"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-B03</span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Tail<br>roll</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Mounted bags</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Tail Roll Bag</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">A roll-top seat bag that straps to almost any pillion seat or rack.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=tail-roll-bag" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="tail-roll-bag" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="accessories" data-search="bar-end mirror pair bike accessories mirrors cafe racer" class="group flex flex-col">
+          <button type="button" data-quick="bar-end-mirrors" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: Bar-End Mirror Pair">
+            <span class="flex h-full w-full flex-col justify-between bg-stone p-6 text-ink"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-A01</span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Bar-end<br>mirrors</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Bike accessories</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Bar-End Mirror Pair</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">Round aluminium mirrors for a cleaner, leaner front end.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=bar-end-mirrors" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="bar-end-mirrors" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="accessories" data-search="grip mount pro bike accessories phone holder" class="group flex flex-col">
+          <button type="button" data-quick="grip-mount-pro" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: Grip Mount Pro">
+            <span class="poster-lines flex h-full w-full flex-col justify-between bg-moss p-6 text-paper"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-A02</span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Phone<br>mount</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Bike accessories</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Grip Mount Pro</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">An aluminium phone mount with a damper for rough city streets.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=grip-mount-pro" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="grip-mount-pro" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="accessories" data-search="short fly screen bike accessories windscreen windshield" class="group flex flex-col">
+          <button type="button" data-quick="short-screen" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: Short Fly Screen">
+            <span class="poster-lines flex h-full w-full flex-col justify-between bg-brick p-6 text-white"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-A03</span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Fly<br>screen</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Bike accessories</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Short Fly Screen</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">A smoked screen that takes the wind off without hiding the headlight.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=short-screen" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="short-screen" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="style" data-search="district sticker pack style bike toys stickers vinyl" class="group flex flex-col">
+          <button type="button" data-quick="district-sticker-pack" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: District Sticker Pack">
+            <span class="relative flex h-full w-full flex-col justify-between overflow-hidden border-2 border-ink bg-paper p-6 text-ink"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-S01</span><span class="sticker absolute right-6 top-14 h-24 w-24 rotate-[14deg] bg-brick text-white"><span class="font-poster text-lg">Stick<br>it</span></span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Sticker<br>pack</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Style &amp; bike toys</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">District Sticker Pack</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">Twelve die-cut vinyl stickers drawn from city signs and street posters.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=district-sticker-pack" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="district-sticker-pack" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+
+        <article data-category="style" data-search="valve cap keyring set style bike toys keychain" class="group flex flex-col">
+          <button type="button" data-quick="valve-cap-keyring" data-modal-open="quick-view" class="block aspect-[4/5] w-full overflow-hidden text-left" aria-label="Quick view: Valve Cap and Keyring Set">
+            <span class="poster-lines flex h-full w-full flex-col justify-between bg-ink p-6 text-paper"><span class="text-sm font-semibold uppercase tracking-[0.18em]">MD-S02</span><span class="font-poster origin-bottom-left text-5xl leading-[0.9] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">Caps &amp;<br>keyring</span></span>
+          </button>
+          <p class="mt-4 text-sm text-muted">Style &amp; bike toys</p>
+          <h2 class="mt-1 text-xl font-bold leading-tight">Valve Cap &amp; Keyring Set</h2>
+          <p class="mt-2 text-base leading-relaxed text-muted">Machined caps and a matching keyring: the smallest way to make it yours.</p>
+          <div class="mt-auto flex items-center gap-5 pt-4 text-sm font-bold">
+            <a href="product-showcase.html?p=valve-cap-keyring" class="underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">View details</a>
+            <button type="button" data-quick="valve-cap-keyring" data-modal-open="quick-view" class="hover:text-brick">Quick view</button>
+          </div>
+        </article>
+      </div>
+
+      <div id="no-results" hidden class="mt-4 grid gap-4 border-2 border-dashed border-ink/30 p-10 text-center">
+        <p class="font-poster text-4xl">Nothing on this street.</p>
+        <p class="text-base text-muted">Try another word, or clear the search and filters.</p>
+        <button type="button" data-reset class="mx-auto min-h-[48px] bg-ink px-6 text-base font-bold text-paper hover:bg-moss">Clear search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO GET ONE -->
+  <section id="get-one" data-section="process-steps" class="bg-ink text-paper">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-28 2xl:px-16">
+      <div class="lg:col-span-4">
+        <h2 data-reveal="up" class="font-poster text-5xl leading-[0.9] sm:text-6xl">Seen something you like?</h2>
+        <p class="mt-6 max-w-sm text-lg leading-relaxed text-paper/80">We do not sell online. Talk to us and we will help with fit, bike compatibility and where to try it on.</p>
+        <button type="button" data-modal-open="contact-modal" class="mt-8 min-h-[52px] w-full bg-brick px-7 text-base font-bold text-white transition-colors duration-300 hover:bg-paper hover:text-ink active:scale-[.98] sm:w-auto">Contact</button>
+      </div>
+      <ol data-reveal-stagger="90" class="grid gap-px bg-paper/15 sm:grid-cols-3 lg:col-span-8">
+        <li class="bg-ink p-6 sm:p-8"><span class="font-poster text-6xl text-brick">01</span><h3 class="mt-6 text-2xl font-bold">Pick a piece</h3><p class="mt-3 text-base leading-relaxed text-paper/75">Open the details and note the name or code, like MD-H01.</p></li>
+        <li class="bg-ink p-6 sm:p-8"><span class="font-poster text-6xl text-brick">02</span><h3 class="mt-6 text-2xl font-bold">Send us a message</h3><p class="mt-3 text-base leading-relaxed text-paper/75">Tell us your bike and size. We answer within one working day.</p></li>
+        <li class="bg-ink p-6 sm:p-8"><span class="font-poster text-6xl text-brick">03</span><h3 class="mt-6 text-2xl font-bold">Try it in person</h3><p class="mt-3 text-base leading-relaxed text-paper/75">Drop by the District 1 showroom to see it up close.</p></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" data-section="footer-big" class="overflow-hidden border-t border-paper/10 bg-ink text-paper">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 lg:pt-24 2xl:px-16">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-poster text-3xl">MOTION<span class="text-brick">/</span>DISTRICT</p>
+        <p class="mt-4 max-w-sm text-base leading-relaxed text-paper/75">Motorcycle accessories, helmets and riding gear for young riders with street style. Designed and ridden in Saigon.</p>
+      </div>
+      <nav class="lg:col-span-2 lg:col-start-6" aria-label="Footer">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-paper/60">Pages</p>
+        <ul class="mt-4 space-y-3 text-base">
+          <li><a href="../index.html" class="hover:text-brick">Home</a></li>
+          <li><a href="collections.html" class="hover:text-brick">Collections</a></li>
+          <li><a href="product-showcase.html" class="hover:text-brick">Product Showcase</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-paper/60">Contact</p>
+        <ul class="mt-4 space-y-3 text-base">
+          <li><a href="mailto:hello@motiondistrict.vn" class="hover:text-brick">hello@motiondistrict.vn</a></li>
+          <li><a href="tel:+842839256418" class="hover:text-brick">+84 28 3925 6418</a></li>
+          <li class="text-paper/75">Showroom: 112 Nguyen Trai, District 1, Ho Chi Minh City</li>
+          <li><button type="button" data-modal-open="contact-modal" class="font-semibold underline decoration-brick decoration-2 underline-offset-4 hover:text-brick">Send a message</button></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-paper/60">Social</p>
+        <ul class="mt-4 space-y-3 text-base">
+          <li><button type="button" data-copy="@motiondistrict.vn" class="text-left hover:text-brick">Instagram @motiondistrict.vn</button></li>
+          <li><button type="button" data-copy="@motiondistrict" class="text-left hover:text-brick">TikTok @motiondistrict</button></li>
+          <li><button type="button" data-copy="facebook.com/motiondistrict" class="text-left hover:text-brick">Facebook /motiondistrict</button></li>
+        </ul>
+        <p class="mt-3 text-sm text-paper/60">Tap a handle to copy it.</p>
+      </div>
+    </div>
+    <p class="font-poster mt-16 select-none whitespace-nowrap text-[15.5vw] leading-[0.8] text-paper/95 2xl:text-[14.5rem]" aria-hidden="true">MOTION DISTRICT</p>
+    <div class="flex flex-col gap-2 border-t border-paper/15 py-6 text-sm text-paper/60 sm:flex-row sm:justify-between">
+      <p>&copy; 2026 MOTION DISTRICT. All rights reserved.</p>
+      <p>Brand showcase. Products are not sold online.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="quick-view" aria-labelledby="qv-title" class="w-full">
+  <div class="relative grid sm:grid-cols-2">
+    <button type="button" data-modal-close class="absolute right-2 top-2 z-10 grid h-11 w-11 place-items-center bg-paper text-2xl hover:text-brick" aria-label="Close">&times;</button>
+    <div data-q="media" class="aspect-[4/3] overflow-hidden bg-stone sm:aspect-auto sm:min-h-[22rem]"></div>
+    <div class="flex flex-col p-6 sm:p-8">
+      <p data-q="cat" class="text-sm text-muted">Helmets</p>
+      <h2 id="qv-title" data-q="name" class="mt-1 text-3xl font-bold leading-tight">Starline 3/4 Helmet</h2>
+      <p data-q="short" class="mt-3 text-base leading-relaxed text-ink/85"></p>
+      <dl class="mt-6 grid gap-4 border-t border-ink/15 pt-5 text-base">
+        <div><dt class="text-sm font-semibold text-muted">Materials</dt><dd data-q="material" class="mt-1"></dd></div>
+        <div><dt class="text-sm font-semibold text-muted">Fits</dt><dd data-q="compat" class="mt-1"></dd></div>
+      </dl>
+      <div class="mt-auto flex flex-col gap-3 pt-6 sm:flex-row">
+        <a data-q="link" href="product-showcase.html" class="inline-flex min-h-[48px] items-center justify-center bg-ink px-6 text-base font-bold text-paper hover:bg-moss">View details</a>
+        <button type="button" data-modal-close class="min-h-[48px] border-2 border-ink px-6 text-base font-bold hover:bg-ink hover:text-paper">Close</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="contact-modal" aria-labelledby="contact-title" class="w-full">
+  <div class="relative p-6 sm:p-10">
+    <button type="button" data-modal-close class="absolute right-3 top-3 grid h-11 w-11 place-items-center text-2xl hover:text-brick" aria-label="Close">&times;</button>
+    <h2 id="contact-title" class="font-poster text-4xl leading-[0.9] sm:text-5xl">Contact the brand</h2>
+    <p class="mt-3 max-w-prose text-base text-muted">Ask about a product, fit or bike compatibility, or visit our showroom.</p>
+    <form data-form="contact" class="mt-8 grid gap-5 sm:grid-cols-2" novalidate>
+      <div class="grid gap-2"><label for="c-name" class="text-sm font-semibold">Your name</label><input id="c-name" name="name" type="text" required minlength="2" autocomplete="name" class="min-h-[48px] border border-ink/40 bg-white px-4 text-base focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50"></div>
+      <div class="grid gap-2"><label for="c-email" class="text-sm font-semibold">Email</label><input id="c-email" name="email" type="email" required autocomplete="email" class="min-h-[48px] border border-ink/40 bg-white px-4 text-base focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50"></div>
+      <div class="grid gap-2 sm:col-span-2"><label for="c-topic" class="text-sm font-semibold">Product or topic</label><input id="c-topic" name="topic" type="text" placeholder="e.g. Starline 3/4 Helmet sizing" class="min-h-[48px] border border-ink/40 bg-white px-4 text-base placeholder:text-muted focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50"></div>
+      <div class="grid gap-2 sm:col-span-2"><label for="c-msg" class="text-sm font-semibold">Message</label><textarea id="c-msg" name="message" rows="4" required minlength="10" class="border border-ink/40 bg-white px-4 py-3 text-base focus:border-ink focus:outline-none focus:ring-2 focus:ring-brick/50"></textarea></div>
+      <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
+        <button type="submit" class="min-h-[52px] bg-ink px-8 text-base font-bold text-paper transition-colors duration-300 hover:bg-moss active:scale-[.98]">Send message</button>
+        <p class="text-sm text-muted">Demo form: messages are not sent yet.</p>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

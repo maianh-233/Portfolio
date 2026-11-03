@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" data-vi-title="Về chúng tôi | CLOUD NINE BAKERY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | CLOUD NINE BAKERY</title>
+  <meta name="description" content="The story behind CLOUD NINE BAKERY: the inspiration for our cloud-soft cakes, how we bake each day, and the little shop in Thao Dien.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="min-h-screen text-ink antialiased" data-sky="#C9E4F5,#FFFDFB | #F7DDE6,#DCD2F4 | #DCD2F4,#C9E4F5">
+
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-50 transition-all duration-500 [&.is-scrolled]:bg-cloud/85 [&.is-scrolled]:shadow-[0_12px_30px_-22px_rgba(78,74,126,.55)] [&.is-scrolled]:backdrop-blur-md">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="whitespace-nowrap font-display text-base font-semibold tracking-[0.1em] text-ink sm:text-xl sm:tracking-[0.2em]">CLOUD NINE <span class="text-dusk/70">BAKERY</span></a>
+    <nav class="hidden items-center gap-10 text-[15px] font-semibold lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 text-ink/80 transition-colors duration-300 hover:text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-dusk after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="relative py-2 text-ink/80 transition-colors duration-300 hover:text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-dusk after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" aria-current="page" class="relative py-2 text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-100 after:bg-dusk after:transition-transform after:duration-500" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex rounded-full border border-dusk/25 bg-cloud/60 p-1 text-xs font-bold" role="group" aria-label="Language">
+        <button type="button" data-lang-set="en" aria-pressed="true" class="lang-btn min-h-[36px] min-w-[40px] rounded-full px-3 transition-colors duration-300">EN</button>
+        <button type="button" data-lang-set="vi" aria-pressed="false" class="lang-btn min-h-[36px] min-w-[40px] rounded-full px-3 transition-colors duration-300">VI</button>
+      </div>
+      <a href="#visit" class="hidden min-h-[44px] items-center rounded-full bg-dusk px-5 text-sm font-bold text-cloud transition duration-300 hover:-translate-y-0.5 hover:bg-night active:scale-[.98] sm:inline-flex" data-vi="Ghé tiệm">Visit us</a>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-dusk/25 bg-cloud/60 lg:hidden" aria-label="Open menu" data-vi-aria="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-cloud p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col gap-1 font-display text-3xl" aria-label="Mobile">
+      <a href="../index.html" class="rounded-2xl px-3 py-3 hover:bg-sky/50" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="rounded-2xl px-3 py-3 hover:bg-sky/50" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" aria-current="page" class="rounded-2xl px-3 py-3 text-dusk" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <a href="#visit" class="mt-4 flex min-h-[48px] w-full items-center justify-center rounded-full bg-dusk font-bold text-cloud" data-vi="Ghé tiệm">Visit us</a>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section id="about-hero" data-section="page-hero" class="relative overflow-hidden pb-16 pt-28 lg:pb-24 lg:pt-32" data-clouds="2" data-clouds-band="0-60" data-clouds-color="#ffffff" data-clouds-speed="0.5">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky via-lavender/50 to-transparent" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-5">
+        <h1 data-split="words" class="font-display text-6xl font-medium leading-[0.95] sm:text-7xl lg:text-8xl" data-vi="Câu chuyện của tiệm">Our story</h1>
+        <p data-reveal="up" class="mt-6 max-w-md text-lg leading-relaxed text-ink/75" data-vi="Một tiệm bánh nhỏ được dựng lên từ những buổi chiều nhìn mây và một chiếc lò nướng cũ.">A small bakery built from afternoons spent watching clouds and one very old oven.</p>
+      </div>
+      <div class="relative lg:col-span-7">
+        <div class="drift-slow">
+          <div class="cloud-frame aspect-[16/11] bg-lavender">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tatte_Bakery%2C_Beacon_Hill.jpg?width=1400" referrerpolicy="no-referrer" alt="Bright bakery interior with a long pastry counter and pendant lights" data-vi-alt="Không gian tiệm bánh sáng với quầy bánh dài và đèn thả" class="dream-img h-full w-full object-cover" width="1400" height="963">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSPIRATION -->
+  <section id="inspiration" data-section="story-editorial" class="relative py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:text-6xl" data-vi="Cảm hứng từ bầu trời">Inspired by the sky</h2>
+          <div data-reveal="clip" class="cloud-frame cloud-frame-c mt-10 hidden aspect-square max-w-[320px] bg-blush lg:block">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Yummy_yummy_in_my_tummy_meringue_drops_with_strawberries.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Meringue nest topped with whipped cream and strawberries" data-vi-alt="Tổ meringue với kem tươi và dâu tây" class="dream-img h-full w-full object-cover" width="1000" height="1000">
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-6">
+        <div data-reveal="up" class="max-w-prose space-y-6 text-[17px] leading-relaxed text-ink/80 lg:text-lg">
+          <p class="first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.8] first-letter:text-dusk" data-vi="Cloud Nine bắt đầu từ một ban công nhỏ ở Đà Lạt, nơi Linh nướng những mẻ meringue đầu tiên và để chúng nguội dưới bầu trời đầy mây. Cô nhận ra mình muốn làm những chiếc bánh khiến người ta thấy nhẹ nhõm, như đang nằm trên cỏ ngắm mây trôi.">Cloud Nine began on a small balcony in Da Lat, where Linh baked her first meringues and let them cool under a sky full of clouds. She realised she wanted to make cakes that made people feel lighter, like lying in the grass and watching the sky drift by.</p>
+          <p data-vi="Chúng mình học từ bánh Nhật: ít đường, nhiều không khí, kết cấu mềm như bông. Rồi thêm trái cây Việt theo mùa: dâu Đà Lạt, xoài cát Hòa Lộc, chanh dây Lâm Đồng.">We learned from Japanese baking: less sugar, more air, a texture as soft as cotton. Then we added Vietnamese fruit by the season: Da Lat strawberries, Hoa Loc mangoes, Lam Dong passion fruit.</p>
+        </div>
+        <blockquote data-reveal="up" class="my-14 border-l-2 border-sakura pl-6 font-display text-3xl font-medium italic leading-snug text-dusk sm:text-4xl lg:-ml-10" data-vi="&ldquo;Một chiếc bánh ngon nên nhẹ đến mức bạn muốn ăn thêm miếng nữa.&rdquo;">&ldquo;A good cake should be light enough that you want one more bite.&rdquo;</blockquote>
+        <div data-reveal="up" class="max-w-prose space-y-6 text-[17px] leading-relaxed text-ink/80 lg:text-lg">
+          <p data-vi="Mỗi chiếc bánh ở đây đều được làm bằng tay bởi năm người thợ. Chúng mình không dùng màu tổng hợp: sắc hồng đến từ dâu và củ dền, sắc tím từ khoai môn và đậu biếc.">Every cake here is made by hand by a team of five bakers. We use no artificial colours: the pinks come from strawberry and beetroot, the lilacs from taro and butterfly pea flower.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SHOP BENTO -->
+  <section id="space" data-section="features-bento" class="relative py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-3xl font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:text-6xl" data-vi="Không gian tiệm">Inside the little shop</h2>
+      <div data-reveal-stagger="90" class="mt-14 grid grid-cols-1 gap-5 md:grid-cols-6 lg:grid-cols-12 lg:gap-6">
+        <div class="overflow-hidden rounded-[2.5rem] bg-lavender md:col-span-6 lg:col-span-7 lg:row-span-2">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Interior_of_Vete-Katten_on_Kungsgatan%2C_Stockholm%2C_2022.jpg?width=1200" referrerpolicy="no-referrer" loading="lazy" alt="Patisserie interior with a glass cake counter" data-vi-alt="Không gian tiệm bánh với tủ kính trưng bánh" class="dream-img aspect-[4/3] h-full w-full object-cover lg:aspect-auto" width="1200" height="900">
+        </div>
+        <div class="flex flex-col justify-end rounded-[2.5rem] bg-gradient-to-br from-blush via-lavender to-sky p-8 md:col-span-3 lg:col-span-5 lg:p-10" data-gradient-shift="22">
+          <h3 class="font-display text-3xl font-semibold" data-vi="Một căn phòng trên mây">A room above the clouds</h3>
+          <p class="mt-3 text-ink/75" data-vi="Tường trắng ngà, rèm voan và trần sơn xanh nhạt như bầu trời buổi sáng. Ánh nắng vào đầy từ cửa sổ hướng đông.">Cream walls, voile curtains and a ceiling painted the pale blue of a morning sky. The east windows fill the room with light.</p>
+        </div>
+        <div class="overflow-hidden rounded-[2.5rem] bg-sky md:col-span-3 lg:col-span-5">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Seattle_-_Stone_House_Cafe%2C_Bar%2C_and_Bakery_11_-_bakery_interior.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Cosy seating corner inside the bakery" data-vi-alt="Góc ngồi ấm cúng trong tiệm" class="dream-img aspect-[4/3] h-full w-full object-cover" width="1000" height="750">
+        </div>
+        <div class="overflow-hidden rounded-[2.5rem] bg-blush md:col-span-3 lg:col-span-4">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Making_meringue_-_whisking.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Whisk folding glossy meringue in a bowl" data-vi-alt="Phới đánh lòng trắng trứng bông mịn trong âu" class="dream-img aspect-[4/3] h-full w-full object-cover" width="1000" height="750">
+        </div>
+        <div class="flex flex-col justify-center rounded-[2.5rem] bg-cloud/70 p-8 md:col-span-3 lg:col-span-8 lg:p-10">
+          <p class="font-display text-3xl font-medium leading-snug lg:text-4xl" data-vi="28 chỗ ngồi, một quầy bar cạnh cửa sổ và ban công nhỏ đầy hoa cẩm tú cầu.">28 seats, a window bar and a tiny balcony full of hydrangeas.</p>
+          <p class="mt-3 text-ink/70" data-vi="Phù hợp cho buổi hẹn trà chiều, làm việc nhẹ hoặc một mình với cuốn sách.">Good for afternoon tea dates, quiet work or a book on your own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A DAY -->
+  <section id="day" data-section="timeline" class="relative py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:col-span-4 lg:text-6xl" data-vi="Một ngày trên mây">A day in the clouds</h2>
+      <ol class="relative border-l border-dusk/25 lg:col-span-7 lg:col-start-6">
+        <li data-reveal="up" class="relative pb-12 pl-10">
+          <span class="absolute -left-[7px] top-2 h-3.5 w-3.5 rounded-full border-2 border-dusk bg-cloud" aria-hidden="true"></span>
+          <p class="font-display text-3xl italic text-dusk">05:30</p>
+          <h3 class="mt-1 text-xl font-bold" data-vi="Đánh bông và cán bột">Whisking and laminating</h3>
+          <p class="mt-2 max-w-prose text-ink/70" data-vi="Lòng trắng trứng được đánh bông, bột croissant được gấp lớp cuối cùng.">Egg whites are whipped and the croissant dough gets its final fold.</p>
+        </li>
+        <li data-reveal="up" class="relative pb-12 pl-10">
+          <span class="absolute -left-[7px] top-2 h-3.5 w-3.5 rounded-full border-2 border-dusk bg-cloud" aria-hidden="true"></span>
+          <p class="font-display text-3xl italic text-dusk">08:00</p>
+          <h3 class="mt-1 text-xl font-bold" data-vi="Mẻ bánh đầu tiên">The first trays</h3>
+          <p class="mt-2 max-w-prose text-ink/70" data-vi="Cửa mở, bánh kem và pastry còn ấm được xếp lên quầy.">Doors open and the cakes and still-warm pastries go on the counter.</p>
+        </li>
+        <li data-reveal="up" class="relative pb-12 pl-10">
+          <span class="absolute -left-[7px] top-2 h-3.5 w-3.5 rounded-full border-2 border-dusk bg-cloud" aria-hidden="true"></span>
+          <p class="font-display text-3xl italic text-dusk">15:00</p>
+          <h3 class="mt-1 text-xl font-bold" data-vi="Mẻ bánh buổi chiều">The afternoon bake</h3>
+          <p class="mt-2 max-w-prose text-ink/70" data-vi="Mousse và su kem mới cho giờ trà chiều.">Fresh mousse and cream puffs arrive for afternoon tea.</p>
+        </li>
+        <li data-reveal="up" class="relative pl-10">
+          <span class="absolute -left-[7px] top-2 h-3.5 w-3.5 rounded-full border-2 border-dusk bg-dusk" aria-hidden="true"></span>
+          <p class="font-display text-3xl italic text-dusk">21:30</p>
+          <h3 class="mt-1 text-xl font-bold" data-vi="Đóng cửa">Lights out</h3>
+          <p class="mt-2 max-w-prose text-ink/70" data-vi="Bánh còn lại được gửi tặng mái ấm gần tiệm mỗi tối.">Anything left is given to a shelter near the shop every evening.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" data-section="faq" class="relative py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:text-6xl" data-vi="Câu hỏi thường gặp">Good to know</h2>
+      </div>
+      <div data-accordion class="divide-y divide-dusk/15 rounded-[2.5rem] bg-cloud/70 px-6 sm:px-10 lg:col-span-7 lg:col-start-6">
+        <div data-acc-item data-open>
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left text-lg font-bold">
+            <span data-vi="Tiệm có nhận làm bánh sinh nhật theo yêu cầu không?">Do you make custom celebration cakes?</span>
+            <span data-acc-icon class="text-2xl text-dusk transition-transform duration-300 [.is-open_&]:rotate-45" aria-hidden="true">+</span>
+          </button>
+          <div data-acc-panel><div class="pb-6 text-ink/75" data-vi="Có. Hãy gọi hoặc ghé tiệm trước ít nhất 48 giờ để trao đổi về vị, kích thước và màu sắc. Tiệm chưa nhận đặt qua website.">Yes. Call or visit at least 48 hours ahead to talk about flavour, size and colours. We do not take orders through the website.</div></div>
+        </div>
+        <div data-acc-item>
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left text-lg font-bold">
+            <span data-vi="Bánh có ít ngọt không?">How sweet are the cakes?</span>
+            <span data-acc-icon class="text-2xl text-dusk transition-transform duration-300 [.is-open_&]:rotate-45" aria-hidden="true">+</span>
+          </button>
+          <div data-acc-panel><div class="pb-6 text-ink/75" data-vi="Bánh của chúng mình dùng ít đường hơn công thức truyền thống khoảng một phần ba. Trà sữa có thể chọn độ ngọt.">Our recipes use about a third less sugar than classic versions. Milk tea sweetness can be adjusted.</div></div>
+        </div>
+        <div data-acc-item>
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left text-lg font-bold">
+            <span data-vi="Có lựa chọn cho người dị ứng không?">Do you have options for allergies?</span>
+            <span data-acc-icon class="text-2xl text-dusk transition-transform duration-300 [.is-open_&]:rotate-45" aria-hidden="true">+</span>
+          </button>
+          <div data-acc-panel><div class="pb-6 text-ink/75" data-vi="Meringue và macaron không có gluten từ bột mì. Bếp có dùng sữa, trứng và hạt, vui lòng hỏi nhân viên trước khi chọn.">Our meringues and macarons contain no wheat flour. The kitchen handles dairy, eggs and nuts, so please ask the team before choosing.</div></div>
+        </div>
+        <div data-acc-item>
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left text-lg font-bold">
+            <span data-vi="Tiệm có chỗ để xe không?">Is there parking?</span>
+            <span data-acc-icon class="text-2xl text-dusk transition-transform duration-300 [.is-open_&]:rotate-45" aria-hidden="true">+</span>
+          </button>
+          <div data-acc-panel><div class="pb-6 text-ink/75" data-vi="Có chỗ để xe máy miễn phí trước cửa. Ô tô có thể đỗ ở bãi xe cách tiệm khoảng 100 mét.">Free motorbike parking at the door. Cars can use the public lot about 100 metres away.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" data-section="cta-sky" class="relative overflow-hidden bg-gradient-to-b from-lavender via-dusk to-night pb-24 pt-32 text-cloud lg:pb-32 lg:pt-44" data-particles="stars" data-particles-color="#FFF4E6" data-particles-density="0.7">
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-7">
+        <h2 data-reveal="up" class="font-display text-5xl font-medium leading-[1] sm:text-6xl lg:text-7xl" data-vi="Ghé tiệm, bay cùng chúng mình">Come float with us</h2>
+        <div data-reveal="up" class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <a href="https://www.google.com/maps/search/?api=1&query=Thao+Dien+Thu+Duc+Ho+Chi+Minh+City" target="_blank" rel="noopener" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-cloud px-8 font-bold text-dusk transition duration-300 hover:-translate-y-1 hover:bg-blush active:scale-[.98]" data-vi="Mở bản đồ">Open in Maps</a>
+          <a href="tel:+842837449019" class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-cloud/40 px-8 font-bold text-cloud transition duration-300 hover:-translate-y-1 hover:bg-cloud/10 active:scale-[.98]">+84 28 3744 9019</a>
+        </div>
+      </div>
+      <dl data-reveal-stagger="90" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-5">
+        <div>
+          <dt class="font-display text-2xl italic text-blush" data-vi="Địa chỉ">Address</dt>
+          <dd class="mt-2 text-cloud/85">18 Ngo Quang Huy, Thao Dien,<br>Thu Duc City, Ho Chi Minh City</dd>
+        </div>
+        <div>
+          <dt class="font-display text-2xl italic text-blush" data-vi="Giờ mở cửa">Opening hours</dt>
+          <dd class="mt-2 text-cloud/85" data-vi="Thứ Ba đến Chủ Nhật, 8:00 - 21:30<br>Nghỉ thứ Hai">Tuesday to Sunday, 8:00 - 21:30<br>Closed on Mondays</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="bg-night text-cloud/80">
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 border-t border-cloud/10 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-xl font-semibold tracking-[0.2em] text-cloud">CLOUD NINE BAKERY</a>
+    <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold" aria-label="Footer">
+      <a href="../index.html" class="py-2 hover:text-cloud" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="py-2 hover:text-cloud" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="py-2 hover:text-cloud" data-vi="Về chúng tôi">About</a>
+      <a href="mailto:hello@cloudninebakery.vn" class="py-2 hover:text-cloud">hello@cloudninebakery.vn</a>
+      <a href="tel:+842837449019" class="py-2 hover:text-cloud">+84 28 3744 9019</a>
+    </nav>
+    <p class="text-sm text-cloud/60">&copy; 2026 CLOUD NINE BAKERY</p>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+</body>
+</html>

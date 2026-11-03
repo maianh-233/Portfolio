@@ -1,0 +1,62 @@
+:root {
+  --ink: #282A28;
+  --paper: #F3EFE5;
+  --paper-deep: #EAE4D6;
+  --cedar: #8C6A4F;
+  --sage: #A3AA91;
+  --sage-light: #E4E6DA;
+  --vermilion: #A94A3D;
+  --ui-accent: #8C6A4F;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--sage); color: var(--ink); }
+
+/* Khung cửa trượt: đường kẻ mảnh bên trong ảnh, gợi khung shoji */
+.shoji { position: relative; background: var(--paper-deep); }
+.shoji::after {
+  content: ""; position: absolute; inset: 14px; pointer-events: none; z-index: 2;
+  border: 1px solid rgba(243, 239, 229, .55);
+}
+.shoji-dark::after { border-color: rgba(243, 239, 229, .28); }
+
+/* Ảnh hover phóng rất nhẹ */
+.zoom img { transition: transform 1.4s cubic-bezier(.16, 1, .3, 1); }
+.zoom:hover img, .zoom:focus-visible img { transform: scale(1.035); }
+
+/* Ảnh dự phòng khi link ảnh lỗi */
+.img-fallback {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  padding: 2rem; text-align: center; background: var(--paper-deep); color: rgba(40, 42, 40, .55);
+  font-family: var(--font-display); font-style: italic; font-size: 1.125rem;
+}
+
+/* Đường kẻ mảnh vẽ ra khi xuất hiện */
+.rule-draw { transform-origin: left; transform: scaleX(0); transition: transform 1.6s cubic-bezier(.16, 1, .3, 1); }
+.is-in .rule-draw, .rule-draw.is-in { transform: scaleX(1); }
+html:not(.motion-ready) .rule-draw { transform: none; }
+
+/* Tab tiện ích */
+[data-tab].is-active .tab-mark { transform: scaleX(1); }
+.tab-mark { transform: scaleX(0); transform-origin: left; transition: transform .6s cubic-bezier(.16, 1, .3, 1); }
+
+/* Thanh kéo ngang mảnh */
+.thin-scroll { scrollbar-width: thin; scrollbar-color: var(--cedar) transparent; }
+.thin-scroll::-webkit-scrollbar { height: 3px; }
+.thin-scroll::-webkit-scrollbar-thumb { background: var(--cedar); }
+
+/* Drop cap */
+.dropcap::first-letter {
+  font-family: var(--font-display); float: left; font-size: 4.25rem; line-height: .85;
+  padding: .35rem .6rem 0 0; color: var(--cedar);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .zoom img, .rule-draw, .tab-mark { transition: none !important; }
+  .rule-draw { transform: none; }
+  .zoom:hover img { transform: none; }
+}

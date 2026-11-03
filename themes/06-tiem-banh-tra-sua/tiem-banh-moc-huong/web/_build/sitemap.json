@@ -1,0 +1,91 @@
+{
+  "brand": "Mộc Hương Bakery",
+  "language": "vi",
+  "preset": "pastel",
+  "motionLevel": 2,
+  "visualIdea": "Khung vòm cửa lò bánh: mọi ảnh chính đặt trong khung vòm bo tròn như miệng lò nướng / cửa nhà cổ Hội An, nền pastel xen kẽ như lớp kem",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Bánh tươi ra lò mỗi sáng giữa phố Hội",
+    "description": "Giao diện tiệm bánh thủ công tông pastel, có thực đơn và form đặt bánh kem."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu tiệm và câu chuyện, tóm tắt ba nhóm bánh dẫn sang Menu, kêu gọi đặt bánh ở trang Liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Ảnh khung vòm, mảng peach tràn mép phải" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Câu chuyện thương hiệu đặt trên trang chủ vì website chỉ 3 trang" },
+        { "id": "thuc-don", "catalog": "services", "variant": "features-bento", "source": "ba", "note": "Ba nhóm: bánh mì, bánh ngọt, bánh kem đặt trước; link sang pages/menu.html" },
+        { "id": "mot-ngay", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Nhịp một ngày ở lò bánh" },
+        { "id": "goc-tiem", "catalog": "gallery", "variant": "gallery-masonry", "source": "ai", "note": "Ảnh tiệm, bánh và phố Hội, lightbox" },
+        { "id": "danh-gia", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "Carousel lời khách" },
+        { "id": "dat-banh", "catalog": "cta", "variant": "cta-sky", "source": "ai", "note": "CTA cuối dẫn tới pages/contact.html, hạt petals" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "pastel birthday cake", "file": "https://images.pexels.com/photos/29192543/pexels-photo-29192543.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "cau-chuyen", "query": "baker hands dough", "file": "assets/img/gallery-tay-cam-banh.webp", "status": "ok" },
+        { "slot": "thuc-don — bánh mì", "query": "banh mi vietnamese", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Vietnamese_B%C3%A1nh_m%C3%AC_%28Banh_Mi%29_Sandwich.jpg/1920px-Vietnamese_B%C3%A1nh_m%C3%AC_%28Banh_Mi%29_Sandwich.jpg", "status": "link" },
+        { "slot": "thuc-don — bánh ngọt", "query": "croissant pastries basket", "file": "assets/img/bento-banh-ngot.jpg", "status": "ok" },
+        { "slot": "thuc-don — bánh kem", "query": "strawberry cream cake", "file": "https://upload.wikimedia.org/wikipedia/commons/3/37/Strawberry_Cream_Cake.jpg", "status": "link" },
+        { "slot": "mot-ngay", "query": "bread baking oven", "file": "https://images.pexels.com/photos/10481790/pexels-photo-10481790.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "goc-tiem 1", "query": "bakery counter", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Counter_of_the_Paillard_bakery%2C_Vieux-Qu%C3%A9bec.jpg/1920px-Counter_of_the_Paillard_bakery%2C_Vieux-Qu%C3%A9bec.jpg", "status": "link" },
+        { "slot": "goc-tiem 2", "query": "decorating pink cupcakes", "file": "https://images.pexels.com/photos/3983710/pexels-photo-3983710.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "goc-tiem 3", "query": "Hoi An ancient town", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg/1920px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg", "status": "link" },
+        { "slot": "goc-tiem 4", "query": "croissants bakery vietnam", "file": "https://images.pexels.com/photos/40180976/pexels-photo-40180976.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "goc-tiem 5", "query": "Hoi An lanterns", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Lanterns_in_Hoi_An_2.jpg/1920px-Lanterns_in_Hoi_An_2.jpg", "status": "link" },
+        { "slot": "goc-tiem 6", "query": "muffins croissants display", "file": "https://images.pexels.com/photos/29445730/pexels-photo-29445730.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "goc-tiem 7", "query": "croissant pastries", "file": "assets/img/hero-croissant.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/menu.html",
+      "title": "Menu",
+      "purpose": "Thực đơn đầy đủ theo ba nhóm bánh (tabs), giá bánh kem theo cỡ (switch), quy trình đặt bánh kem trước",
+      "sections": [
+        { "id": "menu-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "thuc-don-day-du", "catalog": "services", "variant": "features-tabs", "source": "ba", "note": "Bánh mì, bánh ngọt, bánh kem đặt trước" },
+        { "id": "dat-truoc", "catalog": "process", "variant": "process-steps", "source": "ai", "note": "Các bước đặt bánh kem" },
+        { "id": "menu-cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn tới form đặt bánh" }
+      ],
+      "images": [
+        { "slot": "menu-hero", "query": "bread shelves bakery", "file": "https://images.pexels.com/photos/15009979/pexels-photo-15009979.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "tab bánh mì 1", "query": "baguettes bakery", "file": "https://images.pexels.com/photos/3789032/pexels-photo-3789032.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "tab bánh mì 2", "query": "bread rolls", "file": "https://images.pexels.com/photos/7543099/pexels-photo-7543099.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "tab bánh ngọt 1", "query": "croissant jam", "file": "assets/img/menu-croissant-mut.jpg", "status": "ok" },
+        { "slot": "tab bánh ngọt 2", "query": "eclairs box", "file": "https://images.pexels.com/photos/5112580/pexels-photo-5112580.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "tab bánh kem 1", "query": "strawberry cake bakery display", "file": "https://images.pexels.com/photos/16045981/pexels-photo-16045981.jpeg?auto=compress&cs=tinysrgb&w=1600", "status": "link" },
+        { "slot": "tab bánh kem 2", "query": "strawberry shortcake", "file": "https://images.pexels.com/photos/11136872/pexels-photo-11136872.jpeg?auto=compress&cs=tinysrgb&w=1200", "status": "link" },
+        { "slot": "tab bánh kem 3", "query": "strawberry cake", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Strawberry_Cake_I.jpg/1920px-Strawberry_Cake_I.jpg", "status": "link" },
+        { "slot": "dat-truoc", "query": "cake decorating berries", "file": "https://images.pexels.com/photos/7966511/pexels-photo-7966511.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/contact.html",
+      "title": "Liên hệ",
+      "purpose": "Địa chỉ, giờ mở cửa, bản đồ, form đặt bánh (bản demo), câu hỏi thường gặp",
+      "sections": [
+        { "id": "lien-he-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "lien-he", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Form đặt bánh là bản demo" },
+        { "id": "hoi-dap", "catalog": "faq", "variant": "accordion", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "lien-he-hero", "query": "bakery storefront", "file": "https://images.pexels.com/photos/29388479/pexels-photo-29388479.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "hoi-dap", "query": "breakfast croissant table", "file": "assets/img/gallery-bua-sang.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng 3 trang (Trang chủ, Menu, Liên hệ) theo chú thích của BA; không có trang About và trang chi tiết dịch vụ",
+    "Section Story đặt trên trang chủ thay vì trang About riêng vì BA giới hạn 3 trang",
+    "Services được thể hiện thành thực đơn: tóm tắt trên trang chủ, đầy đủ ở pages/menu.html",
+    "Công cụ search_images (openverse) liên tục quá thời gian chờ nên phần lớn ảnh dùng link Pexels / Wikimedia Commons đã kiểm qua link_image",
+    "Màu chữ / nút dùng thêm rose-deep #A3475B (đậm hơn rose của preset) để đạt tương phản WCAG AA với chữ trắng"
+  ],
+  "limitations": [
+    "Form đặt bánh là giao diện minh họa (bản demo), chưa gửi đơn thật",
+    "Giá bánh, địa chỉ, số điện thoại, lời khách là nội dung mẫu cần khách xác nhận",
+    "Phần lớn ảnh là link ngoài (Pexels, Wikimedia), cần ảnh thật của tiệm khi triển khai"
+  ]
+}

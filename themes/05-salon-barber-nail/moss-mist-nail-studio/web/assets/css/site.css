@@ -1,0 +1,44 @@
+:root {
+  --moss: #3F5A3C;
+  --fern: #6F8B5E;
+  --sage: #A3B394;
+  --mist: #F4F1EA;
+  --sand: #E9E1D1;
+  --bark: #5A4636;
+  --wood: #B4977A;
+  --sky: #BFD3D6;
+  --ochre: #C98A3D;
+  --ink: #1F271D;
+  --font-display: 'Fraunces', Georgia, system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --ui-accent: #3F5A3C;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Warm, slightly faded photo tone (preset nature) */
+.photo { filter: saturate(.9) sepia(.08); }
+
+/* Soft morning-mist wash used behind page heroes */
+.mist-wash {
+  background:
+    radial-gradient(60% 80% at 15% 0%, rgba(191, 211, 214, .45), transparent 70%),
+    radial-gradient(50% 60% at 90% 100%, rgba(163, 179, 148, .35), transparent 70%);
+}
+
+/* Dotted leader for the price list */
+.leader { flex: 1 1 auto; border-bottom: 1px dotted rgba(31, 39, 29, .3); transform: translateY(-5px); min-width: 1.5rem; }
+
+/* Booking dialog */
+dialog#booking::backdrop { background: rgba(31, 39, 29, .55); }
+
+/* Hide scrollbar on the drag strip, keep it scrollable */
+.no-bar { scrollbar-width: none; }
+.no-bar::-webkit-scrollbar { display: none; }

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thêm / sửa sản phẩm · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-PROD-005" data-module="PROD" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-PROD-005 Thêm / sửa sản phẩm: thông tin chung, ảnh (1–8), biến thể (LineItemsTable sửa), 6 thông tin pate chay (khi nhóm pate — BR-PROD-003),
+   * cột phải: Hiển thị (Switch), Phân loại, Xem trước (ProductCard). ?id= sửa · ?copy= nhân bản · không tham số = thêm mới. */
+  (function () {
+    var src = DemoStore.get('products', App.param('id') || App.param('copy') || '');
+    var mode = App.param('id') && src ? 'edit' : App.param('copy') && src ? 'copy' : 'new';
+    var title = mode === 'edit' ? 'Sửa sản phẩm' : 'Thêm sản phẩm';
+    Layout.mount({ area: 'admin', title: title, active: 'products', breadcrumb: [['Sản phẩm', 'pages/admin/san-pham.html'], [mode === 'edit' ? 'Sửa: ' + src.ten : title]] }, function (main) {
+      var U = Perm.url, esc = UI.esc, R = UI.rules;
+      var cats = DemoStore.list('categories');
+      var p = src ? JSON.parse(JSON.stringify(src)) : { ten: '', thuong_hieu: '', mo_ta: '', anh: [], category_id: '', pet_type_ids: [], trang_thai: 'DANG_BAN', variants: [{ ten: '', sku: '', gia: '', gia_goc: '', ton_kho: 0, nguong: 5 }], pate: {} };
+      if (mode === 'copy') { p.ten += ' (bản sao)'; p.variants.forEach(function (v) { v.sku = ''; delete v.id; }); }
+      var pi = p.pate || {};
+      var variants, feed, dirty = false;
+      function isPate(catId) { var c = cats.filter(function (x) { return x.id === catId; })[0]; return !!(c && c.la_pate_chay); }
+      function strip(html) { var d = document.createElement('div'); d.innerHTML = html || ''; return d.textContent.trim(); }
+
+      main.innerHTML = '<form novalidate data-form>' + UI.pageHeader({ title: title, actions: UI.button({ label: 'Hủy', variant: 'ghost', attrs: { 'data-cancel': '' } }) + UI.button({ label: 'Lưu sản phẩm', icon: 'save', type: 'submit', attrs: { 'data-permission': mode === 'edit' ? 'PROD.PRODUCT.UPDATE' : 'PROD.PRODUCT.CREATE' } }) }) +
+        '<div data-form-summary class="mb-4"></div><div class="grid gap-4 lg:grid-cols-3"><div class="order-2 flex min-w-0 flex-col gap-4 lg:order-1 lg:col-span-2" data-left>' + UI.skeleton(6) + '</div><aside class="order-1 lg:order-2"><div class="flex flex-col gap-4 lg:sticky lg:top-20" data-right></div></aside></div></form>';
+      var form = main.querySelector('[data-form]');
+
+      setTimeout(function () {
+        main.querySelector('[data-left]').innerHTML =
+          UI.card({ body: UI.fieldGroup({ title: 'Thông tin chung', fields: [UI.field({ name: 'ten', label: 'Tên sản phẩm', required: true, value: p.ten, maxlength: 200 }), UI.field({ name: 'thuong_hieu', label: 'Thương hiệu', optional: true, value: p.thuong_hieu, maxlength: 100 }), UI.field({ name: 'mo_ta', label: 'Mô tả', type: 'textarea', rows: 5, maxlength: 5000, value: strip(p.mo_ta) })] }) }) +
+          UI.card({ body: UI.fieldGroup({ title: 'Ảnh sản phẩm', description: 'Ảnh đầu tiên là ảnh đại diện. Tối đa 8 ảnh.', fields: [UI.fileUpload({ name: 'anh', kind: 'image', multiple: true, max: 8, maxMB: 5, existing: p.anh, hint: 'JPG, PNG, WEBP tối đa 5MB mỗi ảnh', sizeMsg: 'Ảnh tối đa 5MB (JPG, PNG, WEBP)' })] }) }) +
+          UI.card({ body: '<fieldset data-field="variants"><legend class="mb-1 text-lg font-bold text-neutral-800">Biến thể & giá</legend><p class="mb-3 text-sm text-neutral-600">Khối lượng hoặc vị. Pate chay không quản lý tồn kho.</p><div data-variants></div><p class="mt-2 hidden items-center gap-1 text-xs font-bold text-danger-700" data-err id="err-variants"></p></fieldset>' }) +
+          '<div data-pate-box></div>';
+        main.querySelector('[data-right]').innerHTML =
+          UI.card({ title: 'Hiển thị', body: UI.field({ name: 'dang_ban', type: 'switch', label: 'Đang bán', value: p.trang_thai === 'DANG_BAN' }) }) +
+          UI.card({ title: 'Phân loại', body: '<div class="flex flex-col gap-4">' + UI.field({ name: 'category_id', label: 'Nhóm sản phẩm', type: 'select', required: true, placeholder: 'Chọn nhóm', options: cats.map(function (c) { return { value: c.id, label: c.ten }; }), value: p.category_id }) +
+            UI.field({ name: 'pet_type_ids', label: 'Dành cho', type: 'multi-select', required: true, options: MOCK.petTypes.map(function (t) { return { value: t.id, label: t.full }; }), value: p.pet_type_ids }) + '</div>' }) +
+          UI.card({ title: 'Xem trước', body: '<div class="mx-auto max-w-56" data-preview></div>' });
+        paintVariants(); paintPate(); preview();
+        UI.stickyBar('<div class="flex gap-2">' + UI.button({ label: 'Hủy', variant: 'ghost', attrs: { 'data-cancel': '' } }) + UI.button({ label: 'Lưu sản phẩm', icon: 'save', full: true, attrs: { 'data-save': '' } }) + '</div>');
+      }, 400);
+
+      function pateNow() { var s = form.querySelector('[name=category_id]'); return isPate(s ? s.value : p.category_id); }
+      function paintVariants() {
+        var pate = pateNow();
+        variants = UI.lineItems(main.querySelector('[data-variants]'), {
+          editable: true, minRows: 1, minMsg: 'Sản phẩm cần ít nhất 1 biến thể', addLabel: 'Thêm biến thể',
+          rows: variants ? variants.rows() : p.variants.map(function (v) { return { id: v.id, ten: v.ten, sku: v.sku, gia: v.gia, gia_goc: v.gia_goc || '', ton_kho: v.ton_kho == null ? '' : v.ton_kho, nguong: v.nguong == null ? 5 : v.nguong, anh: v.anh }; }),
+          newRow: function () { return { ten: '', sku: '', gia: '', gia_goc: '', ton_kho: pate ? '' : 0, nguong: 5 }; },
+          columns: [
+            { key: 'anh', label: 'Ảnh', type: 'custom', width: 'w-14', render: function (r) { return '<span class="block size-10 overflow-hidden rounded-md bg-neutral-100">' + (r.anh || (p.anh && p.anh[0]) ? UI.img({ src: r.anh || p.anh[0], alt: '' }) : '') + '</span>'; } },
+            { key: 'ten', label: 'Tên biến thể', placeholder: 'Ví dụ: Gói 400g' },
+            { key: 'sku', label: 'SKU', placeholder: 'Không bắt buộc' },
+            { key: 'gia', label: 'Giá bán', type: 'money', width: 'w-32' },
+            { key: 'gia_goc', label: 'Giá gốc', type: 'money', width: 'w-32' }]
+            .concat(pate ? [] : [{ key: 'ton_kho', label: 'Tồn kho', type: 'number', width: 'w-24' }, { key: 'nguong', label: 'Ngưỡng sắp hết', type: 'number', width: 'w-24' }]),
+          onChange: function () { dirty = true; preview(); }
+        });
+      }
+      function paintPate() {
+        var box = main.querySelector('[data-pate-box]');
+        if (!pateNow()) { box.innerHTML = ''; feed = null; return; }
+        box.innerHTML = UI.card({ body: UI.fieldGroup({ title: 'Thông tin pate chay', description: 'Hiện ở các thẻ thông tin trên trang pate chay.', fields: [
+          UI.field({ name: 'thanh_phan', label: 'Thành phần nguyên liệu', type: 'textarea', required: true, rows: 2, value: (pi.thanh_phan || []).join(', '), hint: 'Ngăn cách bằng dấu phẩy' }),
+          UI.field({ name: 'cach_bao_quan', label: 'Cách bảo quản', type: 'textarea', required: true, rows: 2, value: pi.cach_bao_quan || '' }),
+          '<div data-field="luong_cho_an"><p class="mb-2 text-sm font-bold text-neutral-800">Lượng cho ăn theo cân nặng <span class="text-danger-600">*</span></p><div data-feed></div><p class="mt-1 hidden items-center gap-1 text-xs font-bold text-danger-700" data-err id="err-feed"></p></div>',
+          UI.fileUpload({ name: 'giay_chung_nhan', label: 'Giấy chứng nhận ATTP', optional: true, kind: 'file', maxMB: 5, existing: pi.giay_chung_nhan ? [pi.giay_chung_nhan] : [], hint: 'JPG, PNG hoặc PDF tối đa 5MB', sizeMsg: 'Tệp tối đa 5MB (JPG, PNG, PDF)' }),
+          UI.field({ name: 'nsx_hsd', label: 'Ngày sản xuất & hạn dùng', required: true, maxlength: 255, value: pi.nsx_hsd || '' }),
+          UI.field({ name: 'cau_chuyen', label: 'Câu chuyện sản phẩm', type: 'textarea', rows: 3, optional: true, value: pi.cau_chuyen || '' }),
+          UI.alert({ tone: 'info', text: 'Bảng dinh dưỡng và câu hỏi thường gặp đang chờ cửa hàng xác nhận nơi lưu.' })] }) });
+        feed = UI.lineItems(box.querySelector('[data-feed]'), { editable: true, minRows: 1, minMsg: 'Vui lòng nhập lượng cho ăn', addLabel: 'Thêm dòng', rows: (pi.luong_cho_an || [['', '']]).map(function (x) { return { can_nang: x[0], luong: x[1] }; }), newRow: function () { return { can_nang: '', luong: '' }; },
+          columns: [{ key: 'can_nang', label: 'Cân nặng thú cưng', placeholder: 'Ví dụ: Dưới 5kg' }, { key: 'luong', label: 'Lượng mỗi ngày', placeholder: 'Ví dụ: 50g/ngày' }] });
+      }
+      function preview() {
+        var d = UI.formData(form), rows = variants ? variants.rows() : p.variants;
+        var prices = rows.map(function (r) { return +r.gia || 0; }).filter(Boolean), imgs = (form.querySelector('[data-upload="anh"]') ? UI.uploadFiles(form.querySelector('[data-upload="anh"]')) : []).map(function (f) { return f.url; });
+        var el = main.querySelector('[data-preview]'); if (!el) return;
+        el.innerHTML = UI.productCard({ id: 'preview', href: '#', name: d.ten || 'Tên sản phẩm', img: imgs[0] || '', petTags: App.petTags(d.pet_type_ids || []), price: prices.length ? Math.min.apply(null, prices) : 0, from: rows.length > 1, badges: pateNow() ? [{ text: 'Pate chay tự làm', tone: 'mint' }] : [], kind: pateNow() ? 'pate' : 'normal', cartAttrs: { disabled: true, tabindex: '-1' } });
+      }
+      function setErr(id, msg) { var e = main.querySelector('#' + id); if (!e) return; e.innerHTML = msg ? UI.icon('triangle-alert', 'size-3.5') + '<span>' + esc(msg) + '</span>' : ''; e.classList.toggle('hidden', !msg); e.classList.toggle('flex', !!msg); }
+      function validateAll() {
+        var pate = pateNow();
+        var rules = { ten: [R.required('Vui lòng nhập tên sản phẩm'), R.len(2, 200, 'Vui lòng nhập tên sản phẩm')], category_id: [R.required('Vui lòng nhập nhóm sản phẩm')], pet_type_ids: [R.required('Vui lòng nhập loại thú cưng')],
+          anh: [R.custom(function (v) { return v && v.length > 0; }, 'Vui lòng thêm ít nhất 1 ảnh')] };
+        if (pate) { rules.thanh_phan = [R.required('Vui lòng nhập thành phần')]; rules.cach_bao_quan = [R.required('Vui lòng nhập cách bảo quản')]; rules.nsx_hsd = [R.required('Vui lòng nhập ngày sản xuất và hạn dùng')]; }
+        var ok = UI.validate(form, rules), bad = 0;
+        var rows = variants.rows(), names = {}, skus = {}, msg = '';
+        var allSkus = DemoStore.list('products').filter(function (x) { return !src || mode !== 'edit' || x.id !== src.id; }).reduce(function (a, x) { return a.concat(x.variants.map(function (v) { return v.sku; })); }, []);
+        rows.forEach(function (r) { r._error = false; });
+        rows.forEach(function (r) {
+          var m = '';
+          if (!String(r.ten || '').trim()) m = 'Vui lòng nhập tên biến thể';
+          else if (names[r.ten.trim().toLowerCase()]) m = 'Tên biến thể bị trùng';
+          else if (!(+r.gia > 0)) m = 'Giá phải lớn hơn 0';
+          else if (r.gia_goc !== '' && r.gia_goc != null && +r.gia_goc > 0 && +r.gia_goc <= +r.gia) m = 'Giá gốc phải lớn hơn giá bán';
+          else if (!pate && (r.ton_kho === '' || !Number.isInteger(+r.ton_kho) || +r.ton_kho < 0)) m = 'Số lượng phải là số nguyên từ 0 trở lên';
+          else if (r.sku && (skus[r.sku] || allSkus.indexOf(r.sku) >= 0)) m = 'SKU đã tồn tại';
+          if (r.ten) names[r.ten.trim().toLowerCase()] = 1; if (r.sku) skus[r.sku] = 1;
+          if (m) { r._error = true; if (!msg) msg = m; bad++; }
+        });
+        if (!rows.length) msg = 'Sản phẩm cần ít nhất 1 biến thể';
+        variants.render(); setErr('err-variants', msg);
+        var feedMsg = '';
+        if (pate && feed && !feed.rows().some(function (r) { return String(r.can_nang || '').trim() && String(r.luong || '').trim(); })) feedMsg = 'Vui lòng nhập lượng cho ăn';
+        setErr('err-feed', feedMsg);
+        var total = form.querySelectorAll('[aria-invalid=true]').length + (msg ? 1 : 0) + (feedMsg ? 1 : 0);
+        main.querySelector('[data-form-summary]').innerHTML = total > 2 ? UI.alert({ tone: 'danger', text: 'Vui lòng kiểm tra lại ' + total + ' thông tin được đánh dấu' }) : '';
+        if (ok && msg) main.querySelector('[data-field="variants"]').scrollIntoView({ block: 'center', behavior: 'smooth' });
+        return ok && !msg && !feedMsg;
+      }
+      function save() {
+        if (!validateAll()) return;
+        var d = UI.formData(form), pate = pateNow(), now = new Date().toISOString();
+        var id = mode === 'edit' ? src.id : 'p' + Date.now();
+        var imgs = d.anh.map(function (f) { return f.url; });
+        var rec = Object.assign(mode === 'edit' ? JSON.parse(JSON.stringify(src)) : { sao: 0, so_danh_gia: 0, dist: { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 }, sold30: 0, tao_luc: now, has_orders: false }, {
+          id: id, ten: d.ten, thuong_hieu: d.thuong_hieu, mo_ta: d.mo_ta ? '<p>' + esc(d.mo_ta).replace(/\n+/g, '</p><p>') + '</p>' : '', anh: imgs, category_id: d.category_id, pet_type_ids: d.pet_type_ids, trang_thai: d.dang_ban === '1' ? 'DANG_BAN' : 'AN', la_pate: pate, cap_nhat: now,
+          variants: variants.rows().map(function (r, i) { return { id: r.id || id + '-v' + (i + 1) + '-' + Date.now().toString(36), ten: r.ten.trim(), sku: r.sku || '', gia: +r.gia, gia_goc: +r.gia_goc > 0 ? +r.gia_goc : null, ton_kho: pate ? null : +r.ton_kho, nguong: pate ? null : (+r.nguong || 5), anh: r.anh || imgs[0] }; })
+        });
+        if (pate) rec.pate = { thanh_phan: d.thanh_phan.split(',').map(function (x) { return x.trim(); }).filter(Boolean), cach_bao_quan: d.cach_bao_quan, nsx_hsd: d.nsx_hsd, cau_chuyen: d.cau_chuyen, luong_cho_an: feed.rows().filter(function (r) { return r.can_nang && r.luong; }).map(function (r) { return [r.can_nang, r.luong]; }), giay_chung_nhan: (d.giay_chung_nhan[0] || {}).url || '' };
+        if (mode === 'edit') DemoStore.update('products', id, rec); else DemoStore.insert('products', rec);
+        dirty = false;
+        UI.toast('Đã lưu sản phẩm ' + d.ten, 'success');
+        setTimeout(function () { location.href = U('pages/admin/san-pham.html'); }, 800);
+      }
+      form.addEventListener('submit', function (e) { e.preventDefault(); save(); });
+      form.addEventListener('input', function () { dirty = true; preview(); });
+      form.addEventListener('uploadchange', function () { dirty = true; preview(); });
+      form.addEventListener('change', function (e) { dirty = true; if (e.target.name === 'category_id') { paintVariants(); paintPate(); } preview(); });
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('[data-save]')) { save(); return; }
+        if (e.target.closest('[data-cancel]')) {
+          var back = U('pages/admin/san-pham.html');
+          if (!dirty) { location.href = back; return; }
+          UI.confirm({ title: 'Rời trang?', message: 'Bạn có thay đổi chưa lưu. Rời trang?', confirmLabel: 'Rời trang', danger: true }).then(function (ok) { if (ok) location.href = back; });
+        }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

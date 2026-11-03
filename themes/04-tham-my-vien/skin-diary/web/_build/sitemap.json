@@ -1,0 +1,89 @@
+{
+  "brand": "SKIN DIARY",
+  "language": "en",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Mỗi trang là một số tạp chí làm đẹp: masthead, dòng dateline 'Issue', tiêu đề serif khổng lồ có một chữ nghiêng đỏ cherry, đường kẻ mảnh chia cột và số mục kiểu No. 01 chạy xuyên suốt",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nhật ký làn da, biên tập bằng sự chăm chút",
+    "description": "Giao diện thẩm mỹ viện chăm sóc da phong cách tạp chí làm đẹp hiện đại."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Trang bìa tạp chí: headline, tuyên ngôn thương hiệu, ba nhóm dịch vụ dẫn sang trang Dịch vụ, bài chia sẻ chăm sóc da, kêu gọi đặt lịch tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-type", "source": "ai", "note": "Trang bìa tạp chí: dateline, headline lớn, ảnh chân dung cận cảnh, cover lines dẫn tới 3 chuyên mục" },
+        { "id": "manifesto", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Tuyên ngôn thương hiệu, drop cap, trích dẫn kéo ra lề" },
+        { "id": "chapters", "catalog": "services", "variant": "features-numbered", "source": "ai", "note": "3 nhóm dịch vụ No. 01–03, link sang pages/services.html#..." },
+        { "id": "journal", "catalog": "blog", "variant": "gallery-lookbook", "source": "ai", "note": "3 bài chia sẻ chăm sóc da, mở bài đọc trong modal" },
+        { "id": "quote", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "" },
+        { "id": "book-cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Nút Book a Consultation mở form tư vấn" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "beauty portrait studio red lips", "file": "assets/img/home-cover-portrait.jpg", "status": "ok" },
+        { "slot": "chapters — Skin Care", "query": "facial treatment spa woman", "file": "assets/img/home-skin-care.jpg", "status": "ok" },
+        { "slot": "chapters — Skin Renewal", "query": "facial treatment spa woman", "file": "assets/img/home-skin-renewal.jpg", "status": "ok" },
+        { "slot": "chapters — Skin Treatment", "query": "laser skin treatment clinic", "file": "assets/img/home-skin-treatment.jpg", "status": "ok" },
+        { "slot": "journal — serum", "query": "skincare serum dropper", "file": "assets/img/journal-serum.webp", "status": "ok" },
+        { "slot": "journal — evening routine", "query": "facial treatment spa woman", "file": "assets/img/journal-routine.jpg", "status": "ok" },
+        { "slot": "journal — rainy season", "query": "woman face closeup skin portrait", "file": "assets/img/home-manifesto-portrait.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Services & Prices",
+      "purpose": "Trình bày dịch vụ theo 3 chuyên mục biên tập Skin Care / Skin Renewal / Skin Treatment, mỗi dịch vụ có ảnh, mô tả, thời lượng, giá tham khảo; bảng giá đầy đủ theo tab; FAQ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Kèm mục lục 3 chuyên mục" },
+        { "id": "skin-care", "catalog": "services", "variant": "features-alternate", "source": "ai", "note": "Bài viết xen kẽ ảnh, 2 dịch vụ" },
+        { "id": "skin-renewal", "catalog": "editorial", "variant": "editorial-two-column", "source": "ai", "note": "Trang đôi hai cột, 2 dịch vụ" },
+        { "id": "skin-treatment", "catalog": "services", "variant": "features-bento", "source": "ai", "note": "Ảnh dọc lớn + cột chữ, 2 dịch vụ" },
+        { "id": "price-list", "catalog": "pricing", "variant": "features-tabs", "source": "ai", "note": "Bảng giá tham khảo theo tab chuyên mục" },
+        { "id": "faq", "catalog": "faq", "variant": "accordion", "source": "ai", "note": "" },
+        { "id": "book-cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "skin-care — Signature Diary Facial", "query": "facial treatment spa woman", "file": "assets/img/svc-signature-facial.jpg", "status": "ok" },
+        { "slot": "skin-care — Deep Hydration Ritual", "query": "facial treatment spa woman", "file": "assets/img/svc-hydration.jpg", "status": "ok" },
+        { "slot": "skin-renewal — Brightening Peel", "query": "facial treatment spa woman", "file": "assets/img/svc-peel.jpg", "status": "ok" },
+        { "slot": "skin-renewal — Enzyme Polish", "query": "facial treatment spa woman", "file": "assets/img/svc-microneedling.jpg", "status": "ok" },
+        { "slot": "skin-treatment — Fractional Laser", "query": "laser skin treatment clinic", "file": "assets/img/svc-laser.jpg", "status": "ok" },
+        { "slot": "skin-treatment — Clarity Programme", "query": "facial treatment spa woman", "file": "assets/img/svc-clarity.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Kể câu chuyện thương hiệu qua thư của nhà sáng lập, cách làm việc, không gian thực tế và đội ngũ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "letter", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Thư của nhà sáng lập" },
+        { "id": "method", "catalog": "process", "variant": "process-steps", "source": "ai", "note": "Lần thăm khám đầu tiên diễn ra thế nào" },
+        { "id": "space", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "Không gian thực tế, lightbox" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ai", "note": "1 ảnh thật + 2 khối chữ cái đầu" },
+        { "id": "book-cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "letter", "query": "skincare serum dropper", "file": "assets/img/about-editorial-portrait.jpg", "status": "ok" },
+        { "slot": "space — treatment room", "query": "spa treatment room", "file": "assets/img/about-treatment-room.jpg", "status": "ok" },
+        { "slot": "space — studio room", "query": "spa treatment room", "file": "assets/img/about-studio-room.jpg", "status": "ok" },
+        { "slot": "team — founder", "query": "woman doctor portrait smiling", "file": "assets/img/about-team-founder.jpg", "status": "ok" },
+        { "slot": "team — aesthetician & laser specialist", "query": "esthetician woman portrait", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng 3 trang chính (Home, Services & Prices, About) theo chú thích của BA; bài chia sẻ chăm sóc da mở trong modal thay vì trang riêng.",
+    "BA góp ý thêm nút chuyển đổi tiếng Anh / tiếng Việt → thêm bộ chuyển EN/VI ở header trên mọi trang (assets/js/site.js + data-i18n / data-i18n-attrs): tiếng Anh là mặc định, tiếng Việt dịch trọn trang kể cả title, meta, form, modal; <html lang> đổi theo lựa chọn, lưu localStorage; tiếng Việt dùng font Playfair Display + Be Vietnam Pro (có đủ dấu tiếng Việt) trong site.css.",
+    "Bảng màu theo art direction của BA (trắng giấy, đỏ cherry, hồng nude, đen) thay cho màu preset editorial; vẫn giữ tên màu preset (paper, ink, stone, muted, bronze) và thêm cherry, nude.",
+    "Contact không có trang riêng: thông tin liên hệ ở footer, đặt lịch qua modal form trên mọi trang."
+  ],
+  "limitations": [
+    "Form 'Book a Consultation' là bản demo, chưa có backend, không gửi đi.",
+    "Giá dịch vụ là giá tham khảo mẫu, cần khách xác nhận.",
+    "Cần ảnh chân dung thật của chuyên viên thẩm mỹ và chuyên viên laser (đang dùng khối chữ cái đầu)."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "lumiere",
+  "name": "LUMIÈRE",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website portfolio cá nhân",
+    "brand": "LUMIÈRE",
+    "purpose": "Xây dựng một landing page portfolio dành cho nhiếp ảnh gia chuyên nghiệp.\n\nWebsite phải khiến người xem cảm nhận được phong cách nghệ thuật của tác giả ngay từ màn hình đầu tiên.\n\nHình ảnh là yếu tố chính. Chữ, nút bấm và các chi tiết giao diện chỉ đóng vai trò hỗ trợ.\n\nĐối tượng:\n\nKhách hàng cá nhân.\n\nThương hiệu thời trang.\n\nTạp chí.\n\nĐơn vị tổ chức sự kiện.\n\nĐối tác sáng tạo.\n\nNhà tuyển dụng trong lĩnh vực hình ảnh.",
+    "audience": "",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "# MASTER PROMPT — LUMIÈRE\n## Thiết kế landing page Portfolio & CV cho nhiếp ảnh gia\n\n### 1. MỤC TIÊU\n\nXây dựng một landing page portfolio dành cho nhiếp ảnh gia chuyên nghiệp.\n\nWebsite phải khiến người xem cảm nhận được phong cách nghệ thuật của tác giả ngay từ màn hình đầu tiên.\n\nHình ảnh là yếu tố chính. Chữ, nút bấm và các chi tiết giao diện chỉ đóng vai trò hỗ trợ.\n\nĐối tượng:\n- Khách hàng cá nhân.\n- Thương hiệu thời trang.\n- Tạp chí.\n- Đơn vị tổ chức sự kiện.\n- Đối tác sáng tạo.\n- Nhà tuyển dụng trong lĩnh vực hình ảnh.\n\n### 2. ART DIRECTION\n\nPhong cách:\nFine Art Photography Gallery.\n\nBảng màu:\n- Đen sâu: #101010.\n- Xám than: #1A1A1A.\n- Trắng ngà: #F3F0E9.\n- Xám phụ: #9B9B9B.\n\nTypography:\n- Tiêu đề: Cormorant Garamond hoặc serif thanh lịch.\n- Nội dung: Inter.\n- Nhãn ảnh: sans-serif cỡ nhỏ.\n\nKhông sử dụng quá nhiều card, border bo tròn hoặc màu sắc rực rỡ.\n\nƯu tiên hình ảnh có bố cục điện ảnh, ánh sáng tốt và màu sắc nhất quán.\n\n### 3. HEADER\n\nThiết kế header tối giản.\n\nBên trái:\nLUMIÈRE — tên thương hiệu.\n\nỞ giữa hoặc bên phải:\n- PORTFOLIO.\n- ABOUT.\n- EXPERIENCE.\n- CONTACT.\n\nCó thể bổ sung nhãn:\nPHOTOGRAPHER / VISUAL ARTIST.\n\nHeader trong suốt ở đầu trang, chuyển sang nền tối khi cuộn.\n\n### 4. HERO — FULL-SCREEN PHOTOGRAPHY\n\nMàn hình đầu tiên sử dụng một bức ảnh nổi bật chiếm gần toàn bộ chiều rộng và chiều cao.\n\nẢnh phải có khả năng làm nền mà không khiến chữ khó đọc.\n\nCó thể sử dụng:\n- Ảnh chân dung nghệ thuật.\n- Ảnh thời trang.\n- Ảnh phong cảnh điện ảnh.\n- Ảnh đời sống mang tính kể chuyện.\n\nĐặt tên nhiếp ảnh gia ở một vị trí có chủ đích, không nhất thiết căn giữa.\n\nHiển thị:\n- Photographer / Visual Storyteller.\n- Một câu mô tả phong cách sáng tác.\n- Nút Explore Portfolio.\n- Chỉ báo cuộn xuống.\n\nKhông tự động phát video hoặc âm thanh.\n\n### 5. SELECTED SERIES — BỘ SƯU TẬP ẢNH\n\nChia thành các series độc lập.\n\nVí dụ:\n01 — HUMAN STORIES.\n02 — FASHION & FORM.\n03 — PLACES & LIGHT.\n04 — EVERYDAY MOMENTS.\n\nMỗi series có:\n- Ảnh bìa.\n- Tên series.\n- Năm thực hiện.\n- Thể loại.\n- Mô tả ngắn.\n- Số lượng ảnh nếu có dữ liệu.\n\nKhông trình bày các series theo cùng một kích thước.\n\nCó thể dùng:\n- Ảnh ngang toàn chiều rộng.\n- Cặp ảnh dọc.\n- Gallery dạng masonry.\n- Một ảnh lớn kết hợp các ảnh nhỏ.\n\nMục tiêu là tạo nhịp điệu như một triển lãm nhiếp ảnh thực tế.\n\n### 6. IMAGE VIEWER\n\nKhi người dùng nhấn vào ảnh, mở lightbox trên cùng trang.\n\nChức năng:\n- Hiển thị ảnh lớn.\n- Nút ảnh trước và ảnh tiếp theo.\n- Đóng bằng nút Close hoặc phím Escape.\n- Hiển thị chú thích nếu có.\n- Hỗ trợ bàn phím.\n- Khóa cuộn nền khi lightbox mở.\n- Trả lại vị trí cuộn khi đóng.\n\nTrên mobile:\n- Cho phép chạm để chuyển ảnh.\n- Nút đóng dễ nhìn.\n- Không để ảnh vượt quá màn hình.\n\nĐây là tương tác nằm trong landing page, không tạo trang gallery riêng.\n\n### 7. PHOTOGRAPHER STATEMENT\n\nThiết kế một section nền sáng để tạo tương phản với gallery tối.\n\nTiêu đề:\n\"Photography is a way of paying attention.\"\n\nBên dưới:\n- Tiểu sử.\n- Quan điểm sáng tác.\n- Nguồn cảm hứng.\n- Cách tiếp cận ánh sáng, con người và không gian.\n\nBố cục gồm một ảnh chân dung nhỏ và một đoạn giới thiệu khoảng 100–150 từ.\n\n### 8. EXPERIENCE & SELECTED CLIENTS\n\nHiển thị:\n- Kinh nghiệm làm việc.\n- Các dự án đã tham gia.\n- Triển lãm.\n- Tạp chí hoặc thương hiệu từng cộng tác.\n- Giải thưởng nếu có.\n\nChỉ sử dụng dữ liệu thật hoặc nội dung minh họa được đánh dấu.\n\nKhông tạo logo thương hiệu giả để gây hiểu nhầm về khách hàng.\n\n### 9. SKILLS & EQUIPMENT\n\nCác nhóm:\n- Portrait Photography.\n- Fashion Photography.\n- Documentary Photography.\n- Lighting.\n- Color Grading.\n- Photo Editing.\n\nPhần thiết bị chỉ xuất hiện nếu phù hợp với mục tiêu cá nhân.\n\nKhông cần biến section này thành danh sách dài các mẫu máy ảnh.\n\n### 10. CV & CONTACT\n\nHiển thị phần CV gồm:\n- Học vấn.\n- Kinh nghiệm.\n- Workshop hoặc chương trình chuyên môn.\n- Thành tích.\n- Dự án nổi bật.\n\nNút Download CV chỉ hoạt động khi có tệp thật.\n\nPhần liên hệ:\n- Email.\n- Instagram hoặc nền tảng portfolio phù hợp.\n- Địa điểm làm việc.\n- Nút Inquire About a Project.\n\n### 11. HIỆU ỨNG\n\n- Ảnh xuất hiện nhẹ khi cuộn.\n- Zoom ảnh rất nhỏ khi hover.\n- Chuyển cảnh fade giữa các ảnh.\n- Gallery không tải toàn bộ ảnh độ phân giải lớn cùng lúc.\n- Sử dụng lazy loading cho ảnh bên dưới màn hình đầu tiên.\n\nKhông sử dụng hiệu ứng khiến ảnh bị méo, đổi màu hoặc mất chất lượng.\n\n### 12. RESPONSIVE\n\nDesktop:\n- Hình ảnh lớn.\n- Gallery tự do.\n- Typography thanh lịch.\n\nTablet:\n- Điều chỉnh số cột.\n- Giữ tỷ lệ ảnh.\n\nMobile:\n- Một cột hoặc hai ảnh nhỏ cạnh nhau khi phù hợp.\n- Ưu tiên ảnh dọc.\n- Không yêu cầu hover.\n- Tối ưu thời gian tải.\n\n### 13. NGHIỆM THU\n\nTạo một landing page duy nhất, có khả năng thay thế ảnh và thông tin cá nhân.\n\nKhông tạo chức năng bán ảnh, đặt hàng hoặc thanh toán.\n\nKhông sử dụng ảnh mờ, ảnh lặp lại hoặc ảnh không phù hợp với chủ đề.\n\nKết quả phải giống một triển lãm nhiếp ảnh trực tuyến có tính nghệ thuật, không giống một website doanh nghiệp thông thường.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-24T04:27:55.320Z",
+  "updatedAt": "2026-10-24T04:40:52.029Z",
+  "screen": "done",
+  "request": "Website portfolio cá nhân",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\lumiere\\web",
+    "builtAt": "2026-10-24T04:40:37.746Z",
+    "pages": [
+      "index.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": []
+    }
+  },
+  "job": {
+    "id": "9248b08c-5019-4f32-bc27-953f120c93cb",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\lumiere\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 56,
+      "outputTokens": 51149,
+      "cacheReadTokens": 3954306,
+      "cacheCreationTokens": 184747,
+      "costUsd": 3.2920412,
+      "numTurns": 84,
+      "durationMs": 667133
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-24T04:40:48.333Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 3
+  }
+}

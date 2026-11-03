@@ -1,0 +1,72 @@
+:root {
+  --paper: #EEEEEC;
+  --surface: #F8F8F7;
+  --concrete: #C9C9C5;
+  --slab: #2A2A29;
+  --ink: #151515;
+  --muted: #555552;
+  --lime: #D7F032;
+  --ui-accent: #151515;
+  --font-display: 'Archivo', system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: 'Geist', system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--lime); color: var(--ink); }
+
+/* Ảnh kiến trúc: đen trắng, tương phản cao */
+.arch-img { filter: grayscale(1) contrast(1.08); }
+.arch-img-soft { filter: grayscale(1) contrast(1.02) brightness(1.03); }
+
+/* Header khi đã cuộn */
+.site-header.is-scrolled { border-bottom-color: var(--ink); }
+
+/* Công tắc ngôn ngữ */
+.lang-btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+/* Hộp thoại đặt lịch: góc vuông theo hệ thống */
+dialog[data-ui-modal], dialog#dat-lich {
+  border-radius: 0 !important;
+  max-width: min(94vw, 640px) !important;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 30px 80px rgba(21, 21, 21, .28) !important;
+}
+dialog#dat-lich { max-height: 92dvh; overflow-y: auto; }
+
+/* Trường form */
+.field {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(21, 21, 21, .45);
+  background: var(--surface);
+  color: var(--ink);
+  padding: .7rem .85rem;
+  font-size: 16px;
+  border-radius: 0;
+  transition: border-color .3s, box-shadow .3s;
+}
+.field::placeholder { color: #6b6b67; }
+.field:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px var(--lime); }
+select.field { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 18px) 21px, calc(100% - 13px) 21px; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 2.5rem; }
+
+/* Gạch chân chạy cho link chữ */
+.link-line { background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-repeat: no-repeat; background-position: 100% 100%; transition: background-size .5s cubic-bezier(.16, 1, .3, 1); }
+.link-line:hover, .link-line[aria-current="page"] { background-size: 100% 1px; background-position: 0 100%; }
+
+/* Bảng giá: số căn theo chữ số */
+.tabular { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .link-line { transition: none; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+}

@@ -1,0 +1,39 @@
+:root {
+  --paper: #FCFCFD;
+  --ink: #0F1218;
+  --stone: #EEF0F3;
+  --line: #D5DAE2;
+  --muted: #555C69;
+  --cobalt: #1637B5;
+  --cobalt-deep: #0E2680;
+  --signal: #E4471B;
+  --font-sans: 'Geist', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, system-ui, sans-serif;
+  --ui-accent: #1637B5;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { font-family: var(--font-sans); background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+/* Lưới kẻ mảnh kiểu phiếu y khoa (nền trang trí, không tương tác) */
+.grid-rule {
+  background-image: linear-gradient(to right, rgba(15,18,24,.07) 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%;
+}
+.grid-rule-light {
+  background-image: linear-gradient(to right, rgba(255,255,255,.12) 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%;
+}
+
+/* Header khi đã cuộn */
+header#top.is-scrolled { background: rgba(252,252,253,.97); border-bottom-color: var(--line); }
+
+/* Dialog đặt lịch */
+dialog#book { max-height: calc(100dvh - 2rem); }
+dialog#book::backdrop { background: rgba(15,18,24,.55); }
+
+.tabular { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

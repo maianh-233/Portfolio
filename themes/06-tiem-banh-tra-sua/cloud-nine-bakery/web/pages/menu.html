@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" data-vi-title="Thực đơn | CLOUD NINE BAKERY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | CLOUD NINE BAKERY</title>
+  <meta name="description" content="The CLOUD NINE BAKERY menu: cream cakes, mousse, pastries, meringues and milk tea, baked fresh every morning in Thao Dien.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="min-h-screen text-ink antialiased" data-sky="#C9E4F5,#FFFDFB | #F7DDE6,#DCD2F4 | #DCD2F4,#C9E4F5">
+
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-50 transition-all duration-500 [&.is-scrolled]:bg-cloud/85 [&.is-scrolled]:shadow-[0_12px_30px_-22px_rgba(78,74,126,.55)] [&.is-scrolled]:backdrop-blur-md">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="whitespace-nowrap font-display text-base font-semibold tracking-[0.1em] text-ink sm:text-xl sm:tracking-[0.2em]">CLOUD NINE <span class="text-dusk/70">BAKERY</span></a>
+    <nav class="hidden items-center gap-10 text-[15px] font-semibold lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 text-ink/80 transition-colors duration-300 hover:text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-dusk after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" aria-current="page" class="relative py-2 text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-100 after:bg-dusk after:transition-transform after:duration-500" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="relative py-2 text-ink/80 transition-colors duration-300 hover:text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-dusk after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex rounded-full border border-dusk/25 bg-cloud/60 p-1 text-xs font-bold" role="group" aria-label="Language">
+        <button type="button" data-lang-set="en" aria-pressed="true" class="lang-btn min-h-[36px] min-w-[40px] rounded-full px-3 transition-colors duration-300">EN</button>
+        <button type="button" data-lang-set="vi" aria-pressed="false" class="lang-btn min-h-[36px] min-w-[40px] rounded-full px-3 transition-colors duration-300">VI</button>
+      </div>
+      <a href="#visit" class="hidden min-h-[44px] items-center rounded-full bg-dusk px-5 text-sm font-bold text-cloud transition duration-300 hover:-translate-y-0.5 hover:bg-night active:scale-[.98] sm:inline-flex" data-vi="Ghé tiệm">Visit us</a>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-dusk/25 bg-cloud/60 lg:hidden" aria-label="Open menu" data-vi-aria="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-cloud p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col gap-1 font-display text-3xl" aria-label="Mobile">
+      <a href="../index.html" class="rounded-2xl px-3 py-3 hover:bg-sky/50" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" aria-current="page" class="rounded-2xl px-3 py-3 text-dusk" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="rounded-2xl px-3 py-3 hover:bg-sky/50" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <a href="#visit" class="mt-4 flex min-h-[48px] w-full items-center justify-center rounded-full bg-dusk font-bold text-cloud" data-vi="Ghé tiệm">Visit us</a>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section id="menu-hero" data-section="page-hero" class="relative flex min-h-[52vh] items-end overflow-hidden pb-14 pt-32 lg:min-h-[56vh] lg:pb-20" data-clouds="2" data-clouds-band="0-70" data-clouds-color="#ffffff" data-clouds-speed="0.5">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky via-lavender/50 to-transparent" aria-hidden="true"></div>
+    <div class="puff -left-[10%] bottom-[-20%] h-[60%] w-[55%]" aria-hidden="true"></div>
+    <div class="puff -right-[5%] bottom-[-25%] h-[70%] w-[50%]" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-end gap-6 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <h1 data-split="words" class="font-display text-6xl font-medium leading-[0.95] sm:text-7xl lg:col-span-7 lg:text-8xl 2xl:text-9xl" data-vi="Thực đơn">The Menu</h1>
+      <p data-reveal="up" class="max-w-md text-lg leading-relaxed text-ink/75 lg:col-span-4 lg:col-start-9 lg:pb-4" data-vi="Bánh kem, mousse, pastry và đồ uống, thay đổi nhẹ theo mùa trái cây. Bánh ra lò lúc 8 giờ sáng và 3 giờ chiều.">Cream cakes, mousse, pastries and drinks that change gently with the fruit season. Fresh trays at 8 am and 3 pm.</p>
+    </div>
+  </section>
+
+  <!-- MENU GALLERY -->
+  <section id="menu" data-section="gallery-filter" class="relative pb-24 pt-8 lg:pb-36">
+    <div data-filter-group class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="-mx-4 flex gap-2 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0 [&::-webkit-scrollbar]:hidden" role="toolbar" aria-label="Filter menu" data-vi-aria="Lọc thực đơn">
+        <button type="button" data-filter="all" class="min-h-[44px] shrink-0 rounded-full border border-dusk/25 bg-cloud/70 px-6 font-bold text-dusk transition duration-300 hover:bg-cloud [&.is-active]:border-dusk [&.is-active]:bg-dusk [&.is-active]:text-cloud" data-vi="Tất cả">All</button>
+        <button type="button" data-filter="cakes" class="min-h-[44px] shrink-0 rounded-full border border-dusk/25 bg-cloud/70 px-6 font-bold text-dusk transition duration-300 hover:bg-cloud [&.is-active]:border-dusk [&.is-active]:bg-dusk [&.is-active]:text-cloud" data-vi="Bánh kem">Cream cakes</button>
+        <button type="button" data-filter="mousse" class="min-h-[44px] shrink-0 rounded-full border border-dusk/25 bg-cloud/70 px-6 font-bold text-dusk transition duration-300 hover:bg-cloud [&.is-active]:border-dusk [&.is-active]:bg-dusk [&.is-active]:text-cloud">Mousse</button>
+        <button type="button" data-filter="pastry" class="min-h-[44px] shrink-0 rounded-full border border-dusk/25 bg-cloud/70 px-6 font-bold text-dusk transition duration-300 hover:bg-cloud [&.is-active]:border-dusk [&.is-active]:bg-dusk [&.is-active]:text-cloud">Pastry</button>
+        <button type="button" data-filter="drinks" class="min-h-[44px] shrink-0 rounded-full border border-dusk/25 bg-cloud/70 px-6 font-bold text-dusk transition duration-300 hover:bg-cloud [&.is-active]:border-dusk [&.is-active]:bg-dusk [&.is-active]:text-cloud" data-vi="Đồ uống">Drinks</button>
+      </div>
+
+      <div class="mt-12 columns-1 gap-8 sm:columns-2 lg:columns-3 2xl:columns-4">
+        <!-- Cakes -->
+        <article data-category="cakes" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_cream_cake_-_Rawlab_2025-08-31.jpg?width=1000" data-lightbox="menu" data-caption="Strawberry Cloud Slice" class="block overflow-hidden rounded-[2.5rem] bg-blush">
+            <div class="aspect-[4/5]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_cream_cake_-_Rawlab_2025-08-31.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Slice of strawberry cream cake on a plate" data-vi-alt="Lát bánh kem dâu trên đĩa" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Strawberry Cloud Slice</h3><p class="shrink-0 font-bold text-dusk">65,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Bông lan sữa ba tầng, kem tươi ít ngọt, dâu Đà Lạt.">Three layers of milk sponge, light cream and Da Lat strawberries.</p>
+        </article>
+
+        <article data-category="mousse" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Mousse_cake_7.jpg?width=1000" data-lightbox="menu" data-caption="Berry Velvet Mousse" class="block overflow-hidden rounded-[2.5rem] bg-lavender">
+            <div class="aspect-square"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mousse_cake_7.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Red berry mousse cake topped with blueberries" data-vi-alt="Bánh mousse quả mọng đỏ phủ việt quất" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Berry Velvet Mousse</h3><p class="shrink-0 font-bold text-dusk">75,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Mousse dâu rừng trên đế sô-cô-la, phủ thạch quả mọng.">Wild berry mousse on a chocolate base, finished with berry glaze.</p>
+        </article>
+
+        <article data-category="pastry" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Homemade_meringues_%2816961016019%29.jpg?width=1000" data-lightbox="menu" data-caption="Meringue Clouds" class="block overflow-hidden rounded-[2.5rem] bg-sky">
+            <div class="aspect-[3/4]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Homemade_meringues_%2816961016019%29.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Rows of white piped meringues" data-vi-alt="Những hàng meringue trắng bắt kem" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Meringue Clouds</h3><p class="shrink-0 font-bold text-dusk">49,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Túi 12 viên meringue vani, giòn ngoài, tan trong miệng.">A bag of twelve vanilla meringues, crisp outside and melting inside.</p>
+        </article>
+
+        <article data-category="drinks" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Classic_bubble_tea.jpg?width=1000" data-lightbox="menu" data-caption="Classic Milk Tea" class="block overflow-hidden rounded-[2.5rem] bg-blush">
+            <div class="aspect-[4/5]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Classic_bubble_tea.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Glass mug of classic milk tea with a straw" data-vi-alt="Ly trà sữa truyền thống với ống hút" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Classic Milk Tea</h3><p class="shrink-0 font-bold text-dusk">49,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Hồng trà Assam ủ lạnh với sữa tươi. Chọn độ ngọt 30, 50 hoặc 70%.">Cold-brewed Assam with fresh milk. Choose 30, 50 or 70% sweetness.</p>
+        </article>
+
+        <article data-category="cakes" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_crape_shortcake2.jpg?width=1000" data-lightbox="menu" data-caption="Strawberry Crepe Cake" class="block overflow-hidden rounded-[2.5rem] bg-blush">
+            <div class="aspect-[3/4]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_crape_shortcake2.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Strawberry crepe cake with glossy strawberries on top" data-vi-alt="Bánh crepe ngàn lớp với dâu tây bóng phía trên" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Strawberry Crepe Cake</h3><p class="shrink-0 font-bold text-dusk">70,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Hai mươi lớp crepe mỏng xen kem vani và dâu tươi.">Twenty thin crepes layered with vanilla cream and fresh strawberries.</p>
+        </article>
+
+        <article data-category="pastry" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Macarons_Pixabay.jpg?width=1000" data-lightbox="menu" data-caption="Pastel Macarons" class="block overflow-hidden rounded-[2.5rem] bg-lavender">
+            <div class="aspect-square"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Macarons_Pixabay.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Stack of pastel macarons" data-vi-alt="Chồng bánh macaron màu pastel" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Pastel Macarons</h3><p class="shrink-0 font-bold text-dusk">120,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Hộp 6 vị: vani, phúc bồn tử, chanh dây, matcha, khoai môn, sô-cô-la.">Box of six: vanilla, raspberry, passion fruit, matcha, taro and chocolate.</p>
+        </article>
+
+        <article data-category="mousse" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Blackberry_passionfruit_mousse_-_Jacob%27s_Bakery_%2B_Cafe_2025-06-19.jpg?width=1000" data-lightbox="menu" data-caption="Blackberry Passion Dome" class="block overflow-hidden rounded-[2.5rem] bg-sky">
+            <div class="aspect-[4/5]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Blackberry_passionfruit_mousse_-_Jacob%27s_Bakery_%2B_Cafe_2025-06-19.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Small passion fruit mousse topped with blackberries" data-vi-alt="Bánh mousse chanh dây nhỏ phủ mâm xôi đen" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Blackberry Passion Dome</h3><p class="shrink-0 font-bold text-dusk">79,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Mousse chanh dây chua nhẹ, nhân mâm xôi đen.">Bright passion fruit mousse with a blackberry heart.</p>
+        </article>
+
+        <article data-category="drinks" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Matcha_Bubble_Milk_Tea%2C_Apr_2026.jpg?width=1000" data-lightbox="menu" data-caption="Matcha Pearl Milk Tea" class="block overflow-hidden rounded-[2.5rem] bg-lavender">
+            <div class="aspect-[3/4]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Matcha_Bubble_Milk_Tea%2C_Apr_2026.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Iced matcha milk tea with tapioca pearls" data-vi-alt="Trà sữa matcha đá với trân châu" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Matcha Pearl Milk Tea</h3><p class="shrink-0 font-bold text-dusk">59,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Matcha Uji, sữa tươi và trân châu đường đen nấu mỗi giờ.">Uji matcha, fresh milk and brown sugar pearls cooked every hour.</p>
+        </article>
+
+        <article data-category="pastry" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Choux_%C3%A0_la_cr%C3%A8me_%2819387655069%29.jpg?width=1000" data-lightbox="menu" data-caption="Vanilla Cream Puffs" class="block overflow-hidden rounded-[2.5rem] bg-blush">
+            <div class="aspect-[4/5]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Choux_%C3%A0_la_cr%C3%A8me_%2819387655069%29.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Golden cream puffs dusted with sugar" data-vi-alt="Bánh su kem vàng rắc đường" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Vanilla Cream Puffs</h3><p class="shrink-0 font-bold text-dusk">59,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Ba chiếc su giòn, nhân kem vani Madagascar.">Three crisp choux filled with Madagascar vanilla cream.</p>
+        </article>
+
+        <article data-category="cakes" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/A_beautifully_arranged_dessert_table_features_a_macaron_tower_and_a_multi-layered_cake%2C_set_in_a_garden_during_a_spring_celebration.jpg?width=1000" data-lightbox="menu" data-caption="Garden Celebration Cake" class="block overflow-hidden rounded-[2.5rem] bg-sky">
+            <div class="aspect-square"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_beautifully_arranged_dessert_table_features_a_macaron_tower_and_a_multi-layered_cake%2C_set_in_a_garden_during_a_spring_celebration.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Tiered celebration cake beside a macaron tower in a garden" data-vi-alt="Bánh tầng mừng tiệc bên tháp macaron trong vườn" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Garden Celebration Cake</h3><p class="shrink-0 font-bold text-dusk" data-vi="từ 650,000 ₫">from 650,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Bánh tiệc 2 tầng theo mùa. Gọi trước 48 giờ để trao đổi.">Two-tier seasonal cake. Call 48 hours ahead to talk it through.</p>
+        </article>
+
+        <article data-category="mousse" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Mango_mousse_cake_%288201823494%29.jpg?width=1000" data-lightbox="menu" data-caption="Mango Sunrise Mousse" class="block overflow-hidden rounded-[2.5rem] bg-blush">
+            <div class="aspect-[3/4]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mango_mousse_cake_%288201823494%29.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Slice of mango mousse cake on a plate" data-vi-alt="Lát bánh mousse xoài trên đĩa" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Mango Sunrise Mousse</h3><p class="shrink-0 font-bold text-dusk">72,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Mousse xoài cát Hòa Lộc, lớp thạch chanh dây.">Hoa Loc mango mousse with a passion fruit jelly layer.</p>
+        </article>
+
+        <article data-category="pastry" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Croissant%2C_whole.jpg?width=1000" data-lightbox="menu" data-caption="Butter Croissant" class="block overflow-hidden rounded-[2.5rem] bg-sky">
+            <div class="aspect-[4/5]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Croissant%2C_whole.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Golden butter croissant" data-vi-alt="Bánh sừng bò bơ vàng óng" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Butter Croissant</h3><p class="shrink-0 font-bold text-dusk">45,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Cán bột trong ba ngày với bơ lên men Pháp.">Laminated over three days with cultured French butter.</p>
+        </article>
+
+        <article data-category="drinks" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Matcha_tea_latte_with_rosetta_latte_art.jpg?width=1000" data-lightbox="menu" data-caption="Matcha Cloud Latte" class="block overflow-hidden rounded-[2.5rem] bg-lavender">
+            <div class="aspect-square"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Matcha_tea_latte_with_rosetta_latte_art.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Hot matcha latte with leaf latte art" data-vi-alt="Matcha latte nóng với hình lá trên bọt sữa" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Matcha Cloud Latte</h3><p class="shrink-0 font-bold text-dusk">62,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Matcha nóng với bọt sữa yến mạch mịn như mây.">Hot matcha under a cloud of silky oat milk foam.</p>
+        </article>
+
+        <article data-category="pastry" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Pistachio_eclair_-_Milfey_Patisserie_2026-05-02.jpg?width=1000" data-lightbox="menu" data-caption="Pistachio Eclair" class="block overflow-hidden rounded-[2.5rem] bg-blush">
+            <div class="aspect-[3/4]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pistachio_eclair_-_Milfey_Patisserie_2026-05-02.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Pistachio eclair on a plate" data-vi-alt="Bánh eclair hạt dẻ cười trên đĩa" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Pistachio Eclair</h3><p class="shrink-0 font-bold text-dusk">62,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Vỏ choux giòn, kem hạt dẻ cười rang.">Crisp choux with roasted pistachio cream.</p>
+        </article>
+
+        <article data-category="pastry" class="group mb-10 break-inside-avoid">
+          <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%2C_kiwi_and_blueberry_tart_by_rmkoske.jpg?width=1000" data-lightbox="menu" data-caption="Fruit Garden Tart" class="block overflow-hidden rounded-[2.5rem] bg-sky">
+            <div class="aspect-[4/5]"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%2C_kiwi_and_blueberry_tart_by_rmkoske.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Tart topped with strawberries, kiwi and blueberries" data-vi-alt="Bánh tart phủ dâu tây, kiwi và việt quất" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250"></div>
+          </a>
+          <div class="mt-5 flex items-baseline justify-between gap-4 px-1"><h3 class="font-display text-2xl font-semibold lg:text-3xl">Fruit Garden Tart</h3><p class="shrink-0 font-bold text-dusk">72,000 ₫</p></div>
+          <p class="mt-1 px-1 text-ink/70" data-vi="Vỏ bơ hạnh nhân, kem vani và trái cây cắt mỗi sáng.">Almond butter crust, vanilla custard and fruit cut each morning.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIRINGS -->
+  <section id="pairings" data-section="features-numbered" class="relative py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <h2 data-reveal="up" class="font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:sticky lg:top-28 lg:text-6xl" data-vi="Cặp đôi hoàn hảo">Perfect pairs</h2>
+        <p data-reveal="up" class="mt-6 max-w-sm text-lg leading-relaxed text-ink/75" data-vi="Gợi ý từ quầy pha chế: một chiếc bánh, một ly trà, một buổi chiều chậm lại.">Suggestions from our tea bar: one cake, one cup, one slower afternoon.</p>
+      </div>
+      <ol data-reveal-stagger="100" class="lg:col-span-7 lg:col-start-6">
+        <li class="group grid grid-cols-[auto,1fr] gap-6 rounded-[2rem] px-4 py-8 transition-colors duration-500 hover:bg-cloud/60 sm:gap-10 sm:px-8">
+          <span class="font-display text-5xl italic text-sakura sm:text-6xl">01</span>
+          <div>
+            <h3 class="font-display text-2xl font-semibold sm:text-3xl" data-vi="Strawberry Cloud Slice và Classic Milk Tea">Strawberry Cloud Slice with Classic Milk Tea</h3>
+            <p class="mt-2 text-ink/70" data-vi="Vị chát nhẹ của hồng trà làm dâu và kem thêm tươi.">The gentle tannin of black tea makes the cream and berries taste brighter.</p>
+          </div>
+        </li>
+        <li class="group grid grid-cols-[auto,1fr] gap-6 rounded-[2rem] px-4 py-8 transition-colors duration-500 hover:bg-cloud/60 sm:gap-10 sm:px-8">
+          <span class="font-display text-5xl italic text-sakura sm:text-6xl">02</span>
+          <div>
+            <h3 class="font-display text-2xl font-semibold sm:text-3xl" data-vi="Mango Sunrise Mousse và Matcha Cloud Latte">Mango Sunrise Mousse with Matcha Cloud Latte</h3>
+            <p class="mt-2 text-ink/70" data-vi="Xoài ngọt gặp matcha đắng nhẹ, như nắng sớm sau mưa.">Sweet mango meets soft bitter matcha, like early sun after rain.</p>
+          </div>
+        </li>
+        <li class="group grid grid-cols-[auto,1fr] gap-6 rounded-[2rem] px-4 py-8 transition-colors duration-500 hover:bg-cloud/60 sm:gap-10 sm:px-8">
+          <span class="font-display text-5xl italic text-sakura sm:text-6xl">03</span>
+          <div>
+            <h3 class="font-display text-2xl font-semibold sm:text-3xl" data-vi="Meringue Clouds và Matcha Pearl Milk Tea">Meringue Clouds with Matcha Pearl Milk Tea</h3>
+            <p class="mt-2 text-ink/70" data-vi="Món mang đi yêu thích của khách quen: giòn, mát và vừa ngọt.">Our regulars' favourite to take away: crisp, cool and just sweet enough.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" data-section="cta-sky" class="relative overflow-hidden bg-gradient-to-b from-lavender via-dusk to-night pb-24 pt-32 text-cloud lg:pb-32 lg:pt-44" data-particles="stars" data-particles-color="#FFF4E6" data-particles-density="0.7">
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-end gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-7">
+        <h2 data-reveal="up" class="font-display text-5xl font-medium leading-[1] sm:text-6xl lg:text-7xl" data-vi="Đến tiệm để nếm thử">Taste it in person</h2>
+        <p data-reveal="up" class="mt-6 max-w-xl text-lg leading-relaxed text-cloud/80" data-vi="Thực đơn chỉ để tham khảo, tiệm không nhận đặt hàng trực tuyến. Giá đã gồm VAT.">This menu is for browsing only, we do not take online orders. Prices include VAT.</p>
+      </div>
+      <div data-reveal="up" class="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:justify-end">
+        <a href="https://www.google.com/maps/search/?api=1&query=Thao+Dien+Thu+Duc+Ho+Chi+Minh+City" target="_blank" rel="noopener" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-cloud px-8 font-bold text-dusk transition duration-300 hover:-translate-y-1 hover:bg-blush active:scale-[.98]" data-vi="Mở bản đồ">Open in Maps</a>
+        <a href="tel:+842837449019" class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-cloud/40 px-8 font-bold text-cloud transition duration-300 hover:-translate-y-1 hover:bg-cloud/10 active:scale-[.98]">+84 28 3744 9019</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="bg-night text-cloud/80">
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 border-t border-cloud/10 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-xl font-semibold tracking-[0.2em] text-cloud">CLOUD NINE BAKERY</a>
+    <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold" aria-label="Footer">
+      <a href="../index.html" class="py-2 hover:text-cloud" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="py-2 hover:text-cloud" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="py-2 hover:text-cloud" data-vi="Về chúng tôi">About</a>
+      <a href="mailto:hello@cloudninebakery.vn" class="py-2 hover:text-cloud">hello@cloudninebakery.vn</a>
+      <a href="tel:+842837449019" class="py-2 hover:text-cloud">+84 28 3744 9019</a>
+    </nav>
+    <p class="text-sm text-cloud/60">&copy; 2026 CLOUD NINE BAKERY</p>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+</body>
+</html>

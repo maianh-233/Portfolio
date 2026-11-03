@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khuyến mãi | Quản lý tiệm</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-020 Khuyến mãi và điểm khách quen: FR-035, FR-037, FR-038. Chỉ Chủ tiệm. -->
+<body data-screen="SCR-020" data-layout="admin" data-nav="promos" data-title="Khuyến mãi" data-deny-msg="Bạn không có quyền thực hiện thao tác này." class="admin bg-[#FFFBF6] text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="lg:pl-60 pb-24 lg:pb-12">
+    <div class="mx-auto max-w-admin px-4 md:px-6 lg:px-8 pt-4 lg:pt-8">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h1 class="text-[20px] lg:text-2xl font-extrabold">Khuyến mãi</h1>
+        <div class="inline-flex rounded-full bg-white border border-beige p-1" role="tablist" aria-label="Nhóm">
+          <button type="button" role="tab" data-tab="promo" class="h-9 px-4 rounded-full text-sm font-bold">Giảm giá dịp lễ</button>
+          <button type="button" role="tab" data-tab="points" class="h-9 px-4 rounded-full text-sm font-bold">Điểm khách quen</button>
+        </div>
+      </div>
+      <div id="panel" class="mt-4"></div>
+    </div>
+  </main>
+
+  <script>
+    App.onReady(function () {
+      var S = DB.get('settings');
+      var tab = 'promo';
+      var PST = { running: ['Đang diễn ra', 'bg-mint text-mint-strong'], upcoming: ['Sắp diễn ra', 'bg-info-soft text-info'], ended: ['Đã kết thúc', 'bg-stone2 text-stone2-strong'], off: ['Đã tắt', 'bg-stone2 text-stone2-strong'] };
+      function fmtDT(s) { var d = s.slice(0, 10); return Fmt.dateShort(d); }
+      function level(p) { return p.type === 'percent' ? p.value + '%' : Fmt.money(p.value); }
+      function scope(p) { return p.scope === 'all' ? 'Tất cả bánh' : p.cakeIds.length + ' bánh'; }
+
+      /* ---------------- Giảm giá dịp lễ ---------------- */
+      function promoTab() {
+        var list = DB.get('promotions');
+        var rows = list.map(function (p, i) {
+          var st = PST[Promo.statusOf(p)];
+          return { p: p, i: i, st: st };
+        });
+        $('#panel').innerHTML = '<div class="flex justify-end"><button type="button" id="add" class="btn btn-primary h-10 px-4 text-sm"><i class="ph ph-plus" aria-hidden="true"></i>Tạo chương trình</button></div>' +
+          '<p class="mt-3 rounded-xl bg-butter/70 px-4 py-2.5 text-sm text-butter-strong font-semibold"><i class="ph ph-info" aria-hidden="true"></i> Hình thức giảm (% hay số tiền) và việc cộng dồn với điểm đang chờ tiệm xác nhận.</p>' +
+          (list.length ? '<div class="mt-3 hidden md:block rounded-2xl bg-white border border-beige overflow-hidden"><table class="admin-table"><thead><tr><th>Tên</th><th>Mức giảm</th><th>Thời gian</th><th>Phạm vi</th><th>Trạng thái</th><th>Bật / Tắt</th></tr></thead><tbody>' +
+            rows.map(function (r) { return '<tr data-i="' + r.i + '" tabindex="0"><td class="font-bold">' + Fmt.esc(r.p.name) + '</td><td class="tabular-nums">' + level(r.p) + '</td><td class="tabular-nums whitespace-nowrap">' + fmtDT(r.p.start) + ' - ' + fmtDT(r.p.end) + '</td><td>' + scope(r.p) + '</td><td><span class="badge ' + r.st[1] + '">' + r.st[0] + '</span></td><td class="sw-cell"><label class="switch"><input type="checkbox" data-sw="' + r.i + '"' + (r.p.enabled ? ' checked' : '') + ' aria-label="Bật chương trình ' + Fmt.esc(r.p.name) + '"><span></span></label></td></tr>'; }).join('') +
+            '</tbody></table></div><ul class="md:hidden mt-3 space-y-2">' + rows.map(function (r) {
+              return '<li class="rounded-2xl bg-white border border-beige p-4"><div class="flex items-start justify-between gap-2"><button type="button" class="text-left" data-i="' + r.i + '"><span class="block font-extrabold">' + Fmt.esc(r.p.name) + '</span><span class="text-sm text-ink-muted tabular-nums">' + level(r.p) + ' · ' + fmtDT(r.p.start) + ' - ' + fmtDT(r.p.end) + ' · ' + scope(r.p) + '</span></button><label class="switch"><input type="checkbox" data-sw="' + r.i + '"' + (r.p.enabled ? ' checked' : '') + ' aria-label="Bật chương trình ' + Fmt.esc(r.p.name) + '"><span></span></label></div><span class="badge mt-2 ' + r.st[1] + '">' + r.st[0] + '</span></li>';
+            }).join('') + '</ul>'
+            : '<div class="mt-3 rounded-2xl bg-white border border-beige">' + UI.empty({ icon: 'ph-tag', title: 'Chưa có chương trình nào', action: '<button type="button" class="btn btn-primary h-10 px-5" onclick="document.getElementById(\'add\').click()">Tạo chương trình</button>' }) + '</div>');
+        $('#add').onclick = function () { promoForm(null); };
+        $all('[data-i]').forEach(function (r) { r.onclick = function (e) { if (e.target.closest('.sw-cell') || e.target.closest('.switch')) return; promoForm(list[+r.dataset.i]); }; r.onkeydown = function (e) { if (e.key === 'Enter') promoForm(list[+r.dataset.i]); }; });
+        $all('[data-sw]').forEach(function (cb) {
+          cb.onchange = function () {
+            var p = list[+cb.dataset.sw];
+            if (!cb.checked && Promo.statusOf(p) === 'running') {
+              Modal.confirm({ title: 'Tắt chương trình đang chạy?', message: 'Giá giảm của "' + Fmt.esc(p.name) + '" sẽ ngừng áp dụng ngay cho đơn mới.', confirmLabel: 'Tắt chương trình', danger: true })
+                .then(function (x) { if (x.ok) { p.enabled = false; DB.save('promotions'); Toast.show('Đã tắt chương trình', 'success'); } promoTab(); });
+              return;
+            }
+            p.enabled = cb.checked; DB.save('promotions'); Toast.show(cb.checked ? 'Đã bật chương trình' : 'Đã tắt chương trình', 'success'); promoTab();
+          };
+        });
+      }
+      function promoForm(p) {
+        var isNew = !p;
+        var P = p ? JSON.parse(JSON.stringify(p)) : { id: 'KM' + ('0' + (DB.get('promotions').length + 1)).slice(-2), name: '', name_en: '', description: '', type: 'percent', value: 10, start: MOCK.today + 'T00:00', end: MOCK.helpers.d(7) + 'T23:59', scope: 'all', cakeIds: [], enabled: true, banner: '' };
+        var banner = P.banner ? [{ src: P.banner, name: 'Banner' }] : [];
+        var cakes = Cakes.all().filter(function (c) { return c.status === 'active'; });
+        Modal.open({ title: isNew ? 'Tạo chương trình' : 'Sửa chương trình', size: 'lg',
+          body: '<div class="grid md:grid-cols-2 gap-4">' +
+            '<div class="field"><label class="field-label" for="k-name">Tên chương trình (VI) <span class="text-danger">*</span></label><input id="k-name" maxlength="100" class="field-input" value="' + Fmt.esc(P.name) + '"></div>' +
+            '<div class="field"><label class="field-label" for="k-name-en">Tên (EN)</label><input id="k-name-en" maxlength="100" class="field-input" value="' + Fmt.esc(P.name_en || '') + '"></div>' +
+            '<div class="field md:col-span-2"><label class="field-label" for="k-desc">Mô tả</label><textarea id="k-desc" rows="2" maxlength="500" class="field-input">' + Fmt.esc(P.description) + '</textarea></div>' +
+            '<fieldset class="field"><legend class="field-label mb-1">Hình thức giảm <span class="text-danger">*</span></legend><div class="grid grid-cols-2 gap-2"><label class="option-card !min-h-[44px] !py-2"><input type="radio" name="k-type" value="percent" class="sr-only"' + (P.type === 'percent' ? ' checked' : '') + '><span class="font-bold">Phần trăm</span></label><label class="option-card !min-h-[44px] !py-2"><input type="radio" name="k-type" value="amount" class="sr-only"' + (P.type === 'amount' ? ' checked' : '') + '><span class="font-bold">Số tiền</span></label></div></fieldset>' +
+            '<div class="field"><label class="field-label" for="k-value">Mức giảm <span id="k-unit" class="text-ink-muted">(' + (P.type === 'percent' ? '%' : '₫') + ')</span> <span class="text-danger">*</span></label><input id="k-value" type="number" min="1" class="field-input tabular-nums" value="' + P.value + '"></div>' +
+            '<div class="field"><label class="field-label" for="k-start">Bắt đầu <span class="text-danger">*</span></label><input id="k-start" type="datetime-local" class="field-input" value="' + P.start + '"></div>' +
+            '<div class="field"><label class="field-label" for="k-end">Kết thúc <span class="text-danger">*</span></label><input id="k-end" type="datetime-local" class="field-input" value="' + P.end + '"></div>' +
+            '<fieldset class="md:col-span-2"><legend class="field-label mb-1">Phạm vi <span class="text-danger">*</span></legend><div class="flex flex-wrap gap-4"><label class="flex items-center gap-2 font-semibold"><input type="radio" name="k-scope" value="all"' + (P.scope === 'all' ? ' checked' : '') + '>Tất cả bánh</label><label class="flex items-center gap-2 font-semibold"><input type="radio" name="k-scope" value="selected"' + (P.scope === 'selected' ? ' checked' : '') + '>Chọn bánh</label></div>' +
+            '<div id="k-cakes" class="' + (P.scope === 'selected' ? '' : 'hidden ') + 'mt-2 max-h-48 overflow-auto rounded-xl border border-beige p-3 grid sm:grid-cols-2 gap-1">' + cakes.map(function (c) { return '<label class="flex items-center gap-2 text-sm min-h-[32px]"><input type="checkbox" value="' + c.id + '"' + (P.cakeIds.indexOf(c.id) > -1 ? ' checked' : '') + '>' + Fmt.esc(c.name) + '</label>'; }).join('') + '</div><p id="k-cakes-err" class="field-error hidden"></p></fieldset>' +
+            '<div class="md:col-span-2"><p class="field-label mb-2">Banner trang chủ</p><div id="k-banner"></div></div>' +
+            '<div class="md:col-span-2"><p class="field-label mb-2">Xem trước băng khuyến mãi</p><div id="k-preview"></div></div>' +
+            '<label class="flex items-center gap-3 font-semibold"><span class="switch"><input id="k-enabled" type="checkbox"' + (P.enabled ? ' checked' : '') + '><span></span></span>Bật chương trình</label></div>',
+          actions: [{ label: 'Đóng' }, { label: 'Lưu chương trình', variant: 'primary', onClick: function (c, el) {
+            var errs = [], name = $('#k-name', el), val = $('#k-value', el), st = $('#k-start', el), en = $('#k-end', el);
+            var type = $('input[name=k-type]:checked', el).value, sc = $('input[name=k-scope]:checked', el).value;
+            var ids = $all('#k-cakes input:checked', el).map(function (x) { return +x.value; });
+            if (!name.value.trim()) errs.push([name, 'Vui lòng nhập tên chương trình.']);
+            var v = +val.value;
+            if (!(v > 0) || (type === 'percent' && v > 100)) errs.push([val, 'Mức giảm không hợp lệ.']); // E-KM-02
+            if (!st.value || !en.value || en.value <= st.value) errs.push([en, 'Thời gian kết thúc phải sau thời gian bắt đầu.']); // E-KM-01
+            if (sc === 'selected' && !ids.length) { var ce = $('#k-cakes-err', el); ce.textContent = 'Vui lòng chọn ít nhất 1 bánh.'; ce.classList.remove('hidden'); errs.push([$('#k-cakes input', el), null]); }
+            if (errs.length) { errs.forEach(function (e) { if (e[1]) FormUI.setError(e[0], e[1]); }); errs[0][0] && errs[0][0].focus(); return false; }
+            Object.assign(P, { name: name.value.trim(), name_en: $('#k-name-en', el).value.trim(), description: $('#k-desc', el).value.trim(), type: type, value: v, start: st.value, end: en.value, scope: sc, cakeIds: sc === 'all' ? [] : ids, enabled: $('#k-enabled', el).checked, banner: banner[0] ? banner[0].src : '' });
+            var list = DB.get('promotions');
+            if (isNew) list.unshift(P); else Object.assign(p, P);
+            DB.save('promotions'); Toast.show('Đã lưu chương trình', 'success'); promoTab();
+          } }],
+          onOpen: function (el) {
+            Uploader.mount($('#k-banner', el), { max: 1, files: banner, error: 'Ảnh phải là JPG, PNG, WEBP, tối đa 5 MB.', onChange: function (f) { banner = f; } });
+            function preview() {
+              var type = $('input[name=k-type]:checked', el).value, v = $('#k-value', el).value || 0;
+              $('#k-unit', el).textContent = '(' + (type === 'percent' ? '%' : '₫') + ')';
+              $('#k-preview', el).innerHTML = '<div class="rounded-2xl bg-butter px-4 py-3 flex items-center gap-3"><i class="ph-fill ph-gift text-2xl text-butter-strong" aria-hidden="true"></i><div class="flex-1"><p class="font-extrabold">' + Fmt.esc($('#k-name', el).value || 'Tên chương trình') + ': giảm ' + (type === 'percent' ? v + '%' : Fmt.money(+v)) + '</p><p class="text-sm text-butter-strong">' + Fmt.esc($('#k-desc', el).value) + ' đến hết ' + ($('#k-end', el).value ? Fmt.date($('#k-end', el).value) : '...') + '.</p></div><span class="btn btn-primary h-9 px-4 text-sm pointer-events-none">Xem bánh</span></div>';
+            }
+            $all('input, textarea', el).forEach(function (x) { x.addEventListener('input', preview); x.addEventListener('change', preview); });
+            $all('input[name=k-scope]', el).forEach(function (r) { r.onchange = function () { $('#k-cakes', el).classList.toggle('hidden', r.value !== 'selected' || !r.checked); }; });
+            preview();
+          } });
+      }
+
+      /* ---------------- Điểm khách quen ---------------- */
+      var q = '';
+      function pointsTab() {
+        var list = DB.get('customers').filter(function (c) { return !q || c.phone.indexOf(q.replace(/\D/g, '')) > -1; }).sort(function (a, b) { return b.points - a.points; });
+        $('#panel').innerHTML = '<div class="grid md:grid-cols-12 gap-3 items-center"><div class="md:col-span-5 relative"><label for="pq" class="sr-only">Tìm SĐT khách</label><i class="ph ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-lg text-ink-muted" aria-hidden="true"></i><input id="pq" type="search" inputmode="numeric" class="field-input !pl-10" placeholder="Tìm SĐT khách" value="' + Fmt.esc(q) + '"></div>' +
+          '<p class="md:col-span-7 text-sm text-ink-muted"><i class="ph ph-info" aria-hidden="true"></i> Quy tắc tạm: 10.000 ₫ = 1 điểm khi đơn hoàn thành; 1 điểm = ' + Fmt.money(S.pointValue) + ' khi dùng. Chờ tiệm xác nhận.</p></div>' +
+          (list.length ? '<div class="mt-3 hidden md:block rounded-2xl bg-white border border-beige overflow-hidden"><table class="admin-table"><thead><tr><th>SĐT</th><th>Tên</th><th class="text-right">Điểm</th><th class="text-right">Đơn hoàn thành</th><th>Lần gần nhất</th></tr></thead><tbody>' +
+            list.map(function (c) { return '<tr data-ph="' + c.phone + '" tabindex="0"><td class="font-bold tabular-nums">' + Fmt.phone(c.phone) + '</td><td>' + Fmt.esc(c.name) + '</td><td class="text-right font-extrabold tabular-nums">' + Fmt.num(c.points) + '</td><td class="text-right tabular-nums">' + c.doneOrders + '</td><td class="tabular-nums">' + Fmt.date(c.last) + '</td></tr>'; }).join('') + '</tbody></table></div>' +
+            '<ul class="md:hidden mt-3 space-y-2">' + list.map(function (c) { return '<li><button type="button" data-ph="' + c.phone + '" class="w-full text-left rounded-2xl bg-white border border-beige p-4 flex justify-between gap-3"><span><span class="block font-extrabold tabular-nums">' + Fmt.phone(c.phone) + '</span><span class="text-sm text-ink-muted">' + Fmt.esc(c.name) + ' · ' + c.doneOrders + ' đơn</span></span><span class="font-extrabold tabular-nums">' + Fmt.num(c.points) + ' điểm</span></button></li>'; }).join('') + '</ul>'
+            : '<div class="mt-3 rounded-2xl bg-white border border-beige">' + UI.empty({ icon: 'ph-users', title: 'Không tìm thấy khách với SĐT này' }) + '</div>');
+        var pq = $('#pq');
+        pq.addEventListener('input', debounce(function () { q = pq.value; pointsTab(); var n = $('#pq'); n.focus(); n.setSelectionRange(n.value.length, n.value.length); }, 300));
+        $all('[data-ph]').forEach(function (r) { r.onclick = function () { detail(Customers.byPhone(r.dataset.ph)); }; r.onkeydown = function (e) { if (e.key === 'Enter') detail(Customers.byPhone(r.dataset.ph)); }; });
+      }
+      function detail(c) {
+        var TYPE = { add: ['Cộng', 'text-mint-strong'], use: ['Trừ / tạm giữ', 'text-primary-strong'], adjust: ['Điều chỉnh', 'text-info'] };
+        Modal.open({ title: c.name + ' · ' + Fmt.phone(c.phone), size: 'lg',
+          body: '<div class="flex items-center justify-between gap-3 rounded-2xl bg-butter/70 px-4 py-3"><p class="font-extrabold">Điểm hiện có: <span class="text-xl tabular-nums">' + Fmt.num(c.points) + '</span></p><button type="button" id="adjust" class="btn btn-secondary h-10 px-4 text-sm">Điều chỉnh điểm</button></div>' +
+            '<h3 class="mt-5 font-extrabold">Lịch sử điểm</h3><ul class="mt-2 divide-y divide-beige">' + (c.history.length ? c.history.map(function (h) {
+              var t = TYPE[h.type] || TYPE.adjust;
+              return '<li class="py-2.5 flex justify-between gap-3"><span><span class="block font-semibold">' + Fmt.esc(h.note) + (h.order ? ' · <span class="tabular-nums">' + h.order + '</span>' : '') + '</span><span class="text-xs text-ink-muted">' + Fmt.dateTime(h.at) + ' · ' + t[0] + '</span></span><span class="font-extrabold tabular-nums ' + t[1] + '">' + (h.points > 0 ? '+' : '') + h.points + '</span></li>';
+            }).join('') : '<li class="py-3 text-ink-muted">Chưa có lịch sử.</li>') + '</ul>',
+          actions: [{ label: 'Đóng' }],
+          onOpen: function (el, close) {
+            $('#adjust', el).onclick = function () {
+              close();
+              setTimeout(function () {
+                Modal.open({ title: 'Điều chỉnh điểm', body: '<div class="space-y-4"><div class="field"><label class="field-label" for="pa">Số điểm (+ cộng, - trừ) <span class="text-danger">*</span></label><input id="pa" type="number" step="1" class="field-input tabular-nums" placeholder="Ví dụ: 20 hoặc -15"></div><div class="field"><label class="field-label" for="pr">Lý do <span class="text-danger">*</span></label><input id="pr" maxlength="255" class="field-input" placeholder="Ví dụ: bù điểm đơn giao trễ"></div></div>',
+                  actions: [{ label: 'Đóng' }, { label: 'Lưu', variant: 'primary', onClick: function (cl, e2) {
+                    var pa = $('#pa', e2), pr = $('#pr', e2), v = parseInt(pa.value, 10), ok = true;
+                    if (!v || isNaN(v) || c.points + v < 0) { FormUI.setError(pa, 'Số điểm không hợp lệ.'); ok = false; }
+                    if (pr.value.trim().length < 5) { FormUI.setError(pr, 'Vui lòng nhập lý do.'); ok = false; }
+                    if (!ok) return false;
+                    c.points += v; c.history.unshift({ at: new Date().toISOString(), type: 'adjust', points: v, order: '', note: pr.value.trim() + ' (' + Auth.current().name.split(' ').pop() + ')' });
+                    DB.save('customers'); Toast.show('Đã điều chỉnh điểm', 'success'); pointsTab();
+                  } }] });
+              }, 180);
+            };
+          } });
+      }
+
+      function show(t) {
+        tab = t;
+        $all('[data-tab]').forEach(function (b) { var on = b.dataset.tab === t; b.setAttribute('aria-selected', on); b.className = 'h-9 px-4 rounded-full text-sm font-bold ' + (on ? 'bg-primary-soft text-primary-strong' : 'text-ink-muted'); });
+        (t === 'promo' ? promoTab : pointsTab)();
+      }
+      $all('[data-tab]').forEach(function (b) { b.onclick = function () { show(b.dataset.tab); }; });
+      show('promo');
+    });
+  </script>
+</body>
+</html>

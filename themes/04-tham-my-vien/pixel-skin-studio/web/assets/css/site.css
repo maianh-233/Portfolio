@@ -1,0 +1,44 @@
+/* PIXEL SKIN STUDIO - biến chung + vài style Tailwind không làm được */
+:root {
+  --paper: #FBFAF7;
+  --ink: #151515;
+  --signal: #FF5B1F;
+  --grape: #7337FF;
+  --acid: #D4FF3F;
+  --mist: #EFEDF6;
+  --line: rgba(21,21,21,.14);
+  --ui-accent: #7337FF;
+  --font: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; letter-spacing: -0.005em; }
+
+/* Công tắc ngôn ngữ: chỉ hiện phần tử đúng <html lang> */
+html[lang="vi"] body [lang="en"],
+html[lang="en"] body [lang="vi"] { display: none !important; }
+
+/* Viền mảnh, trung tính thay cho viền đen dày */
+body .border-ink { border-color: var(--line); }
+body .divide-ink > :not([hidden]) ~ :not([hidden]) { border-color: var(--line); }
+body .bg-ink.border-ink, body .bg-grape.border-ink { border-color: transparent; }
+body input.border-ink, body textarea.border-ink, body select.border-ink { border-color: rgba(21,21,21,.38); }
+body .border-paper { border-color: rgba(251,250,247,.3); }
+
+/* Điểm nhấn "pixel": ô vuông nhỏ đánh dấu nhóm / phân cách */
+.px-mark { display: inline-block; width: .6rem; height: .6rem; border-radius: 2px; flex-shrink: 0; }
+
+/* Lớp cũ giữ lại để tương thích, không còn hoa văn */
+.dots, .dots-light { background-image: none; }
+.shape-half { border-radius: 9999px 9999px 0 0; }
+
+/* Chữ viền (outline) cho wordmark cuối trang */
+.text-outline { color: transparent; -webkit-text-stroke: 1px var(--ink); }
+.text-outline-light { color: transparent; -webkit-text-stroke: 1px rgba(251,250,247,.35); }
+
+/* Dialog */
+dialog::backdrop { background: rgba(21,21,21,.55); backdrop-filter: blur(2px); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

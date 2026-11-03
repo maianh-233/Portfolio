@@ -1,0 +1,49 @@
+:root {
+  --olive: #68734F;
+  --sage: #A8B09A;
+  --sand: #D8C5A9;
+  --ivory: #F8F5EF;
+  --earth: #795B46;
+  --forest: #303A2D;
+  --stone: #E7E3DA;
+  --ui-accent: #68734F;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, serif;
+  --font-body: Manrope, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+  background: var(--ivory);
+  color: var(--forest);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--sage); color: var(--forest); }
+
+/* Ảnh tông ấm, hơi phai theo preset */
+.photo { filter: saturate(.92) sepia(.06); }
+
+/* Khung vòm: chân tóc mọc lên */
+.arch { border-radius: 999px 999px 1.75rem 1.75rem; }
+
+/* Đường kẻ mảnh dọc như sợi tóc */
+.hairline-v { position: relative; }
+.hairline-v::before {
+  content: ""; position: absolute; left: 50%; top: -4rem; height: 4rem; width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--sage));
+}
+
+/* Nút chuyển ngôn ngữ */
+[data-lang-set].is-active { color: var(--forest); font-weight: 700; }
+
+/* Drop cap */
+.dropcap::first-letter {
+  font-family: var(--font-display); float: left; font-size: 4.2em; line-height: .8;
+  padding: .08em .12em 0 0; color: var(--olive);
+}
+
+dialog[data-ui-modal] { background: var(--ivory); color: var(--forest); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

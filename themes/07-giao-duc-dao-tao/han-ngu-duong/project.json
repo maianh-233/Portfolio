@@ -1,0 +1,50 @@
+{
+  "slug": "han-ngu-duong",
+  "name": "HÁN NGỮ ĐƯỜNG",
+  "projectType": "website",
+  "concept": {
+    "topic": "Web cho trung tâm tiếng trung",
+    "brand": "HÁN NGỮ ĐƯỜNG",
+    "purpose": "Thiết kế website đa trang cho HÁN NGỮ ĐƯỜNG · 汉语堂, trung tâm đào tạo tiếng Trung và tư vấn định hướng du học Trung Quốc. Website tập trung giới thiệu trung tâm, chương trình học, văn hóa Trung Hoa và dịch vụ tư vấn du học; không xây dựng chức năng bán khóa học hoặc thanh toán trực tuyến.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Hero: Toàn màn hình với hình ảnh kiến trúc Trung Hoa, cổng đỏ hoặc mái cung điện trong làn sương. Logo HÁN NGỮ ĐƯỜNG, chữ Hán 汉语堂, tiêu đề “Mở cánh cửa ngôn ngữ — Khám phá một Trung Hoa rộng lớn”. Nút “Khám phá chương trình học” và “Tìm hiểu du học Trung Quốc”.\n\nGiới thiệu trung tâm: Bố cục kiểu trang sách cổ, hình ảnh thư phòng, bút lông, giấy viết chữ Hán và nghiên cứu văn hóa Trung Hoa.\n\nChương trình đào tạo: Các thẻ khóa học có viền trang trí truyền thống, hình ảnh riêng cho từng cấp độ.\n\nCánh cửa du học Trung Quốc: Hình ảnh khuôn viên đại học, thư viện, kiến trúc học viện và thành phố Trung Quốc.\n\nKhám phá văn hóa Trung Hoa: Các khung hình giới thiệu thư pháp, trà đạo, thư họa, lễ hội và kiến trúc.\n\nFooter: Nền đỏ trầm hoặc đen mực, logo chữ Hán, họa tiết mây và thông tin liên hệ.\n\nTrang 2 — Chương trình tiếng Trung | 中文课程\n\nHero: Hình ảnh thư pháp trên giấy Tuyên, nghiên mực, bút lông và sách Hán ngữ.\n\nGiới thiệu phương pháp học: Bố cục kết hợp chữ Hán lớn, minh họa nét bút và hình ảnh lớp học.\n\nCác chương trình: Tiếng Trung cho người mới bắt đầu, giao tiếp, luyện thi HSK và nâng cao. Mỗi chương trình có hình ảnh, mô tả, đối tượng phù hợp và mục tiêu học tập.\n\nTrải nghiệm học tiếng Trung: Minh họa từ vựng, thanh điệu, chữ Hán và câu giao tiếp thông dụng theo cách trực quan.\n\nVăn hóa qua ngôn ngữ: Giới thiệu thành ngữ, thư pháp, thơ cổ và những nét văn hóa giúp việc học thú vị hơn.\n\nCTA: “Tìm chương trình phù hợp” dẫn đến trang liên hệ hoặc biểu mẫu tư vấn.\n\nTrang 3 — Tư vấn du học Trung Quốc | 中国留学\n\nHero: Hình ảnh khuôn viên đại học Trung Quốc, cổng trường cổ điển hoặc sinh viên giữa không gian học thuật hiện đại. Kết hợp kiến trúc truyền thống và môi trường đại học đương đại.\n\nVì sao lựa chọn Trung Quốc: Trình bày các khía cạnh về học tập, ngôn ngữ, văn hóa và trải nghiệm quốc tế bằng bố cục hình ảnh biên tập.\n\nLộ trình tư vấn: Tìm hiểu nhu cầu → định hướng trường và ngành → chuẩn bị hồ sơ → tìm hiểu học bổng và điều kiện ứng tuyển → chuẩn bị trước khi lên đường.\n\nĐịnh hướng trường và ngành: Các nhóm ngành minh họa bằng hình ảnh thư viện, phòng nghiên cứu, công nghệ, kinh tế, ngôn ngữ và văn hóa.\n\nThông tin cần chuẩn bị: Hồ sơ học tập, năng lực tiếng Trung, giấy tờ cần thiết và các mốc thời gian tham khảo.\n\nCâu hỏi thường gặp: Điều kiện du học, yêu cầu ngôn ngữ, học bổng, hồ sơ và quy trình tư vấn.\n\nCTA: “Đăng ký tư vấn định hướng du học” dẫn đến biểu mẫu liên hệ.\n\nKhông tự tạo tên đối tác, cam kết đậu học bổng, tỷ lệ thành công hoặc thông tin tuyển sinh chưa được xác minh. Nội dung cụ thể phải có thể chỉnh sửa.\n\nTrang 4 — Về chúng tôi & Liên hệ | 关于我们\n\nCâu chuyện trung tâm: Giới thiệu sứ mệnh đào tạo tiếng Trung và hỗ trợ học viên tìm hiểu cơ hội học tập tại Trung Quốc.\n\nTriết lý giáo dục: Ngôn ngữ là cầu nối giữa con người, văn hóa và tri thức.\n\nĐội ngũ: Khu vực giới thiệu giáo viên và chuyên viên tư vấn với ảnh, vai trò và tiểu sử có thể thay thế.\n\nKhông gian học tập: Bộ sưu tập ảnh lớp học, sách Hán ngữ, góc thư pháp và các hoạt động văn hóa.\n\nLiên hệ: Địa chỉ, điện thoại, email, mạng xã hội, bản đồ và biểu mẫu để lại thông tin tư vấn.\n\nFooter: Trang trí bằng hoa văn hồi văn, con dấu đỏ và đường nét kiến trúc truyền thống.\n\n4. UI/UX và cách thể hiện\n\nHeader có logo chữ Hán, tên tiếng Việt và menu 4 trang; có thể sử dụng thanh điều hướng nền đỏ sẫm hoặc nền giấy cổ.\n\nTiêu đề kết hợp typography tiếng Việt thanh lịch với chữ Hán trang trí. Đảm bảo chữ tiếng Việt dễ đọc, chữ Hán hiển thị đúng.\n\nSử dụng khung cửa tròn nguyệt môn, khung tranh cuộn, đường viền hoa văn và các mảng màu đỏ son làm điểm nhấn.\n\nHình ảnh phải thay đổi theo từng trang, tránh lặp lại một ảnh hero trên toàn website.\n\nKết hợp khoảng trắng rộng với họa tiết truyền thống có chọn lọc, không phủ kín mọi khu vực bằng hoa văn.\n\nKhông sử dụng giao diện dashboard, thẻ bo góc kiểu SaaS hoặc bố cục website doanh nghiệp phương Tây quá phổ biến.\n\n5. Animation và tương tác\n\nHero: hiệu ứng xuất hiện nhẹ cho tiêu đề, hình ảnh và nút điều hướng.\n\nHình ảnh thủy mặc có thể chuyển động chậm theo chiều sâu; mây hoặc sương chỉ chuyển động rất nhẹ.\n\nHọa tiết hoa mai, cánh hoa hoặc đèn lồng chỉ xuất hiện tại một số khu vực phù hợp.\n\nCác section xuất hiện khi cuộn trang bằng fade-in và dịch chuyển nhẹ.\n\nMenu có hiệu ứng chuyển màu, gạch chân hoặc đường nét trang trí truyền thống.\n\nThẻ chương trình học và hình ảnh có hiệu ứng hover tinh tế.\n\nKhông lạm dụng hiệu ứng 3D, parallax nhiều lớp, hạt bay hoặc animation phức tạp. Ưu tiên tốc độ tải và tính ổn định.\n\n6. Yêu cầu kỹ thuật\n\nWebsite đa trang thực sự, các trang liên kết và điều hướng hoạt động.\n\nResponsive tốt trên desktop, tablet và điện thoại.\n\nCác nút CTA, menu, biểu mẫu liên hệ và FAQ hoạt động đúng.\n\nHình ảnh rõ nét, đúng chủ đề Trung Hoa; có thể sử dụng ảnh mẫu phù hợp nếu chưa có tư liệu thương hiệu.\n\nNội dung, hình ảnh, logo, thông tin liên hệ và màu sắc cần dễ thay thế.\n\nKhông triển khai giỏ hàng, mua khóa học, thanh toán trực tuyến hoặc chức năng thương mại điện tử.\n\nKết quả mong muốn: Một website trung tâm tiếng Trung mang đậm phong vị Trung Hoa, có bản sắc thị giác xuyên suốt từ trang chủ đến trang khóa học và tư vấn du học. Giao diện phải gợi cảm giác bước vào một không gian văn hóa Trung Hoa được tái hiện bằng ngôn ngữ thiết kế hiện đại, không phải một mẫu website giáo dục thông thường chỉ thêm vài họa tiết phương Đông.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-19T06:40:41.857Z",
+  "updatedAt": "2026-10-19T07:17:52.276Z",
+  "screen": "request",
+  "request": "Web cho trung tâm tiếng trung",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "bca5b179-9c88-4d93-846b-133bb6c027b7",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\han-ngu-duong\\web",
+    "status": "running"
+  }
+}

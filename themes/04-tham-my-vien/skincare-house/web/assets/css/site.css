@@ -1,0 +1,154 @@
+/* SKINCARE HOUSE - shared styles
+   Direction: grown-up 1990s retro (faded print, film grain, magazine type), not toy-pop.
+   Shape rule: panels / photo frames are square with an ink border + short offset shadow;
+   buttons, chips and the language switch are full pills. */
+:root {
+  --cream: #FBF4E4;
+  --paper: #FFFBF2;
+  --ink: #1E2A47;
+  --baby: #9FC9DF;
+  --baby-soft: #DDECF3;
+  --brick: #B3432C;
+  --butter: #EDD08A;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+  --ui-accent: #AE4330;
+}
+
+html { scroll-padding-top: 6rem; }
+body { background: var(--cream); color: var(--ink); font-family: var(--font-body); }
+
+/* Display type: fashion-magazine serif, medium weight, real italic for emphasis */
+.font-display.font-extrabold { font-weight: 500; letter-spacing: -0.025em; }
+.font-display.font-bold { font-weight: 500; }
+.font-display.font-semibold { font-weight: 500; }
+
+/* Print hairlines: every ink rule on every page is 1px (set once here, beats the 2px utilities) */
+:root .border-2 { border-width: 1px; }
+:root .border-y-2 { border-top-width: 1px; border-bottom-width: 1px; }
+:root .border-t-2 { border-top-width: 1px; }
+:root .border-b-2 { border-bottom-width: 1px; }
+:root .border-l-2 { border-left-width: 1px; }
+:root .border-r-2 { border-right-width: 1px; }
+@media (min-width: 640px) {
+  :root .sm\:border-r-2 { border-right-width: 1px; }
+  :root .sm\:border-l-2 { border-left-width: 1px; }
+  :root .sm\:border-b-0 { border-bottom-width: 0; }
+}
+:root header.is-scrolled { box-shadow: 0 12px 30px -22px rgba(30, 42, 71, .55); }
+
+/* Film grain over the whole page (fixed, never on scrolling containers) */
+body::after {
+  content: ""; position: fixed; inset: -50%; z-index: 60; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.16 0 0 0 0 0.28 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: .09;
+  animation: grain 1.2s steps(4) infinite;
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3%, 2%); }
+  50% { transform: translate(2%, -3%); }
+  75% { transform: translate(-2%, -1%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Faded-print photo tone, shared by every page */
+main img { filter: saturate(.88) contrast(1.04) sepia(.1); }
+
+/* Checker pattern: softened, printed-tablecloth look */
+.checker {
+  --c1: rgba(169, 205, 224, .32);
+  --c2: var(--paper);
+  --size: 22px;
+  background-color: var(--c2);
+  background-image: conic-gradient(var(--c1) 25%, transparent 0 50%, var(--c1) 0 75%, transparent 0);
+  background-size: var(--size) var(--size);
+}
+.checker-butter { --c1: rgba(237, 208, 138, .6); --c2: var(--cream); }
+.checker-ink { --c1: rgba(30, 42, 71, .82); --c2: var(--cream); --size: 12px; }
+.checker-brick { --c1: rgba(255, 251, 242, .08); --c2: var(--brick); --size: 44px; }
+
+/* Instant photo frame */
+.frame {
+  background: var(--paper);
+  border: 1px solid rgba(30, 42, 71, .35);
+  padding: .6rem .6rem 2.6rem;
+  box-shadow: 0 22px 44px -26px rgba(30, 42, 71, .6);
+  position: relative;
+}
+
+/* Lively but grown-up: tilted prints straighten and lift on hover (desktop only) */
+@media (hover: hover) {
+  .frame, .film, .lift {
+    transition: transform .9s cubic-bezier(.16, 1, .3, 1), box-shadow .9s cubic-bezier(.16, 1, .3, 1);
+  }
+  .frame:hover, .film:hover, .lift:hover {
+    transform: rotate(0deg) translateY(-6px) !important;
+    box-shadow: 0 34px 60px -30px rgba(30, 42, 71, .7);
+  }
+}
+
+/* Slow-spinning stamp ring around seals */
+.spin-slow { animation: spin-slow 22s linear infinite; }
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.frame-caption {
+  position: absolute; left: .75rem; right: .75rem; bottom: .55rem;
+  font-family: var(--font-display); font-style: italic; font-size: .95rem; line-height: 1.4;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* Film strip edges */
+.film {
+  background: var(--ink);
+  padding: 22px 10px;
+  position: relative;
+}
+.film::before, .film::after {
+  content: ""; position: absolute; left: 10px; right: 10px; height: 10px;
+  background: repeating-linear-gradient(90deg, var(--cream) 0 12px, transparent 12px 26px);
+}
+.film::before { top: 6px; }
+.film::after { bottom: 6px; }
+
+/* Washi tape */
+.tape::before {
+  content: ""; position: absolute; top: -14px; left: 50%; width: 96px; height: 28px;
+  transform: translateX(-50%) rotate(-4deg);
+  background: rgba(237, 208, 138, .8);
+  border-left: 2px dashed rgba(30, 42, 71, .18); border-right: 2px dashed rgba(30, 42, 71, .18);
+  z-index: 2;
+}
+
+/* Slanted emphasis (same family, oblique) */
+.slant { font-style: italic; font-weight: 400; padding-right: .04em; }
+
+/* Seal / stamp: thin double ring, small caps like a print-shop stamp */
+.sticker {
+  display: grid; place-items: center; text-align: center;
+  border: 3px double rgba(30, 42, 71, .8); border-radius: 9999px;
+  box-shadow: none;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important; text-transform: uppercase; letter-spacing: .12em;
+  font-size: .75rem !important; line-height: 1.5 !important;
+}
+
+/* Booking dialog */
+dialog.book, dialog.book[data-ui-modal] {
+  border: 1px solid var(--ink); border-radius: 0; box-shadow: 0 40px 80px -30px rgba(30, 42, 71, .6);
+  padding: 0; background: var(--paper); color: var(--ink);
+  width: 100%; max-width: min(94vw, 720px); max-height: 92dvh; overflow-y: auto;
+}
+dialog.book::backdrop, dialog.book[data-ui-modal]::backdrop { background: rgba(30, 42, 71, .55); backdrop-filter: none; }
+
+/* Form fields */
+.field {
+  width: 100%; min-height: 48px; border: 1px solid var(--ink); background: #fff; color: var(--ink);
+  padding: .65rem .85rem; font-size: 1rem; border-radius: 0;
+}
+.field::placeholder { color: #5B6580; }
+.field:focus { outline: 3px solid var(--brick); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation: none !important; }
+  body::after { animation: none; }
+}

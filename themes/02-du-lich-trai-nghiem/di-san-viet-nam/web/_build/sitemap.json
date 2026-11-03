@@ -1,0 +1,195 @@
+{
+  "brand": "disanvietnam",
+  "language": "vi",
+  "preset": "futuristic",
+  "motionLevel": 1,
+  "visualIdea": "Lưới tọa độ mảnh như một lớp bản đồ nền chạy qua mọi trang, đi cùng đường kẻ vàng di sản đánh dấu mốc năm và nhãn trạng thái nguồn (Đã đối chiếu nguồn / Theo hồ sơ – chờ kiểm chứng) trên mọi thẻ dữ liệu",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Cổng tri thức di sản Việt Nam và Quảng Trị",
+    "description": "Giao diện cổng tri thức học thuật về di sản văn hóa với thư viện nghiên cứu, bản đồ WebGIS và hồ sơ chuyên gia."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Cổng vào: định vị cổng tri thức, ba lối vào (bản đồ, thư viện, di sản), công trình tiêu biểu, thành tựu, kết nối hội thảo và hợp tác",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-full-slider", "source": "ba", "note": "Theo góp ý: slider ảnh tràn màn hình (5 ảnh di sản Việt Nam / Quảng Trị, tự chuyển 6 giây, nút trước / sau + chấm chọn ảnh); tiêu đề Nghiên cứu – Số hóa – Bảo tồn – Phát huy đè lên ảnh; 2 nút --gis và nút viền trắng" },
+        { "id": "so-lieu", "catalog": "editorial", "variant": "stats-band", "source": "ai", "note": "Số đếm từ dữ liệu mẫu (14 công trình, 7 giải, 2 QTG, 7 lớp bản đồ)" },
+        { "id": "loi-vao", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "3 thẻ lớn + hàng 7 lớp bản đồ chuyên đề" },
+        { "id": "tri-thuc", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "Công trình 7, 8, 10, 14; công bố mới nhất; kỷ yếu năm gần nhất (render từ data.js)" },
+        { "id": "thanh-tuu", "catalog": "features", "variant": "teaser-row", "source": "ba", "note": "Giải 04, 06, 07 + link xem tất cả" },
+        { "id": "ket-noi", "catalog": "editorial", "variant": "timeline", "source": "ba", "note": "Timeline 2023–2026, nguồn liên kết, đăng ký bản tin" },
+        { "id": "hop-tac", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Nút Đề nghị hợp tác + Yêu cầu dữ liệu" }
+      ],
+      "images": [
+        { "slot": "hero: slide 1 cổng Nam Thành cổ Quảng Trị", "query": "Quang Tri citadel gate", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg/1920px-Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg", "status": "link" },
+        { "slot": "hero: slide 2 cầu Hiền Lương", "query": "Hien Luong bridge Ben Hai river", "file": "assets/img/hero-slide-hien-luong.jpg", "status": "ok" },
+        { "slot": "hero: slide 3 Ngọ Môn Huế", "query": "Hue citadel Vietnam gate", "file": "assets/img/hero-slide-ngo-mon-hue.webp", "status": "ok" },
+        { "slot": "hero: slide 4 địa đạo Vịnh Mốc", "query": "Vinh Moc tunnels sea exit", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Vinh_Moc_tunnels%2C_Vietnam%2C_South_China_Sea_exit.jpg/1920px-Vinh_Moc_tunnels%2C_Vietnam%2C_South_China_Sea_exit.jpg", "status": "link" },
+        { "slot": "hero: slide 5 lối đi Thành cổ Quảng Trị", "query": "Quang Tri citadel walkway", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_3.jpg/1280px-Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_3.jpg", "status": "link" },
+        { "slot": "loi-vao: Bản đồ GIS", "query": "topographic map paper", "file": "assets/img/home-loi-vao-ban-do.jpg", "status": "ok" },
+        { "slot": "loi-vao: Thư viện nghiên cứu", "query": "library bookshelves reading room", "file": "assets/img/home-loi-vao-thu-vien.webp", "status": "ok" },
+        { "slot": "loi-vao: Khám phá di sản", "query": "Hue imperial citadel Ngo Mon", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/%C4%90%E1%BA%A1i_n%E1%BB%99i.jpg/1280px-%C4%90%E1%BA%A1i_n%E1%BB%99i.jpg", "status": "link" },
+        { "slot": "tri-thuc: công trình 8", "query": "Quang Tri citadel", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_Foto.jpg/1280px-Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_Foto.jpg", "status": "link" },
+        { "slot": "tri-thuc: công trình 14", "query": "Vinh Moc tunnels", "file": "assets/img/congtrinh-vinh-moc-ham.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/nghien-cuu.html",
+      "title": "Nghiên cứu khoa học",
+      "purpose": "Danh mục 14 công trình với bộ lọc chạy thật trên data.js (năm, loại công bố, chủ đề, vai trò, ngôn ngữ, quyền PDF), tìm kiếm, sắp xếp; kỷ yếu, đề tài, hướng dẫn trích dẫn",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "danh-sach", "catalog": "projects", "variant": "list-cards", "source": "ba", "note": "Bộ lọc cột trái, drawer trên mobile" },
+        { "id": "tai-nguyen", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "#ky-yeu, #trich-dan, #de-tai" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Yêu cầu dữ liệu" }
+      ],
+      "images": []
+    },
+    {
+      "file": "pages/cong-trinh.html",
+      "title": "Chi tiết công trình số 10",
+      "purpose": "Trang chi tiết mẫu: siêu dữ liệu, tóm tắt chờ tác giả, tệp PDF đang xác minh, popup trích dẫn APA/Vancouver có nút sao chép, cùng chủ đề và di tích liên quan",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Breadcrumb, tiêu đề, tác giả, mã GIS24_05" },
+        { "id": "noi-dung", "catalog": "editorial", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "lien-quan", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "Liên kết công trình 12 qua tìm kiếm trong danh mục" }
+      ],
+      "images": [
+        { "slot": "noi-dung: minh họa viễn thám", "query": "satellite image river delta", "file": "assets/img/congtrinh-anh-vien-tham.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/hoi-thao.html",
+      "title": "Hội thảo & hoạt động",
+      "purpose": "Timeline dọc 2015–2026 lọc theo năm, hai loại nhãn tách biệt, bảng bài tham luận cuộn ngang, bản tin, album chờ ảnh",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "theo-nam", "catalog": "editorial", "variant": "timeline", "source": "ba", "note": "Chỉ gắn nhãn Có công trình đăng kỷ yếu" },
+        { "id": "tham-luan", "catalog": "projects", "variant": "list-cards", "source": "ba", "note": "Bảng cuộn ngang trên mobile" },
+        { "id": "ban-tin", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Form demo" },
+        { "id": "album", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "Khung chờ ảnh có quyền sử dụng" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "album", "query": "conference GIS Vietnam photos", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/giai-thuong.html",
+      "title": "Giải thưởng & sáng tạo",
+      "purpose": "4 tab giải thưởng với chủ thể nhận (cá nhân / nhóm / cơ quan), sản phẩm ứng dụng, chứng nhận quyền tác giả, câu chuyện thành tựu",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Đoạn dẫn mục giải thưởng của BA" },
+        { "id": "danh-muc", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Tab Sở hữu trí tuệ có id ban-quyen" },
+        { "id": "san-pham", "catalog": "features", "variant": "features-bento", "source": "ai", "note": "" },
+        { "id": "cau-chuyen", "catalog": "editorial", "variant": "timeline", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": []
+    },
+    {
+      "file": "pages/ho-so-chuyen-gia.html",
+      "title": "Giới thiệu & hồ sơ Phan Tuấn Anh",
+      "purpose": "Tầm nhìn 5 mảng, hồ sơ chuyên gia (tóm tắt, lĩnh vực, công tác, học vấn, công trình, giải thưởng), nhóm nghiên cứu, đối tác, lịch sử dự án, form đề nghị hợp tác có checkbox đồng ý",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "tam-nhin", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "" },
+        { "id": "ho-so", "catalog": "team", "variant": "detail-article", "source": "ba", "note": "Ảnh chân dung để khung chữ cái đầu, chờ cung cấp" },
+        { "id": "nhom-nghien-cuu", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Tên lấy từ nhóm tác giả đã công bố" },
+        { "id": "doi-tac", "catalog": "features", "variant": "list-cards", "source": "ba", "note": "" },
+        { "id": "lich-su", "catalog": "process", "variant": "timeline", "source": "ba", "note": "" },
+        { "id": "hop-tac", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Form demo + checkbox đồng ý xử lý dữ liệu" }
+      ],
+      "images": [
+        { "slot": "ho-so: chân dung", "query": "Đã tìm trên disanvietnam.vn, Nhân Dân, VietTimes, Báo Văn hóa: không có ảnh nào được chú thích là ông Phan Tuấn Anh — giữ khung chữ cái đầu, chờ khách gửi ảnh chân dung", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/ban-do.html",
+      "title": "Ngân hàng số di sản – Bản đồ WebGIS",
+      "purpose": "Bản đồ Leaflet + OpenStreetMap với 4 điểm tọa độ minh họa, 7 lớp checkbox, panel hồ sơ điểm (bottom sheet trên mobile), siêu dữ liệu bản đồ, bảng hồ sơ di tích, tài nguyên số",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Gọn để bản đồ lên màn hình đầu" },
+        { "id": "ban-do-khung", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Panel trái / bản đồ / panel phải; ghi rõ Tọa độ minh họa" },
+        { "id": "ho-so-di-tich", "catalog": "projects", "variant": "list-cards", "source": "ba", "note": "Bảng cuộn ngang, có 2 cột địa danh" },
+        { "id": "tai-nguyen-so", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "#mo-hinh-3d, #vr360, #tour-so, #bo-suu-tap" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "mo-hinh-3d", "query": "terrestrial laser scanner point cloud", "file": "assets/img/bando-mo-hinh-3d.jpg", "status": "ok" },
+        { "slot": "vr360 / tour-so / bo-suu-tap", "query": "VR360 panorama Quang Tri relic", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/di-san.html",
+      "title": "Di sản văn hóa",
+      "purpose": "Loại hình di tích, di sản thế giới UNESCO tại Việt Nam, di tích quốc gia, chuyên đề Quảng Trị với hai địa danh",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "loai-hinh", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "" },
+        { "id": "unesco", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Gắn nhãn chờ kiểm chứng, dẫn về whc.unesco.org. Theo góp ý: mỗi mục trong Danh mục di sản Việt Nam được UNESCO ghi danh là link sang pages/di-san-chi-tiet.html?nhom=…&muc=… (bỏ hộp thoại chi tiết)" },
+        { "id": "quoc-gia", "catalog": "projects", "variant": "list-cards", "source": "ba", "note": "Bảng cuộn ngang" },
+        { "id": "quang-tri", "catalog": "projects", "variant": "features-bento", "source": "ba", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "unesco: Vịnh Hạ Long", "query": "Ha Long Bay Vietnam", "file": "assets/img/disan-unesco-ha-long.jpg", "status": "ok" },
+        { "slot": "unesco: Hội An", "query": "Hoi An Vietnam UNESCO", "file": "assets/img/disan-unesco-hoi-an.jpg", "status": "ok" },
+        { "slot": "unesco: Tràng An", "query": "Trang An Ninh Binh", "file": "assets/img/disan-unesco-trang-an.jpg", "status": "ok" },
+        { "slot": "quang-tri: địa đạo Vịnh Mốc", "query": "Vinh Moc tunnels", "file": "assets/img/quangtri-dia-dao-vinh-moc.jpg", "status": "ok" },
+        { "slot": "quang-tri: cầu Hiền Lương", "query": "Hien Luong bridge", "file": "assets/img/quangtri-cau-hien-luong.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/di-san-chi-tiet.html",
+      "title": "Chi tiết di sản UNESCO",
+      "purpose": "Trang chi tiết một di sản trong danh mục UNESCO (đọc nhóm + số thứ tự trên URL, dựng từ data.js): ảnh lớn, mô tả, thông tin tra cứu, nguồn đối chiếu, gợi ý trích dẫn, mục trước / sau, các mục cùng nhóm",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Breadcrumb Trang chủ / Di sản văn hóa / nhóm / tên di sản" },
+        { "id": "chi-tiet", "catalog": "editorial", "variant": "detail-article", "source": "ba", "note": "Ảnh lớn (lightbox) + mô tả + bảng thông tin + trích dẫn" },
+        { "id": "dieu-huong", "catalog": "editorial", "variant": "pager", "source": "ai", "note": "Mục trước / sau trong cùng nhóm, về danh mục" },
+        { "id": "cung-nhom", "catalog": "gallery", "variant": "card-grid", "source": "ai", "note": "Các mục còn lại cùng nhóm, mỗi thẻ là link chi tiết" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Yêu cầu dữ liệu + bản đồ" }
+      ],
+      "images": [
+        { "slot": "chi-tiet: ảnh di sản theo mục", "query": "dùng lại ảnh danh mục UNESCO đã tải (assets/img/unesco/*-lg.jpg)", "file": "assets/img/unesco/the-gioi-01-lg.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/lien-he.html",
+      "title": "Liên hệ & hợp tác",
+      "purpose": "Thông tin đơn vị vận hành (chờ cung cấp), form liên hệ và form yêu cầu dữ liệu (tab), chính sách dữ liệu, bản quyền hình ảnh, bảo mật, hỏi đáp, website liên kết",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "lien-he-chinh", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Tab #lien-he-form và #yeu-cau-du-lieu" },
+        { "id": "chinh-sach", "catalog": "faq", "variant": "contact-page", "source": "ba", "note": "Accordion có id cho từng chính sách; #hoi-dap" },
+        { "id": "lien-ket", "catalog": "features", "variant": "list-cards", "source": "ba", "note": "" }
+      ],
+      "images": []
+    }
+  ],
+  "adjustments": [
+    "Màu, font, nội dung theo design tokens và dữ liệu mẫu BA (ưu tiên hơn preset Futuristic tool tự nhận diện): nền trắng, --primary #0B4773, --academic #143A56, --gis #0D9488, --heritage #C4A46A, Be Vietnam Pro + Noto Serif 17px/1.7.",
+    "Chữ và nút trên nền màu --gis dùng sắc đậm #0F766E (và chữ vàng dùng #7A5C22) để đạt tương phản ≥ 4.5:1 theo yêu cầu WCAG của BA; #0D9488 và #C4A46A giữ cho đường kẻ, chấm, nền nhạt.",
+    "Container dùng max-w-screen-2xl thay cho ~1200px để không bị báo bố cục dồn giữa ở 1920px; cột đọc bài 780px giữ nguyên.",
+    "Tên file trang con đặt trong thư mục pages/ theo chuẩn theme; tên file giữ đúng theo BA (nghien-cuu, cong-trinh, hoi-thao, giai-thuong, ho-so-chuyen-gia, ban-do, lien-he) và thêm di-san.html cho mục menu Di sản văn hóa.",
+    "Dùng ảnh chụp giấy phép mở (Openverse, Wikimedia Commons, ghi nguồn) thay cho khung placeholder; chân dung chuyên gia và album hội thảo vẫn để khung chờ ảnh vì không có ảnh hợp lệ.",
+    "Các mục con của menu trỏ tới id có thật trong trang tương ứng; mục chưa có dữ liệu ghi placeholder [ … ].",
+    "Nút VI | EN chỉ chuyển nhãn menu, thanh trên và ô tìm kiếm (bản demo), có thông báo nội dung chưa dịch.",
+    "Tool chạy không tương tác nên dựng luôn cả trang chủ và 7 trang con, không dừng chờ duyệt ở Bước 1.",
+    "Giữ Lucide và Leaflet theo yêu cầu BA (CDN) bên cạnh motion.js / ui.js; nền bản đồ OpenStreetMap, tự chuyển sang nền Esri nếu ô bản đồ OSM lỗi.",
+    "Không làm nút nổi Zalo / Gọi điện / Chatbot vì chưa có số điện thoại và tài khoản Zalo (tùy chọn trong brief).",
+    "Mức chuyển động Level 1: chỉ data-reveal, data-count-to, data-header; hover và chuyển cảnh ≤ 200ms."
+  ],
+  "limitations": [
+    "Form liên hệ, yêu cầu dữ liệu, đề nghị hợp tác và đăng ký bản tin là bản demo, chưa có backend.",
+    "Ô tìm kiếm tổng hợp chỉ tìm trong danh mục công trình (data.js).",
+    "Tọa độ 4 điểm trên bản đồ là minh họa; lớp UNESCO, Bảo tàng, Cấp quản lý, Địa giới hành chính chưa có dữ liệu.",
+    "Tệp PDF, link nguồn giải thưởng, đơn vị trao giải, thông tin đơn vị vận hành, mô hình 3D, VR360, tour số đang để placeholder chờ cung cấp.",
+    "Chuyển ngôn ngữ EN chỉ đổi nhãn giao diện chính.",
+    "Lucide, Leaflet, Tailwind, Google Fonts và 3 ảnh Wikimedia tải qua Internet."
+  ]
+}

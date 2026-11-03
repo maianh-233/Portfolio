@@ -1,0 +1,317 @@
+{
+  "brand": "TEA ORBIT",
+  "language": "en",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Quán trà sữa sáng, vui: nền trắng sữa pha vệt tím/cyan, ảnh sản phẩm trong khung vòm như miệng ly, hạt trân châu và bong bóng trôi chậm làm chi tiết trang trí; mỗi nhóm đồ uống một màu (tím điện, cyan, cobalt, mực đậm). Giữ nguyên bảng màu gốc, bỏ quỹ đạo, khối cầu, lưới kỹ thuật và hạt sao.",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Ly trà mỗi ngày, vui hơn một chút",
+    "description": "Giao diện thương hiệu trà sữa và bánh ngọt, nền sáng tông tím - cyan, song ngữ Anh - Việt."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu TEA ORBIT, 3 nhóm đồ uống, cách pha trộn hương vị và triết lý sáng tạo; dẫn sang Menu",
+      "sections": [
+        {
+          "id": "hero",
+          "catalog": "hero",
+          "variant": "hero-split",
+          "source": "ba",
+          "note": "Headline 'Your Daily Tea. Another Universe.', CTA Explore flavors / Khám phá hương vị; ly trà lớn lệch tâm trong khung tròn + quỹ đạo + khối cầu"
+        },
+        {
+          "id": "orbit",
+          "catalog": "collections",
+          "variant": "features-bento",
+          "source": "ba",
+          "note": "Explore the Orbit: 3 nhóm đồ uống, mỗi nhóm một màu nhận diện + ảnh riêng, link sang pages/menu.html"
+        },
+        {
+          "id": "flavor",
+          "catalog": "features",
+          "variant": "features-tabs",
+          "source": "ba",
+          "note": "Flavor in Motion: ảnh sản phẩm lớn + tabs Tea / Milk / Topping"
+        },
+        {
+          "id": "philosophy",
+          "catalog": "story",
+          "variant": "quote-full",
+          "source": "ba",
+          "note": "Triết lý sáng tạo trên nền chuyển sắc nhẹ (data-gradient-shift)"
+        },
+        {
+          "id": "visit",
+          "catalog": "cta",
+          "variant": "cta-type",
+          "source": "ai",
+          "note": "CTA cuối: địa chỉ, giờ mở cửa, gọi / sao chép số, dẫn sang Menu"
+        }
+      ],
+      "images": [
+        {
+          "slot": "hero",
+          "query": "bubble milk tea tapioca",
+          "file": "https://images.unsplash.com/photo-1558857563-b371033873b8?w=1600&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "orbit-milk",
+          "query": "boba milk tea caramel",
+          "file": "https://images.unsplash.com/photo-1756132539966-8d65f7a9eed8?w=1200&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "orbit-fruit",
+          "query": "fruit tea glass",
+          "file": "https://images.unsplash.com/photo-1597481499666-130f8eb2c9cd?w=1200&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "orbit-cream",
+          "query": "iced matcha latte",
+          "file": "https://images.unsplash.com/photo-1749280447307-31a68eb38673?w=1200&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "flavor",
+          "query": "milk poured into brown sugar bubble tea",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/brown-sugar-bubble-tea-11.jpg",
+          "status": "link"
+        }
+      ]
+    },
+    {
+      "file": "pages/menu.html",
+      "title": "Menu",
+      "purpose": "Trang Sản phẩm & Menu: 'Choose Your Orbit', 4 danh mục Milk Tea / Fruit Tea / Cream Series / Toppings, bộ lọc danh mục, không có thao tác mua",
+      "sections": [
+        {
+          "id": "menu-hero",
+          "catalog": "hero",
+          "variant": "page-hero",
+          "source": "ba",
+          "note": "Tiêu đề Choose Your Orbit, hạt sao (section duy nhất có particles)"
+        },
+        {
+          "id": "menu-zones",
+          "catalog": "collections",
+          "variant": "list-cards",
+          "source": "ba",
+          "note": "data-filter-group; mỗi danh mục một khu vực riêng: màu nhấn, ảnh lớn, lưới 3 thẻ (ảnh, tên, mô tả hương vị)"
+        },
+        {
+          "id": "menu-cta",
+          "catalog": "cta",
+          "variant": "cta-type",
+          "source": "ai",
+          "note": "Dẫn sang About + thông tin quầy"
+        }
+      ],
+      "images": [
+        {
+          "slot": "zone-milk",
+          "query": "milk poured over brown sugar pearls",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/brown-sugar-bubble-tea-10.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "milk-1",
+          "query": "classic milk tea tapioca pearls",
+          "file": "https://images.unsplash.com/photo-1692783029695-1956cd253e10?w=900&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "milk-2",
+          "query": "iced thai tea condensed milk",
+          "file": "https://images.unsplash.com/photo-1788016284568-2cfdc5994fd5?w=900&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "milk-3",
+          "query": "brown sugar syrup glass pearls",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/brown-sugar-bubble-tea-6.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "zone-fruit",
+          "query": "iced fruit tea glasses",
+          "file": "https://images.unsplash.com/photo-1597318109735-d3612887d1ad?w=1400&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "fruit-1",
+          "query": "red berry iced tea",
+          "file": "https://images.unsplash.com/photo-1499531011814-14b20e46c785?w=900&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "fruit-2",
+          "query": "amber iced tea glass",
+          "file": "https://images.unsplash.com/photo-1597407196114-fa16f68555a6?w=900&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "fruit-3",
+          "query": "layered fruit tea mango",
+          "file": "https://images.unsplash.com/photo-1624896276654-2eb0c7e8247c?w=900&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "zone-cream",
+          "query": "iced matcha latte layers",
+          "file": "https://images.unsplash.com/photo-1775846933630-3c1531299e5a?w=1400&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "cream-1",
+          "query": "matcha poured over milk and ice",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/iced-matcha-latte-9.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "cream-2",
+          "query": "purple taro milk tea with tapioca pearls",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/taro-bubble-tea-7.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "cream-3",
+          "query": "milk poured into iced amber oolong tea",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/oolong-bubble-tea-9.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "zone-toppings",
+          "query": "tapioca pearls in brown sugar syrup",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/brown-sugar-bubble-tea-5.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "toppings-1",
+          "query": "milk tea dark pearls",
+          "file": "https://images.unsplash.com/photo-1718065598477-505b9c2e764d?w=900&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "toppings-2",
+          "query": "black tea jelly topped with fresh cream",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/2013/05/jelly.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "toppings-3",
+          "query": "creamy iced drink straw",
+          "file": "https://images.unsplash.com/photo-1758250967379-e041e6207190?w=1400&q=80&auto=format&fit=crop",
+          "status": "link"
+        }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Trang Về chúng tôi: câu chuyện cảm hứng vũ trụ và thử nghiệm hương vị, 3 giá trị thương hiệu, gallery nhận diện & sản phẩm",
+      "sections": [
+        {
+          "id": "about-hero",
+          "catalog": "hero",
+          "variant": "page-hero",
+          "source": "ba",
+          "note": "Hình cầu trừu tượng kết hợp ly trà, hạt sao"
+        },
+        {
+          "id": "story",
+          "catalog": "story",
+          "variant": "story-letter",
+          "source": "ba",
+          "note": "Cảm hứng vũ trụ + thử nghiệm hương vị"
+        },
+        {
+          "id": "values",
+          "catalog": "features",
+          "variant": "features-numbered",
+          "source": "ba",
+          "note": "Sáng tạo, cân bằng hương vị, trải nghiệm hiện đại"
+        },
+        {
+          "id": "gallery",
+          "catalog": "gallery",
+          "variant": "gallery-lookbook",
+          "source": "ba",
+          "note": "5 ảnh, data-lightbox"
+        },
+        {
+          "id": "about-cta",
+          "catalog": "cta",
+          "variant": "cta-type",
+          "source": "ai",
+          "note": "Dẫn sang Menu"
+        }
+      ],
+      "images": [
+        {
+          "slot": "about-hero",
+          "query": "milk poured into brown sugar pearls",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/brown-sugar-bubble-tea-9.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "story",
+          "query": "pouring milk into iced tea",
+          "file": "https://images.unsplash.com/photo-1620360289473-bfafadc16c57?w=1200&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "gallery-1",
+          "query": "tea leaves steeping glass teapot",
+          "file": "https://www.ohhowcivilized.com/wp-content/uploads/brown-sugar-bubble-tea-4.jpg",
+          "status": "link"
+        },
+        {
+          "slot": "gallery-2",
+          "query": "four iced drinks table",
+          "file": "https://images.unsplash.com/photo-1787559806175-af53ac9994f0?w=1200&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "gallery-3",
+          "query": "milk tea jars pearls",
+          "file": "https://images.unsplash.com/photo-1525803377221-4f6ccdaa5133?w=1200&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "gallery-4",
+          "query": "matcha drink wooden coaster",
+          "file": "https://images.unsplash.com/photo-1717398804885-a6c22b3e5c2f?w=1200&q=80&auto=format&fit=crop",
+          "status": "link"
+        },
+        {
+          "slot": "gallery-5",
+          "query": "iced tea drinks warm light",
+          "file": "https://images.unsplash.com/photo-1674218153634-7f6094a17820?w=1200&q=80&auto=format&fit=crop",
+          "status": "link"
+        }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng 3 trang (Home, Menu, About) theo ràng buộc 'Tối đa 3 trang' của BA; thông tin liên hệ đặt ở CTA cuối trang chủ và footer thay cho trang Contact.",
+    "Bảng màu và font preset Nature bị thay bằng art direction của BA: nền #10111B, tím điện #795BFF, cobalt #3157F5, cyan #62E8F2, trắng lạnh #F4F5FF; heading sans-serif hình học Unbounded, thân bài Be Vietnam Pro (cả hai đủ ký tự tiếng Việt cho bản VI).",
+    "BA yêu cầu song ngữ đầy đủ có nút chuyển EN/VI (ghi đè mục 'không tạo bộ chuyển ngôn ngữ' của concept): HTML mặc định tiếng Anh, lang='en'; bản tiếng Việt nằm trong data-vi, site.js đổi chữ và <html lang> khi bấm VI | EN, lưu lựa chọn trong localStorage.",
+    "CTA hero hiển thị 'Explore flavors' (EN) / 'Khám phá hương vị' (VI) theo yêu cầu BA.",
+    "Hiệu ứng chỉ gồm bong bóng/khối cầu trôi chậm (data-float), quỹ đạo xoay nhẹ (CSS, tắt khi reduced-motion), hover nâng thẻ; không WebGL / 3D nặng — khối cầu 3D làm bằng radial-gradient CSS (trang trí trừu tượng, không thay ảnh chụp).",
+    "Ảnh openverse tải trước đó (assets/img/home-*.jpg) có logo thương hiệu khác in trên ly nên không dùng; thay bằng link ảnh đã kiểm qua link_image.",
+    "Rà soát ảnh lần cuối: các khung có logo/nhân vật của thương hiệu khác (KOI Thé, Häagen-Dazs, Share Tea, One Zo) đã được thay bằng ảnh trung tính hoặc ảnh quy trình pha trà đã kiểm qua link_image — gồm ảnh lớn Flavor in Motion, khu Milk Tea/Toppings, thẻ Brown Sugar Comet, Matcha Cloud, hero và gallery-1 của About.",
+    "Đối chiếu ảnh với nội dung thẻ ở khu Cream Series / Toppings: Taro Halo dùng ảnh trà sữa khoai môn tím có trân châu, Osmanthus Fog dùng ảnh sữa rót vào trà ô long hổ phách, thẻ Moon Jelly đổi thành Amber Jelly với ảnh thạch trà đen phủ kem cho đúng mô tả; cả ba link đã kiểm qua link_image.",
+    "2026-10-23: Khách nhận xét màu đẹp nhưng phong cách vũ trụ không hợp quán trà sữa → đổi sang nền sáng màu sữa, khung vòm, trân châu/bong bóng; giữ 5 màu chủ đạo (#10111B, #795BFF, #3157F5, #62E8F2, #F4F5FF). Font tiêu đề Unbounded → Bricolage Grotesque (có dấu tiếng Việt). Hạt sao → hạt nổi màu tím (bong bóng). Tên món bớt chất vũ trụ (Thai Tea Moon → Thai Milk Tea…). Giữ headline \"Your Daily Tea. Another Universe.\" và tiêu đề \"Explore the Orbit\" / \"Choose Your Orbit\" vì là yêu cầu nguyên văn của BA.",
+    "2026-10-23: Thay ảnh lệch chủ đề hoặc xấu (ấm trà rỗng, trà túi lọc, ly rỗng, ảnh mờ, ly trên bãi cỏ khô, 4–5 ảnh trùng một bộ chụp) bằng ảnh Unsplash dùng link ngoài; xem assets/img/CREDITS.md."
+  ],
+  "limitations": [
+    "Website chỉ giới thiệu: không có đặt hàng, giỏ hàng, thanh toán hay form giao dịch (theo ràng buộc của BA).",
+    "Ảnh dùng bằng link ngoài (Unsplash) chỉ cho bản prototype; khi lên web thật cần ảnh sản phẩm thật của TEA ORBIT.",
+    "Địa chỉ, giờ mở cửa, số điện thoại, email là nội dung mẫu cần khách xác nhận."
+  ]
+}

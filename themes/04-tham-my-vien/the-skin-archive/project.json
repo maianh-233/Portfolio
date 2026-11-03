@@ -1,0 +1,67 @@
+{
+  "slug": "the-skin-archive",
+  "name": "THE SKIN ARCHIVE",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "THE SKIN ARCHIVE",
+    "purpose": "Thiết kế website giới thiệu THE SKIN ARCHIVE, một cơ sở chăm sóc da và thẩm mỹ với cách tiếp cận dựa trên sự tìm hiểu, theo dõi và chăm sóc làn da có hệ thống.\n\nArt direction: Retro Medical Archive. Sử dụng kem cũ, burgundy, nâu mực và xanh xám. Kết hợp typography serif cổ điển với sans-serif hiện đại, nhãn hồ sơ, số hiệu, đường kẻ mảnh và hình ảnh có chất liệu tư liệu. Không sử dụng phong cách luxury hoặc giao diện spa thông thường.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Hero giống trang bìa một hồ sơ lưu trữ, giới thiệu triết lý thương hiệu, các nhóm dịch vụ và quy trình tìm hiểu nhu cầu da.\n\nDịch vụ thẩm mỹ & Bảng giá: Trình bày các nhóm dịch vụ dưới dạng danh mục hồ sơ, mỗi mục có mã số minh họa, mô tả, mục đích, thông tin cần biết và giá tham khảo nếu có dữ liệu. Mã số chỉ phục vụ thiết kế, không giả làm mã hồ sơ y tế thật.\n\nVề chúng tôi: Câu chuyện thương hiệu, đội ngũ, không gian và quy trình tư vấn được trình bày như một bộ tư liệu có cấu trúc.\n\nCó công tắc ngôn ngữ Việt – English và nội dung song ngữ đầy đủ. Nút “Đặt lịch tư vấn / Book a Consultation” mở form, xuất hiện tại header, cuối trang và nút nổi trên điện thoại.\n\nWebsite chỉ giới thiệu dịch vụ, không bán hàng. Không tự tạo hồ sơ bệnh nhân, ảnh trước–sau giả, dữ liệu điều trị hoặc chứng nhận. Thiết kế phải tạo cảm giác tư liệu độc đáo nhưng không làm khách nhầm lẫn với hồ sơ bệnh án thật.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-21T04:18:22.851Z",
+  "updatedAt": "2026-10-21T04:39:08.108Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\the-skin-archive\\web",
+    "builtAt": "2026-10-21T04:38:49.652Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "219155d7-2c30-47be-b11a-39f2bfacd9c6",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\the-skin-archive\\web",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-21T04:39:03.965Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 9
+  }
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập quản lý tiệm | Tiệm Bánh Kem</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-013 Đăng nhập quản trị: FR-043. ?next=<trang> để quay lại trang được yêu cầu trước đó. -->
+<body data-screen="SCR-013" data-layout="admin-login" class="admin bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="relative min-h-[calc(100dvh_-_28px)] grid place-items-center px-4 py-10">
+    <div class="polka absolute inset-0 opacity-60 pointer-events-none" aria-hidden="true"></div>
+    <div class="relative w-full max-w-md">
+      <div class="rounded-3xl bg-white shadow-lift p-6 sm:p-8">
+        <div id="logo"></div>
+        <h1 class="mt-6 text-2xl font-extrabold">Quản lý tiệm</h1>
+        <p class="text-ink-muted mt-1">Đăng nhập để xem đơn và cập nhật bánh.</p>
+        <form id="login" class="mt-6 space-y-4" novalidate>
+          <div class="field"><label class="field-label" for="email">Email</label>
+            <input id="email" type="email" autocomplete="username" class="field-input" aria-describedby="email-err"><p id="email-err" class="field-error hidden"></p></div>
+          <div class="field"><label class="field-label" for="pw">Mật khẩu</label>
+            <div class="relative"><input id="pw" type="password" autocomplete="current-password" class="field-input !pr-12" aria-describedby="pw-err">
+              <button type="button" id="toggle-pw" class="absolute right-1.5 top-1/2 -translate-y-1/2 grid place-items-center w-10 h-10 rounded-full hover:bg-cream text-xl text-ink-muted" aria-label="Hiện mật khẩu" aria-pressed="false"><i class="ph ph-eye" aria-hidden="true"></i></button></div>
+            <p id="pw-err" class="field-error hidden"></p></div>
+          <p id="form-err" class="hidden rounded-xl bg-[#FBEDEB] text-danger font-semibold px-4 py-3 text-[15px]" role="alert"></p>
+          <button type="submit" id="btn-login" class="btn btn-primary w-full h-12">Đăng nhập</button>
+        </form>
+        <button type="button" id="forgot" class="mt-4 text-sm font-bold text-primary-strong hover:underline min-h-[44px]">Quên mật khẩu?</button>
+      </div>
+      <!-- Tài khoản thử cho buổi demo -->
+      <div class="mt-4 rounded-2xl bg-white/80 p-4 text-sm">
+        <p class="font-extrabold">Tài khoản thử (mật khẩu: banhkem123)</p>
+        <ul id="demo-acc" class="mt-2 space-y-1.5"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    App.onReady(function () {
+      var next = App.param('next') || 'qt-don-hang.html';
+      if (!/^qt-[a-z-]+\.html/.test(next)) next = 'qt-don-hang.html';
+      if (Auth.current()) { location.replace(next); return; }
+      $('#logo').innerHTML = Layout.logo();
+
+      var demos = [['chutiem@tiembanhkem.vn', 'Chủ tiệm (đủ quyền)'], ['hoa@tiembanhkem.vn', 'Nhân viên, có quyền sửa giá'], ['vy@tiembanhkem.vn', 'Nhân viên, không sửa giá'], ['nam@tiembanhkem.vn', 'Tài khoản đã khóa']];
+      $('#demo-acc').innerHTML = demos.map(function (d) { return '<li><button type="button" class="text-left hover:text-primary-strong" data-mail="' + d[0] + '"><b>' + d[0] + '</b> · ' + d[1] + '</button></li>'; }).join('');
+      $all('[data-mail]').forEach(function (b) { b.onclick = function () { $('#email').value = b.dataset.mail; $('#pw').value = 'banhkem123'; $('#pw').focus(); }; });
+
+      $('#toggle-pw').onclick = function () {
+        var pw = $('#pw'), show = pw.type === 'password';
+        pw.type = show ? 'text' : 'password';
+        this.setAttribute('aria-pressed', show); this.setAttribute('aria-label', show ? 'Ẩn mật khẩu' : 'Hiện mật khẩu');
+        this.innerHTML = '<i class="ph ' + (show ? 'ph-eye-slash' : 'ph-eye') + '" aria-hidden="true"></i>';
+      };
+
+      $('#login').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = $('#email'), pw = $('#pw'), fe = $('#form-err'), ok = true;
+        fe.classList.add('hidden');
+        if (!FormUI.validEmail(email.value.trim())) { FormUI.setError(email, 'Email không hợp lệ.'); ok = false; }
+        if (!pw.value) { FormUI.setError(pw, 'Vui lòng nhập mật khẩu.'); ok = false; }
+        if (!ok) { FormUI.focusFirst(this); return; }
+        var btn = $('#btn-login');
+        FormUI.busy(btn, true, 'Đang đăng nhập...');
+        setTimeout(function () {
+          FormUI.busy(btn, false);
+          var r = Auth.login(email.value, pw.value);
+          if (!r.ok) { fe.textContent = r.error; fe.classList.remove('hidden'); pw.value = ''; pw.focus(); return; } // E-TK-11/12/13
+          location.href = next;
+        }, 600);
+      });
+
+      $('#forgot').onclick = function () {
+        Modal.open({
+          title: 'Quên mật khẩu',
+          body: '<p class="text-ink-muted">Nhập email đăng nhập, tiệm sẽ gửi hướng dẫn đặt lại mật khẩu.</p><div class="field mt-4"><label class="field-label" for="fg-email">Email</label><input id="fg-email" type="email" class="field-input"></div>',
+          actions: [{ label: 'Đóng', variant: 'secondary' }, { label: 'Gửi hướng dẫn', variant: 'primary', onClick: function (close, el) {
+            var inp = $('#fg-email', el);
+            if (!FormUI.validEmail(inp.value.trim())) { FormUI.setError(inp, 'Email không hợp lệ.'); return false; }
+            Toast.show('Nếu email tồn tại, tiệm đã gửi hướng dẫn đặt lại mật khẩu.', 'info');
+          } }]
+        });
+      };
+    });
+  </script>
+</body>
+</html>

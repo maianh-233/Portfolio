@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lưu trú — KIRI HOUSE</title>
+<meta name="description" content="Japanese Suite, Garden Villa, Signature Residence và các tiện ích của KIRI HOUSE: trà thất, vườn thiền, spa, nhà hàng theo mùa và vườn nước.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body data-title-en="Stays | KIRI HOUSE" data-desc-en="Japanese Suite, Garden Villa, Signature Residence and the facilities of KIRI HOUSE: tea house, zen garden, spa, seasonal restaurant and water garden.">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="group/h sticky top-0 z-40 border-b border-transparent bg-paper transition-[border-color,box-shadow] duration-500 [&.is-scrolled]:border-ink/10 [&.is-scrolled]:shadow-[0_10px_30px_-22px_rgba(40,42,40,.45)]">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 transition-[height] duration-500 group-[.is-scrolled]/h:h-[62px] sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="py-3 text-[14px] font-medium tracking-wordmark text-ink transition-colors duration-300 hover:text-cedar-dark focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-cedar">KIRI HOUSE</a>
+
+    <nav class="hidden items-center gap-11 lg:flex" aria-label="Điều hướng chính" data-en-label="Main navigation">
+      <a href="../index.html" data-en="Home" class="relative py-2 text-[14px] text-ink/70 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-ink hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Trang chủ</a>
+      <a href="../pages/about.html" data-en="About" class="relative py-2 text-[14px] text-ink/70 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-ink hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Giới thiệu</a>
+      <a aria-current="page" href="../pages/stays.html" data-en="Stays" class="relative py-2 text-[14px] text-ink/70 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-ink hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Lưu trú</a>
+      <a href="../pages/experiences.html" data-en="Experiences" class="relative py-2 text-[14px] text-ink/70 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-ink hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Trải nghiệm</a>
+    </nav>
+
+    <div class="flex items-center gap-2 sm:gap-4">
+      <div class="flex items-center text-[12px] tracking-[0.22em]" role="group" aria-label="Ngôn ngữ" data-en-label="Language">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="min-h-[44px] px-2.5 text-ink/45 transition-colors duration-300 hover:text-ink [&.is-active]:text-ink focus-visible:outline focus-visible:outline-1 focus-visible:outline-cedar">VI</button>
+        <span class="h-3 w-px bg-ink/25" aria-hidden="true"></span>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="min-h-[44px] px-2.5 text-ink/45 transition-colors duration-300 hover:text-ink [&.is-active]:text-ink focus-visible:outline focus-visible:outline-1 focus-visible:outline-cedar">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" data-en-label="Open menu" class="group/m flex h-11 w-11 flex-col items-center justify-center gap-[7px] lg:hidden">
+        <span class="block h-px w-6 bg-ink transition-transform duration-500 group-[.is-open]/m:translate-y-[4px] group-[.is-open]/m:rotate-45"></span>
+        <span class="block h-px w-6 bg-ink transition-transform duration-500 group-[.is-open]/m:-translate-y-[4px] group-[.is-open]/m:-rotate-45"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-0 bottom-0 top-[62px] z-50 flex flex-col justify-between border-t border-ink/10 bg-paper px-6 pb-10 pt-10 lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-en-label="Mobile menu">
+      <a href="../index.html" data-en="Home" class="border-b border-ink/10 py-4 font-display text-4xl text-ink/80 aria-[current=page]:text-ink">Trang chủ</a>
+      <a href="../pages/about.html" data-en="About" class="border-b border-ink/10 py-4 font-display text-4xl text-ink/80 aria-[current=page]:text-ink" style="--ui-d:60ms">Giới thiệu</a>
+      <a aria-current="page" href="../pages/stays.html" data-en="Stays" class="border-b border-ink/10 py-4 font-display text-4xl text-ink/80 aria-[current=page]:text-ink" style="--ui-d:120ms">Lưu trú</a>
+      <a href="../pages/experiences.html" data-en="Experiences" class="border-b border-ink/10 py-4 font-display text-4xl text-ink/80 aria-[current=page]:text-ink" style="--ui-d:180ms">Trải nghiệm</a>
+    </nav>
+    <p class="text-sm leading-relaxed text-ink/60" data-en="A contemporary Japanese-inspired resort of gardens, timber and light.">Resort nghỉ dưỡng theo tinh thần kiến trúc Nhật Bản đương đại, giữa vườn, gỗ và ánh sáng.</p>
+  </div>
+</header>
+<!-- /@partial header -->
+
+<main>
+  <!-- HERO -->
+  <section id="stays-hero" data-section="page-hero" class="relative overflow-hidden bg-paper">
+    <div class="grid lg:min-h-[78vh] lg:grid-cols-12">
+      <div class="flex flex-col justify-end px-4 pb-12 pt-16 sm:px-6 lg:col-span-5 lg:px-10 lg:pb-20 2xl:pl-16">
+        <h1 data-split="words" class="font-display text-[clamp(2.9rem,5.6vw,6rem)] font-light leading-[1.04] text-ink" data-en="Spaces for a Slower Rhythm">Không gian cho một nhịp sống chậm</h1>
+        <p data-reveal="up" data-reveal-delay="250" class="mt-7 max-w-sm text-[17px] leading-[1.8] text-ink/70" data-en="Rooms, villas and shared spaces arranged around gardens and still water.">Phòng nghỉ, villa và những không gian chung được sắp đặt quanh khu vườn và mặt nước tĩnh.</p>
+        <nav class="mt-10 flex flex-wrap gap-x-8 gap-y-2 border-t border-ink/15 pt-6 text-[14px]" aria-label="Trong trang" data-en-label="On this page">
+          <a href="#suite" class="py-2 text-ink/70 transition-colors duration-300 hover:text-ink">Japanese Suite</a>
+          <a href="#villa" class="py-2 text-ink/70 transition-colors duration-300 hover:text-ink">Garden Villa</a>
+          <a href="#residence" class="py-2 text-ink/70 transition-colors duration-300 hover:text-ink">Signature Residence</a>
+          <a href="#facilities" class="py-2 text-ink/70 transition-colors duration-300 hover:text-ink" data-en="Facilities">Tiện ích</a>
+        </nav>
+      </div>
+      <div class="shoji relative aspect-[4/3] overflow-hidden lg:col-span-7 lg:aspect-auto">
+        <div data-parallax="0.08" class="absolute inset-x-0 -inset-y-[10%]">
+          <img src="https://images.unsplash.com/photo-1785641891348-bb5704866af3?auto=format&fit=crop&w=2000&q=70" referrerpolicy="no-referrer" fetchpriority="high" width="2000" height="1333" alt="Khu vườn Nhật yên tĩnh nhìn từ bên trong ngôi nhà truyền thống" data-en-alt="Serene Japanese garden viewed from inside a traditional building" class="h-full w-full object-cover saturate-[.9]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAPANESE SUITE -->
+  <section id="suite" data-section="features-alternate" class="scroll-mt-20 bg-paper py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <figure class="lg:col-span-7">
+        <div data-reveal="clip" class="shoji aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1753552502151-93914d36ecf2?auto=format&fit=crop&w=1600&q=70" referrerpolicy="no-referrer" loading="lazy" width="1600" height="1200" alt="Căn phòng kiểu Nhật với nội thất gỗ tối giản" data-en-alt="Japanese room with minimal timber furnishings" class="h-full w-full object-cover saturate-[.9]"></div>
+      </figure>
+      <div class="flex flex-col lg:col-span-4 lg:col-start-9">
+        <p class="text-xs uppercase tracking-[0.28em] text-cedar-dark" data-en="Room">Phòng nghỉ</p>
+        <h2 data-reveal="up" class="mt-5 font-display text-[clamp(2.4rem,4vw,4rem)] font-light leading-[1.05] text-ink">Japanese Suite</h2>
+        <p data-reveal="up" class="mt-6 max-w-prose text-[17px] leading-[1.85] text-ink/75" data-en="A sleeping room on tatami, a sitting room with a low table and a bath of dark stone, joined by sliding panels so the space can open or close as the day requires.">Phòng ngủ trên chiếu tatami, phòng ngồi với bàn thấp và phòng tắm đá tối màu, nối với nhau bằng vách trượt để không gian mở hoặc khép tùy theo từng thời điểm trong ngày.</p>
+        <ul data-reveal-stagger="80" class="mt-8 space-y-3 border-t border-ink/15 pt-6 text-[15px] text-ink/75">
+          <li class="flex gap-4"><span class="mt-[0.7em] h-px w-4 shrink-0 bg-cedar" aria-hidden="true"></span><span data-en="Tatami bedroom with futon or low bed">Phòng ngủ chiếu tatami, nệm futon hoặc giường thấp</span></li>
+          <li class="flex gap-4"><span class="mt-[0.7em] h-px w-4 shrink-0 bg-cedar" aria-hidden="true"></span><span data-en="Garden-facing sitting room">Phòng ngồi hướng ra vườn</span></li>
+          <li class="flex gap-4"><span class="mt-[0.7em] h-px w-4 shrink-0 bg-cedar" aria-hidden="true"></span><span data-en="Deep soaking tub in a stone bathroom">Bồn ngâm sâu trong phòng tắm đá</span></li>
+          <li class="flex gap-4"><span class="mt-[0.7em] h-px w-4 shrink-0 bg-cedar" aria-hidden="true"></span><span data-en="Tea set and seasonal sweets on arrival">Bộ trà và bánh ngọt theo mùa khi nhận phòng</span></li>
+        </ul>
+        <figure class="mt-12 w-2/3 self-end lg:mt-auto">
+          <div data-reveal="clip" class="shoji aspect-[4/5] overflow-hidden"><img src="https://images.unsplash.com/photo-1722510154425-abad1f97b362?auto=format&fit=crop&w=1000&q=70" referrerpolicy="no-referrer" loading="lazy" width="1000" height="1250" alt="Góc phòng với bàn thấp và bình hoa" data-en-alt="Room corner with a low table and a vase" class="h-full w-full object-cover saturate-[.9]"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARDEN VILLA -->
+  <section id="villa" data-section="features-alternate" class="scroll-mt-20 bg-sage-light py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="order-2 flex flex-col lg:order-1 lg:col-span-4">
+        <h2 data-reveal="up" class="font-display text-[clamp(2.4rem,4vw,4rem)] font-light leading-[1.05] text-ink">Garden Villa</h2>
+        <p data-reveal="up" class="mt-6 max-w-prose text-[17px] leading-[1.85] text-ink/75" data-en="A single-storey villa set behind its own wall. Glass sliding doors open the living space fully onto a private courtyard garden and a timber veranda.">Villa một tầng nằm sau bức tường riêng. Cửa kính trượt mở trọn không gian sinh hoạt ra sân vườn riêng và hiên gỗ.</p>
+        <ul data-reveal-stagger="80" class="mt-8 space-y-3 border-t border-ink/20 pt-6 text-[15px] text-ink/75">
+          <li class="flex gap-4"><span class="mt-[0.7em] h-px w-4 shrink-0 bg-sage-dark" aria-hidden="true"></span><span data-en="Private courtyard garden">Sân vườn riêng</span></li>
+          <li class="flex gap-4"><span class="mt-[0.7em] h-px w-4 shrink-0 bg-sage-dark" aria-hidden="true"></span><span data-en="Timber veranda for sitting outdoors">Hiên gỗ để ngồi ngoài trời</span></li>
+          <li class="flex gap-4"><span class="mt-[0.7em] h-px w-4 shrink-0 bg-sage-dark" aria-hidden="true"></span><span data-en="Open living space with full-height doors">Không gian sinh hoạt mở với cửa cao trọn tường</span></li>
+        </ul>
+        <figure class="mt-12 w-3/4 lg:mt-auto">
+          <div data-reveal="clip" class="shoji aspect-[4/5] overflow-hidden"><img src="https://images.unsplash.com/photo-1693664681816-f7f8422758f0?auto=format&fit=crop&w=1000&q=70" referrerpolicy="no-referrer" loading="lazy" width="1000" height="1250" alt="Căn phòng trống với cửa kính trượt" data-en-alt="Empty room with a glass sliding door" class="h-full w-full object-cover saturate-[.9]"></div>
+        </figure>
+      </div>
+      <figure class="order-1 lg:order-2 lg:col-span-7 lg:col-start-6">
+        <div data-reveal="clip" class="shoji shoji-dark aspect-[4/3] overflow-hidden lg:aspect-[5/6]"><img src="https://images.unsplash.com/photo-1788287997368-8b72dd6ce668?auto=format&fit=crop&w=1600&q=70" referrerpolicy="no-referrer" loading="lazy" width="1600" height="1920" alt="Ngôi nhà Nhật với cửa kính trượt sáng đèn trong khu vườn buổi tối" data-en-alt="Japanese house with lit glass sliding doors in a garden at night" class="h-full w-full object-cover saturate-[.9]"></div>
+        <figcaption class="mt-4 font-display text-lg italic text-ink/60" data-en="Evening, with the doors left open to the garden.">Buổi tối, cửa để mở ra khu vườn.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SIGNATURE RESIDENCE -->
+  <section id="residence" data-section="features-bento" class="scroll-mt-20 bg-paper py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div data-reveal="clip" class="shoji aspect-[4/3] overflow-hidden sm:aspect-[16/9] lg:aspect-[21/9]"><img src="https://images.unsplash.com/photo-1686933021211-19a669f3acb2?auto=format&fit=crop&w=1800&q=70" referrerpolicy="no-referrer" loading="lazy" width="1800" height="771" alt="Công trình gỗ truyền thống với cây xanh phía trước" data-en-alt="Traditional timber building with a tree in front" class="h-full w-full object-cover saturate-[.9]"></div>
+      <div class="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-12 lg:gap-10">
+        <figure class="lg:col-span-3 lg:-mt-40 lg:pl-0">
+          <div data-reveal="clip" class="shoji aspect-[2/3] overflow-hidden border-8 border-paper"><img src="https://images.unsplash.com/photo-1628843481844-23e13541c57c?auto=format&fit=crop&w=1000&q=70" referrerpolicy="no-referrer" loading="lazy" width="1000" height="1500" alt="Cánh cửa gỗ trên nền sàn bê tông xám" data-en-alt="Timber door against a grey concrete floor" class="h-full w-full object-cover saturate-[.9]"></div>
+        </figure>
+        <div class="lg:col-span-4 lg:col-start-5">
+          <h2 data-reveal="up" class="font-display text-[clamp(2.4rem,4vw,4rem)] font-light leading-[1.05] text-ink">Signature Residence</h2>
+          <p data-reveal="up" class="mt-6 max-w-prose text-[17px] leading-[1.85] text-ink/75" data-en="Our most spacious residence: several rooms arranged around one garden, with timber, plaster and stone in quiet tones. Made for longer and more private stays.">Không gian lưu trú rộng nhất: nhiều phòng xếp quanh một khu vườn, với gỗ, vữa và đá ở những gam màu trầm. Dành cho kỳ nghỉ dài và riêng tư hơn.</p>
+        </div>
+        <div data-reveal="up" class="border-t border-ink/15 pt-6 lg:col-span-3 lg:col-start-10 lg:self-end">
+          <h3 class="font-display text-2xl text-ink" data-en="Also available: Private Onsen Villa">Lựa chọn bổ sung: Private Onsen Villa</h3>
+          <p class="mt-3 text-[15px] leading-[1.75] text-ink/65" data-en="A small number of villas include a private mineral bath. Not every residence has its own onsen.">Một số ít villa có bồn tắm khoáng riêng. Không phải mọi khu lưu trú đều có onsen riêng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIỆN ÍCH -->
+  <section id="facilities" data-section="features-bento" class="scroll-mt-20 bg-gradient-to-b from-paper to-paper-deep py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <p class="text-xs uppercase tracking-[0.28em] text-cedar-dark" data-en="Facilities">Tiện ích</p>
+      <h2 data-reveal="up" class="mt-5 max-w-3xl font-display text-[clamp(2.2rem,3.8vw,3.9rem)] font-light leading-[1.1] text-ink" data-en="Shared spaces, kept quiet">Những không gian chung, luôn yên tĩnh</h2>
+      <div class="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-12">
+        <article class="zoom sm:col-span-2 lg:col-span-7">
+          <div data-reveal="clip" class="shoji aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1757507423608-ae47cddef75f?auto=format&fit=crop&w=1200&q=70" referrerpolicy="no-referrer" loading="lazy" width="1200" height="900" alt="Không gian trà đạo với ấm đun nước và chén trà" data-en-alt="Tea ceremony setting with kettle and cups" class="h-full w-full object-cover saturate-[.9]"></div>
+          <h3 class="mt-6 font-display text-3xl text-ink">Tea House <span class="text-xl italic text-ink/55" data-en="tea pavilion">trà thất</span></h3>
+          <p class="mt-2 max-w-md text-[15px] leading-[1.75] text-ink/70" data-en="A timber pavilion with a low entrance and a single window toward the moss garden.">Trà thất gỗ với lối vào thấp và một ô cửa duy nhất nhìn ra vườn rêu.</p>
+        </article>
+        <article class="zoom lg:col-span-5 lg:mt-32">
+          <div data-reveal="clip" class="shoji aspect-[4/5] overflow-hidden"><img src="https://images.unsplash.com/photo-1669954807964-6e98112a6b86?auto=format&fit=crop&w=1200&q=70" referrerpolicy="no-referrer" loading="lazy" width="1200" height="1500" alt="Vườn đá với cỏ và các khối đá" data-en-alt="Rock garden with grass and stones" class="h-full w-full object-cover saturate-[.9]"></div>
+          <h3 class="mt-6 font-display text-3xl text-ink">Zen Garden <span class="text-xl italic text-ink/55" data-en="stone garden">vườn thiền</span></h3>
+          <p class="mt-2 max-w-md text-[15px] leading-[1.75] text-ink/70" data-en="Gravel raked each morning, stones set with care, a path to walk slowly.">Sỏi được cào mỗi sáng, đá đặt cẩn trọng, một lối đi để bước chậm.</p>
+        </article>
+        <article class="zoom lg:col-span-4">
+          <div data-reveal="clip" class="shoji aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1785057707873-68aada1c09dd?auto=format&fit=crop&w=1200&q=70" referrerpolicy="no-referrer" loading="lazy" width="1200" height="900" alt="Bể ngâm chân ngoài trời với ghế gỗ" data-en-alt="Outdoor foot bath with timber seating" class="h-full w-full object-cover saturate-[.9]"></div>
+          <h3 class="mt-6 font-display text-3xl text-ink">Wellness Spa</h3>
+          <p class="mt-2 text-[15px] leading-[1.75] text-ink/70" data-en="Warm baths and quiet rooms for rest, care and recovery.">Bể ngâm ấm và phòng yên tĩnh để nghỉ ngơi, chăm sóc, hồi phục.</p>
+        </article>
+        <article class="zoom lg:col-span-4">
+          <div data-reveal="clip" class="shoji aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1740982931610-9309b6e88f30?auto=format&fit=crop&w=1200&q=70" referrerpolicy="no-referrer" loading="lazy" width="1200" height="900" alt="Bàn ăn với nhiều đĩa và bát món ăn" data-en-alt="Table with plates and bowls of food" class="h-full w-full object-cover saturate-[.9]"></div>
+          <h3 class="mt-6 font-display text-3xl text-ink">Seasonal Restaurant</h3>
+          <p class="mt-2 text-[15px] leading-[1.75] text-ink/70" data-en="A menu that changes with the season, served facing the garden.">Thực đơn đổi theo mùa, phục vụ trước khung nhìn ra vườn.</p>
+        </article>
+        <article class="zoom sm:col-span-2 lg:col-span-4">
+          <div data-reveal="clip" class="shoji aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1719462932338-50922d824392?auto=format&fit=crop&w=1200&q=70" referrerpolicy="no-referrer" loading="lazy" width="1200" height="900" alt="Hồ nước nhỏ giữa đá và cây" data-en-alt="Small pond among stones and trees" class="h-full w-full object-cover saturate-[.9]"></div>
+          <h3 class="mt-6 font-display text-3xl text-ink">Quiet Water Garden</h3>
+          <p class="mt-2 text-[15px] leading-[1.75] text-ink/70" data-en="A still pond and stepping stones, best visited early in the morning.">Hồ nước tĩnh và những bậc đá, đẹp nhất vào sáng sớm.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI TIẾT KIẾN TRÚC -->
+  <section id="details" data-section="gallery-masonry" class="bg-ink py-24 text-paper lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-3">
+        <h2 data-reveal="up" class="font-display text-[clamp(2.2rem,3.4vw,3.4rem)] font-light leading-[1.1]" data-en="In the details">Trong từng chi tiết</h2>
+        <p data-reveal="up" class="mt-6 max-w-sm text-[16px] leading-[1.8] text-paper/70" data-en="Timber grain, shoji paper, stone, natural linen and the light that passes through them.">Vân gỗ, giấy shoji, đá, vải tự nhiên và ánh sáng đi xuyên qua chúng.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:col-span-9 lg:grid-cols-3">
+        <a href="https://images.unsplash.com/photo-1757507423552-94e7b4221f7e?auto=format&fit=crop&w=1000&q=70" data-lightbox="details" data-caption="Giấy shoji" class="zoom block lg:mt-24">
+          <div data-reveal="clip" class="shoji shoji-dark aspect-[3/4] overflow-hidden bg-ink-soft"><img src="https://images.unsplash.com/photo-1757507423552-94e7b4221f7e?auto=format&fit=crop&w=1000&q=70" referrerpolicy="no-referrer" loading="lazy" width="1000" height="1333" alt="Ô cửa lưới giấy shoji" data-en-alt="Gridded shoji paper window" class="h-full w-full object-cover saturate-[.9]"></div>
+          <p class="mt-3 text-sm text-paper/60" data-en="Shoji paper">Giấy shoji</p>
+        </a>
+        <a href="https://images.unsplash.com/photo-1612014449419-ac12de2f2181?auto=format&fit=crop&w=1000&q=70" data-lightbox="details" data-caption="Khung gỗ" class="zoom block">
+          <div data-reveal="clip" class="shoji shoji-dark aspect-[3/4] overflow-hidden bg-ink-soft"><img src="https://images.unsplash.com/photo-1612014449419-ac12de2f2181?auto=format&fit=crop&w=1000&q=70" referrerpolicy="no-referrer" loading="lazy" width="1000" height="1333" alt="Khung cửa sổ gỗ nâu" data-en-alt="Brown timber window frame" class="h-full w-full object-cover saturate-[.9]"></div>
+          <p class="mt-3 text-sm text-paper/60" data-en="Timber frame">Khung gỗ</p>
+        </a>
+        <a href="https://images.unsplash.com/photo-1610333684078-c89bd57f2e46?auto=format&fit=crop&w=1400&q=70" data-lightbox="details" data-caption="Cửa gỗ và kính" class="zoom col-span-2 block lg:col-span-1 lg:mt-12">
+          <div data-reveal="clip" class="shoji shoji-dark aspect-[4/3] overflow-hidden bg-ink-soft lg:aspect-[3/4]"><img src="https://images.unsplash.com/photo-1610333684078-c89bd57f2e46?auto=format&fit=crop&w=1400&q=70" referrerpolicy="no-referrer" loading="lazy" width="1400" height="1866" alt="Cửa kính khung gỗ nâu" data-en-alt="Glass door with a brown timber frame" class="h-full w-full object-cover saturate-[.9]"></div>
+          <p class="mt-3 text-sm text-paper/60" data-en="Timber and glass">Gỗ và kính</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KẾT -->
+  <section id="stays-cta" data-section="cta-type" data-gradient-shift="24" class="bg-gradient-to-br from-sage-light via-paper to-sage-light py-28 lg:py-40">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-split="words" class="max-w-5xl font-display text-[clamp(2.8rem,6.4vw,6.5rem)] font-light leading-[1.04] text-ink" data-en="A Space to Simply Be">Một không gian để được là chính mình</h2>
+      <div data-reveal="up" class="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+        <a href="about.html" class="group inline-flex min-h-[52px] items-center justify-between gap-4 bg-ink px-7 text-[14px] tracking-[0.12em] text-paper transition-colors duration-300 hover:bg-cedar-dark active:scale-[.98]"><span data-en="Our philosophy">Đọc triết lý KIRI HOUSE</span><span class="h-px w-8 bg-vermilion transition-transform duration-500 group-hover:translate-x-1" aria-hidden="true"></span></a>
+        <a href="../index.html" class="inline-flex min-h-[44px] items-center text-[14px] tracking-[0.1em] text-ink/70 underline decoration-ink/30 underline-offset-8 transition-colors duration-300 hover:text-ink hover:decoration-vermilion" data-en="Back to home">Về trang chủ</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @partial footer -->
+<footer id="footer" class="bg-ink text-paper">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-24 sm:px-6 lg:px-10 lg:pt-32 2xl:px-16">
+    <div class="grid gap-14 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <a href="../index.html" class="inline-flex items-center gap-3 py-2 text-[15px] font-medium tracking-wordmark text-paper transition-colors duration-300 hover:text-sage">
+          <span class="h-2 w-2 bg-vermilion" aria-hidden="true"></span>KIRI HOUSE
+        </a>
+        <p class="mt-8 max-w-md font-display text-3xl font-light leading-snug text-paper/90 lg:text-[2.6rem]" data-en="A place where silence becomes something you can hear.">Một nơi để sự tĩnh lặng trở nên nghe thấy được.</p>
+      </div>
+
+      <nav class="lg:col-span-2 lg:col-start-7" aria-label="Các trang" data-en-label="Pages">
+        <p class="text-xs uppercase tracking-[0.24em] text-paper/50" data-en="Pages">Các trang</p>
+        <ul class="mt-6 space-y-1 text-[15px]">
+          <li><a href="../index.html" class="inline-block py-2 text-paper/80 transition-colors duration-300 hover:text-paper aria-[current=page]:text-sage" data-en="Home">Trang chủ</a></li>
+          <li><a href="../pages/about.html" class="inline-block py-2 text-paper/80 transition-colors duration-300 hover:text-paper aria-[current=page]:text-sage" data-en="About">Giới thiệu</a></li>
+          <li><a aria-current="page" href="../pages/stays.html" class="inline-block py-2 text-paper/80 transition-colors duration-300 hover:text-paper aria-[current=page]:text-sage" data-en="Stays">Lưu trú</a></li>
+          <li><a href="../pages/experiences.html" class="inline-block py-2 text-paper/80 transition-colors duration-300 hover:text-paper aria-[current=page]:text-sage" data-en="Experiences">Trải nghiệm</a></li>
+        </ul>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <p class="text-xs uppercase tracking-[0.24em] text-paper/50" data-en="Contact (sample)">Liên hệ (thông tin mẫu)</p>
+        <ul class="mt-6 space-y-3 text-[15px] text-paper/80">
+          <li data-en="Resort address to be updated">Địa chỉ resort đang được cập nhật</li>
+          <li class="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a href="tel:+842838124670" class="py-1 transition-colors duration-300 hover:text-paper">+84 28 3812 4670</a>
+            <button type="button" data-copy="+84 28 3812 4670" class="min-h-[44px] text-xs uppercase tracking-[0.2em] text-sage transition-colors duration-300 hover:text-paper" data-en="Copy">Sao chép</button>
+          </li>
+          <li><a href="mailto:hello@kirihouse.vn" class="py-1 transition-colors duration-300 hover:text-paper">hello@kirihouse.vn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-20 h-px bg-paper/15"></div>
+    <div class="flex flex-col gap-3 pt-6 text-[13px] text-paper/55 sm:flex-row sm:items-center sm:justify-between">
+      <p data-en="© 2026 KIRI HOUSE. All rights reserved.">© 2026 KIRI HOUSE. Bảo lưu mọi quyền.</p>
+      <p data-en="This website introduces the resort only. Bookings are not available online.">Website chỉ giới thiệu resort, chưa nhận đặt phòng trực tuyến.</p>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<footer id="footer" class="bg-velvet text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid gap-12 border-b border-ivory/10 pb-16 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <a href="{{root}}index.html" class="font-display text-3xl tracking-[0.18em]">VELVET <span class="text-[0.6em] tracking-[0.32em] text-gold">HAIR STUDIO</span></a>
+        <p class="mt-6 max-w-sm text-[15px] leading-relaxed text-taupe" data-i18n="f.about">Salon tóc theo đuổi vẻ đẹp hiện đại và cá nhân hóa: tư vấn kỹ, kỹ thuật chuẩn xác và một không gian để bạn thật sự thư giãn.</p>
+      </div>
+      <div class="lg:col-span-2 lg:col-start-6">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.22em] text-gold" data-i18n="f.explore">Khám phá</h2>
+        <ul class="mt-6 space-y-3 text-[15px]">
+          <li><a href="{{root}}index.html" class="text-ivory/85 transition-colors duration-300 hover:text-gold" data-i18n="n.home">Trang chủ</a></li>
+          <li><a href="{{root}}pages/services.html" class="text-ivory/85 transition-colors duration-300 hover:text-gold" data-i18n="n.services">Dịch vụ</a></li>
+          <li><a href="{{root}}pages/gallery.html" class="text-ivory/85 transition-colors duration-300 hover:text-gold" data-i18n="n.gallery">Bộ sưu tập</a></li>
+          <li><a href="{{root}}pages/about.html" class="text-ivory/85 transition-colors duration-300 hover:text-gold" data-i18n="n.about">Về chúng tôi</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.22em] text-gold" data-i18n="f.visit">Ghé thăm</h2>
+        <address class="mt-6 space-y-3 text-[15px] not-italic leading-relaxed text-ivory/85">
+          <p>123 Nguyen Hue, District 1,<br>Ho Chi Minh City</p>
+          <p data-i18n="c.hours">Mở cửa 09:00-20:00 mỗi ngày</p>
+          <p><a href="tel:0900123456" class="transition-colors duration-300 hover:text-gold">0900 123 456</a></p>
+          <p><a href="mailto:hello@velvethair.example" class="break-words transition-colors duration-300 hover:text-gold">hello@velvethair.example</a></p>
+        </address>
+      </div>
+      <div class="lg:col-span-2">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.22em] text-gold" data-i18n="f.follow">Theo dõi</h2>
+        <ul class="mt-6 space-y-3 text-[15px]">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-ivory/85 transition-colors duration-300 hover:text-gold">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="text-ivory/85 transition-colors duration-300 hover:text-gold">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="text-ivory/85 transition-colors duration-300 hover:text-gold">TikTok</a></li>
+        </ul>
+        <p class="mt-4 text-xs leading-relaxed text-taupe" data-i18n="f.socialnote">Liên kết minh họa, chưa gắn tài khoản thật.</p>
+      </div>
+    </div>
+    <p class="select-none py-10 font-display text-[clamp(3rem,13vw,13rem)] font-light leading-[0.85] tracking-[0.04em] text-ivory/[0.07]" aria-hidden="true">VELVET</p>
+    <div class="flex flex-col gap-6 border-t border-ivory/10 py-8 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-sm text-taupe">© 2026 VELVET HAIR STUDIO. <span data-i18n="f.rights">Nội dung và thông tin liên hệ mang tính minh họa.</span></p>
+      <button type="button" data-modal-open="book" class="inline-flex h-11 items-center justify-center border border-gold px-6 text-xs font-bold uppercase tracking-[0.2em] text-gold transition-colors duration-300 hover:bg-gold hover:text-velvet active:scale-[.98]" data-i18n="c.book">Đặt lịch</button>
+    </div>
+  </div>
+</footer>
+
+<dialog id="book" aria-labelledby="book-title">
+  <div class="relative p-8 sm:p-10">
+    <button type="button" data-modal-close class="absolute right-3 top-3 grid h-11 w-11 place-items-center text-2xl text-mocha transition-colors hover:text-velvet" aria-label="Đóng" data-i18n-attr="aria-label:c.close">×</button>
+    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-mocha" data-i18n="b.eyebrow">Đặt lịch tại VELVET</p>
+    <h2 id="book-title" class="mt-4 font-display text-4xl leading-[1.05] sm:text-5xl" data-i18n="b.title">Hẹn một buổi tư vấn</h2>
+    <p class="mt-4 text-[15px] leading-relaxed text-velvet/80" data-i18n="b.text">Gọi hoặc nhắn cho salon để chọn stylist và khung giờ phù hợp. Buổi tư vấn đầu tiên giúp chúng tôi hiểu chất tóc và mong muốn của bạn.</p>
+    <dl class="mt-8 divide-y divide-velvet/10 border-y border-velvet/10 text-[15px]">
+      <div class="flex items-center justify-between gap-4 py-4">
+        <dt class="text-mocha" data-i18n="b.phone">Điện thoại</dt>
+        <dd class="flex items-center gap-3"><a href="tel:0900123456" class="font-semibold">0900 123 456</a><button type="button" data-copy="0900 123 456" class="h-9 border border-velvet/20 px-3 text-xs uppercase tracking-[0.15em] transition-colors hover:border-velvet" data-i18n="b.copy">Sao chép</button></dd>
+      </div>
+      <div class="flex items-center justify-between gap-4 py-4">
+        <dt class="text-mocha" data-i18n="b.hours">Giờ mở cửa</dt>
+        <dd>09:00-20:00</dd>
+      </div>
+      <div class="flex items-center justify-between gap-4 py-4">
+        <dt class="text-mocha">Email</dt>
+        <dd><a href="mailto:hello@velvethair.example" class="break-all">hello@velvethair.example</a></dd>
+      </div>
+    </dl>
+    <p class="mt-6 border-l-2 border-gold pl-4 text-sm leading-relaxed text-velvet/70" data-i18n="b.note">Bản minh họa: website chưa có hệ thống đặt lịch trực tuyến. Thông tin liên hệ trên là dữ liệu mẫu.</p>
+  </div>
+</dialog>

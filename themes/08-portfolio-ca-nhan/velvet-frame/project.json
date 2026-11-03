@@ -1,0 +1,86 @@
+{
+  "slug": "velvet-frame",
+  "name": "VELVET FRAME",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website portfolio cá nhân",
+    "brand": "VELVET FRAME",
+    "purpose": "",
+    "audience": "",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "# VELVET FRAME — FASHION PORTFOLIO & CV\n\n## 1. PROJECT OVERVIEW\n\nThiết kế một landing page portfolio cá nhân cho **Fashion Designer / Fashion Stylist / Creative Director**.\n\nMục tiêu: thể hiện gu thẩm mỹ, tư duy sáng tạo, năng lực chuyên môn và kinh nghiệm trong ngành thời trang.\n\n**Art direction:** Luxury Fashion Editorial × Contemporary Fashion Archive × Avant-Garde Minimalism.\n\nWebsite phải giống một trang editorial của tạp chí thời trang cao cấp, được art-direct có chủ đích. Tránh giao diện CV thông thường, website doanh nghiệp hoặc cửa hàng thời trang.\n\nChỉ tạo **một landing page duy nhất**, không có trang con, giỏ hàng, mua hàng hoặc thanh toán.\n\n## 2. VISUAL IDENTITY\n\n### Color palette\n- Charcoal Black: `#151313`\n- Warm Cream: `#F2EADF`\n- Burgundy: `#702B3B`\n- Chocolate Brown: `#513A32`\n- Smoke Grey: `#A7A09A`\n\nSử dụng màu kem làm nền chủ đạo cho các khu vực editorial; kết hợp nền đen cho những section cần tạo điểm nhấn. Burgundy và nâu chocolate chỉ xuất hiện có chọn lọc.\n\n### Typography\n- Headings: Bodoni Moda hoặc serif thời trang tương đương.\n- Body: Inter.\n- Labels: sans-serif viết hoa, letter-spacing rộng.\n\nTạo tương phản rõ ràng giữa tiêu đề serif cỡ lớn và nội dung sans-serif tối giản. Có thể sử dụng typography oversized, chữ chạy dọc hoặc chữ đặt chồng lên ảnh khi phù hợp.\n\n### Layout\n- Lưới bất đối xứng, khoảng trắng lớn.\n- Hình ảnh có nhiều tỷ lệ và kích thước khác nhau.\n- Đường kẻ mảnh, caption nhỏ, số thứ tự và nhãn editorial.\n- Tránh card bo tròn, bóng đổ nặng, gradient sặc sỡ và bố cục lặp lại.\n\n## 3. HEADER & HERO\n\n### Header\nWordmark: **VELVET FRAME**\n\nNavigation: WORK / ABOUT / AESTHETIC / EXPERIENCE / CONTACT.\n\nCó thể thêm dòng mô tả nhỏ: FASHION DESIGNER / STYLIST / CREATIVE DIRECTION.\n\nHeader tối giản, có thể dùng nền trong suốt ở đầu trang và chuyển sang nền đặc khi cuộn nếu phù hợp. Menu phải hoạt động trên desktop và mobile.\n\n### Hero — Fashion Campaign\n\nTạo phần mở đầu ấn tượng như trang bìa của một fashion editorial.\n\n- Sử dụng một ảnh thời trang chủ đạo chất lượng cao.\n- Kết hợp ảnh dọc toàn chiều cao hoặc ảnh ngang lớn với typography bất đối xứng.\n- Hiển thị tên cá nhân nổi bật.\n- Tagline: **“Clothing as a Form of Expression.”**\n- Có chức danh và phần giới thiệu ngắn.\n- CTA: “EXPLORE MY WORK” dẫn đến khu vực dự án.\n\nẢnh và chữ phải có sự tương tác về bố cục nhưng vẫn dễ đọc. Không đặt mọi thành phần vào một hero card thông thường.\n\n## 4. SIGNATURE PROJECTS\n\nTrình bày 4 dự án tiêu biểu:\n\n1. Fashion Collection.\n2. Editorial Styling.\n3. Campaign Art Direction.\n4. Costume / Concept Design.\n\nMỗi dự án cần có tên concept, năm, vai trò, mục tiêu sáng tạo, mô tả ngắn và hình ảnh thể hiện kết quả.\n\nCó thể bổ sung moodboard, chất liệu, kỹ thuật, đội ngũ cộng tác hoặc ghi chú hậu trường nếu có dữ liệu.\n\n**Bố cục phải đa dạng:** một dự án dùng ảnh dọc lớn, một dự án dùng ảnh ngang toàn chiều rộng, một dự án dùng bộ ba ảnh và một dự án kết hợp moodboard với chú thích.\n\nKhông hiển thị bốn dự án theo cùng một kiểu card. Tạo cảm giác như đang xem một bộ sưu tập editorial được tuyển chọn kỹ lưỡng.\n\nNếu có thể, cho phép nhấp vào dự án để mở phần chi tiết dạng accordion hoặc overlay ngay trên trang, không tạo trang con.\n\n## 5. MOODBOARD & AESTHETIC\n\nTạo một section thể hiện ngôn ngữ thẩm mỹ riêng của nhà thiết kế.\n\nBao gồm:\n- Color Palette.\n- Fabric & Texture.\n- Silhouette.\n- Reference Images.\n- Concept Notes.\n\nSử dụng ảnh vải, đường may, nếp gấp, chi tiết trang phục, phụ kiện và ánh sáng để tạo một collage có chủ đích.\n\nCó thể thêm nhãn, đường nối, chú thích nhỏ và mã màu. Moodboard phải là một bố cục biên tập tĩnh, không cần chức năng kéo thả.\n\n## 6. DESIGN PROCESS\n\nTrình bày quy trình sáng tạo bằng typography, đường kẻ hoặc layout dạng timeline:\n\n01 — RESEARCH  \nNghiên cứu chủ đề, xu hướng, văn hóa và tư liệu hình ảnh.\n\n02 — CONCEPT  \nXây dựng ý tưởng, moodboard, bảng màu và định hướng thẩm mỹ.\n\n03 — DEVELOPMENT  \nPhát triển phom dáng, chất liệu, bản phác thảo hoặc phương án styling.\n\n04 — STYLING & FITTING  \nHoàn thiện trang phục, phối đồ, thử đồ hoặc điều chỉnh thiết kế tùy vai trò.\n\n05 — FINAL PRESENTATION  \nTrình bày bộ sưu tập, editorial, campaign hoặc sản phẩm sáng tạo cuối cùng.\n\nĐiều chỉnh mô tả theo chuyên môn thực tế. Không bắt buộc nhà thiết kế và stylist phải có quy trình giống hệt nhau.\n\n## 7. SKILLS & TOOLS\n\nChia thành các nhóm rõ ràng:\n\n- Fashion Design.\n- Styling & Visual Composition.\n- Textile & Material Research.\n- Trend Research.\n- Creative Direction.\n- Garment Construction nếu phù hợp.\n\nCông cụ có thể gồm Adobe Illustrator, Photoshop, CLO 3D hoặc phần mềm chuyên môn khác.\n\nChỉ hiển thị kỹ năng và công cụ phù hợp với nhân vật. Không tự tạo phần trăm kỹ năng, chứng nhận hoặc mức độ thành thạo khi không có dữ liệu.\n\n## 8. EXPERIENCE & CV\n\nThiết kế section kinh nghiệm theo dạng editorial résumé hoặc timeline tối giản.\n\nCó thể gồm:\n- Work Experience.\n- Selected Collections.\n- Editorial & Campaigns.\n- Fashion Shows / Exhibitions.\n- Education.\n- Certificates & Awards.\n\nƯu tiên phân cấp chữ rõ ràng, năm và vai trò dễ quét mắt. Khu vực CV phải hòa hợp với thẩm mỹ toàn trang, không giống dashboard tuyển dụng.\n\nNếu có file CV thật, tạo nút tải xuống. Nếu chưa có file, không tạo liên kết tải xuống giả.\n\n## 9. ABOUT\n\nSử dụng bố cục kết hợp chân dung hoặc ảnh hậu trường với nội dung giới thiệu.\n\nNội dung tập trung vào:\n- Nguồn cảm hứng sáng tạo.\n- Quan điểm về thời trang.\n- Cách tiếp cận chất liệu và hình thể.\n- Định hướng nghề nghiệp.\n\nTiêu đề gợi ý: **“An Eye for Detail. A Mind for Expression.”**\n\nGiữ văn phong cá nhân, súc tích và có chiều sâu. Không sử dụng đoạn giới thiệu sáo rỗng như một website doanh nghiệp.\n\n## 10. CONTACT\n\nTạo section kết thúc có tính nhận diện mạnh.\n\nHeadline: **“LET’S CREATE SOMETHING DISTINCTIVE.”**\n\nHiển thị email, Instagram, LinkedIn và địa điểm nếu có dữ liệu.\n\nCTA: **“CONTACT FOR COLLABORATION”** mở email hoặc dẫn đến thông tin liên hệ phù hợp.\n\nKhông tự tạo địa chỉ email, tài khoản mạng xã hội hoặc thông tin cá nhân không có thật.\n\n## 11. IMAGERY & ART DIRECTION\n\nHình ảnh là thành phần cốt lõi của website.\n\nƯu tiên hình ảnh:\n- Fashion editorial có ánh sáng và bố cục chuyên nghiệp.\n- Chân dung người mẫu với biểu cảm tự nhiên.\n- Chi tiết chất liệu, đường may, nếp vải và silhouette.\n- Hậu trường fitting, phác thảo và quá trình sáng tạo.\n- Bộ ảnh có màu sắc nhất quán với palette.\n\nPhối hợp ảnh cận cảnh, ảnh toàn thân, ảnh dọc và ảnh ngang. Tránh sử dụng nhiều ảnh có cùng góc chụp hoặc cùng bố cục.\n\nNếu có công cụ tìm kiếm hình ảnh, ưu tiên ảnh phù hợp với concept thực tế. Nếu không có ảnh cá nhân hoặc ảnh dự án, sử dụng ảnh minh họa phù hợp và dễ thay thế; không giả vờ rằng đó là tác phẩm thật của chủ portfolio.\n\n## 12. MOTION & INTERACTIONS\n\nSử dụng chuyển động tinh tế:\n- Tiêu đề xuất hiện theo từng lớp khi tải trang.\n- Ảnh reveal nhẹ khi cuộn.\n- Hover zoom chậm trên ảnh dự án.\n- Chuyển động typography có kiểm soát.\n- Menu và anchor navigation mượt mà.\n- Chuyển cảnh nhẹ giữa các section.\n\nKhông lạm dụng parallax, hiệu ứng 3D, con trỏ tùy chỉnh hoặc animation liên tục. Ưu tiên tốc độ, khả năng đọc và cảm giác cao cấp. Tôn trọng cài đặt giảm chuyển động của hệ điều hành.\n\n## 13. RESPONSIVE & FUNCTIONALITY\n\n- Desktop: thể hiện rõ bố cục editorial bất đối xứng và hình ảnh lớn.\n- Tablet: điều chỉnh lưới, kích thước chữ và khoảng cách.\n- Mobile: giữ thứ tự kể chuyện, ảnh đủ lớn và chữ dễ đọc; chuyển bố cục phức tạp thành một cột khi cần.\n- Không có cuộn ngang ngoài ý muốn.\n- Tất cả menu, anchor, CTA, accordion và liên kết phải hoạt động.\n- Tối ưu ảnh, sử dụng lazy loading khi phù hợp và bổ sung alt text.\n- Đảm bảo độ tương phản và kích thước chữ dễ đọc.\n\n## 14. CONTENT ACCURACY & CUSTOMIZATION\n\nTất cả tên, dự án, ảnh, năm, kinh nghiệm, học vấn và thông tin liên hệ phải dễ thay thế.\n\nKhông bịa đặt dự án đã thực hiện, khách hàng, thương hiệu hợp tác, giải thưởng hoặc kinh nghiệm. Khi thiếu dữ liệu, dùng nội dung mẫu có nhãn rõ ràng như “Sample Project” hoặc placeholder dễ nhận biết.\n\nPhân biệt rõ dự án thực tế, dự án cá nhân, bài tập học thuật và concept chưa sản xuất.\n\n## 15. FINAL QUALITY STANDARD\n\nTrước khi hoàn thành, kiểm tra:\n- Website có thực sự giống fashion editorial cao cấp không?\n- Bố cục các dự án có đa dạng không?\n- Hình ảnh và typography có tạo được cá tính riêng không?\n- Palette có nhất quán không?\n- Nội dung có dễ thay thế không?\n- Menu, nút bấm và liên kết có hoạt động không?\n- Giao diện mobile có chỉn chu không?\n\n**KẾT QUẢ MONG MUỐN:** Một landing page portfolio thời trang có tính nghệ thuật, cá tính rõ ràng, hình ảnh giàu cảm xúc và bố cục như một ấn phẩm editorial cao cấp. Website phải thể hiện năng lực sáng tạo của một cá nhân trong ngành thời trang, không phải cửa hàng bán quần áo hay mẫu CV đại trà.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-26T02:04:32.522Z",
+  "updatedAt": "2026-10-26T02:26:48.667Z",
+  "screen": "done",
+  "request": "Website portfolio cá nhân",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\velvet-frame\\web",
+    "builtAt": "2026-10-26T02:26:36.120Z",
+    "pages": [
+      "index.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": []
+    }
+  },
+  "job": {
+    "id": "bb284909-4703-4acf-83aa-91e7df657c7d",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\velvet-frame\\web",
+    "feedback": "Bạn ơi cho Tiếng việt đi . Nội dung  đã ổn nhưng phong cách chưa thật sự ấn tượng lắm. Họ muốn một bản prototype thể hiện được cái tôi và phong cách thời gian mà họ theo đuổi.",
+    "page": "index.html",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 42,
+      "outputTokens": 55035,
+      "cacheReadTokens": 3910242,
+      "cacheCreationTokens": 273454,
+      "costUsd": 4.0705484,
+      "numTurns": 48,
+      "durationMs": 498053
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-26T02:26:45.647Z",
+    "critical": 0,
+    "major": 3,
+    "minor": 1,
+    "screenshots": 3
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-26T02:26:36.112Z",
+      "text": "Bạn ơi cho Tiếng việt đi . Nội dung  đã ổn nhưng phong cách chưa thật sự ấn tượng lắm. Họ muốn một bản prototype thể hiện được cái tôi và phong cách thời gian mà họ theo đuổi."
+    }
+  ]
+}

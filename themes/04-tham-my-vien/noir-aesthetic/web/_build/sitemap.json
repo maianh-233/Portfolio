@@ -1,0 +1,105 @@
+{
+  "brand": "NOIR AESTHETIC",
+  "language": "en",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "A bronze magazine hairline cutting through charcoal architecture, ivory serif type, and private treatment rooms",
+  "purposeInferred": "Gioi thieu thuong hieu tham my y khoa cao cap, dat lich tu van, khong ban hang.",
+  "theme": {
+    "tagline": "Tham my y khoa rieng tu",
+    "description": "Giao dien tham my vien y khoa toi gian, sang trong, chu trong su rieng tu."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Introduce the brand, philosophy, featured treatments, and the private clinic space",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Full-screen architectural hero per BA" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Short philosophy, link to about" },
+        { "id": "treatments", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "Four treatment groups, editorial rows not cards" },
+        { "id": "atelier", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Clinic space experience" },
+        { "id": "assurance", "catalog": "features", "variant": "stats-band", "source": "ai", "note": "Trust numbers, no fake medical claims" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Book a Consultation" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "massage room dim candles", "file": "assets/img/atelier-bed.webp", "status": "ok" },
+        { "slot": "atelier-lounge", "query": "luxury hotel lobby dark interior", "file": "assets/img/atelier-lounge.webp", "status": "ok" },
+        { "slot": "atelier-suite", "query": "spa treatment room bed", "file": "assets/img/room-treatment.jpg", "status": "ok" },
+        { "slot": "atelier-alcove", "query": "dark corridor minimalist architecture", "file": "assets/img/atelier-alcove.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Treatments",
+      "purpose": "Present treatment groups and indicative fees in an editorial layout",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "menu", "catalog": "services", "variant": "features-tabs", "source": "ba", "note": "Rejuvenation, deep skin, surface, non-surgical" },
+        { "id": "fees", "catalog": "pricing", "variant": "features-numbered", "source": "ba", "note": "Indicative fees, editorial table" },
+        { "id": "faq", "catalog": "faq", "variant": "faq", "source": "ai", "note": "Medical transparency" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "menu", "query": "editorial typographic layout, no photography by design", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Brand story, clinical team, facilities, and patient-care process",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Initials if portraits do not fit" },
+        { "id": "rooms", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Facilities" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "room-consult", "query": "medical consultation room modern", "file": "assets/img/room-consult.webp", "status": "ok" },
+        { "slot": "room-prep", "query": "spa treatment room bed", "file": "assets/img/atelier-suite.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/service-rejuvenation.html",
+      "title": "Rejuvenation",
+      "purpose": "Sample treatment detail for regenerative facial protocols",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "breadcrumb" },
+        { "id": "article", "catalog": "editorial", "variant": "detail-article", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "facial treatment spa dark", "file": "assets/img/rejuvenation-hero.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/service-skin.html",
+      "title": "Deep skin care",
+      "purpose": "Sample treatment detail for medical-grade skin protocols",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "breadcrumb" },
+        { "id": "article", "catalog": "editorial", "variant": "detail-article", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "skincare serum glass bottles", "file": "assets/img/skin-hero.webp", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA requested three main pages; two sample treatment details were added so the services list has real destinations.",
+    "Art direction Dark Luxury Editorial inverts the editorial palette: ink and espresso grounds, paper type, bronze rules.",
+    "Bilingual EN/VI toggle added because BA notes requested it; default language remains English per concept.md.",
+    "Revision: preset fonts Instrument Serif / Geist lack Vietnamese glyphs; replaced with Cormorant Garamond (display) and Be Vietnam Pro (body), both with full Vietnamese support.",
+    "Revision: consultation buttons now show one language at a time (EN 'Book a Consultation' / VI 'Đặt lịch tư vấn'); language switch restyled as a high-contrast EN|VI segmented control in the header.",
+    "No cart, checkout, or product purchase flows.",
+    "Indicative fees are clearly labeled as consultation-based samples because BA did not supply a price list.",
+    "Motion stays at Level 1: fade/up, count, header shrink, hover. atmos.js is not loaded. Preset clip/split omitted to match concept Level 1 wording."
+  ],
+  "limitations": [
+    "Consultation form is a demo and does not send data.",
+    "Language toggle stores preference in localStorage when available; file:// may still default to English on first open."
+  ]
+}

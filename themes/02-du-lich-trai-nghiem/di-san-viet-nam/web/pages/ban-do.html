@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ngân hàng số di sản – Bản đồ WebGIS — disanvietnam</title>
+<meta name="description" content="Bản đồ WebGIS di sản Quảng Trị: 7 lớp chuyên đề, hồ sơ điểm di tích với địa danh lịch sử và hiện hành, liên kết bài nghiên cứu, mô hình 3D, VR360. disanvietnam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+</head>
+<body data-base="../" data-pages="" class="bg-white text-ink antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:font-semibold focus:text-primary">Bỏ qua đến nội dung chính</a>
+
+<div class="on-dark bg-academic text-[13px] text-white">
+  <div class="mx-auto flex h-10 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <p class="hidden truncate text-white/85 sm:block" data-i18n="tagline">Cổng tri thức về di sản văn hóa Việt Nam và Quảng Trị</p>
+    <div class="ml-auto flex items-center gap-4">
+      <a href="#" data-social="facebook" class="grid h-7 w-7 place-items-center rounded-full bg-white/15 text-white transition duration-200 hover:bg-white hover:text-academic" aria-label="Facebook (bản demo)"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.6v3.6h2.7V22H14v-9.9h2.8l.4-3.6H14z"/></svg></a>
+      <div class="flex items-center overflow-hidden rounded-md border border-white/30" role="group" aria-label="Ngôn ngữ giao diện">
+        <button type="button" data-lang="vi" aria-pressed="true" class="lang-btn h-7 px-2.5 font-semibold text-white transition duration-200">VI</button>
+        <button type="button" data-lang="en" aria-pressed="false" class="lang-btn h-7 px-2.5 font-semibold text-white transition duration-200">EN</button>
+      </div>
+      <a href="lien-he.html" class="inline-flex h-8 items-center gap-1.5 font-medium text-white hover:underline"><i data-lucide="mail" class="h-3.5 w-3.5" aria-hidden="true"></i><span data-i18n="contact">Liên hệ</span></a>
+    </div>
+  </div>
+</div>
+
+<header data-header="shrink" class="site-header sticky top-0 z-40 border-b border-line bg-white">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="flex shrink-0 items-center gap-3" aria-label="DI SẢN VIỆT NAM (disanvietnam) – Trang chủ">
+      <img src="../assets/img/logo.png" alt="" width="470" height="530" class="h-12 w-auto">
+      <span class="leading-tight"><span class="block text-[15px] font-bold tracking-wide text-primary sm:text-base">DI SẢN VIỆT NAM</span><span class="block text-xs font-medium text-muted">disanvietnam</span></span>
+    </a>
+    <form action="nghien-cuu.html" method="get" role="search" class="relative ml-auto hidden min-w-0 flex-1 md:block md:max-w-xl xl:max-w-2xl">
+      <label for="q-top" class="sr-only">Tìm kiếm tổng hợp</label>
+      <i data-lucide="search" class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" aria-hidden="true"></i>
+      <input id="q-top" name="q" type="search" data-i18n-ph="search" placeholder="Tìm công trình, di tích, hội thảo, tác giả…" class="h-11 w-full rounded-lg border border-line bg-surface pl-10 pr-20 text-[15px] text-ink placeholder:text-muted focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20">
+      <button type="submit" class="absolute right-1.5 top-1/2 h-8 -translate-y-1/2 rounded-md bg-primary px-3 text-sm font-semibold text-white transition duration-200 hover:bg-primary-dark" data-i18n="go">Tìm</button>
+    </form>
+    <button type="button" data-menu-toggle="#mnav" class="ml-auto inline-flex h-11 items-center gap-2 rounded-lg border border-line px-3 text-sm font-semibold text-ink transition duration-200 hover:border-primary hover:text-primary md:ml-0 min-[1360px]:hidden" aria-label="Mở menu"><i data-lucide="menu" class="h-5 w-5" aria-hidden="true"></i><span data-i18n="menu">Menu</span></button>
+  </div>
+  <nav aria-label="Menu chính" class="hidden border-t border-line min-[1360px]:block">
+    <ul class="mx-auto flex w-full max-w-screen-2xl items-stretch justify-between px-10 2xl:px-16">
+      <li class="nav-item relative"><a href="../index.html" class="nav-link flex h-12 items-center px-2 text-[13.5px] font-semibold text-ink transition duration-200 hover:text-primary 2xl:px-3 2xl:text-[14px]" data-i18n="home">Trang chủ</a></li>
+      <li class="nav-item relative"><a href="ho-so-chuyen-gia.html" class="nav-link flex h-12 items-center gap-1 px-2 text-[13.5px] font-semibold text-ink transition duration-200 hover:text-primary 2xl:px-3 2xl:text-[14px]"><span data-i18n="about">Giới thiệu</span><i data-lucide="chevron-down" class="chev h-3.5 w-3.5" aria-hidden="true"></i></a>
+        <div class="nav-drop absolute left-0 top-full z-50 w-64 rounded-xl border border-line bg-white p-2 shadow-lift"><ul class="grid text-sm">
+          <li><a href="ho-so-chuyen-gia.html#tam-nhin" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Tầm nhìn</a></li>
+          <li><a href="ho-so-chuyen-gia.html#ho-so" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Hồ sơ Phan Tuấn Anh</a></li>
+          <li><a href="ho-so-chuyen-gia.html#nhom-nghien-cuu" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Nhóm nghiên cứu</a></li>
+          <li><a href="ho-so-chuyen-gia.html#doi-tac" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Đối tác</a></li>
+          <li><a href="ho-so-chuyen-gia.html#lich-su" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Lịch sử dự án</a></li>
+        </ul></div></li>
+      <li class="nav-item relative"><a href="nghien-cuu.html" class="nav-link flex h-12 items-center gap-1 px-2 text-[13.5px] font-semibold text-ink transition duration-200 hover:text-primary 2xl:px-3 2xl:text-[14px]"><span data-i18n="research">Nghiên cứu khoa học</span><i data-lucide="chevron-down" class="chev h-3.5 w-3.5" aria-hidden="true"></i></a>
+        <div class="nav-drop absolute left-0 top-full z-50 w-64 rounded-xl border border-line bg-white p-2 shadow-lift"><ul class="grid text-sm">
+          <li><a href="nghien-cuu.html" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Công trình</a></li>
+          <li><a href="nghien-cuu.html#danh-sach" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Bài báo</a></li>
+          <li><a href="nghien-cuu.html#ky-yeu" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Kỷ yếu</a></li>
+          <li><a href="nghien-cuu.html#trich-dan" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Hướng dẫn trích dẫn</a></li>
+          <li><a href="nghien-cuu.html#de-tai" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Đề tài</a></li>
+        </ul></div></li>
+      <li class="nav-item relative"><a href="ban-do.html" aria-current="page" class="nav-link flex h-12 items-center gap-1 px-2 text-[13.5px] font-semibold text-ink transition duration-200 hover:text-primary 2xl:px-3 2xl:text-[14px]"><span data-i18n="bank">Ngân hàng số di sản</span><i data-lucide="chevron-down" class="chev h-3.5 w-3.5" aria-hidden="true"></i></a>
+        <div class="nav-drop absolute left-0 top-full z-50 w-64 rounded-xl border border-line bg-white p-2 shadow-lift"><ul class="grid text-sm">
+          <li><a href="ban-do.html" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Bản đồ WebGIS</a></li>
+          <li><a href="ban-do.html#ho-so-di-tich" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Hồ sơ di tích</a></li>
+          <li><a href="ban-do.html#mo-hinh-3d" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Mô hình 3D</a></li>
+          <li><a href="ban-do.html#vr360" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">VR360</a></li>
+          <li><a href="ban-do.html#tour-so" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Tour số</a></li>
+          <li><a href="ban-do.html#bo-suu-tap" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Bộ sưu tập</a></li>
+        </ul></div></li>
+      <li class="nav-item relative"><a href="di-san.html" class="nav-link flex h-12 items-center gap-1 px-2 text-[13.5px] font-semibold text-ink transition duration-200 hover:text-primary 2xl:px-3 2xl:text-[14px]"><span data-i18n="heritage">Di sản văn hóa</span><i data-lucide="chevron-down" class="chev h-3.5 w-3.5" aria-hidden="true"></i></a>
+        <div class="nav-drop absolute left-0 top-full z-50 w-64 rounded-xl border border-line bg-white p-2 shadow-lift"><ul class="grid text-sm">
+          <li><a href="di-san.html#loai-hinh" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Loại hình di tích</a></li>
+          <li><a href="di-san.html#unesco" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Di sản thế giới (UNESCO)</a></li>
+          <li><a href="di-san.html#quoc-gia" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Di tích quốc gia</a></li>
+          <li><a href="di-san.html#quang-tri" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Chuyên đề Quảng Trị</a></li>
+        </ul></div></li>
+      <li class="nav-item relative"><a href="hoi-thao.html" class="nav-link flex h-12 items-center gap-1 px-2 text-[13.5px] font-semibold text-ink transition duration-200 hover:text-primary 2xl:px-3 2xl:text-[14px]"><span data-i18n="events">Hội thảo &amp; hoạt động</span><i data-lucide="chevron-down" class="chev h-3.5 w-3.5" aria-hidden="true"></i></a>
+        <div class="nav-drop absolute left-0 top-full z-50 w-64 rounded-xl border border-line bg-white p-2 shadow-lift"><ul class="grid text-sm">
+          <li><a href="hoi-thao.html#theo-nam" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Hội thảo theo năm</a></li>
+          <li><a href="hoi-thao.html#tham-luan" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Bài tham luận</a></li>
+          <li><a href="hoi-thao.html#ban-tin" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Bản tin</a></li>
+          <li><a href="hoi-thao.html#album" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Album</a></li>
+        </ul></div></li>
+      <li class="nav-item relative"><a href="giai-thuong.html" class="nav-link flex h-12 items-center gap-1 px-2 text-[13.5px] font-semibold text-ink transition duration-200 hover:text-primary 2xl:px-3 2xl:text-[14px]"><span data-i18n="awards">Giải thưởng &amp; sáng tạo</span><i data-lucide="chevron-down" class="chev h-3.5 w-3.5" aria-hidden="true"></i></a>
+        <div class="nav-drop absolute right-0 top-full z-50 w-64 rounded-xl border border-line bg-white p-2 shadow-lift"><ul class="grid text-sm">
+          <li><a href="giai-thuong.html#danh-muc" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Giải thưởng</a></li>
+          <li><a href="giai-thuong.html#ban-quyen" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Bản quyền – chứng nhận</a></li>
+          <li><a href="giai-thuong.html#san-pham" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Sản phẩm ứng dụng</a></li>
+          <li><a href="giai-thuong.html#cau-chuyen" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Câu chuyện thành tựu</a></li>
+        </ul></div></li>
+      <li class="nav-item relative"><a href="lien-he.html" class="nav-link flex h-12 items-center gap-1 px-2 text-[13.5px] font-semibold text-ink transition duration-200 hover:text-primary 2xl:px-3 2xl:text-[14px]"><span data-i18n="coop">Liên hệ &amp; hợp tác</span><i data-lucide="chevron-down" class="chev h-3.5 w-3.5" aria-hidden="true"></i></a>
+        <div class="nav-drop absolute right-0 top-full z-50 w-64 rounded-xl border border-line bg-white p-2 shadow-lift"><ul class="grid text-sm">
+          <li><a href="lien-he.html#lien-he-form" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Liên hệ</a></li>
+          <li><a href="lien-he.html#yeu-cau-du-lieu" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Yêu cầu dữ liệu</a></li>
+          <li><a href="lien-he.html#chinh-sach-du-lieu" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Chính sách dữ liệu</a></li>
+          <li><a href="lien-he.html#bao-mat" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Bảo mật</a></li>
+          <li><a href="lien-he.html#lien-ket" class="block rounded-lg px-3 py-2.5 text-ink hover:bg-surface hover:text-primary">Website liên kết</a></li>
+        </ul></div></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="mnav" class="fixed inset-y-0 right-0 z-50 w-[88%] max-w-sm overflow-y-auto bg-white p-5 shadow-lift min-[1360px]:hidden" aria-label="Menu điện thoại">
+  <div class="flex items-center justify-between">
+    <span class="flex items-center gap-2.5 text-base font-bold tracking-wide text-primary"><img src="../assets/img/logo.png" alt="" width="470" height="530" class="h-10 w-auto">DI SẢN VIỆT NAM</span>
+    <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-lg border border-line text-ink" aria-label="Đóng menu"><i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i></button>
+  </div>
+  <form action="nghien-cuu.html" method="get" role="search" class="relative mt-4 md:hidden">
+    <label for="q-m" class="sr-only">Tìm kiếm tổng hợp</label>
+    <input id="q-m" name="q" type="search" placeholder="Tìm công trình, di tích, hội thảo, tác giả…" class="h-11 w-full rounded-lg border border-line bg-surface px-3 text-base text-ink placeholder:text-muted focus:border-primary focus:outline-none">
+  </form>
+  <nav aria-label="Menu chính (điện thoại)" class="mt-4 grid divide-y divide-line text-[15px]">
+    <a href="../index.html" class="flex min-h-[48px] items-center font-semibold text-ink">Trang chủ</a>
+    <details class="group py-1"><summary class="flex min-h-[48px] cursor-pointer list-none items-center justify-between font-semibold text-ink">Giới thiệu<i data-lucide="chevron-down" class="h-4 w-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"></i></summary>
+      <div class="grid pb-2 pl-3 text-sm"><a href="ho-so-chuyen-gia.html#tam-nhin" class="py-2.5 text-muted hover:text-primary">Tầm nhìn</a><a href="ho-so-chuyen-gia.html#ho-so" class="py-2.5 text-muted hover:text-primary">Hồ sơ Phan Tuấn Anh</a><a href="ho-so-chuyen-gia.html#nhom-nghien-cuu" class="py-2.5 text-muted hover:text-primary">Nhóm nghiên cứu</a><a href="ho-so-chuyen-gia.html#doi-tac" class="py-2.5 text-muted hover:text-primary">Đối tác</a><a href="ho-so-chuyen-gia.html#lich-su" class="py-2.5 text-muted hover:text-primary">Lịch sử dự án</a></div></details>
+    <details class="group py-1"><summary class="flex min-h-[48px] cursor-pointer list-none items-center justify-between font-semibold text-ink">Nghiên cứu khoa học<i data-lucide="chevron-down" class="h-4 w-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"></i></summary>
+      <div class="grid pb-2 pl-3 text-sm"><a href="nghien-cuu.html" class="py-2.5 text-muted hover:text-primary">Công trình</a><a href="nghien-cuu.html#danh-sach" class="py-2.5 text-muted hover:text-primary">Bài báo</a><a href="nghien-cuu.html#ky-yeu" class="py-2.5 text-muted hover:text-primary">Kỷ yếu</a><a href="nghien-cuu.html#trich-dan" class="py-2.5 text-muted hover:text-primary">Hướng dẫn trích dẫn</a><a href="nghien-cuu.html#de-tai" class="py-2.5 text-muted hover:text-primary">Đề tài</a></div></details>
+    <details class="group py-1" open><summary class="flex min-h-[48px] cursor-pointer list-none items-center justify-between font-semibold text-primary" aria-current="page">Ngân hàng số di sản<i data-lucide="chevron-down" class="h-4 w-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"></i></summary>
+      <div class="grid pb-2 pl-3 text-sm"><a href="ban-do.html" class="py-2.5 text-muted hover:text-primary">Bản đồ WebGIS</a><a href="ban-do.html#ho-so-di-tich" class="py-2.5 text-muted hover:text-primary">Hồ sơ di tích</a><a href="ban-do.html#mo-hinh-3d" class="py-2.5 text-muted hover:text-primary">Mô hình 3D</a><a href="ban-do.html#vr360" class="py-2.5 text-muted hover:text-primary">VR360</a><a href="ban-do.html#tour-so" class="py-2.5 text-muted hover:text-primary">Tour số</a><a href="ban-do.html#bo-suu-tap" class="py-2.5 text-muted hover:text-primary">Bộ sưu tập</a></div></details>
+    <details class="group py-1"><summary class="flex min-h-[48px] cursor-pointer list-none items-center justify-between font-semibold text-ink">Di sản văn hóa<i data-lucide="chevron-down" class="h-4 w-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"></i></summary>
+      <div class="grid pb-2 pl-3 text-sm"><a href="di-san.html#loai-hinh" class="py-2.5 text-muted hover:text-primary">Loại hình di tích</a><a href="di-san.html#unesco" class="py-2.5 text-muted hover:text-primary">Di sản thế giới (UNESCO)</a><a href="di-san.html#quoc-gia" class="py-2.5 text-muted hover:text-primary">Di tích quốc gia</a><a href="di-san.html#quang-tri" class="py-2.5 text-muted hover:text-primary">Chuyên đề Quảng Trị</a></div></details>
+    <details class="group py-1"><summary class="flex min-h-[48px] cursor-pointer list-none items-center justify-between font-semibold text-ink">Hội thảo &amp; hoạt động<i data-lucide="chevron-down" class="h-4 w-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"></i></summary>
+      <div class="grid pb-2 pl-3 text-sm"><a href="hoi-thao.html#theo-nam" class="py-2.5 text-muted hover:text-primary">Hội thảo theo năm</a><a href="hoi-thao.html#tham-luan" class="py-2.5 text-muted hover:text-primary">Bài tham luận</a><a href="hoi-thao.html#ban-tin" class="py-2.5 text-muted hover:text-primary">Bản tin</a><a href="hoi-thao.html#album" class="py-2.5 text-muted hover:text-primary">Album</a></div></details>
+    <details class="group py-1"><summary class="flex min-h-[48px] cursor-pointer list-none items-center justify-between font-semibold text-ink">Giải thưởng &amp; sáng tạo<i data-lucide="chevron-down" class="h-4 w-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"></i></summary>
+      <div class="grid pb-2 pl-3 text-sm"><a href="giai-thuong.html#danh-muc" class="py-2.5 text-muted hover:text-primary">Giải thưởng</a><a href="giai-thuong.html#ban-quyen" class="py-2.5 text-muted hover:text-primary">Bản quyền – chứng nhận</a><a href="giai-thuong.html#san-pham" class="py-2.5 text-muted hover:text-primary">Sản phẩm ứng dụng</a><a href="giai-thuong.html#cau-chuyen" class="py-2.5 text-muted hover:text-primary">Câu chuyện thành tựu</a></div></details>
+    <details class="group py-1"><summary class="flex min-h-[48px] cursor-pointer list-none items-center justify-between font-semibold text-ink">Liên hệ &amp; hợp tác<i data-lucide="chevron-down" class="h-4 w-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"></i></summary>
+      <div class="grid pb-2 pl-3 text-sm"><a href="lien-he.html#lien-he-form" class="py-2.5 text-muted hover:text-primary">Liên hệ</a><a href="lien-he.html#yeu-cau-du-lieu" class="py-2.5 text-muted hover:text-primary">Yêu cầu dữ liệu</a><a href="lien-he.html#chinh-sach-du-lieu" class="py-2.5 text-muted hover:text-primary">Chính sách dữ liệu</a><a href="lien-he.html#bao-mat" class="py-2.5 text-muted hover:text-primary">Bảo mật</a><a href="lien-he.html#lien-ket" class="py-2.5 text-muted hover:text-primary">Website liên kết</a></div></details>
+  </nav>
+</div>
+
+<main id="main">
+  <section id="page-hero" data-section class="border-b border-line bg-surface">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 px-4 py-5 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10 lg:py-7 2xl:px-16">
+      <div>
+        <nav aria-label="Breadcrumb" class="text-sm text-muted"><ol class="flex flex-wrap items-center gap-2"><li><a href="../index.html" class="hover:text-primary hover:underline">Trang chủ</a></li><li aria-hidden="true">/</li><li aria-current="page" class="font-medium text-ink">Ngân hàng số di sản</li></ol></nav>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-academic sm:text-4xl">Bản đồ WebGIS di sản</h1>
+      </div>
+      <p class="max-w-xl text-[15px] text-muted">Bật tắt lớp chuyên đề, rê chuột lên ghim để xem tên, bấm vào ghim để mở hồ sơ. <strong class="font-semibold text-ink">Tọa độ minh họa</strong>, chưa dùng cho đo đạc.</p>
+    </div>
+  </section>
+
+  <section id="ban-do-khung" data-section class="bg-white">
+    <div class="relative mx-auto w-full max-w-screen-2xl lg:grid lg:grid-cols-[280px_minmax(0,1fr)_340px] lg:border-x lg:border-line 2xl:grid-cols-[300px_minmax(0,1fr)_380px]">
+      <aside id="layers-panel" class="sheet lg:static lg:max-h-none lg:overflow-y-auto lg:border-r lg:border-line lg:bg-white" aria-label="Lớp bản đồ">
+        <div id="lop-ban-do" class="p-5">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-academic">Lớp bản đồ</h2>
+            <button type="button" data-sheet-close class="grid h-11 w-11 place-items-center rounded-lg border border-line text-ink lg:hidden" aria-label="Đóng bảng lớp bản đồ"><i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i></button>
+          </div>
+          <div class="mt-3 flex gap-2 text-sm">
+            <button type="button" data-layers-all="on" class="inline-flex min-h-[40px] items-center rounded-lg border border-line px-3 font-semibold text-ink hover:border-gis-dark hover:text-gis-dark">Bật tất cả</button>
+            <button type="button" data-layers-all="off" class="inline-flex min-h-[40px] items-center rounded-lg border border-line px-3 font-semibold text-ink hover:border-gis-dark hover:text-gis-dark">Tắt tất cả</button>
+          </div>
+          <ul id="layer-list" class="mt-3 grid gap-0.5"></ul>
+          <p id="visible-count" class="mt-4 rounded-lg bg-gis-soft px-3 py-2 text-sm font-medium text-gis-dark" aria-live="polite"></p>
+        </div>
+      </aside>
+
+      <div class="relative z-0 min-w-0">
+        <div id="map" class="h-[calc(100dvh-64px)] min-h-[420px] w-full bg-surface lg:h-[640px] 2xl:h-[700px]" role="region" aria-label="Bản đồ di tích Quảng Trị (tọa độ minh họa)"></div>
+        <button type="button" id="btn-layers" class="absolute right-3 top-3 z-[500] inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-white px-4 text-sm font-semibold text-ink shadow-lift lg:hidden" aria-controls="layers-panel"><i data-lucide="layers" class="h-4 w-4 text-gis-dark" aria-hidden="true"></i>Lớp bản đồ</button>
+      </div>
+
+      <aside id="info-panel" class="sheet lg:static lg:max-h-none lg:overflow-y-auto lg:border-l lg:border-line lg:bg-white" aria-label="Hồ sơ điểm" aria-live="polite">
+        <div class="p-5">
+          <div class="flex items-center justify-between lg:hidden"><p class="text-sm font-semibold text-muted">Hồ sơ điểm</p><button type="button" data-sheet-close class="grid h-11 w-11 place-items-center rounded-lg border border-line text-ink" aria-label="Đóng hồ sơ điểm"><i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i></button></div>
+          <div id="info-body">
+            <div class="grid place-items-center rounded-xl border border-dashed border-line px-5 py-10 text-center">
+              <i data-lucide="mouse-pointer-click" class="h-8 w-8 text-gis-dark" aria-hidden="true"></i>
+              <p class="mt-3 font-semibold text-ink">Chọn một điểm trên bản đồ</p>
+              <p class="mt-1 text-sm text-muted">Hồ sơ gồm tên hiện hành, tên lịch sử, cấp xếp hạng, nguồn và ngày cập nhật.</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="border-y border-line bg-surface">
+      <dl class="mx-auto grid w-full max-w-screen-2xl gap-x-8 gap-y-3 px-4 py-4 text-[13px] sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-10 2xl:px-16">
+        <div><dt class="font-semibold text-ink">Phiên bản bản đồ</dt><dd class="text-muted">[Phiên bản – chờ cập nhật]</dd></div>
+        <div><dt class="font-semibold text-ink">Nguồn</dt><dd class="text-muted">Nền: © OpenStreetMap contributors, © CARTO. Điểm: các công trình nghiên cứu đã dẫn</dd></div>
+        <div><dt class="font-semibold text-ink">Ngày cập nhật</dt><dd class="text-muted">[dd/mm/yyyy]</dd></div>
+        <div><dt class="font-semibold text-ink">Giới hạn sử dụng</dt><dd class="text-muted">Tọa độ minh họa; không dùng cho đo đạc, cắm mốc hay mục đích pháp lý</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="ho-so-di-tich" data-section class="bg-white py-14 lg:py-20">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 class="text-2xl font-bold text-academic sm:text-3xl" data-reveal="up">Hồ sơ di tích</h2>
+      <p class="mt-3 max-w-3xl text-[15px] text-muted">Mỗi di tích ghi cả địa danh tại thời điểm nghiên cứu và địa danh hành chính hiện hành. Trên điện thoại, kéo ngang để xem đủ các cột.</p>
+      <div class="table-scroll mt-6 rounded-xl border border-line" tabindex="0" role="region" aria-label="Bảng hồ sơ di tích, cuộn ngang" data-reveal="up">
+        <table class="data-table w-full min-w-[1000px] text-left text-sm">
+          <caption class="sr-only">Hồ sơ các điểm di tích trên bản đồ</caption>
+          <thead class="bg-academic text-white"><tr><th scope="col" class="px-4 py-3 font-semibold">Tên hiện hành</th><th scope="col" class="px-4 py-3 font-semibold">Địa danh tại thời điểm nghiên cứu</th><th scope="col" class="px-4 py-3 font-semibold">Địa danh hành chính hiện hành</th><th scope="col" class="px-4 py-3 font-semibold">Cấp xếp hạng</th><th scope="col" class="px-4 py-3 font-semibold">Nguồn dữ liệu</th><th scope="col" class="px-4 py-3 font-semibold">Cập nhật</th></tr></thead>
+          <tbody id="site-rows" class="text-ink"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="tai-nguyen-so" data-section class="bg-surface py-14 lg:py-20">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 class="text-2xl font-bold text-academic sm:text-3xl" data-reveal="up">Tài nguyên số</h2>
+      <div class="mt-8 grid gap-5 lg:grid-cols-12" data-reveal-stagger="90">
+        <article id="mo-hinh-3d" class="zoom-media overflow-hidden rounded-xl border border-line bg-white shadow-soft transition duration-200 hover:shadow-lift lg:col-span-7 lg:row-span-2">
+          <div class="aspect-[2/1] overflow-hidden bg-gis-soft"><img src="../assets/img/bando-mo-hinh-3d.jpg" alt="Đám mây điểm 3D của một cây cầu thu từ máy quét laser" loading="lazy" width="1024" height="484" class="h-full w-full object-cover"></div>
+          <div class="p-6 lg:p-8">
+            <div class="flex flex-wrap items-center gap-3"><h3 class="text-2xl font-bold text-academic">Mô hình 3D</h3><span class="rounded-md bg-heritage-soft px-2.5 py-1 text-xs font-semibold text-heritage-dark">Đang xây dựng</span></div>
+            <p class="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">Dữ liệu quét laser mặt đất và GIS cho hầm ngầm, thử nghiệm tại cửa số 3 di tích địa đạo Vịnh Mốc (công trình số 14). Ảnh trên minh họa dạng dữ liệu đám mây điểm, không phải di tích.</p>
+            <a href="nghien-cuu.html?q=V%E1%BB%8Bnh+M%E1%BB%91c" class="mt-4 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-semibold text-gis-dark hover:underline">Xem công trình liên quan<i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article id="vr360" class="vr-card overflow-hidden rounded-xl bg-gis-dark text-white on-dark shadow-soft transition duration-200 hover:shadow-lift lg:col-span-5" tabindex="0" aria-label="VR360 – ảnh toàn cảnh Thành cổ Quảng Trị">
+          <div class="relative aspect-[16/7] overflow-hidden bg-academic">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_2.jpg/1920px-Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_2.jpg" referrerpolicy="no-referrer" alt="Toàn cảnh Thành cổ Quảng Trị, ảnh minh họa cho tour VR360" loading="lazy" width="1920" height="1440" class="vr-pan">
+            <span class="absolute inset-0 bg-gradient-to-t from-gis-dark/70 via-transparent to-transparent" aria-hidden="true"></span>
+            <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-md bg-white/90 px-2.5 py-1 text-xs font-bold text-gis-dark"><i data-lucide="rotate-3d" class="h-3.5 w-3.5" aria-hidden="true"></i>360°</span>
+            <span class="vr-hint absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-md bg-academic/75 px-2.5 py-1 text-xs font-medium text-white"><i data-lucide="move-horizontal" class="h-3.5 w-3.5" aria-hidden="true"></i>Rê chuột để xoay góc nhìn</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">VR360</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-white/90">Ảnh toàn cảnh 360 độ tại các điểm di tích. Ảnh minh họa: Thành cổ Quảng Trị. [Danh sách điểm VR360 – chờ cung cấp]</p>
+          </div>
+        </article>
+        <article id="tour-so" class="rounded-xl border border-line bg-white p-6 shadow-soft lg:col-span-5">
+          <i data-lucide="route" class="h-7 w-7 text-primary" aria-hidden="true"></i>
+          <h3 class="mt-4 text-xl font-bold text-academic">Tour số</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-muted">Lộ trình tham quan số nối các điểm di tích theo chủ đề. [Nội dung tour – chờ biên soạn]</p>
+        </article>
+        <article id="bo-suu-tap" class="rounded-xl border border-line bg-white p-6 shadow-soft lg:col-span-12">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-academic text-white"><i data-lucide="gallery-horizontal-end" class="h-6 w-6" aria-hidden="true"></i></span>
+            <div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-3"><h3 class="text-xl font-bold text-academic">Bộ sưu tập</h3><span class="rounded-md bg-heritage-soft px-2.5 py-1 text-xs font-semibold text-heritage-dark">Ảnh tạm để minh họa</span></div><p class="mt-1 text-[15px] text-muted">Tư liệu ảnh, bản đồ cổ, hiện vật số. Bộ ảnh Di tích lịch sử tỉnh Quảng Trị (3300/2023/QTG) sẽ thay các ảnh minh họa dưới đây khi đủ quyền công bố. Bấm vào ảnh để xem lớn.</p></div>
+            <a href="giai-thuong.html#ban-quyen" class="inline-flex min-h-[44px] shrink-0 items-center gap-1.5 text-sm font-semibold text-primary hover:underline">Thông tin bản quyền<i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+          </div>
+          <ul class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" aria-label="Ảnh di tích, danh thắng tỉnh Quảng Trị">
+            <li><a href="../assets/img/quangtri-thanh-co-ngay-nay.jpg" data-lightbox="bo-suu-tap" data-caption="Hào nước và tường thành Thành cổ Quảng Trị · Ảnh minh họa: Wikimedia Commons" class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-lg bg-primary-soft">
+              <img src="../assets/img/quangtri-thanh-co-ngay-nay.jpg" alt="Hào nước và tường thành Thành cổ Quảng Trị" loading="lazy" class="h-full w-full object-cover">
+              <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-academic/85 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold leading-snug text-white">Thành cổ Quảng Trị</span>
+              <span class="gallery-zoom absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-white/90 text-academic" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </a></li>
+            <li><a href="../assets/img/quangtri-hien-luong-bo-nam.jpg" data-lightbox="bo-suu-tap" data-caption="Cầu Hiền Lương nhìn từ bờ Nam sông Bến Hải · Ảnh minh họa: Wikimedia Commons" class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-lg bg-primary-soft">
+              <img src="../assets/img/quangtri-hien-luong-bo-nam.jpg" alt="Cầu Hiền Lương nhìn từ bờ Nam sông Bến Hải" loading="lazy" class="h-full w-full object-cover">
+              <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-academic/85 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold leading-snug text-white">Cầu Hiền Lương</span>
+              <span class="gallery-zoom absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-white/90 text-academic" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </a></li>
+            <li><a href="../assets/img/quangtri-ben-hai-cong.jpg" data-lightbox="bo-suu-tap" data-caption="Cổng chào đầu cầu bờ Bắc sông Bến Hải · Ảnh minh họa: Wikimedia Commons" class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-lg bg-primary-soft">
+              <img src="../assets/img/quangtri-ben-hai-cong.jpg" alt="Cổng chào đầu cầu bờ Bắc sông Bến Hải" loading="lazy" class="h-full w-full object-cover">
+              <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-academic/85 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold leading-snug text-white">Bờ Bắc sông Bến Hải</span>
+              <span class="gallery-zoom absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-white/90 text-academic" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </a></li>
+            <li><a href="../assets/img/quangtri-vinh-moc-cua-ham.jpg" data-lightbox="bo-suu-tap" data-caption="Du khách xuống một cửa hầm địa đạo Vịnh Mốc · Ảnh minh họa: Wikimedia Commons" class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-lg bg-primary-soft">
+              <img src="../assets/img/quangtri-vinh-moc-cua-ham.jpg" alt="Du khách xuống một cửa hầm địa đạo Vịnh Mốc" loading="lazy" class="h-full w-full object-cover">
+              <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-academic/85 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold leading-snug text-white">Địa đạo Vịnh Mốc</span>
+              <span class="gallery-zoom absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-white/90 text-academic" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </a></li>
+            <li><a href="../assets/img/quangtri-truong-son.jpg" data-lightbox="bo-suu-tap" data-caption="Các hàng mộ trong Nghĩa trang liệt sĩ quốc gia Trường Sơn · Ảnh minh họa: Wikimedia Commons" class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-lg bg-primary-soft">
+              <img src="../assets/img/quangtri-truong-son.jpg" alt="Các hàng mộ trong Nghĩa trang liệt sĩ quốc gia Trường Sơn" loading="lazy" class="h-full w-full object-cover">
+              <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-academic/85 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold leading-snug text-white">Nghĩa trang liệt sĩ quốc gia Trường Sơn</span>
+              <span class="gallery-zoom absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-white/90 text-academic" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </a></li>
+            <li><a href="../assets/img/quangtri-la-vang.jpg" data-lightbox="bo-suu-tap" data-caption="Quảng trường Trung tâm hành hương Đức Mẹ La Vang · Ảnh minh họa: Wikimedia Commons" class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-lg bg-primary-soft">
+              <img src="../assets/img/quangtri-la-vang.jpg" alt="Quảng trường Trung tâm hành hương Đức Mẹ La Vang" loading="lazy" class="h-full w-full object-cover">
+              <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-academic/85 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold leading-snug text-white">Trung tâm hành hương La Vang</span>
+              <span class="gallery-zoom absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-white/90 text-academic" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </a></li>
+            <li><a href="../assets/img/quangtri-cua-tung.jpg" data-lightbox="bo-suu-tap" data-caption="Thuyền neo trên sông Cửa Tùng, Gio Linh · Ảnh minh họa: Wikimedia Commons" class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-lg bg-primary-soft">
+              <img src="../assets/img/quangtri-cua-tung.jpg" alt="Thuyền neo trên sông Cửa Tùng, Gio Linh" loading="lazy" class="h-full w-full object-cover">
+              <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-academic/85 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold leading-snug text-white">Sông Cửa Tùng</span>
+              <span class="gallery-zoom absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-white/90 text-academic" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </a></li>
+            <li><a href="../assets/img/quangtri-dakrong.jpg" data-lightbox="bo-suu-tap" data-caption="Cầu treo Đakrông trên đường Hồ Chí Minh nhánh Tây · Ảnh minh họa: Wikimedia Commons" class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-lg bg-primary-soft">
+              <img src="../assets/img/quangtri-dakrong.jpg" alt="Cầu treo Đakrông trên đường Hồ Chí Minh nhánh Tây" loading="lazy" class="h-full w-full object-cover">
+              <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-academic/85 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold leading-snug text-white">Cầu treo Đakrông</span>
+              <span class="gallery-zoom absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-white/90 text-academic" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div id="dim" class="dim lg:hidden" aria-hidden="true"></div>
+</main>
+
+<footer class="on-dark bg-academic text-white">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+    <div class="sm:col-span-2 lg:col-span-5">
+      <a href="../index.html" class="inline-flex items-center gap-3"><span class="grid h-14 w-14 place-items-center rounded-lg bg-white p-1"><img src="../assets/img/logo.png" alt="" width="470" height="530" loading="lazy" class="h-full w-auto"></span><span class="leading-tight"><span class="block font-bold tracking-wide">DI SẢN VIỆT NAM</span><span class="block text-xs text-white/75">disanvietnam</span></span></a>
+      <h2 class="mt-7 text-sm font-semibold uppercase tracking-wide text-heritage">Di sản Việt Nam – Di sản Quảng Trị</h2>
+      <ul class="mt-3 max-w-md divide-y divide-white/15 text-sm text-white/85">
+        <li class="flex gap-2.5 py-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-heritage" aria-hidden="true"></i><span>GIS GROUP · 28 Nguyễn Tri Phương, phường Nam Đông Hà, tỉnh Quảng Trị, Việt Nam</span></li>
+        <li class="flex gap-2.5 py-2.5"><i data-lucide="phone" class="mt-0.5 h-4 w-4 shrink-0 text-heritage" aria-hidden="true"></i><a href="tel:0913421800" class="hover:text-white hover:underline">0913 421 800</a></li>
+        <li class="flex gap-2.5 py-2.5"><i data-lucide="mail" class="mt-0.5 h-4 w-4 shrink-0 text-heritage" aria-hidden="true"></i><span class="break-anywhere"><a href="mailto:gis.pta@gmail.com" class="hover:text-white hover:underline">gis.pta@gmail.com</a>; <a href="mailto:gis.pta@hust.org.vn" class="hover:text-white hover:underline">gis.pta@hust.org.vn</a></span></li>
+        <li class="flex gap-2.5 py-2.5"><i data-lucide="globe" class="mt-0.5 h-4 w-4 shrink-0 text-heritage" aria-hidden="true"></i><span><a href="https://disanvietnam.vn/" target="_blank" rel="noopener" class="hover:text-white hover:underline">disanvietnam.vn</a>; <a href="https://disanquangtri.com/" target="_blank" rel="noopener" class="hover:text-white hover:underline">disanquangtri.com</a></span></li>
+        <li class="flex gap-2.5 py-2.5"><i data-lucide="shield-check" class="mt-0.5 h-4 w-4 shrink-0 text-heritage" aria-hidden="true"></i><a href="lien-he.html#bao-mat" class="hover:text-white hover:underline">Chính sách bảo mật</a></li>
+      </ul>
+    </div>
+    <nav aria-label="Danh mục" class="lg:col-span-3"><h2 class="text-sm font-semibold uppercase tracking-wide text-heritage">Danh mục</h2><ul class="mt-4 grid gap-1 text-sm text-white/85">
+      <li><a href="nghien-cuu.html" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Tài liệu nghiên cứu</a></li>
+      <li><a href="nghien-cuu.html#de-tai" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Các nghiên cứu, ứng dụng</a></li>
+      <li><a href="ban-do.html" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Bản đồ chuyên đề</a></li>
+      <li><a href="giai-thuong.html#san-pham" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Các ứng dụng – App Mobile</a></li>
+      <li><a href="lien-he.html#lien-ket" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Các website liên kết</a></li>
+    </ul></nav>
+    <div class="grid content-start gap-10 lg:col-span-4">
+      <nav aria-label="Di sản văn hóa"><h2 class="text-sm font-semibold uppercase tracking-wide text-heritage">Di sản văn hóa</h2><ul class="mt-4 grid gap-1 text-sm text-white/85">
+        <li><a href="di-san.html#loai-hinh" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Danh lam – Kiến trúc</a></li>
+        <li><a href="di-san.html#unesco" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Di sản UNESCO</a></li>
+        <li><a href="di-san.html#unesco" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Di sản thiên nhiên thế giới</a></li>
+        <li><a href="di-san.html#quoc-gia" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Di tích văn hóa</a></li>
+        <li><a href="di-san.html#quang-tri" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Di tích lịch sử</a></li>
+      </ul></nav>
+      <nav aria-label="Hỗ trợ"><h2 class="text-sm font-semibold uppercase tracking-wide text-heritage">Hỗ trợ</h2><ul class="mt-4 grid gap-1 text-sm text-white/85">
+        <li><a href="hoi-thao.html#theo-nam" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">The National Conference on GIS Application 2022 – GIS and Remote Sensing Applications for Environment and Resource Management</a></li>
+        <li><a href="hoi-thao.html#ban-tin" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Tạo cầu nối giữa di sản và phát triển kinh tế</a></li>
+        <li><a href="hoi-thao.html#ban-tin" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">10 năm Hoàng thành Thăng Long là Di sản văn hóa thế giới</a></li>
+        <li><a href="hoi-thao.html#ban-tin" class="inline-flex min-h-[36px] items-center py-1 leading-snug hover:text-white hover:underline">Hé lộ bí ẩn 14 công trình “thế kỷ” của các nhà khoa học Việt Nam</a></li>
+      </ul></nav>
+    </div>
+  </div>
+  <div class="border-t border-white/15">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 px-4 py-5 text-[13px] text-white/75 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+      <p>© 2026 Di sản Việt Nam – Di sản Quảng Trị · GIS GROUP</p>
+      <a href="#main" class="inline-flex min-h-[36px] items-center gap-1.5 hover:text-white"><i data-lucide="arrow-up" class="h-4 w-4" aria-hidden="true"></i>Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+{
+  "brand": "THIÊN THẦN NHỎ",
+  "language": "vi",
+  "preset": "bold",
+  "motionLevel": 1,
+  "visualIdea": "Mép mây vỏ sò nối các section như những đám mây trôi qua từng trang, kết hợp khung ảnh vòm cầu vồng / hữu cơ và nhãn dán bo tròn nghiêng nhẹ",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Mỗi ngày đến trường là một ngày vui",
+    "description": "Giao diện giới thiệu trường mầm non tông pastel vui tươi, thân thiện với phụ huynh."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu nhanh trường, triết lý, chương trình nổi bật, môi trường học tập; dẫn phụ huynh sang trang Liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Tiêu đề BA yêu cầu, mây / sao trôi nhẹ bằng CSS" },
+        { "id": "gioi-thieu", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Link sang pages/about.html" },
+        { "id": "triet-ly", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "" },
+        { "id": "chuong-trinh", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "4 chương trình, link sang pages/programs.html" },
+        { "id": "moi-truong", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Lớp học, sân chơi, góc đọc" },
+        { "id": "khoanh-khac", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "3 ảnh lightbox + ô dẫn sang thư viện" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Dẫn tới pages/gallery-contact.html#lien-he" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "teacher children classroom circle", "file": "assets/img/home-hero-co-va-be.jpg", "status": "ok" },
+        { "slot": "gioi-thieu", "query": "preschool children walking outdoor", "file": "assets/img/home-intro-be-vui-choi.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-chu-so", "query": "child writing letters", "file": "assets/img/home-prog-chu-so.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-nghe-thuat", "query": "children painting art", "file": "assets/img/home-prog-nghe-thuat.webp", "status": "ok" },
+        { "slot": "chuong-trinh-van-dong", "query": "children circle game outdoor", "file": "assets/img/home-prog-van-dong.jpg", "status": "ok" },
+        { "slot": "chuong-trinh-thien-nhien", "query": "toddler watering plants", "file": "assets/img/home-prog-thien-nhien.jpg", "status": "ok" },
+        { "slot": "moi-truong-lop-hoc", "query": "kindergarten classroom teacher", "file": "assets/img/home-env-lop-hoc.jpg", "status": "ok" },
+        { "slot": "moi-truong-san-choi", "query": "kindergarten playground slide", "file": "assets/img/home-env-san-choi.jpg", "status": "ok" },
+        { "slot": "moi-truong-goc-doc", "query": "children reading book grass", "file": "assets/img/home-env-goc-doc.jpg", "status": "ok" },
+        { "slot": "khoanh-khac-1", "query": "child climbing playground", "file": "assets/img/gallery-leo-day.jpg", "status": "ok" },
+        { "slot": "khoanh-khac-2", "query": "girl chasing bubbles", "file": "assets/img/gallery-bong-bong.jpg", "status": "ok" },
+        { "slot": "khoanh-khac-3", "query": "toddler crayons hand", "file": "assets/img/gallery-but-sap.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Về chúng tôi",
+      "purpose": "Kể câu chuyện hình thành, sứ mệnh, tầm nhìn, giá trị, triết lý chăm sóc, đội ngũ giáo viên và cam kết an toàn",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Câu chuyện hình thành, mốc thời gian mẫu" },
+        { "id": "su-menh", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Sứ mệnh, tầm nhìn, 4 giá trị cốt lõi" },
+        { "id": "cham-soc", "catalog": "process", "variant": "features-numbered", "source": "ba", "note": "Triết lý chăm sóc và giáo dục trẻ" },
+        { "id": "doi-ngu", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Giáo viên dùng khối chữ cái đầu tên (chưa có ảnh chân dung thật)" },
+        { "id": "cam-ket", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Cam kết an toàn, tôn trọng trẻ + hình ảnh không gian, giáo viên, hoạt động" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "cau-chuyen", "query": "children schoolyard outdoor", "file": "assets/img/about-cau-chuyen.jpg", "status": "ok" },
+        { "slot": "doi-ngu", "query": "teacher with child", "file": "assets/img/about-co-giao.jpg", "status": "ok" },
+        { "slot": "cam-ket-tap-huan", "query": "teachers workshop kindergarten", "file": "assets/img/about-cam-ket.jpg", "status": "ok" },
+        { "slot": "cam-ket-an-toan", "query": "teacher children washing hands", "file": "assets/img/about-cong-dong.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/programs.html",
+      "title": "Chương trình giáo dục",
+      "purpose": "Trình bày phương pháp, chương trình theo nhóm tuổi, lĩnh vực phát triển, hoạt động trải nghiệm và một ngày của bé",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "phuong-phap", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "" },
+        { "id": "nhom-tuoi", "catalog": "services", "variant": "features-tabs", "source": "ba", "note": "4 tab: Nhà trẻ, Mẫu giáo bé, nhỡ, lớn" },
+        { "id": "linh-vuc", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "5 lĩnh vực phát triển" },
+        { "id": "trai-nghiem", "catalog": "services", "variant": "list-cards", "source": "ba", "note": "6 hoạt động trải nghiệm" },
+        { "id": "mot-ngay", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Một ngày của bé" },
+        { "id": "hoi-dap", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "Câu hỏi phụ huynh hay hỏi về chương trình" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "phuong-phap", "query": "teacher children lesson", "file": "assets/img/programs-phuong-phap.jpg", "status": "ok" },
+        { "slot": "nhom-tuoi-nha-tre", "query": "toddler toys box", "file": "assets/img/programs-nha-tre.jpg", "status": "ok" },
+        { "slot": "nhom-tuoi-mau-giao-be", "query": "toddlers snack teacher", "file": "assets/img/programs-mau-giao-be.jpg", "status": "ok" },
+        { "slot": "nhom-tuoi-mau-giao-nho", "query": "preschool lunch table", "file": "assets/img/programs-mau-giao-nho.jpg", "status": "ok" },
+        { "slot": "nhom-tuoi-mau-giao-lon", "query": "children beads playing", "file": "assets/img/programs-mau-giao-lon.jpg", "status": "ok" },
+        { "slot": "trai-nghiem-am-nhac", "query": "children music singing", "file": "assets/img/programs-am-nhac.jpg", "status": "ok" },
+        { "slot": "trai-nghiem-cay-xanh", "query": "children plants garden", "file": "assets/img/programs-cay-xanh.jpg", "status": "ok" },
+        { "slot": "mot-ngay-ve-sinh", "query": "children washing hands", "file": "assets/img/programs-ve-sinh.jpg", "status": "ok" },
+        { "slot": "mot-ngay-bua-trua", "query": "preschool lunch", "file": "assets/img/programs-bua-trua.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/gallery-contact.html",
+      "title": "Thư viện & Liên hệ",
+      "purpose": "Thư viện ảnh lọc theo danh mục và thông tin liên hệ, bản đồ, form liên hệ bản demo",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "" },
+        { "id": "thu-vien", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "Lọc: Học tập, Vui chơi, Nghệ thuật, Sự kiện; lightbox" },
+        { "id": "lien-he", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Thông tin mẫu + bản đồ + form demo" },
+        { "id": "hoi-dap", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "Câu hỏi về tham quan, tuyển sinh" }
+      ],
+      "images": [
+        { "slot": "hoc-tap-1", "query": "child building blocks", "file": "assets/img/gallery-xep-khoi.jpg", "status": "ok" },
+        { "slot": "hoc-tap-2", "query": "colorful toy blocks", "file": "assets/img/gallery-khoi-mau.webp", "status": "ok" },
+        { "slot": "hoc-tap-3", "query": "child drawing homework", "file": "assets/img/gallery-be-tap-viet.jpg", "status": "ok" },
+        { "slot": "vui-choi-1", "query": "playground slide kids", "file": "assets/img/gallery-cau-truot.jpg", "status": "ok" },
+        { "slot": "vui-choi-2", "query": "students break outdoor", "file": "assets/img/gallery-gio-ra-choi.jpg", "status": "ok" },
+        { "slot": "vui-choi-3", "query": "child climbing playground", "file": "assets/img/gallery-leo-treo.jpg", "status": "ok" },
+        { "slot": "nghe-thuat-1", "query": "finger painting kids", "file": "assets/img/gallery-ve-ngon-tay.jpg", "status": "ok" },
+        { "slot": "nghe-thuat-2", "query": "child hands painting", "file": "assets/img/gallery-tay-be-ve.webp", "status": "ok" },
+        { "slot": "su-kien-1", "query": "kids birthday party", "file": "assets/img/gallery-su-kien-1.jpg", "status": "ok" },
+        { "slot": "su-kien-2", "query": "children costume festival", "file": "assets/img/gallery-hoa-trang.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA chỉ định 4 trang nên không tạo trang chi tiết; 'Thư viện & Liên hệ' gộp một trang theo đúng yêu cầu",
+    "Preset Bold (khối màu bão hòa, tránh pastel) mâu thuẫn với art direction của BA (Soft Pastel, Playful Preschool) — theo BA: bảng màu kem / xanh lá pastel / vàng nhạt / cam đào, giữ từ preset tinh thần nhãn dán bo tròn và chữ tiêu đề lớn",
+    "Font preset thay bằng Baloo 2 (tiêu đề tròn) + Nunito (thân) theo yêu cầu 'typography tròn, thân thiện', cả hai đủ ký tự tiếng Việt; bỏ Instrument Serif vì thiếu ký tự tiếng Việt",
+    "Mức chuyển động Level 1 không nạp atmos.js; mây / sao / cầu vồng trôi nhẹ ở hero viết bằng CSS animation đơn giản trong site.css theo yêu cầu BA, có tắt khi prefers-reduced-motion",
+    "Minh họa dễ thương dùng hình khối SVG trừu tượng (mây, sao, cầu vồng, lá) làm trang trí, ảnh chính vẫn là ảnh chụp thật"
+  ],
+  "limitations": [
+    "Form liên hệ là bản demo, chưa có backend, chưa gửi đi",
+    "Địa chỉ, số điện thoại, email, giờ làm việc, tên giáo viên là dữ liệu mẫu cần thay",
+    "Bản đồ Google Maps nhúng theo địa chỉ mẫu",
+    "Đội ngũ giáo viên chưa có ảnh chân dung thật, đang dùng khối chữ cái đầu tên",
+    "Ảnh lấy từ thư viện ảnh mở (Openverse), một số giấy phép CC BY-NC-ND, nên thay bằng ảnh thật của trường khi lên web"
+  ]
+}

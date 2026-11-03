@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Botanical Collection — MOSS & MIST NAIL STUDIO</title>
+<meta name="description" content="Browse the Botanical Collection by MOSS & MIST NAIL STUDIO: floral, leaf, earth tone, minimal and seasonal nail designs inspired by nature.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;700&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-mist font-sans text-ink">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-ink/10 bg-mist/90 backdrop-blur-md transition-shadow duration-300 [&.is-scrolled]:shadow-[0_8px_30px_-18px_rgba(31,39,29,.35)]">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="group flex min-h-[44px] flex-col justify-center leading-none" aria-label="MOSS & MIST NAIL STUDIO, home">
+      <span class="font-display text-[22px] font-semibold tracking-tight text-moss">MOSS &amp; MIST</span>
+      <span class="mt-1 text-[12px] font-bold tracking-[0.3em] text-bark">NAIL STUDIO</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 text-[15px] font-medium text-ink/75 transition-colors duration-300 hover:text-moss after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-moss after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moss aria-[current=page]:after:scale-x-100">Home</a>
+      <a href="../pages/services.html" class="relative py-2 text-[15px] font-medium text-ink/75 transition-colors duration-300 hover:text-moss after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-moss after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moss aria-[current=page]:after:scale-x-100">Services &amp; Pricing</a>
+      <a aria-current="page" href="../pages/collection.html" class="relative py-2 text-[15px] font-medium text-ink/75 transition-colors duration-300 hover:text-moss after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-moss after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moss aria-[current=page]:after:scale-x-100">Collection</a>
+      <a href="../pages/studio.html" class="relative py-2 text-[15px] font-medium text-ink/75 transition-colors duration-300 hover:text-moss after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-moss after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moss aria-[current=page]:after:scale-x-100">Our Studio</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button type="button" data-modal-open="booking" class="hidden min-h-[44px] items-center rounded-full bg-moss px-6 text-[15px] font-semibold text-mist transition duration-300 hover:bg-ink active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fern sm:inline-flex">Book a visit</button>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Open menu" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-ink transition hover:border-moss hover:text-moss lg:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-mist p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col" aria-label="Mobile">
+      <a href="../index.html" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-fern">Home</a>
+      <a href="../pages/services.html" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-fern">Services &amp; Pricing</a>
+      <a aria-current="page" href="../pages/collection.html" class="flex min-h-[52px] items-center border-b border-ink/10 font-display text-2xl text-ink aria-[current=page]:text-fern">Collection</a>
+      <a href="../pages/studio.html" class="flex min-h-[52px] items-center font-display text-2xl text-ink aria-[current=page]:text-fern">Our Studio</a>
+      <button type="button" data-modal-open="booking" class="mt-5 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-moss text-base font-semibold text-mist">Book a visit</button>
+    </nav>
+  </div>
+
+  <dialog id="booking" class="w-[min(94vw,560px)] rounded-[2rem] bg-mist p-0 text-ink shadow-2xl">
+    <div class="p-6 sm:p-9">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="font-display text-3xl leading-tight text-moss">Book a visit</p>
+          <p class="mt-2 text-[15px] text-ink/70">Tell us what you would like and when. We keep each appointment unhurried.</p>
+        </div>
+        <button type="button" data-modal-close aria-label="Close" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/15 text-xl transition hover:border-moss hover:text-moss">&times;</button>
+      </div>
+      <form data-form="booking" class="mt-6 grid gap-4 sm:grid-cols-2" novalidate>
+        <label class="grid gap-2 text-sm font-semibold text-ink">Your name
+          <input type="text" name="name" required minlength="2" autocomplete="name" class="min-h-[48px] rounded-xl border border-ink/20 bg-white px-4 text-base font-normal text-ink placeholder:text-ink/50 focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40" placeholder="Minh Chau">
+        </label>
+        <label class="grid gap-2 text-sm font-semibold text-ink">Phone
+          <input type="tel" name="phone" required autocomplete="tel" class="min-h-[48px] rounded-xl border border-ink/20 bg-white px-4 text-base font-normal text-ink placeholder:text-ink/50 focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40" placeholder="090 412 3876">
+        </label>
+        <label class="grid gap-2 text-sm font-semibold text-ink">Service
+          <select name="service" required class="min-h-[48px] rounded-xl border border-ink/20 bg-white px-4 text-base font-normal text-ink focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40">
+            <option value="">Choose a service</option>
+            <option>Natural Manicure</option>
+            <option>Pedicure</option>
+            <option>Gel Polish</option>
+            <option>Nail Extensions</option>
+            <option>Botanical Nail Art</option>
+          </select>
+        </label>
+        <label class="grid gap-2 text-sm font-semibold text-ink">Preferred date
+          <input type="date" name="date" required class="min-h-[48px] rounded-xl border border-ink/20 bg-white px-4 text-base font-normal text-ink focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40">
+        </label>
+        <label class="grid gap-2 text-sm font-semibold text-ink sm:col-span-2">Notes (optional)
+          <textarea name="note" rows="3" class="rounded-xl border border-ink/20 bg-white px-4 py-3 text-base font-normal text-ink placeholder:text-ink/50 focus:border-moss focus:outline-none focus:ring-2 focus:ring-fern/40" placeholder="A design you saved, nail length, anything we should know"></textarea>
+        </label>
+        <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
+          <button type="submit" class="inline-flex min-h-[48px] items-center justify-center rounded-full bg-moss px-8 text-[15px] font-semibold text-mist transition duration-300 hover:bg-ink active:scale-[.98]">Request this time</button>
+          <p class="text-[13px] leading-snug text-ink/65">Demo form only: no appointment is sent or confirmed.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- PAGE HERO -->
+  <section id="intro" data-section="page-hero" class="relative overflow-hidden bg-mist" data-particles="petals" data-particles-color="#E8C8BC" data-particles-density="0.35">
+    <div class="mist-wash pointer-events-none absolute inset-0" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl items-end gap-10 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-12 lg:px-10 lg:pb-20 lg:pt-16 2xl:px-16">
+      <div class="lg:col-span-7">
+        <p class="text-[13px] font-bold uppercase tracking-[0.22em] text-fern">Botanical Collection</p>
+        <h1 data-split="words" class="mt-4 font-display text-[clamp(3rem,8vw,8rem)] leading-[1] tracking-tight">Inspired by <em class="italic text-fern">Nature</em></h1>
+        <p data-reveal="up" class="mt-7 max-w-[34rem] text-lg leading-relaxed text-ink/75">Thirteen designs gathered from gardens, forest walks and the flower market. Pick one as it is, or ask us to adapt it to your nails.</p>
+      </div>
+      <div class="lg:col-span-5">
+        <div data-reveal="clip" class="ml-auto aspect-[4/5] w-full max-w-[460px] overflow-hidden rounded-t-full bg-sand">
+          <img src="https://images.unsplash.com/photo-1790220324053-32194b82e0fe?w=1800&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" alt="A hand with light, natural polish holding a bright orange flower" class="photo h-full w-full object-cover" width="1200" height="1500">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGNS GALLERY WITH FILTER -->
+  <section id="designs" data-section="gallery-filter" class="bg-sand">
+    <div data-filter-group class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <h2 class="font-display text-4xl leading-[1.1] sm:text-5xl">The designs</h2>
+        <div class="no-bar -mx-4 flex gap-2 overflow-x-auto px-4 sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Filter designs">
+          <button type="button" data-filter="all" class="min-h-[44px] shrink-0 rounded-full border border-ink/20 px-5 text-[15px] font-semibold text-ink transition hover:border-moss [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">All</button>
+          <button type="button" data-filter="floral" class="min-h-[44px] shrink-0 rounded-full border border-ink/20 px-5 text-[15px] font-semibold text-ink transition hover:border-moss [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Floral</button>
+          <button type="button" data-filter="leaves" class="min-h-[44px] shrink-0 rounded-full border border-ink/20 px-5 text-[15px] font-semibold text-ink transition hover:border-moss [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Leaves</button>
+          <button type="button" data-filter="earth" class="min-h-[44px] shrink-0 rounded-full border border-ink/20 px-5 text-[15px] font-semibold text-ink transition hover:border-moss [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Earth Tones</button>
+          <button type="button" data-filter="minimal" class="min-h-[44px] shrink-0 rounded-full border border-ink/20 px-5 text-[15px] font-semibold text-ink transition hover:border-moss [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Minimal</button>
+          <button type="button" data-filter="seasonal" class="min-h-[44px] shrink-0 rounded-full border border-ink/20 px-5 text-[15px] font-semibold text-ink transition hover:border-moss [&.is-active]:border-moss [&.is-active]:bg-moss [&.is-active]:text-mist">Seasonal</button>
+        </div>
+      </div>
+
+      <div class="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3 2xl:columns-4">
+
+        <article data-category="floral" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1762373349045-c2decd4ec3f3?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Morning Daisy: cream, petal white, soft yellow" class="group block overflow-hidden rounded-t-full bg-mist">
+            <img src="https://images.unsplash.com/photo-1762373349045-c2decd4ec3f3?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="French manicure with a tiny white flower held between the fingers" class="photo aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Morning Daisy</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full ring-1 ring-ink/10" style="background:#F3EBDD"></span><span class="h-3 w-3 rounded-full" style="background:#F2D98B"></span>Cream, petal white, soft yellow</p>
+          <p class="mt-2 leading-relaxed text-ink/75">A clean French tip with one hand-painted daisy on the ring finger.</p>
+        </article>
+
+        <article data-category="earth" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Tortoise Bark: amber, espresso, honey" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Tortoiseshell patterned nails with a gold ring" class="photo aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Tortoise Bark</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#A86A2C"></span><span class="h-3 w-3 rounded-full" style="background:#4A3021"></span>Amber, espresso, honey</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Layered translucent gel that reads like polished bark or old horn.</p>
+        </article>
+
+        <article data-category="leaves" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1645340609551-2dcba8ca1e56?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Lagoon Fern: teal, sage, mist" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1645340609551-2dcba8ca1e56?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Nails painted in blue and green tones" class="photo !saturate-[.55] aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Lagoon Fern</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#3E7C7A"></span><span class="h-3 w-3 rounded-full" style="background:#A3B394"></span>Teal, sage, mist</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Cool water greens, alternating nail by nail like ferns at a pond edge.</p>
+        </article>
+
+        <article data-category="minimal" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1630843599725-32ead7671867?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Linen White: milk, linen, bare" class="group block overflow-hidden rounded-t-full bg-mist">
+            <img src="https://images.unsplash.com/photo-1630843599725-32ead7671867?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Hand with soft milky white manicure" class="photo aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Linen White</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full ring-1 ring-ink/10" style="background:#F6F2EA"></span><span class="h-3 w-3 rounded-full" style="background:#E2D6C6"></span>Milk, linen, bare</p>
+          <p class="mt-2 leading-relaxed text-ink/75">A sheer milky finish that looks like washed linen in daylight.</p>
+        </article>
+
+        <article data-category="seasonal leaves" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1603665042076-7f06e46f1042?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Ginkgo Autumn: saffron, rust, oat" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1603665042076-7f06e46f1042?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A hand holding a bright yellow autumn leaf" class="photo aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Ginkgo Autumn</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#D9A23A"></span><span class="h-3 w-3 rounded-full" style="background:#9C4F2A"></span>Saffron, rust, oat</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Our October set: warm yellows with a single fan-shaped ginkgo leaf.</p>
+        </article>
+
+        <article data-category="floral" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1790220324002-60488d033597?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Marigold Market: apricot, nude, gold" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1790220324002-60488d033597?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A manicured hand holding an orange flower against a floral dress" class="photo aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Marigold Market</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#E89A5B"></span><span class="h-3 w-3 rounded-full" style="background:#E7CFB8"></span>Apricot, nude, gold</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Inspired by the marigold stalls at Quang Ba flower market at dawn.</p>
+        </article>
+
+        <article data-category="earth minimal" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1588359953494-0c215e3cedc6?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Woven Reed: oat, sand, raw cane" class="group block overflow-hidden rounded-t-full bg-mist">
+            <img src="https://images.unsplash.com/photo-1588359953494-0c215e3cedc6?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A hand with neutral nails holding a woven basket" class="photo aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Woven Reed</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#D8C3A5"></span><span class="h-3 w-3 rounded-full" style="background:#B4977A"></span>Oat, sand, raw cane</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Soft neutrals that sit well with natural fibres, rattan and wood.</p>
+        </article>
+
+        <article data-category="floral" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1674383600495-bfa0405f3c93?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Peony Hush: blush, rose, cream" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1674383600495-bfa0405f3c93?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Hands holding a soft pink flower" class="photo aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Peony Hush</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#E7B3B6"></span><span class="h-3 w-3 rounded-full" style="background:#C97C86"></span>Blush, rose, cream</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Layered pinks with a pressed petal on two nails.</p>
+        </article>
+
+        <article data-category="leaves earth" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1602447521540-7f57157d6d8d?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Fallen Leaf: tan, caramel, ivory" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1602447521540-7f57157d6d8d?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A dried brown leaf resting on an open hand" class="photo aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Fallen Leaf</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#B98B5E"></span><span class="h-3 w-3 rounded-full" style="background:#7E5536"></span>Tan, caramel, ivory</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Fine leaf veins drawn in caramel over a sheer ivory base.</p>
+        </article>
+
+        <article data-category="minimal" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1643648854897-7b5845b4c04c?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Bare Blush: nude pink, sheer gloss" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1643648854897-7b5845b4c04c?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Hand with a glossy nude pink manicure" class="photo aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Bare Blush</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#E9C2B8"></span><span class="h-3 w-3 rounded-full ring-1 ring-ink/10" style="background:#F6ECE6"></span>Nude pink, sheer gloss</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Your nails, slightly better. The most booked design in the studio.</p>
+        </article>
+
+        <article data-category="earth seasonal" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1635791283756-f1b4fbd920ae?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="River Clay: terracotta, rust, stone" class="group block overflow-hidden rounded-t-full bg-mist">
+            <img src="https://images.unsplash.com/photo-1635791283756-f1b4fbd920ae?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Orange nails resting on a smooth river rock" class="photo aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1333">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">River Clay</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#C7653A"></span><span class="h-3 w-3 rounded-full" style="background:#8E8A80"></span>Terracotta, rust, stone</p>
+          <p class="mt-2 leading-relaxed text-ink/75">A warm clay colour that deepens in sunlight, finished matte or gloss.</p>
+        </article>
+
+        <article data-category="seasonal" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1634819088706-b660a7aa48b0?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Mustard Fog: mustard, grey mist" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1634819088706-b660a7aa48b0?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Hand with alternating mustard yellow and grey nails" class="photo aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Mustard Fog</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#D1A63B"></span><span class="h-3 w-3 rounded-full" style="background:#9EA19B"></span>Mustard, grey mist</p>
+          <p class="mt-2 leading-relaxed text-ink/75">For Hanoi's misty late autumn mornings, alternating nail by nail.</p>
+        </article>
+
+        <article data-category="seasonal minimal" class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=1000&q=80&auto=format&fit=crop" data-lightbox="collection" data-caption="Frost Heather: mauve, white, silver" class="group block overflow-hidden rounded-[2rem] bg-mist">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Mauve, white and silver glitter nails holding a white knit sweater" class="photo aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250">
+          </a>
+          <h3 class="mt-4 font-display text-2xl italic text-moss">Frost Heather</h3>
+          <p class="mt-1 flex items-center gap-2 text-sm text-ink/65"><span class="h-3 w-3 rounded-full" style="background:#B596A6"></span><span class="h-3 w-3 rounded-full" style="background:#C9CCD1"></span>Mauve, white, silver</p>
+          <p class="mt-2 leading-relaxed text-ink/75">Our winter set: heather mauve with a light frost of silver on the tips.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN INSPIRATION -->
+  <section id="inspiration" data-section="cta-fullbleed" class="relative overflow-hidden bg-moss text-mist">
+    <div class="absolute inset-0" aria-hidden="true">
+      <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%]">
+        <img src="https://images.unsplash.com/photo-1527341944416-23e85b614715?w=1600&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="" class="photo h-full w-full object-cover" width="1600" height="1067">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/20"></div>
+    </div>
+    <div class="relative mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-36 2xl:px-16">
+      <h2 data-split="words" class="max-w-3xl font-display text-4xl leading-[1.1] sm:text-5xl 2xl:text-6xl">Where the designs <em class="italic text-sage">begin</em></h2>
+      <p data-reveal="up" class="mt-6 max-w-prose text-lg leading-relaxed text-mist/85">Each collection starts on a walk. We photograph what is growing, press a few leaves, and test colours side by side with the real thing before a design reaches your nails.</p>
+      <div data-reveal-stagger="120" class="mt-14 grid gap-10 md:grid-cols-3 lg:max-w-5xl">
+        <div class="border-t border-mist/30 pt-6">
+          <h3 class="font-display text-2xl">West Lake mornings</h3>
+          <p class="mt-3 leading-relaxed text-mist/80">Lotus leaves, reeds and the soft grey water behind the studio.</p>
+        </div>
+        <div class="border-t border-mist/30 pt-6">
+          <h3 class="font-display text-2xl">The flower market</h3>
+          <p class="mt-3 leading-relaxed text-mist/80">Marigolds, peonies and daisies, bought before sunrise at Quang Ba.</p>
+        </div>
+        <div class="border-t border-mist/30 pt-6">
+          <h3 class="font-display text-2xl">Four seasons</h3>
+          <p class="mt-3 leading-relaxed text-mist/80">A new seasonal set every three months, gone when the season ends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="book" data-section="cta-type" class="bg-mist">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-10 px-4 py-24 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10 lg:py-28 2xl:px-16">
+      <h2 data-split="words" class="max-w-4xl font-display text-[clamp(2.5rem,5.5vw,5rem)] leading-[1.05] tracking-tight">Found a favourite? Bring it to the <em class="italic text-fern">table</em>.</h2>
+      <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
+        <button type="button" data-modal-open="booking" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-moss px-9 text-[15px] font-semibold text-mist transition duration-300 hover:bg-ink active:scale-[.98]">Book a visit</button>
+        <a href="services.html#prices" class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-ink/20 px-8 text-[15px] font-semibold text-ink transition duration-300 hover:border-moss hover:text-moss">See prices</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden bg-ink text-mist">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-24 2xl:px-16">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl leading-tight">A little nature<br>at your fingertips.</p>
+        <button type="button" data-modal-open="booking" class="mt-7 inline-flex min-h-[48px] items-center rounded-full bg-sage px-7 text-[15px] font-semibold text-ink transition duration-300 hover:bg-mist active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mist">Book a visit</button>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-bold text-sage">Visit</p>
+        <address class="mt-4 not-italic leading-relaxed text-mist/80">18 Xuan Dieu Street<br>Tay Ho District, Hanoi</address>
+        <a href="../pages/studio.html#contact" class="mt-3 inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold text-mist underline decoration-sage/60 underline-offset-4 transition hover:decoration-mist">Map and directions</a>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-bold text-sage">Opening hours</p>
+        <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-5 gap-y-1.5 text-mist/80">
+          <dt>Tue to Fri</dt><dd>9:30 to 19:30</dd>
+          <dt>Sat and Sun</dt><dd>9:00 to 18:00</dd>
+          <dt>Monday</dt><dd>Closed</dd>
+        </dl>
+        <p class="mt-5 text-sm font-bold text-sage">Contact</p>
+        <a href="tel:+842437192046" class="mt-2 flex min-h-[44px] items-center text-mist/90 transition hover:text-sage">+84 24 3719 2046</a>
+        <a href="mailto:hello@mossandmist.studio" class="flex min-h-[44px] items-center text-mist/90 transition hover:text-sage">hello@mossandmist.studio</a>
+      </div>
+      <nav class="lg:col-span-2" aria-label="Footer">
+        <p class="text-sm font-bold text-sage">Pages</p>
+        <ul class="mt-3">
+          <li><a href="../index.html" class="flex min-h-[40px] items-center text-mist/80 transition hover:text-mist">Home</a></li>
+          <li><a href="../pages/services.html" class="flex min-h-[40px] items-center text-mist/80 transition hover:text-mist">Services &amp; Pricing</a></li>
+          <li><a aria-current="page" href="../pages/collection.html" class="flex min-h-[40px] items-center text-mist/80 transition hover:text-mist">Collection</a></li>
+          <li><a href="../pages/studio.html" class="flex min-h-[40px] items-center text-mist/80 transition hover:text-mist">Our Studio</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p aria-hidden="true" class="mt-16 select-none whitespace-nowrap font-display text-[clamp(3.5rem,13.5vw,15rem)] leading-[0.85] tracking-tight text-mist/[0.09]">MOSS &amp; MIST</p>
+
+    <div class="flex flex-col gap-2 border-t border-mist/15 py-7 text-sm text-mist/60 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 MOSS &amp; MIST NAIL STUDIO. All rights reserved.</p>
+      <p>Booking and contact forms on this site are demos.</p>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

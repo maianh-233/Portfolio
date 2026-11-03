@@ -1,0 +1,204 @@
+{
+  "brand": "HỒN VIỆT",
+  "language": "vi",
+  "preset": "film",
+  "motionLevel": 2,
+  "visualIdea": "Mỗi trang là một chương trong cuốn sách tư liệu văn hóa: nền giấy dó xen gỗ lâu năm, ảnh tư liệu dán khung giấy hơi lệch, con dấu đỏ son và họa tiết mặt trống đồng in mờ như dấu mực",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Giữ tiếng xưa, truyền hồn Việt",
+    "description": "Giao diện trung tâm truyền dạy nhạc cụ dân tộc phong cách sách tư liệu hoài cổ."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu HỒN VIỆT, triết lý truyền dạy, nhạc cụ, nghệ nhân; dẫn sang Nghệ nhân và Chương trình học",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ba", "note": "Tiêu đề và lời giới thiệu nguyên văn của BA; CTA Gặp gỡ nghệ nhân / Khám phá lớp học" },
+        { "id": "triet-ly", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Triết lý truyền dạy" },
+        { "id": "nhac-cu", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Các nhạc cụ đào tạo, link sang chương trình" },
+        { "id": "nghe-nhan", "catalog": "team", "variant": "teaser-row", "source": "ba", "note": "3 nghệ nhân, link trang chi tiết" },
+        { "id": "khoanh-khac", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh kể chuyện không gian học, lightbox" },
+        { "id": "nhat-ky", "catalog": "blog", "variant": "teaser-row", "source": "ai", "note": "3 mục nhật ký văn hóa mới" },
+        { "id": "loi-moi", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "vietnamese traditional orchestra stage", "file": "assets/img/di-san-ganh-hat-xua.jpg", "status": "ok" },
+        { "slot": "hero-phu", "query": "temple incense vietnam", "file": "assets/img/hero-giai-dieu-xua.jpg", "status": "ok" },
+        { "slot": "khoanh-khac-1", "query": "teacher student dan bau", "file": "assets/img/truyen-nghe-dan-bau.jpg", "status": "ok" },
+        { "slot": "khoanh-khac-2", "query": "old house courtyard vietnam", "file": "assets/img/khong-gian-gian-tho.jpg", "status": "ok" },
+        { "slot": "khoanh-khac-3", "query": "wooden carved house veranda", "file": "assets/img/ve-hon-viet-gian-go.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/nghe-nhan.html",
+      "title": "Nghệ nhân",
+      "purpose": "Trang trọng tâm tôn vinh người truyền dạy, dạng trang chân dung sách tư liệu",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "chan-dung", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Chân dung chữ cái đầu tên, chưa có ảnh nghệ nhân thật" },
+        { "id": "loi-nghe-nhan", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "" },
+        { "id": "cach-truyen-nghe", "catalog": "process", "variant": "process-steps", "source": "ai", "note": "" },
+        { "id": "loi-moi", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "chan-dung", "query": "vietnamese musician portrait", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/nghe-nhan-thu-van.html",
+      "title": "Nghệ nhân Lê Thị Thu Vân",
+      "purpose": "Hồ sơ chi tiết nghệ nhân đàn tranh (nội dung mẫu)",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "ho-so", "catalog": "team", "variant": "detail-article", "source": "ba", "note": "Chuyên môn, hành trình, biểu diễn, triết lý truyền nghề" },
+        { "id": "nghe-nhan-khac", "catalog": "team", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "chan-dung", "query": "dan tranh player portrait", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/nghe-nhan-van-khiem.html",
+      "title": "Thầy Nguyễn Văn Khiêm",
+      "purpose": "Hồ sơ chi tiết nghệ nhân đàn bầu (nội dung mẫu)",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "ho-so", "catalog": "team", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "nghe-nhan-khac", "catalog": "team", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "chan-dung", "query": "dan bau musician portrait", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/nghe-nhan-minh-loc.html",
+      "title": "Thầy Đào Minh Lộc",
+      "purpose": "Hồ sơ chi tiết nghệ nhân sáo trúc (nội dung mẫu)",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "ho-so", "catalog": "team", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "nghe-nhan-khac", "catalog": "team", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "chan-dung", "query": "bamboo flute player vietnam", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/chuong-trinh.html",
+      "title": "Chương trình học",
+      "purpose": "Danh mục lớp theo nhạc cụ và trình độ, phương pháp học cùng nghệ nhân, trình bày kiểu tạp chí",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "danh-muc", "catalog": "services", "variant": "story-editorial", "source": "ba", "note": "Từng nhạc cụ: nội dung học, phương pháp, giá trị văn hóa" },
+        { "id": "trinh-do", "catalog": "services", "variant": "features-tabs", "source": "ba", "note": "Nhập môn / Cơ bản / Nâng cao bằng data-tabs" },
+        { "id": "hoi-dap", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "" },
+        { "id": "loi-moi", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "mo-dau", "query": "vietnamese folk musicians porch", "file": "assets/img/chuong-trinh-nhac-cong.jpg", "status": "ok" },
+        { "slot": "danh-muc", "query": "dan tranh zither vietnam", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/di-san.html",
+      "title": "Di sản nhạc cụ",
+      "purpose": "Hồ sơ lưu trữ: nguồn gốc, cấu tạo, âm sắc, vai trò văn hóa từng nhạc cụ",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "ho-so", "catalog": "editorial", "variant": "features-tabs", "source": "ba", "note": "Phiếu hồ sơ từng nhạc cụ bằng data-tabs" },
+        { "id": "trong-dong", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Dấu tích âm nhạc từ trống đồng" },
+        { "id": "am-thanh", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Chỗ dành cho âm thanh / video minh họa khi có tư liệu" }
+      ],
+      "images": [
+        { "slot": "trong-dong", "query": "bronze drum gong", "file": "assets/img/di-san-cong-chieng.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/khong-gian.html",
+      "title": "Không gian truyền nghề",
+      "purpose": "Lớp học, buổi thực hành, giao lưu; câu chuyện tiếp nối giữa nghệ nhân và thế hệ trẻ",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "mot-ngay", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Một ngày ở trung tâm" },
+        { "id": "khung-hinh", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ba", "note": "Dải phim kéo ngang, lightbox" },
+        { "id": "tiep-noi", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "mo-dau", "query": "old wooden house hoi an", "file": "assets/img/khong-gian-nha-co.jpg", "status": "ok" },
+        { "slot": "khung-hinh-1", "query": "wooden door old house", "file": "assets/img/khong-gian-cua-go.jpg", "status": "ok" },
+        { "slot": "tiep-noi", "query": "veranda old house", "file": "assets/img/khong-gian-hien-nha.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/su-kien.html",
+      "title": "Văn hóa & sự kiện",
+      "purpose": "Nhật ký văn hóa: biểu diễn, workshop, giao lưu, điền dã",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "sap-dien-ra", "catalog": "cta", "variant": "cta-fullbleed", "source": "ai", "note": "Sự kiện sắp diễn ra, đếm ngược, modal đăng ký demo" },
+        { "id": "nhat-ky", "catalog": "blog", "variant": "list-cards", "source": "ba", "note": "Lọc theo loại; chỉ 2 bài có trang chi tiết" }
+      ],
+      "images": [
+        { "slot": "sap-dien-ra", "query": "old town night lanterns", "file": "assets/img/su-kien-dem-pho-co.jpg", "status": "ok" },
+        { "slot": "bai-giao-luu", "query": "water puppetry hanoi", "file": "assets/img/su-kien-roi-nuoc.jpg", "status": "ok" },
+        { "slot": "bai-hoi-lang", "query": "village festival vietnam", "file": "assets/img/su-kien-le-hoi.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/su-kien-giao-luu-nghe-nhan.html",
+      "title": "Đêm giao lưu nghệ nhân rối nước và nhạc dân tộc",
+      "purpose": "Bài nhật ký chi tiết",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "bai-viet", "catalog": "blog", "variant": "detail-article", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "anh-bai-1", "query": "water puppeteer hanoi", "file": "assets/img/su-kien-nghe-nhan-roi.jpg", "status": "ok" },
+        { "slot": "anh-bai-2", "query": "water puppet stage", "file": "assets/img/bat-am-roi.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/su-kien-hoi-lang-mua-xuan.html",
+      "title": "Điền dã: theo chân hội làng mùa xuân",
+      "purpose": "Bài nhật ký chi tiết",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "bai-viet", "catalog": "blog", "variant": "detail-article", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "anh-bai-1", "query": "village festival vietnam", "file": "assets/img/su-kien-le-hoi.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/ve-hon-viet.html",
+      "title": "Về Hồn Việt & Liên hệ",
+      "purpose": "Câu chuyện hình thành, sứ mệnh, quan điểm bảo tồn; liên hệ và đăng ký tư vấn",
+      "sections": [
+        { "id": "mo-dau", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "" },
+        { "id": "su-menh", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Sứ mệnh, quan điểm bảo tồn, định hướng" },
+        { "id": "lien-he", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Form đăng ký tư vấn có xác thực, bản demo" }
+      ],
+      "images": [
+        { "slot": "cau-chuyen", "query": "old wooden house hanoi", "file": "assets/img/nha-co-ha-noi.jpg", "status": "ok" },
+        { "slot": "su-menh", "query": "temple of literature hanoi", "file": "assets/img/ve-hon-viet-khue-van.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Font preset Young Serif / Courier Prime thiếu dấu tiếng Việt: thay bằng Playfair Display (tiêu đề) và Be Vietnam Pro (thân); bỏ font đánh máy",
+    "Bảng màu theo màu BA chỉ định (#E8D9B8, #594333, #843D32, #62664A, #292720) thay cho bảng màu preset film",
+    "Gộp trang 'Về Hồn Việt' và 'Liên hệ' thành một trang theo đúng chú thích của BA",
+    "Chưa có ảnh chân dung nghệ nhân thật: dùng khối chữ cái đầu tên trên nền màu thương hiệu, ghi rõ ảnh sẽ bổ sung",
+    "Nguồn ảnh không có ảnh riêng từng nhạc cụ (đàn tranh, nguyệt, tỳ bà, sáo): trình bày bằng phiếu tư liệu chữ + họa tiết trống đồng",
+    "Bỏ ảnh khong-gian-nha-co.webp (bối cảnh chữ Hán, phố đông) vì BA yêu cầu không dùng hình ảnh lẫn bản sắc khác",
+    "Không tạo danh hiệu, giải thưởng cho nghệ nhân; tên và hồ sơ nghệ nhân là nội dung mẫu"
+  ],
+  "limitations": [
+    "Biểu mẫu đăng ký tư vấn và đăng ký tham dự sự kiện là bản demo, chưa có backend",
+    "Chưa có tư liệu âm thanh / video biểu diễn: trang Di sản để chỗ chờ tư liệu",
+    "Thông tin liên hệ, lịch học, sự kiện là dữ liệu mẫu"
+  ]
+}

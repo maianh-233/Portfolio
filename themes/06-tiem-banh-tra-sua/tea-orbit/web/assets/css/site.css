@@ -1,0 +1,86 @@
+:root {
+  --void: #10111B;
+  --violet: #795BFF;
+  --violet-deep: #5A3FE0;
+  --violet-wash: #ECE7FF;
+  --cobalt: #3157F5;
+  --cyan: #62E8F2;
+  --cyan-wash: #DDF9FB;
+  --frost: #F4F5FF;
+  --pearl: #2A2233;
+  --ui-accent: #795BFF;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Be Vietnam Pro', system-ui, sans-serif;
+}
+
+html { background: var(--frost); color-scheme: light; scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--frost); color: var(--void); }
+
+/* Neo cuộn dưới header + thanh lọc */
+[id] { scroll-margin-top: 112px; }
+
+::selection { background: rgba(121, 91, 255, .22); color: var(--void); }
+
+/* Nút lọc danh mục: giữ nhịp chuyển động khi ẩn / hiện khu vực */
+[data-filter-group] [data-category].is-out { opacity: 0; transform: translateY(12px); }
+[data-filter-group] [data-category] { transition: opacity .32s cubic-bezier(.16,1,.3,1), transform .32s cubic-bezier(.16,1,.3,1); }
+[data-filter-group] [data-category].is-gone { display: none; }
+
+/* Khung vòm như miệng ly — dùng cho ảnh sản phẩm lớn */
+.arch { border-radius: 999px 999px 2rem 2rem; }
+.arch-sm { border-radius: 999px 999px 1.25rem 1.25rem; }
+
+/* Nền sữa: vệt màu mềm của bảng màu thương hiệu trên nền trắng lạnh */
+.milk-wash {
+  background-color: var(--frost);
+  background-image:
+    radial-gradient(42rem 28rem at 88% 8%, rgba(121,91,255,.16), transparent 70%),
+    radial-gradient(34rem 24rem at 6% 92%, rgba(98,232,242,.22), transparent 70%);
+}
+.milk-wash-alt {
+  background-color: #FAFAFF;
+  background-image:
+    radial-gradient(36rem 26rem at 10% 10%, rgba(49,87,245,.10), transparent 70%),
+    radial-gradient(30rem 22rem at 95% 90%, rgba(121,91,255,.12), transparent 70%);
+}
+
+/* Trân châu: cụm hạt tròn trang trí */
+.pearl { display: block; border-radius: 9999px; pointer-events: none;
+  background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.55) 0 14%, transparent 15%), var(--pearl); }
+.pearl.is-violet { background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.6) 0 14%, transparent 15%), var(--violet); }
+.pearl.is-cyan { background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.7) 0 14%, transparent 15%), var(--cyan); }
+.pearl.is-cobalt { background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.6) 0 14%, transparent 15%), var(--cobalt); }
+
+/* Bong bóng trong: vòng tròn mảnh nổi trên ảnh */
+.bubble { display: block; border-radius: 9999px; pointer-events: none;
+  background: radial-gradient(circle at 32% 28%, rgba(255,255,255,.9) 0 10%, rgba(255,255,255,.25) 11% 40%, rgba(255,255,255,.08) 70%);
+  border: 1.5px solid rgba(255,255,255,.75); box-shadow: 0 8px 24px -10px rgba(16,17,27,.25); }
+
+/* Nhãn dán xoay nhẹ */
+.sticker { display: inline-flex; align-items: center; gap: .5rem; border-radius: 9999px; padding: .55rem 1rem;
+  font-weight: 600; font-size: .8rem; letter-spacing: .02em; box-shadow: 0 10px 24px -12px rgba(16,17,27,.35); }
+
+/* Thẻ món: nâng nhẹ khi hover */
+.lift { transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1); }
+.lift:hover { transform: translateY(-6px); box-shadow: 0 28px 50px -28px rgba(16,17,27,.35); }
+
+/* Gợn sóng sữa ngăn section */
+.wave { display: block; width: 100%; height: 48px; }
+
+/* Nền chuyển sắc nhẹ cho triết lý: tím → cobalt, thật dịu */
+.philo-bg { background-image: linear-gradient(120deg, #5A3FE0 0%, #795BFF 35%, #3157F5 70%, #5A3FE0 100%); background-size: 220% 220%; }
+
+/* Ảnh sản phẩm: ấm, trong */
+.img-warm { filter: saturate(1.04) contrast(1.02); }
+
+/* Bong bóng nổi chậm (thuần CSS) */
+.rise { animation: rise 9s ease-in-out infinite; }
+.rise-2 { animation: rise 12s ease-in-out infinite; animation-delay: -4s; }
+@keyframes rise { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise, .rise-2 { animation: none; }
+  .lift, .lift:hover { transition: none; transform: none; }
+  [data-filter-group] [data-category] { transition: none; }
+}

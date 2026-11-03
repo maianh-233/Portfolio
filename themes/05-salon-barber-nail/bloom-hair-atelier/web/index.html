@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-vi="BLOOM HAIR ATELIER | Nở rộ theo vẻ đẹp của riêng bạn">BLOOM HAIR ATELIER | Bloom into your own beauty</title>
+<meta name="description" content="BLOOM HAIR ATELIER is an art-led hair salon for soft feminine cuts, creative color like lavender brown and rose brown, and gentle texture." data-vi-content="BLOOM HAIR ATELIER là salon tóc nghệ thuật với kiểu cắt nữ tính, màu nhuộm sáng tạo như nâu lavender, nâu hồng và sóng tóc mềm mại.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-milk font-sans text-plum">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40">
+  <div class="hdr-inner mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-6 px-4 py-5 sm:px-6 lg:px-10 2xl:px-16">
+    <a aria-current="page" href="index.html" class="group flex flex-col leading-none text-plum" aria-label="BLOOM HAIR ATELIER, home">
+      <span class="font-display text-[1.65rem] font-medium tracking-[0.08em] sm:text-3xl">BLOOM</span>
+      <span class="mt-1 text-xs font-semibold uppercase tracking-[0.34em] text-lilac">Hair Atelier</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a aria-current="page" href="index.html" data-vi="Trang chủ" class="relative py-2 text-[15px] font-medium text-plum/80 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-lavender-deep after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-plum aria-[current=page]:after:scale-x-100">Home</a>
+      <a href="pages/services.html" data-vi="Dịch vụ" class="relative py-2 text-[15px] font-medium text-plum/80 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-lavender-deep after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-plum aria-[current=page]:after:scale-x-100">Services</a>
+      <a href="pages/gallery.html" data-vi="Bộ sưu tập" class="relative py-2 text-[15px] font-medium text-plum/80 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-lavender-deep after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-plum aria-[current=page]:after:scale-x-100">Gallery</a>
+      <a href="pages/about.html" data-vi="Về BLOOM" class="relative py-2 text-[15px] font-medium text-plum/80 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-lavender-deep after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-plum aria-[current=page]:after:scale-x-100">About</a>
+    </nav>
+
+    <div class="flex items-center gap-3 sm:gap-5">
+      <div class="flex items-center text-xs font-semibold tracking-[0.16em]" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="relative min-h-[44px] px-2 text-plum/50 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-2 after:bottom-2.5 after:h-px after:scale-x-0 after:bg-plum after:transition-transform after:duration-300">EN</button>
+        <span class="text-taupe" aria-hidden="true">/</span>
+        <button type="button" data-lang="vi" class="relative min-h-[44px] px-2 text-plum/50 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-2 after:bottom-2.5 after:h-px after:scale-x-0 after:bg-plum after:transition-transform after:duration-300">VI</button>
+      </div>
+      <button type="button" data-modal-open="book" data-vi="Đặt lịch" class="hidden min-h-[44px] items-center border border-plum bg-lavender px-6 text-sm font-semibold text-plum transition duration-300 hover:bg-plum hover:text-milk active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lavender-deep sm:inline-flex">Book a Visit</button>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center border border-plum/30 text-plum lg:hidden" aria-label="Open menu" data-vi-aria-label="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-plum/10 bg-milk p-6 shadow-[0_30px_60px_-20px_rgba(56,43,61,.35)] lg:hidden">
+    <nav class="flex flex-col" aria-label="Mobile">
+      <a aria-current="page" href="index.html" data-vi="Trang chủ" class="border-b border-taupe/40 py-4 font-display text-3xl text-plum aria-[current=page]:text-lavender-deep">Home</a>
+      <a href="pages/services.html" data-vi="Dịch vụ" class="border-b border-taupe/40 py-4 font-display text-3xl text-plum aria-[current=page]:text-lavender-deep">Services</a>
+      <a href="pages/gallery.html" data-vi="Bộ sưu tập" class="border-b border-taupe/40 py-4 font-display text-3xl text-plum aria-[current=page]:text-lavender-deep">Gallery</a>
+      <a href="pages/about.html" data-vi="Về BLOOM" class="py-4 font-display text-3xl text-plum aria-[current=page]:text-lavender-deep">About</a>
+    </nav>
+    <button type="button" data-modal-open="book" data-vi="Đặt lịch" class="mt-4 flex min-h-[48px] w-full items-center justify-center border border-plum bg-lavender text-sm font-semibold text-plum">Book a Visit</button>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-type" class="relative overflow-hidden bg-milk">
+    <div class="mx-auto grid min-h-[100dvh] w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 pb-14 pt-28 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-16 lg:pt-32 2xl:px-16">
+      <div class="flex flex-col justify-end lg:col-span-7 lg:pb-10">
+        <p data-reveal="fade" class="text-xs font-semibold uppercase tracking-label text-lilac" data-vi="Cắt, nhuộm &amp; tạo sóng nghệ thuật">Cut, color &amp; texture atelier</p>
+        <h1 data-reveal="up" class="mt-6 font-display text-[clamp(3.4rem,8.4vw,9rem)] font-medium leading-[0.92] tracking-[-0.02em] text-plum" data-vi="Nở rộ theo <em class='font-normal text-lavender-deep'>vẻ đẹp</em> riêng bạn">Bloom Into Your Own <em class="font-normal text-lavender-deep">Beauty</em></h1>
+        <p data-reveal="up" class="mt-8 max-w-[44ch] text-lg leading-relaxed text-plum/80" data-vi="Màu nhuộm mềm mại, kiểu cắt có chủ đích và mái tóc mang đúng cá tính của bạn, được tạo nên chậm rãi tại atelier.">Soft color, considered cuts and hair that carries your personality, created slowly in our atelier.</p>
+        <div data-reveal="up" class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+          <a href="pages/services.html" data-vi="Khám phá dịch vụ" class="inline-flex min-h-[52px] items-center justify-center border border-plum bg-lavender px-8 text-[15px] font-semibold text-plum transition duration-300 hover:bg-plum hover:text-milk active:scale-[.98]">Explore Services</a>
+          <a href="pages/gallery.html" class="group inline-flex min-h-[44px] items-center gap-3 text-[15px] font-semibold text-plum">
+            <span class="relative after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:bg-plum after:transition-transform after:duration-500 group-hover:after:scale-x-0" data-vi="Xem bộ sưu tập">View the Collection</span>
+            <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+      <div class="relative lg:col-span-5">
+        <div data-reveal="fade" class="arch relative mx-auto aspect-[4/5] w-full max-w-[560px] bg-lavender-soft lg:ml-auto lg:mr-0 lg:aspect-auto lg:h-full lg:max-h-[860px] lg:min-h-[560px]">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Woman with long soft waves standing in front of a pastel pink wall" data-vi-alt="Người mẫu tóc dài sóng mềm đứng trước bức tường hồng pastel" class="h-full w-full object-cover object-[50%_30%]" width="1600" height="2000">
+        </div>
+      </div>
+    </div>
+    <div class="swatch-strip" aria-hidden="true"><span class="bg-swatch-rose"></span><span class="bg-swatch-lavbrown"></span><span class="bg-lavender"></span><span class="bg-swatch-beige"></span><span class="bg-swatch-pink"></span></div>
+  </section>
+
+  <!-- OUR SIGNATURE -->
+  <section id="signature" data-section="story-editorial" class="bg-lavender-soft">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-36 2xl:px-16">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-32">
+          <h2 data-reveal="up" class="font-display text-5xl font-medium leading-[1.02] text-plum sm:text-6xl 2xl:text-7xl" data-vi="Dấu ấn <em class='font-normal text-lilac'>BLOOM</em>">Our <em class="font-normal text-lilac">Signature</em></h2>
+        </div>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-6">
+        <p data-reveal="up" class="dropcap text-lg leading-[1.85] text-plum/85 sm:text-xl" data-vi="Chúng tôi không bắt đầu bằng một xu hướng. Chúng tôi bắt đầu bằng bạn: làn da, nếp sinh hoạt, cách bạn vén tóc sau tai. Từ đó, mỗi đường cắt và mỗi lớp màu được chọn để tóc đẹp cả khi bạn tự tạo kiểu ở nhà.">We do not begin with a trend. We begin with you: your skin tone, your routine, the way you tuck your hair behind one ear. From there, every cut line and every layer of color is chosen so your hair still looks like you when you style it at home.</p>
+        <blockquote data-reveal="up" class="my-14 border-l-2 border-lavender pl-6 font-display text-3xl italic leading-[1.25] text-plum sm:text-4xl lg:-ml-24 lg:pl-10" data-vi="&ldquo;Màu đẹp nhất là màu khiến bạn quên mình vừa làm tóc.&rdquo;">&ldquo;The best color is the one that makes you forget you just had it done.&rdquo;</blockquote>
+        <p data-reveal="up" class="text-lg leading-[1.85] text-plum/85" data-vi="Vì vậy chúng tôi chuộng sắc pastel có chiều sâu, những lớp tóc chuyển động tự nhiên và kỹ thuật bảo vệ sợi tóc trong suốt quá trình.">That is why we favour pastels with depth, layers that move naturally, and techniques that protect the hair fibre throughout the process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE SERVICES -->
+  <section id="services" data-section="features-numbered" class="bg-milk">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <h2 data-reveal="up" class="font-display text-5xl font-medium leading-[1.02] text-plum sm:text-6xl 2xl:text-7xl" data-vi="Dịch vụ <em class='font-normal text-lilac'>tiêu biểu</em>">Signature <em class="font-normal text-lilac">Services</em></h2>
+        <a href="pages/services.html" class="group inline-flex min-h-[44px] items-center gap-3 text-[15px] font-semibold text-plum">
+          <span class="relative after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:bg-plum after:transition-transform after:duration-500 group-hover:after:scale-x-0" data-vi="Toàn bộ bảng dịch vụ">Full service menu</span>
+          <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="mt-16 border-t border-plum/15">
+        <article data-reveal="up" class="group grid grid-cols-1 gap-6 border-b border-plum/15 py-10 transition-colors duration-500 hover:bg-lavender-soft/50 md:grid-cols-12 md:items-center md:gap-8 md:px-4">
+          <p class="font-display text-2xl italic text-lavender-deep md:col-span-1">No. 01</p>
+          <div class="md:col-span-5">
+            <h3 class="font-display text-4xl font-medium text-plum lg:text-5xl" data-vi="Cắt &amp; tạo kiểu">Cut &amp; Style</h3>
+            <p class="mt-4 max-w-[48ch] leading-relaxed text-plum/75" data-vi="Tóc layer mềm, mái thưa, bob gợn sóng. Cắt theo khuôn mặt và độ dày tóc, kèm hướng dẫn tạo kiểu tại nhà.">Soft layers, wispy fringes and textured bobs, cut to your face shape and density, with a lesson on styling it at home.</p>
+          </div>
+          <p class="text-[15px] text-plum/80 md:col-span-3"><span class="block text-xs font-semibold uppercase tracking-label text-lilac" data-vi="Giá tham khảo">From</span><span class="mt-1 block font-display text-3xl text-plum">450,000 VND</span></p>
+          <div class="arch-sm aspect-[4/5] w-full max-w-[220px] bg-petal md:col-span-3 md:ml-auto">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Stylist finishing a cut with a round-brush blow-dry" data-vi-alt="Stylist hoàn thiện kiểu tóc bằng lược tròn và máy sấy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="800" height="1000">
+          </div>
+        </article>
+        <article data-reveal="up" class="group grid grid-cols-1 gap-6 border-b border-plum/15 py-10 transition-colors duration-500 hover:bg-lavender-soft/50 md:grid-cols-12 md:items-center md:gap-8 md:px-4">
+          <p class="font-display text-2xl italic text-lavender-deep md:col-span-1">No. 02</p>
+          <div class="md:col-span-5">
+            <h3 class="font-display text-4xl font-medium text-plum lg:text-5xl" data-vi="Nhuộm màu nghệ thuật">Artistic Color</h3>
+            <p class="mt-4 max-w-[48ch] leading-relaxed text-plum/75" data-vi="Balayage, nâu lavender, vàng be và hồng nhạt. Pha màu riêng cho từng người, có bước bảo vệ liên kết tóc.">Balayage, lavender brown, beige blonde and soft pink, mixed for you alone and paired with a bond-protecting step.</p>
+          </div>
+          <p class="text-[15px] text-plum/80 md:col-span-3"><span class="block text-xs font-semibold uppercase tracking-label text-lilac" data-vi="Giá tham khảo">From</span><span class="mt-1 block font-display text-3xl text-plum">1,200,000 VND</span></p>
+          <div class="arch-sm aspect-[4/5] w-full max-w-[220px] bg-petal md:col-span-3 md:ml-auto">
+            <img src="https://images.unsplash.com/photo-1554519934-e32b1629d9ee?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Back view of long balayage hair" data-vi-alt="Mái tóc balayage dài nhìn từ phía sau" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="800" height="1000">
+          </div>
+        </article>
+        <article data-reveal="up" class="group grid grid-cols-1 gap-6 border-b border-plum/15 py-10 transition-colors duration-500 hover:bg-lavender-soft/50 md:grid-cols-12 md:items-center md:gap-8 md:px-4">
+          <p class="font-display text-2xl italic text-lavender-deep md:col-span-1">No. 03</p>
+          <div class="md:col-span-5">
+            <h3 class="font-display text-4xl font-medium text-plum lg:text-5xl" data-vi="Chăm sóc &amp; phục hồi">Care &amp; Repair</h3>
+            <p class="mt-4 max-w-[48ch] leading-relaxed text-plum/75" data-vi="Phục hồi sau tẩy, dưỡng bóng và sấy tạo phồng. Giữ màu bền lâu và sợi tóc mềm mượt giữa các lần nhuộm.">Post-lightening repair, gloss treatments and a soft blow-dry that keeps color fresh and hair supple between visits.</p>
+          </div>
+          <p class="text-[15px] text-plum/80 md:col-span-3"><span class="block text-xs font-semibold uppercase tracking-label text-lilac" data-vi="Giá tham khảo">From</span><span class="mt-1 block font-display text-3xl text-plum">550,000 VND</span></p>
+          <div class="arch-sm aspect-[4/5] w-full max-w-[220px] bg-petal md:col-span-3 md:ml-auto">
+            <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Client relaxing at the wash basin during a hair treatment" data-vi-alt="Khách thư giãn tại bồn gội trong lúc phục hồi tóc" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="800" height="1000">
+          </div>
+        </article>
+      </div>
+      <p class="mt-6 text-[13px] text-plum/65" data-vi="Giá mẫu tham khảo, thay đổi theo độ dài và tình trạng tóc.">Sample reference prices. Final price depends on length and hair condition.</p>
+    </div>
+  </section>
+
+  <!-- COLOR STORIES -->
+  <section id="color-stories" data-section="gallery-lookbook" class="bg-milk">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-24 sm:px-6 lg:px-10 lg:pb-36 2xl:px-16">
+      <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+        <h2 data-reveal="up" class="font-display text-5xl font-medium leading-[1.02] text-plum sm:text-6xl lg:col-span-7 2xl:text-7xl" data-vi="Câu chuyện <em class='font-normal text-lavender-deep'>màu sắc</em>">Color <em class="font-normal text-lavender-deep">Stories</em></h2>
+      </div>
+      <p data-reveal="up" class="mt-6 max-w-[56ch] text-lg leading-relaxed text-plum/75" data-vi="Bốn tông màu chúng tôi yêu nhất, mỗi tông có cách lên màu và cách phai đẹp riêng.">Four shades we keep returning to, each with its own way of developing and fading beautifully.</p>
+
+      <div class="mt-16 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-12">
+        <figure data-reveal="up" class="lg:col-span-5 lg:row-span-2">
+          <div class="arch aspect-[3/4] bg-petal lg:aspect-[4/6]">
+            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Woman with lavender toned hair leaning on a wall" data-vi-alt="Người mẫu tóc tông lavender tựa vào tường" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] hover:scale-[1.04]" width="1000" height="1400">
+          </div>
+          <figcaption class="mt-5 flex items-start gap-4">
+            <span class="mt-1.5 h-4 w-4 shrink-0 rounded-full bg-swatch-lavbrown" aria-hidden="true"></span>
+            <span><span class="block font-display text-3xl text-plum" data-vi="Nâu Lavender">Lavender Brown</span><span class="mt-1 block max-w-[40ch] text-[15px] leading-relaxed text-plum/70" data-vi="Nền nâu ấm phủ ánh tím khói, phai về nâu tro rất êm.">A warm brown base veiled in smoky violet that fades to a gentle ash.</span></span>
+          </figcaption>
+        </figure>
+        <figure data-reveal="up" class="lg:col-span-3 lg:col-start-7">
+          <div class="aspect-[4/5] overflow-hidden bg-petal">
+            <img src="https://images.unsplash.com/photo-1560264641-1b5191cc63e2?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Close-up of glossy brown hair with rosy warmth" data-vi-alt="Cận cảnh tóc nâu bóng ánh hồng" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] hover:scale-[1.04]" width="1000" height="1250">
+          </div>
+          <figcaption class="mt-5 flex items-start gap-4">
+            <span class="mt-1.5 h-4 w-4 shrink-0 rounded-full bg-swatch-rose" aria-hidden="true"></span>
+            <span><span class="block font-display text-3xl text-plum" data-vi="Nâu Hồng">Rose Brown</span><span class="mt-1 block text-[15px] leading-relaxed text-plum/70" data-vi="Nâu socola ánh hồng, hợp làn da châu Á.">Chocolate brown with a rosy glow, flattering on warm skin.</span></span>
+          </figcaption>
+        </figure>
+        <figure data-reveal="up" class="lg:col-span-3 lg:mt-24">
+          <div class="aspect-[4/5] overflow-hidden bg-petal">
+            <img src="https://images.unsplash.com/photo-1605980766335-d3a41c7332a1?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Woman with soft beige blonde hair" data-vi-alt="Người mẫu tóc vàng be nhẹ" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] hover:scale-[1.04]" width="1000" height="1250">
+          </div>
+          <figcaption class="mt-5 flex items-start gap-4">
+            <span class="mt-1.5 h-4 w-4 shrink-0 rounded-full bg-swatch-beige" aria-hidden="true"></span>
+            <span><span class="block font-display text-3xl text-plum" data-vi="Vàng Be">Beige Blonde</span><span class="mt-1 block text-[15px] leading-relaxed text-plum/70" data-vi="Vàng sữa không ánh cam, sáng mà vẫn dịu.">A milky blonde with no brass, bright yet calm.</span></span>
+          </figcaption>
+        </figure>
+        <figure data-reveal="up" class="sm:col-span-2 lg:col-span-6 lg:col-start-7">
+          <div class="aspect-[16/10] overflow-hidden bg-petal">
+            <img src="https://images.unsplash.com/photo-1598897506620-c6601b3c2f12?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Woman with pastel pink hair in a white shirt" data-vi-alt="Người mẫu tóc hồng pastel mặc áo sơ mi trắng" class="h-full w-full object-cover object-[50%_35%] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] hover:scale-[1.04]" width="1600" height="1000">
+          </div>
+          <figcaption class="mt-5 flex items-start gap-4">
+            <span class="mt-1.5 h-4 w-4 shrink-0 rounded-full bg-swatch-pink" aria-hidden="true"></span>
+            <span><span class="block font-display text-3xl text-plum" data-vi="Hồng Nhạt">Soft Pink</span><span class="mt-1 block max-w-[48ch] text-[15px] leading-relaxed text-plum/70" data-vi="Hồng phấn trên nền tóc đã nâng tông, đẹp nhất khi phai thành hồng đào.">Powder pink over pre-lightened hair, at its prettiest when it fades to peach.</span></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET THE ARTISTS -->
+  <section id="artists" data-section="team-grid" class="bg-lavender-soft">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <h2 data-reveal="up" class="font-display text-5xl font-medium leading-[1.02] text-plum sm:text-6xl 2xl:text-7xl" data-vi="Gặp gỡ <em class='font-normal text-lilac'>nghệ sĩ</em>">Meet the <em class="font-normal text-lilac">Artists</em></h2>
+        <a href="pages/about.html#artists" class="group inline-flex min-h-[44px] items-center gap-3 text-[15px] font-semibold text-plum">
+          <span class="relative after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:bg-plum after:transition-transform after:duration-500 group-hover:after:scale-x-0" data-vi="Hồ sơ đầy đủ">Full profiles</span>
+          <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+      <div class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10" data-reveal-stagger="80">
+        <article class="group">
+          <div class="arch aspect-[4/5] bg-petal">
+            <img src="https://images.unsplash.com/photo-1622418131139-8549767c2670?w=900&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Portrait of colorist Vu Mai Anh" data-vi-alt="Chân dung chuyên gia màu Vũ Mai Anh" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="900" height="1125">
+          </div>
+          <h3 class="mt-6 font-display text-3xl text-plum">Vu Mai Anh</h3>
+          <p class="mt-1 text-xs font-semibold uppercase tracking-label text-lilac" data-vi="Giám đốc màu">Color Director</p>
+          <p class="mt-3 max-w-[38ch] text-[15px] leading-relaxed text-plum/75" data-vi="Chuyên balayage và các tông lavender. Luôn bắt đầu bằng một bảng swatch trên chính tóc bạn.">Specialises in balayage and lavender tones. Always starts with a swatch test on your own hair.</p>
+        </article>
+        <article class="group sm:mt-0 lg:mt-16">
+          <div class="arch aspect-[4/5] bg-petal">
+            <img src="https://images.unsplash.com/photo-1628126929453-b519555aaabf?w=900&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Portrait of stylist Nguyen Phuong Thao" data-vi-alt="Chân dung stylist Nguyễn Phương Thảo" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="900" height="1125">
+          </div>
+          <h3 class="mt-6 font-display text-3xl text-plum">Nguyen Phuong Thao</h3>
+          <p class="mt-1 text-xs font-semibold uppercase tracking-label text-lilac" data-vi="Cắt &amp; tạo dáng">Cut &amp; Shape</p>
+          <p class="mt-3 max-w-[38ch] text-[15px] leading-relaxed text-plum/75" data-vi="Yêu tóc layer, bob và mái thưa. Cắt khô từng lọn để tóc rơi đúng như khi bạn tự sấy.">Loves layers, bobs and curtain fringes. Dry-cuts section by section so hair falls the way it will at home.</p>
+        </article>
+        <article class="group">
+          <div class="arch aspect-[4/5] bg-petal">
+            <img src="https://images.unsplash.com/photo-1599148200256-649e98444ef2?w=900&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Portrait of texture stylist Le Gia Han" data-vi-alt="Chân dung stylist tạo sóng Lê Gia Hân" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="900" height="1125">
+          </div>
+          <h3 class="mt-6 font-display text-3xl text-plum">Le Gia Han</h3>
+          <p class="mt-1 text-xs font-semibold uppercase tracking-label text-lilac" data-vi="Sóng &amp; tạo kiểu">Texture &amp; Styling</p>
+          <p class="mt-3 max-w-[38ch] text-[15px] leading-relaxed text-plum/75" data-vi="Uốn sóng nước, uốn chân và tạo kiểu sự kiện. Ưu tiên sóng mềm, ít hóa chất nhất có thể.">Soft waves, root perms and event styling, using the gentlest chemistry the hair allows.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND QUOTE & CTA -->
+  <section id="quote" data-section="quote-full" class="bg-lavender">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-36 2xl:px-16">
+      <blockquote data-reveal="up" class="lg:col-span-10">
+        <p class="font-display text-[clamp(2.4rem,5.6vw,6rem)] font-medium leading-[1.05] tracking-[-0.01em] text-plum" data-vi="&ldquo;Mỗi mái tóc là một bông hoa nở theo nhịp riêng. Việc của chúng tôi là <em class='font-normal'>chăm cho nó nở trọn.</em>&rdquo;">&ldquo;Every head of hair is a flower that opens at its own pace. Our job is to <em class="font-normal">help it bloom fully.</em>&rdquo;</p>
+        <footer class="mt-8 text-[15px] font-medium text-plum/80" data-vi="Triết lý của BLOOM HAIR ATELIER">The BLOOM HAIR ATELIER philosophy</footer>
+      </blockquote>
+      <div data-reveal="up" class="flex flex-col gap-4 sm:flex-row lg:col-span-12">
+        <a href="pages/services.html" data-vi="Khám phá dịch vụ" class="inline-flex min-h-[52px] items-center justify-center border border-plum bg-plum px-8 text-[15px] font-semibold text-milk transition duration-300 hover:bg-transparent hover:text-plum active:scale-[.98]">Explore Services</a>
+        <button type="button" data-modal-open="book" data-vi="Đặt lịch" class="inline-flex min-h-[52px] items-center justify-center border border-plum px-8 text-[15px] font-semibold text-plum transition duration-300 hover:bg-plum hover:text-milk active:scale-[.98]">Book a Visit</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden bg-plum text-milk">
+  <div class="swatch-strip" aria-hidden="true"><span class="bg-swatch-rose"></span><span class="bg-swatch-lavbrown"></span><span class="bg-lavender"></span><span class="bg-swatch-beige"></span><span class="bg-swatch-pink"></span></div>
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl leading-tight text-milk" data-vi="Salon tóc nghệ thuật cho những ai yêu màu sắc mềm mại và đường nét nữ tính.">An art-led hair salon for people who love soft color and feminine shape.</p>
+        <button type="button" data-modal-open="book" data-vi="Đặt lịch" class="mt-8 inline-flex min-h-[48px] items-center border border-lavender bg-lavender px-7 text-sm font-semibold text-plum transition duration-300 hover:bg-transparent hover:text-lavender active:scale-[.98]">Book a Visit</button>
+      </div>
+      <div class="lg:col-span-2 lg:col-start-6">
+        <p class="text-xs font-semibold uppercase tracking-label text-lavender" data-vi="Trang">Pages</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-milk/80">
+          <li><a aria-current="page" href="index.html" data-vi="Trang chủ" class="transition-colors duration-300 hover:text-lavender">Home</a></li>
+          <li><a href="pages/services.html" data-vi="Dịch vụ" class="transition-colors duration-300 hover:text-lavender">Services</a></li>
+          <li><a href="pages/gallery.html" data-vi="Bộ sưu tập" class="transition-colors duration-300 hover:text-lavender">Gallery</a></li>
+          <li><a href="pages/about.html" data-vi="Về BLOOM" class="transition-colors duration-300 hover:text-lavender">About</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-xs font-semibold uppercase tracking-label text-lavender" data-vi="Ghé thăm (dữ liệu mẫu)">Visit (sample data)</p>
+        <address class="mt-5 space-y-3 text-[15px] not-italic leading-relaxed text-milk/80">
+          <p>27 Ly Tu Trong Street, District 1<br>Ho Chi Minh City</p>
+          <p><a href="tel:+842838271946" class="transition-colors duration-300 hover:text-lavender">+84 28 3827 1946</a></p>
+          <p><a href="mailto:hello@bloomhairatelier.vn" class="transition-colors duration-300 hover:text-lavender">hello@bloomhairatelier.vn</a></p>
+        </address>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-xs font-semibold uppercase tracking-label text-lavender" data-vi="Mạng xã hội (minh họa)">Social (illustrative)</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-milk/80">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-lavender">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-lavender">TikTok</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-lavender">Facebook</a></li>
+          <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-lavender">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-20 flex flex-wrap items-end justify-between gap-x-8 gap-y-2 select-none" aria-hidden="true">
+      <p class="font-display text-[clamp(3.4rem,15.5vw,17rem)] font-medium leading-[0.8] tracking-[-0.02em] text-lavender/90">BLOOM</p>
+      <p class="pb-3 font-display text-[clamp(1.6rem,4.4vw,4.75rem)] italic leading-none text-milk/70">hair atelier</p>
+    </div>
+    <div class="flex flex-col gap-3 border-t border-milk/15 py-7 text-[13px] text-milk/60 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 BLOOM HAIR ATELIER. <span data-vi="Mọi quyền được bảo lưu.">All rights reserved.</span></p>
+      <p data-vi="Website giới thiệu. Đặt lịch trực tuyến là bản demo.">Showcase website. Online booking is a demo.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="book" class="bloom-modal" aria-labelledby="book-title">
+  <div class="relative">
+    <div class="swatch-strip" aria-hidden="true"><span class="bg-swatch-rose"></span><span class="bg-swatch-lavbrown"></span><span class="bg-lavender"></span><span class="bg-swatch-beige"></span><span class="bg-swatch-pink"></span></div>
+    <button type="button" data-modal-close class="absolute right-3 top-4 inline-flex h-11 w-11 items-center justify-center text-2xl text-plum transition-colors hover:text-lavender-deep" aria-label="Close" data-vi-aria-label="Đóng">&times;</button>
+    <div class="p-7 sm:p-10">
+      <h2 id="book-title" class="font-display text-4xl leading-[1.1] text-plum" data-vi="Đặt lịch <em class='text-lilac'>ghé BLOOM</em>">Book a <em class="text-lilac">visit</em></h2>
+      <p class="mt-3 max-w-[46ch] text-[15px] leading-relaxed text-plum/75" data-vi="Cho chúng tôi biết bạn đang mơ về mái tóc thế nào. Stylist sẽ tư vấn trước khi bắt đầu.">Tell us the hair you are dreaming of. Your stylist will consult with you before anything begins.</p>
+      <form data-form="booking" class="mt-7 grid gap-5 sm:grid-cols-2" novalidate>
+        <label class="grid gap-2 text-sm font-medium text-plum"><span data-vi="Họ tên">Full name</span>
+          <input name="name" required minlength="2" autocomplete="name" class="min-h-[48px] border border-plum/30 bg-white px-4 text-base text-plum placeholder:text-plum/45 focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60" placeholder="Nguyen Minh Chau">
+        </label>
+        <label class="grid gap-2 text-sm font-medium text-plum"><span data-vi="Số điện thoại">Phone</span>
+          <input name="phone" type="tel" required minlength="9" autocomplete="tel" class="min-h-[48px] border border-plum/30 bg-white px-4 text-base text-plum placeholder:text-plum/45 focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60" placeholder="0908 214 637">
+        </label>
+        <label class="grid gap-2 text-sm font-medium text-plum"><span data-vi="Dịch vụ">Service</span>
+          <select name="service" required class="min-h-[48px] border border-plum/30 bg-white px-4 text-base text-plum focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60">
+            <option value="" data-vi="Chọn dịch vụ">Choose a service</option>
+            <option value="cut" data-vi="Cắt &amp; tạo kiểu">Haircut &amp; Styling</option>
+            <option value="color" data-vi="Nhuộm màu">Hair Coloring</option>
+            <option value="perm" data-vi="Uốn &amp; tạo sóng">Perm &amp; Texture</option>
+            <option value="care" data-vi="Phục hồi tóc">Hair Treatment</option>
+            <option value="consult" data-vi="Chỉ tư vấn">Consultation only</option>
+          </select>
+        </label>
+        <label class="grid gap-2 text-sm font-medium text-plum"><span data-vi="Ngày mong muốn">Preferred date</span>
+          <input name="date" type="date" required class="min-h-[48px] border border-plum/30 bg-white px-4 text-base text-plum focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60">
+        </label>
+        <label class="grid gap-2 text-sm font-medium text-plum sm:col-span-2"><span data-vi="Ghi chú (không bắt buộc)">Notes (optional)</span>
+          <textarea name="note" rows="3" class="border border-plum/30 bg-white px-4 py-3 text-base text-plum placeholder:text-plum/45 focus:border-lavender-deep focus:outline-none focus:ring-2 focus:ring-lavender/60" placeholder="Soft lavender brown, shoulder length..." data-vi-placeholder="Nâu lavender nhẹ, dài ngang vai..."></textarea>
+        </label>
+        <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+          <button type="submit" data-vi="Gửi yêu cầu" class="inline-flex min-h-[48px] items-center justify-center border border-plum bg-lavender px-8 text-sm font-semibold text-plum transition duration-300 hover:bg-plum hover:text-milk active:scale-[.98]">Send request</button>
+          <p class="text-[13px] text-plum/70" data-vi="Bản demo: biểu mẫu chưa gửi đi đâu.">Demo only: this form is not sent anywhere.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</dialog>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

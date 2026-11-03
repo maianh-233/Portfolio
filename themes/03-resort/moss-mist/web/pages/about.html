@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="vi" data-title-en="About — MOSS &amp; MIST">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giới thiệu — MOSS &amp; MIST</title>
+<meta name="description" content="Câu chuyện, triết lý thiết kế và hành trình hình thành MOSS &amp; MIST, khu nghỉ dưỡng sinh thái giữa rừng thông và thung lũng sương.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-mist font-sans text-charcoal">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 bg-gradient-to-b from-forest/75 to-transparent text-mist [text-shadow:0_1px_14px_rgba(28,46,37,.7)] [&.is-scrolled]:[text-shadow:none] [&.is-scrolled]:bg-none [&.is-scrolled]:bg-mist/95 [&.is-scrolled]:text-charcoal [&.is-scrolled]:shadow-[0_1px_0_rgba(52,58,53,.12)] [&.is-scrolled]:backdrop-blur-sm">
+  <div class="wrap flex h-20 items-center justify-between gap-6">
+    <a href="../index.html" class="font-display text-lg tracking-[0.22em] sm:text-xl">MOSS &amp; MIST</a>
+    <nav class="hidden items-center gap-10 text-[15px] lg:flex" aria-label="Điều hướng chính">
+      <a href="../index.html" data-en="Home" class="relative py-2 opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Trang chủ</a>
+      <a aria-current="page" href="../pages/about.html" data-en="About" class="relative py-2 opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Giới thiệu</a>
+      <a href="../pages/accommodation.html" data-en="Accommodation" class="relative py-2 opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Không gian nghỉ</a>
+      <a href="../pages/experiences.html" data-en="Experiences" class="relative py-2 opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Trải nghiệm</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="flex items-center text-xs font-medium tracking-[0.16em]" role="group" aria-label="Ngôn ngữ">
+        <button type="button" data-lang-set="vi" class="min-h-[44px] px-2 opacity-60 transition-opacity duration-300 hover:opacity-100 [&.is-active]:opacity-100 [&.is-active]:underline [&.is-active]:underline-offset-4">VI</button>
+        <span class="opacity-40" aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" class="min-h-[44px] px-2 opacity-60 transition-opacity duration-300 hover:opacity-100 [&.is-active]:opacity-100 [&.is-active]:underline [&.is-active]:underline-offset-4">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" data-en-aria="Open menu" class="grid h-11 w-11 place-items-center lg:hidden">
+        <span class="block h-px w-6 bg-current shadow-[0_-6px_0_currentColor,0_6px_0_currentColor]"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-0 top-20 z-50 border-t border-charcoal/10 bg-mist px-6 pb-10 pt-6 text-charcoal shadow-[0_24px_48px_-24px_rgba(38,61,50,.35)] lg:hidden">
+    <nav class="flex flex-col font-display text-3xl" aria-label="Menu điện thoại">
+      <a href="../index.html" data-en="Home" class="border-b border-charcoal/10 py-4 aria-[current=page]:italic aria-[current=page]:text-forest">Trang chủ</a>
+      <a aria-current="page" href="../pages/about.html" data-en="About" class="border-b border-charcoal/10 py-4 aria-[current=page]:italic aria-[current=page]:text-forest">Giới thiệu</a>
+      <a href="../pages/accommodation.html" data-en="Accommodation" class="border-b border-charcoal/10 py-4 aria-[current=page]:italic aria-[current=page]:text-forest">Không gian nghỉ</a>
+      <a href="../pages/experiences.html" data-en="Experiences" class="py-4 aria-[current=page]:italic aria-[current=page]:text-forest">Trải nghiệm</a>
+    </nav>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- PAGE HERO -->
+  <section id="about-hero" data-section="page-hero" class="relative flex min-h-[78svh] items-end overflow-hidden bg-forest text-mist">
+    <div class="absolute inset-0">
+      <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Morning_Clouds_Over_North_Van_Mountain_Valley_%283%29.jpg/1920px-Morning_Clouds_Over_North_Van_Mountain_Valley_%283%29.jpg" alt="Mây sớm phủ kín thung lũng giữa các dãy núi rừng" class="kenburns tone h-full w-full object-cover" width="1920" height="493" fetchpriority="high" referrerpolicy="no-referrer">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/30 to-forest/50"></div>
+    <div class="wrap relative z-10 pb-16 pt-32 lg:pb-24">
+      <h1 data-reveal="up" class="max-w-4xl font-display text-[clamp(2.75rem,6vw,5.75rem)] leading-[1.04] tracking-[-0.02em]" data-en="A retreat grown <em>from the forest</em>">Một chốn nghỉ mọc lên <em>từ rừng</em></h1>
+      <p data-reveal="up" data-reveal-delay="200" class="mt-6 max-w-xl text-lg leading-relaxed text-mist/85" data-en="How a pine slope above the valley became MOSS &amp; MIST.">Cách một triền thông trên thung lũng trở thành MOSS &amp; MIST.</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" data-section="story-split" class="bg-mist py-24 lg:py-36">
+    <div class="wrap grid gap-14 lg:grid-cols-12 lg:items-center lg:gap-10">
+      <div class="lg:col-span-5">
+        <h2 data-split="words" class="font-display text-4xl leading-[1.08] text-forest sm:text-5xl 2xl:text-6xl" data-en="It started with one old cabin">Mọi thứ bắt đầu từ một căn nhà gỗ cũ</h2>
+        <span class="rule mt-10 max-w-[12rem] text-forest" data-scrub></span>
+        <div data-reveal="up" class="mt-10 max-w-[34rem] space-y-5 text-[17px] leading-[1.75] text-charcoal/85">
+          <p data-en="Our founders first came to the valley as hikers. They found a forgotten timber cabin at the edge of the pines and stayed for a week without wanting to leave.">Những người sáng lập đến thung lũng lần đầu với tư cách người đi bộ đường dài. Họ tìm thấy một căn nhà gỗ bị bỏ quên ở bìa rừng thông và ở lại cả tuần mà không muốn rời đi.</p>
+          <p data-en="That week shaped every decision since: build less, build lightly, and let the forest set the pace.">Tuần lễ ấy định hình mọi quyết định về sau: xây ít hơn, xây nhẹ nhàng hơn, và để khu rừng quyết định nhịp sống.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7">
+        <div data-reveal="clip" class="zoom aspect-[4/5] overflow-hidden bg-stone lg:aspect-[5/6]">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Old_wooden_cabin_in_forest.jpg" alt="Căn nhà gỗ cũ nằm lặng giữa rừng cây" class="tone h-full w-full object-cover" width="1050" height="1616" loading="lazy" referrerpolicy="no-referrer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy" data-section="principles-columns" class="bg-[#F7F6F1] py-24 lg:py-36">
+    <div class="wrap">
+      <h2 data-reveal="up" class="max-w-4xl font-display text-4xl leading-[1.1] text-forest sm:text-5xl 2xl:text-6xl" data-en="Architecture that <em>steps back</em> so nature can step forward">Kiến trúc <em>lùi lại</em> để thiên nhiên bước lên</h2>
+      <div data-reveal-stagger="120" class="mt-20 grid gap-14 md:grid-cols-3 md:gap-10 lg:gap-16">
+        <div class="border-t border-charcoal/20 pt-8">
+          <h3 class="font-display text-2xl text-forest" data-en="Built around the trees">Xây quanh những thân cây</h3>
+          <p class="mt-4 max-w-sm text-[16px] leading-[1.75] text-charcoal/85" data-en="Every footprint is drawn after the trees are mapped. Decks wrap around trunks instead of replacing them.">Mỗi mặt bằng chỉ được vẽ sau khi cây rừng đã được đánh dấu. Hiên gỗ ôm quanh thân cây thay vì thế chỗ chúng.</p>
+        </div>
+        <div class="border-t border-charcoal/20 pt-8 md:mt-16">
+          <h3 class="font-display text-2xl text-forest" data-en="Honest materials">Vật liệu trung thực</h3>
+          <p class="mt-4 max-w-sm text-[16px] leading-[1.75] text-charcoal/85" data-en="Timber, local stone, linen and clay. Surfaces are left to age and gain a patina with the seasons.">Gỗ, đá địa phương, vải lanh và đất nung. Bề mặt được để tự nhiên cũ đi và lên màu theo từng mùa.</p>
+        </div>
+        <div class="border-t border-charcoal/20 pt-8 md:mt-32">
+          <h3 class="font-display text-2xl text-forest" data-en="Light as a material">Ánh sáng là chất liệu</h3>
+          <p class="mt-4 max-w-sm text-[16px] leading-[1.75] text-charcoal/85" data-en="Windows are placed for the morning sun and the evening mist, not for symmetry on a drawing.">Cửa sổ được đặt theo nắng sớm và sương chiều, không theo sự cân đối trên bản vẽ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE & NATURE -->
+  <section id="architecture" data-section="features-alternate" class="bg-mist py-24 lg:py-36">
+    <div class="wrap space-y-24 lg:space-y-36">
+      <div class="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-10">
+        <div class="relative aspect-[4/3] overflow-hidden bg-stone lg:col-span-7 lg:aspect-[5/4]">
+          <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[12%]">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Rustic_wood_cabin_interior_with_dining_table_kitchenette_and_bedroom_area.jpg/1280px-Rustic_wood_cabin_interior_with_dining_table_kitchenette_and_bedroom_area.jpg" alt="Không gian nội thất gỗ mộc với bàn ăn và góc ngủ" class="tone h-full w-full object-cover" width="1280" height="855" loading="lazy" referrerpolicy="no-referrer">
+          </div>
+        </div>
+        <div data-reveal="up" class="lg:col-span-4 lg:col-start-9">
+          <h3 class="font-display text-3xl leading-[1.15] text-forest sm:text-4xl" data-en="Interiors that feel like shelter">Nội thất mang cảm giác trú ẩn</h3>
+          <p class="mt-6 text-[17px] leading-[1.75] text-charcoal/85" data-en="Low ceilings in the sleeping corners, high ones where you gather. Wood is left visible, and nothing competes with the view outside.">Trần thấp ở góc ngủ, trần cao ở nơi mọi người quây quần. Gỗ được để lộ tự nhiên và không có gì tranh chỗ với khung cảnh bên ngoài.</p>
+        </div>
+      </div>
+      <div class="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-10">
+        <div data-reveal="up" class="order-2 lg:order-1 lg:col-span-4">
+          <h3 class="font-display text-3xl leading-[1.15] text-forest sm:text-4xl" data-en="Paths that follow the forest">Lối đi theo dáng rừng</h3>
+          <p class="mt-6 text-[17px] leading-[1.75] text-charcoal/85" data-en="Trails between the cabins follow old animal tracks and the contour of the slope. Night lighting stays low so the stars remain visible.">Lối mòn giữa các cabin đi theo vết chân thú cũ và đường đồng mức của triền dốc. Đèn đêm được giữ thấp để vẫn nhìn thấy sao trời.</p>
+        </div>
+        <div class="relative order-1 aspect-[4/5] overflow-hidden bg-stone lg:order-2 lg:col-span-6 lg:col-start-7 lg:aspect-[4/5]">
+          <div data-parallax="-0.1" class="absolute inset-x-0 -inset-y-[12%]">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Spruces_and_pines_along_Myrstigen_1.jpg/1280px-Spruces_and_pines_along_Myrstigen_1.jpg" alt="Hàng thông và vân sam dọc theo lối mòn trong rừng" class="tone h-full w-full object-cover" width="1280" height="1910" loading="lazy" referrerpolicy="no-referrer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey" data-section="timeline" class="bg-stone/45 py-24 lg:py-36">
+    <div class="wrap grid gap-14 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-32">
+          <h2 data-split="words" class="font-display text-4xl leading-[1.08] text-forest sm:text-5xl" data-en="A slow journey">Một hành trình chậm</h2>
+          <p data-reveal="up" class="mt-6 max-w-sm text-[16px] leading-[1.75] text-charcoal/85" data-en="Ten years from a single cabin to a quiet retreat. Dates below are sample content.">Mười năm từ một căn nhà gỗ đến một khu nghỉ tĩnh lặng. Các mốc dưới đây là nội dung mẫu.</p>
+        </div>
+      </div>
+      <ol class="relative pl-10 lg:col-span-7 lg:col-start-6 lg:pl-16" data-scrub>
+        <span class="absolute bottom-0 left-0 top-0 w-px bg-charcoal/15" aria-hidden="true"></span>
+        <span class="tl-line absolute bottom-0 left-0 top-0 w-px bg-forest" aria-hidden="true"></span>
+        <li data-reveal="up" class="relative pb-16">
+          <span class="absolute -left-10 top-3 h-px w-6 bg-forest lg:-left-16 lg:w-10" aria-hidden="true"></span>
+          <p class="font-display text-5xl text-moss">2016</p>
+          <h3 class="mt-3 font-display text-2xl text-forest" data-en="The first stay">Lần lưu trú đầu tiên</h3>
+          <p class="mt-3 max-w-lg text-[16px] leading-[1.75] text-charcoal/85" data-en="An abandoned cabin on the pine slope, restored by hand over one dry season.">Căn nhà gỗ bỏ hoang trên triền thông được phục dựng bằng tay trong một mùa khô.</p>
+        </li>
+        <li data-reveal="up" class="relative pb-16">
+          <span class="absolute -left-10 top-3 h-px w-6 bg-forest lg:-left-16 lg:w-10" aria-hidden="true"></span>
+          <p class="font-display text-5xl text-moss">2019</p>
+          <h3 class="mt-3 font-display text-2xl text-forest" data-en="Mapping the forest">Đo vẽ khu rừng</h3>
+          <p class="mt-3 max-w-lg text-[16px] leading-[1.75] text-charcoal/85" data-en="Every tree on the site was surveyed before any new building was drawn.">Từng cây trong khu đất được khảo sát trước khi vẽ bất kỳ công trình mới nào.</p>
+        </li>
+        <li data-reveal="up" class="relative pb-16">
+          <span class="absolute -left-10 top-3 h-px w-6 bg-forest lg:-left-16 lg:w-10" aria-hidden="true"></span>
+          <p class="font-display text-5xl text-moss">2022</p>
+          <h3 class="mt-3 font-display text-2xl text-forest" data-en="Cabins and villas">Cabin và villa</h3>
+          <p class="mt-3 max-w-lg text-[16px] leading-[1.75] text-charcoal/85" data-en="The first Forest Cabins and Valley Villas open, raised on posts above the forest floor.">Những Forest Cabin và Valley Villa đầu tiên mở cửa, dựng trên cột để không chạm vào nền rừng.</p>
+        </li>
+        <li data-reveal="up" class="relative">
+          <span class="absolute -left-10 top-3 h-px w-6 bg-forest lg:-left-16 lg:w-10" aria-hidden="true"></span>
+          <p class="font-display text-5xl text-moss">2026</p>
+          <h3 class="mt-3 font-display text-2xl text-forest" data-en="Signature Lodge">Signature Lodge</h3>
+          <p class="mt-3 max-w-lg text-[16px] leading-[1.75] text-charcoal/85" data-en="A lodge for families and small groups completes the retreat, with solar power and rainwater collection.">Lodge cho gia đình và nhóm nhỏ hoàn thiện khu nghỉ, vận hành bằng điện mặt trời và hệ thống thu nước mưa.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section id="closing" data-section="cta-fullbleed" class="relative flex min-h-[80svh] items-center overflow-hidden bg-forest text-mist" data-clouds="2" data-clouds-band="20-70" data-clouds-color="#F1F0EA" data-clouds-speed="0.5">
+    <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%]">
+      <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Views_along_the_Mary_Mountain_Trail-_misty_morning_views_after_the_rain_in_Hayden_Valley_%2855367555875%29.jpg/1920px-Views_along_the_Mary_Mountain_Trail-_misty_morning_views_after_the_rain_in_Hayden_Valley_%2855367555875%29.jpg" alt="Thung lũng rộng phủ sương sau cơn mưa sáng" class="tone h-full w-full object-cover" width="1920" height="1281" loading="lazy" referrerpolicy="no-referrer">
+    </div>
+    <div class="absolute inset-0 bg-forest/55"></div>
+    <div class="wrap relative z-10 py-24 text-center">
+      <p data-reveal="up" class="mx-auto max-w-4xl font-display text-[clamp(2.25rem,5vw,4.75rem)] leading-[1.1]" data-en="Here, time is measured by the <em>mist</em>, not the clock.">Ở đây, thời gian được đo bằng <em>sương</em>, không phải bằng đồng hồ.</p>
+      <a data-reveal="up" href="accommodation.html" class="group mt-12 inline-flex min-h-[52px] items-center gap-3 bg-mist px-8 text-sm font-medium tracking-wide text-forest transition-colors duration-300 hover:bg-stone active:scale-[.98]"><span data-en="Explore the stays">Khám phá không gian</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span></a>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden bg-forest text-mist">
+  <div class="wrap pt-24 lg:pt-32">
+    <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+      <h2 class="font-display text-4xl leading-[1.1] sm:text-5xl lg:col-span-7 2xl:text-6xl" data-reveal="up" data-en="When you are ready to slow down, <em>we are here</em>.">Khi bạn sẵn sàng chậm lại, <em>chúng tôi ở đây</em>.</h2>
+      <div class="lg:col-span-4 lg:col-start-9" data-reveal="up">
+        <p class="max-w-md text-[17px] leading-relaxed text-mist/80" data-en="Write to us about the spaces, the seasons and the best time to visit. This website introduces the resort and does not take online bookings.">Hãy trò chuyện với chúng tôi về không gian, mùa đẹp và thời điểm phù hợp. Website này chỉ giới thiệu resort, không nhận đặt phòng trực tuyến.</p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="mailto:hello@mossandmist.vn" class="inline-flex min-h-[48px] items-center justify-center bg-mist px-7 text-sm font-medium tracking-wide text-forest transition-colors duration-300 hover:bg-stone active:scale-[.98]" data-en="Email us">Gửi email</a>
+          <a href="tel:+842633820516" class="inline-flex min-h-[48px] items-center justify-center border border-mist/40 px-7 text-sm font-medium tracking-wide transition-colors duration-300 hover:border-mist hover:bg-mist/10 active:scale-[.98]" data-en="Call the lodge">Gọi lễ tân</a>
+        </div>
+      </div>
+    </div>
+
+    <span class="rule mt-20 text-mist" data-scrub></span>
+
+    <div class="grid gap-10 py-14 text-[15px] sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-3">
+        <p class="text-xs font-medium tracking-[0.18em] text-mist/60" data-en="EXPLORE">KHÁM PHÁ</p>
+        <ul class="mt-5 space-y-3">
+          <li><a href="../index.html" class="transition-opacity duration-300 hover:opacity-70" data-en="Home">Trang chủ</a></li>
+          <li><a aria-current="page" href="../pages/about.html" class="transition-opacity duration-300 hover:opacity-70" data-en="About">Giới thiệu</a></li>
+          <li><a href="../pages/accommodation.html" class="transition-opacity duration-300 hover:opacity-70" data-en="Accommodation">Không gian nghỉ</a></li>
+          <li><a href="../pages/experiences.html" class="transition-opacity duration-300 hover:opacity-70" data-en="Experiences">Trải nghiệm</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4">
+        <p class="text-xs font-medium tracking-[0.18em] text-mist/60" data-en="FIND US">ĐỊA CHỈ</p>
+        <p class="mt-5 leading-relaxed text-mist/85" data-en="Ta Nung pine valley, Da Lat, Lam Dong, Vietnam (sample address)">Thung lũng thông Tà Nung, Đà Lạt, Lâm Đồng (địa chỉ mẫu)</p>
+        <p class="mt-3 text-mist/85" data-en="Advisory desk: 8:00 - 20:00 daily">Văn phòng tư vấn: 8:00 - 20:00 hằng ngày</p>
+      </div>
+      <div class="lg:col-span-4 lg:col-start-9">
+        <p class="text-xs font-medium tracking-[0.18em] text-mist/60" data-en="CONTACT">LIÊN HỆ</p>
+        <div class="mt-5 flex flex-wrap items-center gap-3">
+          <a href="tel:+842633820516" class="transition-opacity duration-300 hover:opacity-70">0263 3820 516</a>
+          <button type="button" data-copy="0263 3820 516" class="min-h-[36px] border border-mist/30 px-3 text-xs tracking-wide transition-colors duration-300 hover:bg-mist/10" data-en="Copy">Sao chép</button>
+        </div>
+        <a href="mailto:hello@mossandmist.vn" class="mt-3 inline-block transition-opacity duration-300 hover:opacity-70">hello@mossandmist.vn</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="wrap select-none overflow-hidden whitespace-nowrap pb-6 font-display text-[12.5vw] leading-[0.95] tracking-[-0.03em] text-mist/[0.08] lg:text-[13.5vw] 2xl:text-[12.5vw]" aria-hidden="true">MOSS &amp; MIST</p>
+
+  <div class="border-t border-mist/15">
+    <div class="wrap flex flex-col gap-3 py-6 text-xs text-mist/60 sm:flex-row sm:items-center sm:justify-between">
+      <p data-en="© 2026 MOSS &amp; MIST. Sample content and illustrative imagery.">© 2026 MOSS &amp; MIST. Nội dung mẫu, hình ảnh minh họa.</p>
+      <a href="#top" data-back-to-top class="min-h-[44px] content-center tracking-[0.16em] transition-opacity duration-300 hover:text-mist" data-en="BACK TO TOP">VỀ ĐẦU TRANG</a>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

@@ -1,0 +1,120 @@
+{
+  "brand": "FORM & FOLLICLE",
+  "language": "vi",
+  "preset": "gallery",
+  "motionLevel": 1,
+  "visualIdea": "Tờ tạp chí đô thị kiểu Swiss: lưới 12 cột, đường kẻ đen 1px, mã số FF-A0xx và nhãn CUT / COLOR / TEXTURE; khối cobalt đặt lệch sau ảnh tóc như dải băng dán trên bản dàn trang, xuất hiện ở hero, manifesto và CTA của mọi trang",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Mỗi mái tóc là một hình khối",
+    "description": "Giao diện salon tóc đô thị phong cách Swiss, chủ đạo xanh cobalt, song ngữ Việt - Anh."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu tinh thần thương hiệu, dẫn sang Dịch vụ, Archive và Studio",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-type", "source": "ba", "note": "HAIR HAS A FORM. Bất đối xứng, khối cobalt lệch sau ảnh, nhãn CUT / COLOR / TEXTURE" },
+        { "id": "manifesto", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "HAIR IS AN ATTITUDE. Nền cobalt chữ trắng, không card" },
+        { "id": "service-index", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "4 dịch vụ đánh số + 3 ảnh tỉ lệ khác nhau, link sang pages/services.html" },
+        { "id": "archive-preview", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Lưới ảnh bất đối xứng có mã ảnh, CTA sang pages/archive.html" },
+        { "id": "studio-snapshot", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Ảnh stylist + không gian, CTA sang pages/studio.html" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "CTA cuối trang mở form đặt lịch minh họa" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "bob haircut woman", "file": "https://images.unsplash.com/photo-1779350676620-fde279b1d023?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "service-index-cut", "query": "hairdresser cutting hair", "file": "https://images.unsplash.com/photo-1700760934268-8aa0ef52ce0a?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "service-index-color", "query": "multicolored dyed hair", "file": "https://images.unsplash.com/photo-1554519515-242161756769?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "service-index-texture", "query": "curly hair portrait", "file": "https://images.unsplash.com/photo-1554519880-ffe46861d570?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "archive-preview-1", "query": "purple dyed hair", "file": "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "archive-preview-2", "query": "short mullet haircut", "file": "https://images.unsplash.com/photo-1785970151269-1c77b401afb6?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "archive-preview-3", "query": "red hair woman", "file": "https://images.unsplash.com/photo-1586266195531-76cfa365cb43?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "archive-preview-4", "query": "short curly hair", "file": "https://images.unsplash.com/photo-1788534931891-20c9d11c2aa5?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-snapshot-stylist", "query": "hairstylist blow dryer", "file": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-snapshot-interior", "query": "salon chairs mirrors", "file": "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ & Bảng giá",
+      "purpose": "Liệt kê 4 nhóm dịch vụ với mô tả, thời lượng, giá tham khảo và quy trình làm việc",
+      "sections": [
+        { "id": "services-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "THE SERVICE INDEX." },
+        { "id": "categories", "catalog": "pricing", "variant": "list-cards", "source": "ba", "note": "4 nhóm CUT / COLOR / TEXTURE / TREATMENT, 17 dịch vụ, giá mẫu" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "Consult / Define / Create / Finish" },
+        { "id": "final-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "LET'S FIND YOUR FORM." }
+      ],
+      "images": [
+        { "slot": "services-hero", "query": "stylist cutting client hair", "file": "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "categories-tools", "query": "hairdresser tools scissors brush", "file": "https://images.unsplash.com/photo-1595475884562-073c30d45670?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "process", "query": "stylist cape client salon", "file": "https://images.unsplash.com/photo-1761839256791-6a93f89fb8b0?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/archive.html",
+      "title": "Style Archive",
+      "purpose": "Trình diễn năng lực sáng tạo: 12 kiểu tóc có bộ lọc và lightbox",
+      "sections": [
+        { "id": "archive-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "ARCHIVE / 001" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "Lọc All / Cut / Color / Texture, lưới bất đối xứng 12 ảnh, hover + lightbox" },
+        { "id": "hair-direction", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Precision cutting, expressive color, natural texture; CTA sang Services" }
+      ],
+      "images": [
+        { "slot": "archive-hero", "query": "short hair black turtleneck", "file": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "precision-bob", "query": "short bob woman", "file": "https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "wolf-cut", "query": "layered haircut woman", "file": "https://images.unsplash.com/photo-1634933591782-850b85923812?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "modern-mullet", "query": "mullet haircut man", "file": "https://images.unsplash.com/photo-1578390432942-d323db577792?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "textured-layers", "query": "woman holding hair", "file": "https://images.unsplash.com/photo-1617690825153-8bb0a8e3c911?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "platinum-blonde", "query": "platinum blonde portrait", "file": "https://images.unsplash.com/photo-1779406859387-5d6fd116b3ff?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "cobalt-accent", "query": "blue hair portrait", "file": "https://images.unsplash.com/photo-1785970151283-e5484bdbc5d7?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "copper-red", "query": "red hair", "file": "https://images.unsplash.com/photo-1565898559217-715bc3c3cf1b?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "soft-balayage", "query": "balayage hair waving", "file": "https://images.unsplash.com/photo-1470259078422-826894b933aa?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "textured-pixie", "query": "short pixie side view", "file": "https://images.unsplash.com/photo-1519713594620-c57c92a493c0?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "wet-look", "query": "wet hair portrait", "file": "https://images.unsplash.com/photo-1775322933171-372be77fbab3?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "graphic-fringe", "query": "short hair fringe", "file": "https://images.unsplash.com/photo-1525614686090-7a3108e3758e?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "short-shag", "query": "short curly hair turtleneck", "file": "https://images.unsplash.com/photo-1762796159022-6771e710aced?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/studio.html",
+      "title": "Studio",
+      "purpose": "Câu chuyện, phương pháp, stylist, không gian và thông tin ghé thăm",
+      "sections": [
+        { "id": "studio-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "A STUDIO FOR SELF-EXPRESSION." },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Không tự tạo lịch sử / thành tích" },
+        { "id": "method", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "FORM / COLOR / TEXTURE chữ lớn + ảnh" },
+        { "id": "stylists", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "3 hồ sơ mẫu, ghi rõ dữ liệu minh họa" },
+        { "id": "inside", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "5 ảnh không gian, lightbox" },
+        { "id": "visit", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Thông tin mẫu + form câu hỏi bản demo" }
+      ],
+      "images": [
+        { "slot": "studio-hero", "query": "stylist cutting hair salon", "file": "https://images.unsplash.com/photo-1647462741351-4e7a5e7317c7?fm=jpg&q=70&w=1600&auto=format&fit=crop", "status": "link" },
+        { "slot": "method", "query": "scissors comb haircut", "file": "https://images.unsplash.com/photo-1761931403671-d020a14928d9?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "stylist-1", "query": "woman portrait white shirt", "file": "https://images.unsplash.com/photo-1580489944761-15a19d654956?fm=jpg&q=70&w=1000&auto=format&fit=crop", "status": "link" },
+        { "slot": "stylist-2", "query": "man portrait grayscale", "file": "https://images.unsplash.com/photo-1558730234-d8b2281b0d00?fm=jpg&q=70&w=1000&auto=format&fit=crop", "status": "link" },
+        { "slot": "stylist-3", "query": "woman portrait earrings", "file": "https://images.unsplash.com/photo-1676146260286-1a84d61b9df9?fm=jpg&q=70&w=1000&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-1", "query": "modern salon interior", "file": "https://images.unsplash.com/photo-1781450090585-1a511b7066d9?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-2", "query": "barber chair round mirror", "file": "https://images.unsplash.com/photo-1790009419892-f6f3fd516fb2?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-3", "query": "salon chair mirror", "file": "https://images.unsplash.com/photo-1626379501846-0df4067b8bb9?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-4", "query": "barbershop interior chairs", "file": "https://images.unsplash.com/photo-1790009419857-51fa0a2d9354?fm=jpg&q=70&w=1400&auto=format&fit=crop", "status": "link" },
+        { "slot": "inside-5", "query": "salon interior products", "file": "https://images.unsplash.com/photo-1746723378067-83a345ff3160?fm=jpg&q=70&w=1200&auto=format&fit=crop", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Màu theo chú thích BA (Cobalt #2455E8, Electric #426BFF, trắng, Jet Black #111111, Silver #C5C7CC, Light Gray #F2F3F5) thay bảng màu preset Art Gallery; thêm graphite #55585F cho chữ phụ để đạt tương phản AA (silver chỉ dùng cho đường kẻ)",
+    "Font theo chú thích BA: Archivo (tiêu đề) + Inter (thân); không dùng Space Grotesk vì thiếu ký tự tiếng Việt; bỏ Cormorant Garamond / Montserrat của preset",
+    "BA yêu cầu song ngữ VI / EN có nút chuyển: nội dung mặc định tiếng Việt (lang=vi), bản tiếng Anh nằm trong thuộc tính data-en và đổi ngay trên trang bằng assets/js/site.js, nhớ lựa chọn bằng localStorage khi chuyển trang",
+    "Tiêu đề lớn BA viết bằng tiếng Anh (HAIR HAS A FORM. …) hiển thị bản dịch tiếng Việt ở chế độ VI, nguyên văn tiếng Anh ở chế độ EN; tên kiểu tóc (Precision Bob, Wolf Cut…) giữ nguyên vì là tên riêng",
+    "BA ghi 4 file index / services / archive / studio: giữ đúng 4 trang, trang con đặt trong pages/ theo chuẩn theme công ty",
+    "Mức chuyển động Level 1: chỉ data-reveal fade/up, header thu gọn, hover; không dùng clip-reveal và con trỏ 'Xem' của preset, không nạp atmos.js",
+    "Công cụ ảnh (Openverse) quá thời gian chờ: toàn bộ ảnh dùng link Unsplash thật đã kiểm bằng link_image"
+  ],
+  "limitations": [
+    "Nút Đặt lịch / Book a Visit mở form minh họa, chưa có backend, không gửi đi",
+    "Form câu hỏi ở trang Studio là bản demo",
+    "Giá, thời lượng, địa chỉ, giờ mở cửa, điện thoại, email, mạng xã hội và hồ sơ stylist là dữ liệu mẫu",
+    "Ảnh dùng link ngoài (Unsplash), cần kết nối mạng; nên thay bằng ảnh thật của salon"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "brand": "MOSS & MIST",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Đường kẻ mảnh như đường chân trời trong sương: hairline mở rộng dần khi cuộn, dẫn mắt qua mọi trang; ảnh lớn đặt bất đối xứng, góc vuông sắc, chữ serif với một từ nghiêng nhấn ý",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Trở về với sự tĩnh tại giữa rừng thông",
+    "description": "Giao diện giới thiệu khu nghỉ dưỡng sinh thái cao cấp giữa rừng thông và thung lũng sương."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu thương hiệu, dẫn sang không gian nghỉ dưỡng, câu chuyện và trải nghiệm",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ai", "note": "Ảnh rừng thông sương toàn màn, slow zoom, mây mỏng (atmos)" },
+        { "id": "intro", "catalog": "story", "variant": "story-split", "source": "ai", "note": "Hai cột: chữ trái, ảnh phải; link sang pages/about.html" },
+        { "id": "spaces", "catalog": "collections", "variant": "gallery-lookbook", "source": "ai", "note": "Editorial grid 3 ảnh khác cỡ, link sang pages/accommodation.html" },
+        { "id": "experience", "catalog": "features", "variant": "feature-fullbleed", "source": "ai", "note": "Ảnh lớn + khối chữ chồng lệch, link sang pages/experiences.html" },
+        { "id": "stillness", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "Triết lý thiết kế trên nền xanh rừng" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-asymmetric", "source": "ai", "note": "Lưới bất đối xứng, lightbox, hover phóng nhẹ" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "foggy pine forest", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Foggy_pine_%28Unsplash%29.jpg/1920px-Foggy_pine_%28Unsplash%29.jpg", "status": "link" },
+        { "slot": "intro", "query": "sunlight through pines", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Sunlight_through_pines_and_spruces_at_Myrstigen.jpg/1280px-Sunlight_through_pines_and_spruces_at_Myrstigen.jpg", "status": "link" },
+        { "slot": "spaces-forest-cabin", "query": "wooden cabin forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Cabin_next_to_the_Fr%C3%B8ylandsvatnet%2C_Sandnes%2C_Norway_julesvernex2-2.jpg/1280px-Cabin_next_to_the_Fr%C3%B8ylandsvatnet%2C_Sandnes%2C_Norway_julesvernex2-2.jpg", "status": "link" },
+        { "slot": "spaces-valley-villa", "query": "cabin interior wood", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Cozy_wooden_cabin_interior_with_seating_area_and_bedroom_space.jpg/1280px-Cozy_wooden_cabin_interior_with_seating_area_and_bedroom_space.jpg", "status": "link" },
+        { "slot": "spaces-signature-lodge", "query": "cabin pine forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Historic_Cabin_in_Wilsonia%2C_California.jpg/1280px-Historic_Cabin_in_Wilsonia%2C_California.jpg", "status": "link" },
+        { "slot": "experience", "query": "sunlight through trees forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Shafts_of_sunlight_through_trees_above_Dimples%2C_Macclesfield_Forest_-_geograph.org.uk_-_6711872.jpg/1920px-Shafts_of_sunlight_through_trees_above_Dimples%2C_Macclesfield_Forest_-_geograph.org.uk_-_6711872.jpg", "status": "link" },
+        { "slot": "gallery-1", "query": "misty morning", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Misty_Morning%2C_GB.jpg/1280px-Misty_Morning%2C_GB.jpg", "status": "link" },
+        { "slot": "gallery-2", "query": "pine cathedral forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Red_Pine_Cathedral_2_Kings_Forest.JPG/1280px-Red_Pine_Cathedral_2_Kings_Forest.JPG", "status": "link" },
+        { "slot": "gallery-3", "query": "hoar frost trees", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Hoar_frost_on_trees_along_Myrstigen_2.jpg/1280px-Hoar_frost_on_trees_along_Myrstigen_2.jpg", "status": "link" },
+        { "slot": "gallery-4", "query": "fog in forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Neblina_en_el_Bosque.JPG/1280px-Neblina_en_el_Bosque.JPG", "status": "link" },
+        { "slot": "gallery-5", "query": "misty mountains morning", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Widok_na_Pieniny_wcze%C5%9Bnie_rano_z_Lubania%2C_20230715_0500_7070.jpg/1280px-Widok_na_Pieniny_wcze%C5%9Bnie_rano_z_Lubania%2C_20230715_0500_7070.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Giới thiệu",
+      "purpose": "Câu chuyện thương hiệu, triết lý thiết kế, kiến trúc và hành trình phát triển",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Ảnh toàn chiều rộng, zoom chậm" },
+        { "id": "story", "catalog": "story", "variant": "story-split", "source": "ai", "note": "Đoạn văn trái, ảnh lớn phải" },
+        { "id": "philosophy", "catalog": "editorial", "variant": "principles-columns", "source": "ai", "note": "Nền sáng, tiêu đề serif, 3 đoạn ngắn" },
+        { "id": "architecture", "catalog": "features", "variant": "features-alternate", "source": "ai", "note": "2 cặp xen kẽ, ảnh parallax nhẹ" },
+        { "id": "journey", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Đường kẻ mở rộng theo cuộn, mốc là nội dung mẫu" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-fullbleed", "source": "ai", "note": "Phong cảnh rộng, phủ tối, thông điệp giữa" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "misty valley mountains morning", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Morning_Clouds_Over_North_Van_Mountain_Valley_%283%29.jpg/1920px-Morning_Clouds_Over_North_Van_Mountain_Valley_%283%29.jpg", "status": "link" },
+        { "slot": "story", "query": "old wooden cabin forest", "file": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Old_wooden_cabin_in_forest.jpg", "status": "link" },
+        { "slot": "architecture-1", "query": "wood cabin interior", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Rustic_wood_cabin_interior_with_dining_table_kitchenette_and_bedroom_area.jpg/1280px-Rustic_wood_cabin_interior_with_dining_table_kitchenette_and_bedroom_area.jpg", "status": "link" },
+        { "slot": "architecture-2", "query": "pines spruces trail", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Spruces_and_pines_along_Myrstigen_1.jpg/1280px-Spruces_and_pines_along_Myrstigen_1.jpg", "status": "link" },
+        { "slot": "closing", "query": "misty valley morning", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Views_along_the_Mary_Mountain_Trail-_misty_morning_views_after_the_rain_in_Hayden_Valley_%2855367555875%29.jpg/1920px-Views_along_the_Mary_Mountain_Trail-_misty_morning_views_after_the_rain_in_Hayden_Valley_%2855367555875%29.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/accommodation.html",
+      "title": "Không gian nghỉ",
+      "purpose": "Giới thiệu Forest Cabin, Valley Villa, Signature Lodge, tiện nghi và vật liệu kiến trúc",
+      "sections": [
+        { "id": "stay-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Cabin giữa rừng" },
+        { "id": "forest-cabin", "catalog": "services", "variant": "room-split-left", "source": "ai", "note": "Ảnh trái, thông tin phải; thông số là nội dung mẫu" },
+        { "id": "valley-villa", "catalog": "services", "variant": "room-split-right", "source": "ai", "note": "Đảo ngược, nền be đá" },
+        { "id": "signature-lodge", "catalog": "services", "variant": "room-fullwidth", "source": "ai", "note": "Ảnh toàn chiều rộng, nội dung nền sáng bên dưới" },
+        { "id": "amenities", "catalog": "features", "variant": "features-bento", "source": "ai", "note": "Lưới tối giản: 3 ô ảnh + 1 ô danh sách" },
+        { "id": "materials", "catalog": "gallery", "variant": "materials-reveal", "source": "ai", "note": "Ảnh cận cảnh gỗ, đá, ánh sáng; reveal clip" },
+        { "id": "stay-info", "catalog": "faq", "variant": "accordion", "source": "ai", "note": "Thông tin lưu trú, không có chức năng đặt phòng" }
+      ],
+      "images": [
+        { "slot": "stay-hero", "query": "cabin lake forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Cabin_next_to_the_Fr%C3%B8ylandsvatnet%2C_Sandnes%2C_Norway_julesvernex2.jpg/1920px-Cabin_next_to_the_Fr%C3%B8ylandsvatnet%2C_Sandnes%2C_Norway_julesvernex2.jpg", "status": "link" },
+        { "slot": "forest-cabin", "query": "cabin in forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Cabin_In_The_Forest_Of_Finland_%28175931625%29.jpeg/1280px-Cabin_In_The_Forest_Of_Finland_%28175931625%29.jpeg", "status": "link" },
+        { "slot": "valley-villa", "query": "wooden log cabin forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/DREVEN%C3%9D_ZRUB_V_LESE_-_WOODEN_LOG_CABIN_IN_THE_FOREST_-_panoramio.jpg/1280px-DREVEN%C3%9D_ZRUB_V_LESE_-_WOODEN_LOG_CABIN_IN_THE_FOREST_-_panoramio.jpg", "status": "link" },
+        { "slot": "signature-lodge", "query": "wooden cabin forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Wooden_cabin_in_Kherzouza_forest.jpg/1920px-Wooden_cabin_in_Kherzouza_forest.jpg", "status": "link" },
+        { "slot": "amenity-sauna", "query": "sauna wooden interior", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Sauna_room_next_to_a_bedroom_in_a_modern_apartment.jpg/1280px-Sauna_room_next_to_a_bedroom_in_a_modern_apartment.jpg", "status": "link" },
+        { "slot": "amenity-kitchen", "query": "cabin interior kitchen", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Cozy_wooden_cabin_interior_with_kitchen.jpg/1280px-Cozy_wooden_cabin_interior_with_kitchen.jpg", "status": "link" },
+        { "slot": "amenity-outdoor-table", "query": "wooden cabin forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Big_Springs_Cabin_Rentals_-_3_%2815229626478%29.jpg/1280px-Big_Springs_Cabin_Rentals_-_3_%2815229626478%29.jpg", "status": "link" },
+        { "slot": "material-wood", "query": "wood texture", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Weathered_wood_texture.jpg/1280px-Weathered_wood_texture.jpg", "status": "link" },
+        { "slot": "material-stone", "query": "stone wall texture", "file": "https://upload.wikimedia.org/wikipedia/commons/2/23/Stone_wall_facade_texture.jpg", "status": "link" },
+        { "slot": "material-light", "query": "sunlight through pines", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/ICM_of_sunlight_through_pines_and_spruces_at_Myrstigen.jpg/1280px-ICM_of_sunlight_through_pines_and_spruces_at_Myrstigen.jpg", "status": "link" },
+        { "slot": "material-linen", "query": "linen fabric texture", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Trải nghiệm",
+      "purpose": "Forest Walk, Morning Rituals, Local Cuisine, Quiet Moments và thiên nhiên theo mùa",
+      "sections": [
+        { "id": "exp-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Nắng xuyên tán cây, hạt bụi nắng (atmos)" },
+        { "id": "forest-walk", "catalog": "editorial", "variant": "story-duo-images", "source": "ai", "note": "Ảnh lớn + ảnh nhỏ lệch" },
+        { "id": "morning-rituals", "catalog": "editorial", "variant": "story-stacked-offset", "source": "ai", "note": "Chữ hẹp trái, 2 ảnh chồng lệch phải" },
+        { "id": "local-cuisine", "catalog": "editorial", "variant": "feature-fullbleed", "source": "ai", "note": "Ảnh rộng, khối chữ chồng phải" },
+        { "id": "quiet-moments", "catalog": "editorial", "variant": "panorama-statement", "source": "ai", "note": "Câu ngắn + ảnh toàn cảnh parallax" },
+        { "id": "seasons", "catalog": "gallery", "variant": "features-tabs", "source": "ai", "note": "4 mùa, đổi ảnh bằng fade khi chọn (tabs ui.js), không tự chạy" },
+        { "id": "exp-closing", "catalog": "cta", "variant": "cta-fullbleed", "source": "ai", "note": "Phong cảnh toàn chiều rộng + thông điệp" }
+      ],
+      "images": [
+        { "slot": "exp-hero", "query": "sunlight through trees", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Sunlight_through_trees_%281%29.jpg/1920px-Sunlight_through_trees_%281%29.jpg", "status": "link" },
+        { "slot": "forest-walk-1", "query": "pine forest path", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/La_Palma%2C_path_to_Time%2C_pine_forest.jpg/1280px-La_Palma%2C_path_to_Time%2C_pine_forest.jpg", "status": "link" },
+        { "slot": "forest-walk-2", "query": "path through pine forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Path_through_Pine_Forest_Langtang.JPG/1280px-Path_through_Pine_Forest_Langtang.JPG", "status": "link" },
+        { "slot": "morning-rituals-1", "query": "tea cup steam", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Tea_seemed_especially_steamy_this_morning_%2823553842543%29.jpg/1280px-Tea_seemed_especially_steamy_this_morning_%2823553842543%29.jpg", "status": "link" },
+        { "slot": "morning-rituals-2", "query": "valley sunrise", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Widok_z_Lubania_wcze%C5%9Bnie_rano%2C_20230715_0508_7102.jpg/1280px-Widok_z_Lubania_wcze%C5%9Bnie_rano%2C_20230715_0508_7102.jpg", "status": "link" },
+        { "slot": "local-cuisine", "query": "fresh vegetables local farm", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Fresh_red_peppers_displayed_at_a_local_farm.jpg/1280px-Fresh_red_peppers_displayed_at_a_local_farm.jpg", "status": "link" },
+        { "slot": "quiet-moments", "query": "misty mountains", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Chile_-_Cocham%C3%B3_climbing_23_-_misty_mountains_%286873698866%29.jpg/1920px-Chile_-_Cocham%C3%B3_climbing_23_-_misty_mountains_%286873698866%29.jpg", "status": "link" },
+        { "slot": "season-spring", "query": "spring forest flowers", "file": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Sunlight_through_trees_in_a_spring_forest_with_white_flowers.jpg", "status": "link" },
+        { "slot": "season-summer", "query": "green valley summer", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Yumthang_Valley.jpg/1280px-Yumthang_Valley.jpg", "status": "link" },
+        { "slot": "season-autumn", "query": "autumn mountain forest", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Alsatian_mountain_forest_in_autumn.jpg/1280px-Alsatian_mountain_forest_in_autumn.jpg", "status": "link" },
+        { "slot": "season-winter", "query": "snowy forest sunlight", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Sunlight_in_the_snowy_forest_1.jpg/1280px-Sunlight_in_the_snowy_forest_1.jpg", "status": "link" },
+        { "slot": "exp-closing", "query": "clouds over mountain valley", "file": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Morning_Clouds_Over_North_Van_Mountain_Valley_%285%29.jpg/1920px-Morning_Clouds_Over_North_Van_Mountain_Valley_%285%29.jpg", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Dựng đúng 4 trang (Home, About, Accommodation, Experiences) theo chú thích của BA, không thêm trang Contact; thông tin liên hệ đặt ở khối cuối trang dùng chung trong footer (mailto / tel / sao chép số).",
+    "Có nút chuyển VI/EN hoạt động thật theo yêu cầu cụ thể của BA (ghi đè mục 'Không tạo bộ chuyển ngôn ngữ' của concept.md): HTML gốc là tiếng Việt (lang=vi), site.js thay chữ sang tiếng Anh từ thuộc tính data-en, đổi lang và lưu lựa chọn trong localStorage.",
+    "Màu theo BA: xanh rừng #263D32, xanh rêu #71816A, trắng sương #F1F0EA, be đá #D5D0C5, xám than #343A35 (thay bảng màu preset). Góc vuông sắc, không thẻ bo tròn theo yêu cầu 'không khối thẻ bo tròn dày đặc'.",
+    "Thư viện ảnh (openverse) lỗi quá thời gian chờ → dùng link ảnh thật từ Wikimedia Commons qua link_image.",
+    "Phần vật liệu: không tìm được ảnh vải lanh phù hợp → trình bày gỗ, đá, ánh sáng; vải tự nhiên nêu bằng chữ.",
+    "Sau khi tự xem: thay ảnh vật liệu đá (ảnh cũ là dãy nhà phố, sai chủ đề) và ảnh tiện nghi tối; hai link đã kiểm nhưng bỏ không dùng (Pinterian Stone Clad, Inside the log cabin Harestanes) vẫn còn trong CREDITS. Đã chạm giới hạn 40 link nên ảnh Forest Cabin (đen trắng), Valley Villa và Signature Lodge vẫn mang vẻ mộc / cũ, nên thay bằng ảnh thật của resort."
+  ],
+  "limitations": [
+    "Website giới thiệu, không có chức năng đặt phòng, đặt dịch vụ, thanh toán hay biểu mẫu giao dịch (theo yêu cầu).",
+    "Diện tích, sức chứa, mốc thời gian và địa chỉ / số điện thoại là nội dung mẫu, cần thay bằng dữ liệu thật.",
+    "Ảnh dùng bằng link ngoài (Wikimedia Commons), cần ảnh thật của resort khi triển khai."
+  ]
+}

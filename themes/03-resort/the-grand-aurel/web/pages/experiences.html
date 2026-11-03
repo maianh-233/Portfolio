@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trải nghiệm — THE GRAND AUREL</title>
+<meta name="description" content="Ẩm thực, trà chiều, dạo bước trong khu vườn hoàng gia, khám phá kiến trúc và thư giãn: nghệ thuật sống chậm rãi tại THE GRAND AUREL.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body data-title-en="Experiences — THE GRAND AUREL" data-desc-en="Fine dining, afternoon tea, walks in the royal garden, architecture discovery and wellness: the art of unhurried living at THE GRAND AUREL.">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="group fixed inset-x-0 top-0 z-40 text-ivory transition-colors duration-500 [&.is-scrolled]:bg-ivory/95 [&.is-scrolled]:text-royal [&.is-scrolled]:shadow-[0_1px_0_rgba(182,154,98,.45)] [&.is-scrolled]:backdrop-blur-sm">
+  <div class="header-veil pointer-events-none absolute inset-0 -z-10 h-28"></div>
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 transition-all duration-500 sm:px-6 lg:px-10 2xl:px-16 group-[.is-scrolled]:h-16">
+    <a href="../index.html" class="flex items-center gap-3" aria-label="THE GRAND AUREL" data-en-aria="THE GRAND AUREL, home">
+      <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-gold font-display text-[15px] italic text-gold">GA</span>
+      <span class="text-[13px] font-medium tracking-crest sm:text-sm">THE GRAND AUREL</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Điều hướng chính" data-en-aria="Main navigation">
+      <a href="../index.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="../pages/about.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Our Heritage">Di sản</a>
+      <a href="../pages/stays.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Suites &amp; Villas</a>
+      <a aria-current="page" href="../pages/experiences.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <div class="hidden items-center border border-gold/60 text-xs tracking-[0.2em] sm:flex" role="group" aria-label="Ngôn ngữ" data-en-aria="Language">
+        <button type="button" data-lang="vi" class="min-h-[40px] px-3 opacity-70 transition duration-300 hover:opacity-100 [&.is-active]:bg-gold [&.is-active]:text-royal-deep [&.is-active]:opacity-100">VI</button>
+        <button type="button" data-lang="en" class="min-h-[40px] px-3 opacity-70 transition duration-300 hover:opacity-100 [&.is-active]:bg-gold [&.is-active]:text-royal-deep [&.is-active]:opacity-100">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center lg:hidden" aria-label="Mở menu" data-en-aria="Open menu">
+        <span class="flex w-6 flex-col gap-[6px]"><span class="h-px w-full bg-current"></span><span class="h-px w-4 bg-current"></span><span class="h-px w-full bg-current"></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-gold/60 bg-ivory p-8 text-royal shadow-[0_24px_60px_rgba(27,42,65,.25)] lg:hidden">
+    <div class="rule-ornament mb-6"><i></i></div>
+    <nav class="flex flex-col gap-1 font-display text-3xl" aria-label="Menu điện thoại" data-en-aria="Mobile menu">
+      <a href="../index.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Home">Trang chủ</a>
+      <a href="../pages/about.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Our Heritage">Di sản</a>
+      <a href="../pages/stays.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink">Suites &amp; Villas</a>
+      <a aria-current="page" href="../pages/experiences.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+    <div class="mt-8 flex items-center gap-3 text-xs tracking-[0.2em]">
+      <span class="text-espresso" data-en="Language">Ngôn ngữ</span>
+      <button type="button" data-lang="vi" class="min-h-[44px] border border-gold/60 px-4 [&.is-active]:bg-royal [&.is-active]:text-ivory">VI</button>
+      <button type="button" data-lang="en" class="min-h-[44px] border border-gold/60 px-4 [&.is-active]:bg-royal [&.is-active]:text-ivory">EN</button>
+    </div>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- HERO: vườn kiểu Pháp, tiêu đề căn giữa trong khung vòm -->
+  <section id="page-hero" data-section="hero-cinematic" class="relative isolate flex min-h-[92vh] items-center justify-center overflow-hidden bg-forest-deep text-ivory">
+    <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%] -z-20">
+      <img src="https://images.unsplash.com/photo-1699303088143-b04d23643bd9?auto=format&fit=crop&w=2000&q=80" referrerpolicy="no-referrer" alt="Khu vườn kiểu Pháp với đài phun nước giữa những hàng cây" data-en-alt="French garden with a fountain among rows of trees" class="h-full w-full object-cover saturate-[.9]" width="2000" height="1333">
+    </div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-royal-deep/55 via-forest-deep/35 to-forest-deep/80"></div>
+    <div class="pointer-events-none absolute inset-3 border border-gold/50 sm:inset-6"></div>
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col items-center px-6 pb-16 pt-32 text-center sm:px-10">
+      <div class="arch border border-gold/70 bg-royal-deep/45 px-6 pb-12 pt-16 backdrop-blur-[3px] sm:px-14 sm:pt-24 lg:px-24">
+        <p class="text-xs font-medium uppercase tracking-crest text-gold-pale" data-reveal="fade" data-en="Experiences">Trải nghiệm</p>
+        <h1 data-split="words" class="mx-auto mt-6 max-w-4xl font-display text-[clamp(2.8rem,6.8vw,7rem)] font-medium leading-[1.02]" data-en="The Art of Unhurried Living">Nghệ thuật sống chậm rãi</h1>
+        <div class="rule-ornament mx-auto mt-8 w-40 sm:w-56" data-reveal="fade"><i></i></div>
+        <p class="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ivory/90 sm:text-lg" data-reveal="up" data-reveal-delay="250" data-en="Calm mornings, long lunches and evenings in the garden: time here is meant to be savoured, not scheduled.">Buổi sáng thư thái, bữa trưa kéo dài và những buổi chiều trong vườn: thời gian ở đây để tận hưởng, không phải để sắp lịch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINE DINING -->
+  <section id="fine-dining" data-section="story-editorial" class="bg-ivory py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-7">
+        <div data-reveal="clip" class="frame relative aspect-[4/3] overflow-hidden bg-ivory-deep lg:aspect-[7/6]">
+          <img src="https://images.unsplash.com/photo-1782256529708-ff4392075981?auto=format&fit=crop&w=1600&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Phòng tiệc trang trí cầu kỳ với bàn dài và đèn chùm pha lê" data-en-alt="Ornate dining hall with a long table and a crystal chandelier" class="h-full w-full object-cover saturate-[.9]" width="1600" height="1370">
+        </div>
+      </div>
+      <div class="flex flex-col justify-between gap-12 lg:col-span-4 lg:col-start-9">
+        <div>
+          <p class="text-xs uppercase tracking-crest text-gold-ink" data-en="Chapter I">Chương I</p>
+          <h2 data-split="words" class="mt-5 font-display text-[clamp(2.6rem,4.8vw,5rem)] font-medium leading-[1.02] text-royal">Fine Dining</h2>
+          <div class="rule-draw mt-8 h-px w-32 bg-gold" data-reveal="fade"></div>
+          <p class="mt-8 max-w-[46ch] text-lg leading-relaxed text-espresso" data-reveal="up" data-en="Dinner is served in a hall of chandeliers and painted ceilings. European cuisine is presented course by course, at a pace that leaves room for conversation.">Bữa tối được phục vụ trong đại sảnh với đèn chùm và trần vẽ. Ẩm thực châu Âu được dọn lần lượt từng món, theo một nhịp đủ chậm để câu chuyện được kéo dài.</p>
+        </div>
+        <figure class="lg:-ml-24">
+          <div data-reveal="clip" class="relative aspect-[4/3] overflow-hidden bg-ivory-deep">
+            <img src="https://images.unsplash.com/photo-1652234779738-cc980e2705bc?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Bàn ăn bày đĩa sứ và ly pha lê" data-en-alt="Table laid with porcelain plates and crystal glasses" class="h-full w-full object-cover saturate-[.9]" width="1000" height="750">
+          </div>
+          <figcaption class="mt-3 text-sm text-espresso"><span class="font-display text-base italic text-gold-ink">La table.</span> <span data-en="Porcelain, crystal and linen.">Sứ, pha lê và khăn lanh.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFTERNOON TEA: trang tạp chí phong cách sống -->
+  <section id="afternoon-tea" data-section="editorial-spread" class="paper py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <p class="text-xs uppercase tracking-crest text-gold-ink" data-en="Chapter II · Four o'clock">Chương II · Bốn giờ chiều</p>
+          <p class="mt-10 font-display text-[clamp(1.6rem,2.4vw,2.25rem)] italic leading-snug text-royal" data-reveal="up" data-en="“Tea is not taken in a hurry. It is a small ceremony that marks the turning of the day.”">“Trà không dùng vội. Đó là một nghi thức nhỏ đánh dấu lúc ngày chuyển sang chiều.”</p>
+          <p class="mt-8 max-w-[44ch] text-lg leading-relaxed text-espresso" data-reveal="up" data-en="In the Heritage Lounge, tea is poured from porcelain pots and served with pastries on tiered stands, by the windows or beside the fire.">Tại Heritage Lounge, trà được rót từ những ấm sứ và dùng cùng bánh ngọt trên khay nhiều tầng, bên cửa sổ hoặc cạnh lò sưởi.</p>
+        </div>
+        <h2 class="font-display text-[clamp(4rem,12vw,12.5rem)] font-medium leading-[.88] tracking-[-0.02em] text-royal lg:col-span-8 lg:text-right" data-split="words" data-en="Afternoon Tea">Trà chiều</h2>
+      </div>
+
+      <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:mt-24 lg:grid-cols-12 lg:gap-8">
+        <figure class="sm:col-span-2 lg:col-span-6">
+          <div class="frame-outer arch border-gold/60">
+            <div data-reveal="clip" class="frame arch relative aspect-[4/5] overflow-hidden bg-ivory-line">
+              <img src="https://images.unsplash.com/photo-1722324260745-867e1f19ec89?auto=format&fit=crop&w=1400&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Bàn tròn bày bộ ấm trà sứ" data-en-alt="Round table set with a porcelain tea service" class="h-full w-full object-cover saturate-[.9]" width="1400" height="1750">
+            </div>
+          </div>
+        </figure>
+        <figure class="lg:col-span-3 lg:mt-40">
+          <div data-reveal="clip" class="relative aspect-[3/4] overflow-hidden bg-ivory-line">
+            <img src="https://images.unsplash.com/photo-1576831438461-6d0e6a13b0ce?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Bánh ngọt trên khay nhiều tầng giữa các đĩa" data-en-alt="Pastries on a tiered stand between plates" class="h-full w-full object-cover saturate-[.9]" width="1000" height="1333">
+          </div>
+          <figcaption class="mt-3 text-sm text-espresso"><span class="font-display text-base italic text-gold-ink">Pâtisserie.</span> <span data-en="Small pastries, baked each afternoon.">Bánh nhỏ, nướng mỗi buổi chiều.</span></figcaption>
+        </figure>
+        <figure class="lg:col-span-3 lg:mt-12">
+          <div data-reveal="clip" class="relative aspect-[3/4] overflow-hidden bg-ivory-line">
+            <img src="https://images.unsplash.com/photo-1766399654239-56935ded1335?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Những tách trà sứ hoa văn trên đĩa lót" data-en-alt="Floral porcelain teacups on saucers" class="h-full w-full object-cover saturate-[.9]" width="1000" height="1333">
+          </div>
+          <figcaption class="mt-3 text-sm text-espresso"><span class="font-display text-base italic text-gold-ink">Porcelaine.</span> <span data-en="Cups painted with garden flowers.">Tách vẽ hoa của khu vườn.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE ROYAL GARDEN: nền xanh rừng -->
+  <section id="royal-garden" data-section="feature-split" class="relative overflow-hidden bg-forest py-24 text-ivory lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-6">
+          <p class="text-xs uppercase tracking-crest text-gold-pale" data-en="Chapter III">Chương III</p>
+          <h2 data-split="words" class="mt-5 font-display text-[clamp(2.6rem,5.4vw,5.75rem)] font-medium leading-[1.02]" data-en="The Royal Garden">Khu vườn hoàng gia</h2>
+        </div>
+        <p class="max-w-[52ch] text-lg leading-relaxed text-ivory/85 lg:col-span-5 lg:col-start-8" data-reveal="up" data-en="Walk the symmetrical paths at first light, rest by the fountains at noon, and watch the hedges turn gold as evening falls.">Dạo bước trên những lối đi đối xứng lúc rạng sáng, nghỉ chân bên đài phun nước giữa trưa, và ngắm hàng cây cắt tỉa ngả vàng khi chiều xuống.</p>
+      </div>
+
+      <div class="mt-14 grid gap-6 lg:mt-20 lg:grid-cols-12 lg:gap-8">
+        <figure class="lg:col-span-8">
+          <div data-reveal="clip" class="frame relative aspect-[4/3] overflow-hidden bg-forest-deep lg:aspect-[16/10]">
+            <img src="https://images.unsplash.com/photo-1692651763004-fabed1b9a602?auto=format&fit=crop&w=1400&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Lối đi dài thẳng tắp giữa hai hàng cây trong khu vườn cổ điển" data-en-alt="Long straight walkway between rows of trees in a classical garden" class="h-full w-full object-cover saturate-[.9]" width="1400" height="875">
+          </div>
+          <figcaption class="mt-3 text-sm text-ivory/75"><span class="font-display text-base italic text-gold-pale">L'allée.</span> <span data-en="The main avenue, aligned to the house.">Đại lộ chính, thẳng trục với dinh thự.</span></figcaption>
+        </figure>
+        <div class="flex flex-col gap-8 lg:col-span-4">
+          <figure>
+            <div data-reveal="clip" class="relative aspect-[4/5] overflow-hidden bg-forest-deep">
+              <img src="https://images.unsplash.com/photo-1791821696157-35360c826ffc?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Vườn kiểu Pháp với hàng rào cắt tỉa và hồ phản chiếu" data-en-alt="French formal garden with clipped hedges and a reflecting pool" class="h-full w-full object-cover saturate-[.9]" width="1200" height="1500">
+            </div>
+            <figcaption class="mt-3 text-sm text-ivory/75"><span class="font-display text-base italic text-gold-pale">Le miroir.</span> <span data-en="A reflecting pool between parterres.">Hồ phản chiếu giữa các luống hoa văn.</span></figcaption>
+          </figure>
+          <ul class="divide-y divide-gold/30 border-y border-gold/30 text-[17px]" data-reveal-stagger="90">
+            <li class="flex items-baseline gap-4 py-4"><span class="w-24 shrink-0 text-xs uppercase tracking-[0.2em] text-gold-pale" data-en="Morning">Buổi sáng</span><span class="text-ivory/90" data-en="A quiet walk along the avenue">Dạo bước dọc đại lộ</span></li>
+            <li class="flex items-baseline gap-4 py-4"><span class="w-24 shrink-0 text-xs uppercase tracking-[0.2em] text-gold-pale" data-en="Noon">Giữa trưa</span><span class="text-ivory/90" data-en="Rest in the shade by the fountains">Nghỉ dưới bóng mát bên đài phun nước</span></li>
+            <li class="flex items-baseline gap-4 py-4"><span class="w-24 shrink-0 text-xs uppercase tracking-[0.2em] text-gold-pale" data-en="Evening">Chiều tà</span><span class="text-ivory/90" data-en="Golden light over the parterres">Ánh vàng trên những luống hoa văn</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE DISCOVERY: carousel kéo ngang + lightbox -->
+  <section id="architecture-discovery" data-section="gallery-carousel" class="bg-ivory py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div data-carousel>
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-crest text-gold-ink" data-en="Chapter IV">Chương IV</p>
+            <h2 data-split="words" class="mt-5 max-w-3xl font-display text-[clamp(2.6rem,5vw,5.25rem)] font-medium leading-[1.02] text-royal" data-en="Architecture Discovery">Khám phá kiến trúc</h2>
+            <p class="mt-6 max-w-[54ch] text-lg leading-relaxed text-espresso" data-reveal="up" data-en="A slow tour of the house, from staircase to painted salon. Drag or use the arrows; select an image to enlarge it.">Một chuyến dạo chậm quanh dinh thự, từ cầu thang tới phòng khách vẽ tranh. Kéo hoặc dùng mũi tên; chọn ảnh để xem lớn hơn.</p>
+          </div>
+          <div class="flex gap-3">
+            <button type="button" data-carousel-prev class="grid h-12 w-12 place-items-center border border-gold text-royal transition duration-300 hover:bg-royal hover:text-ivory" aria-label="Ảnh trước" data-en-aria="Previous image">&larr;</button>
+            <button type="button" data-carousel-next class="grid h-12 w-12 place-items-center border border-gold text-royal transition duration-300 hover:bg-royal hover:text-ivory" aria-label="Ảnh sau" data-en-aria="Next image">&rarr;</button>
+          </div>
+        </div>
+
+        <div data-carousel-track class="mt-14 gap-6 lg:mt-16 lg:gap-8">
+          <figure class="w-[85%] shrink-0 sm:w-[48%] lg:w-[34%]">
+            <a href="https://images.unsplash.com/photo-1548847923-f040a5441de6?auto=format&fit=crop&w=1200&q=80" data-lightbox="discovery" data-caption="Cầu thang lớn" class="group relative block aspect-[3/4] overflow-hidden bg-ivory-deep">
+              <img src="https://images.unsplash.com/photo-1548847923-f040a5441de6?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Cầu thang đá lớn trong sảnh" data-en-alt="Grand stone staircase in the hall" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="1600">
+            </a>
+            <figcaption class="mt-4 flex gap-4 text-sm text-espresso"><span class="text-gold-ink" aria-hidden="true">01</span><span><span class="font-display text-base italic text-gold-ink">Escalier.</span> <span data-en="The staircase: the spine of the house.">Cầu thang, xương sống của dinh thự.</span></span></figcaption>
+          </figure>
+          <figure class="w-[85%] shrink-0 sm:w-[48%] lg:w-[34%]">
+            <a href="https://images.unsplash.com/photo-1667425288209-d7a0216737be?auto=format&fit=crop&w=1200&q=80" data-lightbox="discovery" data-caption="Ô cửa vòm" class="group relative block aspect-[3/4] overflow-hidden bg-ivory-deep">
+              <img src="https://images.unsplash.com/photo-1667425288209-d7a0216737be?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Căn phòng có cửa sổ lớn và ô cửa vòm" data-en-alt="Room with a tall window and an arched doorway" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="1600">
+            </a>
+            <figcaption class="mt-4 flex gap-4 text-sm text-espresso"><span class="text-gold-ink" aria-hidden="true">02</span><span><span class="font-display text-base italic text-gold-ink">Arcade.</span> <span data-en="Arches that frame one room from the next.">Ô vòm đóng khung căn phòng này nhìn sang căn phòng kia.</span></span></figcaption>
+          </figure>
+          <figure class="w-[85%] shrink-0 sm:w-[48%] lg:w-[34%]">
+            <a href="https://images.unsplash.com/photo-1535383749833-770a4e09edec?auto=format&fit=crop&w=1200&q=80" data-lightbox="discovery" data-caption="Cửa sổ nhìn ra cung điện" class="group relative block aspect-[3/4] overflow-hidden bg-ivory-deep">
+              <img src="https://images.unsplash.com/photo-1535383749833-770a4e09edec?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Cửa sổ mở nhìn ra một công trình cung điện" data-en-alt="Open window looking out to a palace building" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="1600">
+            </a>
+            <figcaption class="mt-4 flex gap-4 text-sm text-espresso"><span class="text-gold-ink" aria-hidden="true">03</span><span><span class="font-display text-base italic text-gold-ink">Fenêtre.</span> <span data-en="Tall windows, measured to the light.">Cửa sổ cao, đo theo ánh sáng.</span></span></figcaption>
+          </figure>
+          <figure class="w-[85%] shrink-0 sm:w-[48%] lg:w-[34%]">
+            <a href="https://images.unsplash.com/photo-1761116191941-fe3915e57d8b?auto=format&fit=crop&w=1200&q=80" data-lightbox="discovery" data-caption="Tường mạ vàng và tranh tường" class="group relative block aspect-[3/4] overflow-hidden bg-ivory-deep">
+              <img src="https://images.unsplash.com/photo-1761116191941-fe3915e57d8b?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Căn phòng tường mạ vàng với tranh tường" data-en-alt="Room with gilded walls and a painted mural" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="1600">
+            </a>
+            <figcaption class="mt-4 flex gap-4 text-sm text-espresso"><span class="text-gold-ink" aria-hidden="true">04</span><span><span class="font-display text-base italic text-gold-ink">Fresque.</span> <span data-en="A painted salon, gilded with restraint.">Phòng khách vẽ tranh, mạ vàng có tiết chế.</span></span></figcaption>
+          </figure>
+        </div>
+        <div data-carousel-dots class="mt-10 text-gold"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WELLNESS & RELAXATION: ảnh + accordion -->
+  <section id="wellness" data-section="features-accordion" class="paper py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-5 gap-5 lg:col-span-6 lg:gap-6">
+        <div class="col-span-3 frame-outer arch border-gold/60">
+          <div data-reveal="clip" class="frame arch relative aspect-[3/5] overflow-hidden bg-ivory-line">
+            <img src="https://images.unsplash.com/photo-1716893917077-5b320c1ecfec?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Phòng tắm với bồn tắm và khay hoa" data-en-alt="Bathroom with a bathtub and a tray of flowers" class="h-full w-full object-cover saturate-[.9]" width="1200" height="2000">
+          </div>
+        </div>
+        <div class="col-span-2 self-end">
+          <div data-reveal="clip" class="relative aspect-[3/4] overflow-hidden bg-ivory-line">
+            <img src="https://images.unsplash.com/photo-1661006101181-14c803259c83?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Phòng khách yên tĩnh với đèn chùm và ghế bọc vải" data-en-alt="Quiet salon with a chandelier and upholstered chairs" class="h-full w-full object-cover saturate-[.9]" width="1200" height="1600">
+          </div>
+          <p class="mt-3 text-sm text-espresso"><span class="font-display text-base italic text-gold-ink">Repos.</span> <span data-en="Quiet rooms for rest.">Những căn phòng cho sự nghỉ ngơi.</span></p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 lg:col-start-8 lg:pt-10">
+        <p class="text-xs uppercase tracking-crest text-gold-ink" data-en="Chapter V">Chương V</p>
+        <h2 data-split="words" class="mt-5 font-display text-[clamp(2.6rem,4.8vw,5rem)] font-medium leading-[1.02] text-royal" data-en="Wellness &amp; Relaxation">Thư giãn &amp; tái tạo</h2>
+        <p class="mt-8 max-w-[50ch] text-lg leading-relaxed text-espresso" data-reveal="up" data-en="Rest here is a matter of setting: stone that holds warmth, soft light and rooms where nothing asks for your attention.">Sự thư giãn ở đây đến từ không gian: đá giữ hơi ấm, ánh sáng dịu và những căn phòng không đòi hỏi bạn phải bận tâm.</p>
+
+        <div data-accordion class="mt-10 border-t border-gold/50">
+          <div data-acc-item data-open class="border-b border-gold/50">
+            <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 text-left font-display text-2xl text-royal">
+              <span>Palace Spa</span><span data-acc-icon class="text-gold transition-transform duration-300 [.is-open_&]:rotate-45" aria-hidden="true">+</span>
+            </button>
+            <div data-acc-panel><p class="pb-6 text-[17px] leading-relaxed text-espresso" data-en="Natural stone, warm water and unhurried rituals of care, in rooms lit as softly as candlelight.">Đá tự nhiên, nước ấm và những nghi thức chăm sóc không vội vã, trong căn phòng có ánh sáng dịu như ánh nến.</p></div>
+          </div>
+          <div data-acc-item class="border-b border-gold/50">
+            <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 text-left font-display text-2xl text-royal">
+              <span>Heritage Lounge</span><span data-acc-icon class="text-gold transition-transform duration-300 [.is-open_&]:rotate-45" aria-hidden="true">+</span>
+            </button>
+            <div data-acc-panel><p class="pb-6 text-[17px] leading-relaxed text-espresso" data-en="Deep chairs, a book from the library and the slow crackle of the fireplace.">Ghế bành sâu, một cuốn sách từ thư viện và tiếng lửa lách tách của lò sưởi.</p></div>
+          </div>
+          <div data-acc-item class="border-b border-gold/50">
+            <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 text-left font-display text-2xl text-royal">
+              <span data-en="Quiet hours">Giờ tĩnh lặng</span><span data-acc-icon class="text-gold transition-transform duration-300 [.is-open_&]:rotate-45" aria-hidden="true">+</span>
+            </button>
+            <div data-acc-panel><p class="pb-6 text-[17px] leading-relaxed text-espresso" data-en="In the early afternoon the house grows still: an invitation to rest, read or simply look out at the garden.">Đầu giờ chiều, cả dinh thự lắng lại: một lời mời để nghỉ ngơi, đọc sách hay đơn giản là ngắm nhìn khu vườn.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING PANORAMA -->
+  <section id="closing" data-section="cta-fullbleed" class="relative isolate flex min-h-[90vh] items-end overflow-hidden bg-royal-deep text-ivory" data-particles="dust" data-particles-color="#D9C9A3" data-particles-density="0.5">
+    <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[15%] -z-20">
+      <img src="https://images.unsplash.com/photo-1689861717931-34772037a15c?auto=format&fit=crop&w=2000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Toàn cảnh dinh thự với đài phun nước phía trước" data-en-alt="Panorama of a residence with a fountain before it" class="h-full w-full object-cover saturate-[.85]" width="2000" height="1333">
+    </div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-royal-deep via-royal-deep/50 to-royal-deep/10"></div>
+    <div class="pointer-events-none absolute inset-3 border border-gold/50 sm:inset-6"></div>
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl gap-8 px-6 pb-16 pt-32 sm:px-10 lg:grid-cols-12 lg:px-16 lg:pb-24 2xl:px-24">
+      <h2 data-split="words" class="font-display text-[clamp(2.8rem,6.4vw,6.75rem)] font-medium leading-[1.02] lg:col-span-8" data-en="A World Apart, Beyond Time">Một thế giới riêng, vượt thời gian</h2>
+      <div class="self-end lg:col-span-4">
+        <div class="rule-draw h-px w-32 bg-gold" data-reveal="fade"></div>
+        <p class="mt-6 max-w-md text-lg leading-relaxed text-ivory/85" data-reveal="up" data-en="THE GRAND AUREL is a European residence for those who wish to slow down, where architecture, gardens and hospitality are kept with care.">THE GRAND AUREL là dinh thự châu Âu dành cho những ai muốn sống chậm, nơi kiến trúc, khu vườn và lòng hiếu khách được gìn giữ bằng sự trân trọng.</p>
+        <a href="about.html" data-reveal="up" class="mt-8 inline-flex min-h-[44px] items-center gap-2 text-[13px] uppercase tracking-[0.2em] text-gold-pale transition-colors duration-300 hover:text-ivory"><span data-en="Our heritage">Câu chuyện di sản</span><span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden bg-royal-deep text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <a href="../index.html" class="inline-flex items-center gap-3">
+          <span class="grid h-12 w-12 place-items-center rounded-full border border-gold font-display text-lg italic text-gold">GA</span>
+          <span class="text-sm font-medium tracking-crest">THE GRAND AUREL</span>
+        </a>
+        <p class="mt-6 max-w-sm font-display text-2xl leading-snug text-ivory/90" data-en="A European residence for those who wish to slow down and live gracefully.">Một dinh thự châu Âu dành cho những ai muốn sống chậm và sống đẹp.</p>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-xs uppercase tracking-[0.24em] text-gold" data-en="Explore">Khám phá</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-ivory/80">
+          <li><a href="../index.html" class="transition-colors duration-300 hover:text-gold" data-en="Home">Trang chủ</a></li>
+          <li><a href="../pages/about.html" class="transition-colors duration-300 hover:text-gold" data-en="Our Heritage">Di sản</a></li>
+          <li><a href="../pages/stays.html" class="transition-colors duration-300 hover:text-gold">Suites &amp; Villas</a></li>
+          <li><a aria-current="page" href="../pages/experiences.html" class="transition-colors duration-300 hover:text-gold" data-en="Experiences">Trải nghiệm</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-xs uppercase tracking-[0.24em] text-gold" data-en="Contact (sample)">Liên hệ (mẫu)</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-ivory/80">
+          <li data-en="Aurel Estate, a fictional address for illustration">Dinh thự Aurel, địa chỉ minh họa</li>
+          <li><a href="tel:+842838229140" class="transition-colors duration-300 hover:text-gold">+84 28 3822 9140</a></li>
+          <li><a href="mailto:concierge@thegrandaurel.com" class="break-words transition-colors duration-300 hover:text-gold">concierge@thegrandaurel.com</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-xs uppercase tracking-[0.24em] text-gold" data-en="Follow">Theo dõi</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-ivory/80">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-gold">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-gold">Facebook</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-gold">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule-ornament mt-16"><i></i></div>
+    <p class="select-none pt-8 text-center font-display whitespace-nowrap text-[clamp(2rem,8.4vw,10rem)] leading-none tracking-[0.02em] text-ivory/90">THE GRAND AUREL</p>
+    <div class="flex flex-col gap-3 border-t border-gold/30 py-8 text-sm text-ivory/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 THE GRAND AUREL.</p>
+      <p data-en="Contact details are samples for this brand presentation.">Thông tin liên hệ mang tính minh họa cho bản giới thiệu thương hiệu.</p>
+      <a href="#top" class="transition-colors duration-300 hover:text-gold" data-en="Back to top">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

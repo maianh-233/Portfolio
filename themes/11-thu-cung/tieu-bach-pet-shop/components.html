@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thư viện component · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+</head>
+<body class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/permissions.js"></script>
+  <script src="assets/js/workflows.js"></script>
+  <script src="assets/js/mock-data/master.js"></script>
+  <script src="assets/js/mock-data/book.js"></script>
+  <script src="assets/js/mock-data/review.js"></script>
+  <script src="assets/js/mock-data/news.js"></script>
+  <script src="assets/js/demo-store.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+  /* Style guide cho đội frontend: token (đọc từ CSS variables) → icon → component (mọi biến thể / trạng thái + HTML mẫu) → badge trạng thái chứng từ → mẫu bố cục trang. */
+  (function () {
+    if (!Perm.role()) Perm.setRole('ROLE-01');
+    var esc = UI.esc, ic = UI.icon;
+    var css = getComputedStyle(document.documentElement);
+    function v(name) { return css.getPropertyValue(name).trim(); }
+    function hex(rgb) { return '#' + rgb.split(/\s+/).map(function (n) { return ('0' + parseInt(n, 10).toString(16)).slice(-2); }).join('').toUpperCase(); }
+    var FAMILIES = { primary: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900], secondary: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900], neutral: [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900], success: [50, 100, 500, 600, 700], warning: [50, 100, 500, 600, 700], danger: [50, 100, 500, 600, 700], info: [50, 100, 500, 600, 700] };
+    var SW = { primary: ['bg-primary-50', 'bg-primary-100', 'bg-primary-200', 'bg-primary-300', 'bg-primary-400', 'bg-primary-500', 'bg-primary-600', 'bg-primary-700', 'bg-primary-800', 'bg-primary-900'], secondary: ['bg-secondary-50', 'bg-secondary-100', 'bg-secondary-200', 'bg-secondary-300', 'bg-secondary-400', 'bg-secondary-500', 'bg-secondary-600', 'bg-secondary-700', 'bg-secondary-800', 'bg-secondary-900'], neutral: ['bg-neutral-0', 'bg-neutral-50', 'bg-neutral-100', 'bg-neutral-200', 'bg-neutral-300', 'bg-neutral-400', 'bg-neutral-500', 'bg-neutral-600', 'bg-neutral-700', 'bg-neutral-800', 'bg-neutral-900'], success: ['bg-success-50', 'bg-success-100', 'bg-success-500', 'bg-success-600', 'bg-success-700'], warning: ['bg-warning-50', 'bg-warning-100', 'bg-warning-500', 'bg-warning-600', 'bg-warning-700'], danger: ['bg-danger-50', 'bg-danger-100', 'bg-danger-500', 'bg-danger-600', 'bg-danger-700'], info: ['bg-info-50', 'bg-info-100', 'bg-info-500', 'bg-info-600', 'bg-info-700'] };
+
+    function block(id, title, desc, demo, code) {
+      return '<section id="' + id + '" class="scroll-mt-20 rounded-xl border border-neutral-200 bg-white p-5 md:p-6"><h2 class="text-xl font-extrabold text-neutral-800">' + title + '</h2>' + (desc ? '<p class="mt-1 text-sm text-neutral-600 max-w-3xl">' + desc + '</p>' : '') +
+        '<div class="mt-4 rounded-lg border border-dashed border-neutral-200 bg-neutral-50 p-4 overflow-x-auto" data-demo-area="' + id + '">' + demo + '</div>' +
+        (code ? '<div class="mt-3"><div class="flex items-center justify-between"><span class="text-xs font-bold text-neutral-600">HTML mẫu</span>' + UI.button({ label: 'Sao chép', icon: 'copy', size: 'sm', variant: 'ghost', attrs: { 'data-copy': code, 'data-copy-msg': 'Đã sao chép HTML mẫu' } }) + '</div><pre class="mt-1 max-h-56 overflow-auto rounded-lg bg-neutral-900 p-3 text-xs text-neutral-100"><code>' + esc(code) + '</code></pre></div>' : '') + '</section>';
+    }
+    function row(items) { return '<div class="flex flex-wrap items-center gap-3">' + items.join('') + '</div>'; }
+    function label(t) { return '<p class="mb-2 mt-4 first:mt-0 text-xs font-bold text-neutral-600">' + t + '</p>'; }
+
+    var p1 = MOCK.products[0], pc = MOCK.products.filter(function (p) { return p.la_pate; })[0], out = MOCK.products.filter(function (p) { return p.id === 'p9'; })[0];
+    var sections = [];
+
+    /* 1. Tokens */
+    var colors = Object.keys(FAMILIES).map(function (f) {
+      return '<div class="mb-4"><p class="mb-2 text-sm font-bold">' + f + '</p><div class="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-11 gap-2">' + FAMILIES[f].map(function (s, i) {
+        var raw = v('--c-' + f + '-' + s);
+        return '<div class="min-w-0"><div class="h-12 rounded-md border border-neutral-200 ' + SW[f][i] + '"></div><p class="mt-1 text-xs font-bold">' + f + '-' + s + '</p><p class="text-xs text-neutral-600 font-mono">' + (raw ? hex(raw) : '') + '</p></div>';
+      }).join('') + '</div></div>';
+    }).join('');
+    var type = ['4xl', '3xl', '2xl', 'xl', 'lg', 'base', 'sm', 'xs'].map(function (t) { return '<div class="flex items-baseline gap-4 border-b border-neutral-100 py-2"><span class="w-24 shrink-0 font-mono text-xs text-neutral-600">text-' + t + ' · ' + v('--text-' + t) + '/' + v('--leading-' + t) + '</span><span class="text-' + t + ' font-extrabold truncate">Đồ ăn ngon cho Boss</span></div>'; }).join('');
+    var radius = ['sm', 'md', 'lg', 'xl', '2xl', 'full'].map(function (r) { return '<div class="text-center"><div class="size-16 bg-primary-200 rounded-' + r + '"></div><p class="mt-1 text-xs font-bold">rounded-' + r + '</p><p class="text-xs text-neutral-600">' + v('--radius-' + r) + '</p></div>'; }).join('');
+    var shadow = ['sm', 'md', 'lg', 'brand'].map(function (s) { return '<div class="text-center"><div class="size-20 rounded-lg bg-white shadow-' + s + '"></div><p class="mt-2 text-xs font-bold">shadow-' + s + '</p></div>'; }).join('');
+    var layout = [['--layout-sidebar', 'w-sidebar'], ['--layout-sidebar-collapsed', 'w-sidebar-collapsed'], ['--layout-topbar', 'h-topbar'], ['--layout-site-header', 'h-site-header'], ['--layout-content', 'max-w-content'], ['--layout-table-row', 'h-table-row'], ['--layout-control', 'h-control']].map(function (l) { return '<tr class="border-b border-neutral-100"><td class="py-2 pr-4 font-mono text-xs">' + l[1] + '</td><td class="py-2 font-mono text-xs text-neutral-600">' + v(l[0]) + '</td></tr>'; }).join('');
+    sections.push({ id: 'tokens', group: 'Nền tảng', title: 'Design tokens', html: block('tokens', 'Design tokens', 'Giá trị đọc trực tiếp từ CSS variables (tokens.css, sinh từ _design-tokens.json). Màn hình chỉ dùng class token, không HEX, không giá trị tùy ý.',
+      label('Màu') + colors + label('Typography (Nunito)') + type + label('Bo góc') + '<div class="flex flex-wrap gap-5">' + radius + '</div>' + label('Bóng') + '<div class="flex flex-wrap gap-6 p-2">' + shadow + '</div>' +
+      label('Breakpoints') + row(['sm 640px', 'md 768px', 'lg 1024px', 'xl 1280px', '2xl 1536px'].map(function (b) { return UI.tag(b, 'neutral'); })) + label('Layout · density: ' + v('--density')) + '<table class="text-sm">' + layout + '</table>') });
+
+    /* 2. Icon */
+    sections.push({ id: 'icons', group: 'Nền tảng', title: 'Icon', html: block('icons', 'Icon (Lucide, nét 2px)', 'Dùng UI.icon(name, cls). Bí danh: gift → tag, ticket-percent → percent, newspaper → file-text, calendar-heart → calendar-days, zalo → message-square, messenger → send, facebook → globe.',
+      '<div class="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-10 gap-2">' + window.ICONS.map(function (n) { return '<div class="flex flex-col items-center gap-1 rounded-md bg-white p-2 text-center">' + ic(n, 'size-6 text-neutral-700') + '<span class="text-xs text-neutral-600 break-all">' + n + '</span></div>'; }).join('') + '</div>', "UI.icon('shopping-cart', 'size-5')") });
+
+    /* 3. Thương hiệu */
+    sections.push({ id: 'brand', group: 'Nền tảng', title: 'Logo & linh vật', html: block('brand', 'Logo & linh vật Tiểu Bạch', 'Logo tạm (OI-024). Linh vật dùng ở EmptyState, NoPermission, trang thành công.', row([UI.logo(), UI.mascot(64, 'happy'), UI.mascot(64, 'sad'), UI.mascot(64, 'wow')]), "UI.logo()\nUI.mascot(64, 'happy' | 'sad' | 'wow')") });
+
+    /* 4. Button */
+    var variants = ['primary', 'secondary', 'outline', 'ghost', 'danger', 'link'];
+    var btns = variants.map(function (vr) { return '<div class="flex flex-wrap items-center gap-3 mb-3"><span class="w-20 text-xs font-bold text-neutral-600">' + vr + '</span>' + UI.button({ label: 'Mặc định', variant: vr }) + UI.button({ label: 'Hover giả lập', variant: vr, cls: vr === 'primary' ? 'bg-primary-400 shadow-brand' : vr === 'secondary' ? 'bg-secondary-200' : vr === 'outline' ? 'bg-primary-50 border-primary-300' : vr === 'ghost' ? 'bg-neutral-100' : vr === 'danger' ? 'bg-danger-700' : 'underline' }) + UI.button({ label: 'Focus', variant: vr, cls: 'ring-2 ring-primary-600 ring-offset-2' }) + UI.button({ label: 'Disabled', variant: vr, disabled: true }) + UI.button({ label: 'Đang xử lý', variant: vr, loading: true }) + '</div>'; }).join('');
+    sections.push({ id: 'button', group: 'Nút', title: 'Button', html: block('button', 'Button', 'Website: bo tròn full; trang quản lý: bo lg. Size sm 36px / md 44px / lg 52px. Không đặt chữ trắng trên primary-500.',
+      btns + label('Kích thước & icon') + row([UI.button({ label: 'Nhỏ', size: 'sm' }), UI.button({ label: 'Vừa', icon: 'shopping-cart' }), UI.button({ label: 'Thêm vào giỏ', size: 'lg', icon: 'shopping-cart' }), UI.button({ label: 'Trang quản lý', shape: 'rounded-lg', variant: 'secondary', icon: 'check' })]) +
+      label('IconButton') + row([UI.iconButton({ icon: 'search', label: 'Tìm kiếm' }), UI.iconButton({ icon: 'heart', label: 'Yêu thích', variant: 'outline' }), UI.iconButton({ icon: 'shopping-cart', label: 'Giỏ', variant: 'primary', badge: 3 }), UI.iconButton({ icon: 'ellipsis', label: 'Thao tác khác', size: 'sm', variant: 'outline' })]) +
+      label('DropdownMenu') + UI.button({ label: 'Mở menu', variant: 'outline', iconRight: 'chevron-down', attrs: { 'data-demo-dd': '' } }),
+      "UI.button({ label: 'Thêm vào giỏ', variant: 'primary', size: 'lg', icon: 'shopping-cart' })\nUI.iconButton({ icon: 'search', label: 'Tìm kiếm' })\nUI.dropdown(anchorEl, [{ label: 'Sửa', icon: 'pencil', onClick }, { divider: true }, { label: 'Xóa', danger: true }])") });
+
+    /* 5. Hiển thị */
+    var tones = ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'neutral'];
+    sections.push({ id: 'display', group: 'Hiển thị', title: 'Badge, Tag, Avatar', html: block('display', 'StatusBadge, Badge, Tag, Avatar', 'StatusBadge: nền 100, chữ 700, chấm 500. Tag: nhãn phụ bo sm.',
+      label('StatusBadge') + row(tones.map(function (t) { return UI.statusBadge(t, t); })) + label('Badge (nhãn góc thẻ)') + row([UI.badge('Mới', 'info'), UI.badge('Giảm 11%', 'danger'), UI.badge('Hết hàng', 'dark'), UI.badge('Pate chay tự làm', 'mint'), UI.badge('Tiết kiệm 65.000đ', 'success')]) +
+      label('Tag') + row([UI.tag('Cho chó', 'primary'), UI.tag('Cho mèo', 'secondary'), UI.tag('Cho thú nhỏ', 'warning'), UI.tag('Pate chay', 'mint'), UI.tag('Yêu cầu hủy', 'danger', 'triangle-alert'), UI.tag('Sắp hết', 'warning')]) +
+      label('Thanh toán') + row(Object.keys(App.PAY).map(App.payTag)) + label('Avatar') + row([UI.avatar('Nguyễn Thị Lan'), UI.avatar('Chủ cửa hàng', 40)]),
+      "UI.statusBadge('Đang giao', 'warning')\nUI.badge('Giảm 11%', 'danger')\nUI.tag('Cho mèo', 'secondary')\nUI.avatar('Nguyễn Thị Lan', 40)") });
+
+    sections.push({ id: 'card', group: 'Hiển thị', title: 'Card, PageHeader, DescriptionList', html: block('card', 'Card · PageHeader · DescriptionList', '',
+      UI.pageHeader({ title: 'Giỏ hàng của bạn (3 sản phẩm)', description: 'PageHeader website: tiêu đề 3xl 800.' }) +
+      '<div class="grid gap-4 md:grid-cols-2">' + UI.card({ title: 'Thông tin giao hàng', body: UI.descriptionList([{ label: 'Người nhận', value: 'Nguyễn Thị Lan' }, { label: 'Số điện thoại', value: '0901 234 567' }, { label: 'Địa chỉ', value: '12 Hoàng Văn Thụ, Phường 2, Tân Bình', full: true }]) }) +
+      UI.card({ title: 'Thẻ nổi', cls: 'shadow-sm hover:shadow-md transition', body: '<p class="text-sm text-neutral-600">Hover: shadow-md.</p>', actions: UI.button({ label: 'Sửa', size: 'sm', variant: 'outline', icon: 'pencil' }) }) + '</div>',
+      "UI.card({ title, body, actions })\nUI.pageHeader({ title, description, actions })\nUI.descriptionList([{ label, value, full }])") });
+
+    sections.push({ id: 'feedback', group: 'Phản hồi', title: 'Alert, Toast, Modal, Drawer, Confirm', html: block('feedback', 'Alert · Toast · Modal · Drawer · ConfirmDialog · Tooltip', 'Toast tự ẩn 4 giây (lỗi 6 giây). Modal: Esc đóng, Tab giữ trong hộp; mobile thành bottom sheet.',
+      ['info', 'success', 'warning', 'danger'].map(function (t) { return UI.alert({ tone: t, title: 'Alert ' + t, text: 'Một số sản phẩm đã thay đổi giá hoặc hết hàng, vui lòng kiểm tra lại', cls: 'mb-2' }); }).join('') +
+      row([UI.button({ label: 'Toast thành công', variant: 'outline', attrs: { 'data-demo-toast': 'success' } }), UI.button({ label: 'Toast lỗi', variant: 'outline', attrs: { 'data-demo-toast': 'error' } }), UI.button({ label: 'Modal', variant: 'outline', attrs: { 'data-demo-modal': '' } }), UI.button({ label: 'Drawer phải', variant: 'outline', attrs: { 'data-demo-drawer': 'right' } }), UI.button({ label: 'Drawer đáy', variant: 'outline', attrs: { 'data-demo-drawer': 'bottom' } }), UI.button({ label: 'ConfirmDialog + lý do', variant: 'danger', attrs: { 'data-demo-confirm': '' } }), UI.withTooltip(UI.button({ label: 'Disabled + Tooltip', disabled: true }), 'Đơn chưa đủ điều kiện')]),
+      "UI.alert({ tone: 'warning', title, text })\nUI.toast('Đã thêm vào giỏ', 'success', { action: { label: 'Xem giỏ', href } })\nUI.modal({ title, body, actions: [{ label: 'Lưu', onClick(api) }] })\nUI.confirm({ title, message, danger: true, reason: { required: true, options: [...] } }).then(r => r && ...)") });
+
+    sections.push({ id: 'empty', group: 'Phản hồi', title: 'EmptyState, Skeleton, NoPermission', html: block('empty', 'EmptyState · Skeleton · NoPermission', '',
+      '<div class="grid gap-4 md:grid-cols-2"><div class="rounded-lg bg-white">' + UI.emptyState({ title: 'Giỏ hàng đang trống', text: 'Boss nhà bạn đang chờ món ngon đó!', action: UI.button({ label: 'Xem sản phẩm' }) }) + '</div><div class="rounded-lg bg-white p-4">' + UI.skeleton(4) + '<div class="mt-4">' + UI.skeletonCards(2, 'grid-cols-2') + '</div></div></div>' +
+      '<div class="mt-4 rounded-lg bg-white">' + UI.noPermission({ allowed: 'Quản trị cửa hàng', current: 'Khách hàng', homeHref: '#', loginHref: '#' }) + '</div>',
+      "UI.emptyState({ title, text, action, size: 'sm' })\nUI.skeleton(4) · UI.skeletonCards(8)\nUI.noPermission({ allowed, current, homeHref, loginHref })") });
+
+    /* 6. Form */
+    var formDemo = '<form data-demo-form class="grid gap-4 lg:grid-cols-2" novalidate><div data-form-summary class="lg:col-span-2"></div>' +
+      UI.field({ name: 'ho_ten', label: 'Họ tên', required: true, placeholder: 'Nguyễn Thị Lan' }) +
+      UI.field({ name: 'sdt', label: 'Số điện thoại', type: 'tel', required: true, icon: 'phone', placeholder: '0901 234 567' }) +
+      UI.field({ name: 'mat_khau', label: 'Mật khẩu', type: 'password', required: true, hint: 'Ít nhất 8 ký tự' }) +
+      UI.field({ name: 'gia', label: 'Giá bán', type: 'money', value: 125000 }) +
+      UI.field({ name: 'tinh', label: 'Tỉnh / thành', type: 'select', placeholder: 'Chọn tỉnh / thành', options: Object.keys(MOCK.locations) }) +
+      UI.field({ name: 'ngay', label: 'Ngày', type: 'date' }) +
+      UI.field({ name: 'ma', label: 'Mã giảm giá', upper: true, placeholder: 'TIEUBACH20K', optional: true }) +
+      UI.field({ name: 'readonly', label: 'Chỉ đọc', value: 'DH-2026-00012', readonly: true }) +
+      UI.field({ name: 'disabled', label: 'Vô hiệu', value: 'Không sửa được', disabled: true }) +
+      UI.field({ name: 'ghi_chu', label: 'Ghi chú', type: 'textarea', maxlength: 255, optional: true, cls: 'lg:col-span-2' }) +
+      UI.field({ name: 'thu_cung', label: 'Loại thú cưng', type: 'multi-select', options: [{ value: 'cho', label: 'Chó' }, { value: 'meo', label: 'Mèo' }, { value: 'thu-nho', label: 'Thú nhỏ' }], value: ['meo'] }) +
+      UI.field({ name: 'gioi', label: 'RadioGroup', type: 'radio', options: ['Đổi hàng', 'Trả hàng'], value: 'Đổi hàng' }) +
+      UI.field({ name: 'cach_giao', label: 'RadioGroup dạng thẻ', type: 'radio-cards', cls: 'lg:col-span-2', cols: 3, value: 'TU_GIAO', options: [{ value: 'DVVC', label: 'Đơn vị vận chuyển', desc: 'Phí theo khu vực', icon: 'truck' }, { value: 'TU_GIAO', label: 'Cửa hàng tự giao', desc: 'Miễn phí 3 quận', icon: 'store' }, { value: 'TU_LAY', label: 'Tự lấy', desc: 'Tại cửa hàng', icon: 'map-pin' }] }) +
+      UI.field({ name: 'dong_y', type: 'checkbox', label: 'Tôi đã hiểu điều kiện đặt pate chay', required: true }) + UI.field({ name: 'hien_thi', type: 'switch', label: 'Hiển thị trên website', value: true }) +
+      UI.fileUpload({ name: 'anh', label: 'Ảnh (FileUpload)', multiple: true, max: 5, hint: 'JPG, PNG · tối đa 5 ảnh, mỗi ảnh ≤ 5MB', sizeMsg: 'Ảnh tối đa 5MB, định dạng JPG / PNG', optional: true, cls: 'lg:col-span-2' }) +
+      '<div class="lg:col-span-2">' + UI.richTextEditor({ name: 'noi_dung', label: 'RichTextEditor', placeholder: 'Viết nội dung bài…' }) + '</div>' +
+      '<div class="lg:col-span-2 flex gap-2">' + UI.button({ label: 'Kiểm tra form', type: 'submit' }) + UI.button({ label: 'Xóa lỗi', variant: 'ghost', attrs: { 'data-demo-clear': '' } }) + '</div></form>';
+    sections.push({ id: 'form', group: 'Form', title: 'Trường nhập & kiểm tra', html: block('form', 'Form: TextInput, PasswordInput, MoneyInput, Select, Date, Textarea, MultiSelect, RadioGroup, Checkbox, Switch, FileUpload, RichTextEditor', 'Nhãn trên, lỗi dưới (xs danger-700 + icon ⚠). Kiểm tra khi rời trường và khi gửi; > 2 lỗi hiện tóm tắt ở đầu form. Bấm "Kiểm tra form" để thấy trạng thái lỗi.',
+      formDemo, "UI.field({ name: 'sdt', label: 'Số điện thoại', type: 'tel', required: true })\nUI.validate(form, { sdt: [UI.rules.required('Vui lòng nhập số điện thoại'), UI.rules.phone()] })\nUI.validate.live(form, rules)") });
+
+    /* 7. Thương mại */
+    sections.push({ id: 'commerce', group: 'Thương mại', title: 'ProductCard, ComboCard, PriceTag, RatingStars', html: block('commerce', 'ProductCard · ComboCard · PriceTag · RatingStars', 'Biến thể: thường / pate chay (nút Đặt trước) / hết hàng / skeleton.',
+      '<div class="grid grid-cols-2 md:grid-cols-4 gap-4">' + App.productCard(p1) + App.productCard(pc) + App.productCard(out) + UI.skeletonCards(1, 'grid-cols-1') + '</div>' +
+      '<div class="mt-4 grid md:grid-cols-3 gap-4">' + UI.comboCard(App.comboVM(MOCK.combos[0])) + '</div>' +
+      label('PriceTag') + row([UI.priceTag({ price: 125000 }), UI.priceTag({ price: 125000, from: true }), UI.priceTag({ price: 125000, oldPrice: 140000, size: 'lg' })]) +
+      label('RatingStars') + row([UI.ratingStars(4.8, { size: 'xs', count: 32 }), UI.ratingStars(4.2, { size: 'md', showValue: true }), UI.ratingPicker({ name: 'sao', value: 4 })]),
+      "App.productCard(product) // = UI.productCard(App.productVM(product))\nUI.comboCard(App.comboVM(combo))\nUI.priceTag({ price: 125000, oldPrice: 140000, from: true })\nUI.ratingStars(4.8, { count: 32 })") });
+
+    sections.push({ id: 'pdp', group: 'Thương mại', title: 'ProductGallery, VariantTiles, QuantityStepper', html: block('pdp', 'ProductGallery · VariantTiles · QuantityStepper · RatingSummary · ReviewCard', '',
+      '<div class="grid gap-6 lg:grid-cols-2"><div data-demo-gallery></div><div class="flex flex-col gap-4"><div data-demo-tiles></div>' + row([UI.quantityStepper({ value: 1, max: 3, limitMsg: 'Chỉ còn 3 sản phẩm' }), UI.quantityStepper({ value: 2, size: 'sm' })]) + '</div></div>' +
+      '<div class="mt-6" data-demo-rsum></div><div class="mt-4 grid gap-3 md:grid-cols-2">' + UI.reviewCard({ name: 'Lan N***', stars: 5, date: MOCK.reviews[0].tao_luc, text: MOCK.reviews[0].noi_dung, photos: MOCK.reviews[0].anh }) + UI.reviewCard({ name: 'Nguyễn Thị Lan', stars: 1, date: MOCK.reviews[29].tao_luc, text: MOCK.reviews[29].noi_dung, product: 'Hạt Pedigree vị bò' }, { admin: true, statusHtml: App.stateBadge('DOC-REVIEW-REVIEW', 'HIDDEN'), hidden: true, actionsHtml: UI.button({ label: 'Hiện lại', size: 'sm', variant: 'outline' }) }) + '</div>',
+      "UI.productGallery(el, { images, alt })\nUI.variantTiles(el, { variants: [{ id, label, price, img, disabled }], value, onChange })\nUI.quantityStepper({ value: 1, max: 15, limitMsg: 'Chỉ còn 15 sản phẩm' })\nUI.ratingSummary(el, { avg, count, dist, photoCount, onFilter })") });
+
+    var lines = App.cart.lines();
+    sections.push({ id: 'cart', group: 'Thương mại', title: 'CartLine, FreeShipProgress, OrderSummary, CheckoutStepper', html: block('cart', 'CartLine · FreeShipProgress · OrderSummary · CheckoutStepper · CartDrawer', '',
+      '<div class="flex flex-col gap-2">' + lines.slice(0, 2).map(function (l) { return UI.cartLine(l); }).join('') + UI.cartLine(Object.assign({}, lines[0], { id: 'x', error: 'Sản phẩm này đã hết hàng' })) + '</div>' +
+      '<div class="mt-4 grid gap-4 md:grid-cols-2">' + UI.freeShipProgress(350000) + UI.freeShipProgress(420000) + '</div>' +
+      '<div class="mt-4 grid gap-4 md:grid-cols-2">' + UI.orderSummary({ title: 'Tóm tắt đơn', rows: [{ label: 'Tạm tính', value: '350.000đ' }, { label: 'Giảm giá (TIEUBACH20K)', value: '−20.000đ', tone: 'success' }, { label: 'Phí giao hàng', value: 'Miễn phí', tone: 'success' }], total: 330000, points: '+330 điểm dự kiến' }) + '<div class="flex flex-col gap-4">' + UI.checkoutStepper(2) + UI.button({ label: 'Mở CartDrawer', variant: 'outline', icon: 'shopping-cart', attrs: { 'data-cart-open-demo': '' } }) + '</div></div>',
+      "UI.cartLine(App.cart.lines()[0])\nUI.freeShipProgress(subtotal, { threshold: 400000 })\nUI.orderSummary({ rows, total, points })\nUI.checkoutStepper(2)\nApp.openCartDrawer()") });
+
+    var oNew = MOCK.orders.filter(function (o) { return o.code === 'DH-2026-00012'; })[0], oPate = MOCK.orders.filter(function (o) { return o.code === 'PC-2026-00004'; })[0], oCan = MOCK.orders.filter(function (o) { return o.code === 'DH-2026-00006'; })[0];
+    sections.push({ id: 'order', group: 'Thương mại', title: 'OrderStepper, PaymentQR, PatePolicyNotice, VoucherCard, PointsCard', html: block('order', 'OrderStepper · PaymentQR · PatePolicyNotice · VoucherCard · PointsCard', '',
+      label('Đơn thường đang giao') + App.stepper(oNew) + label('Đơn pate chay đang làm') + App.stepper(oPate) + label('Đơn đã hủy') + App.stepper(oCan) + label('Bản gọn') + '<div class="max-w-xs">' + App.stepper(oNew, true) + '</div>' +
+      '<div class="mt-4 grid gap-4 lg:grid-cols-2">' + UI.paymentQR({ bank: MOCK.settings.bank, account: MOCK.settings.account, holder: MOCK.settings.holder, amount: 200000, content: 'PC-2026-00005', title: 'Cọc pate chay' }) + '<div class="flex flex-col gap-3">' + UI.patePolicyNotice('inline') + UI.patePolicyNotice('alert') + '</div></div>' +
+      '<div class="mt-4 grid gap-4 md:grid-cols-2">' + UI.voucherCard({ value: '20K', unit: 'giảm', title: 'Giảm 20.000đ', cond: 'Đơn từ 200.000đ', expires: '31/12/2026', code: 'TIEUBACH20K', state: 'available', action: UI.button({ label: 'Sao chép mã', size: 'sm', variant: 'secondary' }) }) +
+      UI.voucherCard({ value: '50K', unit: 'giảm', title: 'Voucher giảm 50.000đ', cond: 'Đổi 500 điểm', state: 'locked', action: UI.withTooltip(UI.button({ label: 'Đổi', size: 'sm', disabled: true }), 'Cần thêm 50 điểm') }) + UI.voucherCard({ value: '20K', unit: 'giảm', title: 'Đã dùng', state: 'used' }) + UI.pointsCard({ points: 450, pending: 330, action: UI.button({ label: 'Đổi voucher', variant: 'outline', size: 'sm' }) }) + '</div>',
+      "App.stepper(order) // UI.orderStepper({ steps, current, ended })\nUI.paymentQR({ bank, account, holder, amount, content })\nUI.patePolicyNotice('alert')\nUI.voucherCard({ value, title, cond, expires, code, state, action })\nUI.pointsCard({ points, pending, action })") });
+
+    sections.push({ id: 'content', group: 'Trang & nội dung', title: 'Hero, Section, PetTypeTile, Testimonial, PostCard, StoreInfo', html: block('content', 'Hero · PetTypeTile · Testimonial · PostCard · StoreInfo · CTASection · Tabs · Accordion', '',
+      '<div class="-m-4">' + UI.hero({ title: 'Tiểu Bạch — đồ ăn ngon cho Boss', text: 'Hạt, pate và pate chay tự làm mỗi ngày.', img: MOCK.photo('petshop', 1, 960, 720), imgAlt: 'Cửa hàng Tiểu Bạch', actions: UI.button({ label: 'Xem sản phẩm', size: 'lg' }) }) + '</div>' +
+      '<div class="grid grid-cols-3 gap-3 max-w-xl">' + MOCK.petTypes.map(function (t) { return UI.petTypeTile({ label: t.ten, img: t.img, href: '#', bg: t.bg, fg: t.fg }); }).join('') + '</div>' +
+      '<div class="mt-3 flex gap-2 overflow-x-auto">' + UI.petTypeTile({ variant: 'chip', label: 'Tất cả', href: '#', active: true }) + MOCK.petTypes.map(function (t) { return UI.petTypeTile({ variant: 'chip', label: t.ten, href: '#', thumb: t.img }); }).join('') + '</div>' +
+      '<div class="mt-4 grid gap-4 md:grid-cols-3">' + UI.testimonial({ name: 'Lan N***', stars: 5, text: MOCK.reviews[0].noi_dung, product: 'Pate chay bí đỏ đậu gà', productHref: '#' }) + UI.postCard({ href: '#', title: MOCK.posts[0].tieu_de, img: MOCK.posts[0].anh_bia, category: MOCK.posts[0].chuyen_muc, summary: MOCK.posts[0].tom_tat, date: MOCK.posts[0].ngay_dang, readMin: 3 }) + UI.card({ body: UI.storeInfo({ address: MOCK.settings.address, hours: MOCK.settings.hours, phone: MOCK.settings.phone, phoneRaw: MOCK.settings.phoneRaw }, 'compact') }) + '</div>' +
+      '<div class="mt-4">' + UI.ctaSection({ title: 'Đặt trước pate chay', text: 'Làm tay theo đơn, giao sau khoảng 7 ngày.', actions: UI.button({ label: 'Đặt trước ngay' }), tone: 'mint' }) + '</div>' +
+      '<div class="mt-4 grid gap-4 md:grid-cols-2"><div data-demo-tabs></div>' + UI.accordion([{ title: 'Thành phần', content: 'Đậu gà, bí đỏ, yến mạch', open: true }, { title: 'Cách bảo quản', content: 'Ngăn mát 0 đến 4°C' }]) + '</div>',
+      "UI.hero({ title, text, img, imgAlt, actions, points })\nUI.section({ title, link, body, tone: 'mint' })\nUI.petTypeTile({ label, img, href, bg, fg, variant: 'chip' })\nUI.postCard(post, 'featured')\nUI.tabs(el, { tabs: [{ id, label, count, content }], variant: 'pill' })") });
+
+    /* 8. Dữ liệu (quản trị) */
+    sections.push({ id: 'table', group: 'Dữ liệu', title: 'DataTable, FilterBar, BulkActionBar', html: block('table', 'DataTable · FilterBar · BulkActionBar · ColumnToggle · Pagination', 'Tìm kiếm, bộ lọc, sắp xếp, phân trang, chọn nhiều, ẩn / hiện cột; dưới md chuyển thành danh sách thẻ. Dòng cao 52px.',
+      '<div data-demo-table></div>', "UI.table(el, {\n  columns: [{ key: 'code', label: 'Mã đơn', sortable: true, mobile: 'title' }, { key: 'state', label: 'Trạng thái', render, mobile: 'badge' }],\n  rows, pageSize: 20, selectable: true, searchKeys: ['code'],\n  filters: [{ key: 'state', label: 'Trạng thái', type: 'select', options }],\n  bulkActions: [{ label: 'Xác nhận', onClick(rows) }], rowActions: row => [...], columnToggle: true\n})") });
+
+    sections.push({ id: 'detail', group: 'Dữ liệu', title: 'DetailHeader, Timeline, LineItems', html: block('detail', 'DetailHeader · Timeline · ApprovalFlow · LineItemsTable', 'Nút chuyển trạng thái chỉ lấy từ Workflow.actions(docId, state).',
+      UI.detailHeader({ code: oNew.code, status: App.stateBadge('DOC-BOOK-ORDER', oNew.state, 'md'), tags: App.typeTag(oNew) + App.payTag(oNew.trang_thai_thanh_toan), meta: 'Đặt lúc ' + UI.fmt.datetime(oNew.tao_luc), actions: Workflow.transitions('DOC-BOOK-ORDER', oNew.state).filter(function (t) { return t.roles.indexOf('ROLE-03') >= 0; }).map(function (t) { return UI.button({ label: t.event, size: 'sm', shape: 'rounded-lg', variant: 'secondary' }); }).join('') }) +
+      '<div class="grid gap-4 lg:grid-cols-2"><div>' + UI.timeline(oNew.history.map(function (h) { return { at: h.at, title: h.to ? Workflow.state('DOC-BOOK-ORDER', h.to).name + ' · ' + h.event : h.event, by: h.by, note: h.note, tone: h.to ? Workflow.state('DOC-BOOK-ORDER', h.to).tone : 'neutral' }; })) + '</div><div>' + UI.approvalFlow([{ label: 'Chờ xử lý', state: 'done' }, { label: 'Đã chấp nhận', state: 'current' }, { label: 'Hoàn tất', state: 'todo' }]) + '<div class="mt-4" data-demo-lines></div></div></div>',
+      "UI.detailHeader({ code, status, tags, meta, actions })\nUI.timeline(order.history.map(h => ({ at, title, by, note, tone })))\nUI.lineItems(el, { columns, rows, editable: true })") });
+
+    sections.push({ id: 'dash', group: 'Dữ liệu', title: 'KpiCard, biểu đồ, CapacityBar', html: block('dash', 'KpiCard · BarChart · LineChart · DonutChart · CapacityBar · Kanban', 'Biểu đồ SVG + JS thuần, có tooltip khi hover.',
+      '<div class="grid grid-cols-2 lg:grid-cols-4 gap-3">' + UI.kpiCard({ label: 'Doanh thu hôm nay', value: '8.420.000đ', delta: 12.4, icon: 'banknote' }) + UI.kpiCard({ label: 'Đơn mới', value: '23', delta: -4.1, icon: 'receipt', tone: 'info' }) + UI.kpiCard({ label: 'Tỉ lệ hủy', value: '3,8%', delta: 1.2, goodWhenDown: true, icon: 'circle-x', tone: 'danger' }) + UI.kpiCard({ label: 'Mục tiêu tháng', value: '72%', icon: 'target', tone: 'success', target: { pct: 0.72, label: '180 / 250 triệu' } }) + '</div>' +
+      '<div class="mt-4 grid gap-4 lg:grid-cols-3"><div class="lg:col-span-2 rounded-lg bg-white p-3" data-demo-bar></div><div class="rounded-lg bg-white p-3" data-demo-donut></div><div class="lg:col-span-2 rounded-lg bg-white p-3" data-demo-line></div><div class="rounded-lg bg-white p-3 flex flex-col gap-3">' + UI.capacityBar(12, 20) + UI.capacityBar(17, 20) + UI.capacityBar(21, 20) + '</div></div>' +
+      '<div class="mt-4" data-demo-kanban></div>',
+      "UI.kpiCard({ label, value, delta, icon, target })\nUI.chart.bar(el, { labels, values })\nUI.chart.line(el, { labels, series: [{ name, values }], targets: [{ value, label }] })\nUI.chart.donut(el, { items: [{ label, value, stroke, bg }] })\nUI.capacityBar(12, 20)") });
+
+    /* 9. Badge trạng thái chứng từ */
+    sections.push({ id: 'states', group: 'Chứng từ', title: 'Trạng thái chứng từ', html: block('states', 'Badge trạng thái chứng từ', 'Mọi trạng thái của mọi chứng từ trong registry (WORKFLOWS), đúng tone.',
+      Object.keys(WORKFLOWS).map(function (d) { var w = WORKFLOWS[d]; return '<div class="mb-3"><p class="mb-1.5 text-sm font-bold">' + esc(w.name) + ' <span class="font-mono text-xs text-neutral-600">' + d + (w.numbering ? ' · ' + w.numbering : '') + '</span></p>' + row(Object.keys(w.states).map(function (s) { return App.stateBadge(d, s, 'md') + '<span class="sr-only">' + s + '</span>'; })) + '</div>'; }).join(''),
+      "var s = Workflow.state('DOC-BOOK-ORDER', row.state); UI.statusBadge(s.name, s.tone)") });
+
+    /* 10. Mẫu bố cục */
+    function mini(title, inner) { return '<div class="rounded-lg border border-neutral-200 bg-white overflow-hidden"><p class="border-b border-neutral-100 bg-neutral-50 px-3 py-2 text-xs font-bold">' + title + '</p><div class="p-3 flex flex-col gap-2">' + inner + '</div></div>'; }
+    var bar = function (w, c) { return '<div class="h-3 rounded-sm ' + (c || 'bg-neutral-200') + ' ' + w + '"></div>'; };
+    sections.push({ id: 'layouts', group: 'Mẫu trang', title: 'Mẫu bố cục trang', html: block('layouts', 'Mẫu bố cục trang', 'Cách ghép component: danh sách (PageHeader + FilterBar + DataTable), chi tiết (DetailHeader + 2 cột), form (FieldGroup 2 cột + nút dính), dashboard (KpiCard + biểu đồ). Xem các trang thật: ' + '<a class="font-bold text-primary-700 underline" href="pages/admin/don-hang.html">Đơn hàng</a>, <a class="font-bold text-primary-700 underline" href="pages/admin/chi-tiet-don.html">Chi tiết đơn</a>, <a class="font-bold text-primary-700 underline" href="pages/admin/sua-san-pham.html">Sửa sản phẩm</a>, <a class="font-bold text-primary-700 underline" href="pages/admin/thong-ke.html">Thống kê</a>.',
+      '<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">' +
+      mini('Danh sách', bar('w-1/2', 'bg-neutral-300') + '<div class="flex gap-2">' + bar('w-1/3') + bar('w-1/4') + '</div>' + [1, 2, 3, 4].map(function () { return '<div class="flex gap-2">' + bar('w-1/4', 'bg-primary-100') + bar('w-1/2') + bar('w-1/6', 'bg-info-100') + '</div>'; }).join('')) +
+      mini('Chi tiết', '<div class="flex gap-2">' + bar('w-1/3', 'bg-neutral-300') + bar('w-1/6', 'bg-warning-100') + '</div><div class="grid grid-cols-3 gap-2"><div class="col-span-2 flex flex-col gap-2">' + bar('w-full') + bar('w-full') + bar('w-2/3') + '</div><div class="flex flex-col gap-2">' + bar('w-full', 'bg-secondary-100') + bar('w-full', 'bg-secondary-100') + '</div></div>') +
+      mini('Form', bar('w-1/2', 'bg-neutral-300') + '<div class="grid grid-cols-2 gap-2">' + bar('w-full') + bar('w-full') + bar('w-full') + bar('w-full') + '</div>' + bar('w-full') + '<div class="flex justify-end">' + bar('w-1/4', 'bg-primary-500') + '</div>') +
+      mini('Dashboard', '<div class="grid grid-cols-4 gap-1">' + [1, 2, 3, 4].map(function () { return '<div class="h-8 rounded-sm bg-primary-100"></div>'; }).join('') + '</div><div class="grid grid-cols-3 gap-2"><div class="col-span-2 h-16 rounded-sm bg-secondary-100"></div><div class="h-16 rounded-full bg-warning-100"></div></div>') + '</div>') });
+
+    /* Khung trang: mục lục trái */
+    var groups = [];
+    sections.forEach(function (s) { if (groups.indexOf(s.group) < 0) groups.push(s.group); });
+    var toc = groups.map(function (g) { return '<p class="mt-4 px-3 text-xs font-bold text-neutral-500">' + g + '</p>' + sections.filter(function (s) { return s.group === g; }).map(function (s) { return '<a href="#' + s.id + '" class="block rounded-lg px-3 py-2 text-sm font-bold text-neutral-700 hover:bg-secondary-50">' + s.title + '</a>'; }).join(''); }).join('');
+    UI.area = 'site';
+    document.getElementById('app').innerHTML =
+      '<div class="bg-warning-100 text-warning-700 text-xs font-bold"><div class="mx-auto max-w-content px-4 py-2 flex items-center gap-2">' + ic('info', 'size-3.5') + 'Bản demo — dữ liệu giả · Thư viện component cho đội frontend</div></div>' +
+      '<header class="sticky top-0 z-30 border-b border-neutral-200 bg-white"><div class="flex h-16 items-center gap-3 px-4 lg:px-6">' + UI.logo({ sub: 'Design system' }) + '<span class="ml-auto"></span>' + UI.button({ label: 'Về trang chủ', variant: 'outline', size: 'sm', href: 'index.html', icon: 'house' }) + UI.button({ label: 'Trang quản lý', variant: 'secondary', size: 'sm', href: 'pages/admin/dang-nhap.html', icon: 'layout-dashboard' }) + '</div></header>' +
+      '<div class="flex"><aside class="hidden lg:block sticky top-16 h-dvh w-sidebar shrink-0 overflow-y-auto border-r border-neutral-200 bg-white p-3 pb-24"><nav aria-label="Mục lục thư viện">' + toc + '</nav></aside>' +
+      '<main class="min-w-0 flex-1 p-4 lg:p-8"><div class="mx-auto max-w-content flex flex-col gap-6">' + UI.pageHeader({ title: 'Thư viện component Tiểu Bạch', description: 'Mọi màn hình prototype chỉ ghép từ các component dưới đây (assets/js/components.js · window.UI). Màu, chữ, bo góc, bóng lấy từ token.' }) +
+      '<details class="lg:hidden rounded-lg border border-neutral-200 bg-white p-3"><summary class="font-bold">Mục lục</summary><nav aria-label="Mục lục (di động)">' + toc + '</nav></details>' +
+      sections.map(function (s) { return s.html; }).join('') + '</div></main></div>';
+
+    /* Gắn component tương tác */
+    var $ = function (s) { return document.querySelector(s); };
+    UI.productGallery($('[data-demo-gallery]'), { images: p1.anh, alt: p1.ten });
+    UI.variantTiles($('[data-demo-tiles]'), { variants: p1.variants.map(function (x) { return { id: x.id, label: x.ten, price: x.gia, img: x.anh, disabled: x.ton_kho === 0 }; }), value: p1.variants[0].id });
+    UI.ratingSummary($('[data-demo-rsum]'), { avg: p1.sao, count: p1.so_danh_gia, dist: p1.dist, photoCount: 6 });
+    UI.tabs($('[data-demo-tabs]'), { tabs: [{ id: 'a', label: 'Mô tả', content: '<p class="text-sm">Tabs gạch chân.</p>' }, { id: 'b', label: 'Đánh giá', count: 32, content: '<p class="text-sm">Có số đếm.</p>' }] });
+    UI.lineItems($('[data-demo-lines]'), { editable: true, columns: [{ key: 'ten', label: 'Tên biến thể' }, { key: 'gia', label: 'Giá bán', type: 'money', align: 'right' }, { key: 'ton', label: 'Tồn', type: 'number', align: 'right' }], rows: [{ ten: 'Gói 400g', gia: 125000, ton: 15 }, { ten: 'Gói 2kg', gia: 450000, ton: 3 }], newRow: function () { return { ten: '', gia: '', ton: 0 }; } });
+    var orders = MOCK.orders.slice(0, 12);
+    UI.table($('[data-demo-table]'), {
+      rows: orders, pageSize: 5, selectable: true, searchKeys: ['code', 'ho_ten_nhan'], searchPlaceholder: 'Tìm mã đơn, tên khách…', columnToggle: true,
+      columns: [{ key: 'code', label: 'Mã đơn', sortable: true, mobile: 'title', render: function (r) { return '<span class="font-mono font-bold">' + r.code + '</span>'; } }, { key: 'ho_ten_nhan', label: 'Khách' }, { key: 'tong_cong', label: 'Tổng tiền', align: 'right', sortable: true, format: UI.fmt.money }, { key: 'state', label: 'Trạng thái', mobile: 'badge', render: function (r) { return App.stateBadge(App.docOf(r), r.state); } }],
+      filters: [{ key: 'loai_don', label: 'Loại đơn', type: 'select', options: [{ value: 'THUONG', label: 'Thường' }, { value: 'PATE_CHAY', label: 'Pate chay' }] }],
+      bulkActions: [{ label: 'Xuất danh sách', icon: 'download', onClick: function (rows) { UI.toast('Demo: đã chọn ' + rows.length + ' dòng', 'info'); } }],
+      rowActions: function () { return [{ label: 'Xem', primary: true, variant: 'outline', onClick: function () { UI.toast('Demo: mở chi tiết', 'info'); } }, { label: 'Sửa', icon: 'pencil', onClick: function () {} }, { label: 'Xóa', icon: 'trash-2', danger: true, onClick: function () {} }]; }
+    });
+    var stats = MOCK.dailyStats.slice(-14);
+    UI.chart.bar($('[data-demo-bar]'), { labels: stats.map(function (s) { return UI.fmt.dm(s.date); }), values: stats.map(function (s) { return s.doanh_thu; }), label: 'Doanh thu 14 ngày' });
+    UI.chart.line($('[data-demo-line]'), { labels: stats.map(function (s) { return UI.fmt.dm(s.date); }), series: [{ name: 'Đơn mới', values: stats.map(function (s) { return s.moi; }) }], targets: [{ value: 25, label: 'Mục tiêu 25 đơn' }] });
+    UI.chart.donut($('[data-demo-donut]'), { centerLabel: 'đơn', items: [{ label: 'Mới đặt', value: 6, stroke: 'stroke-info-500', bg: 'bg-info-500' }, { label: 'Đang giao', value: 4, stroke: 'stroke-warning-500', bg: 'bg-warning-500' }, { label: 'Đã giao', value: 11, stroke: 'stroke-success-500', bg: 'bg-success-500' }, { label: 'Đã hủy', value: 2, stroke: 'stroke-neutral-400', bg: 'bg-neutral-400' }] });
+    UI.kanban($('[data-demo-kanban]'), { columns: [{ id: 'NEW', title: 'Mới đặt' }, { id: 'MAKING', title: 'Đang làm' }, { id: 'DONE', title: 'Đã giao' }], cards: [{ id: 1, col: 'NEW', title: 'PC-2026-00006', meta: '2 hũ · Lê Hoa' }, { id: 2, col: 'MAKING', title: 'PC-2026-00004', meta: '3 hũ · Ngô Vy' }, { id: 3, col: 'DONE', title: 'PC-2026-00002', meta: '3 hũ · Nguyễn Thị Lan' }], onMove: function (id, to) { UI.toast('Đã kéo thẻ sang ' + to, 'info'); } });
+
+    var form = $('[data-demo-form]');
+    var rules = { ho_ten: [UI.rules.required('Vui lòng nhập họ tên')], sdt: [UI.rules.required('Vui lòng nhập số điện thoại'), UI.rules.phone()], mat_khau: [UI.rules.required('Vui lòng nhập mật khẩu'), UI.rules.len(8, 64, 'Mật khẩu cần ít nhất 8 ký tự')], tinh: [UI.rules.required('Vui lòng chọn tỉnh / thành')], dong_y: [UI.rules.required('Vui lòng xác nhận đã hiểu điều kiện')] };
+    UI.validate.live(form, rules);
+    form.addEventListener('submit', function (e) { e.preventDefault(); if (UI.validate(form, rules)) UI.toast('Form hợp lệ', 'success'); });
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t.closest('[data-demo-clear]')) { Object.keys(rules).forEach(function (k) { UI.setError(form, k, ''); }); $('[data-form-summary]').innerHTML = ''; }
+      var to = t.closest('[data-demo-toast]'); if (to) UI.toast(to.getAttribute('data-demo-toast') === 'error' ? 'Có lỗi xảy ra, vui lòng thử lại sau.' : 'Đã thêm vào giỏ', to.getAttribute('data-demo-toast'), { action: { label: 'Xem giỏ', onClick: function () {} } });
+      if (t.closest('[data-demo-modal]')) UI.modal({ title: 'Modal md', body: '<p>Nội dung modal. Esc để đóng, Tab không thoát khỏi hộp.</p>' + UI.field({ name: 'x', label: 'Trường thử' }), actions: [{ label: 'Hủy', variant: 'ghost' }, { label: 'Lưu' }] });
+      var dr = t.closest('[data-demo-drawer]'); if (dr) UI.drawer({ title: 'Drawer', side: dr.getAttribute('data-demo-drawer'), body: '<p>Form trang quản lý / bộ lọc mobile.</p>', actions: [{ label: 'Đóng', variant: 'ghost' }, { label: 'Áp dụng' }] });
+      if (t.closest('[data-demo-confirm]')) UI.confirm({ title: 'Hủy đơn DH-2026-00012?', message: 'Thao tác không hoàn tác được.', danger: true, confirmLabel: 'Hủy đơn', reason: { label: 'Lý do hủy', required: true, options: ['Đổi ý, không mua nữa', 'Đặt nhầm sản phẩm', 'Khác'], errorMsg: 'Vui lòng chọn lý do hủy' } }).then(function (r) { if (r) UI.toast('Đã hủy: ' + r.note, 'success'); });
+      var dd = t.closest('[data-demo-dd]'); if (dd) UI.dropdown(dd, [{ label: 'Xem chi tiết', icon: 'eye', onClick: function () {} }, { label: 'Sửa', icon: 'pencil', onClick: function () {} }, { divider: true }, { label: 'Xóa', icon: 'trash-2', danger: true, onClick: function () {} }]);
+      if (t.closest('[data-cart-open-demo]')) App.openCartDrawer();
+    });
+  })();
+  </script>
+</body>
+</html>

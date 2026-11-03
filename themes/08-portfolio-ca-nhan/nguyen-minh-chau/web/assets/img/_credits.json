@@ -1,0 +1,186 @@
+[
+  {
+    "file": "assets/img/project-hong-duyen.jpg",
+    "purpose": "index.html — project 01 Hong Duyen engagement ceremony",
+    "source": "openverse",
+    "id": "openverse-a746259e-90c7-40e2-9854-1a6b15ddac07",
+    "title": "Wedding / Hội An",
+    "creator": "Merlijn Hoek",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/31496313@N00/54379032779"
+  },
+  {
+    "file": "assets/img/project-sen-hong-lotus.webp",
+    "purpose": "index.html — project 02 Sen Hong lotus concept",
+    "source": "openverse",
+    "id": "openverse-60c54a8d-a7fd-414b-beda-760f56ca41a4",
+    "title": "lotus flower",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/6075611/lotus-flower"
+  },
+  {
+    "file": "assets/img/project-to-hong-table.jpg",
+    "purpose": "index.html — project 03 To Hong family wedding table",
+    "source": "openverse",
+    "id": "openverse-5c6017c7-8eae-41ee-8b3c-fe533394bc8b",
+    "title": "Wedding Celebration",
+    "creator": "Ivan",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/wedding-celebration-MLZK9UI7Y7"
+  },
+  {
+    "file": "assets/img/expertise-embroidery.jpg",
+    "purpose": "index.html — expertise detail image, hand embroidery",
+    "source": "openverse",
+    "id": "openverse-9b075ba7-1916-4e22-9408-79436925d646",
+    "title": "Hand Embroidery 01",
+    "creator": "Rajesh_India",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/74821492@N00/52316514548"
+  },
+  {
+    "file": "assets/img/hero-incense-ritual.jpg",
+    "purpose": "index.html — hero secondary image, ritual incense",
+    "source": "openverse",
+    "id": "openverse-b7a8a877-6df6-44d9-8631-2bc420ed68f5",
+    "title": "Incense Stick Making 02",
+    "creator": "Rajesh_India",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/74821492@N00/52297552952"
+  },
+  {
+    "file": "assets/img/hero-portrait-ao-dai.jpg",
+    "purpose": "index.html — hero portrait, woman in ao dai",
+    "source": "openverse",
+    "id": "openverse-33db669c-10c6-4c39-a866-f09254306438",
+    "title": "Woman wearing ao dai (traditional dress), Hue, Vietnam",
+    "creator": "Arthur Chapman",
+    "license": "CC BY-NC 2.0",
+    "page": "https://www.flickr.com/photos/32005048@N06/52703112136"
+  },
+  {
+    "file": "assets/img/hero-ceremony-detail.jpg",
+    "purpose": "index.html — hero secondary, ceremony still life",
+    "source": "openverse",
+    "id": "openverse-97722011-d2d4-4efb-95e9-6d1b3712ada1",
+    "title": "",
+    "creator": "SymphonicPoet",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/23629795@N04/27553086910"
+  },
+  {
+    "file": "assets/img/about-ao-dai.jpg",
+    "purpose": "index.html — about me image",
+    "source": "openverse",
+    "id": "openverse-16ab61ac-166c-4c72-be19-5dd5acae6aad",
+    "title": "",
+    "creator": "SymphonicPoet",
+    "license": "CC BY-NC-SA 2.0",
+    "page": "https://www.flickr.com/photos/23629795@N04/27552721030"
+  },
+  {
+    "file": "assets/img/project-to-hong-family.jpg",
+    "purpose": "index.html — project 03 family wedding",
+    "source": "openverse",
+    "id": "openverse-3cc1c32c-d6d4-4877-b7a3-3886f7432e88",
+    "title": "",
+    "creator": "SymphonicPoet",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/23629795@N04/27218736134"
+  },
+  {
+    "file": "assets/img/expertise-ceremony.jpg",
+    "purpose": "index.html — expertise detail image",
+    "source": "openverse",
+    "id": "openverse-4d9280b0-1cc0-40f3-82bd-0e9a4d78a4da",
+    "title": "",
+    "creator": "SymphonicPoet",
+    "license": "CC BY-NC-SA 2.0",
+    "page": "https://www.flickr.com/photos/23629795@N04/27755008531"
+  },
+  {
+    "file": "assets/img/experience-wedding-day.jpg",
+    "purpose": "index.html — experience section image",
+    "source": "openverse",
+    "id": "openverse-401d0b62-ea70-4869-87cd-d1730b44703c",
+    "title": "",
+    "creator": "SymphonicPoet",
+    "license": "CC BY-NC-SA 2.0",
+    "page": "https://www.flickr.com/photos/23629795@N04/27796960086"
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/5/50/Do_le_an_hoi.JPG",
+    "purpose": "index.html — hero secondary image, betrothal trays",
+    "source": "web",
+    "id": "web-1e4f6kt",
+    "title": "Traditional Vietnamese betrothal gift trays",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Traditional_Vietnamese_wedding",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Thaiquoc-ngockieu.jpg",
+    "purpose": "index.html — project 01 Hong Duyen detail",
+    "source": "web",
+    "id": "web-1d7brme",
+    "title": "Traditional wedding ao dai with head piece",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Traditional_Vietnamese_wedding",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/1/13/VNese_Wedding_021.jpg",
+    "purpose": "index.html — about section image",
+    "source": "web",
+    "id": "web-5ai77u",
+    "title": "Vietnamese wedding gifts exchange",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Traditional_Vietnamese_wedding",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/5/50/Trau_cau_%28Vietnam%29.JPG",
+    "purpose": "index.html — expertise detail image",
+    "source": "web",
+    "id": "web-1wpjot1",
+    "title": "Betel leaf and areca nut wedding gift",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://en.wikipedia.org/wiki/Traditional_Vietnamese_wedding",
+    "remote": true
+  },
+  {
+    "file": "assets/img/expertise-areca-betel.jpg",
+    "purpose": "index.html — expertise main image, areca and betel offering",
+    "source": "openverse",
+    "id": "openverse-ff7504fd-d005-453e-b771-a9ede0896c85",
+    "title": "Areca nuts - Betel",
+    "creator": "prilfish",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/37707866@N00/52819959703"
+  },
+  {
+    "file": "assets/img/project-to-hong-wedding.jpg",
+    "purpose": "index.html — project 03 To Hong, traditional dress",
+    "source": "openverse",
+    "id": "openverse-3c1fbefa-ec99-490a-b5bd-b90e2fe10dbf",
+    "title": "Vietnamese Girls in Ao Dai",
+    "creator": "HeyItsWilliam",
+    "license": "CC BY-ND 2.0",
+    "page": "https://www.flickr.com/photos/40477905@N05/8076520969"
+  },
+  {
+    "file": "assets/img/project-to-hong-hue-garden.jpg",
+    "purpose": "index.html — project 03 To Hong, Hue garden house venue",
+    "source": "openverse",
+    "id": "openverse-b7e049f7-39d3-4ecd-8bd5-86a82336d28f",
+    "title": "Garden house, Hue",
+    "creator": "judithbluepool",
+    "license": "CC BY-NC 2.0",
+    "page": "https://www.flickr.com/photos/74399150@N00/27554229980"
+  }
+]

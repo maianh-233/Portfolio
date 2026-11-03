@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thêm / sửa bánh | Quản lý tiệm</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-017 Thêm / sửa bánh: FR-031, FR-032. ?id=<id> để sửa; không có id = thêm mới.
+     Người không có quyền "Sửa giá" thấy ô giá chỉ đọc + khóa (E-QB-03). Thử đăng nhập vy@tiembanhkem.vn. -->
+<body data-screen="SCR-017" data-layout="admin" data-nav="cakes" data-title="Sửa bánh" data-back="qt-banh.html" class="admin bg-[#FFFBF6] text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="lg:pl-60 pb-40 lg:pb-12">
+    <form id="cake-form" novalidate class="mx-auto max-w-admin px-4 md:px-6 lg:px-8 pt-4 lg:pt-8">
+      <a href="qt-banh.html" class="hidden lg:inline-flex items-center gap-1 text-sm font-bold text-ink-muted hover:text-primary-strong min-h-[32px]"><i class="ph ph-arrow-left" aria-hidden="true"></i>Bánh</a>
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h1 id="title" class="text-[20px] lg:text-2xl font-extrabold"></h1>
+        <div class="hidden lg:flex gap-2"><button type="button" class="btn btn-secondary h-10 px-5 btn-cancel">Hủy</button><button type="submit" class="btn btn-primary h-10 px-6 btn-save">Lưu</button></div>
+      </div>
+
+      <div class="mt-5 grid lg:grid-cols-12 gap-5 items-start">
+        <div class="lg:col-span-7 space-y-5">
+          <!-- Thông tin song ngữ -->
+          <section class="rounded-2xl bg-white border border-beige p-4 md:p-5">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h2 class="font-extrabold">Thông tin</h2>
+              <div class="inline-flex rounded-full bg-cream p-1" role="tablist" aria-label="Ngôn ngữ nội dung">
+                <button type="button" role="tab" data-tab="vi" class="h-9 px-4 rounded-full text-sm font-bold">Tiếng Việt</button>
+                <button type="button" role="tab" data-tab="en" class="h-9 px-4 rounded-full text-sm font-bold inline-flex items-center gap-1.5">English <span id="en-flag" class="hidden badge bg-butter text-butter-strong !h-5 !px-2 !text-[10px]">Chưa dịch</span></button>
+              </div>
+            </div>
+            <div id="fields" class="mt-4 space-y-4"></div>
+            <fieldset class="mt-5">
+              <legend class="field-label mb-2">Lưu ý dị ứng</legend>
+              <div id="allergens" class="flex flex-wrap gap-x-5 gap-y-2"></div>
+              <div class="field mt-3 max-w-sm"><label class="field-label text-sm" for="alg-other">Khác</label><input id="alg-other" type="text" maxlength="60" class="field-input" placeholder="Ví dụ: đậu nành"></div>
+            </fieldset>
+          </section>
+
+          <!-- Kích cỡ và giá -->
+          <section class="rounded-2xl bg-white border border-beige p-4 md:p-5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h2 class="font-extrabold">Kích cỡ và giá</h2>
+              <button type="button" id="price-log" class="text-sm font-bold text-primary-strong hover:underline min-h-[32px]"><i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i> Lịch sử giá</button>
+            </div>
+            <p id="price-lock" class="hidden mt-2 rounded-xl bg-cream px-3 py-2 text-sm font-semibold text-ink-muted"><i class="ph-fill ph-lock-simple" aria-hidden="true"></i> Bạn không có quyền sửa giá.</p>
+            <div class="mt-3 hidden md:grid grid-cols-[1.2fr_1fr_1.3fr_auto_auto] gap-2 text-xs font-extrabold text-ink-muted px-1"><span>Kích thước</span><span>Số người ăn</span><span>Giá (₫)</span><span>Đang bán</span><span class="w-9"></span></div>
+            <ul id="sizes" class="mt-2 space-y-3 md:space-y-2"></ul>
+            <p id="sizes-err" class="field-error hidden"></p>
+            <button type="button" id="add-size" class="btn btn-ghost h-10 px-4 mt-3 border border-beige text-sm"><i class="ph ph-plus" aria-hidden="true"></i>Thêm kích cỡ</button>
+          </section>
+        </div>
+
+        <div class="lg:col-span-5 space-y-5">
+          <section class="rounded-2xl bg-white border border-beige p-4 md:p-5">
+            <h2 class="font-extrabold">Ảnh <span class="text-danger">*</span></h2>
+            <p class="text-sm text-ink-muted mt-0.5 mb-3">Bấm ngôi sao để chọn ảnh đại diện. Ảnh tỉ lệ 1:1 hoặc 4:5, cạnh dài từ 1600 px.</p>
+            <div id="images"></div>
+            <p id="images-err" class="field-error hidden"></p>
+          </section>
+          <section class="rounded-2xl bg-white border border-beige p-4 md:p-5">
+            <h2 class="font-extrabold mb-3">Hiển thị</h2>
+            <fieldset><legend class="field-label text-sm mb-2">Trạng thái</legend>
+              <div class="grid grid-cols-2 gap-2">
+                <label class="option-card !min-h-[48px] !py-2"><input type="radio" name="status" value="active" class="sr-only"><span class="font-bold">Đang bán</span></label>
+                <label class="option-card !min-h-[48px] !py-2"><input type="radio" name="status" value="inactive" class="sr-only"><span class="font-bold">Ngừng bán</span></label>
+              </div></fieldset>
+            <label class="mt-4 flex items-center gap-3 font-semibold cursor-pointer"><input id="featured" type="checkbox">Bánh nổi bật</label>
+          </section>
+        </div>
+      </div>
+
+      <!-- Nút lưu dính đáy (điện thoại) -->
+      <div class="lg:hidden fixed bottom-16 inset-x-0 z-20 bg-white/95 backdrop-blur border-t border-beige px-4 py-3 flex gap-2">
+        <button type="button" class="btn btn-secondary h-12 px-5 btn-cancel">Hủy</button>
+        <button type="submit" class="btn btn-primary h-12 flex-1 btn-save">Lưu</button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    App.onReady(function () {
+      var ALLERGENS = ['Trứng', 'Sữa', 'Hạt', 'Gluten'];
+      var id = App.param('id');
+      var orig = id ? Cakes.byId(id) : null;
+      if (id && !orig) { $('#cake-form').innerHTML = '<div class="rounded-2xl bg-white border border-beige mt-6">' + UI.empty({ icon: 'ph-cake', title: 'Không tìm thấy bánh', action: '<a href="qt-banh.html" class="btn btn-primary h-10 px-5">Về danh sách bánh</a>' }) + '</div>'; return; }
+      var canPrice = Auth.canEditPrice();
+      var C = orig ? JSON.parse(JSON.stringify(orig)) : { name: '', name_en: '', description: '', description_en: '', flavor: '', flavor_en: '', ingredients: '', ingredients_en: '', allergens: [], sizes: [{ id: 'n1', label: '16 cm', servings: '6-8', price: 0, active: true, isNew: true }], images: [], status: 'active', featured: false };
+      var tab = 'vi', dirty = false, files = C.images.map(function (s) { return { src: s, name: 'Ảnh bánh' }; });
+      document.title = (orig ? 'Sửa bánh' : 'Thêm bánh') + ' | Quản lý tiệm';
+      $('#title').textContent = orig ? 'Sửa bánh: ' + orig.name : 'Thêm bánh';
+
+      /* ----- Trường văn bản theo tab VI / EN ----- */
+      function renderFields() {
+        var sfx = tab === 'en' ? '_en' : '';
+        var flavors = Cakes.flavors().map(function (f) { return '<option value="' + Fmt.esc(tab === 'en' ? f.en : f.vi) + '">'; }).join('');
+        $('#fields').innerHTML =
+          '<div class="field"><label class="field-label" for="f-name">Tên bánh' + (tab === 'vi' ? ' <span class="text-danger">*</span>' : '') + '</label><input id="f-name" data-k="name' + sfx + '" maxlength="100" class="field-input" value="' + Fmt.esc(C['name' + sfx] || '') + '" aria-describedby="f-name-err"><p id="f-name-err" class="field-error hidden"></p></div>' +
+          '<div class="field"><label class="field-label" for="f-desc">Mô tả</label><textarea id="f-desc" data-k="description' + sfx + '" rows="3" maxlength="2000" class="field-input">' + Fmt.esc(C['description' + sfx] || '') + '</textarea></div>' +
+          '<div class="grid md:grid-cols-2 gap-4"><div class="field"><label class="field-label" for="f-flavor">Hương vị</label><input id="f-flavor" data-k="flavor' + sfx + '" list="flavor-list" maxlength="100" class="field-input" value="' + Fmt.esc(C['flavor' + sfx] || '') + '"><datalist id="flavor-list">' + flavors + '</datalist></div>' +
+          '<div class="field"><label class="field-label" for="f-ing">Thành phần</label><textarea id="f-ing" data-k="ingredients' + sfx + '" rows="2" maxlength="1000" class="field-input">' + Fmt.esc(C['ingredients' + sfx] || '') + '</textarea></div></div>';
+        $all('[data-k]', $('#fields')).forEach(function (inp) { inp.oninput = function () { C[inp.dataset.k] = inp.value; dirty = true; flagEn(); }; });
+        $all('[data-tab]').forEach(function (b) { var on = b.dataset.tab === tab; b.setAttribute('aria-selected', on); b.classList.toggle('bg-white', on); b.classList.toggle('shadow-soft', on); b.classList.toggle('text-primary-strong', on); });
+        flagEn();
+      }
+      function flagEn() { $('#en-flag').classList.toggle('hidden', !!(C.name_en || '').trim()); }
+      $all('[data-tab]').forEach(function (b) { b.onclick = function () { tab = b.dataset.tab; renderFields(); }; });
+
+      /* ----- Dị ứng ----- */
+      $('#allergens').innerHTML = ALLERGENS.map(function (a) { return '<label class="flex items-center gap-2 font-semibold cursor-pointer min-h-[36px]"><input type="checkbox" data-alg="' + a + '"' + (C.allergens.indexOf(a) > -1 ? ' checked' : '') + '>' + a + '</label>'; }).join('');
+      $('#alg-other').value = C.allergens.filter(function (a) { return ALLERGENS.indexOf(a) === -1; }).join(', ');
+      $all('[data-alg]').forEach(function (cb) { cb.onchange = function () { dirty = true; }; });
+      $('#alg-other').oninput = function () { dirty = true; };
+
+      /* ----- Kích cỡ và giá ----- */
+      function renderSizes() {
+        $('#price-lock').classList.toggle('hidden', canPrice);
+        $('#sizes').innerHTML = C.sizes.map(function (s, i) {
+          return '<li class="grid grid-cols-2 md:grid-cols-[1.2fr_1fr_1.3fr_auto_auto] gap-2 items-center rounded-xl md:rounded-none bg-cream/60 md:bg-transparent p-3 md:p-0">' +
+            '<div><label class="md:sr-only text-xs font-bold text-ink-muted" for="sl-' + i + '">Kích thước</label><input id="sl-' + i + '" data-s="label" data-i="' + i + '" maxlength="30" class="field-input" value="' + Fmt.esc(s.label) + '"></div>' +
+            '<div><label class="md:sr-only text-xs font-bold text-ink-muted" for="sv-' + i + '">Số người ăn</label><input id="sv-' + i + '" data-s="servings" data-i="' + i + '" class="field-input" value="' + Fmt.esc(s.servings) + '" placeholder="6-8"></div>' +
+            '<div class="col-span-2 md:col-span-1"><label class="md:sr-only text-xs font-bold text-ink-muted" for="sp-' + i + '">Giá (₫)</label><div class="relative"><input id="sp-' + i + '" data-s="price" data-i="' + i + '" inputmode="numeric" class="field-input tabular-nums ' + (canPrice ? '' : '!pr-9') + '" value="' + (s.price ? s.price.toLocaleString('vi-VN') : '') + '"' + (canPrice ? '' : ' readonly aria-describedby="price-lock"') + '>' +
+            (canPrice ? '' : '<i class="ph-fill ph-lock-simple absolute right-3 top-1/2 -translate-y-1/2 text-ink-muted" aria-label="Đã khóa"></i>') + '</div></div>' +
+            '<label class="flex items-center gap-2 text-sm font-semibold"><span class="switch"><input type="checkbox" data-s="active" data-i="' + i + '"' + (s.active ? ' checked' : '') + ' aria-label="Cỡ ' + Fmt.esc(s.label) + ' đang bán"><span></span></span><span class="md:sr-only">Đang bán</span></label>' +
+            '<div class="text-right">' + (s.isNew ? '<button type="button" data-del="' + i + '" class="grid place-items-center w-9 h-9 rounded-full hover:bg-white text-danger ml-auto" aria-label="Bỏ cỡ này"><i class="ph ph-trash" aria-hidden="true"></i></button>' : '<span class="inline-block w-9"></span>') + '</div></li>';
+        }).join('');
+        $all('[data-s]', $('#sizes')).forEach(function (inp) {
+          var s = C.sizes[+inp.dataset.i], k = inp.dataset.s;
+          if (k === 'active') { inp.onchange = function () { s.active = inp.checked; dirty = true; }; return; }
+          if (k === 'price') {
+            inp.addEventListener('focus', function () { if (!canPrice) Toast.show('Bạn không có quyền sửa giá.', 'error'); }); // E-QB-03
+            inp.oninput = function () { var v = inp.value.replace(/\D/g, ''); inp.value = v ? (+v).toLocaleString('vi-VN') : ''; s.price = +v || 0; dirty = true; };
+            return;
+          }
+          inp.oninput = function () { s[k] = inp.value; dirty = true; };
+        });
+        $all('[data-del]').forEach(function (b) { b.onclick = function () { C.sizes.splice(+b.dataset.del, 1); renderSizes(); }; });
+      }
+      $('#add-size').onclick = function () {
+        if (!canPrice) { Toast.show('Bạn không có quyền sửa giá nên không thêm được cỡ mới.', 'error'); return; }
+        C.sizes.push({ id: 'n' + Date.now(), label: '', servings: '', price: 0, active: true, isNew: true }); dirty = true; renderSizes();
+        $('#sl-' + (C.sizes.length - 1)).focus();
+      };
+      $('#price-log').onclick = function () {
+        var log = Store.get('price_log', []).filter(function (x) { return orig && x.cakeId === orig.id; });
+        var seed = orig ? [{ at: MOCK.helpers.dt(-40, 9, 0), by: 'Mai (Chủ tiệm)', size: orig.sizes[0].label, from: orig.sizes[0].price - 20000, to: orig.sizes[0].price }] : [];
+        var rows = log.concat(seed);
+        Modal.open({ title: 'Lịch sử giá', size: 'lg', body: rows.length ? '<ul class="divide-y divide-beige">' + rows.map(function (r) { return '<li class="py-3 flex flex-wrap justify-between gap-2"><span><b>' + r.size + '</b>: <span class="line-through text-ink-muted tabular-nums">' + Fmt.money(r.from) + '</span> → <b class="tabular-nums">' + Fmt.money(r.to) + '</b></span><span class="text-sm text-ink-muted">' + Fmt.dateTime(r.at) + ' · ' + r.by + '</span></li>'; }).join('') + '</ul>' : '<p class="text-ink-muted">Chưa có thay đổi giá.</p>', actions: [{ label: 'Đóng' }] });
+      };
+
+      /* ----- Ảnh + hiển thị ----- */
+      Uploader.mount($('#images'), { max: 8, star: true, files: files, error: 'Ảnh phải là JPG, PNG, WEBP, tối đa 5 MB.', onChange: function (f) { files = f; dirty = true; $('#images-err').classList.add('hidden'); } });
+      $('input[name=status][value="' + C.status + '"]').checked = true;
+      $all('input[name=status]').forEach(function (r) { r.onchange = function () { C.status = r.value; dirty = true; }; });
+      $('#featured').checked = C.featured;
+      $('#featured').onchange = function () { C.featured = this.checked; dirty = true; };
+
+      /* ----- Lưu / Hủy ----- */
+      function validate() {
+        var errs = [];
+        if (!(C.name || '').trim()) { if (tab !== 'vi') { tab = 'vi'; renderFields(); } errs.push([$('#f-name'), 'Vui lòng nhập đủ các trường bắt buộc.']); }
+        if (!files.length) { var ie = $('#images-err'); ie.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Cần ít nhất 1 ảnh bánh.'; ie.classList.remove('hidden'); errs.push([$('#images label') || $('#images'), null]); }
+        if (!C.sizes.length) { var se = $('#sizes-err'); se.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Cần ít nhất 1 kích cỡ.'; se.classList.remove('hidden'); errs.push([$('#add-size'), null]); }
+        C.sizes.forEach(function (s, i) {
+          if (!s.label.trim()) errs.push([$('#sl-' + i), 'Vui lòng nhập đủ các trường bắt buộc.']);
+          if (!/^\d+(\s*-\s*\d+)?$/.test(String(s.servings).trim())) errs.push([$('#sv-' + i), 'Số người ăn không hợp lệ.']);
+          if (!(s.price > 0 && s.price <= 100000000)) errs.push([$('#sp-' + i), 'Giá không hợp lệ.']); // E-QB-04
+        });
+        return errs;
+      }
+      function submit(e) {
+        e.preventDefault();
+        var errs = validate();
+        if (errs.length) {
+          errs.forEach(function (x) { if (x[1]) FormUI.setError(x[0], x[1]); });
+          Toast.show('Vui lòng nhập đủ các trường bắt buộc.', 'error'); // E-QB-01
+          var f = errs[0][0]; if (f) { f.scrollIntoView({ behavior: 'smooth', block: 'center' }); f.focus && f.focus({ preventScroll: true }); }
+          return;
+        }
+        var btns = $all('.btn-save'); btns.forEach(function (b) { FormUI.busy(b, true, 'Đang lưu...'); });
+        setTimeout(function () {
+          var other = $('#alg-other').value.split(',').map(function (x) { return x.trim(); }).filter(Boolean);
+          C.allergens = $all('[data-alg]').filter(function (cb) { return cb.checked; }).map(function (cb) { return cb.dataset.alg; }).concat(other);
+          C.images = files.map(function (f) { return f.src; });
+          C.sizes.forEach(function (s) { delete s.isNew; });
+          var u = Auth.current();
+          if (orig) {
+            var log = Store.get('price_log', []);
+            C.sizes.forEach(function (s) { var old = orig.sizes.filter(function (x) { return x.id === s.id; })[0]; if (old && old.price !== s.price) log.unshift({ cakeId: orig.id, at: new Date().toISOString(), by: u.name.split(' ').pop(), size: s.label, from: old.price, to: s.price }); });
+            Store.set('price_log', log);
+            Object.keys(C).forEach(function (k) { orig[k] = C[k]; });
+          } else {
+            var all = Cakes.all();
+            C.id = Math.max.apply(null, all.map(function (c) { return c.id; })) + 1;
+            C.slug = Fmt.fold(C.name).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '-' + C.id;
+            C.createdAt = MOCK.today; C.sold = 0; C.isNew = true; C.bestSeller = false;
+            all.push(C);
+          }
+          DB.save('cakes'); dirty = false;
+          Toast.show('Đã lưu bánh', 'success');
+          setTimeout(function () { location.href = 'qt-banh.html'; }, 900);
+        }, 600);
+      }
+      $('#cake-form').addEventListener('submit', submit);
+      $all('.btn-cancel').forEach(function (b) {
+        b.onclick = function () {
+          if (!dirty) { location.href = 'qt-banh.html'; return; }
+          Modal.confirm({ title: 'Bỏ các thay đổi?', message: 'Những gì bạn vừa sửa sẽ không được lưu.', confirmLabel: 'Bỏ thay đổi', cancelLabel: 'Tiếp tục sửa', danger: true }).then(function (r) { if (r.ok) location.href = 'qt-banh.html'; });
+        };
+      });
+      renderFields(); renderSizes();
+    });
+  </script>
+</body>
+</html>

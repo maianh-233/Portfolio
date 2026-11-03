@@ -1,0 +1,69 @@
+{
+  "slug": "matcha-atelier",
+  "name": "MATCHA ATELIER",
+  "projectType": "website",
+  "concept": {
+    "topic": "website tiệm bánh và trà sữa",
+    "brand": "MATCHA ATELIER",
+    "purpose": "Thiết kế website giới thiệu thương hiệu trà và bánh MATCHA ATELIER, kết hợp tinh thần tối giản Nhật Bản với văn hóa trà matcha hiện đại.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Art direction: Xanh matcha #65764B, trắng ngà #F5F1E7, đen mực #242821, xanh rêu nhạt #B7C2A0. Typography tinh giản, khoảng trắng rộng, đường kẻ mảnh, chất liệu giấy washi và hình ảnh gốm thủ công.\n\nTrang chủ: Hero tối giản với một tách matcha và bánh wagashi hoặc bánh cuộn matcha. Headline “Find Your Quiet Moment”. Bố cục lệch trục, hình ảnh lớn, nội dung ngắn và khoảng trắng có chủ đích.\n\nSản phẩm & Menu: Phân loại matcha latte, trà nguyên bản, bánh matcha, mochi và bánh dùng kèm trà. Mỗi món có ảnh, mô tả hương vị và nguyên liệu nổi bật.\n\nVề chúng tôi: Giới thiệu cảm hứng từ trà đạo, cách lựa chọn nguyên liệu, sự cân bằng hương vị và triết lý sống chậm.\n\nWebsite song ngữ Việt – Anh, tối đa 3 trang. Chuyển trang mượt, hiệu ứng xuất hiện nhẹ, không lạm dụng animation. Không có chức năng đặt hàng, giỏ hàng, thanh toán hoặc form giao dịch. Đảm bảo giao diện responsive và dễ đọc. Có nút chuyển đổi ảnh việt",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-23T08:18:42.487Z",
+  "updatedAt": "2026-10-23T08:57:11.119Z",
+  "screen": "done",
+  "request": "website tiệm bánh và trà sữa",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\matcha-atelier\\web",
+    "builtAt": "2026-10-23T08:42:26.775Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/menu.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/menu.html": []
+    }
+  },
+  "job": null,
+  "qa": {
+    "createdAt": "2026-10-23T08:42:40.362Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 9
+  },
+  "external": {
+    "tool": "cursor",
+    "mode": "quick-revise",
+    "feedback": "Họ muốn phong cách nhật bản cổ cổ một xíu",
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\matcha-atelier",
+    "preparedAt": "2026-10-23T08:57:11.119Z"
+  }
+}

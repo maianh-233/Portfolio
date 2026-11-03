@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="home.title">MONOCHROME GENTLEMEN — Ít hơn, nhưng tốt hơn</title>
+<meta name="description" content="MONOCHROME GENTLEMEN, barber studio chuyên kiểu tóc nam tinh gọn, kỹ thuật cắt chính xác và phong cách lịch lãm hiện đại." data-i18n-attr="content:home.desc">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body>
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-line bg-paper">
+  <div class="mg-header-inner mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a aria-current="page" href="index.html" class="flex min-w-0 items-center gap-3" aria-label="MONOCHROME GENTLEMEN">
+      <span class="grid h-9 w-9 shrink-0 place-items-center border border-ink font-display text-[13px] font-semibold tracking-[0.04em]">MG</span>
+      <span class="font-display text-[12px] font-semibold uppercase leading-[1.25] tracking-[0.16em] sm:text-sm sm:tracking-[0.22em]">Monochrome<br class="sm:hidden"> Gentlemen</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Menu chính" data-i18n-attr="aria-label:nav.label">
+      <a aria-current="page" href="index.html" data-i18n="nav.home" class="relative py-2 text-[13px] font-medium uppercase tracking-[0.14em] text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Trang chủ</a>
+      <a href="pages/services.html" data-i18n="nav.services" class="relative py-2 text-[13px] font-medium uppercase tracking-[0.14em] text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Dịch vụ</a>
+      <a href="pages/portfolio.html" data-i18n="nav.portfolio" class="relative py-2 text-[13px] font-medium uppercase tracking-[0.14em] text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Bộ sưu tập tóc</a>
+      <a href="pages/studio.html" data-i18n="nav.studio" class="relative py-2 text-[13px] font-medium uppercase tracking-[0.14em] text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">The Studio</a>
+    </nav>
+
+    <div class="flex shrink-0 items-center gap-3">
+      <div class="flex border border-ink text-[12px] font-semibold tracking-[0.1em]" role="group" aria-label="Ngôn ngữ" data-i18n-attr="aria-label:lang.label">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="h-11 w-11 transition-colors duration-300 hover:bg-line lg:h-9 lg:w-10">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="h-11 w-11 border-l border-ink transition-colors duration-300 hover:bg-line lg:h-9 lg:w-10">EN</button>
+      </div>
+      <button type="button" data-book data-i18n="cta.book" class="hidden h-11 items-center bg-ink px-6 text-[12px] font-semibold uppercase tracking-[0.16em] text-paper transition-colors duration-300 hover:bg-graphite active:scale-[.98] lg:inline-flex">Đặt lịch</button>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink lg:hidden" aria-label="Mở menu" data-i18n-attr="aria-label:nav.open">
+        <span class="flex w-5 flex-col gap-[5px]" aria-hidden="true"><span class="h-px w-full bg-ink"></span><span class="h-px w-full bg-ink"></span><span class="h-px w-3/5 bg-ink"></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="absolute inset-x-0 top-full z-50 max-h-[calc(100dvh-64px)] overflow-y-auto border-y border-ink bg-paper px-4 pb-8 pt-2 sm:px-6 lg:hidden">
+    <nav class="flex flex-col" aria-label="Menu điện thoại" data-i18n-attr="aria-label:nav.mobile">
+      <a aria-current="page" href="index.html" class="flex items-baseline gap-5 border-b border-line py-4 font-display text-2xl font-medium uppercase tracking-tight aria-[current=page]:font-semibold"><span class="w-6 text-xs font-medium text-graphite">01</span><span data-i18n="nav.home">Trang chủ</span></a>
+      <a href="pages/services.html" class="flex items-baseline gap-5 border-b border-line py-4 font-display text-2xl font-medium uppercase tracking-tight aria-[current=page]:font-semibold"><span class="w-6 text-xs font-medium text-graphite">02</span><span data-i18n="nav.services">Dịch vụ</span></a>
+      <a href="pages/portfolio.html" class="flex items-baseline gap-5 border-b border-line py-4 font-display text-2xl font-medium uppercase tracking-tight aria-[current=page]:font-semibold"><span class="w-6 text-xs font-medium text-graphite">03</span><span data-i18n="nav.portfolio">Bộ sưu tập tóc</span></a>
+      <a href="pages/studio.html" class="flex items-baseline gap-5 border-b border-line py-4 font-display text-2xl font-medium uppercase tracking-tight aria-[current=page]:font-semibold"><span class="w-6 text-xs font-medium text-graphite">04</span><span data-i18n="nav.studio">The Studio</span></a>
+    </nav>
+    <button type="button" data-book data-i18n="cta.book" class="mt-6 flex h-12 w-full items-center justify-center bg-ink text-[13px] font-semibold uppercase tracking-[0.16em] text-paper">Đặt lịch</button>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- 01 HERO -->
+  <section id="hero" data-section="hero-split" class="bg-canvas">
+    <div class="grid grid-cols-1 lg:min-h-[calc(100dvh-84px)] lg:grid-cols-[minmax(0,45fr)_minmax(0,55fr)]">
+      <div class="flex flex-col justify-between border-line px-4 pb-12 pt-12 sm:px-6 lg:border-r lg:pb-16 lg:pl-[max(2.5rem,calc((100vw-1536px)/2+2.5rem))] lg:pr-12 lg:pt-16 2xl:pl-[max(4rem,calc((100vw-1536px)/2+4rem))]">
+        <div class="flex items-center gap-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-graphite" data-reveal="fade">
+          <span data-i18n="home.hero.eyebrow">Studio tóc nam</span>
+          <span class="h-px w-10 bg-ink"></span>
+          <span>Est. 2020</span>
+        </div>
+        <div class="py-12 lg:py-0">
+          <h1 class="font-display text-[clamp(3rem,7.4vw,7.75rem)] font-semibold uppercase leading-[0.92] tracking-[-0.035em]" data-reveal="up" data-i18n-html="home.hero.h1">Ít hơn.<br>Nhưng tốt hơn.</h1>
+          <p class="mt-8 max-w-md text-[17px] leading-[1.7] text-graphite" data-reveal="up" data-i18n="home.hero.lead">Nghệ thuật cắt tóc nam tập trung vào sự chính xác, tỷ lệ và phong cách phù hợp với từng cá nhân.</p>
+          <div class="mt-10 flex flex-col gap-3 sm:flex-row" data-reveal="up" data-reveal-delay="200">
+            <button type="button" data-book data-i18n="cta.book" class="inline-flex h-12 items-center justify-center bg-ink px-8 text-[12px] font-semibold uppercase tracking-[0.16em] text-paper transition-colors duration-300 hover:bg-graphite active:scale-[.98]">Đặt lịch</button>
+            <a href="pages/services.html" data-i18n="cta.explore" class="inline-flex h-12 items-center justify-center border border-ink bg-paper px-8 text-[12px] font-semibold uppercase tracking-[0.16em] text-ink transition-colors duration-300 hover:bg-ink hover:text-paper">Xem dịch vụ</a>
+          </div>
+        </div>
+        <dl class="hidden grid-cols-3 border-t border-ink pt-5 text-[13px] lg:grid">
+          <div><dt class="text-graphite" data-i18n="home.hero.m1">Cắt tóc</dt><dd class="mt-1 font-medium">40 - 50′</dd></div>
+          <div><dt class="text-graphite" data-i18n="home.hero.m2">Fade</dt><dd class="mt-1 font-medium">45 - 60′</dd></div>
+          <div><dt class="text-graphite" data-i18n="home.hero.m3">Mở cửa</dt><dd class="mt-1 font-medium" data-i18n="home.hero.m3v">Thứ Ba - CN</dd></div>
+        </dl>
+      </div>
+      <div class="relative aspect-[4/5] overflow-hidden bg-line sm:aspect-[4/3] lg:aspect-auto" data-reveal="fade">
+        <img src="https://images.unsplash.com/photo-1768742466927-42153b867e8b?w=1600&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" alt="Chân dung đen trắng một người đàn ông với kiểu tóc gọn gàng" data-i18n-attr="alt:home.hero.alt" class="mg-photo absolute inset-0 h-full w-full object-cover object-[50%_30%]" width="1600" height="2000">
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 BRAND STATEMENT -->
+  <section id="statement" data-section="quote-full" class="bg-ink text-paper">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-36 2xl:px-16">
+      <div class="lg:col-span-3" data-reveal="fade">
+        <span class="block font-display text-[clamp(5rem,12vw,11rem)] font-light leading-none tracking-[-0.05em] text-mid">01</span>
+      </div>
+      <div class="lg:col-span-8 lg:col-start-5">
+        <h2 class="font-display text-[clamp(2.25rem,5vw,4.75rem)] font-semibold uppercase leading-[0.98] tracking-[-0.03em]" data-reveal="up" data-i18n="home.statement.h2">Chính xác trong từng chi tiết.</h2>
+        <div class="mt-12 h-px w-full bg-paper/30"></div>
+        <div class="mt-10 grid gap-8 md:grid-cols-2">
+          <p class="text-[17px] leading-[1.75] text-paper/80" data-reveal="up" data-i18n="home.statement.p1">Chúng tôi loại bỏ những chi tiết thừa để tập trung vào điều quan trọng nhất: hình dáng, cấu trúc và sự cân bằng của kiểu tóc.</p>
+          <p class="text-[17px] leading-[1.75] text-paper/80" data-reveal="up" data-i18n="home.statement.p2">Mỗi lần cắt bắt đầu bằng việc quan sát khuôn mặt, chất tóc và thói quen tạo kiểu của bạn, rồi mới đến kéo và tông đơ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 SIGNATURE CUTS -->
+  <section id="signature" data-section="teaser-row" class="bg-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-36 2xl:px-16">
+      <div class="grid grid-cols-1 items-end gap-6 border-b border-ink pb-8 lg:grid-cols-12">
+        <h2 class="font-display text-[clamp(2.25rem,4.6vw,4.5rem)] font-semibold uppercase leading-[0.98] tracking-[-0.03em] lg:col-span-8" data-reveal="up" data-i18n="home.sig.h2">Định hình bằng đường cắt.</h2>
+        <a href="pages/portfolio.html" class="mg-link justify-self-start text-[13px] font-semibold uppercase tracking-[0.16em] lg:col-span-4 lg:justify-self-end" data-i18n="home.sig.all">Toàn bộ kiểu tóc</a>
+      </div>
+      <div class="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3" data-reveal-stagger="90">
+        <a href="pages/portfolio.html" class="group block">
+          <div class="aspect-[4/5] overflow-hidden bg-line">
+            <img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Kiểu tóc cổ điển gọn gàng, ảnh đen trắng" data-i18n-attr="alt:home.sig.a1" class="mg-photo h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]" width="1200" height="1500">
+          </div>
+          <div class="mt-6 border-t border-line pt-5 transition-colors duration-500 group-hover:border-ink">
+            <div class="flex items-baseline gap-4"><span class="font-display text-sm font-medium text-graphite">01</span><h3 class="font-display text-2xl font-semibold uppercase tracking-tight">Classic Cut</h3></div>
+            <p class="mt-3 max-w-sm text-[15px] leading-relaxed text-graphite" data-i18n="home.sig.d1">Kiểu tóc gọn gàng, cân đối và phù hợp với phong cách lịch lãm.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em]"><span data-i18n="cta.detail">Xem chi tiết</span><span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a href="pages/portfolio.html" class="group block lg:mt-24">
+          <div class="aspect-[4/5] overflow-hidden bg-line">
+            <img src="https://images.unsplash.com/photo-1599834562135-b6fc90e642ca?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Kiểu fade hiện đại với đường chuyển tiếp gọn, ảnh đen trắng" data-i18n-attr="alt:home.sig.a2" class="mg-photo h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]" width="1200" height="1500">
+          </div>
+          <div class="mt-6 border-t border-line pt-5 transition-colors duration-500 group-hover:border-ink">
+            <div class="flex items-baseline gap-4"><span class="font-display text-sm font-medium text-graphite">02</span><h3 class="font-display text-2xl font-semibold uppercase tracking-tight">Modern Fade</h3></div>
+            <p class="mt-3 max-w-sm text-[15px] leading-relaxed text-graphite" data-i18n="home.sig.d2">Đường chuyển tiếp được kiểm soát chính xác, tạo cảm giác sạch và hiện đại.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em]"><span data-i18n="cta.detail">Xem chi tiết</span><span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a href="pages/portfolio.html" class="group block sm:col-span-2 lg:col-span-1">
+          <div class="aspect-[4/5] overflow-hidden bg-line sm:aspect-[16/9] lg:aspect-[4/5]">
+            <img src="https://images.unsplash.com/photo-1568339434343-2a640a1a9946?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Kiểu tóc có texture tự nhiên nhìn từ phía sau, ảnh đen trắng" data-i18n-attr="alt:home.sig.a3" class="mg-photo h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]" width="1200" height="1500">
+          </div>
+          <div class="mt-6 border-t border-line pt-5 transition-colors duration-500 group-hover:border-ink">
+            <div class="flex items-baseline gap-4"><span class="font-display text-sm font-medium text-graphite">03</span><h3 class="font-display text-2xl font-semibold uppercase tracking-tight">Textured Style</h3></div>
+            <p class="mt-3 max-w-sm text-[15px] leading-relaxed text-graphite" data-i18n="home.sig.d3">Tập trung vào cấu trúc tóc, độ phồng và khả năng tạo kiểu tự nhiên.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em]"><span data-i18n="cta.detail">Xem chi tiết</span><span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 PHILOSOPHY -->
+  <section id="philosophy" data-section="features-numbered" class="border-t border-line bg-canvas">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-36 2xl:px-16">
+      <div class="lg:col-span-6">
+        <div class="aspect-[4/5] overflow-hidden bg-line lg:sticky lg:top-28" data-reveal="fade">
+          <img src="https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Barber dùng kéo tỉa và lược để thực hiện đường cắt" data-i18n-attr="alt:home.phi.alt" class="mg-photo h-full w-full object-cover" width="1400" height="1750">
+        </div>
+      </div>
+      <div class="flex flex-col justify-center lg:col-span-5 lg:col-start-8">
+        <h2 class="font-display text-[clamp(2.25rem,4.4vw,4.25rem)] font-semibold uppercase leading-[0.98] tracking-[-0.03em]" data-reveal="up" data-i18n-html="home.phi.h2">Hình thức<br>theo công năng.</h2>
+        <p class="mt-6 max-w-md text-[17px] leading-[1.7] text-graphite" data-reveal="up" data-i18n="home.phi.lead">Ba nguyên tắc dẫn dắt mọi đường cắt tại studio.</p>
+        <ol class="mt-12 border-t border-ink" data-reveal-stagger="90">
+          <li class="grid grid-cols-[3.5rem_1fr] gap-4 border-b border-line py-8 sm:grid-cols-[5rem_1fr]">
+            <span class="font-display text-4xl font-light leading-none tracking-tight text-mid sm:text-5xl">01</span>
+            <div><h3 class="font-display text-xl font-semibold uppercase tracking-tight" data-i18n="home.phi.t1">Chính xác</h3><p class="mt-2 text-[15px] leading-relaxed text-graphite" data-i18n="home.phi.d1">Mỗi đường cắt có mục đích rõ ràng.</p></div>
+          </li>
+          <li class="grid grid-cols-[3.5rem_1fr] gap-4 border-b border-line py-8 sm:grid-cols-[5rem_1fr]">
+            <span class="font-display text-4xl font-light leading-none tracking-tight text-mid sm:text-5xl">02</span>
+            <div><h3 class="font-display text-xl font-semibold uppercase tracking-tight" data-i18n="home.phi.t2">Cân bằng</h3><p class="mt-2 text-[15px] leading-relaxed text-graphite" data-i18n="home.phi.d2">Kiểu tóc phải hài hòa với khuôn mặt.</p></div>
+          </li>
+          <li class="grid grid-cols-[3.5rem_1fr] gap-4 border-b border-line py-8 sm:grid-cols-[5rem_1fr]">
+            <span class="font-display text-4xl font-light leading-none tracking-tight text-mid sm:text-5xl">03</span>
+            <div><h3 class="font-display text-xl font-semibold uppercase tracking-tight" data-i18n="home.phi.t3">Cá nhân hóa</h3><p class="mt-2 text-[15px] leading-relaxed text-graphite" data-i18n="home.phi.d3">Kỹ thuật được điều chỉnh theo từng khách hàng.</p></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 SELECTED WORK -->
+  <section id="work" data-section="gallery-lookbook" class="bg-canvas">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-24 sm:px-6 lg:px-10 lg:pb-36 2xl:px-16">
+      <div class="grid grid-cols-1 items-end gap-6 border-b border-ink pb-8 lg:grid-cols-12">
+        <h2 class="font-display text-[clamp(2.25rem,4.6vw,4.5rem)] font-semibold uppercase leading-[0.98] tracking-[-0.03em] lg:col-span-8" data-reveal="up" data-i18n="home.work.h2">Tác phẩm tiêu biểu.</h2>
+        <a href="pages/portfolio.html" class="inline-flex h-12 items-center justify-center justify-self-start border border-ink px-7 text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors duration-300 hover:bg-ink hover:text-paper lg:col-span-4 lg:justify-self-end" data-i18n="cta.allWork">Xem tất cả tác phẩm</a>
+      </div>
+      <div class="mt-12 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 lg:mt-16 lg:grid-cols-12 lg:gap-y-10">
+        <figure class="col-span-2 lg:col-span-6 lg:row-span-2">
+          <a href="https://images.unsplash.com/photo-1630827020718-3433092696e7?w=1400&q=80&auto=format&fit=crop" data-lightbox="home-work" data-caption="Rẽ ngôi cổ điển" data-i18n-attr="data-caption:cap.classic" class="group block aspect-[4/5] overflow-hidden bg-line lg:aspect-auto lg:h-[calc(100%-2.5rem)]">
+            <img src="https://images.unsplash.com/photo-1630827020718-3433092696e7?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Chân dung nghiêng với kiểu rẽ ngôi cổ điển và râu tỉa gọn" data-i18n-attr="alt:home.work.a1" class="mg-photo h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.03]" width="1400" height="1750">
+          </a>
+          <figcaption class="mt-3 flex justify-between text-[13px]"><span class="font-medium uppercase tracking-[0.1em]" data-i18n="cap.classic">Rẽ ngôi cổ điển</span><span class="text-graphite">Classic Side Part</span></figcaption>
+        </figure>
+        <figure class="lg:col-span-3">
+          <a href="https://images.unsplash.com/photo-1618049049816-43a00d5b0c3d?w=1000&q=80&auto=format&fit=crop" data-lightbox="home-work" data-caption="Fade gọn" data-i18n-attr="data-caption:cap.fade" class="group block aspect-[4/5] overflow-hidden bg-line">
+            <img src="https://images.unsplash.com/photo-1618049049816-43a00d5b0c3d?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Kiểu fade gọn gàng, ảnh đen trắng" data-i18n-attr="alt:home.work.a2" class="mg-photo h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.03]" width="1000" height="1250">
+          </a>
+          <figcaption class="mt-3 text-[13px] font-medium uppercase tracking-[0.1em]" data-i18n="cap.fade">Fade gọn</figcaption>
+        </figure>
+        <figure class="lg:col-span-3">
+          <a href="https://images.unsplash.com/photo-1764592358977-a181a6e71af4?w=1000&q=80&auto=format&fit=crop" data-lightbox="home-work" data-caption="Textured crop" data-i18n-attr="data-caption:cap.crop" class="group block aspect-[4/5] overflow-hidden bg-line">
+            <img src="https://images.unsplash.com/photo-1764592358977-a181a6e71af4?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Kiểu textured crop với phần mái ngắn có kết cấu" data-i18n-attr="alt:home.work.a3" class="mg-photo h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.03]" width="1000" height="1250">
+          </a>
+          <figcaption class="mt-3 text-[13px] font-medium uppercase tracking-[0.1em]" data-i18n="cap.crop">Textured crop</figcaption>
+        </figure>
+        <figure class="col-span-2 lg:col-span-6">
+          <a href="https://images.unsplash.com/photo-1587397845856-e6cf49176c70?w=1000&q=80&auto=format&fit=crop" data-lightbox="home-work" data-caption="Buzz cut" data-i18n-attr="data-caption:cap.buzz" class="group block aspect-[16/9] overflow-hidden bg-line">
+            <img src="https://images.unsplash.com/photo-1587397845856-e6cf49176c70?w=1000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Kiểu buzz cut ngắn sát dưới ánh sáng tương phản" data-i18n-attr="alt:home.work.a4" class="mg-photo h-full w-full object-cover object-[50%_25%] transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.03]" width="1000" height="563">
+          </a>
+          <figcaption class="mt-3 text-[13px] font-medium uppercase tracking-[0.1em]" data-i18n="cap.buzz">Buzz cut</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 MEET THE BARBERS -->
+  <section id="barbers" data-section="team-grid" class="bg-line/50">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-36 2xl:px-16">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <h2 class="font-display text-[clamp(2.25rem,4.2vw,4rem)] font-semibold uppercase leading-[0.98] tracking-[-0.03em]" data-reveal="up" data-i18n-html="home.team.h2">Những người<br>cầm kéo.</h2>
+          <p class="mt-6 max-w-sm text-[17px] leading-[1.7] text-graphite" data-reveal="up" data-i18n="home.team.lead">Ba barber, ba thế mạnh riêng, cùng một tiêu chuẩn về độ chính xác.</p>
+          <a href="pages/studio.html#team" class="mt-10 inline-flex h-12 items-center border border-ink bg-paper px-7 text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors duration-300 hover:bg-ink hover:text-paper" data-i18n="cta.team">Gặp đội ngũ</a>
+        </div>
+        <div class="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-3 lg:col-span-8" data-reveal-stagger="90">
+          <article>
+            <div class="aspect-[4/5] overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1558730234-d8b2281b0d00?w=900&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Chân dung đen trắng barber Minh Anh" data-i18n-attr="alt:team.a1" class="mg-photo h-full w-full object-cover" width="900" height="1125"></div>
+            <h3 class="mt-5 font-display text-xl font-semibold uppercase tracking-tight">Minh Anh</h3>
+            <p class="mt-1 text-[14px] font-medium text-ink" data-i18n="team.r1">Classic cut &amp; kỹ thuật kéo</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-graphite" data-i18n="team.b1">Cắt hoàn toàn bằng kéo, ưu tiên đường rẽ ngôi rõ và phần gáy gọn.</p>
+          </article>
+          <article>
+            <div class="aspect-[4/5] overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=900&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Chân dung đen trắng barber Quang Minh" data-i18n-attr="alt:team.a2" class="mg-photo h-full w-full object-cover" width="900" height="1125"></div>
+            <h3 class="mt-5 font-display text-xl font-semibold uppercase tracking-tight">Quang Minh</h3>
+            <p class="mt-1 text-[14px] font-medium text-ink" data-i18n="team.r2">Fade &amp; tạo kiểu chính xác</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-graphite" data-i18n="team.b2">Kiểm soát từng nấc tông đơ để đường chuyển tiếp mượt từ da lên tóc.</p>
+          </article>
+          <article>
+            <div class="aspect-[4/5] overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1567186937675-a5131c8a89ea?w=900&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Chân dung đen trắng barber Daniel Tran" data-i18n-attr="alt:team.a3" class="mg-photo h-full w-full object-cover" width="900" height="1125"></div>
+            <h3 class="mt-5 font-display text-xl font-semibold uppercase tracking-tight">Daniel Tran</h3>
+            <p class="mt-1 text-[14px] font-medium text-ink" data-i18n="team.r3">Texture &amp; tóc nam hiện đại</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-graphite" data-i18n="team.b3">Tỉa tạo kết cấu để tóc tự vào nếp, dễ tạo kiểu tại nhà.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 CLOSING CTA -->
+  <section id="closing" data-section="cta-type" class="bg-ink text-paper">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-end gap-10 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-36 2xl:px-16">
+      <h2 class="font-display text-[clamp(3rem,8vw,8.5rem)] font-semibold uppercase leading-[0.92] tracking-[-0.04em] lg:col-span-8" data-reveal="up" data-i18n-html="home.close.h2">Phong cách của bạn.<br><span class="text-mid">Tinh gọn hơn.</span></h2>
+      <div class="lg:col-span-4" data-reveal="up">
+        <p class="max-w-sm text-[17px] leading-[1.7] text-paper/80" data-i18n="home.close.p">Xem menu dịch vụ, chọn kiểu tóc bạn muốn và để chúng tôi tinh chỉnh phần còn lại.</p>
+        <button type="button" data-book data-i18n="cta.book" class="mt-8 inline-flex h-12 items-center bg-paper px-8 text-[12px] font-semibold uppercase tracking-[0.16em] text-ink transition-colors duration-300 hover:bg-line active:scale-[.98]">Đặt lịch</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="border-t border-line bg-paper text-ink">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-16 sm:px-6 md:grid-cols-12 lg:px-10 lg:py-20 2xl:px-16">
+    <div class="md:col-span-5">
+      <a aria-current="page" href="index.html" class="inline-flex items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center border border-ink font-display text-sm font-semibold">MG</span>
+        <span class="font-display text-sm font-semibold uppercase tracking-[0.22em]">Monochrome Gentlemen</span>
+      </a>
+      <p class="mt-6 max-w-sm text-[15px] leading-relaxed text-graphite" data-i18n="footer.about">Barber studio cho kiểu tóc nam tinh gọn, đường cắt chính xác và phong cách lịch lãm hiện đại.</p>
+      <button type="button" data-book data-i18n="cta.book" class="mt-8 inline-flex h-12 items-center border border-ink px-7 text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors duration-300 hover:bg-ink hover:text-paper active:scale-[.98]">Đặt lịch</button>
+    </div>
+    <div class="md:col-span-3">
+      <p class="text-[12px] font-semibold uppercase tracking-[0.16em] text-graphite" data-i18n="footer.pages">Trang</p>
+      <ul class="mt-5 space-y-3 text-[15px]">
+        <li><a aria-current="page" href="index.html" class="mg-link" data-i18n="nav.home">Trang chủ</a></li>
+        <li><a href="pages/services.html" class="mg-link" data-i18n="nav.servicesFull">Dịch vụ &amp; Bảng giá</a></li>
+        <li><a href="pages/portfolio.html" class="mg-link" data-i18n="nav.portfolio">Bộ sưu tập tóc</a></li>
+        <li><a href="pages/studio.html" class="mg-link" data-i18n="nav.studio">The Studio</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <p class="text-[12px] font-semibold uppercase tracking-[0.16em] text-graphite" data-i18n-html="footer.visit">Ghé studio <span class="font-normal normal-case tracking-normal">(dữ liệu mẫu)</span></p>
+      <address class="mt-5 space-y-3 text-[15px] not-italic leading-relaxed">
+        <p data-i18n="visit.address">27 Hàng Bài, Hoàn Kiếm, Hà Nội</p>
+        <p><a href="tel:+842471089264" class="mg-link">024 7108 9264</a></p>
+        <p><a href="mailto:hello@monochromegentlemen.vn" class="mg-link break-all">hello@monochromegentlemen.vn</a></p>
+        <p class="text-graphite" data-i18n="visit.hoursShort">Thứ Ba - Chủ Nhật, 9:00 - 20:00</p>
+      </address>
+    </div>
+  </div>
+  <div class="border-t border-line">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 px-4 py-6 text-[13px] text-graphite sm:flex-row sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+      <p>© 2026 MONOCHROME GENTLEMEN</p>
+      <p data-i18n="footer.note">Website minh họa. Đặt lịch chưa kết nối hệ thống thật.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-30 border-t border-ink bg-paper px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] lg:hidden">
+  <button type="button" data-book data-i18n="cta.book" class="flex h-12 w-full items-center justify-center bg-ink text-[13px] font-semibold uppercase tracking-[0.16em] text-paper active:scale-[.98]">Đặt lịch</button>
+</div>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

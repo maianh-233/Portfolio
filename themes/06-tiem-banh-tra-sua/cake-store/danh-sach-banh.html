@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bánh kem của tiệm | Tiệm Bánh Kem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-003 Danh sách bánh: FR-007, FR-024, FR-036. Thử ?demo=error để xem trạng thái lỗi -->
+<body data-screen="SCR-003" data-layout="public" data-nav="cakes" class="bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="mx-auto max-w-shell px-4 md:px-6 lg:px-8 pt-8 md:pt-12">
+    <h1 class="font-display font-bold text-[34px] md:text-[44px] leading-[1.15] text-primary-strong pb-1" data-i18n="list.title">Bánh kem của tiệm</h1>
+    <p id="promo-note" class="hidden mt-2"></p>
+
+    <!-- Thanh tìm + sắp xếp -->
+    <div class="mt-6 flex flex-col md:flex-row gap-3 md:items-end">
+      <div class="field flex-1">
+        <label for="q" class="sr-only" data-i18n="list.search">Tìm theo tên bánh</label>
+        <div class="relative">
+          <i class="ph ph-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-xl text-ink-muted" aria-hidden="true"></i>
+          <input id="q" type="search" maxlength="100" class="field-input !pl-12 !pr-12 !rounded-full" data-i18n-placeholder="list.search" placeholder="Tìm theo tên bánh" autocomplete="off">
+          <button type="button" id="q-clear" class="hidden absolute right-2 top-1/2 -translate-y-1/2 grid place-items-center w-10 h-10 rounded-full hover:bg-cream text-lg" aria-label="Xóa nội dung tìm"><i class="ph ph-x" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="hidden md:flex field w-60">
+        <label for="sort" class="field-label text-sm" data-i18n="list.sort">Sắp xếp</label>
+        <select id="sort" class="field-input !rounded-full"></select>
+      </div>
+      <!-- Điện thoại: nút Lọc + Sắp xếp mở tấm trượt -->
+      <div class="flex md:hidden gap-2">
+        <button type="button" id="open-filter" class="btn btn-secondary h-11 px-4 flex-1"><i class="ph ph-sliders-horizontal" aria-hidden="true"></i><span id="filter-btn-label">Lọc</span></button>
+        <div class="flex-1 relative">
+          <label for="sort-m" class="sr-only" data-i18n="list.sort">Sắp xếp</label>
+          <select id="sort-m" class="field-input !rounded-full !min-h-[44px] !py-2"></select>
+        </div>
+      </div>
+    </div>
+    <div id="active-chips" class="flex flex-wrap gap-2 mt-3 md:hidden"></div>
+
+    <div class="mt-8 grid md:grid-cols-12 gap-8">
+      <!-- Bộ lọc (máy tính / tablet) -->
+      <aside class="hidden md:block md:col-span-4 lg:col-span-3" aria-label="Bộ lọc">
+        <div id="filters-desktop" class="sticky top-28 rounded-3xl bg-white shadow-soft p-5"></div>
+      </aside>
+
+      <!-- Lưới bánh -->
+      <section class="md:col-span-8 lg:col-span-9" aria-live="polite">
+        <p id="count" class="font-bold text-ink-muted mb-4 min-h-[24px]"></p>
+        <div id="grid" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 md:gap-x-6"></div>
+        <div id="more-wrap" class="hidden mt-10 text-center">
+          <button type="button" id="more" class="btn btn-secondary h-12 px-8" data-i18n="list.more">Xem thêm</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script>
+    /* SCR-003: tìm (300 ms), lọc hương vị (nhiều), khoảng giá (1), sắp xếp, xem thêm 12/lần.
+       Bộ lọc giữ trên URL để chia sẻ / quay lại không mất. */
+    App.onReady(function () {
+      var PAGE = 12;
+      var PRICES = [
+        { v: 'lt300', test: function (p) { return p < 300000; } },
+        { v: '300to500', test: function (p) { return p >= 300000 && p <= 500000; } },
+        { v: 'gt500', test: function (p) { return p > 500000; } }
+      ];
+      var SORTS = ['newest', 'best', 'priceAsc', 'priceDesc'];
+      var url = new URLSearchParams(location.search);
+      var state = {
+        q: url.get('q') || '',
+        flavors: (url.get('flavor') || '').split(',').filter(Boolean),
+        price: url.get('price') || '',
+        sort: SORTS.indexOf(url.get('sort')) > -1 ? url.get('sort') : 'newest',
+        promo: url.get('promo') || '',
+        limit: PAGE
+      };
+      var failOnce = url.get('demo') === 'error';
+
+      /* ----- Bộ lọc dùng chung cho thanh bên và tấm trượt ----- */
+      function filtersHtml(prefix) {
+        var flavors = Cakes.flavors().map(function (f) {
+          var id = prefix + '-fl-' + Fmt.fold(f.vi).replace(/\s/g, '-');
+          return '<label for="' + id + '" class="flex items-center gap-3 min-h-[40px] cursor-pointer rounded-lg hover:text-primary-strong">' +
+            '<input id="' + id + '" type="checkbox" data-flavor="' + Fmt.esc(f.vi) + '"' + (state.flavors.indexOf(f.vi) > -1 ? ' checked' : '') + '><span class="font-semibold">' + Fmt.esc(I18n.lang === 'en' ? f.en : f.vi) + '</span></label>';
+        }).join('');
+        var prices = PRICES.map(function (p) {
+          var id = prefix + '-pr-' + p.v;
+          return '<label for="' + id + '" class="flex items-center gap-3 min-h-[40px] cursor-pointer hover:text-primary-strong">' +
+            '<input id="' + id + '" type="radio" name="' + prefix + '-price" data-price="' + p.v + '"' + (state.price === p.v ? ' checked' : '') + '><span class="font-semibold">' + I18n.t('price.' + p.v) + '</span></label>';
+        }).join('');
+        return '<fieldset><legend class="font-extrabold text-base mb-2">' + I18n.t('list.flavor') + '</legend><div class="grid grid-cols-2 md:grid-cols-1 gap-x-3">' + flavors + '</div></fieldset>' +
+          '<fieldset class="mt-6"><legend class="font-extrabold text-base mb-2">' + I18n.t('list.price') + '</legend>' + prices + '</fieldset>' +
+          '<button type="button" class="btn btn-ghost h-11 px-4 mt-5 w-full border border-beige" data-clear>' + '<i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i>' + I18n.t('list.clear') + '</button>';
+      }
+      function bindFilters(root) {
+        $all('[data-flavor]', root).forEach(function (cb) {
+          cb.onchange = function () {
+            var f = cb.getAttribute('data-flavor');
+            state.flavors = cb.checked ? state.flavors.concat(f) : state.flavors.filter(function (x) { return x !== f; });
+            state.limit = PAGE; update();
+          };
+        });
+        $all('[data-price]', root).forEach(function (r) {
+          r.onchange = function () { state.price = r.getAttribute('data-price'); state.limit = PAGE; update(); };
+          /* bấm lại mốc đang chọn để bỏ chọn */
+          r.onclick = function () { if (state.price === r.getAttribute('data-price') && r.dataset.was === '1') { r.checked = false; state.price = ''; update(); } r.dataset.was = r.checked ? '1' : ''; };
+          r.dataset.was = r.checked ? '1' : '';
+        });
+        $all('[data-clear]', root).forEach(function (b) { b.onclick = clearAll; });
+      }
+      function renderFilters() {
+        var box = $('#filters-desktop');
+        box.innerHTML = filtersHtml('d'); bindFilters(box);
+        var opts = SORTS.map(function (s) { return '<option value="' + s + '"' + (state.sort === s ? ' selected' : '') + '>' + I18n.t('sort.' + s) + '</option>'; }).join('');
+        $('#sort').innerHTML = opts; $('#sort-m').innerHTML = opts;
+      }
+      function clearAll() {
+        state.q = ''; state.flavors = []; state.price = ''; state.promo = ''; state.limit = PAGE;
+        $('#q').value = ''; renderFilters(); update();
+      }
+
+      /* ----- Lọc + sắp xếp ----- */
+      function results() {
+        var q = Fmt.fold(state.q.trim());
+        var promo = state.promo ? DB.get('promotions').filter(function (p) { return p.id === state.promo; })[0] : null;
+        var list = Cakes.visible().filter(function (c) {
+          if (q && Fmt.fold(c.name).indexOf(q) === -1 && Fmt.fold(c.name_en).indexOf(q) === -1) return false;
+          if (state.flavors.length && state.flavors.indexOf(c.flavor) === -1) return false;
+          if (state.price) { var p = Promo.apply(Cakes.priceFrom(c), Promo.forCake(c)); if (!PRICES.filter(function (x) { return x.v === state.price; })[0].test(p)) return false; }
+          if (promo && promo.scope === 'selected' && promo.cakeIds.indexOf(c.id) === -1) return false;
+          return true;
+        });
+        var price = function (c) { return Promo.apply(Cakes.priceFrom(c), Promo.forCake(c)); };
+        list.sort({
+          newest: function (a, b) { return a.createdAt < b.createdAt ? 1 : -1; },
+          best: function (a, b) { return b.sold - a.sold; },
+          priceAsc: function (a, b) { return price(a) - price(b); },
+          priceDesc: function (a, b) { return price(b) - price(a); }
+        }[state.sort]);
+        return { list: list, promo: promo };
+      }
+
+      function syncUrl() {
+        var p = new URLSearchParams();
+        if (state.q) p.set('q', state.q);
+        if (state.flavors.length) p.set('flavor', state.flavors.join(','));
+        if (state.price) p.set('price', state.price);
+        if (state.sort !== 'newest') p.set('sort', state.sort);
+        if (state.promo) p.set('promo', state.promo);
+        try { history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : '')); } catch (e) { /* file:// có thể chặn */ }
+      }
+
+      function renderChips(r) {
+        var chips = [];
+        state.flavors.forEach(function (f) { chips.push({ label: f, clear: function () { state.flavors = state.flavors.filter(function (x) { return x !== f; }); } }); });
+        if (state.price) chips.push({ label: I18n.t('price.' + state.price), clear: function () { state.price = ''; } });
+        if (r.promo) chips.push({ label: I18n.pick(r.promo, 'name'), clear: function () { state.promo = ''; } });
+        var box = $('#active-chips');
+        box.innerHTML = chips.map(function (c, i) { return '<button type="button" class="chip chip-sm is-on" data-chip="' + i + '" aria-label="Bỏ lọc ' + Fmt.esc(c.label) + '">' + Fmt.esc(c.label) + '<i class="ph ph-x" aria-hidden="true"></i></button>'; }).join('');
+        $all('[data-chip]', box).forEach(function (b) { b.onclick = function () { chips[+b.getAttribute('data-chip')].clear(); renderFilters(); update(); }; });
+        var n = state.flavors.length + (state.price ? 1 : 0);
+        $('#filter-btn-label').textContent = I18n.t('list.filter') + (n ? ' (' + n + ')' : '');
+      }
+
+      function update() {
+        var r = results();
+        var grid = $('#grid');
+        $('#q-clear').classList.toggle('hidden', !state.q);
+        renderChips(r);
+        syncUrl();
+        var note = $('#promo-note');
+        if (r.promo) {
+          note.className = 'mt-3 inline-flex items-center gap-2 rounded-full bg-butter text-butter-strong font-bold px-4 h-10';
+          note.innerHTML = '<i class="ph-fill ph-gift" aria-hidden="true"></i>' + Fmt.esc(I18n.pick(r.promo, 'name')) + ' · ' + (r.promo.type === 'percent' ? '-' + r.promo.value + '%' : '-' + Fmt.money(r.promo.value));
+        } else note.className = 'hidden';
+
+        if (failOnce) {
+          $('#count').textContent = '';
+          grid.innerHTML = '<div class="col-span-full">' + UI.empty({ icon: 'ph-cloud-slash', title: I18n.t('list.error'), text: I18n.lang === 'en' ? 'Please check your connection and try again.' : 'Bạn kiểm tra kết nối mạng rồi thử lại giúp tiệm nha.', action: '<button type="button" id="retry" class="btn btn-primary h-11 px-6">' + I18n.t('common.retry') + '</button>' }) + '</div>';
+          $('#more-wrap').classList.add('hidden');
+          $('#retry').onclick = function () { failOnce = false; load(); };
+          return;
+        }
+        $('#count').textContent = I18n.t('list.count', { n: r.list.length });
+        if (!r.list.length) {
+          grid.innerHTML = '<div class="col-span-full">' + UI.empty({ icon: 'ph-magnifying-glass', title: I18n.t('list.empty'), text: I18n.lang === 'en' ? 'Try another name or remove some filters.' : 'Bạn thử tên khác hoặc bỏ bớt bộ lọc nha.', action: '<button type="button" id="empty-clear" class="btn btn-primary h-11 px-6">' + I18n.t('list.clear') + '</button>' }) + '</div>';
+          $('#empty-clear').onclick = clearAll;
+          $('#more-wrap').classList.add('hidden');
+          return;
+        }
+        grid.innerHTML = r.list.slice(0, state.limit).map(function (c) { return UI.cakeCard(c); }).join('');
+        $('#more-wrap').classList.toggle('hidden', r.list.length <= state.limit);
+      }
+
+      function load() {
+        $('#count').textContent = '';
+        $('#grid').innerHTML = UI.skeletonCards(8);
+        $('#more-wrap').classList.add('hidden');
+        App.fakeLoad(update, 500);
+      }
+
+      /* ----- Sự kiện ----- */
+      var q = $('#q'); q.value = state.q;
+      q.addEventListener('input', debounce(function () { state.q = q.value.slice(0, 100); state.limit = PAGE; update(); }, 300));
+      $('#q-clear').onclick = function () { q.value = ''; state.q = ''; update(); q.focus(); };
+      ['#sort', '#sort-m'].forEach(function (s) { $(s).onchange = function () { state.sort = this.value; renderFilters(); update(); }; });
+      $('#more').onclick = function () { state.limit += PAGE; update(); };
+      $('#open-filter').onclick = function () {
+        Modal.open({
+          title: I18n.t('list.filter'),
+          body: '<div id="filters-sheet">' + filtersHtml('m') + '</div>',
+          actions: [{ label: I18n.t('list.apply'), variant: 'primary', onClick: function () { renderFilters(); update(); } }],
+          onOpen: function (el) { bindFilters(el); $all('[data-clear]', el).forEach(function (b) { b.onclick = function () { clearAll(); $('#filters-sheet', el).innerHTML = filtersHtml('m'); bindFilters(el); }; }); }
+        });
+      };
+      document.addEventListener('langchange', function () { renderFilters(); update(); });
+
+      renderFilters();
+      load();
+    });
+  </script>
+</body>
+</html>

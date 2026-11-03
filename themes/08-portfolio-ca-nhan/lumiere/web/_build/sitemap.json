@@ -1,0 +1,63 @@
+{
+  "brand": "LUMIÈRE",
+  "language": "vi",
+  "preset": "gallery",
+  "motionLevel": 1,
+  "visualIdea": "Đi qua một phòng triển lãm: tường tối, ảnh lớn góc vuông, dưới mỗi tác phẩm là nhãn tường bảo tàng nhỏ (tên in nghiêng + series · năm · thể loại); một phòng sáng màu trắng ngà cho lời tự bạch của tác giả",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Ánh sáng kể chuyện con người và nơi chốn",
+    "description": "Giao diện portfolio và CV cho nhiếp ảnh gia nghệ thuật, trình bày như một triển lãm ảnh trực tuyến."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ (landing page duy nhất)",
+      "purpose": "Cho khách hàng, thương hiệu, tạp chí, đơn vị sự kiện và nhà tuyển dụng cảm nhận phong cách tác giả qua các series ảnh, đọc lời tự bạch, kinh nghiệm, kỹ năng, CV và gửi yêu cầu dự án",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ai", "note": "Ảnh phong cảnh điện ảnh toàn màn, tên LUMIÈRE góc dưới trái, nút Xem tác phẩm, chỉ báo cuộn xuống (theo chú thích BA)" },
+        { "id": "tac-pham", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "4 series độc lập, mỗi series một bố cục khác: ảnh lớn + ảnh nhỏ, cặp ảnh dọc, ảnh ngang toàn chiều rộng + masonry, lưới bất đối xứng; mọi ảnh mở lightbox chung một nhóm" },
+        { "id": "gioi-thieu", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Photographer statement nền trắng ngà, chân dung nhỏ + đoạn tự bạch ~130 từ" },
+        { "id": "kinh-nghiem", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Kinh nghiệm, triển lãm, loại khách hàng cộng tác, giải thưởng; đánh dấu rõ là nội dung minh họa, không logo thương hiệu" },
+        { "id": "ky-nang", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "6 nhóm kỹ năng + một dòng thiết bị" },
+        { "id": "ho-so", "catalog": "faq", "variant": "accordion-cv", "source": "ai", "note": "CV dạng accordion: học vấn, kinh nghiệm, workshop, thành tích, dự án nổi bật; nút tải CV bị khóa vì chưa có tệp thật" },
+        { "id": "lien-he", "catalog": "contact", "variant": "cta-type", "source": "ai", "note": "Tiêu đề lớn + nút Gửi yêu cầu dự án (modal form demo), email, Instagram (sao chép), địa điểm" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "misty mountain landscape light", "file": "assets/img/hero-nui-suong.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 01 ảnh lớn", "query": "woman portrait window light black white", "file": "assets/img/series1-bat-doi-xung.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 01", "query": "woman portrait window light black white", "file": "assets/img/series1-nguoi-ke-chuyen.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 01", "query": "woman portrait window light black white", "file": "assets/img/series1-man-tuyn.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 01", "query": "woman portrait window light black white", "file": "assets/img/series1-anh-sang-trua.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 02", "query": "fashion editorial model photography", "file": "assets/img/series2-thoi-trang-1.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 02", "query": "fashion editorial model photography", "file": "assets/img/series2-thoi-trang-3.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 02", "query": "fashion editorial model photography", "file": "assets/img/series2-thoi-trang-2.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 03 ảnh ngang toàn chiều rộng", "query": "misty mountain landscape light", "file": "assets/img/series3-ho-binh-minh.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 03", "query": "misty mountain landscape light", "file": "assets/img/series3-dong-suong.webp", "status": "ok" },
+        { "slot": "tac-pham / series 03", "query": "misty mountain landscape light", "file": "assets/img/series3-tam-coc.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 03", "query": "misty mountain landscape light", "file": "assets/img/series3-vinh-hep.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 04", "query": "street life everyday moment", "file": "assets/img/series4-hem-dem.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 04", "query": "street life everyday moment", "file": "assets/img/series4-pho-yen.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 04", "query": "street life everyday moment", "file": "assets/img/series4-con-ngo.jpg", "status": "ok" },
+        { "slot": "tac-pham / series 04", "query": "market vendor morning candid", "file": "assets/img/series4-nhip-pho.jpg", "status": "ok" },
+        { "slot": "gioi-thieu / chân dung tác giả", "query": "photographer camera woman portrait", "file": "assets/img/statement-chan-dung.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng một trang (index.html) vì chú thích BA yêu cầu rõ 'Tạo một landing page duy nhất' và 'không tạo trang gallery riêng'; điều hướng dùng anchor tới từng section",
+    "Màu theo bảng của BA (#101010, #1A1A1A, #F3F0E9, #9B9B9B) thay bảng preset Art Gallery; thêm xám đậm #57544E cho chữ phụ trên nền trắng ngà để đạt WCAG AA; không dùng màu nhấn đỏ của preset (BA: không màu rực rỡ)",
+    "Font body dùng Inter theo chú thích BA thay Montserrat của preset; tiêu đề Cormorant Garamond",
+    "Các nhãn tiếng Anh BA nêu (PORTFOLIO, ABOUT, Explore Portfolio, 'Photography is a way of paying attention', tên series) được dịch sang tiếng Việt vì ngôn ngữ website là tiếng Việt, không trộn ngôn ngữ",
+    "Mức chuyển động Level 1: chỉ dùng data-reveal fade/up, header đổi nền khi cuộn, hover zoom nhẹ ảnh; không dùng con trỏ nhãn 'Xem' và reveal clip của preset (thuộc Level 2–3)",
+    "Nút Tải CV ở trạng thái khóa (chưa có tệp CV thật) theo yêu cầu BA",
+    "Instagram hiển thị tên tài khoản kèm nút sao chép thay vì link, vì chưa có tài khoản thật"
+  ],
+  "limitations": [
+    "Form Gửi yêu cầu dự án là bản demo, chưa có backend, không gửi đi",
+    "Email hello@lumiere.vn và tài khoản @lumiere.frames là thông tin mẫu, cần thay bằng thông tin thật",
+    "Ảnh lấy từ Openverse (tác giả khác, xem assets/img/CREDITS.md) để minh họa; cần thay bằng tác phẩm thật của nhiếp ảnh gia",
+    "Kinh nghiệm, triển lãm, giải thưởng, CV là nội dung minh họa đã được đánh dấu trên trang",
+    "Chưa có tệp CV PDF nên nút Tải CV bị khóa"
+  ]
+}

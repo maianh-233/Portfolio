@@ -1,0 +1,85 @@
+{
+  "slug": "noir-aesthetic",
+  "name": "NOIR AESTHETIC",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "NOIR AESTHETIC",
+    "purpose": "Thiết kế website giới thiệu NOIR AESTHETIC, thương hiệu thẩm mỹ y khoa theo đuổi sự tinh tế, riêng tư và trải nghiệm cao cấp.\n\nArt direction: Dark Luxury Editorial. Sử dụng đen than, espresso, đồng ánh kim và trắng ngà. Ảnh không gian kiến trúc có chiều sâu, ánh sáng tương phản, typography lớn và bố cục bất đối xứng",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Hero toàn màn hình, thông điệp thương hiệu, giới thiệu triết lý thẩm mỹ, dịch vụ tiêu biểu và không gian trải nghiệm.\n\nDịch vụ thẩm mỹ & Bảng giá: Trình bày các nhóm dịch vụ trẻ hóa, chăm sóc da chuyên sâu, cải thiện bề mặt da và thẩm mỹ không phẫu thuật. Dùng layout editorial thay vì các thẻ dịch vụ thông thường; thể hiện mô tả và giá tham khảo khi được cung cấp.\n\nVề chúng tôi: Câu chuyện thương hiệu, đội ngũ chuyên môn, cơ sở vật chất và quy trình chăm sóc khách hàng.\n\nHỗ trợ song ngữ Việt – Anh trên toàn website. Nút “Đặt lịch tư vấn / Book a Consultation” có độ tương phản cao, mở form tư vấn và xuất hiện ở header, cuối trang, nút nổi trên mobile.\n\nĐây là website giới thiệu, tuyệt đối không xây dựng giỏ hàng, thanh toán hoặc luồng mua sản phẩm. Giữ trải nghiệm sang trọng nhưng nội dung y khoa phải dễ đọc, minh bạch và đáng tin cậy.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-20T09:08:53.080Z",
+  "updatedAt": "2026-10-21T02:13:09.022Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\noir-aesthetic\\web",
+    "builtAt": "2026-10-21T02:12:52.126Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/service-rejuvenation.html",
+      "pages/service-skin.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/service-rejuvenation.html": [],
+      "pages/service-skin.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "eb36ff8c-760b-425c-a166-ec36a80f4fed",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\noir-aesthetic\\web",
+    "feedback": "Phần khách muốn đổi là font chữu tiếng việt vì đang bị lỗi font rất nặng . Phaagn button khách cúng không đồng ý vì tự nhiên có cả tiếng việt và tiếng anh khiến nút thiếu tinh tế . Phần đổi ngôn ngữ bị chìm khách không tìm thấy ngay là mất lúc lâu mưới thấy",
+    "page": "index.html",
+    "status": "done"
+  },
+  "external": {
+    "tool": "cursor",
+    "mode": "quick-prototype",
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\noir-aesthetic",
+    "preparedAt": "2026-10-20T09:09:35.335Z"
+  },
+  "qa": {
+    "createdAt": "2026-10-21T02:13:06.528Z",
+    "critical": 0,
+    "major": 5,
+    "minor": 1,
+    "screenshots": 15
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-21T02:12:52.119Z",
+      "text": "Phần khách muốn đổi là font chữu tiếng việt vì đang bị lỗi font rất nặng . Phaagn button khách cúng không đồng ý vì tự nhiên có cả tiếng việt và tiếng anh khiến nút thiếu tinh tế . Phần đổi ngôn ngữ bị chìm khách không tìm thấy ngay là mất lúc lâu mưới thấy"
+    }
+  ]
+}

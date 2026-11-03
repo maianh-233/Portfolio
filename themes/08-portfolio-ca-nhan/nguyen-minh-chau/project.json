@@ -1,0 +1,78 @@
+{
+  "slug": "nguyen-minh-chau",
+  "name": "Nguyễn Minh Châu",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website portfolio cá nhân",
+    "brand": "Nguyễn Minh Châu",
+    "purpose": "",
+    "audience": "",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Thiết kế một landing page portfolio cá nhân cho **Nguyễn Minh Châu**, một chuyên viên tổ chức cưới hỏi truyền thống Việt Nam.\n\n### 1. Mục tiêu\n\nĐây là website giới thiệu năng lực nghề nghiệp của một cá nhân, không phải website công ty tổ chức tiệc cưới.\n\nWebsite cần thể hiện:\n- Chân dung và câu chuyện nghề nghiệp của Minh Châu.\n- Sự am hiểu về nghi lễ cưới hỏi truyền thống Việt Nam.\n- Các dự án cưới hỏi tiêu biểu đã tham gia.\n- Quy trình làm việc và kỹ năng chuyên môn.\n- Kinh nghiệm làm việc, học vấn và chứng chỉ.\n- Thông tin liên hệ và CV.\n\nSử dụng thông tin giả định để tạo một portfolio demo hoàn chỉnh. Không sử dụng placeholder trong nội dung hiển thị.\n\n### 2. Phong cách thiết kế\n\nKết hợp Vietnamese Heritage, Contemporary Editorial và Personal Portfolio.\n\nBảng màu:\n- Đỏ trầm `#8E2028`.\n- Kem ấm `#F7F0E5`.\n- Vàng cổ `#B79A62`.\n- Nâu đậm `#3C2B25`.\n\nFont chữ:\n- Heading: Cormorant Garamond.\n- Body: Be Vietnam Pro hoặc Inter.\n\nGiao diện phải thanh lịch, có chiều sâu văn hóa và giàu hình ảnh. Tránh thiết kế giống website nhà hàng tiệc cưới hoặc trang bán dịch vụ.\n\n### 3. Header\n\nBên trái: NGUYỄN MINH CHÂU.\n\nDòng phụ: TRADITIONAL WEDDING PLANNER.\n\nMenu:\nHOME · ABOUT ME · PORTFOLIO · EXPERIENCE · CONTACT.\n\nNút nổi bật: VIEW MY CV.\n\nTất cả liên kết điều hướng đến các section tương ứng trên cùng landing page.\n\n### 4. Hero\n\nTạo một hero mang dấu ấn cá nhân, không sử dụng bố cục doanh nghiệp thông thường.\n\nBố cục gồm:\n- Ảnh chân dung Minh Châu trong trang phục thanh lịch.\n- Một ảnh phụ về không gian lễ gia tiên hoặc mâm quả cưới hỏi.\n- Typography lớn.\n- Các chi tiết đồ họa lấy cảm hứng từ dấu triện và đường nét truyền thống Việt Nam.\n\nNội dung:\n\n**NGUYỄN MINH CHÂU**\n\nTraditional Wedding Planner\n\n**“Gìn giữ nét truyền thống, chăm chút từng khoảnh khắc trọng đại.”**\n\n“Tôi theo đuổi công việc tổ chức cưới hỏi bằng sự chỉn chu, am hiểu phong tục và khả năng điều phối. Với tôi, mỗi nghi lễ đều mang một ý nghĩa riêng và xứng đáng được chuẩn bị bằng sự tôn trọng, chu đáo.”\n\nCTA:\n- KHÁM PHÁ DỰ ÁN.\n- XEM HỒ SƠ NGHỀ NGHIỆP.\n\n### 5. About Me\n\nTiêu đề: “Người đứng sau những ngày hỷ trọn vẹn.”\n\nGiới thiệu Minh Châu là một Wedding Planner có 5 năm kinh nghiệm giả định trong việc hỗ trợ tổ chức lễ ăn hỏi, lễ gia tiên và lễ cưới.\n\nNội dung nhấn mạnh:\n- Tình yêu với văn hóa cưới hỏi Việt Nam.\n- Khả năng tổ chức và điều phối công việc.\n- Sự cẩn thận trong từng nghi thức.\n- Khả năng giao tiếp và phối hợp với hai gia đình.\n- Mong muốn kết hợp giá trị truyền thống với cách tổ chức chuyên nghiệp.\n\nBố cục kết hợp chân dung cá nhân, đoạn giới thiệu và một câu trích dẫn nổi bật.\n\n### 6. Selected Projects\n\nTiêu đề: “Những dự án tôi tự hào.”\n\nTạo ba dự án cưới hỏi giả định.\n\n**Dự án 01 — Hồng Duyên**\n\n- Loại hình: Lễ ăn hỏi và lễ gia tiên.\n- Địa điểm: Thành phố Hồ Chí Minh.\n- Quy mô: 60 khách.\n- Concept: Áo dài đỏ, mâm quả truyền thống, không gian gia tiên trang trọng.\n- Vai trò: Chuẩn bị timeline, phối hợp lễ vật, điều phối trình tự nghi lễ.\n\n**Dự án 02 — Sen Hồng Gia Lễ**\n\n- Loại hình: Lễ cưới truyền thống.\n- Địa điểm: Cần Thơ.\n- Quy mô: 100 khách.\n- Concept: Hoa sen, đỏ trầm, kem và vàng cổ.\n- Vai trò: Hỗ trợ phát triển concept, phối hợp trang trí và kiểm tra công tác chuẩn bị.\n\n**Dự án 03 — Tơ Hồng Sum Vầy**\n\n- Loại hình: Lễ cưới quy mô gia đình.\n- Địa điểm: Huế.\n- Quy mô: 80 khách.\n- Concept: Không gian ấm cúng, trang phục truyền thống và hoa tươi.\n- Vai trò: Lập kế hoạch, quản lý timeline và điều phối ngày cưới.\n\nMỗi dự án phải có ảnh lớn, tên dự án, địa điểm, vai trò cá nhân và mô tả ngắn về quá trình thực hiện.\n\nSử dụng ba bố cục hình ảnh khác nhau thay vì ba card giống hệt nhau.\n\nCho phép mở rộng thông tin dự án bằng lightbox hoặc panel ngay trên trang.\n\n### 7. My Expertise\n\nTiêu đề: “Năng lực chuyên môn.”\n\nTrình bày:\n- Traditional Wedding Planning.\n- Ceremony Coordination.\n- Wedding Timeline Management.\n- Vendor Coordination.\n- Traditional Ceremony Preparation.\n- Family Communication.\n- Event Styling.\n\nSử dụng typography, đường phân cách và hình ảnh chi tiết. Không dùng thanh phần trăm kỹ năng.\n\n### 8. Work Experience\n\nTạo timeline nghề nghiệp giả định.\n\n**2023–Hiện tại — Independent Wedding Planner**\n- Lập kế hoạch tổ chức lễ cưới hỏi.\n- Phối hợp với gia đình và các đơn vị cung cấp dịch vụ.\n- Chuẩn bị checklist và timeline.\n- Điều phối các công việc trong ngày diễn ra sự kiện.\n\n**2021–2023 — Event Coordinator, An Duyên Wedding Studio**\n- Hỗ trợ tổ chức lễ ăn hỏi và lễ cưới.\n- Phối hợp đội ngũ trang trí.\n- Theo dõi tiến độ chuẩn bị.\n- Hỗ trợ điều phối nghi thức.\n\n### 9. Education & Certifications\n\n- Cử nhân Quản trị sự kiện — Học viện Sự kiện Việt, 2021.\n- Chứng nhận Event Planning Fundamentals — chương trình đào tạo giả định, 2022.\n\nĐây là dữ liệu minh họa, không đại diện cho bằng cấp hoặc chứng chỉ có thật.\n\n### 10. Contact\n\nTiêu đề: “Hãy cùng bắt đầu một cuộc trò chuyện.”\n\nThông tin:\n- Email: minchau@example.com.\n- Location: Ho Chi Minh City, Vietnam.\n- LinkedIn: hồ sơ demo.\n- Instagram: hồ sơ demo.\n\nNút:\n- EMAIL ME.\n- DOWNLOAD CV.\n\nNếu chưa có file CV PDF, hãy tạo nút demo rõ ràng hoặc cung cấp một file CV mẫu có thể tải xuống.\n\n### 11. Thiết kế và kỹ thuật\n\n- Chỉ xây dựng một landing page.\n- Không thêm chức năng thương mại điện tử.\n- Không thêm hệ thống đặt dịch vụ hoặc thanh toán.\n- Hình ảnh cưới hỏi truyền thống Việt Nam phải là trọng tâm.\n- Sử dụng animation nhẹ khi cuộn trang.\n- Đảm bảo responsive trên desktop, tablet và mobile.\n- Không có cuộn ngang.\n- Tất cả menu và nút phải hoạt động đúng.\n- Không tuyên bố dữ liệu giả định là thành tích có thật.\n\nKẾT QUẢ: Một portfolio cá nhân Wedding Planner mang bản sắc Việt Nam, có hình ảnh đẹp, thể hiện năng lực nghề nghiệp và phù hợp để giới thiệu bản thân hoặc ứng tuyển công việc.\n",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-26T07:22:37.187Z",
+  "updatedAt": "2026-10-26T07:39:19.290Z",
+  "screen": "done",
+  "request": "Website portfolio cá nhân",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\nguyen-minh-chau\\web",
+    "builtAt": "2026-10-26T07:39:04.783Z",
+    "pages": [
+      "index.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": []
+    }
+  },
+  "job": {
+    "id": "5c7acd54-d811-41c2-8db6-1e9b8dad4589",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\nguyen-minh-chau\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 55234,
+      "outputTokens": 57099,
+      "cacheReadTokens": 7096189,
+      "cacheCreationTokens": 274836,
+      "costUsd": 4.6781402000000005,
+      "numTurns": 94,
+      "durationMs": 961598
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-26T07:39:15.893Z",
+    "critical": 0,
+    "major": 3,
+    "minor": 1,
+    "screenshots": 3
+  }
+}

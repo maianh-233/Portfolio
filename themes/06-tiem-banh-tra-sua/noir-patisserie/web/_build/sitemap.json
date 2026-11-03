@@ -1,0 +1,102 @@
+{
+  "brand": "NOIR PATISSERIE",
+  "language": "en",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Tạp chí ẩm thực in trên nền đen: ảnh bánh cận cảnh tương phản mạnh như ảnh studio, đường kẻ 1px chia lưới 12 cột và số thứ tự nhỏ No. 01 màu champagne chạy xuyên mọi trang, kết trang bằng wordmark khổng lồ như bìa sau tạp chí",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nghệ thuật bánh Pháp trong bóng tối thanh lịch",
+    "description": "Giao diện thương hiệu bánh ngọt cao cấp phong cách tạp chí, tông đen và champagne."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu thương hiệu, 3 món signature, tinh thần chế tác và không gian tiệm; dẫn sang The Collection và About",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ai", "note": "Ảnh bánh signature ~62% chiều ngang bên phải, chữ The Art of Fine Pâtisserie bên trái, CTA Explore the collection" },
+        { "id": "manifesto", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "Dải chữ về tinh thần thủ công và nghệ thuật hương vị, 3 ghi chú đánh số" },
+        { "id": "signature", "catalog": "collections", "variant": "teaser-row", "source": "ai", "note": "Signature Creations: 3 món ảnh lớn, lưới bất đối xứng, link sang pages/collection.html" },
+        { "id": "craft", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Chia hai nửa: ảnh quy trình chế tác + nội dung về sự tỉ mỉ, link sang pages/about.html" },
+        { "id": "salon", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ai", "note": "Gallery ngang ảnh không gian tiệm, lightbox" },
+        { "id": "visit", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Visit the salon: địa chỉ, giờ mở cửa, gọi điện, sao chép địa chỉ" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "dark chocolate entremet", "file": "https://images.unsplash.com/photo-1761315631665-cf6220061f20?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-1", "query": "dark chocolate cake", "file": "https://images.unsplash.com/photo-1458253756247-1e4ed949191b?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-2", "query": "fruit tart", "file": "https://images.unsplash.com/photo-1771556621626-353ce8ecb5e9?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-3", "query": "chocolate macarons", "file": "https://images.unsplash.com/photo-1676080801076-21406293720a?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "craft", "query": "pastry chef kitchen", "file": "https://images.unsplash.com/photo-1769596717694-dc2a0a55e5d3?w=1600&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "salon-1", "query": "patisserie interior", "file": "https://images.unsplash.com/photo-1790156591751-5c3c96e0140f?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "salon-2", "query": "patisserie interior", "file": "https://images.unsplash.com/photo-1726981897420-0778c14deedf?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "salon-3", "query": "patisserie interior", "file": "https://images.unsplash.com/photo-1765045038226-43d7cd5cfd29?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "salon-4", "query": "patisserie interior", "file": "https://images.unsplash.com/photo-1583338917451-face2751d8d5?w=1400&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "salon-5", "query": "patisserie shop interior", "file": "assets/img/home-salon-window.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/collection.html",
+      "title": "The Collection",
+      "purpose": "Trình bày các dòng bánh theo 4 nhóm, chỉ tên, mô tả nguyên liệu/hương vị và ảnh; không giá, không nút mua",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Tiêu đề lớn The Collection + mục lục 4 nhóm" },
+        { "id": "signature-cakes", "catalog": "collections", "variant": "features-alternate", "source": "ai", "note": "Ảnh ngang lớn + mô tả, rồi lưới bất đối xứng" },
+        { "id": "chocolate-entremets", "catalog": "collections", "variant": "gallery-lookbook", "source": "ai", "note": "" },
+        { "id": "macarons", "catalog": "collections", "variant": "features-alternate", "source": "ai", "note": "" },
+        { "id": "french-pastries", "catalog": "collections", "variant": "gallery-lookbook", "source": "ai", "note": "" },
+        { "id": "visit", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "signature-cakes-feature", "query": "layered chocolate cake", "file": "https://images.unsplash.com/photo-1761637604893-f049f46d2bcd?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-cakes-2", "query": "layered cake berries", "file": "https://images.unsplash.com/photo-1761637604927-e3656dc81383?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "signature-cakes-3", "query": "chocolate cake slice", "file": "assets/img/home-signature-chocolate-slice.jpg", "status": "ok" },
+        { "slot": "chocolate-feature", "query": "chocolate entremet", "file": "https://images.unsplash.com/photo-1759146233677-292a2f1a2236?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "chocolate-2", "query": "dark chocolate dessert", "file": "https://images.unsplash.com/photo-1768326119181-5f3cfe0adb4c?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "chocolate-3", "query": "chocolate bonbons", "file": "https://images.unsplash.com/photo-1766734974600-b6ea9a40a03a?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "chocolate-4", "query": "flourless chocolate cake", "file": "assets/img/home-hero-chocolate-cake.webp", "status": "ok" },
+        { "slot": "macarons-feature", "query": "macarons", "file": "https://images.unsplash.com/photo-1519665541-b13188b28be9?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "macarons-2", "query": "macarons dark", "file": "https://images.unsplash.com/photo-1697607448688-c5ca9f87e79f?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "macarons-3", "query": "macarons stack", "file": "https://images.unsplash.com/photo-1680814773994-0a1db34abe9a?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "pastries-feature", "query": "lemon tart", "file": "https://images.unsplash.com/photo-1785695797215-4345de8ab06c?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "pastries-2", "query": "croissants", "file": "https://images.unsplash.com/photo-1623334044303-241021148842?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "pastries-3", "query": "fruit tart", "file": "assets/img/home-signature-fruit-tart.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Câu chuyện thương hiệu dạng tạp chí, ba trụ cột: nguyên liệu, kỹ thuật, cảm hứng; dải ảnh kết cấu bánh và không gian",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Ảnh nghệ nhân đang hoàn thiện món" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Bài giới thiệu dạng tạp chí, drop cap, trích dẫn kéo ra lề" },
+        { "id": "pillars", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "Ingredients, Technique, Inspiration; accordion chi tiết" },
+        { "id": "textures", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "Dải ảnh cận cảnh kết cấu bánh và không gian, lightbox" },
+        { "id": "chef-quote", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "" },
+        { "id": "visit", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "pastry chef plating", "file": "https://images.unsplash.com/photo-1775513153018-0c7ac7899751?w=1800&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "story", "query": "pastry chef piping cream", "file": "assets/img/home-craft-plating.jpg", "status": "ok" },
+        { "slot": "textures-1", "query": "croissant rolling pin", "file": "https://images.unsplash.com/photo-1597528662465-55ece5734101?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "textures-2", "query": "chocolate cubes", "file": "https://images.unsplash.com/photo-1548741448-9f4e87b7f7ab?w=1200&q=80&auto=format&fit=crop", "status": "link" },
+        { "slot": "textures-3", "query": "pastry dough", "file": "assets/img/home-salon-counter.webp", "status": "ok" },
+        { "slot": "textures-4", "query": "macarons flowers", "file": "https://images.unsplash.com/photo-1702313040416-94afddd01d79?w=1200&q=80&auto=format&fit=crop", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Giới hạn 3 trang (Home, The Collection, About) theo chú thích của BA: không có trang Contact riêng, thông tin liên hệ nằm ở khối Visit và footer",
+    "Theo góp ý của BA: thêm bộ chuyển ngôn ngữ EN / VI ở header mọi trang (assets/js/site.js — HTML viết tiếng Anh, bản tiếng Việt lấy từ từ điển; dịch cả title, meta description, alt, chú thích ảnh, địa chỉ sao chép; lưu lựa chọn trong localStorage, hỗ trợ ?lang=vi). Mặc định vẫn là tiếng Anh",
+    "Đổi font sang Cormorant Garamond (tiêu đề) + Be Vietnam Pro (nội dung) — đủ dấu tiếng Việt, giữ tinh thần serif tạp chí cao cấp; Instrument Serif và Geist không hỗ trợ tiếng Việt",
+    "Hero dùng bố cục tách đôi (ảnh ~62% bên phải) theo mô tả của BA thay cho hero-type của preset",
+    "Màu dùng bảng màu BA (#171615, #24211E, #F2EEE6, #C4A574, #B7AEA2) gán vào đúng tên màu của preset (ink, stone, paper, bronze, muted)",
+    "CTA trang chủ viết tiếng Anh 'Explore the collection' theo ngôn ngữ website",
+    "Openverse chậm / thiếu ảnh tông tối nên phần lớn ảnh dùng link Unsplash đã kiểm qua link_image; assets/img/home-salon-counter.jpg (có logo thương hiệu khác) không dùng"
+  ],
+  "limitations": [
+    "Không có giỏ hàng, đặt bánh, form hay giao dịch theo ràng buộc của BA",
+    "Địa chỉ, số điện thoại, giờ mở cửa, tên món, tên bếp trưởng là nội dung mẫu cần khách xác nhận",
+    "Ảnh dùng link ngoài (Unsplash) cần thay bằng ảnh thật của tiệm trước khi chạy chính thức"
+  ]
+}

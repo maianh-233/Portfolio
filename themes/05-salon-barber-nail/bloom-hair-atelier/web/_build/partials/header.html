@@ -1,0 +1,37 @@
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40">
+  <div class="hdr-inner mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-6 px-4 py-5 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="group flex flex-col leading-none text-plum" aria-label="BLOOM HAIR ATELIER, home">
+      <span class="font-display text-[1.65rem] font-medium tracking-[0.08em] sm:text-3xl">BLOOM</span>
+      <span class="mt-1 text-xs font-semibold uppercase tracking-[0.34em] text-lilac">Hair Atelier</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Main">
+      <a href="{{root}}index.html" data-vi="Trang chủ" class="relative py-2 text-[15px] font-medium text-plum/80 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-lavender-deep after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-plum aria-[current=page]:after:scale-x-100">Home</a>
+      <a href="{{root}}pages/services.html" data-vi="Dịch vụ" class="relative py-2 text-[15px] font-medium text-plum/80 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-lavender-deep after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-plum aria-[current=page]:after:scale-x-100">Services</a>
+      <a href="{{root}}pages/gallery.html" data-vi="Bộ sưu tập" class="relative py-2 text-[15px] font-medium text-plum/80 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-lavender-deep after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-plum aria-[current=page]:after:scale-x-100">Gallery</a>
+      <a href="{{root}}pages/about.html" data-vi="Về BLOOM" class="relative py-2 text-[15px] font-medium text-plum/80 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-lavender-deep after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-plum aria-[current=page]:after:scale-x-100">About</a>
+    </nav>
+
+    <div class="flex items-center gap-3 sm:gap-5">
+      <div class="flex items-center text-xs font-semibold tracking-[0.16em]" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="relative min-h-[44px] px-2 text-plum/50 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-2 after:bottom-2.5 after:h-px after:scale-x-0 after:bg-plum after:transition-transform after:duration-300">EN</button>
+        <span class="text-taupe" aria-hidden="true">/</span>
+        <button type="button" data-lang="vi" class="relative min-h-[44px] px-2 text-plum/50 transition-colors duration-300 hover:text-plum after:absolute after:inset-x-2 after:bottom-2.5 after:h-px after:scale-x-0 after:bg-plum after:transition-transform after:duration-300">VI</button>
+      </div>
+      <button type="button" data-modal-open="book" data-vi="Đặt lịch" class="hidden min-h-[44px] items-center border border-plum bg-lavender px-6 text-sm font-semibold text-plum transition duration-300 hover:bg-plum hover:text-milk active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lavender-deep sm:inline-flex">Book a Visit</button>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center border border-plum/30 text-plum lg:hidden" aria-label="Open menu" data-vi-aria-label="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-plum/10 bg-milk p-6 shadow-[0_30px_60px_-20px_rgba(56,43,61,.35)] lg:hidden">
+    <nav class="flex flex-col" aria-label="Mobile">
+      <a href="{{root}}index.html" data-vi="Trang chủ" class="border-b border-taupe/40 py-4 font-display text-3xl text-plum aria-[current=page]:text-lavender-deep">Home</a>
+      <a href="{{root}}pages/services.html" data-vi="Dịch vụ" class="border-b border-taupe/40 py-4 font-display text-3xl text-plum aria-[current=page]:text-lavender-deep">Services</a>
+      <a href="{{root}}pages/gallery.html" data-vi="Bộ sưu tập" class="border-b border-taupe/40 py-4 font-display text-3xl text-plum aria-[current=page]:text-lavender-deep">Gallery</a>
+      <a href="{{root}}pages/about.html" data-vi="Về BLOOM" class="py-4 font-display text-3xl text-plum aria-[current=page]:text-lavender-deep">About</a>
+    </nav>
+    <button type="button" data-modal-open="book" data-vi="Đặt lịch" class="mt-4 flex min-h-[48px] w-full items-center justify-center border border-plum bg-lavender text-sm font-semibold text-plum">Book a Visit</button>
+  </div>
+</header>

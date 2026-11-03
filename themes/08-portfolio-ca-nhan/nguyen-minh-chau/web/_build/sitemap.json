@@ -1,0 +1,58 @@
+{
+  "brand": "Nguyễn Minh Châu",
+  "language": "vi",
+  "preset": "bold",
+  "motionLevel": 2,
+  "visualIdea": "Dấu triện đỏ và khung vòm cửa nhà rường: mỗi ảnh đặt trong khung vòm / viền chỉ vàng cổ, con dấu đỏ đóng như chữ ký trên hero, dự án, chứng chỉ và CV",
+  "purposeInferred": "Portfolio cá nhân của một Traditional Wedding Planner: giới thiệu chân dung, hiểu biết nghi lễ cưới hỏi Việt, dự án tiêu biểu, kinh nghiệm, học vấn và CV để ứng tuyển / giới thiệu bản thân với nhà tuyển dụng, studio cưới và các gia đình",
+  "theme": {
+    "tagline": "Gìn giữ nét truyền thống, chăm chút từng khoảnh khắc trọng đại",
+    "description": "Giao diện portfolio cá nhân cho chuyên viên tổ chức cưới hỏi truyền thống Việt Nam."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Landing page portfolio một trang: chân dung, câu chuyện nghề, dự án, năng lực, kinh nghiệm, học vấn, liên hệ và CV",
+      "sections": [
+        { "id": "home", "catalog": "hero", "variant": "hero-offset", "source": "ba", "note": "Chân dung trong khung vòm + ảnh phụ mâm quả + con dấu triện; CTA Explore projects / View career profile" },
+        { "id": "rites", "catalog": "editorial", "variant": "marquee-band", "source": "ai", "note": "Dải tên các nghi lễ cưới hỏi" },
+        { "id": "about", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "About Me: ảnh, đoạn giới thiệu, 5 điểm nhấn, trích dẫn" },
+        { "id": "portfolio", "catalog": "projects", "variant": "gallery-lookbook", "source": "ba", "note": "3 dự án, 3 bố cục khác nhau, panel chi tiết bằng modal + lightbox ảnh" },
+        { "id": "heritage", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "Trích dẫn lớn trên ảnh, parallax + hạt bụi" },
+        { "id": "expertise", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "7 năng lực dạng accordion chia 3 nhóm, ảnh chi tiết dính bên trái, không thanh phần trăm" },
+        { "id": "experience", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Timeline 2 vị trí" },
+        { "id": "education", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "2 thẻ chứng nhận có dấu triện + ghi chú dữ liệu minh họa" },
+        { "id": "contact", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Tiêu đề lớn, email / location / LinkedIn / Instagram demo, nút Email me + Download CV" }
+      ],
+      "images": [
+        { "slot": "home", "query": "ao dai woman hue", "file": "assets/img/hero-portrait-ao-dai.jpg", "status": "ok" },
+        { "slot": "home-secondary", "query": "vietnamese betrothal gift trays", "file": "https://upload.wikimedia.org/wikipedia/commons/5/50/Do_le_an_hoi.JPG", "status": "link" },
+        { "slot": "about", "query": "vietnamese wedding gifts exchange", "file": "https://upload.wikimedia.org/wikipedia/commons/1/13/VNese_Wedding_021.jpg", "status": "link" },
+        { "slot": "portfolio-hong-duyen", "query": "vietnamese traditional wedding", "file": "assets/img/project-hong-duyen.jpg", "status": "ok" },
+        { "slot": "portfolio-sen-hong", "query": "lotus flower red", "file": "assets/img/project-sen-hong-lotus.webp", "status": "ok" },
+        { "slot": "portfolio-to-hong", "query": "hue garden house vietnam", "file": "assets/img/project-to-hong-hue-garden.jpg", "status": "ok" },
+        { "slot": "portfolio-to-hong-panel", "query": "vietnamese girls ao dai temple", "file": "assets/img/project-to-hong-wedding.jpg", "status": "ok" },
+        { "slot": "heritage", "query": "incense village vietnam", "file": "assets/img/hero-incense-ritual.jpg", "status": "ok" },
+        { "slot": "expertise", "query": "betel areca nut", "file": "assets/img/expertise-areca-betel.jpg", "status": "ok" },
+        { "slot": "expertise-detail", "query": "hand embroidery vietnam", "file": "assets/img/expertise-embroidery.jpg", "status": "ok" },
+        { "slot": "experience", "query": "wedding table setup", "file": "assets/img/project-to-hong-table.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng một landing page (index.html) theo yêu cầu rõ của BA: 'Chỉ xây dựng một landing page', menu cuộn tới section trên cùng trang",
+    "Việt hóa toàn bộ giao diện theo yêu cầu cập nhật; dùng Cormorant Garamond cho tiêu đề và Be Vietnam Pro cho nội dung để phù hợp phong cách di sản và hỗ trợ dấu tiếng Việt",
+    "Màu và font theo BA (đỏ trầm #8E2028, kem #F7F0E5, vàng cổ #B79A62, nâu đậm #3C2B25; Cormorant Garamond + Be Vietnam Pro) thay cho bảng màu / font của preset Bold; chỉ giữ tinh thần chữ lớn, khối màu đậm, chi tiết lệch của preset",
+    "Không dùng con trỏ tùy biến / tilt của preset vì phong cách heritage editorial cần sự tĩnh và trang trọng",
+    "Đoạn giới thiệu dài trong hero được rút gọn cho vừa màn hình đầu; nguyên văn đặt ở About Me dưới dạng trích dẫn",
+    "Nút DOWNLOAD CV tải file CV mẫu dạng văn bản (assets/files/nguyen-minh-chau-cv-sample.txt); VIEW MY CV mở cửa sổ CV ngay trên trang",
+    "Một số ảnh đã tải nhưng không đúng chủ đề (about-ao-dai, hero-ceremony-detail, project-to-hong-family, expertise-ceremony, experience-wedding-day) được loại; link Wikimedia Thaiquoc-ngockieu / Trau_cau bị chặn (429) nên thay bằng ảnh tải về, không dùng trên trang"
+  ],
+  "limitations": [
+    "Toàn bộ dự án, kinh nghiệm, bằng cấp, chứng chỉ là dữ liệu minh họa, không phải thành tích thật",
+    "LinkedIn / Instagram là hồ sơ demo, chưa có liên kết thật",
+    "CV là file mẫu dạng văn bản, chưa có bản PDF thật",
+    "Một số ảnh dùng link Wikimedia Commons, cần thay bằng ảnh thật của Minh Châu và các dự án"
+  ]
+}

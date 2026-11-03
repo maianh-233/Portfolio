@@ -1,0 +1,99 @@
+{
+  "brand": "MILKY DAY",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Bọt sữa và nét kem: mép section uốn lượn như lớp kem phủ, nhãn viết tay như sticker dán ly, sao nhỏ và trái tim trôi rất nhẹ quanh ảnh, bo góc lớn và nút pill trên nền kem sữa / hồng phấn",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Ngọt ngào từ ngụm đầu tiên",
+    "description": "Giao diện thương hiệu trà sữa và bánh ngọt pastel cho người trẻ."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu thương hiệu, món được yêu thích, dẫn sang Menu và Về chúng tôi",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Headline + CTA Khám phá menu, ảnh lớn đồ uống + ảnh tròn bánh chồng lệch" },
+        { "id": "gioi-thieu", "catalog": "story", "variant": "story-keywords", "source": "ba", "note": "Dải giới thiệu ngắn với ba từ khóa Fresh, Sweet, Happy" },
+        { "id": "yeu-thich", "catalog": "collections", "variant": "teaser-row", "source": "ba", "note": "4 thẻ sản phẩm ảnh dọc, dẫn sang pages/menu.html" },
+        { "id": "khoanh-khac", "catalog": "gallery", "variant": "gallery-bento", "source": "ba", "note": "Dải ảnh ghép đồ uống, bánh ngọt, khoảnh khắc tại tiệm, có lightbox" },
+        { "id": "khong-gian", "catalog": "story", "variant": "story-split", "source": "ba", "note": "Không gian thương hiệu, ảnh vòm, CTA Câu chuyện của chúng tôi" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ba", "note": "Nền hồng nhạt, logo, mô tả, điều hướng, liên hệ mẫu" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "pink milkshake whipped cream", "file": "assets/img/home-hero-pink.webp", "status": "ok" },
+        { "slot": "hero-small", "query": "dessert cafe interior cozy", "file": "assets/img/home-collage-dessert.webp", "status": "ok" },
+        { "slot": "yeu-thich-1", "query": "strawberry milk tea", "file": "assets/img/fav-strawberry-milk.jpg", "status": "ok" },
+        { "slot": "yeu-thich-2", "query": "matcha latte", "file": "assets/img/fav-matcha-latte.webp", "status": "ok" },
+        { "slot": "yeu-thich-3", "query": "cupcakes buttercream bakery", "file": "assets/img/fav-cupcake.webp", "status": "ok" },
+        { "slot": "yeu-thich-4", "query": "chocolate chip cookies", "file": "assets/img/fav-cookie.webp", "status": "ok" },
+        { "slot": "khoanh-khac-1", "query": "bubble tea cake pastel", "file": "assets/img/home-hero.webp", "status": "ok" },
+        { "slot": "khoanh-khac-2", "query": "dessert cafe interior cozy", "file": "assets/img/home-collage-counter.jpg", "status": "ok" },
+        { "slot": "khoanh-khac-3", "query": "dessert cafe interior cozy", "file": "assets/img/home-collage-moment.jpg", "status": "ok" },
+        { "slot": "khoanh-khac-4", "query": "dessert cafe interior cozy", "file": "assets/img/home-collage-pastry.jpg", "status": "ok" },
+        { "slot": "khong-gian", "query": "dessert cafe interior cozy", "file": "assets/img/home-space.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/menu.html",
+      "title": "Sản phẩm & Menu",
+      "purpose": "Toàn bộ menu theo 4 danh mục, lọc client-side, tùy chỉnh ly, kết bằng dải ảnh + CTA về Trang chủ",
+      "sections": [
+        { "id": "menu-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Hero ngắn, không toàn màn hình" },
+        { "id": "thuc-don", "catalog": "collections", "variant": "gallery-filter", "source": "ba", "note": "Thanh danh mục Trà sữa / Trà trái cây / Bánh ngọt / Cookie & Cupcake; lưới 3 cột desktop, 2 cột tablet, 1-2 cột mobile" },
+        { "id": "tuy-chinh", "catalog": "faq", "variant": "faq-split", "source": "ai", "note": "Accordion độ ngọt, đá, topping, sữa thực vật" },
+        { "id": "dai-anh", "catalog": "cta", "variant": "cta-strip", "source": "ba", "note": "Dải hình ảnh + CTA Về Trang chủ" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "tra-sua-1", "query": "bubble tea tapioca pearls (Wikimedia)", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/A_bubble_tea_with_tapioca_pearls%2C_July_2018.jpg/960px-A_bubble_tea_with_tapioca_pearls%2C_July_2018.jpg", "status": "link" },
+        { "slot": "tra-sua-2", "query": "pearl milk tea Taipei (Wikimedia)", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Taipei_pearlmilktea.jpg/960px-Taipei_pearlmilktea.jpg", "status": "link" },
+        { "slot": "tra-sua-3", "query": "cups of bubble tea (Wikimedia)", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/2009-12-30_cups_of_bubble_tea_at_a_Chunshuitang_in_Taipei.jpg/960px-2009-12-30_cups_of_bubble_tea_at_a_Chunshuitang_in_Taipei.jpg", "status": "link" },
+        { "slot": "tra-trai-cay-1", "query": "lemon iced tea fruit", "file": "assets/img/menu-lemon-tea.jpg", "status": "ok" },
+        { "slot": "tra-trai-cay-2", "query": "free fruit tea image", "file": "assets/img/menu-berry-tea.webp", "status": "ok" },
+        { "slot": "banh-ngot-1", "query": "free cheesecake strawberry image", "file": "assets/img/menu-cheesecake.webp", "status": "ok" },
+        { "slot": "banh-ngot-2", "query": "free cheesecake strawberry image", "file": "assets/img/menu-strip-cake.webp", "status": "ok" },
+        { "slot": "cookie-cupcake-1", "query": "free macarons pastel image", "file": "assets/img/menu-macaron.webp", "status": "ok" },
+        { "slot": "cookie-cupcake-2", "query": "cupcakes buttercream bakery", "file": "assets/img/menu-cupcake-strawberry.jpg", "status": "ok" },
+        { "slot": "dai-anh-1", "query": "free fruit tea image", "file": "assets/img/menu-fruit-tart.webp", "status": "ok" },
+        { "slot": "dai-anh-2", "query": "free macarons pastel image", "file": "assets/img/menu-strip-macarons.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Về chúng tôi",
+      "purpose": "Câu chuyện thương hiệu, ba giá trị, ảnh chi tiết đồ uống / bánh / không gian",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Hero ảnh không gian tiệm, khối tiêu đề chồng lên ảnh" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Câu chuyện văn phong gần gũi, dạng lá thư" },
+        { "id": "gia-tri", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "Ba giá trị: nguyên liệu chọn lọc, hương vị vui tươi, không gian thân thiện" },
+        { "id": "goc-tiem", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ảnh chi tiết đồ uống, bánh và không gian, có lightbox" },
+        { "id": "hen-gap", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "CTA cuối dẫn sang Menu" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ba", "note": "Footer đồng bộ" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "cafe interior free image", "file": "assets/img/about-hero-shop.webp", "status": "ok" },
+        { "slot": "goc-tiem-do-uong", "query": "barista pouring milk tea", "file": "assets/img/about-drink-craft.jpg", "status": "ok" },
+        { "slot": "goc-tiem-banh", "query": "baker hands frosting cake", "file": "assets/img/about-baking.webp", "status": "ok" },
+        { "slot": "goc-tiem-khong-gian", "query": "cafe interior free image", "file": "assets/img/about-space-window.webp", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Website 3 trang (Trang chủ / Sản phẩm & Menu / Về chúng tôi) theo ràng buộc 'tối đa 3 trang' của BA.",
+    "BA yêu cầu song ngữ hoàn chỉnh + công tắc VI-EN: mặc định tiếng Việt (lang=vi); công tắc ở header đổi toàn bộ chữ, alt ảnh, title, meta sang tiếng Anh bằng assets/js/site.js (data-en), lưu lựa chọn trong localStorage. Ghi đè mục 'không tạo bộ chuyển ngôn ngữ' của concept.md vì chú thích BA ưu tiên hơn. Chú thích (data-caption) trong lightbox giữ tiếng Việt.",
+    "Màu và font theo art direction của BA thay cho preset Nature: hồng phấn #F5C8D8, kem sữa #FFF8EF, nâu cacao #69483F, vàng bơ #FFE6A7; heading Nunito (sans tròn, đậm), thân bài Be Vietnam Pro, nhãn trang trí Patrick Hand (chữ viết tay) - cả ba đủ ký tự tiếng Việt.",
+    "Không có trang Liên hệ riêng (giới hạn 3 trang): địa chỉ, giờ mở cửa, điện thoại (tel + sao chép), email mẫu đặt ở section Không gian và footer.",
+    "Không có giá, đặt hàng, giỏ hàng, thanh toán hay form giao dịch theo ràng buộc của BA.",
+    "Thêm section 'Tùy chỉnh ly của bạn' (accordion) ở trang Menu và CTA cuối trang Về chúng tôi để đủ tương tác và kết trang.",
+    "Trà sữa trên trang Menu dùng link ảnh Wikimedia Commons (thư viện ảnh không có ảnh trà sữa phù hợp); link pakutaso.com bị chặn trong trình duyệt nên đã thay.",
+    "Một số ảnh đã tải nhưng không dùng vì có logo thương hiệu khác hoặc bối cảnh không hợp (menu-brown-sugar, menu-cheese-foam, menu-lychee-milk-tea, menu-peach-tea, fav-cupcake.jpg) - có thể xóa khỏi assets/img."
+  ],
+  "limitations": [
+    "Song ngữ VI-EN chạy phía client (không có URL riêng cho tiếng Anh, không tối ưu SEO tiếng Anh).",
+    "Địa chỉ, số điện thoại, email, giờ mở cửa và mô tả món là nội dung mẫu, cần khách xác nhận.",
+    "Ảnh trà sữa trên trang Menu là link ngoài (Wikimedia), cần ảnh sản phẩm thật của tiệm khi triển khai."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "brand": "DEVNEX",
+  "language": "vi",
+  "preset": "corporate",
+  "motionLevel": 1,
+  "visualIdea": "Mỗi section như một tệp đang mở trong code editor: tiêu đề có tiền tố đường dẫn ~/ màu xanh neon, nền lưới kỹ thuật mờ, viền mảnh 1px và nhãn kỹ thuật JetBrains Mono xuyên suốt",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Viết code rõ ràng, xây sản phẩm chạy thật",
+    "description": "Giao diện portfolio và CV trực tuyến tông tối cho lập trình viên."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Landing page Portfolio & CV một trang: giới thiệu năng lực, kỹ năng, dự án, kinh nghiệm, học vấn và kênh liên hệ cho nhà tuyển dụng / khách thuê freelancer",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ai", "note": "Cột trái 58% chữ + thông tin nhanh, cột phải 42% cửa sổ editor profile.ts hiện từng dòng (theo chú thích BA)" },
+        { "id": "about", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Hai cột: giới thiệu 100-150 từ / phương pháp, lĩnh vực, mục tiêu + ảnh + 3 nguyên tắc" },
+        { "id": "skills", "catalog": "features", "variant": "features-tabs", "source": "ai", "note": "Tabs Frontend / Backend / Database / Tools, nhãn mức độ là dữ liệu mẫu, không dùng thanh %" },
+        { "id": "projects", "catalog": "projects", "variant": "gallery-lookbook", "source": "ai", "note": "Editorial grid: 1 dự án nổi bật rộng + 3 dự án bố cục xen kẽ; GitHub / Live Demo chưa cấu hình nên hiển thị trạng thái tắt" },
+        { "id": "experience", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Timeline dọc đường neon, nội dung gắn nhãn PLACEHOLDER" },
+        { "id": "education", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "Học vấn + chứng chỉ gọn, nhãn PLACEHOLDER" },
+        { "id": "contact", "catalog": "contact", "variant": "contact-split", "source": "ai", "note": "Thông tin liên hệ + form demo chưa kết nối backend" }
+      ],
+      "images": [
+        { "slot": "about", "query": "software developer coding", "file": "assets/img/about-code-screen.webp", "status": "ok" },
+        { "slot": "projects-chat", "query": "chat app smartphone screen", "file": "assets/img/project-chat-realtime.jpg", "status": "ok" },
+        { "slot": "projects-ecommerce", "query": "online shop website laptop", "file": "assets/img/project-ecommerce-api.jpg", "status": "ok" },
+        { "slot": "projects-dashboard", "query": "analytics dashboard monitor", "file": "assets/img/project-analytics-dashboard.jpg", "status": "ok" },
+        { "slot": "projects-uikit", "query": "software developer coding", "file": "assets/img/project-task-api.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng một trang index.html với menu anchor vì chú thích BA ghi rõ 'Chỉ một landing page, không tạo trang con'",
+    "Nhãn menu, tiêu đề hero, tiêu đề Contact BA viết bằng tiếng Anh được dịch sang tiếng Việt vì ngôn ngữ website là tiếng Việt; đoạn code trong terminal giữ cú pháp tiếng Anh vì là mã nguồn",
+    "Bảng màu theo đúng mã HEX BA cung cấp thay cho bảng màu preset Corporate; giao diện tối toàn trang",
+    "Font: tool báo 'Typography' không có trên Google Fonts do đọc nhầm nhãn; dùng đúng Space Grotesk (tiêu đề), Inter (nội dung), JetBrains Mono (nhãn kỹ thuật), fallback Be Vietnam Pro rồi font hệ thống",
+    "Hero có dòng thông tin nhanh (địa điểm, chuyên môn, kinh nghiệm, email) theo yêu cầu BA; số năm kinh nghiệm để 'Cập nhật theo hồ sơ' vì chưa có dữ liệu",
+    "Icon công nghệ dùng ô chữ viết tắt bằng JetBrains Mono thay cho logo để không phụ thuộc ảnh ngoài",
+    "Theo góp ý BA: bỏ nhãn PLACEHOLDER, bổ sung nội dung mẫu chi tiết (số liệu kết quả từng dự án, 4 case study trong hộp thoại, 4 vị trí kinh nghiệm, học vấn và chứng chỉ cụ thể, dải số liệu ở phần Giới thiệu)",
+    "Hiệu ứng terminal hiện từng dòng viết bằng CSS keyframes riêng (có tắt khi prefers-reduced-motion); không nạp atmos.js vì Level 1"
+  ],
+  "limitations": [
+    "Nút Tải CV mở hộp thoại thông báo tệp CV chưa được tải lên, chưa có file PDF thật",
+    "Liên kết GitHub, LinkedIn, Live Demo chưa có URL nên hiển thị trạng thái 'Chưa cấu hình', không tạo link giả",
+    "Form liên hệ là bản demo, chưa kết nối backend, không gửi đi",
+    "Toàn bộ hồ sơ (tên Trần Minh Khoa, công ty Lumio Commerce / Hikari Tech / Pixelgate, khách hàng Orbis / Mộc Trà / Vinamove, số liệu dự án, học vấn, chứng chỉ) là nội dung mẫu bịa theo yêu cầu BA để demo, cần thay bằng dữ liệu thật"
+  ]
+}

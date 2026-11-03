@@ -1,0 +1,111 @@
+{
+  "brand": "MECHAVANCE",
+  "language": "vi",
+  "preset": "futuristic",
+  "motionLevel": 1,
+  "visualIdea": "Bản vẽ CAD trên nền graphite: lưới kỹ thuật mảnh, góc định vị cam công nghiệp ôm từng ảnh, ảnh kim loại đơn sắc hé màu khi rê chuột, đường kích thước vẽ dần ở hero",
+  "purposeInferred": "Landing page giới thiệu năng lực gia công cơ khí chính xác cho doanh nghiệp sản xuất và đối tác công nghiệp; kèm 3 trang chi tiết dự án minh họa",
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Landing page 9 section theo brief BA; menu cuộn tới đúng section",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-type", "source": "ba", "note": "Tiêu đề ENGINEERING PRECISION. BUILDING THE FUTURE., 2 CTA, đường nét CAD vẽ dần" },
+        { "id": "about", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Sứ mệnh, định hướng, giá trị cốt lõi + 4 trụ năng lực; không bịa lịch sử / chứng nhận" },
+        { "id": "capabilities", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "5 card kỹ thuật có ảnh thật, hover zoom" },
+        { "id": "technology", "catalog": "gallery", "variant": "features-tabs", "source": "ba", "note": "Tabs + lightbox; model / thông số ghi Cập nhật sau" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "6 bước, sơ đồ tuyến tính ngang ở desktop, danh sách dọc trên mobile" },
+        { "id": "quality", "catalog": "features", "variant": "quality-split-accordion", "source": "ba", "note": "Ảnh đo kiểm + accordion 4 nội dung; không tuyên bố ISO" },
+        { "id": "projects", "catalog": "projects", "variant": "gallery-lookbook", "source": "ba", "note": "3 dự án minh họa, bố cục bất đối xứng, link sang trang chi tiết" },
+        { "id": "industries", "catalog": "gallery", "variant": "industries-grid", "source": "ba", "note": "5 lĩnh vực, lưới ảnh" },
+        { "id": "contact", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "CTA LET'S BUILD SOMETHING PRECISE., thông tin mẫu, form demo" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "cnc lathe metalworking", "file": "assets/img/hero-cnc-lathe.webp", "status": "ok" },
+        { "slot": "about", "query": "industrial factory interior", "file": "assets/img/about-nha-xuong.webp", "status": "ok" },
+        { "slot": "capabilities-cnc", "query": "metal turning lathe", "file": "assets/img/cap-cnc-machining.webp", "status": "ok" },
+        { "slot": "capabilities-sheet-metal", "query": "perforated sheet metal", "file": "assets/img/cap-sheet-metal.jpg", "status": "ok" },
+        { "slot": "capabilities-components", "query": "mechanical parts steel", "file": "assets/img/cap-mechanical-components.jpg", "status": "ok" },
+        { "slot": "capabilities-fabrication", "query": "welder sparks steel", "file": "assets/img/cap-industrial-fabrication.webp", "status": "ok" },
+        { "slot": "capabilities-design", "query": "technical drawing machine", "file": "assets/img/cap-technical-design.webp", "status": "ok" },
+        { "slot": "technology-milling", "query": "milling machine vise", "file": "assets/img/tech-milling-gear.jpg", "status": "ok" },
+        { "slot": "technology-drill", "query": "radial drill machine", "file": "assets/img/tech-radial-drill.jpg", "status": "ok" },
+        { "slot": "technology-robot", "query": "industrial robot arm", "file": "assets/img/tech-robot-arm.webp", "status": "ok" },
+        { "slot": "quality", "query": "micrometer measuring shaft", "file": "assets/img/quality-micrometer.webp", "status": "ok" },
+        { "slot": "projects-ong-thep", "query": "large steel pipe", "file": "assets/img/project-mat-bich.webp", "status": "ok" },
+        { "slot": "projects-khung-nhom", "query": "aluminum profile", "file": "assets/img/project-khung-nhom.jpg", "status": "ok" },
+        { "slot": "projects-banh-rang", "query": "steel gear wheel", "file": "assets/img/project-truc-banh-rang.jpg", "status": "ok" },
+        { "slot": "industries-san-xuat", "query": "heavy industry plant", "file": "assets/img/ind-san-xuat-cong-nghiep.webp", "status": "ok" },
+        { "slot": "industries-tu-dong-hoa", "query": "industrial control panel", "file": "assets/img/ind-tu-dong-hoa.jpg", "status": "ok" },
+        { "slot": "industries-may-moc", "query": "chain machine drive", "file": "assets/img/ind-may-moc-thiet-bi.jpg", "status": "ok" },
+        { "slot": "industries-phu-tro", "query": "pipe flange bolts", "file": "assets/img/ind-cong-nghiep-phu-tro.jpg", "status": "ok" },
+        { "slot": "industries-lap-rap", "query": "factory workshop assembly", "file": "assets/img/ind-che-tao-lap-rap.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "project-ong-thep-cuon-han.html",
+      "title": "Dự án: Ống thép cuốn hàn khẩu độ lớn",
+      "purpose": "Chi tiết dự án minh họa nhóm Kết cấu công nghiệp: yêu cầu, cách triển khai, kiểm soát chất lượng",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb + nhãn dự án minh họa" },
+        { "id": "cover", "catalog": "gallery", "variant": "detail-cover", "source": "ai", "note": "" },
+        { "id": "detail", "catalog": "projects", "variant": "detail-article", "source": "ai", "note": "Thông tin nhanh dính bên trái" },
+        { "id": "related", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn về index.html#contact" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "cover", "query": "large steel pipe", "file": "assets/img/project-mat-bich.webp", "status": "ok" },
+        { "slot": "detail-welding", "query": "pipe welding seam steel", "file": "assets/img/project-ong-han-duong-noi.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "project-khung-nhom-dinh-hinh.html",
+      "title": "Dự án: Khung nhôm định hình cho trạm lắp ráp",
+      "purpose": "Chi tiết dự án minh họa nhóm Thiết bị tự động hóa",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "cover", "catalog": "gallery", "variant": "detail-cover", "source": "ai", "note": "" },
+        { "id": "detail", "catalog": "projects", "variant": "detail-article", "source": "ai", "note": "Khối 3 lợi ích thay cho ảnh phụ" },
+        { "id": "related", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "cover", "query": "aluminum profile", "file": "assets/img/project-khung-nhom.jpg", "status": "ok" },
+        { "slot": "detail-assembly", "query": "aluminum profile frame machine", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "project-banh-rang-tru.html",
+      "title": "Dự án: Bánh răng trụ cho hộp giảm tốc băng tải",
+      "purpose": "Chi tiết dự án minh họa nhóm Máy móc và thiết bị",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "cover", "catalog": "gallery", "variant": "detail-cover", "source": "ai", "note": "" },
+        { "id": "detail", "catalog": "projects", "variant": "detail-article", "source": "ai", "note": "" },
+        { "id": "related", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ba", "note": "" }
+      ],
+      "images": [
+        { "slot": "cover", "query": "steel gear wheel", "file": "assets/img/project-truc-banh-rang.jpg", "status": "ok" },
+        { "slot": "detail-turning", "query": "lathe turning steel shaft", "file": "assets/img/project-banh-rang-truc-vit.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "BA yêu cầu Landing Page với menu cuộn tới section: giữ toàn bộ 9 section trên index.html, menu là liên kết neo; thêm 3 trang chi tiết dự án minh họa để mục Dự án có điều hướng thật",
+    "Bảng màu preset Futuristic (acid / cyan neon) thay bằng xám than, graphite, trắng bạc và cam công nghiệp theo chú thích BA; không dùng neon / gradient",
+    "Mức chuyển động Level 1: chỉ data-reveal fade/up, đếm số, header thu gọn, hover; không nạp atmos.js. Đường nét CAD vẽ dần bằng CSS animation có tắt khi prefers-reduced-motion",
+    "Model máy, thông số, kích thước dự án ghi 'Cập nhật sau' vì BA chưa cung cấp dữ liệu",
+    "assets/img/about-nha-xuong.jpg và assets/img/cap-cnc-machining.jpg là ảnh tải ở lượt trước đã được thay bằng bản .webp, không dùng trên trang"
+  ],
+  "limitations": [
+    "Form liên hệ là bản demo, chưa có backend",
+    "Dự án, địa chỉ, điện thoại, email là dữ liệu mẫu có thể chỉnh sửa",
+    "Không có báo giá / đặt hàng tự động theo yêu cầu BA"
+  ]
+}

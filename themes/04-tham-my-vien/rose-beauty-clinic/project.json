@@ -1,0 +1,73 @@
+{
+  "slug": "rose-beauty-clinic",
+  "name": "ROSÉ BEAUTY CLINIC",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "ROSÉ BEAUTY CLINIC",
+    "purpose": "Thiết kế website giới thiệu ROSÉ BEAUTY CLINIC, thẩm mỹ viện hướng đến vẻ đẹp tự nhiên, sự tự tin và trải nghiệm chăm sóc cá nhân hóa.\n\nPhong cách: Soft Feminine Contemporary. Bảng màu hồng phấn, kem sữa, trắng ấm và rose gold. Sử dụng ảnh chân dung tự nhiên, ánh sáng dịu, đường cong tinh tế và typography nữ tính nhưng dễ đọc.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Hero giàu cảm xúc, giới thiệu triết lý làm đẹp tự nhiên, các nhóm dịch vụ, trải nghiệm tại phòng khám và lời mời tư vấn.\n\nDịch vụ thẩm mỹ & Bảng giá: Trình bày dịch vụ chăm sóc da, cấp ẩm, hỗ trợ trẻ hóa, chăm sóc da chuyên sâu và các liệu trình phù hợp với định hướng thương hiệu. Thiết kế danh mục thanh lịch, có mô tả và giá tham khảo khi có thông tin.\n\nVề chúng tôi: Câu chuyện thương hiệu, đội ngũ, không gian, phong cách phục vụ và quy trình tư vấn cá nhân hóa.\n\nWebsite có chuyển đổi ngôn ngữ Việt – Anh, dịch toàn bộ nội dung và nhãn giao diện. Nút “Đặt lịch tư vấn / Book a Consultation” mở form tư vấn, có ở header, cuối trang và nút nổi trên điện thoại.\n\nKhông tạo giao diện thương mại điện tử, không bán mỹ phẩm, không giỏ hàng. Tránh màu hồng quá đậm, hình ảnh sáo rỗng hoặc hiệu ứng làm giảm tính chuyên nghiệp của ngành y tế.\n",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-20T08:35:07.780Z",
+  "updatedAt": "2026-10-21T01:55:37.218Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\rose-beauty-clinic\\web",
+    "builtAt": "2026-10-21T01:55:25.796Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "a01850c1-f5f8-47b5-85c5-518e9985b2e2",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\rose-beauty-clinic\\web",
+    "status": "done"
+  },
+  "external": {
+    "tool": "antigravity",
+    "mode": "quick-prototype",
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\rose-beauty-clinic",
+    "preparedAt": "2026-10-20T08:46:17.152Z"
+  },
+  "qa": {
+    "createdAt": "2026-10-21T01:55:34.671Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 9
+  }
+}

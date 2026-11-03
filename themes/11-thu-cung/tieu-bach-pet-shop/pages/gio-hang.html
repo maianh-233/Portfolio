@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giỏ hàng · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-001" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-001 Giỏ hàng: FreeShipProgress + Alert BOOK-E01 + CartLine × n + OrderSummary dính + gợi ý mua thêm để miễn ship.
+   * Pate chay không vào giỏ chung (đặt qua SCR-BOOK-003). */
+  Layout.mount({ title: 'Giỏ hàng', breadcrumb: [['Giỏ hàng']] }, function (main) {
+    var U = Perm.url, S = MOCK.settings, cart = App.cart;
+    main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-6 pt-5 md:px-6 lg:px-8" data-root>' +
+      '<div class="grid gap-6 lg:grid-cols-12"><div class="lg:col-span-8 flex flex-col gap-3">' + [1, 2, 3].map(function () { return UI.skeletonBlock('h-24 rounded-xl'); }).join('') + '</div><div class="lg:col-span-4">' + UI.skeletonBlock('h-64 rounded-xl') + '</div></div></div><div data-suggest></div>');
+    if (App.param('trong')) UI.toast('Giỏ hàng đang trống', 'info');
+
+    function paint() {
+      var root = main.querySelector('[data-root]'), lines = cart.lines(), sub = cart.subtotal(), n = cart.count();
+      if (!lines.length) {
+        root.innerHTML = UI.pageHeader({ title: 'Giỏ hàng của bạn' }) + '<div class="rounded-xl border border-neutral-200 bg-white">' +
+          UI.emptyState({ title: 'Giỏ hàng đang trống', text: 'Boss nhà bạn đang chờ món ngon đó!', action: UI.button({ label: 'Xem sản phẩm', href: U('pages/san-pham.html') }) }) + '</div>';
+        main.querySelector('[data-suggest]').innerHTML = '';
+        var sb = document.getElementById('ui-sticky'); if (sb) sb.remove();
+        return;
+      }
+      var blocking = cart.hasBlocking(), anyErr = lines.some(function (l) { return l.error; });
+      lines.forEach(function (l) {
+        if (l.out) l.errorHtml = UI.button({ label: 'Xóa', icon: 'trash-2', size: 'sm', variant: 'danger', attrs: { 'data-cart-remove': l.id, 'aria-label': 'Xóa ' + l.name + ' khỏi giỏ' } });
+        else if (l.priceChanged) l.errorHtml = UI.button({ label: 'Đồng ý giá mới', size: 'sm', variant: 'outline', attrs: { 'data-accept-price': '' } });
+      });
+      var checkout = UI.button({ label: 'Thanh toán', size: 'lg', full: true, disabled: blocking, attrs: { 'data-checkout': '' } });
+      var summary = UI.orderSummary({
+        title: 'Tóm tắt đơn',
+        rows: [{ label: 'Tạm tính (' + n + ' sản phẩm)', value: UI.fmt.money(sub) }, { label: 'Phí giao hàng', value: '<span class="font-semibold text-neutral-600">Tính ở bước thanh toán</span>' }],
+        total: sub, totalLabel: 'Tổng tạm', points: '+' + UI.fmt.number(App.points(sub)) + ' điểm dự kiến',
+        footer: (blocking ? UI.withTooltip(checkout, 'Vui lòng xử lý các sản phẩm hết hàng hoặc vượt tồn trước') : checkout)
+      });
+      root.innerHTML = UI.pageHeader({ title: 'Giỏ hàng của bạn (' + n + ' sản phẩm)' }) +
+        '<div class="grid gap-6 lg:grid-cols-12"><div class="lg:col-span-8 flex min-w-0 flex-col gap-3">' +
+        UI.freeShipProgress(sub, { threshold: S.freeShip, note: 'Giao miễn phí khi nhận tại cửa hàng hoặc ở ' + S.freeDistricts.join(', ') }) +
+        (anyErr ? UI.alert({ tone: 'warning', text: 'Một số sản phẩm đã thay đổi giá hoặc hết hàng, vui lòng kiểm tra lại' }) : '') +
+        '<div class="flex flex-col gap-3">' + lines.map(function (l) { return UI.cartLine(l); }).join('') + '</div>' +
+        '<div class="pt-2">' + UI.button({ label: 'Tiếp tục mua sắm', icon: 'arrow-left', variant: 'link', href: U('pages/san-pham.html') }) + '</div></div>' +
+        '<aside class="lg:col-span-4"><div class="lg:sticky lg:top-24" data-summary>' + summary + '</div></aside></div>';
+
+      var missing = S.freeShip - sub;
+      var sug = missing > 0 ? App.products().filter(function (p) { return !p.la_pate && !App.isOut(p) && App.minPrice(p) <= missing && !lines.some(function (l) { return l.ref && l.ref.id === p.id; }); }).sort(function (a, b) { return b.sold30 - a.sold30; }).slice(0, 4) : [];
+      main.querySelector('[data-suggest]').innerHTML = sug.length ? UI.section({ title: 'Mua thêm để miễn phí ship', body: '<div class="grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-4">' + sug.map(App.productCard).join('') + '</div>' }) : '';
+
+      UI.stickyBar('<div class="flex items-center gap-3"><div class="flex-1"><p class="text-xs text-neutral-600">Tạm tính</p><p class="text-lg font-extrabold tabular-nums">' + UI.fmt.money(sub) + '</p></div>' +
+        UI.button({ label: 'Thanh toán', disabled: blocking, attrs: { 'data-checkout': '' } }) + '</div>', { watch: root.querySelector('[data-summary] [data-checkout]') });
+    }
+
+    // Đổi số lượng: cập nhật ngay, không cần nút lưu
+    main.addEventListener('qtychange', function (e) { var q = e.target.closest('[data-line-qty]'); if (q) { cart.setQty(q.getAttribute('data-line-qty'), e.detail.value); paint(); } });
+    document.addEventListener('click', function (e) {
+      var rm = e.target.closest('[data-cart-remove]');
+      if (rm && main.contains(rm)) {
+        var row = cart.remove(rm.getAttribute('data-cart-remove'));
+        var name = (rm.getAttribute('aria-label') || '').replace(/^Xóa /, '').replace(/ khỏi giỏ$/, '');
+        paint();
+        UI.toast('Đã xóa ' + name + ' khỏi giỏ', 'success', { duration: 5000, action: { label: 'Hoàn tác', onClick: function () { cart.restore(row); paint(); } } });
+        return;
+      }
+      if (e.target.closest('[data-accept-price]')) { cart.acceptChanges(); paint(); UI.toast('Đã cập nhật giá mới', 'success'); return; }
+      var c = e.target.closest('[data-checkout]'); if (c && !c.disabled) App.goCheckout();
+    });
+    // Thêm từ gợi ý → vẽ lại
+    DemoStore.on(function (name) { if (name === 'cart') setTimeout(paint, 50); });
+    setTimeout(paint, 400);
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en" data-vi-title="BLOOM &amp; CRUMB — Nướng chậm, làm từ thiên nhiên">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLOOM &amp; CRUMB — Baked Slowly, Made with Nature</title>
+<meta name="description" content="BLOOM &amp; CRUMB is an artisan bakery inspired by the garden: long-fermented sourdough, butter croissants and seasonal fruit tarts, baked by hand every morning." data-vi-content="BLOOM &amp; CRUMB là tiệm bánh thủ công lấy cảm hứng từ khu vườn: bánh mì sourdough lên men dài, croissant bơ và tart trái cây theo mùa, nướng tay mỗi sáng.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;700&family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-oat font-sans text-ink antialiased">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-forest/10 bg-oat/95 backdrop-blur-sm [&.is-scrolled]:shadow-[0_10px_30px_-18px_rgba(56,74,56,.45)]">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="index.html" class="font-display text-lg tracking-[0.12em] text-forest sm:text-xl" aria-label="BLOOM &amp; CRUMB home">BLOOM <span class="italic text-earth">&amp;</span> CRUMB</a>
+    <nav class="hidden items-center gap-10 text-[15px] font-medium lg:flex" aria-label="Main" data-vi-aria-label="Điều hướng chính">
+      <a href="index.html" aria-current="page" class="relative py-2 text-forest/75 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-forest hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-forest aria-[current=page]:after:scale-x-100" data-vi="Trang chủ">Home</a>
+      <a href="pages/menu.html" class="relative py-2 text-forest/75 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-forest hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-forest aria-[current=page]:after:scale-x-100" data-vi="Thực đơn">Menu</a>
+      <a href="pages/about.html" class="relative py-2 text-forest/75 transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:text-forest hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-forest aria-[current=page]:after:scale-x-100" data-vi="Về chúng tôi">Our Story</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex rounded-full border border-forest/20 p-1 text-xs font-bold tracking-wider text-forest" role="group" aria-label="Language" data-vi-aria-label="Ngôn ngữ">
+        <button type="button" data-lang-set="en" aria-pressed="true" class="min-h-[36px] min-w-[40px] rounded-full px-2 transition-colors duration-300 hover:bg-sage-soft">EN</button>
+        <button type="button" data-lang-set="vi" aria-pressed="false" class="min-h-[36px] min-w-[40px] rounded-full px-2 transition-colors duration-300 hover:bg-sage-soft">VI</button>
+      </div>
+      <a href="pages/about.html#visit" class="hidden min-h-[44px] items-center rounded-full bg-forest px-5 text-sm font-bold text-oat transition duration-300 hover:bg-forest-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth lg:inline-flex" data-vi="Ghé tiệm">Plan a visit</a>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-forest/20 text-forest lg:hidden" aria-label="Open menu" data-vi-aria-label="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-oat p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col divide-y divide-forest/10 font-display text-2xl text-forest" aria-label="Mobile" data-vi-aria-label="Menu điện thoại">
+      <a href="index.html" aria-current="page" class="py-4 aria-[current=page]:italic" data-vi="Trang chủ">Home</a>
+      <a href="pages/menu.html" class="py-4" data-vi="Thực đơn">Menu</a>
+      <a href="pages/about.html" class="py-4" data-vi="Về chúng tôi">Our Story</a>
+    </nav>
+    <a href="pages/about.html#visit" class="mt-6 flex min-h-[48px] w-full items-center justify-center rounded-full bg-forest text-sm font-bold text-oat" data-vi="Ghé tiệm">Plan a visit</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO: ảnh lớn trái, headline phải -->
+  <section id="hero" data-section="hero-split" class="relative overflow-hidden bg-oat">
+    <div class="grid lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12">
+      <div class="relative order-2 aspect-[4/5] overflow-hidden bg-sage-soft sm:aspect-[16/11] lg:order-1 lg:col-span-7 lg:aspect-auto lg:rounded-tr-[14rem]">
+        <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%]">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Fresh_Rustic_Bread_%28Unsplash%29.jpg/1920px-Fresh_Rustic_Bread_%28Unsplash%29.jpg" referrerpolicy="no-referrer" alt="Rustic hand-shaped loaves with a deep golden crust" data-vi-alt="Những ổ bánh mì nặn tay mộc mạc với lớp vỏ vàng sẫm" class="tone h-full w-full object-cover" width="1920" height="1272">
+        </div>
+      </div>
+      <div class="relative order-1 flex flex-col justify-center px-4 pb-14 pt-14 sm:px-6 lg:order-2 lg:col-span-5 lg:px-12 lg:py-20 2xl:px-20">
+        <p class="mb-6 text-xs font-bold uppercase tracking-[0.28em] text-earth-deep" data-reveal="fade" data-vi="Tiệm bánh thủ công · Đà Lạt">Artisan bakery · Da Lat</p>
+        <h1 data-split="words" class="font-display text-5xl leading-[1.05] text-forest sm:text-6xl 2xl:text-7xl" data-vi="Nướng chậm, làm từ <em class='italic text-sage-deep'>thiên nhiên</em>">Baked Slowly, Made with <em class="italic text-sage-deep">Nature</em></h1>
+        <p class="mt-7 max-w-md text-[17px] leading-relaxed text-ink/75" data-reveal="up" data-reveal-delay="350" data-vi="Bánh mì lên men dài, bánh ngàn lớp bơ và tart trái cây, nặn tay mỗi sáng.">Long-fermented loaves, butter-laminated pastry and fruit tarts, shaped by hand each morning.</p>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center" data-reveal="up" data-reveal-delay="500">
+          <a href="pages/menu.html" class="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-forest px-7 text-sm font-bold text-oat transition duration-300 hover:bg-forest-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth">
+            <span data-vi="Xem thực đơn">See the menu</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="pages/about.html#visit" class="inline-flex min-h-[48px] items-center justify-center rounded-full border border-forest/30 px-7 text-sm font-bold text-forest transition duration-300 hover:border-forest hover:bg-forest/5 active:scale-[.98]" data-vi="Ghé tiệm">Plan a visit</a>
+        </div>
+        <div class="pointer-events-none absolute bottom-6 right-4 hidden w-24 text-sage-deep/70 sm:block lg:right-10 2xl:w-28" data-float="6" aria-hidden="true">
+          <svg class="botanic sway" viewBox="0 0 120 400" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M60 395C58 320 70 260 56 190S62 70 64 8"/><path d="M58 300C34 290 22 268 20 246c22 6 36 26 38 54z"/><path d="M62 236c24-8 38-28 40-50-22 4-38 24-40 50z"/><path d="M57 160c-21-10-29-30-29-50 20 8 30 28 29 50z"/><path d="M63 96c19-8 29-26 29-44-18 6-28 24-29 44z"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIẾT LÝ -->
+  <section id="philosophy" data-section="story-letter" class="bg-oat py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+      <figure class="lg:col-span-3 lg:col-start-2 lg:mt-24">
+        <div class="aspect-[3/4] overflow-hidden rounded-t-full bg-sage-soft" data-reveal="clip">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Baker_woman%27s_hands_kneading_bread_dough.jpg/1280px-Baker_woman%27s_hands_kneading_bread_dough.jpg" referrerpolicy="no-referrer" loading="lazy" alt="A baker's hands kneading soft dough on a floured board" data-vi-alt="Đôi tay thợ bánh nhồi bột mềm trên mặt bàn rắc bột" class="tone h-full w-full object-cover" width="1280" height="855">
+        </div>
+        <figcaption class="mt-4 text-sm text-ink/60" data-vi="Mỗi mẻ bột được nhồi và gấp bằng tay.">Every batch is folded and shaped by hand.</figcaption>
+      </figure>
+      <div class="lg:col-span-6 lg:col-start-6">
+        <h2 class="font-display text-4xl leading-[1.1] text-forest sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Chúng tôi để thời gian làm phần lớn công việc.">We let time do most of the work.</h2>
+        <div class="mt-10 max-w-prose space-y-6 text-[17px] leading-[1.8] text-ink/75" data-reveal="up">
+          <p data-vi="Bột của chúng tôi được ủ tới 36 giờ trước khi vào lò. Quá trình lên men chậm ấy cho hương vị sâu hơn, lớp vỏ giòn rụm và ruột bánh mềm suốt nhiều ngày.">Our dough rests for up to 36 hours before it meets the oven. That slow rise builds a deeper flavour, a crackling crust and a crumb that stays soft for days.</p>
+          <p data-vi="Chúng tôi nướng từng mẻ nhỏ, dùng những gì mùa mang tới, và giữ công thức đủ ngắn để có thể đọc to thành tiếng.">We bake in small batches, follow what each season brings, and keep our recipes short enough to read aloud.</p>
+        </div>
+        <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <p class="font-display text-xl italic text-earth-deep" data-vi="Những người thợ ở BLOOM &amp; CRUMB">The bakers at BLOOM &amp; CRUMB</p>
+          <a href="pages/about.html" class="group inline-flex min-h-[44px] items-center gap-2 border-b border-forest/30 text-sm font-bold text-forest transition-colors duration-300 hover:border-forest">
+            <span data-vi="Đọc câu chuyện của chúng tôi">Read our story</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FROM OUR OVEN -->
+  <section id="oven" data-section="teaser-row" class="bg-oat-deep/70 py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-4xl text-forest sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Từ lò của chúng tôi">From Our Oven</h2>
+        <p class="mt-5 text-[17px] leading-relaxed text-ink/75" data-reveal="up" data-vi="Ba chiếc bánh khách hỏi nhiều nhất, và những gì làm nên chúng.">Three bakes our regulars ask for first, and what goes into each one.</p>
+      </div>
+      <div class="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-12" data-reveal-stagger="120">
+        <article class="group sm:col-span-2 lg:col-span-6">
+          <div class="aspect-[4/5] overflow-hidden rounded-[2rem] bg-sage-soft sm:aspect-[16/11] lg:aspect-[4/5]">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Loaf_of_sourdough_bread_cooling.jpg/960px-Loaf_of_sourdough_bread_cooling.jpg" referrerpolicy="no-referrer" loading="lazy" alt="A round sourdough loaf cooling on a rack" data-vi-alt="Ổ sourdough tròn đang nguội trên giá" class="tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="799">
+          </div>
+          <div class="mt-6 border-t border-forest/15 pt-5">
+            <h3 class="font-display text-3xl text-forest" data-vi="Sourdough đồng quê">Country Sourdough</h3>
+            <p class="mt-3 max-w-md leading-relaxed text-ink/70" data-vi="Bột mì xay đá, men rye và muối biển. Lên men 36 giờ cho vị chua nhẹ và lớp vỏ giòn.">Stone-ground wheat, rye starter and sea salt. A 36-hour ferment for a gentle tang and a crackling crust.</p>
+          </div>
+        </article>
+        <article class="group lg:col-span-3 lg:mt-32">
+          <div class="aspect-[3/4] overflow-hidden bg-sage-soft">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Croissant_et_Pain_au_chocolat_in_Paris.jpg/960px-Croissant_et_Pain_au_chocolat_in_Paris.jpg" referrerpolicy="no-referrer" loading="lazy" alt="A golden butter croissant beside a pain au chocolat" data-vi-alt="Croissant bơ vàng óng bên cạnh bánh pain au chocolat" class="tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="640">
+          </div>
+          <div class="mt-6 border-t border-forest/15 pt-5">
+            <h3 class="font-display text-2xl text-forest" data-vi="Croissant bơ">Butter Croissant</h3>
+            <p class="mt-3 leading-relaxed text-ink/70" data-vi="Bơ lên men, cán gấp nhiều lớp, phết một lớp mật ong mỏng.">Cultured butter, laminated over three days, finished with a thin honey glaze.</p>
+          </div>
+        </article>
+        <article class="group lg:col-span-3 lg:mt-14">
+          <div class="aspect-[3/4] overflow-hidden rounded-t-full bg-sage-soft">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Fruit_tart_with_kiwi%2C_peach%2C_and_raspberry.jpg/960px-Fruit_tart_with_kiwi%2C_peach%2C_and_raspberry.jpg" referrerpolicy="no-referrer" loading="lazy" alt="A fruit tart topped with kiwi, peach and raspberries" data-vi-alt="Tart trái cây phủ kiwi, đào và mâm xôi" class="tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="640">
+          </div>
+          <div class="mt-6 border-t border-forest/15 pt-5">
+            <h3 class="font-display text-2xl text-forest" data-vi="Tart trái cây mùa hè">Summer Fruit Tart</h3>
+            <p class="mt-3 leading-relaxed text-ink/70" data-vi="Kem hạnh nhân, custard vani, kiwi, đào và mâm xôi trên đế bánh bơ.">Almond cream, vanilla custard, kiwi, peach and raspberry on a butter crust.</p>
+          </div>
+        </article>
+      </div>
+      <a href="pages/menu.html" class="group mt-16 inline-flex min-h-[44px] items-center gap-2 border-b border-forest/30 text-sm font-bold text-forest transition-colors duration-300 hover:border-forest">
+        <span data-vi="Xem toàn bộ thực đơn">See the full menu</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- INSPIRED BY NATURE -->
+  <section id="inspired" data-section="features-bento" class="relative overflow-hidden bg-oat py-24 lg:py-36" data-particles="dust" data-particles-color="#C9B48E" data-particles-density="0.6">
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl gap-6 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4 lg:pr-8">
+        <div class="lg:sticky lg:top-32">
+          <h2 class="font-display text-4xl leading-[1.1] text-forest sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Cảm hứng từ <em class='italic text-sage-deep'>thiên nhiên</em>">Inspired by <em class="italic text-sage-deep">Nature</em></h2>
+          <p class="mt-6 max-w-prose text-[17px] leading-[1.8] text-ink/75" data-reveal="up" data-vi="Một vòng chợ sáng quyết định món tart của tuần. Hoa trên quầy, lúa mì trên kệ, trái cây đúng độ chín: tiệm bánh đi theo khu vườn, chứ không ngược lại.">A walk through the morning market decides the week's tarts. Flowers on the counter, wheat on the shelf, fruit at its ripest: the bakery follows the garden, not the other way around.</p>
+          <dl class="mt-10 space-y-5 border-t border-forest/15 pt-8 text-[15px]" data-reveal="up">
+            <div class="flex gap-6"><dt class="w-24 shrink-0 font-display text-lg italic text-earth-deep" data-vi="Hoa">Flowers</dt><dd class="text-ink/70" data-vi="Cắm mới mỗi thứ Ba, theo những gì đang nở.">Arranged fresh every Tuesday, from whatever is in bloom.</dd></div>
+            <div class="flex gap-6"><dt class="w-24 shrink-0 font-display text-lg italic text-earth-deep" data-vi="Bột">Flour</dt><dd class="text-ink/70" data-vi="Chọn theo cách bột thở trong âu, không theo nhãn mác.">Chosen by how it behaves in the bowl, not by its label.</dd></div>
+            <div class="flex gap-6"><dt class="w-24 shrink-0 font-display text-lg italic text-earth-deep" data-vi="Bàn gỗ">The table</dt><dd class="text-ink/70" data-vi="Nơi mọi chiếc bánh được nặn, nghỉ và chờ lò.">Where every loaf is shaped, rested and waits for the oven.</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:col-span-8 lg:grid-cols-8 lg:gap-8">
+        <figure class="col-span-2 lg:col-span-5 lg:row-span-2">
+          <div class="aspect-[4/5] overflow-hidden rounded-t-full bg-sage-soft lg:aspect-auto lg:h-full lg:min-h-[640px]" data-reveal="clip">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Rustic_flower_vase_%28Unsplash%29.jpg/1280px-Rustic_flower_vase_%28Unsplash%29.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Fresh garden flowers in a rustic vase on a wooden table" data-vi-alt="Hoa vườn tươi trong bình gốm mộc trên bàn gỗ" class="tone h-full w-full object-cover" width="1280" height="853">
+          </div>
+        </figure>
+        <figure class="lg:col-span-3">
+          <div class="aspect-square overflow-hidden bg-sage-soft" data-reveal="clip">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Baking_a_Pie_%28Unsplash%29.jpg/960px-Baking_a_Pie_%28Unsplash%29.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Hands preparing a pie on a floured baking table" data-vi-alt="Đôi tay chuẩn bị bánh trên bàn làm bánh rắc bột" class="tone h-full w-full object-cover" width="960" height="1117">
+          </div>
+          <figcaption class="mt-3 text-sm text-ink/60" data-vi="Bàn làm bánh, 6 giờ sáng.">The baking table, 6 a.m.</figcaption>
+        </figure>
+        <figure class="lg:col-span-3">
+          <div class="aspect-[4/5] overflow-hidden rounded-[2rem] bg-sage-soft" data-reveal="clip">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Lone_ear_of_wheat_%28Unsplash%29.jpg/960px-Lone_ear_of_wheat_%28Unsplash%29.jpg" referrerpolicy="no-referrer" loading="lazy" alt="A single ear of wheat in soft light" data-vi-alt="Một bông lúa mì trong ánh sáng dịu" class="tone h-full w-full object-cover" width="960" height="762">
+          </div>
+          <figcaption class="mt-3 text-sm text-ink/60" data-vi="Nơi mọi ổ bánh bắt đầu.">Where every loaf begins.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRÍCH DẪN -->
+  <section id="quote" data-section="quote-full" class="relative overflow-hidden bg-forest py-24 text-oat lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <blockquote class="lg:col-span-9">
+        <p class="font-display text-3xl leading-[1.25] sm:text-4xl lg:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="“Bánh mì ngon cần sự kiên nhẫn, và nó trả lại nhiều hơn những gì nó lấy đi.”">“Good bread asks for patience, and gives back more than it takes.”</p>
+        <footer class="mt-8 text-sm tracking-wide text-sage-soft" data-reveal="fade" data-vi="Thợ bánh chính, BLOOM &amp; CRUMB">Head baker, BLOOM &amp; CRUMB</footer>
+      </blockquote>
+      <div class="hidden justify-end lg:col-span-3 lg:flex" aria-hidden="true">
+        <div class="w-28 text-sage/70 2xl:w-36" data-float="6">
+          <svg class="botanic sway" viewBox="0 0 120 400" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M60 395C58 320 70 260 56 190S62 70 64 8"/><path d="M58 300C34 290 22 268 20 246c22 6 36 26 38 54z"/><path d="M62 236c24-8 38-28 40-50-22 4-38 24-40 50z"/><path d="M57 160c-21-10-29-30-29-50 20 8 30 28 29 50z"/><path d="M63 96c19-8 29-26 29-44-18 6-28 24-29 44z"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KHÔNG GIAN TIỆM -->
+  <section id="space" data-section="gallery-masonry" class="bg-oat py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-4xl text-forest sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Bên trong tiệm">Inside the bakery</h2>
+        <p class="mt-5 text-[17px] leading-relaxed text-ink/75" data-reveal="up" data-vi="Bàn gỗ, ánh sáng cửa sổ và mùi bánh vừa ra lò. Chạm vào ảnh để xem lớn.">Wooden tables, window light and the smell of the first bake. Tap a photo to see it larger.</p>
+      </div>
+      <div class="mt-14 columns-1 gap-5 sm:columns-2 lg:columns-3 2xl:gap-8 [&>a]:mb-5 2xl:[&>a]:mb-8" data-reveal-stagger="90">
+        <a href="assets/img/home-gallery-interior-1.jpg" data-lightbox="space" data-caption="Morning light over the counter" data-vi-data-caption="Nắng sớm trên quầy bánh" class="group block break-inside-avoid overflow-hidden rounded-[2rem] bg-sage-soft">
+          <img src="assets/img/home-gallery-interior-1.jpg" loading="lazy" alt="Bright bakery counter with pendant lamps and wooden chairs" data-vi-alt="Quầy bánh sáng sủa với đèn thả và ghế gỗ" class="tone aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1024" height="768">
+        </a>
+        <a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Rustic_Bakery_Treats_%28Unsplash%29.jpg/960px-Rustic_Bakery_Treats_%28Unsplash%29.jpg" data-lightbox="space" data-caption="Today's bakes on the shelf" data-vi-data-caption="Mẻ bánh hôm nay trên kệ" class="group block break-inside-avoid overflow-hidden bg-sage-soft">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Rustic_Bakery_Treats_%28Unsplash%29.jpg/960px-Rustic_Bakery_Treats_%28Unsplash%29.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Rustic pastries and loaves arranged on a bakery shelf" data-vi-alt="Bánh ngọt và bánh mì mộc mạc bày trên kệ" class="tone aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="1440">
+        </a>
+        <a href="assets/img/home-gallery-interior-2.jpg" data-lightbox="space" data-caption="The pastry case" data-vi-data-caption="Tủ bánh ngọt" class="group block break-inside-avoid overflow-hidden bg-sage-soft">
+          <img src="assets/img/home-gallery-interior-2.jpg" loading="lazy" alt="Cakes and cookies on stands behind a glass counter" data-vi-alt="Bánh ngọt và bánh quy trên kệ sau quầy kính" class="tone aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1024" height="683">
+        </a>
+        <a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/The_Bakery_%28Unsplash%29.jpg/1280px-The_Bakery_%28Unsplash%29.jpg" data-lightbox="space" data-caption="Loaves waiting by the window" data-vi-data-caption="Bánh mì chờ bên cửa sổ" class="group block break-inside-avoid overflow-hidden rounded-t-full bg-sage-soft">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/The_Bakery_%28Unsplash%29.jpg/1280px-The_Bakery_%28Unsplash%29.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Inside a bakery with bread on display" data-vi-alt="Bên trong tiệm bánh với bánh mì trưng bày" class="tone aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1280" height="853">
+        </a>
+        <a href="assets/img/home-gallery-interior-3.jpg" data-lightbox="space" data-caption="The counter with a basket of baguettes" data-vi-data-caption="Quầy bánh với giỏ baguette" class="group block break-inside-avoid overflow-hidden bg-sage-soft">
+          <img src="assets/img/home-gallery-interior-3.jpg" loading="lazy" alt="Bakery counter with a wicker basket of baguettes and a pastry case" data-vi-alt="Quầy bánh với giỏ mây đựng baguette và tủ bánh ngọt" class="tone aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="768" height="1024">
+        </a>
+        <a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Bread_at_a_Bakery_%28Unsplash%29.jpg/1280px-Bread_at_a_Bakery_%28Unsplash%29.jpg" data-lightbox="space" data-caption="Bread shelves after the morning bake" data-vi-data-caption="Kệ bánh mì sau mẻ nướng sáng" class="group block break-inside-avoid overflow-hidden rounded-[2rem] bg-sage-soft">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Bread_at_a_Bakery_%28Unsplash%29.jpg/1280px-Bread_at_a_Bakery_%28Unsplash%29.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Fresh loaves lined up on bakery shelves" data-vi-alt="Những ổ bánh mì tươi xếp trên kệ tiệm" class="tone aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1280" height="853">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA GHÉ TIỆM -->
+  <section id="visit-cta" data-section="cta-type" class="bg-sage-soft py-24 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl items-end gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <h2 class="font-display text-5xl leading-[1.05] text-forest sm:text-6xl lg:col-span-7 2xl:text-8xl" data-split="words" data-vi="Ghé qua khi bánh <em class='italic'>còn ấm</em>.">Come by while the bread is <em class="italic">still warm</em>.</h2>
+      <div class="lg:col-span-4 lg:col-start-9" data-reveal="up">
+        <dl class="divide-y divide-forest/15 border-y border-forest/15 text-[15px]">
+          <div class="flex justify-between gap-4 py-4"><dt class="text-ink/70" data-vi="Thứ Ba - Chủ nhật">Tuesday - Sunday</dt><dd class="font-bold text-forest">7:00 - 18:00</dd></div>
+          <div class="flex justify-between gap-4 py-4"><dt class="text-ink/70" data-vi="Mẻ bánh đầu tiên">First loaves out</dt><dd class="font-bold text-forest">7:00</dd></div>
+          <div class="flex justify-between gap-4 py-4"><dt class="text-ink/70" data-vi="Thứ Hai">Monday</dt><dd class="font-bold text-forest" data-vi="Nghỉ">Closed</dd></div>
+        </dl>
+        <a href="pages/about.html#visit" class="mt-8 inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-forest px-7 text-sm font-bold text-oat transition duration-300 hover:bg-forest-deep active:scale-[.98] sm:w-auto" data-vi="Ghé tiệm">Plan a visit</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="overflow-hidden bg-forest text-oat">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-2xl tracking-[0.12em]">BLOOM <span class="italic text-sage">&amp;</span> CRUMB</p>
+        <p class="mt-4 max-w-xs leading-relaxed text-oat/75" data-vi="Bánh thủ công nướng chậm, lấy cảm hứng từ khu vườn.">Slow-baked bread and pastry, inspired by the garden.</p>
+      </div>
+      <nav class="lg:col-span-2 lg:col-start-5" aria-label="Footer" data-vi-aria-label="Chân trang">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-sage" data-vi="Trang">Pages</p>
+        <ul class="mt-5 space-y-3">
+          <li><a href="index.html" class="transition-colors duration-300 hover:text-sage" data-vi="Trang chủ">Home</a></li>
+          <li><a href="pages/menu.html" class="transition-colors duration-300 hover:text-sage" data-vi="Thực đơn">Menu</a></li>
+          <li><a href="pages/about.html" class="transition-colors duration-300 hover:text-sage" data-vi="Về chúng tôi">Our Story</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-sage" data-vi="Ghé tiệm">Visit</p>
+        <p class="mt-5 leading-relaxed text-oat/85">24 Hai Bà Trưng, <span data-vi="Phường 6">Ward 6</span>, Đà Lạt</p>
+        <p class="mt-2 text-oat/85"><span data-vi="Thứ Ba - Chủ nhật">Tuesday - Sunday</span>, 7:00 - 18:00</p>
+      </div>
+      <div class="min-w-0 lg:col-span-3">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-sage" data-vi="Liên hệ">Contact</p>
+        <ul class="mt-5 space-y-3">
+          <li><a href="tel:+842633821947" class="transition-colors duration-300 hover:text-sage">+84 263 3821 947</a></li>
+          <li><a href="mailto:hello@bloomandcrumb.vn" class="transition-colors duration-300 hover:text-sage">hello@bloomandcrumb.vn</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="mt-20 select-none whitespace-nowrap font-display text-[min(10.5vw,10rem)] leading-none pb-[0.08em] text-sage/25" aria-hidden="true">BLOOM &amp; CRUMB</p>
+    <div class="flex flex-col gap-2 border-t border-oat/15 py-6 text-sm text-oat/60 sm:flex-row sm:justify-between">
+      <p>© 2026 BLOOM &amp; CRUMB</p>
+      <a href="#top" class="transition-colors duration-300 hover:text-sage" data-vi="Lên đầu trang">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+</body>
+</html>

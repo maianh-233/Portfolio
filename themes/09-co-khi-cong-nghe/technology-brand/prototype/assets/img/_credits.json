@@ -1,0 +1,122 @@
+[
+  {
+    "file": "assets/img/hero-particles.jpg",
+    "purpose": "Hero visual",
+    "source": "openverse",
+    "id": "openverse-9d21e336-a0ab-4088-a9bc-7406eb0dd2ce",
+    "title": "Abstract Particles",
+    "creator": "Bango Renders",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/abstract-particles-ANGOVCTQZU"
+  },
+  {
+    "file": "assets/img/hero-shapes.jpg",
+    "purpose": "Hero visual alt",
+    "source": "openverse",
+    "id": "openverse-3c969d0d-95c5-4ce1-b42e-a0c545a17cfd",
+    "title": "Abstract Shapes",
+    "creator": "Bango Renders",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/abstract-shapes-AGYUJILSQ2"
+  },
+  {
+    "file": "assets/img/about-white-block.jpg",
+    "purpose": "About section",
+    "source": "openverse",
+    "id": "openverse-592087eb-d50d-4166-8206-535fd78f087a",
+    "title": "White Block",
+    "creator": "Burst",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/white-block-O6X5JEZM4B"
+  },
+  {
+    "file": "assets/img/exp-caustic.jpg",
+    "purpose": "Expertise AI",
+    "source": "openverse",
+    "id": "openverse-57c7a57c-a2a8-4022-9157-c40d7758f5da",
+    "title": "Abstract caustic lighting.",
+    "creator": "jonathan_brandt",
+    "license": "CC CC0 1.0",
+    "page": "https://www.flickr.com/photos/61055902@N04/52094621001"
+  },
+  {
+    "file": "assets/img/exp-glass.jpg",
+    "purpose": "Expertise product",
+    "source": "openverse",
+    "id": "openverse-88e42bae-f6ea-4104-8f17-ad7a0d80fe9e",
+    "title": "Composition in glass",
+    "creator": "pgillin01",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/128376272@N06/15963029348"
+  },
+  {
+    "file": "assets/img/exp-wave.jpg",
+    "purpose": "Expertise creative tech",
+    "source": "openverse",
+    "id": "openverse-60f7a1f2-1de8-4a7c-8181-3cde9f1287da",
+    "title": "Abstract Wave",
+    "creator": "FreePhotos",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/abstract-wave-IYCGUILNRQ"
+  },
+  {
+    "file": "assets/img/exp-wavy-black.webp",
+    "purpose": "Expertise data",
+    "source": "openverse",
+    "id": "openverse-c71c2f9e-5521-44aa-8f5e-d2450fa5349c",
+    "title": "Wavy architectural texture background, black",
+    "creator": "Teddy",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/6165235/photo-image-background-texture-abstract"
+  },
+  {
+    "file": "assets/img/proj-architecture.jpg",
+    "purpose": "Project 1",
+    "source": "openverse",
+    "id": "openverse-bfd0a396-e613-40aa-80b3-dc0f4f4fd8ed",
+    "title": "Abstract Architecture",
+    "creator": "Matt Bango",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/abstract-architecture-CSVQCF76RN"
+  },
+  {
+    "file": "assets/img/proj-flowing.jpg",
+    "purpose": "Project 2",
+    "source": "openverse",
+    "id": "openverse-8760ab6f-47f5-4cd4-b319-a73d31d43763",
+    "title": "Abstract Flowing",
+    "creator": "Vidsplay",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/abstract-flowing-1JMSW5W3OQ"
+  },
+  {
+    "file": "assets/img/proj-prism.jpg",
+    "purpose": "Project 3",
+    "source": "openverse",
+    "id": "openverse-e5c439bb-5537-4c36-ae57-7114ace27ab7",
+    "title": "Black glass pyramidal prism",
+    "creator": "Ladd, William, w.1839-1872",
+    "license": "CC BY-NC-SA 4.0",
+    "page": "https://collection.sciencemuseumgroup.org.uk/objects/co3301/black-glass-pyramidal-prism"
+  },
+  {
+    "file": "assets/img/vision-swirl.jpg",
+    "purpose": "Vision section",
+    "source": "openverse",
+    "id": "openverse-6644c875-c81c-4e70-9c2a-535bebb81038",
+    "title": "Abstract Swirl",
+    "creator": "Vidsplay",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/abstract-swirl-MAR4PYIFWE"
+  },
+  {
+    "file": "assets/img/proj-tunnel.webp",
+    "purpose": "Project 4",
+    "source": "openverse",
+    "id": "openverse-e2a66c84-a083-4da3-aff6-35c6227ece93",
+    "title": "Dark tunnel road",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/5907457/dark-tunnel-road-free-public-domain-cc0-photo"
+  }
+]

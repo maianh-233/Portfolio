@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khám phá lễ hội — JAPAN MATSURI</title>
+  <meta name="description" content="Tìm lễ hội Nhật Bản cho chuyến đi của bạn: tìm theo tên hoặc địa điểm, lọc theo mùa và loại trải nghiệm như diễu hành, pháo hoa, lễ hội tuyết, lễ hội hoa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-ivory font-sans text-sumi">
+
+<header id="top" data-header="shrink" class="site-header sticky top-0 z-50 border-b border-sumi/10 bg-ivory/90 backdrop-blur">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="group flex items-center gap-3 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shu" aria-label="JAPAN MATSURI, về trang chủ">
+      <span aria-hidden="true" class="grid h-10 w-10 -rotate-3 place-items-center rounded-md bg-shu text-lg font-bold text-ivory transition-transform duration-300 group-hover:rotate-0">祭</span>
+      <span class="font-display text-lg tracking-[0.08em] text-sumi sm:text-xl">JAPAN MATSURI</span>
+    </a>
+    <nav aria-label="Điều hướng chính" class="hidden lg:block">
+      <ul class="flex items-center gap-10 text-[15px] font-semibold">
+        <li><a href="index.html" class="relative py-2 text-sumi-soft transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-shu after:transition-transform after:duration-500 after:ease-expo hover:text-shu hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-sumi aria-[current=page]:after:scale-x-100">Trang chủ</a></li>
+        <li><a href="le-hoi.html" aria-current="page" class="relative py-2 text-sumi-soft transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-shu after:transition-transform after:duration-500 after:ease-expo hover:text-shu hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-sumi aria-[current=page]:after:scale-x-100">Khám phá lễ hội</a></li>
+        <li><a href="index.html#gioi-thieu" class="relative py-2 text-sumi-soft transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-shu after:transition-transform after:duration-500 after:ease-expo hover:text-shu hover:after:origin-left hover:after:scale-x-100">Giới thiệu</a></li>
+      </ul>
+    </nav>
+    <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full text-sumi ring-1 ring-sumi/20 transition hover:bg-washi lg:hidden" aria-label="Mở menu">
+      <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-2xl bg-ivory p-6 shadow-2xl ring-1 ring-sumi/10 lg:hidden">
+    <nav aria-label="Menu điện thoại">
+      <ul class="flex flex-col divide-y divide-sumi/10 font-display text-2xl">
+        <li><a href="index.html" class="flex min-h-[52px] items-center text-sumi hover:text-shu">Trang chủ</a></li>
+        <li><a href="le-hoi.html" aria-current="page" class="flex min-h-[52px] items-center text-shu">Khám phá lễ hội</a></li>
+        <li><a href="index.html#gioi-thieu" class="flex min-h-[52px] items-center text-sumi hover:text-shu">Giới thiệu</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section id="page-hero" data-section="page-hero" class="washi-texture relative overflow-hidden">
+    <div class="lantern-line absolute inset-x-0 top-3" aria-hidden="true"></div>
+    <div class="mx-auto grid w-full max-w-screen-2xl items-end gap-8 px-4 pb-14 pt-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:pb-16 lg:pt-24 2xl:px-16">
+      <div class="lg:col-span-8">
+        <nav aria-label="Đường dẫn" class="text-sm text-sumi-muted">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li><a href="index.html" class="hover:text-shu">Trang chủ</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="font-semibold text-sumi">Khám phá lễ hội</li>
+          </ol>
+        </nav>
+        <h1 data-reveal="up" class="mt-5 font-display text-[2.5rem] leading-[1.06] sm:text-6xl lg:text-7xl 2xl:text-[5.5rem]">Tìm lễ hội dành cho <em class="italic text-shu">chuyến đi của bạn</em></h1>
+      </div>
+      <p data-reveal="up" class="max-w-md text-[17px] leading-relaxed text-sumi-muted lg:col-span-4 lg:justify-self-end">Tìm theo tên hoặc địa điểm, rồi lọc theo mùa và kiểu trải nghiệm bạn thích.</p>
+    </div>
+  </section>
+
+  <!-- TÌM & LỌC -->
+  <section id="tim-le-hoi" data-section="list-cards" class="bg-ivory pb-24 pt-10 lg:pb-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 lg:grid-cols-12">
+        <!-- Bộ lọc -->
+        <aside class="lg:col-span-4 xl:col-span-3">
+          <form id="bo-loc" role="search" class="space-y-8 rounded-2xl bg-washi p-6 lg:sticky lg:top-28" novalidate>
+            <div>
+              <label for="tim-kiem" class="text-sm font-semibold text-sumi">Tên lễ hội hoặc địa điểm</label>
+              <div class="relative mt-2">
+                <svg aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-sumi-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+                <input id="tim-kiem" type="search" autocomplete="off" placeholder="Ví dụ: Kyoto, Nebuta" class="h-12 w-full rounded-full border border-sumi/25 bg-ivory pl-12 pr-4 text-[16px] text-sumi placeholder:text-sumi-muted focus:border-shu focus:outline-none focus:ring-2 focus:ring-shu/30">
+              </div>
+              <p class="mt-2 text-sm text-sumi-muted">Gõ không dấu cũng được.</p>
+            </div>
+            <fieldset>
+              <legend class="text-sm font-semibold text-sumi">Mùa</legend>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <button type="button" data-season="all" aria-pressed="true" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Tất cả</button>
+                <button type="button" data-season="xuan" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Xuân</button>
+                <button type="button" data-season="ha" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Hạ</button>
+                <button type="button" data-season="thu" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Thu</button>
+                <button type="button" data-season="dong" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Đông</button>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend class="text-sm font-semibold text-sumi">Loại trải nghiệm</legend>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <button type="button" data-type="all" aria-pressed="true" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Tất cả</button>
+                <button type="button" data-type="truyen-thong" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Lễ hội truyền thống</button>
+                <button type="button" data-type="dieu-hanh" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Diễu hành</button>
+                <button type="button" data-type="anh-sang" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Lễ hội ánh sáng</button>
+                <button type="button" data-type="phao-hoa" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Pháo hoa</button>
+                <button type="button" data-type="tuyet" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Lễ hội tuyết</button>
+                <button type="button" data-type="hoa" aria-pressed="false" class="chip min-h-[44px] rounded-full border border-sumi/25 bg-ivory px-4 text-[15px] font-semibold transition duration-300 hover:border-sumi">Lễ hội hoa</button>
+              </div>
+            </fieldset>
+            <button type="button" data-reset class="inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold text-shu hover:text-shu-deep">
+              <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v6h6"/><path d="M5.5 15a7 7 0 1 0 1.6-7.3L4 10"/></svg>
+              Xóa bộ lọc
+            </button>
+          </form>
+        </aside>
+
+        <!-- Kết quả -->
+        <div class="min-w-0 lg:col-span-8 xl:col-span-9">
+          <p id="so-ket-qua" class="mb-6 text-[15px] font-semibold text-sumi-soft" aria-live="polite">Đang tải danh sách lễ hội…</p>
+          <div id="ket-qua" class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"></div>
+          <div id="khong-ket-qua" hidden class="flex flex-col items-start gap-5 rounded-2xl border border-dashed border-sumi/30 bg-washi/50 p-8 sm:p-12">
+            <span aria-hidden="true" class="grid h-14 w-14 -rotate-3 place-items-center rounded-lg border-2 border-shu font-display text-2xl text-shu">?</span>
+            <h2 class="font-display text-3xl leading-tight">Chưa có lễ hội phù hợp</h2>
+            <p class="max-w-lg text-[16px] leading-relaxed text-sumi-muted">Thử bỏ bớt một bộ lọc, đổi mùa, hoặc tìm bằng tên thành phố như "Kyoto", "Sapporo".</p>
+            <button type="button" data-reset class="inline-flex min-h-[48px] items-center rounded-full bg-sumi px-6 font-semibold text-ivory transition duration-300 hover:bg-shu active:scale-[.98]">Xóa bộ lọc</button>
+          </div>
+          <p class="mt-10 max-w-2xl text-sm leading-relaxed text-sumi-muted">Thời gian trên mỗi thẻ là thời gian thường tổ chức, có thể thay đổi theo từng năm. Hãy kiểm tra lịch chính thức trước khi đặt chuyến đi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CUỐI -->
+  <section id="cta-cuoi" data-section="cta-type" class="relative overflow-hidden bg-sumi py-24 text-ivory lg:py-28">
+    <div class="lantern-line lantern-line--light absolute inset-x-0 top-6" aria-hidden="true"></div>
+    <div class="mx-auto grid w-full max-w-screen-2xl items-end gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-[1.08] sm:text-5xl lg:col-span-8 lg:text-6xl 2xl:text-7xl">Chưa biết đi mùa nào? <em class="italic text-[#F08A7E]">Xem lễ hội theo mùa.</em></h2>
+      <div class="lg:col-span-4 lg:justify-self-end">
+        <a href="index.html#theo-mua" data-reveal="up" class="group inline-flex min-h-[56px] w-full items-center justify-center gap-3 rounded-full bg-shu px-8 text-base font-semibold text-ivory transition duration-300 hover:bg-[#C93C33] active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory sm:w-auto">Lễ hội theo mùa
+          <svg aria-hidden="true" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="border-t border-ivory/10 bg-sumi text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <a href="index.html" class="inline-flex items-center gap-3">
+          <span aria-hidden="true" class="grid h-10 w-10 -rotate-3 place-items-center rounded-md bg-shu text-lg font-bold text-ivory">祭</span>
+          <span class="font-display text-xl tracking-[0.08em]">JAPAN MATSURI</span>
+        </a>
+        <p class="mt-5 max-w-md text-[15px] leading-relaxed text-ivory/75">Cẩm nang giới thiệu lễ hội truyền thống Nhật Bản theo mùa và vùng miền, giúp du khách Việt chuẩn bị cho chuyến đi đầu tiên tới một Matsuri.</p>
+      </div>
+      <nav aria-label="Điều hướng chân trang" class="lg:col-span-2">
+        <h2 class="text-sm font-semibold text-ivory/60">Điều hướng</h2>
+        <ul class="mt-4 space-y-1 text-[15px]">
+          <li><a href="index.html" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Trang chủ</a></li>
+          <li><a href="le-hoi.html" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Khám phá lễ hội</a></li>
+          <li><a href="index.html#gioi-thieu" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Giới thiệu</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Lễ hội theo mùa" class="lg:col-span-2">
+        <h2 class="text-sm font-semibold text-ivory/60">Lễ hội theo mùa</h2>
+        <ul class="mt-4 space-y-1 text-[15px]">
+          <li><a href="le-hoi.html?mua=xuan" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Mùa Xuân</a></li>
+          <li><a href="le-hoi.html?mua=ha" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Mùa Hạ</a></li>
+          <li><a href="le-hoi.html?mua=thu" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Mùa Thu</a></li>
+          <li><a href="le-hoi.html?mua=dong" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Mùa Đông</a></li>
+        </ul>
+      </nav>
+      <div class="sm:col-span-2 lg:col-span-3">
+        <h2 class="text-sm font-semibold text-ivory/60">Lưu ý</h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-ivory/75">Nội dung mang tính tham khảo. Ngày tổ chức, giờ rước và quy định thay đổi theo từng năm; hãy kiểm tra thông tin chính thức của ban tổ chức trước khi đi.</p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="mt-16 select-none overflow-hidden whitespace-nowrap font-display text-[clamp(2.25rem,11.8vw,12.5rem)] leading-[0.9] tracking-tight text-ivory/[0.12]">JAPAN MATSURI</p>
+    <div class="flex flex-col gap-3 border-t border-ivory/10 py-6 text-sm text-ivory/60 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 JAPAN MATSURI. Ảnh dùng theo giấy phép mở, ghi nguồn trong assets/img/CREDITS.md.</p>
+      <a href="#top" class="inline-flex min-h-[40px] items-center hover:text-ivory">Về đầu trang ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center rounded-full bg-shu text-ivory shadow-lg transition hover:bg-shu-deep" aria-label="Về đầu trang">
+  <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

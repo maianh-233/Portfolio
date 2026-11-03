@@ -1,0 +1,27 @@
+/* Wildroute: hero camera push, line-by-line clip reveal, scroll guide line, timeline draw */
+.hero-zoom { animation: wr-zoom 3.2s cubic-bezier(.16,1,.3,1) both; transform-origin: 50% 70%; }
+@keyframes wr-zoom { from { transform: scale(1.05); } to { transform: scale(1); } }
+
+.line-mask { display: block; overflow: hidden; padding-bottom: .04em; }
+.line-mask > span { display: block; transform: translateY(108%); animation: wr-line 1.25s cubic-bezier(.16,1,.3,1) forwards; }
+.line-mask:nth-child(1) > span { animation-delay: .25s; }
+.line-mask:nth-child(2) > span { animation-delay: .42s; }
+@keyframes wr-line { to { transform: translateY(0); } }
+
+.hero-late { opacity: 0; transform: translateY(20px); animation: wr-up 1s cubic-bezier(.16,1,.3,1) forwards; }
+.hero-late.d1 { animation-delay: .75s; }
+.hero-late.d2 { animation-delay: .95s; }
+.hero-late.d3 { animation-delay: 1.2s; }
+@keyframes wr-up { to { opacity: 1; transform: none; } }
+
+.scroll-guide { position: relative; overflow: hidden; }
+.scroll-guide::after { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 40%; background: #D77B43; animation: wr-guide 2.4s cubic-bezier(.65,0,.35,1) infinite; }
+@keyframes wr-guide { 0% { transform: translateY(-100%); } 100% { transform: translateY(260%); } }
+
+.trail-draw { transform-origin: top; transform: scaleY(clamp(0, calc(var(--p, 0) * 1.8 - .45), 1)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom, .line-mask > span, .hero-late { animation: none !important; transform: none !important; opacity: 1 !important; }
+  .scroll-guide::after { animation: none; }
+  .trail-draw { transform: none; }
+}

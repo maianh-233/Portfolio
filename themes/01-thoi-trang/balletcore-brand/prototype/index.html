@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demi Pointe | Balletcore Activewear for Women</title>
+<meta name="description" content="Demi Pointe is a Saigon-made activewear label for women who train hard and dress softly. Barre, pilates and studio-to-street pieces.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          rose: {
+            50: '#fdf4f6', 100: '#fbe7ec', 200: '#f6cfd9', 300: '#eeaabd', 400: '#e17e99',
+            500: '#cf5a7b', 600: '#b84367', 700: '#9a3454', 800: '#7f2d47', 900: '#4a1a2b', 950: '#2e0f1b'
+          },
+          ink: { 400: '#8a7f86', 500: '#6c6168', 600: '#544a51', 700: '#3d343a', 900: '#221b20' },
+          shell: '#fbf9fa'
+        },
+        fontFamily: {
+          display: ['"Cormorant Garamond"', 'serif'],
+          sans: ['Manrope', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="assets/js/ui.js"></script>
+<style>
+  :root { --ui-accent: #b84367; }
+  body { -webkit-font-smoothing: antialiased; }
+  /* Motion tokens (same curves as motion.js) */
+  :root { --ease-out: cubic-bezier(.16,1,.3,1); --ease-fade: cubic-bezier(.33,1,.68,1); --ease-curtain: cubic-bezier(.76,0,.24,1); }
+
+  /* Hero slider: incoming slide wipes in over the outgoing one (no 50/50 crossfade dip), image settles with a slow zoom */
+  .hs-slide { visibility: hidden; z-index: 0; }
+  .hs-slide.is-active { visibility: visible; z-index: 2; animation: hs-wipe 1.25s var(--ease-curtain) both; }
+  .hs-slide.is-leaving { visibility: visible; z-index: 1; animation: hs-push 1.25s var(--ease-curtain) both; }
+  #hero[data-dir="prev"] .hs-slide.is-active { animation-name: hs-wipe-back; }
+  #hero[data-dir="prev"] .hs-slide.is-leaving { animation-name: hs-push-back; }
+  .hs-first .hs-slide.is-active { animation: hs-fade 1.4s var(--ease-fade) both; }
+  .hs-slide img { transform: scale(1.1); }
+  .hs-slide.is-active img, .hs-slide.is-leaving img { transform: scale(1); transition: transform 8s cubic-bezier(.25,.46,.45,.94); }
+  @keyframes hs-wipe { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0); } }
+  @keyframes hs-wipe-back { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
+  @keyframes hs-push { to { transform: translate3d(-8%,0,0); } }
+  @keyframes hs-push-back { to { transform: translate3d(8%,0,0); } }
+  @keyframes hs-fade { from { opacity: 0; } }
+
+  /* Slide copy: old lines lift out, then new lines rise one by one */
+  .hs-copy { visibility: hidden; --hs-in: 400ms; }
+  .hs-first .hs-copy { --hs-in: 250ms; }
+  .hs-copy.is-active, .hs-copy.is-leaving { visibility: visible; }
+  .hs-line { display: block; overflow: hidden; }
+  .hs-line > span { display: block; transform: translate3d(0,110%,0); opacity: 0; }
+  .hs-copy.is-active .hs-line > span { transform: none; opacity: 1; transition: transform 1.1s var(--ease-out), opacity .8s var(--ease-fade); transition-delay: calc(var(--i) * 110ms + var(--hs-in)); }
+  .hs-copy.is-leaving .hs-line > span { transform: translate3d(0,-110%,0); opacity: 0; transition: transform .5s cubic-bezier(.7,0,.84,0), opacity .4s ease-in; transition-delay: calc(var(--i) * 50ms); }
+
+  .hs-dot .hs-bar { transform: scaleX(0); transform-origin: left; }
+  .hs-dot.is-active .hs-bar { animation: hs-fill var(--hs-ms, 6500ms) linear forwards; }
+  .hs-paused .hs-dot.is-active .hs-bar { animation-play-state: paused; }
+  @keyframes hs-fill { to { transform: scaleX(1); } }
+
+  /* Header settles in once on load; solid background eases in after scrolling */
+  .hdr { animation: hdr-in .9s var(--ease-out) .1s backwards; }
+  @keyframes hdr-in { from { opacity: 0; transform: translate3d(0,-12px,0); } }
+  .hdr.is-scrolled { background: rgba(251,249,250,.92); box-shadow: 0 8px 30px -12px rgba(74,26,43,.18); backdrop-filter: blur(10px); }
+
+  /* Keyboard focus: clear but quiet ring, white on dark sections */
+  :where(a, button, [tabindex]):focus-visible { outline: 2px solid #b84367; outline-offset: 3px; }
+  :where(.bg-rose-700, .bg-rose-950, .bg-rose-900) :where(a, button, [tabindex]):focus-visible { outline-color: #fff; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hdr, .hs-slide.is-active, .hs-slide.is-leaving { animation: none !important; }
+    .hs-slide.is-leaving { visibility: hidden; }
+    .hs-slide img, .hs-line > span, .hs-copy.is-active .hs-line > span { transition: none !important; transform: none !important; }
+    .hs-copy.is-leaving { visibility: hidden; }
+    .hs-dot.is-active .hs-bar { animation: none; transform: scaleX(1); }
+  }
+</style>
+</head>
+<body id="top" class="bg-shell font-sans text-ink-900">
+
+<div data-scroll-progress class="fixed inset-x-0 top-0 z-[60] h-0.5 bg-rose-600"></div>
+
+<!-- HEADER -->
+<header data-header="shrink" class="hdr fixed inset-x-0 top-0 z-50 bg-shell/80 backdrop-blur-md transition-all duration-300">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="#top" class="font-display text-2xl font-semibold tracking-tight text-ink-900">Demi Pointe</a>
+    <nav data-scrollspy class="hidden items-center gap-8 text-sm font-medium text-ink-600 lg:flex">
+      <a href="#collection" class="relative py-1 transition-colors duration-300 hover:text-rose-700 [&.is-active]:text-rose-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-rose-600 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Collection</a>
+      <a href="#story" class="relative py-1 transition-colors duration-300 hover:text-rose-700 [&.is-active]:text-rose-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-rose-600 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Our Story</a>
+      <a href="#fabric" class="relative py-1 transition-colors duration-300 hover:text-rose-700 [&.is-active]:text-rose-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-rose-600 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Fabric</a>
+      <a href="#reviews" class="relative py-1 transition-colors duration-300 hover:text-rose-700 [&.is-active]:text-rose-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-rose-600 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Reviews</a>
+      <a href="#drop" class="relative py-1 transition-colors duration-300 hover:text-rose-700 [&.is-active]:text-rose-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-rose-600 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Next Drop</a>
+      <a href="#faq" class="relative py-1 transition-colors duration-300 hover:text-rose-700 [&.is-active]:text-rose-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-rose-600 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Visit</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button data-modal-open="fitting" data-ripple class="hidden h-11 items-center rounded-full bg-ink-900 px-6 text-sm font-semibold text-white transition duration-300 hover:bg-rose-700 active:scale-[.98] sm:inline-flex">Book a Fitting</button>
+      <button data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink-900/15 text-ink-900 transition duration-300 hover:border-rose-600 hover:text-rose-700 lg:hidden" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-3xl bg-white p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col divide-y divide-rose-100 font-display text-2xl">
+      <a href="#collection" class="py-3 transition-colors duration-300 hover:text-rose-700">Collection</a>
+      <a href="#story" class="py-3 transition-colors duration-300 hover:text-rose-700">Our Story</a>
+      <a href="#fabric" class="py-3 transition-colors duration-300 hover:text-rose-700">Fabric</a>
+      <a href="#reviews" class="py-3 transition-colors duration-300 hover:text-rose-700">Reviews</a>
+      <a href="#drop" class="py-3 transition-colors duration-300 hover:text-rose-700">Next Drop</a>
+      <a href="#faq" class="py-3 transition-colors duration-300 hover:text-rose-700">Visit</a>
+    </nav>
+    <button data-modal-open="fitting" class="mt-5 flex h-12 w-full items-center justify-center rounded-full bg-rose-700 text-sm font-semibold text-white">Book a Fitting</button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="hero" class="relative overflow-hidden bg-rose-50">
+  <div class="grid min-h-[100dvh] lg:grid-cols-12">
+    <div class="relative z-10 flex flex-col justify-center px-4 pb-10 pt-28 sm:px-6 lg:col-span-6 lg:pb-16 lg:pl-10 lg:pr-12 lg:pt-24 2xl:col-span-5 2xl:pl-16">
+      <!-- Slide copy: all slides share one grid cell so the height never jumps -->
+      <div class="grid">
+        <div data-hero-copy class="hs-copy [grid-area:1/1]">
+          <p class="hs-line mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-rose-700" style="--i:0"><span>Activewear, born at the barre</span></p>
+          <h1 class="font-display text-5xl font-semibold leading-[1.02] tracking-tight text-ink-900 sm:text-6xl lg:text-7xl 2xl:text-8xl">
+            <span class="hs-line" style="--i:1"><span>Train like a dancer.</span></span>
+            <em class="hs-line pb-1 font-medium italic leading-[1.1] text-rose-700" style="--i:2"><span>Dress like one.</span></em>
+          </h1>
+          <p class="hs-line mt-6 max-w-[46ch] text-base leading-relaxed text-ink-600 sm:text-lg" style="--i:3"><span>Wrap tops, ribbon-tie leggings and soft bodysuits for barre, pilates and everything after. Cut and sewn in Saigon.</span></p>
+        </div>
+        <div data-hero-copy class="hs-copy [grid-area:1/1]">
+          <p class="hs-line mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-rose-700" style="--i:0"><span>The Arabesque Legging</span></p>
+          <h2 class="font-display text-5xl font-semibold leading-[1.02] tracking-tight text-ink-900 sm:text-6xl lg:text-7xl 2xl:text-8xl">
+            <span class="hs-line" style="--i:1"><span>Squat-proof.</span></span>
+            <em class="hs-line pb-1 font-medium italic leading-[1.1] text-rose-700" style="--i:2"><span>Ribbon-soft.</span></em>
+          </h2>
+          <p class="hs-line mt-6 max-w-[46ch] text-base leading-relaxed text-ink-600 sm:text-lg" style="--i:3"><span>A high-rise waist that never rolls and a four-way stretch knit tested through 200 deep squats. In mist grey, mauve and ink.</span></p>
+        </div>
+        <div data-hero-copy class="hs-copy [grid-area:1/1]">
+          <p class="hs-line mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-rose-700" style="--i:0"><span>Studio to street</span></p>
+          <h2 class="font-display text-5xl font-semibold leading-[1.02] tracking-tight text-ink-900 sm:text-6xl lg:text-7xl 2xl:text-8xl">
+            <span class="hs-line" style="--i:1"><span>Made for the mat.</span></span>
+            <em class="hs-line pb-1 font-medium italic leading-[1.1] text-rose-700" style="--i:2"><span>Worn after.</span></em>
+          </h2>
+          <p class="hs-line mt-6 max-w-[46ch] text-base leading-relaxed text-ink-600 sm:text-lg" style="--i:3"><span>Soft bodysuits and wrap tops that go from a 7am reformer class to coffee on Pasteur Street without a change.</span></p>
+        </div>
+      </div>
+      <div data-reveal="up" data-reveal-delay="750" class="hs-cta mt-9 flex flex-col gap-3 sm:flex-row">
+        <a href="#collection" data-magnetic="0.25" class="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-rose-700 px-8 text-sm font-semibold text-white shadow-[0_14px_30px_-12px_rgba(154,52,84,.6)] transition duration-300 hover:bg-rose-800 active:scale-[.98]">
+          Shop the Collection
+          <svg class="transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button data-modal-open="fitting" class="inline-flex h-12 items-center justify-center rounded-full border border-ink-900/20 px-8 text-sm font-semibold text-ink-900 transition duration-300 hover:border-rose-700 hover:text-rose-700 active:scale-[.98]">Book a Fitting</button>
+      </div>
+      <!-- Slider controls -->
+      <div data-reveal="fade" data-reveal-delay="950" class="mt-12 flex items-center gap-5">
+        <button data-hero-prev aria-label="Previous slide" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink-900/15 text-ink-900 transition duration-300 hover:border-rose-700 hover:bg-rose-700 hover:text-white active:scale-95">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="flex min-w-0 flex-1 gap-3" role="tablist" aria-label="Hero slides">
+          <button data-hero-dot role="tab" aria-label="Slide 1" class="hs-dot group flex-1 py-3 text-left"><span class="block text-xs font-semibold tabular-nums text-ink-400 transition-colors group-hover:text-rose-700 group-[.is-active]:text-ink-900">01</span><span class="mt-2 block h-0.5 overflow-hidden rounded-full bg-ink-900/10"><span class="hs-bar block h-full bg-rose-600"></span></span></button>
+          <button data-hero-dot role="tab" aria-label="Slide 2" class="hs-dot group flex-1 py-3 text-left"><span class="block text-xs font-semibold tabular-nums text-ink-400 transition-colors group-hover:text-rose-700 group-[.is-active]:text-ink-900">02</span><span class="mt-2 block h-0.5 overflow-hidden rounded-full bg-ink-900/10"><span class="hs-bar block h-full bg-rose-600"></span></span></button>
+          <button data-hero-dot role="tab" aria-label="Slide 3" class="hs-dot group flex-1 py-3 text-left"><span class="block text-xs font-semibold tabular-nums text-ink-400 transition-colors group-hover:text-rose-700 group-[.is-active]:text-ink-900">03</span><span class="mt-2 block h-0.5 overflow-hidden rounded-full bg-ink-900/10"><span class="hs-bar block h-full bg-rose-600"></span></span></button>
+        </div>
+        <button data-hero-next aria-label="Next slide" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink-900/15 text-ink-900 transition duration-300 hover:border-rose-700 hover:bg-rose-700 hover:text-white active:scale-95">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div data-hero-media class="relative min-h-[60vh] touch-pan-y overflow-hidden lg:col-span-6 lg:min-h-0 2xl:col-span-7">
+      <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[14%]">
+        <div data-hero-slide class="hs-slide absolute inset-0"><img src="assets/img/ballet-dancer.webp" alt="Dancer in blush pointe shoes rising on stone steps" class="h-full w-full object-cover object-[60%_center]" width="1600" height="1067"></div>
+        <div data-hero-slide class="hs-slide absolute inset-0"><img src="assets/img/hero-slide-field.jpg" alt="Woman doing a banded squat outdoors in grey leggings and a white sports bra" class="h-full w-full object-cover object-[45%_center]" width="1600" height="1067"></div>
+        <div data-hero-slide class="hs-slide absolute inset-0"><img src="assets/img/hero-slide-mat.webp" alt="Woman in child's pose on a pink mat wearing black leggings" class="h-full w-full object-cover object-[60%_center]" width="1600" height="1067"></div>
+      </div>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-rose-950/30 via-transparent to-transparent lg:bg-gradient-to-r lg:from-rose-50/40 lg:via-transparent"></div>
+      <p class="pointer-events-none absolute bottom-5 right-5 rounded-full bg-white/85 px-4 py-2 text-xs font-semibold tabular-nums text-ink-900 backdrop-blur"><span data-hero-count>01</span> / 03</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="border-y border-rose-200 bg-white py-5">
+  <div data-marquee="38" class="flex items-center gap-12 whitespace-nowrap font-display text-2xl italic text-rose-800 sm:text-3xl">
+    <span>Ribbon-soft Lycra</span><span class="text-rose-300">&#10022;</span>
+    <span>Squat-proof, always</span><span class="text-rose-300">&#10022;</span>
+    <span>Wrap tops that stay put</span><span class="text-rose-300">&#10022;</span>
+    <span>Sizes XS to XL</span><span class="text-rose-300">&#10022;</span>
+    <span>Small batches, made in Saigon</span><span class="text-rose-300">&#10022;</span>
+    <span>Free hemming on leggings</span><span class="text-rose-300">&#10022;</span>
+  </div>
+</div>
+
+<!-- COLLECTION -->
+<section id="collection" data-carousel class="py-20 lg:py-28">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+      <div data-reveal="up">
+        <h2 class="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">The Pas de Deux collection</h2>
+        <p class="mt-4 max-w-[58ch] text-base leading-relaxed text-ink-600">Five pieces in muted ballet tones. Mix the top and bottom you love, they were cut to be worn together.</p>
+      </div>
+      <div class="flex gap-3">
+        <button data-carousel-prev aria-label="Previous pieces" class="carousel-ctl inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink-900/15 transition duration-300 hover:border-rose-700 hover:bg-rose-700 hover:text-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        </button>
+        <button data-carousel-next aria-label="Next pieces" class="carousel-ctl inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink-900/15 transition duration-300 hover:border-rose-700 hover:bg-rose-700 hover:text-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto mt-12 w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div data-carousel-track data-reveal-stagger="90" class="gap-5 lg:gap-6">
+      <article class="group w-[82%] shrink-0 sm:w-[46%] lg:w-[31%] 2xl:w-[23.5%]">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-rose-100">
+          <img src="assets/img/look-field.jpg" alt="Woman stretching on a running track in mist-grey high-rise leggings" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="1280">
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-4">
+          <div class="min-w-0">
+            <h3 class="font-display text-2xl font-semibold">Plié High-Rise Legging</h3>
+            <p class="mt-1 text-sm text-ink-500">Barre, pilates. Wide sculpting waistband.</p>
+          </div>
+          <p class="shrink-0 text-base font-semibold text-rose-700">690,000 ₫</p>
+        </div>
+        <div class="mt-3 flex gap-2" aria-label="Colors">
+          <span class="h-4 w-4 rounded-full bg-[#b9c8cc] ring-1 ring-ink-900/10" title="Mist"></span>
+          <span class="h-4 w-4 rounded-full bg-[#e8b9c4] ring-1 ring-ink-900/10" title="Blush"></span>
+          <span class="h-4 w-4 rounded-full bg-[#2b2428] ring-1 ring-ink-900/10" title="Noir"></span>
+        </div>
+      </article>
+
+      <article class="group w-[82%] shrink-0 sm:w-[46%] lg:w-[31%] 2xl:w-[23.5%]">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-rose-100">
+          <img src="assets/img/look-outdoor.jpg" alt="Woman in a white ribbed sports bra stretching her arms outdoors" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="1440">
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-4">
+          <div class="min-w-0">
+            <h3 class="font-display text-2xl font-semibold">Port de Bras Bra</h3>
+            <p class="mt-1 text-sm text-ink-500">Light support, ribbed scoop neck.</p>
+          </div>
+          <p class="shrink-0 text-base font-semibold text-rose-700">490,000 ₫</p>
+        </div>
+        <div class="mt-3 flex gap-2" aria-label="Colors">
+          <span class="h-4 w-4 rounded-full bg-[#f6f3f2] ring-1 ring-ink-900/15" title="Pearl"></span>
+          <span class="h-4 w-4 rounded-full bg-[#e8b9c4] ring-1 ring-ink-900/10" title="Blush"></span>
+        </div>
+      </article>
+
+      <article class="group w-[82%] shrink-0 sm:w-[46%] lg:w-[31%] 2xl:w-[23.5%]">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-rose-100">
+          <img src="assets/img/look-indoor.jpg" alt="Woman in a deep lunge backbend wearing mauve leggings" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="1440">
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-4">
+          <div class="min-w-0">
+            <h3 class="font-display text-2xl font-semibold">Arabesque Legging</h3>
+            <p class="mt-1 text-sm text-ink-500">Ribbon-tie ankle, 7/8 length.</p>
+          </div>
+          <p class="shrink-0 text-base font-semibold text-rose-700">720,000 ₫</p>
+        </div>
+        <div class="mt-3 flex gap-2" aria-label="Colors">
+          <span class="h-4 w-4 rounded-full bg-[#9a6b85] ring-1 ring-ink-900/10" title="Mauve"></span>
+          <span class="h-4 w-4 rounded-full bg-[#2b2428] ring-1 ring-ink-900/10" title="Noir"></span>
+        </div>
+      </article>
+
+      <article class="group w-[82%] shrink-0 sm:w-[46%] lg:w-[31%] 2xl:w-[23.5%]">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-rose-100">
+          <img src="assets/img/look-home.jpg" alt="Woman stretching at home in a black crop top and sheer-panel leggings" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="684" height="1024">
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-4">
+          <div class="min-w-0">
+            <h3 class="font-display text-2xl font-semibold">Pas de Deux Set</h3>
+            <p class="mt-1 text-sm text-ink-500">High-neck crop with mesh-panel legging.</p>
+          </div>
+          <p class="shrink-0 text-base font-semibold text-rose-700">1,150,000 ₫</p>
+        </div>
+        <div class="mt-3 flex gap-2" aria-label="Colors">
+          <span class="h-4 w-4 rounded-full bg-[#2b2428] ring-1 ring-ink-900/10" title="Noir"></span>
+        </div>
+      </article>
+
+      <article class="group w-[82%] shrink-0 sm:w-[46%] lg:w-[31%] 2xl:w-[23.5%]">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-rose-100">
+          <img src="assets/img/look-wood-floor.jpg" alt="Woman carrying a yoga mat in a charcoal seamless bra and leggings" loading="lazy" class="h-full w-full object-cover object-[60%_center] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="640">
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-4">
+          <div class="min-w-0">
+            <h3 class="font-display text-2xl font-semibold">Révérence Seamless Set</h3>
+            <p class="mt-1 text-sm text-ink-500">Heathered knit, studio to street.</p>
+          </div>
+          <p class="shrink-0 text-base font-semibold text-rose-700">980,000 ₫</p>
+        </div>
+        <div class="mt-3 flex gap-2" aria-label="Colors">
+          <span class="h-4 w-4 rounded-full bg-[#55505a] ring-1 ring-ink-900/10" title="Charcoal"></span>
+          <span class="h-4 w-4 rounded-full bg-[#d8c6cd] ring-1 ring-ink-900/10" title="Dusk"></span>
+        </div>
+      </article>
+    </div>
+    <div data-carousel-dots class="mt-10 text-rose-600"></div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" class="bg-white py-20 lg:py-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:items-center lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-5">
+      <div data-reveal="clip" class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-rose-100">
+        <img src="assets/img/pointe-shoes.webp" alt="A worn pair of satin pointe shoes with ribbons on a wooden floor" loading="lazy" class="h-full w-full object-cover" width="1000" height="1500">
+      </div>
+    </div>
+    <div class="lg:col-span-7 lg:pl-6">
+      <h2 data-split="words" class="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+        Started by two former dancers who missed <em class="font-medium italic text-rose-700">feeling pretty</em> at the gym.
+      </h2>
+      <p data-reveal="up" class="mt-6 max-w-[62ch] text-base leading-relaxed text-ink-600 sm:text-lg">
+        Linh and Vy trained in ballet for twelve years, then traded the studio for office jobs and spin classes. In 2023 they began sewing the pieces they wanted: soft colours, wrap details, fabric that holds you in like a leotard.
+      </p>
+      <dl data-reveal-stagger="90" class="mt-12 grid gap-8 sm:grid-cols-3">
+        <div class="border-t border-rose-200 pt-5">
+          <dt class="text-sm font-semibold text-ink-900">Graceful lines</dt>
+          <dd class="mt-2 text-sm leading-relaxed text-ink-500">Wrap fronts, low scoop backs and seams placed to lengthen the leg.</dd>
+        </div>
+        <div class="border-t border-rose-200 pt-5">
+          <dt class="text-sm font-semibold text-ink-900">Built to move</dt>
+          <dd class="mt-2 text-sm leading-relaxed text-ink-500">Every style is tested through a full barre class before it ships.</dd>
+        </div>
+        <div class="border-t border-rose-200 pt-5">
+          <dt class="text-sm font-semibold text-ink-900">Made close to home</dt>
+          <dd class="mt-2 text-sm leading-relaxed text-ink-500">Cut and sewn by a 14-person workshop in Thu Duc City.</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- FABRIC BENTO -->
+<section id="fabric" class="bg-rose-950 py-20 text-rose-50 lg:py-28">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 data-reveal="up" class="max-w-[20ch] font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Soft like a leotard. Strong like a reformer spring.</h2>
+
+    <div data-reveal-stagger="100" class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+      <div class="group relative min-h-[340px] overflow-hidden rounded-3xl md:col-span-2 lg:row-span-2">
+        <img src="assets/img/look-pink-mat.jpg" alt="Woman in a side stretch on a pink mat with a yoga wheel" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="960" height="640">
+        <div class="absolute inset-0 bg-gradient-to-t from-rose-950/90 via-rose-950/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-7 lg:p-9">
+          <h3 class="font-display text-3xl font-semibold">Four-way stretch</h3>
+          <p class="mt-2 max-w-[44ch] text-sm leading-relaxed text-rose-100/80">78% recycled nylon, 22% Lycra. Moves with a full split and springs back after every wash.</p>
+        </div>
+      </div>
+
+      <div data-spotlight data-spotlight-color="rgba(238,170,189,.16)" class="rounded-3xl border border-rose-100/10 bg-rose-900 p-7 transition duration-300 hover:-translate-y-1">
+        <p class="font-display text-6xl font-semibold text-rose-300"><span data-count-to="50" data-suffix="+">50+</span></p>
+        <h3 class="mt-4 text-base font-semibold">UPF sun protection</h3>
+        <p class="mt-2 text-sm leading-relaxed text-rose-100/70">For the walk from the studio to your coffee.</p>
+      </div>
+
+      <div data-spotlight data-spotlight-color="rgba(238,170,189,.16)" class="rounded-3xl bg-rose-300 p-7 text-rose-950 transition duration-300 hover:-translate-y-1">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 3-3 6 0 9s3 6 0 9M12 3c3 3 3 6 0 9s-3 6 0 9"/></svg>
+        <h3 class="mt-6 font-display text-2xl font-semibold">Ribbon-tie details</h3>
+        <p class="mt-2 text-sm leading-relaxed text-rose-950/75">Satin-soft ties at the ankle and waist, borrowed from pointe shoe ribbons.</p>
+      </div>
+
+      <div data-spotlight data-spotlight-color="rgba(238,170,189,.16)" class="rounded-3xl border border-rose-100/10 bg-rose-900 p-7 transition duration-300 hover:-translate-y-1 md:col-span-2">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h3 class="font-display text-2xl font-semibold">Squat-tested, every batch</h3>
+            <p class="mt-2 max-w-[48ch] text-sm leading-relaxed text-rose-100/70">Double-layer gusset and opaque knit. We check each batch under studio lights before it leaves the workshop.</p>
+          </div>
+          <p class="shrink-0 text-sm text-rose-200"><span data-count-to="300" class="font-display text-5xl font-semibold text-rose-300">300</span><br>pieces per colourway</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="relative overflow-hidden">
+  <div class="absolute inset-x-0 -inset-y-[15%]" data-parallax="-0.1">
+    <img src="assets/img/hero-stretch.webp" alt="Woman in a seated straddle stretch on a rooftop above the city" loading="lazy" class="h-full w-full object-cover object-[50%_70%]" width="1600" height="1067">
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-r from-shell via-shell/90 to-shell/30"></div>
+  <div class="relative mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+    <div class="max-w-3xl">
+      <p data-reveal="fade" class="font-display text-sm font-semibold text-rose-700">4.9 / 5 from 412 reviews</p>
+      <blockquote data-reveal="up" class="mt-6 font-display text-3xl font-medium italic leading-snug text-ink-900 sm:text-4xl lg:text-5xl">
+        &ldquo;The first leggings I have worn to barre and then straight to brunch without changing.&rdquo;
+      </blockquote>
+      <p class="mt-6 text-sm text-ink-600"><span class="font-semibold text-ink-900">Tran Bao Ngoc</span>, barre instructor, District 3</p>
+    </div>
+    <div data-reveal-stagger="120" class="mt-16 grid gap-5 md:grid-cols-2 xl:w-3/4 2xl:w-2/3">
+      <figure class="rounded-3xl bg-white/90 p-7 shadow-[0_20px_40px_-24px_rgba(74,26,43,.35)] backdrop-blur">
+        <blockquote class="text-base leading-relaxed text-ink-700">&ldquo;The wrap top stays crossed through a whole reformer session. Finally.&rdquo;</blockquote>
+        <figcaption class="mt-4 text-sm text-ink-500"><span class="font-semibold text-ink-900">Le Minh Anh</span>, pilates student</figcaption>
+      </figure>
+      <figure class="rounded-3xl bg-white/90 p-7 shadow-[0_20px_40px_-24px_rgba(74,26,43,.35)] backdrop-blur">
+        <blockquote class="text-base leading-relaxed text-ink-700">&ldquo;Size S fit perfectly and the blush colour is even softer in person.&rdquo;</blockquote>
+        <figcaption class="mt-4 text-sm text-ink-500"><span class="font-semibold text-ink-900">Pham Thu Ha</span>, runner, Thao Dien</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT DROP -->
+<section id="drop" class="bg-rose-100 py-20 lg:py-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-10 2xl:px-16">
+    <div data-reveal="up">
+      <h2 class="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Swan Lake capsule lands soon</h2>
+      <p class="mt-5 max-w-[52ch] text-base leading-relaxed text-ink-600">A feathered-white bodysuit, a tulle wrap skirt and leg warmers in three shades. Only 300 of each, no restock.</p>
+      <div class="mt-8 flex flex-col gap-3 rounded-3xl border border-rose-300 bg-white p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-sm text-ink-500">Early-access code, 10% off the capsule</p>
+          <p class="mt-1 font-display text-2xl font-semibold tracking-wide text-rose-800">SWANLAKE10</p>
+        </div>
+        <button data-copy="SWANLAKE10" class="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-rose-700 px-5 text-sm font-semibold text-rose-700 transition duration-300 hover:bg-rose-700 hover:text-white active:scale-[.98]">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          Copy code
+        </button>
+      </div>
+    </div>
+    <div data-reveal="left" data-countdown="2026-11-08T10:00" class="grid grid-cols-4 gap-3 sm:gap-5">
+      <div class="rounded-3xl bg-white p-4 text-center sm:p-7">
+        <span data-cd="d" class="block font-display text-4xl font-semibold text-rose-800 sm:text-6xl lg:text-7xl">00</span>
+        <span class="mt-2 block text-xs font-medium text-ink-500 sm:text-sm">Days</span>
+      </div>
+      <div class="rounded-3xl bg-white p-4 text-center sm:p-7">
+        <span data-cd="h" class="block font-display text-4xl font-semibold text-rose-800 sm:text-6xl lg:text-7xl">00</span>
+        <span class="mt-2 block text-xs font-medium text-ink-500 sm:text-sm">Hours</span>
+      </div>
+      <div class="rounded-3xl bg-white p-4 text-center sm:p-7">
+        <span data-cd="m" class="block font-display text-4xl font-semibold text-rose-800 sm:text-6xl lg:text-7xl">00</span>
+        <span class="mt-2 block text-xs font-medium text-ink-500 sm:text-sm">Minutes</span>
+      </div>
+      <div class="rounded-3xl bg-white p-4 text-center sm:p-7">
+        <span data-cd="s" class="block font-display text-4xl font-semibold text-rose-800 sm:text-6xl lg:text-7xl">00</span>
+        <span class="mt-2 block text-xs font-medium text-ink-500 sm:text-sm">Seconds</span>
+      </div>
+      <p class="col-span-4 text-sm text-ink-500">Drops Sunday 8 November, 10:00 AM online and at the showroom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ + VISIT -->
+<section id="faq" class="py-20 lg:py-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-7">
+      <h2 data-reveal="up" class="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Before you plié</h2>
+      <div data-accordion class="mt-10 divide-y divide-rose-200 border-y border-rose-200">
+        <div data-acc-item data-open>
+          <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold transition-colors duration-300 hover:text-rose-700 sm:text-lg">How do Demi Pointe sizes run? <span data-acc-icon class="text-2xl font-light text-rose-600 transition-transform [&.is-open]:rotate-45">+</span></button>
+          <div data-acc-panel><div class="max-w-[62ch] pb-5 text-ink-600">True to size with a snug, leotard-like fit. Between sizes? Take the larger one for pilates and the smaller one for barre. XS to XL, waist 60 to 84 cm.</div></div>
+        </div>
+        <div data-acc-item>
+          <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold transition-colors duration-300 hover:text-rose-700 sm:text-lg">Can I try pieces on before buying? <span data-acc-icon class="text-2xl font-light text-rose-600 transition-transform [&.is-open]:rotate-45">+</span></button>
+          <div data-acc-panel><div class="max-w-[62ch] pb-5 text-ink-600">Yes. Book a 30-minute fitting at our District 1 showroom and we will set aside your sizes in every colour.</div></div>
+        </div>
+        <div data-acc-item>
+          <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold transition-colors duration-300 hover:text-rose-700 sm:text-lg">How do I wash the ribbon ties? <span data-acc-icon class="text-2xl font-light text-rose-600 transition-transform [&.is-open]:rotate-45">+</span></button>
+          <div data-acc-panel><div class="max-w-[62ch] pb-5 text-ink-600">Cold machine wash inside a laundry bag, no softener, and dry flat. The ties keep their shape for years this way.</div></div>
+        </div>
+        <div data-acc-item>
+          <button data-acc-trigger class="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold transition-colors duration-300 hover:text-rose-700 sm:text-lg">What is your exchange policy? <span data-acc-icon class="text-2xl font-light text-rose-600 transition-transform [&.is-open]:rotate-45">+</span></button>
+          <div data-acc-panel><div class="max-w-[62ch] pb-5 text-ink-600">Free size exchanges within 14 days for unworn items with tags. Capsule pieces are final sale.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <aside data-reveal="up" class="lg:col-span-5">
+      <div class="rounded-3xl bg-white p-7 shadow-[0_30px_60px_-30px_rgba(74,26,43,.25)] sm:p-9">
+        <h3 class="font-display text-3xl font-semibold">The showroom</h3>
+        <p class="mt-3 text-ink-600">18 Ton That Thiep, Ben Nghe Ward, District 1, Ho Chi Minh City</p>
+        <p class="mt-1 text-ink-600">Tuesday to Sunday, 10:00 AM to 8:30 PM</p>
+        <div class="mt-6 aspect-[16/9] overflow-hidden rounded-2xl bg-rose-100">
+          <iframe title="Demi Pointe showroom map" src="https://maps.google.com/maps?q=Ton%20That%20Thiep%20District%201%20Ho%20Chi%20Minh&z=16&output=embed" class="h-full w-full border-0" loading="lazy"></iframe>
+        </div>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a href="tel:0909418263" class="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-ink-900 sm:flex-1 px-6 text-sm font-semibold text-white transition duration-300 hover:bg-rose-700 active:scale-[.98]">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            0909 418 263
+          </a>
+          <a href="https://zalo.me/0909418263" target="_blank" rel="noopener" class="inline-flex h-12 shrink-0 items-center justify-center rounded-full border sm:flex-1 border-ink-900/20 px-6 text-sm font-semibold transition duration-300 hover:border-rose-700 hover:text-rose-700">Chat on Zalo</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="join" class="bg-rose-700 text-white">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-10 lg:py-24 2xl:px-16">
+    <h2 data-reveal="up" class="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Join the corps. <em class="font-medium italic text-rose-200">First looks at every drop.</em></h2>
+    <form data-reveal="up" data-form="newsletter" data-success="You are on the list. Watch your inbox on drop day." class="w-full" novalidate>
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-start">
+        <label class="flex-1 text-sm font-medium text-rose-100">Email address
+          <input type="email" name="email" required placeholder="you@example.com" class="mt-2 h-12 w-full rounded-full border border-white/30 bg-white px-5 text-base text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-rose-200">
+        </label>
+        <button type="submit" class="h-12 shrink-0 rounded-full bg-ink-900 px-8 text-sm font-semibold text-white transition duration-300 hover:bg-rose-950 active:scale-[.98] sm:mt-7">Sign Up</button>
+      </div>
+      <p class="mt-3 text-sm text-rose-100/80">One email per drop. No spam, unsubscribe any time.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-rose-950 text-rose-100/80">
+  <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-10 2xl:px-16">
+    <div>
+      <p class="font-display text-3xl font-semibold text-white">Demi Pointe</p>
+      <p class="mt-3 max-w-[32ch] text-sm leading-relaxed">Balletcore activewear for women who train hard and dress softly. Made in Saigon since 2023.</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold text-white">Explore</p>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="#collection" class="transition hover:text-rose-300">Collection</a></li>
+        <li><a href="#story" class="transition hover:text-rose-300">Our Story</a></li>
+        <li><a href="#fabric" class="transition hover:text-rose-300">Fabric</a></li>
+        <li><a href="#drop" class="transition hover:text-rose-300">Next Drop</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold text-white">Contact</p>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="tel:0909418263" class="transition hover:text-rose-300">0909 418 263</a></li>
+        <li><a href="mailto:hello@demipointe.vn" class="transition hover:text-rose-300">hello@demipointe.vn</a></li>
+        <li>18 Ton That Thiep, District 1, HCMC</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold text-white">Follow</p>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition hover:text-rose-300">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="transition hover:text-rose-300">TikTok</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition hover:text-rose-300">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 px-4 py-6 text-xs sm:flex-row sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+      <p>&copy; 2026 Demi Pointe Co., Ltd.</p>
+      <a href="#top" class="transition hover:text-rose-300">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top aria-label="Back to top" class="fixed bottom-6 right-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-rose-700 shadow-lg ring-1 ring-rose-200 transition duration-300 hover:-translate-y-1 hover:bg-rose-700 hover:text-white">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<!-- FITTING MODAL -->
+<dialog id="fitting" class="w-[min(560px,calc(100%-2rem))] rounded-3xl bg-white p-0 text-ink-900 shadow-2xl backdrop:bg-rose-950/50">
+  <div class="p-7 sm:p-9">
+    <div class="flex items-start justify-between gap-6">
+      <div>
+        <h2 class="font-display text-3xl font-semibold">Book a fitting</h2>
+        <p class="mt-2 text-sm text-ink-500">30 minutes at our District 1 showroom. We will set aside your sizes.</p>
+      </div>
+      <button data-modal-close aria-label="Close" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-2xl text-ink-500 transition duration-300 hover:bg-rose-50 hover:text-rose-700">&times;</button>
+    </div>
+    <form data-form="fitting" data-success="Your fitting is booked. We will confirm by Zalo within 2 hours." class="mt-7 grid gap-5" novalidate>
+      <label class="text-sm font-medium text-ink-700">Full name
+        <input name="name" required minlength="2" class="mt-2 h-12 w-full rounded-xl border border-ink-900/15 px-4 text-base focus:border-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-200">
+      </label>
+      <label class="text-sm font-medium text-ink-700">Phone number
+        <input name="phone" type="tel" required minlength="9" class="mt-2 h-12 w-full rounded-xl border border-ink-900/15 px-4 text-base focus:border-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-200">
+      </label>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <label class="text-sm font-medium text-ink-700">Date
+          <input name="date" type="date" required class="mt-2 h-12 w-full rounded-xl border border-ink-900/15 px-4 text-base focus:border-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-200">
+        </label>
+        <label class="text-sm font-medium text-ink-700">Usual size
+          <select name="size" required class="mt-2 h-12 w-full rounded-xl border border-ink-900/15 bg-white px-4 text-base focus:border-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-200">
+            <option value="">Choose</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option>
+          </select>
+        </label>
+      </div>
+      <button type="submit" class="h-12 rounded-full bg-rose-700 text-sm font-semibold text-white transition duration-300 hover:bg-rose-800 active:scale-[.98]">Confirm Fitting</button>
+    </form>
+  </div>
+</dialog>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

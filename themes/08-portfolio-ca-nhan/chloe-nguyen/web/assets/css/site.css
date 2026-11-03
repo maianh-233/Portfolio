@@ -1,0 +1,48 @@
+:root {
+  --paper: #FAF9F6;
+  --sand: #E7DFD4;
+  --ink: #242424;
+  --stone: #B9B5AF;
+  --olive: #737B68;
+  --olive-deep: #555C4C;
+  --muted: #5C5955;
+  --ui-accent: #737B68;
+  --font-display: "Cormorant Garamond", "Noto Serif", Georgia, system-ui, "Segoe UI", Roboto, Arial, serif;
+  --font-body: Inter, "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--sand); color: var(--ink); }
+
+/* Header: trong suốt ở đầu trang, nền ngà + đường kẻ khi đã cuộn (motion.js gắn .is-scrolled) */
+#top { transition: background-color .4s ease, border-color .4s ease, padding .4s ease; }
+#top.is-scrolled { background: rgba(250, 249, 246, .94); border-bottom-color: rgba(36, 36, 36, .12); }
+#top.is-scrolled .hdr-inner { padding-top: .75rem; padding-bottom: .75rem; }
+
+/* Drop cap kiểu tạp chí */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.6em;
+  line-height: .82;
+  padding: .06em .12em 0 0;
+  color: var(--olive);
+}
+
+/* Bảng panel dự án (dialog của ui.js): rộng như trang tạp chí, góc vuông */
+dialog.project-panel { max-width: min(94vw, 1180px) !important; border-radius: 0 !important; background: var(--paper); color: var(--ink); }
+dialog.project-panel::backdrop { background: rgba(36, 36, 36, .62); }
+
+/* In CV: chỉ giữ nội dung CV */
+@media print {
+  #top, #footer, .no-print { display: none !important; }
+  body { background: #fff; }
+  .print-plain { padding-top: 0 !important; }
+  a { text-decoration: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #top, #top .hdr-inner { transition: none; }
+}

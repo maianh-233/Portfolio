@@ -1,0 +1,50 @@
+{
+  "slug": "hon-viet",
+  "name": "HỒN VIỆT",
+  "projectType": "website",
+  "concept": {
+    "topic": "Web trung tâm dạy nhạc cụ dân tộc",
+    "brand": "HỒN VIỆT",
+    "purpose": "Thiết kế website đa trang giới thiệu HỒN VIỆT, trung tâm đào tạo nhạc cụ dân tộc Việt Nam với định hướng bảo tồn di sản thông qua hình thức truyền nghề trực tiếp. Trung tâm mời các nghệ nhân và người có chuyên môn sâu về nhạc cụ truyền thống đứng lớp, hướng dẫn học viên từ kỹ thuật biểu diễn đến chiều sâu văn hóa của âm nhạc dân tộc.\n\nWebsite chỉ phục vụ mục đích giới thiệu trung tâm, nghệ nhân, chương trình học và hoạt động văn hóa; không phải website thương mại điện tử.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "1. Art Direction — Mỹ học Việt Nam hoài cổ\n\nXây dựng giao diện mang cảm giác của một ngôi nhà Việt xưa, một thư phòng cổ hoặc không gian nghệ thuật truyền thống được lưu giữ qua nhiều thế hệ.\n\nSử dụng chất liệu thị giác gồm gỗ lâu năm, giấy dó ngả vàng, giấy bản, vải linen thô, mực tàu, đồng hun, gốm cũ và bề mặt sơn đã phai màu. Kết hợp ánh sáng tự nhiên xuyên qua cửa gỗ, bóng nắng trên nền nhà, vân gỗ, nếp giấy và những chi tiết thủ công không hoàn hảo.\n\nBảng màu gồm vàng giấy cũ #E8D9B8, nâu gỗ #594333, đỏ son trầm #843D32, xanh rêu #62664A và đen mực #292720.\n\nTypography kết hợp kiểu chữ serif cổ điển có dấu tiếng Việt đẹp với font chữ hiện đại dễ đọc. Có thể sử dụng thư pháp hoặc chữ viết tay cho các câu dẫn ngắn, không lạm dụng khiến giao diện khó đọc.\n\nHình ảnh cần chân thực, giàu cảm xúc: nghệ nhân chơi đàn trong không gian gỗ cũ, đôi tay đang gảy đàn tranh, người thầy hướng dẫn học viên, nhạc cụ lâu năm, bản nhạc viết tay và những buổi truyền dạy gần gũi.\n\nTránh giao diện công nghệ, gradient rực rỡ, màu neon, card bo góc quá nhiều, hình ảnh stock văn phòng và các hiệu ứng hiện đại làm mất chất hoài cổ.\n\n2. Cấu trúc website đa trang\n\nTrang chủ\n\nHero toàn màn hình với ảnh nghệ nhân biểu diễn nhạc cụ dân tộc trong không gian Việt xưa.\n\nTiêu đề: “Giữ tiếng xưa, truyền hồn Việt”.\n\nLời giới thiệu: “Nơi nghệ nhân truyền nghề, nơi âm vang dân tộc tiếp nối qua những thế hệ”.\n\nGiới thiệu triết lý truyền dạy, các nhạc cụ đào tạo và những nghệ nhân đứng lớp.\n\nKhu vực ảnh kể chuyện về không gian học tập và hoạt động truyền nghề.\n\nCTA: “Gặp gỡ nghệ nhân”, “Khám phá lớp học”.\n\nTrang Nghệ nhân\n\nLà trang trọng tâm, tôn vinh những người trực tiếp truyền dạy.\n\nMỗi nghệ nhân có chân dung, chuyên môn, hành trình gắn bó với nhạc cụ, kinh nghiệm biểu diễn và triết lý truyền nghề.\n\nThiết kế như những trang chân dung trong một cuốn sách tư liệu văn hóa.\n\nCó trang chi tiết riêng cho từng nghệ nhân, với hình ảnh và câu chuyện được trình bày trang trọng.\n\nKhông tự tạo danh hiệu, giải thưởng hoặc thành tích có thật khi chưa có dữ liệu.\n\nTrang Chương trình học\n\nGiới thiệu các lớp đàn tranh, đàn bầu, đàn nguyệt, đàn tỳ bà, sáo trúc và các nhạc cụ dân tộc khác.\n\nPhân chia theo trình độ nhập môn, cơ bản và nâng cao nếu phù hợp với chương trình thực tế.\n\nNêu rõ nội dung học, phương pháp thực hành cùng nghệ nhân và giá trị văn hóa của từng nhạc cụ.\n\nTrình bày bằng bố cục biên tập kiểu tạp chí hoặc danh mục tư liệu, không sử dụng giao diện bán khóa học.\n\nTrang Di sản nhạc cụ\n\nGiới thiệu nguồn gốc, cấu tạo, âm sắc và vai trò văn hóa của từng nhạc cụ.\n\nHình ảnh chi tiết, chú thích ngắn và bố cục gợi liên tưởng đến sách nghiên cứu hoặc hồ sơ lưu trữ.\n\nCó thể bổ sung âm thanh minh họa và video biểu diễn nếu có tư liệu phù hợp.\n\nTrang Không gian truyền nghề\n\nGiới thiệu lớp học, các buổi thực hành, hoạt động giao lưu và những khoảnh khắc nghệ nhân hướng dẫn học viên.\n\nƯu tiên ảnh tư liệu tự nhiên, không tạo cảm giác lớp học thương mại.\n\nKể câu chuyện về sự tiếp nối giữa nghệ nhân và thế hệ trẻ.\n\nTrang Văn hóa & sự kiện\n\nGiới thiệu buổi biểu diễn, workshop, giao lưu nghệ nhân và hoạt động gìn giữ âm nhạc truyền thống.\n\nTrình bày theo dạng nhật ký văn hóa, tạp chí hoặc sổ lưu trữ.\n\nMỗi bài viết có trang nội dung riêng.\n\nTrang Về Hồn Việt & Liên hệ\n\nCâu chuyện hình thành trung tâm, sứ mệnh và quan điểm bảo tồn văn hóa.\n\nGiới thiệu không gian, đội ngũ và định hướng truyền nghề.\n\nThông tin liên hệ và biểu mẫu đăng ký tư vấn hoặc tìm hiểu lớp học.\n\n3. Bố cục và tương tác\n\nThiết kế mỗi trang như một chương trong cuốn sách văn hóa Việt Nam: ảnh lớn, tiêu đề giàu cảm xúc, khoảng trắng có chủ ý, đường phân cách mảnh và chú thích ảnh mang phong cách tư liệu.\n\nSử dụng nền giấy cũ xen kẽ những khu vực nền nâu gỗ. Có thể thêm họa tiết trống đồng, hoa văn dân gian hoặc nét mực thủ công ở mức tiết chế. Không sử dụng họa tiết cung đình Trung Hoa thay cho bản sắc Việt Nam.\n\nAnimation nhẹ nhàng: ảnh xuất hiện từ từ khi cuộn, chuyển cảnh mềm, hiệu ứng giấy hoặc mực rất tinh tế. Ưu tiên cảm xúc và nội dung hơn hiệu ứng.\n\nMenu rõ ràng, responsive, các liên kết hoạt động đúng chức năng. Biểu mẫu liên hệ có xác thực dữ liệu và thông báo kết quả.\n\n4. Yêu cầu đầu ra\n\nXây dựng website đa trang hoàn chỉnh, mỗi trang có nội dung và bố cục riêng, không chỉ là một landing page kéo dài. Giữ thiết kế nhất quán nhưng tránh lặp lại cùng một mẫu card ở tất cả các trang.\n\nKhông có giỏ hàng, mua nhạc cụ, thanh toán hoặc chức năng thương mại điện tử. Không tự bịa thông tin về nghệ nhân thật; sử dụng nội dung mẫu có thể thay thế khi chưa có dữ liệu.\n\nMục tiêu: Tạo ra một không gian văn hóa số giàu chất liệu cổ và cảm xúc hoài niệm, nơi người xem cảm nhận được giá trị của việc học nhạc cụ dân tộc trực tiếp từ nghệ nhân và sự tiếp nối của di sản Việt Nam.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-19T09:00:52.815Z",
+  "updatedAt": "2026-10-19T12:17:23.563Z",
+  "screen": "request",
+  "request": "Web trung tâm dạy nhạc cụ dân tộc",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "91b82b72-102a-45e9-8b44-79c6d96084bf",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\hon-viet\\web",
+    "status": "running"
+  }
+}

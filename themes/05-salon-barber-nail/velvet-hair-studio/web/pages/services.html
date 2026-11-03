@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="t.services">Dịch vụ & bảng giá — VELVET HAIR STUDIO</title>
+<meta name="description" content="Dịch vụ cắt, tạo kiểu, nhuộm, uốn và phục hồi tóc tại VELVET HAIR STUDIO, kèm giá tham khảo và quy trình tư vấn cá nhân hóa.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-ivory font-sans text-velvet">
+<!-- @partial header -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-gold focus:px-4 focus:py-2 focus:text-velvet" data-i18n="c.skip">Bỏ qua tới nội dung</a>
+<header id="top" data-header="shrink" class="group/h fixed inset-x-0 top-0 z-50 text-ivory has-[button.is-open]:bg-velvet [&.is-scrolled]:bg-velvet/95 [&.is-scrolled]:shadow-[0_1px_0_rgba(197,165,114,.25)]">
+  <div class="mx-auto grid h-[72px] w-full max-w-screen-2xl grid-cols-[1fr_auto] items-center gap-6 px-4 transition-[height] duration-500 group-[.is-scrolled]/h:h-16 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-10 2xl:px-16">
+    <a href="../index.html" class="flex flex-col justify-self-start whitespace-nowrap font-display text-[1.4rem] leading-none tracking-[0.18em] sm:block sm:text-2xl" aria-label="VELVET HAIR STUDIO">
+      <span>VELVET</span> <span class="mt-1 text-xs tracking-[0.34em] text-gold sm:mt-0 sm:text-[0.62em] sm:tracking-[0.32em]">HAIR STUDIO</span>
+    </a>
+    <nav class="hidden lg:block" aria-label="Điều hướng chính" data-i18n-attr="aria-label:c.navlabel">
+      <ul class="flex items-center gap-10 text-[13px] font-medium uppercase tracking-[0.2em]">
+        <li><a href="../index.html" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ivory aria-[current=page]:after:scale-x-100" data-i18n="n.home">Trang chủ</a></li>
+        <li><a aria-current="page" href="../pages/services.html" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ivory aria-[current=page]:after:scale-x-100" data-i18n="n.services">Dịch vụ</a></li>
+        <li><a href="../pages/gallery.html" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ivory aria-[current=page]:after:scale-x-100" data-i18n="n.gallery">Bộ sưu tập</a></li>
+        <li><a href="../pages/about.html" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ivory aria-[current=page]:after:scale-x-100" data-i18n="n.about">Về chúng tôi</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center justify-self-end gap-3 sm:gap-5">
+      <div class="hidden items-center gap-1 text-xs font-semibold tracking-[0.2em] lg:flex" role="group" aria-label="Ngôn ngữ" data-i18n-attr="aria-label:c.langlabel">
+        <button type="button" data-lang-set="vi" class="px-1.5 py-2 transition-opacity duration-300 hover:opacity-100">VI</button>
+        <span class="h-3 w-px bg-ivory/30" aria-hidden="true"></span>
+        <button type="button" data-lang-set="en" class="px-1.5 py-2 transition-opacity duration-300 hover:opacity-100">EN</button>
+      </div>
+      <button type="button" data-modal-open="book" class="inline-flex h-10 items-center border border-gold bg-gold px-3 text-xs font-bold uppercase tracking-[0.12em] text-velvet transition-colors duration-300 hover:bg-transparent hover:text-gold active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ivory sm:h-11 sm:px-5 sm:tracking-[0.2em]" data-i18n="c.book">Đặt lịch</button>
+      <button type="button" data-menu-toggle="#mnav" class="group/m -mr-2 grid h-11 w-11 place-items-center lg:hidden" aria-label="Mở menu" data-i18n-attr="aria-label:c.menu">
+        <span class="relative block h-3 w-6" aria-hidden="true">
+          <span class="absolute left-0 top-0 h-px w-6 bg-ivory transition-transform duration-500 ease-expo group-[.is-open]/m:translate-y-1.5 group-[.is-open]/m:rotate-45"></span>
+          <span class="absolute bottom-0 left-0 h-px w-6 bg-ivory transition-transform duration-500 ease-expo group-[.is-open]/m:-translate-y-1.5 group-[.is-open]/m:-rotate-45"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+<div id="mnav" class="fixed inset-x-0 bottom-0 top-[72px] z-[45] flex flex-col overflow-y-auto border-t border-gold/25 bg-velvet px-6 pb-10 pt-8 text-ivory lg:hidden">
+  <nav aria-label="Menu điện thoại" data-i18n-attr="aria-label:c.mnavlabel">
+    <ul class="divide-y divide-ivory/10 font-display text-[2.6rem] leading-tight">
+      <li><a href="../index.html" class="flex items-baseline justify-between py-4 aria-[current=page]:text-gold"><span data-i18n="n.home">Trang chủ</span><span class="font-sans text-xs tracking-[0.2em] text-taupe">01</span></a></li>
+      <li><a aria-current="page" href="../pages/services.html" class="flex items-baseline justify-between py-4 aria-[current=page]:text-gold"><span data-i18n="n.services">Dịch vụ</span><span class="font-sans text-xs tracking-[0.2em] text-taupe">02</span></a></li>
+      <li><a href="../pages/gallery.html" class="flex items-baseline justify-between py-4 aria-[current=page]:text-gold"><span data-i18n="n.gallery">Bộ sưu tập</span><span class="font-sans text-xs tracking-[0.2em] text-taupe">03</span></a></li>
+      <li><a href="../pages/about.html" class="flex items-baseline justify-between py-4 aria-[current=page]:text-gold"><span data-i18n="n.about">Về chúng tôi</span><span class="font-sans text-xs tracking-[0.2em] text-taupe">04</span></a></li>
+    </ul>
+  </nav>
+  <div class="mt-auto pt-10">
+    <div class="flex items-center gap-2 text-sm font-semibold tracking-[0.2em]" role="group" aria-label="Ngôn ngữ" data-i18n-attr="aria-label:c.langlabel">
+      <button type="button" data-lang-set="vi" class="h-11 border border-ivory/25 px-5">VI</button>
+      <button type="button" data-lang-set="en" class="h-11 border border-ivory/25 px-5">EN</button>
+    </div>
+    <p class="mt-6 text-sm leading-relaxed text-taupe">123 Nguyen Hue, District 1, Ho Chi Minh City<br><span data-i18n="c.hours">Mở cửa 09:00-20:00 mỗi ngày</span></p>
+  </div>
+</div>
+<!-- /@partial header -->
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section id="hero" data-section="page-hero" class="relative bg-velvet text-ivory">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 pb-16 pt-32 sm:px-6 lg:grid-cols-12 lg:items-end lg:gap-10 lg:px-10 lg:pb-0 lg:pt-40 2xl:px-16">
+      <div class="lg:col-span-7 lg:pb-20">
+        <p data-reveal="fade" class="flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold"><span class="h-px w-10 bg-gold" aria-hidden="true"></span><span data-i18n="sp.eyebrow">Dịch vụ của chúng tôi</span></p>
+        <h1 data-reveal="up" class="mt-8 pb-2 font-display text-[clamp(3rem,7vw,7rem)] font-light leading-[1] tracking-[-0.01em]" data-i18n="sp.title">Nghệ thuật chăm sóc <em class="text-gold">và tạo kiểu tóc</em></h1>
+        <p data-reveal="up" class="mt-8 max-w-xl text-base leading-relaxed text-ivory/80 sm:text-[17px]" data-i18n="sp.desc">Mỗi dịch vụ bắt đầu từ một buổi tư vấn. Stylist đọc chất tóc, khuôn mặt và nhịp sống của bạn trước khi chọn đường cắt, màu nhuộm hay liệu trình chăm sóc.</p>
+      </div>
+      <div class="lg:col-span-5" data-reveal="fade">
+        <div class="img-frame aspect-[4/5] overflow-hidden lg:aspect-[4/5] lg:translate-y-16">
+          <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1600&q=80" referrerpolicy="no-referrer" alt="Stylist sấy tạo kiểu bằng lược tròn cho khách nữ" width="1200" height="1500" class="h-full w-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE MENU -->
+  <section id="menu" data-section="features-numbered" class="bg-ivory pt-16 lg:pt-32">
+    <nav data-scrollspy class="sticky top-16 z-30 border-y border-velvet/10 bg-ivory/95 backdrop-blur-sm" aria-label="Nhóm dịch vụ" data-i18n-attr="aria-label:sp.navlabel">
+      <ul class="mx-auto flex w-full max-w-screen-2xl gap-8 overflow-x-auto px-4 text-xs font-bold uppercase tracking-[0.2em] sm:px-6 lg:gap-12 lg:px-10 2xl:px-16">
+        <li class="shrink-0"><a href="#cutting" class="block border-b-2 border-transparent py-4 text-velvet/55 transition-colors duration-300 hover:text-velvet [&.is-active]:border-gold [&.is-active]:text-velvet" data-i18n="sp.c1.short">Cắt & tạo kiểu</a></li>
+        <li class="shrink-0"><a href="#coloring" class="block border-b-2 border-transparent py-4 text-velvet/55 transition-colors duration-300 hover:text-velvet [&.is-active]:border-gold [&.is-active]:text-velvet" data-i18n="sp.c2.short">Nhuộm màu</a></li>
+        <li class="shrink-0"><a href="#texture" class="block border-b-2 border-transparent py-4 text-velvet/55 transition-colors duration-300 hover:text-velvet [&.is-active]:border-gold [&.is-active]:text-velvet" data-i18n="sp.c3.short">Uốn & kết cấu</a></li>
+        <li class="shrink-0"><a href="#treatment" class="block border-b-2 border-transparent py-4 text-velvet/55 transition-colors duration-300 hover:text-velvet [&.is-active]:border-gold [&.is-active]:text-velvet" data-i18n="sp.c4.short">Phục hồi tóc</a></li>
+      </ul>
+    </nav>
+
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <!-- 01 CUTTING -->
+      <article id="cutting" class="grid gap-10 border-b border-velvet/10 py-20 lg:grid-cols-12 lg:gap-10 lg:py-28">
+        <div class="lg:col-span-4" data-reveal="fade">
+          <span class="font-display text-6xl font-light text-mocha">01</span>
+          <h2 class="mt-4 font-display text-[clamp(2.2rem,3.6vw,3.5rem)] font-light leading-[1.05]" data-i18n="sp.c1.title">Cắt & tạo kiểu</h2>
+          <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-velvet/75" data-i18n="sp.c1.desc">Các dịch vụ cắt và tạo kiểu được điều chỉnh theo khuôn mặt, chất tóc và nhu cầu của khách hàng.</p>
+          <div class="img-frame on-light mt-8 hidden aspect-[4/5] max-w-xs overflow-hidden lg:block"><img src="https://images.unsplash.com/photo-1774660810725-fb04e002003d?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Stylist đang búi tóc tạo kiểu cho khách ngồi trên ghế" width="800" height="1000" class="h-full w-full object-cover"></div>
+        </div>
+        <ul class="divide-y divide-velvet/10 lg:col-span-7 lg:col-start-6" data-reveal="up">
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8 first:pt-0"><div><h3 class="font-display text-[1.75rem] leading-tight">Signature Haircut</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c1.i1">Tư vấn dáng mặt, cắt tạo form và sấy hoàn thiện.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d60">Khoảng 60 phút</p></div><p class="font-semibold sm:text-right">350.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Haircut & Blowout</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c1.i2">Cắt tóc kèm gội dưỡng và sấy phồng bồng bềnh.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d75">Khoảng 75 phút</p></div><p class="font-semibold sm:text-right">450.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Premium Styling</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c1.i3">Tạo kiểu sóng, duỗi bóng hoặc vén gọn cho ngày đặc biệt.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d60">Khoảng 60 phút</p></div><p class="font-semibold sm:text-right">500.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Event Hairstyling</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c1.i4">Búi, tết hoặc tạo kiểu cho tiệc, cưới hỏi và chụp ảnh.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d90">Khoảng 90 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c1.p4">từ 650.000 VNĐ</p></li>
+        </ul>
+      </article>
+
+      <!-- 02 COLORING -->
+      <article id="coloring" class="grid gap-10 border-b border-velvet/10 py-20 lg:grid-cols-12 lg:gap-10 lg:py-28">
+        <ul class="order-2 divide-y divide-velvet/10 lg:order-1 lg:col-span-7" data-reveal="up">
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8 first:pt-0"><div><h3 class="font-display text-[1.75rem] leading-tight">Full Hair Color</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c2.i1">Nhuộm toàn bộ một tông màu đều, bóng và bền màu.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d120">Khoảng 120 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c2.p1">từ 900.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Root Touch-up</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c2.i2">Nhuộm lại phần chân tóc mới mọc cho đồng màu.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d75">Khoảng 75 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c2.p2">từ 450.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Balayage</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c2.i3">Vẽ màu tay tự do, chuyển sáng mềm mại từ chân tới ngọn.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d180">Khoảng 180 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c2.p3">từ 1.800.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Highlights</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c2.i4">Những sợi sáng mảnh tạo chiều sâu và độ bắt sáng.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d150">Khoảng 150 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c2.p4">từ 1.500.000 VNĐ</p></li>
+          <li class="pt-7"><p class="border-l-2 border-gold pl-4 text-sm leading-relaxed text-velvet/70" data-i18n="sp.c2.note">Giá nhuộm có thể thay đổi theo độ dài, độ dày và tình trạng tóc. Stylist sẽ báo giá cụ thể sau buổi tư vấn.</p></li>
+        </ul>
+        <div class="order-1 lg:order-2 lg:col-span-4 lg:col-start-9" data-reveal="fade">
+          <span class="font-display text-6xl font-light text-mocha">02</span>
+          <h2 class="mt-4 font-display text-[clamp(2.2rem,3.6vw,3.5rem)] font-light leading-[1.05]" data-i18n="sp.c2.title">Nhuộm màu</h2>
+          <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-velvet/75" data-i18n="sp.c2.desc">Các kỹ thuật nhuộm màu được lựa chọn dựa trên nền tóc, phong cách và kết quả mong muốn.</p>
+          <div class="img-frame on-light mt-8 hidden aspect-square max-w-xs overflow-hidden lg:block"><img src="https://images.unsplash.com/photo-1707812343087-c9ff9e5abb43?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Stylist quét thuốc nhuộm highlight trên giấy bạc" width="800" height="800" class="h-full w-full object-cover"></div>
+        </div>
+      </article>
+
+      <!-- 03 TEXTURE -->
+      <article id="texture" class="grid gap-10 border-b border-velvet/10 py-20 lg:grid-cols-12 lg:gap-10 lg:py-28">
+        <div class="lg:col-span-4" data-reveal="fade">
+          <span class="font-display text-6xl font-light text-mocha">03</span>
+          <h2 class="mt-4 font-display text-[clamp(2.2rem,3.6vw,3.5rem)] font-light leading-[1.05]" data-i18n="sp.c3.title">Uốn & kết cấu</h2>
+          <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-velvet/75" data-i18n="sp.c3.desc">Tạo kết cấu và độ chuyển động tự nhiên cho mái tóc.</p>
+          <div class="img-frame on-light mt-8 hidden aspect-[4/5] max-w-xs overflow-hidden lg:block"><img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Stylist dùng máy uốn tạo lọn sóng cho tóc" width="800" height="1000" class="h-full w-full object-cover"></div>
+        </div>
+        <ul class="divide-y divide-velvet/10 lg:col-span-7 lg:col-start-6" data-reveal="up">
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8 first:pt-0"><div><h3 class="font-display text-[1.75rem] leading-tight">Natural Perm</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c3.i1">Uốn lạnh tạo lọn mềm, giữ nếp tự nhiên khi để khô.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d150">Khoảng 150 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c3.p1">từ 1.200.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Digital Perm</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c3.i2">Uốn nóng cho sóng to, rõ nét và bền form lâu hơn.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d180">Khoảng 180 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c3.p2">từ 1.800.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Texture Styling</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c3.i3">Tạo độ phồng và kết cấu tạm thời bằng nhiệt và sản phẩm.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d60">Khoảng 60 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c3.p3">từ 600.000 VNĐ</p></li>
+        </ul>
+      </article>
+
+      <!-- 04 TREATMENT -->
+      <article id="treatment" class="grid gap-10 py-20 lg:grid-cols-12 lg:gap-10 lg:py-28">
+        <ul class="order-2 divide-y divide-velvet/10 lg:order-1 lg:col-span-7" data-reveal="up">
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8 first:pt-0"><div><h3 class="font-display text-[1.75rem] leading-tight">Deep Conditioning</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c4.i1">Ủ dưỡng ẩm chuyên sâu cho tóc khô, xơ và thiếu độ bóng.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d45">Khoảng 45 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c4.p1">từ 500.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Repair Treatment</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c4.i2">Liệu trình hỗ trợ phục hồi tóc đã qua nhuộm, uốn nhiều lần.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d60">Khoảng 60 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c4.p2">từ 800.000 VNĐ</p></li>
+          <li class="grid gap-2 py-7 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 class="font-display text-[1.75rem] leading-tight">Scalp Care</h3><p class="mt-2 text-[15px] leading-relaxed text-velvet/70" data-i18n="sp.c4.i3">Làm sạch sâu và massage da đầu, giúp thư giãn và thông thoáng.</p><p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-mocha" data-i18n="sp.d45">Khoảng 45 phút</p></div><p class="font-semibold sm:text-right" data-i18n="sp.c4.p3">từ 600.000 VNĐ</p></li>
+          <li class="pt-7"><p class="border-l-2 border-gold pl-4 text-sm leading-relaxed text-velvet/70" data-i18n="sp.c4.note">Toàn bộ giá trên trang là giá minh họa, không phải bảng giá đã được xác nhận của một salon thực tế.</p></li>
+        </ul>
+        <div class="order-1 lg:order-2 lg:col-span-4 lg:col-start-9" data-reveal="fade">
+          <span class="font-display text-6xl font-light text-mocha">04</span>
+          <h2 class="mt-4 font-display text-[clamp(2.2rem,3.6vw,3.5rem)] font-light leading-[1.05]" data-i18n="sp.c4.title">Phục hồi tóc</h2>
+          <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-velvet/75" data-i18n="sp.c4.desc">Các liệu trình chăm sóc nhằm hỗ trợ cải thiện độ mềm mượt, độ bóng và khả năng vào nếp của tóc.</p>
+          <div class="img-frame on-light mt-8 hidden aspect-[4/5] max-w-xs overflow-hidden lg:block"><img src="https://images.unsplash.com/photo-1787880172059-1c52decb1ca9?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Bồn gội đầu bằng sứ trắng với vòi mạ crôm" width="800" height="1000" class="h-full w-full object-cover"></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- OUR APPROACH -->
+  <section id="approach" data-section="process-steps" class="bg-velvet text-ivory">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 class="max-w-3xl font-display text-[clamp(2.6rem,5vw,4.75rem)] font-light leading-[1.02]" data-reveal="up" data-i18n="ap.title">Cách chúng tôi <em class="text-gold">làm việc</em></h2>
+      <ol class="mt-16 grid gap-0 border-t border-ivory/15 md:grid-cols-2 lg:mt-20 lg:grid-cols-4" data-reveal-stagger="90">
+        <li class="border-b border-ivory/15 py-10 md:pr-10 lg:border-b-0 lg:border-r lg:pr-8">
+          <span class="font-display text-6xl font-light text-gold">01</span>
+          <h3 class="mt-6 text-sm font-bold uppercase tracking-[0.22em]" data-i18n="ap.1.t">Tư vấn</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-taupe" data-i18n="ap.1.d">Tìm hiểu nhu cầu, phong cách cá nhân và tình trạng tóc.</p>
+        </li>
+        <li class="border-b border-ivory/15 py-10 md:pl-10 lg:border-b-0 lg:border-r lg:px-8">
+          <span class="font-display text-6xl font-light text-gold">02</span>
+          <h3 class="mt-6 text-sm font-bold uppercase tracking-[0.22em]" data-i18n="ap.2.t">Cá nhân hóa</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-taupe" data-i18n="ap.2.d">Đề xuất kiểu tóc, màu sắc và phương pháp thực hiện phù hợp.</p>
+        </li>
+        <li class="border-b border-ivory/15 py-10 md:pr-10 md:border-b-0 lg:border-r lg:px-8">
+          <span class="font-display text-6xl font-light text-gold">03</span>
+          <h3 class="mt-6 text-sm font-bold uppercase tracking-[0.22em]" data-i18n="ap.3.t">Thực hiện</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-taupe" data-i18n="ap.3.d">Stylist thực hiện dịch vụ với sự chú trọng đến kỹ thuật và chi tiết.</p>
+        </li>
+        <li class="py-10 md:pl-10 lg:pl-8">
+          <span class="font-display text-6xl font-light text-gold">04</span>
+          <h3 class="mt-6 text-sm font-bold uppercase tracking-[0.22em]" data-i18n="ap.4.t">Hoàn thiện</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-taupe" data-i18n="ap.4.d">Tạo kiểu cuối cùng và hướng dẫn chăm sóc tóc tại nhà.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PRICING NOTE & CTA -->
+  <section id="cta" data-section="cta-type" class="bg-ivory">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="lg:col-span-3" data-reveal="fade">
+        <p class="border-l-2 border-gold pl-4 text-sm leading-relaxed text-velvet/70" data-i18n="spc.note">Giá dịch vụ có thể thay đổi theo độ dài tóc, chất tóc và độ phức tạp của kỹ thuật.</p>
+      </div>
+      <div class="lg:col-span-8 lg:col-start-5" data-reveal="up">
+        <h2 class="font-display text-[clamp(2.6rem,5.6vw,5.5rem)] font-light leading-[1.02]" data-i18n="spc.title">Hãy cùng tìm ra phong cách <em class="text-mocha">dành riêng cho bạn.</em></h2>
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <button type="button" data-modal-open="book" class="inline-flex h-12 items-center justify-center bg-velvet px-8 text-xs font-bold uppercase tracking-[0.2em] text-ivory transition-colors duration-300 hover:bg-mocha active:scale-[.98]" data-i18n="c.book">Đặt lịch</button>
+          <a href="../index.html" class="group inline-flex h-12 items-center justify-center gap-3 px-2 text-xs font-bold uppercase tracking-[0.2em]"><span class="border-b border-velvet/40 pb-1 transition-colors group-hover:border-velvet" data-i18n="spc.home">Về trang chủ</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="bg-velvet text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid gap-12 border-b border-ivory/10 pb-16 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <a href="../index.html" class="font-display text-3xl tracking-[0.18em]">VELVET <span class="text-[0.6em] tracking-[0.32em] text-gold">HAIR STUDIO</span></a>
+        <p class="mt-6 max-w-sm text-[15px] leading-relaxed text-taupe" data-i18n="f.about">Salon tóc theo đuổi vẻ đẹp hiện đại và cá nhân hóa: tư vấn kỹ, kỹ thuật chuẩn xác và một không gian để bạn thật sự thư giãn.</p>
+      </div>
+      <div class="lg:col-span-2 lg:col-start-6">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.22em] text-gold" data-i18n="f.explore">Khám phá</h2>
+        <ul class="mt-6 space-y-3 text-[15px]">
+          <li><a href="../index.html" class="text-ivory/85 transition-colors duration-300 hover:text-gold" data-i18n="n.home">Trang chủ</a></li>
+          <li><a aria-current="page" href="../pages/services.html" class="text-ivory/85 transition-colors duration-300 hover:text-gold" data-i18n="n.services">Dịch vụ</a></li>
+          <li><a href="../pages/gallery.html" class="text-ivory/85 transition-colors duration-300 hover:text-gold" data-i18n="n.gallery">Bộ sưu tập</a></li>
+          <li><a href="../pages/about.html" class="text-ivory/85 transition-colors duration-300 hover:text-gold" data-i18n="n.about">Về chúng tôi</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.22em] text-gold" data-i18n="f.visit">Ghé thăm</h2>
+        <address class="mt-6 space-y-3 text-[15px] not-italic leading-relaxed text-ivory/85">
+          <p>123 Nguyen Hue, District 1,<br>Ho Chi Minh City</p>
+          <p data-i18n="c.hours">Mở cửa 09:00-20:00 mỗi ngày</p>
+          <p><a href="tel:0900123456" class="transition-colors duration-300 hover:text-gold">0900 123 456</a></p>
+          <p><a href="mailto:hello@velvethair.example" class="break-words transition-colors duration-300 hover:text-gold">hello@velvethair.example</a></p>
+        </address>
+      </div>
+      <div class="lg:col-span-2">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.22em] text-gold" data-i18n="f.follow">Theo dõi</h2>
+        <ul class="mt-6 space-y-3 text-[15px]">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-ivory/85 transition-colors duration-300 hover:text-gold">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="text-ivory/85 transition-colors duration-300 hover:text-gold">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="text-ivory/85 transition-colors duration-300 hover:text-gold">TikTok</a></li>
+        </ul>
+        <p class="mt-4 text-xs leading-relaxed text-taupe" data-i18n="f.socialnote">Liên kết minh họa, chưa gắn tài khoản thật.</p>
+      </div>
+    </div>
+    <p class="select-none py-10 font-display text-[clamp(3rem,13vw,13rem)] font-light leading-[0.85] tracking-[0.04em] text-ivory/[0.07]" aria-hidden="true">VELVET</p>
+    <div class="flex flex-col gap-6 border-t border-ivory/10 py-8 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-sm text-taupe">© 2026 VELVET HAIR STUDIO. <span data-i18n="f.rights">Nội dung và thông tin liên hệ mang tính minh họa.</span></p>
+      <button type="button" data-modal-open="book" class="inline-flex h-11 items-center justify-center border border-gold px-6 text-xs font-bold uppercase tracking-[0.2em] text-gold transition-colors duration-300 hover:bg-gold hover:text-velvet active:scale-[.98]" data-i18n="c.book">Đặt lịch</button>
+    </div>
+  </div>
+</footer>
+
+<dialog id="book" aria-labelledby="book-title">
+  <div class="relative p-8 sm:p-10">
+    <button type="button" data-modal-close class="absolute right-3 top-3 grid h-11 w-11 place-items-center text-2xl text-mocha transition-colors hover:text-velvet" aria-label="Đóng" data-i18n-attr="aria-label:c.close">×</button>
+    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-mocha" data-i18n="b.eyebrow">Đặt lịch tại VELVET</p>
+    <h2 id="book-title" class="mt-4 font-display text-4xl leading-[1.05] sm:text-5xl" data-i18n="b.title">Hẹn một buổi tư vấn</h2>
+    <p class="mt-4 text-[15px] leading-relaxed text-velvet/80" data-i18n="b.text">Gọi hoặc nhắn cho salon để chọn stylist và khung giờ phù hợp. Buổi tư vấn đầu tiên giúp chúng tôi hiểu chất tóc và mong muốn của bạn.</p>
+    <dl class="mt-8 divide-y divide-velvet/10 border-y border-velvet/10 text-[15px]">
+      <div class="flex items-center justify-between gap-4 py-4">
+        <dt class="text-mocha" data-i18n="b.phone">Điện thoại</dt>
+        <dd class="flex items-center gap-3"><a href="tel:0900123456" class="font-semibold">0900 123 456</a><button type="button" data-copy="0900 123 456" class="h-9 border border-velvet/20 px-3 text-xs uppercase tracking-[0.15em] transition-colors hover:border-velvet" data-i18n="b.copy">Sao chép</button></dd>
+      </div>
+      <div class="flex items-center justify-between gap-4 py-4">
+        <dt class="text-mocha" data-i18n="b.hours">Giờ mở cửa</dt>
+        <dd>09:00-20:00</dd>
+      </div>
+      <div class="flex items-center justify-between gap-4 py-4">
+        <dt class="text-mocha">Email</dt>
+        <dd><a href="mailto:hello@velvethair.example" class="break-all">hello@velvethair.example</a></dd>
+      </div>
+    </dl>
+    <p class="mt-6 border-l-2 border-gold pl-4 text-sm leading-relaxed text-velvet/70" data-i18n="b.note">Bản minh họa: website chưa có hệ thống đặt lịch trực tuyến. Thông tin liên hệ trên là dữ liệu mẫu.</p>
+  </div>
+</dialog>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

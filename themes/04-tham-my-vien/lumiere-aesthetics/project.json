@@ -1,0 +1,67 @@
+{
+  "slug": "lumiere-aesthetics",
+  "name": "LUMIÈRE AESTHETICS",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "LUMIÈRE AESTHETICS",
+    "purpose": "Thiết kế website đa trang giới thiệu thẩm mỹ viện LUMIÈRE AESTHETICS, thuộc lĩnh vực thẩm mỹ y khoa cao cấp.",
+    "preset": "auto",
+    "motion": "1",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Phong cách: Luxury Medical Editorial. Sử dụng trắng ngà, champagne, be sáng và nâu nhạt; typography thanh lịch, bố cục thoáng, hình ảnh phòng khám hiện đại và chân dung chuyên gia chuyên nghiệp.\n\nBa trang chính:\n\nTrang chủ: Hero chia đôi hình ảnh và nội dung, giới thiệu định hướng thẩm mỹ, các nhóm dịch vụ nổi bật, thế mạnh chuyên môn và lời mời tư vấn.\n\nDịch vụ thẩm mỹ & Bảng giá: Trình bày các nhóm chăm sóc da, trẻ hóa da, điều trị da và thẩm mỹ không phẫu thuật; mỗi dịch vụ có mô tả, mục đích và giá tham khảo nếu được cung cấp.\n\nVề chúng tôi: Câu chuyện thương hiệu, đội ngũ chuyên gia, cơ sở vật chất, quy trình tư vấn và cam kết an toàn.\n\nCó nút chuyển đổi tiếng Việt – English, toàn bộ nội dung được biên soạn đầy đủ bằng cả hai ngôn ngữ. Nút “Đặt lịch tư vấn / Book a Consultation” mở form nhập họ tên, số điện thoại hoặc email, dịch vụ quan tâm, thời gian mong muốn và ghi chú. Đặt nút ở header, cuối trang và dạng nút nổi trên điện thoại.\n\nĐây là website giới thiệu, không bán hàng, không giỏ hàng, không thanh toán trực tuyến. Tổng thể phải sang trọng, đáng tin cậy, chuẩn ngành thẩm mỹ y khoa, không dùng hiệu ứng phô trương.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "tham-my-vien",
+    "description": "Giới thiệu thẩm mỹ viện",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-20T03:25:10.842Z",
+  "updatedAt": "2026-10-20T07:18:32.735Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\lumiere-aesthetics\\web",
+    "builtAt": "2026-10-20T07:18:18.049Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "e1be29e3-a091-405a-9cee-65c575c6b937",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\lumiere-aesthetics\\web",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-20T07:18:28.696Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 9
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "brand": "FADE DISTRICT",
+  "language": "vi",
+  "preset": "bold",
+  "motionLevel": 2,
+  "visualIdea": "Poster dán tường phố: băng dán cam neon cắt ngang section, viền đen 3px, tem số hiệu DISTRICT 00X và số thứ tự khổng lồ chạy xuyên mọi trang",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Barber studio cho thế hệ streetwear",
+    "description": "Giao diện barber studio phong cách streetwear, neo-brutalism với ảnh đường phố và bảng giá dịch vụ."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Tạo ấn tượng thương hiệu, giới thiệu tinh thần, 4 kiểu tóc chủ lực, xem trước gallery và đội ngũ, dẫn sang đặt lịch",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ba", "note": "FRESH FADE. NO RULES. + ảnh chồng lên khối cam" },
+        { "id": "street-banner", "catalog": "cta", "variant": "marquee-band", "source": "ba", "note": "Dải cam chạy ngang STAY FRESH" },
+        { "id": "attitude", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Ảnh 58% + 3 tuyên ngôn số lớn, nền xám bê tông" },
+        { "id": "styles", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "4 kiểu tóc, Skin Fade ảnh lớn, link sang services" },
+        { "id": "lookbook", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "6 ảnh xem trước, link sang gallery" },
+        { "id": "crew", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "3 barber dạng poster, link sang district" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "YOUR STYLE. YOUR DISTRICT. nền cam" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "streetwear man fade portrait", "file": "https://images.unsplash.com/photo-1599834562135-b6fc90e642ca?w=1600&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "attitude", "query": "tattooed barber razor", "file": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1600&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "styles-skin-fade", "query": "skin fade haircut", "file": "https://images.unsplash.com/photo-1568339434343-2a640a1a9946?w=1200&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "styles-textured-crop", "query": "textured crop haircut", "file": "https://images.unsplash.com/photo-1673118306590-0a82988ba2c3?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "styles-buzz-cut", "query": "buzz cut man", "file": "https://images.unsplash.com/photo-1644199161554-f9e84cd64b7b?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "styles-mullet", "query": "mullet haircut", "file": "https://images.unsplash.com/photo-1785970151269-1c77b401afb6?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "lookbook (xem trước — dùng lại 6 ảnh của gallery)", "query": "gallery preview", "file": "https://images.unsplash.com/photo-1629189784191-9afdcbcb0398?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "crew-minh-khoa", "query": "barber holding scissors", "file": "https://images.unsplash.com/photo-1553521041-d168abd31de3?w=900&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "crew-jay-nguyen", "query": "barber portrait black tee", "file": "https://images.unsplash.com/photo-1598524374912-6b0b0bab43dd?w=900&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "crew-alex-tran", "query": "young man portrait", "file": "https://images.unsplash.com/photo-1673118306669-ba0aa4189636?w=900&q=70&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ & Bảng giá",
+      "purpose": "Menu 6 dịch vụ với thời lượng, giá tham khảo; 3 hướng phong cách dẫn sang gallery; CTA đặt lịch minh họa",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "THE CUT MENU" },
+        { "id": "menu", "catalog": "pricing", "variant": "features-numbered", "source": "ba", "note": "6 dịch vụ, 2 cột desktop" },
+        { "id": "find-cut", "catalog": "features", "variant": "gallery-filmstrip", "source": "ba", "note": "3 hướng phong cách, link gallery theo bộ lọc" },
+        { "id": "booking", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Nút đặt lịch hiện thông báo minh họa" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "barber trimmer action", "file": "https://images.unsplash.com/photo-1788328155052-e02abe9ba983?w=1400&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "menu-side", "query": "barber styling comb", "file": "https://images.unsplash.com/photo-1761931403667-a6753db21f32?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "find-cut-clean", "query": "clean short haircut man", "file": "https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "find-cut-bold", "query": "textured hair young man", "file": "https://images.unsplash.com/photo-1578390432942-d323db577792?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "find-cut-sharp", "query": "sharp fade profile", "file": "https://images.unsplash.com/photo-1630827020718-3433092696e7?w=1000&q=70&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/gallery.html",
+      "title": "Thư viện kiểu tóc",
+      "purpose": "Lookbook 12 ảnh có bộ lọc thật theo kiểu tóc, lightbox; 3 bộ sưu tập lọc nhanh",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "REAL CUTS. REAL PEOPLE." },
+        { "id": "lookbook", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "6 bộ lọc, 12 ảnh, lightbox" },
+        { "id": "looks", "catalog": "collections", "variant": "teaser-row", "source": "ba", "note": "3 bộ sưu tập, nút lọc gallery" },
+        { "id": "gallery-cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Kết trang dẫn đặt lịch" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "man concrete wall portrait", "file": "https://images.unsplash.com/photo-1558954066-620ba460bae2?w=1600&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-fade-1", "query": "fade haircut", "file": "https://images.unsplash.com/photo-1629189784191-9afdcbcb0398?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-fade-2", "query": "fade haircut", "file": "https://images.unsplash.com/photo-1764592358977-a181a6e71af4?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-fade-3", "query": "fade portrait bw", "file": "https://images.unsplash.com/photo-1768742466927-42153b867e8b?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-fade-action", "query": "barber gloves cutting", "file": "https://images.unsplash.com/photo-1783908688260-0c47404926f3?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-textured-1", "query": "textured hair hoodie", "file": "https://images.unsplash.com/photo-1673118306786-317c5a6531bc?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-textured-2", "query": "textured crop glasses", "file": "https://images.unsplash.com/photo-1686543972602-da0c7ea61ce2?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-buzz-1", "query": "shaved head street", "file": "https://images.unsplash.com/photo-1724022057448-15024eaf2341?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-buzz-2", "query": "buzz cut dark portrait", "file": "https://images.unsplash.com/photo-1704572636607-78b65b21b165?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-mullet-1", "query": "mullet blue hair", "file": "https://images.unsplash.com/photo-1785970151283-e5484bdbc5d7?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-mullet-2", "query": "mullet moustache", "file": "https://images.unsplash.com/photo-1700585560130-84a0a58e420f?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-beard-1", "query": "beard scissors bw", "file": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "g-beard-2", "query": "barber trimming beard", "file": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-clean-fade", "query": "barber cutting close up", "file": "https://images.unsplash.com/photo-1635273051839-003bf06a8751?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-texture-culture", "query": "thinning shears comb", "file": "https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "look-no-rules", "query": "braided hair graffiti", "file": "https://images.unsplash.com/photo-1790802924762-19b41482a04b?w=1000&q=70&auto=format&fit=crop", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/district.html",
+      "title": "Về FADE DISTRICT",
+      "purpose": "Câu chuyện thương hiệu, đội ngũ, không gian studio và thông tin ghé thăm (dữ liệu mẫu)",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "BUILT FOR THE BOLD." },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "MORE THAN A BARBER SHOP" },
+        { "id": "crew", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "3 barber dạng editorial portrait" },
+        { "id": "studio", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "6 ảnh studio, lightbox" },
+        { "id": "visit", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Địa chỉ / SĐT / email / giờ mẫu, đánh dấu dữ liệu mẫu" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "barbers modern salon", "file": "https://images.unsplash.com/photo-1759134198561-e2041049419c?w=1600&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "story", "query": "barber cutting scissors", "file": "https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=1200&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "crew (dùng lại chân dung 3 barber của trang chủ — cùng người)", "query": "barber portrait", "file": "https://images.unsplash.com/photo-1553521041-d168abd31de3?w=900&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-mirrors", "query": "barbershop chairs mirrors", "file": "https://images.unsplash.com/photo-1781455793310-8427c96454c7?w=1400&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-clippers", "query": "hair clippers shelf", "file": "https://images.unsplash.com/photo-1792792899240-208d73a64449?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-tools", "query": "barber tools slate", "file": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-waiting", "query": "barbershop couch", "file": "https://images.unsplash.com/photo-1781925856343-c97d0d44f94c?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-chairs", "query": "barber chairs chrome", "file": "https://images.unsplash.com/photo-1792735207211-a96ca7e6ea77?w=1000&q=70&auto=format&fit=crop", "status": "link" },
+        { "slot": "studio-wall", "query": "barber chair brick wall", "file": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1000&q=70&auto=format&fit=crop", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Dựng đúng 4 trang theo chú thích của BA (Home / Services / Style Gallery / The District), không thêm trang chi tiết.",
+    "Có bộ chuyển VI / EN theo chú thích BA (ghi đè mục 'không tạo bộ chuyển ngôn ngữ' của concept.md): mặc định tiếng Việt, lang=vi; tiếng Anh lưu trong data-en, chuyển tại chỗ, nhớ bằng localStorage.",
+    "Màu theo bảng BA (#FF5A1F, #171717, #B8B8B3, #F4F2EC, #D9FF3F) thay bảng preset, giữ tên vai trò của preset (signal, ink, paper, acid) + concrete.",
+    "Tiêu đề dùng Barlow Condensed (condensed, đủ dấu tiếng Việt) theo yêu cầu 'sans-serif condensed' của BA; thân Bricolage Grotesque (preset); số kỹ thuật JetBrains Mono. Bỏ Playfair Display của preset.",
+    "Công cụ ảnh (openverse) quá thời gian chờ → toàn bộ ảnh dùng link Unsplash đã kiểm qua link_image.",
+    "Phần xem trước gallery ở trang chủ dùng lại 6 ảnh của trang Gallery; chân dung 3 barber dùng chung trang chủ và District (cùng người).",
+    "Dấu gạch dài trong dải chạy chữ thay bằng dấu + (yếu tố đồ họa BA cho phép)."
+  ],
+  "limitations": [
+    "Nút BOOK A VISIT chỉ hiện thông báo minh họa, không có form, không thu thập / gửi dữ liệu.",
+    "Địa chỉ, số điện thoại, email, giờ mở cửa, mạng xã hội là dữ liệu mẫu, đã đánh dấu trên trang.",
+    "Giá và thời lượng dịch vụ chỉ mang tính minh họa.",
+    "Ảnh dùng link ngoài Unsplash, cần mạng để hiển thị; nên thay bằng ảnh thật của studio."
+  ]
+}

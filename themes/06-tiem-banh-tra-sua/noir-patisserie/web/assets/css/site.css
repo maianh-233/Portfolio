@@ -1,0 +1,61 @@
+:root {
+  --ink: #171615;
+  --stone: #24211E;
+  --paper: #F2EEE6;
+  --bronze: #C4A574;
+  --muted: #B7AEA2;
+  --ui-accent: #C4A574;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+}
+
+/* Cormorant sets small on the line: give display type a touch more weight */
+.font-display { font-weight: 500; }
+
+/* Vietnamese stacks accents above and below: open up the tight display leading */
+html[lang="vi"] h1,
+html[lang="vi"] h2,
+html[lang="vi"] blockquote { line-height: 1.12; }
+html[lang="vi"] h1 em,
+html[lang="vi"] h2 em { line-height: 1.2; }
+
+/* EN / VI switch */
+[data-lang-switch] [aria-pressed="true"] { color: var(--bronze); }
+
+html { background: var(--ink); scroll-behavior: smooth; }
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--bronze); color: var(--ink); }
+
+/* Magazine drop cap for long-form story text */
+.dropcap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 5.2em;
+  line-height: .82;
+  padding: .06em .12em 0 0;
+  color: var(--bronze);
+}
+
+/* Horizontal salon strip: hide scrollbar but keep scroll */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Header after scrolling */
+header#top.is-scrolled { background: rgba(23, 22, 21, .98); }
+
+/* Visible keyboard focus on dark backgrounds */
+a:focus-visible, button:focus-visible {
+  outline: 1px solid var(--bronze);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0s !important; }
+}

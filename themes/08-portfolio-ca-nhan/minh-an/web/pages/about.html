@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Về Minh An — Minh An</title>
+<meta name="description" content="Minh An, kiến trúc sư chủ trì FORM / SPACE tại Hội An: tiểu sử, triết lý kiến trúc hữu cơ và quy trình thiết kế từ địa hình đến không gian.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-cream font-sans text-ink">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-ink/10 bg-cream/95 backdrop-blur-sm transition-shadow duration-300">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="group flex items-baseline gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-4 focus-visible:ring-offset-cream" aria-label="Minh An, về trang chủ">
+      <span class="font-display text-2xl leading-none tracking-tight text-ink">Minh An</span>
+      <span class="hidden text-[13px] font-medium tracking-[0.16em] text-olive sm:inline">FORM / SPACE</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Điều hướng chính">
+      <a href="../pages/works.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Công trình</a>
+      <a href="../pages/materials.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Vật liệu</a>
+      <a aria-current="page" href="../pages/about.html" class="relative py-2 text-[15px] font-medium text-ink/80 transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-clay after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ink aria-[current=page]:after:scale-x-100">Về Minh An</a>
+      <a href="../pages/contact.html" class="inline-flex h-11 items-center rounded-full bg-olive px-6 text-[15px] font-medium text-cream transition-all duration-300 hover:bg-olive-dark active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2 focus-visible:ring-offset-cream aria-[current=page]:bg-ink">Liên hệ</a>
+    </nav>
+
+    <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors duration-300 hover:bg-ink/5 lg:hidden" aria-label="Mở menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h11"/></svg>
+    </button>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-cream p-8 shadow-2xl shadow-ink/20 lg:hidden">
+    <nav class="flex flex-col" aria-label="Điều hướng trên điện thoại">
+      <a href="../index.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Trang chủ</a>
+      <a href="../pages/works.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Công trình</a>
+      <a href="../pages/materials.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Vật liệu</a>
+      <a aria-current="page" href="../pages/about.html" class="border-b border-ink/10 py-4 font-display text-3xl text-ink aria-[current=page]:text-clay">Về Minh An</a>
+      <a href="../pages/contact.html" class="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-olive px-6 text-base font-medium text-cream">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+<!-- /@partial header -->
+
+<main>
+  <section id="page-hero" data-section="page-hero" class="bg-cream pb-12 pt-20 lg:pb-16 lg:pt-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 2xl:px-16">
+      <h1 data-split="words" class="pb-2 font-display text-[clamp(3.25rem,9vw,9rem)] leading-[0.98] tracking-tight lg:col-span-8">Về Minh <em class="text-clay">An</em></h1>
+      <p class="max-w-md text-lg leading-relaxed text-ink/75 lg:col-span-4" data-reveal="up">Kiến trúc sư, người thích ở ngoài khu đất hơn ngồi trước bản vẽ.</p>
+    </div>
+  </section>
+
+  <section id="chan-dung" data-section="story-letter" class="bg-cream pb-24 lg:pb-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <figure class="lg:col-span-6">
+        <div data-reveal="clip" class="aspect-[4/3] overflow-hidden rounded-[2rem] rounded-tr-[10rem] bg-cream-deep">
+          <img src="../assets/img/about-model.jpg" alt="Mô hình kiến trúc một ngôi nhà nằm giữa rừng cây, có hồ bơi và sân rộng" class="img-warm h-full w-full object-cover object-right" width="1024" height="640" loading="lazy">
+        </div>
+        <figcaption class="mt-4 text-sm text-ink/60">Mô hình nghiên cứu khối nhà trong cảnh quan. Ảnh minh họa.</figcaption>
+      </figure>
+
+      <div class="lg:col-span-5 lg:col-start-8 lg:pt-16">
+        <div class="max-w-prose space-y-5 text-[17px] leading-[1.8] text-ink/80" data-reveal="up">
+          <p class="dropcap">Tôi lớn lên ở Huế, trong một ngôi nhà rường có khoảng sân trước trồng ngâu. Có lẽ vì vậy, tôi luôn nghĩ về một ngôi nhà bắt đầu từ khoảng trống ở giữa nó.</p>
+          <p>Sau khi tốt nghiệp Đại học Kiến trúc TP. Hồ Chí Minh, tôi làm việc bốn năm tại một văn phòng nhỏ ở Kyoto, nơi học được cách đặt một bức tường sao cho bóng của nó đẹp vào buổi chiều.</p>
+          <p>Năm 2016, tôi mở FORM / SPACE tại Hội An. Studio có năm người, mỗi năm chỉ nhận vài dự án để có thể ở lại khu đất đủ lâu.</p>
+        </div>
+        <div class="mt-10 border-t border-ink/10 pt-6">
+          <p class="font-display text-2xl italic text-olive">Minh An</p>
+          <p class="mt-1 text-sm text-ink/60">Kiến trúc sư chủ trì FORM / SPACE, Hội An</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="triet-ly" data-section="features-tabs" class="bg-cream-deep py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-split="words" class="max-w-[16ch] pb-1 font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl 2xl:text-7xl">Triết lý <em class="text-clay">thiết kế</em></h2>
+
+      <div data-tabs class="mt-14 grid gap-10 lg:grid-cols-12">
+        <div class="relative flex gap-2 overflow-x-auto no-scrollbar lg:col-span-3 lg:flex-col lg:gap-1" role="tablist">
+          <button type="button" data-tab="thien-nhien" class="shrink-0 rounded-full px-5 py-3 text-left font-display text-xl text-ink/60 transition-colors duration-300 hover:text-ink lg:text-2xl [&.is-active]:bg-olive [&.is-active]:text-cream">Thiên nhiên</button>
+          <button type="button" data-tab="vat-lieu" class="shrink-0 rounded-full px-5 py-3 text-left font-display text-xl text-ink/60 transition-colors duration-300 hover:text-ink lg:text-2xl [&.is-active]:bg-olive [&.is-active]:text-cream">Vật liệu</button>
+          <button type="button" data-tab="anh-sang" class="shrink-0 rounded-full px-5 py-3 text-left font-display text-xl text-ink/60 transition-colors duration-300 hover:text-ink lg:text-2xl [&.is-active]:bg-olive [&.is-active]:text-cream">Ánh sáng</button>
+        </div>
+
+        <div class="lg:col-span-8 lg:col-start-5">
+          <div data-tab-panel="thien-nhien" class="grid gap-10 md:grid-cols-12">
+            <p class="font-display text-2xl leading-snug sm:text-3xl md:col-span-12">Công trình là một phần của cảnh quan, không phải vật đặt lên cảnh quan. Cây cũ được giữ lại, dòng nước được để chảy theo đường của nó.</p>
+            <div class="md:col-span-6"><h3 class="font-semibold">Giữ nguyên địa hình</h3><p class="mt-2 text-[16px] leading-relaxed text-ink/75">Hạn chế san lấp. Nhà bậc theo đồng mức thay vì một mặt bằng phẳng.</p></div>
+            <div class="md:col-span-6"><h3 class="font-semibold">Con người ở giữa thiên nhiên</h3><p class="mt-2 text-[16px] leading-relaxed text-ink/75">Mỗi phòng có ít nhất một cửa nhìn ra cây xanh hoặc bầu trời.</p></div>
+          </div>
+          <div data-tab-panel="vat-lieu" class="grid gap-10 md:grid-cols-12">
+            <p class="font-display text-2xl leading-snug sm:text-3xl md:col-span-12">Vật liệu tốt nhất thường đã nằm sẵn ở khu đất: đất đào móng, đá nhặt quanh suối, gỗ từ nhà cũ được tháo dỡ.</p>
+            <div class="md:col-span-6"><h3 class="font-semibold">Trong bán kính 50 km</h3><p class="mt-2 text-[16px] leading-relaxed text-ink/75">Ưu tiên vật liệu và thợ địa phương, giảm vận chuyển và giữ nghề truyền thống.</p></div>
+            <div class="md:col-span-6"><h3 class="font-semibold">Để vật liệu già đi</h3><p class="mt-2 text-[16px] leading-relaxed text-ink/75">Không sơn phủ kín. Gỗ sẫm dần, đá lên rêu, đất có vết tay thợ.</p></div>
+          </div>
+          <div data-tab-panel="anh-sang" class="grid gap-10 md:grid-cols-12">
+            <p class="font-display text-2xl leading-snug sm:text-3xl md:col-span-12">Ánh sáng tự nhiên là vật liệu xây dựng thứ năm. Tường cong được đặt để hứng và dẫn ánh sáng đi sâu vào nhà.</p>
+            <div class="md:col-span-6"><h3 class="font-semibold">Vẽ theo đường nắng</h3><p class="mt-2 text-[16px] leading-relaxed text-ink/75">Mô phỏng bóng đổ theo từng mùa trước khi chốt vị trí cửa sổ.</p></div>
+            <div class="md:col-span-6"><h3 class="font-semibold">Bóng tối cũng cần thiết</h3><p class="mt-2 text-[16px] leading-relaxed text-ink/75">Hiên sâu, khe sáng hẹp để giữ mát và tạo nhịp sáng tối trong nhà.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quy-trinh" data-section="timeline" class="relative bg-cream py-24 lg:py-36" data-particles="dust" data-particles-color="#B96F50" data-particles-density="0.4">
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-split="words" class="pb-1 font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl 2xl:text-6xl">Quy trình <em class="text-clay">thiết kế</em></h2>
+          <div data-reveal="clip" class="mt-10 aspect-[4/3] overflow-hidden rounded-pebble bg-cream-deep">
+            <img src="../assets/img/process-site-hills.webp" alt="Sườn đồi ruộng bậc thang chìm trong sương, nơi khảo sát địa hình" class="img-warm h-full w-full object-cover" width="3264" height="2448" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <ol class="relative border-l border-ink/15 pl-8 lg:col-span-6 lg:col-start-7 lg:pl-12">
+        <li class="relative pb-16" data-reveal="up">
+          <span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-clay bg-cream lg:-left-[57px]" aria-hidden="true"></span>
+          <p class="text-sm text-ink/60">4 đến 6 tuần</p>
+          <h3 class="mt-2 font-display text-3xl tracking-tight">Khảo sát địa hình</h3>
+          <p class="mt-3 max-w-prose text-[17px] leading-[1.8] text-ink/80">Ở lại khu đất qua nhiều thời điểm trong ngày. Đo cao độ, ghi hướng nắng, hướng gió, đường thoát nước mưa. Lấy mẫu đất và đá để thử nghiệm làm tường.</p>
+        </li>
+        <li class="relative pb-16" data-reveal="up">
+          <span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-clay bg-cream lg:-left-[57px]" aria-hidden="true"></span>
+          <p class="text-sm text-ink/60">6 đến 8 tuần</p>
+          <h3 class="mt-2 font-display text-3xl tracking-tight">Phát triển ý tưởng</h3>
+          <p class="mt-3 max-w-prose text-[17px] leading-[1.8] text-ink/80">Phác thảo tay và nặn mô hình đất sét trên mô hình địa hình. Chủ nhà được mời cùng thử nhiều phương án đặt khối nhà, trước khi chọn một hướng đi.</p>
+        </li>
+        <li class="relative" data-reveal="up">
+          <span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-clay bg-cream lg:-left-[57px]" aria-hidden="true"></span>
+          <p class="text-sm text-ink/60">10 đến 14 tuần</p>
+          <h3 class="mt-2 font-display text-3xl tracking-tight">Thiết kế không gian</h3>
+          <p class="mt-3 max-w-prose text-[17px] leading-[1.8] text-ink/80">Hoàn thiện mặt bằng theo đường đi của ánh sáng, chi tiết hóa vật liệu cùng thợ địa phương và theo dõi thi công tại công trường.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="cta" data-section="cta-type" class="bg-olive py-24 text-cream lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-split="words" class="max-w-[17ch] pb-2 font-display text-[clamp(2.5rem,6vw,6rem)] leading-[1.04] tracking-tight">Bắt đầu bằng một buổi <em class="text-clay-light">đi bộ</em> trên khu đất.</h2>
+      <a href="contact.html" class="group mt-10 inline-flex h-14 items-center gap-3 rounded-full bg-cream px-8 text-base font-semibold text-olive transition-all duration-300 hover:bg-clay hover:text-cream active:scale-[.98] lg:ml-[38%]" data-reveal="up">
+        Liên hệ hợp tác
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- @partial footer -->
+<footer id="footer" data-section="footer-big" class="relative overflow-hidden bg-ink text-cream">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="max-w-sm font-display text-2xl leading-snug text-cream/90 lg:text-3xl">Kiến trúc bắt đầu từ việc lắng nghe <em class="text-clay-light">mảnh đất</em>.</p>
+        <a href="mailto:studio@formspace.vn" class="mt-8 inline-flex h-12 items-center gap-3 rounded-full border border-cream/25 px-6 text-[15px] font-medium text-cream transition-colors duration-300 hover:border-clay hover:bg-clay focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream">
+          Gửi email
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="md:col-span-3 md:col-start-7">
+        <p class="text-sm font-medium text-cream/50">Trang</p>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li><a href="../index.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Trang chủ</a></li>
+          <li><a href="../pages/works.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Công trình</a></li>
+          <li><a href="../pages/materials.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Vật liệu</a></li>
+          <li><a aria-current="page" href="../pages/about.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Về Minh An</a></li>
+          <li><a href="../pages/contact.html" class="text-cream/85 transition-colors duration-300 hover:text-clay-light">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <p class="text-sm font-medium text-cream/50">Studio</p>
+        <ul class="mt-4 space-y-3 text-[15px] text-cream/85">
+          <li><a href="mailto:studio@formspace.vn" class="transition-colors duration-300 hover:text-clay-light">studio@formspace.vn</a></li>
+          <li><a href="tel:+84905418273" class="transition-colors duration-300 hover:text-clay-light">+84 905 418 273</a></li>
+          <li>42 Nguyễn Phúc Chu, Hội An, Quảng Nam</li>
+          <li>Thứ Hai đến Thứ Sáu, 8:30 - 17:30</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mt-20 select-none font-display text-[clamp(4.5rem,19vw,19rem)] leading-[0.82] tracking-tight text-cream/[0.07]" aria-hidden="true">Minh An</p>
+
+    <div class="flex flex-col gap-2 border-t border-cream/10 py-6 text-[13px] text-cream/55 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 Minh An · FORM / SPACE. Các dự án trên website là nội dung minh họa.</p>
+      <a href="#top" class="transition-colors duration-300 hover:text-cream">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

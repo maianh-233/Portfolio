@@ -1,0 +1,98 @@
+{
+  "brand": "MATCHA ATELIER",
+  "language": "en",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Khung giấy washi: mỗi ảnh như một bản in đặt trên giấy, có đường kẻ mực mảnh lệch trục phía sau; bố cục lệch trục, khoảng trắng rộng, một vòng ensō mảnh trôi nhẹ làm dấu ấn xuyên các trang",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Một tách matcha, một khoảnh khắc lặng",
+    "description": "Giao diện thương hiệu trà matcha và bánh Nhật theo tinh thần tối giản."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu thương hiệu trong một khoảnh khắc lặng, dẫn sang Menu và About, cho biết địa chỉ / giờ mở cửa",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Headline Find Your Quiet Moment theo chú thích BA; tách matcha + wagashi, bố cục lệch trục, ảnh tràn mép phải" },
+        { "id": "ritual", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Đoạn ngắn về nghi thức đánh trà, link sang pages/about.html" },
+        { "id": "signatures", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "3 món nổi bật + lightbox, link sang pages/menu.html" },
+        { "id": "principles", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "4 nguyên tắc: nguyên liệu, đánh trà, bánh mỗi sáng, gốm thủ công" },
+        { "id": "quote", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "Trích dẫn The Book of Tea (Okakura), nền matcha đậm, data-particles dust" },
+        { "id": "visit", "catalog": "contact", "variant": "contact-split", "source": "ai", "note": "Địa chỉ, giờ mở cửa, gọi / email / sao chép địa chỉ, bản đồ; không có form" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "matcha chawan wagashi teahouse", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Matcha_chawan_and_wagashi_at_teahouse_in_Japanese_garden.jpg/1920px-Matcha_chawan_and_wagashi_at_teahouse_in_Japanese_garden.jpg", "status": "link" },
+        { "slot": "ritual", "query": "matcha whisk chasen bowl", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Whisk_macca_tea.jpg/1280px-Whisk_macca_tea.jpg", "status": "link" },
+        { "slot": "signatures-latte", "query": "matcha latte art", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Matcha_tea_latte_with_rosetta_latte_art.jpg/1280px-Matcha_tea_latte_with_rosetta_latte_art.jpg", "status": "link" },
+        { "slot": "signatures-wagashi", "query": "green wagashi", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Green_Wagashi_01.jpg/1280px-Green_Wagashi_01.jpg", "status": "link" },
+        { "slot": "signatures-crepe", "query": "matcha mille crepe", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Matcha_Mille_Crepe_with_Ice_Cream.jpg/1280px-Matcha_Mille_Crepe_with_Ice_Cream.jpg", "status": "link" },
+        { "slot": "principles", "query": "karatsu tea bowl ceramic", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Iwao_Karatsu-ware_tea_bowl.jpg/1280px-Iwao_Karatsu-ware_tea_bowl.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/menu.html",
+      "title": "Menu",
+      "purpose": "Thực đơn theo 5 nhóm BA yêu cầu (matcha latte, trà nguyên bản, bánh matcha, mochi, bánh dùng kèm trà); mỗi món có ảnh, mô tả hương vị và nguyên liệu nổi bật",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Tiêu đề lớn + mục lục 5 nhóm món (không ảnh)" },
+        { "id": "menu", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "data-tabs 5 nhóm, 15 món, mỗi món: ảnh, giá, hương vị, nguyên liệu" },
+        { "id": "notes", "catalog": "faq", "variant": "faq", "source": "ai", "note": "Accordion: đổi sữa, caffeine, độ ngọt, dị ứng" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Find us dẫn về index.html#visit" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "ceremonial matcha powder", "file": null, "status": "none" },
+        { "slot": "latte-sea-salt", "query": "matcha latte sea salt cream", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Matcha_Latte_with_Seasalt_Cream.jpg/1280px-Matcha_Latte_with_Seasalt_Cream.jpg", "status": "link" },
+        { "slot": "latte-hojicha", "query": "iced hojicha latte", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Iced_Hojicha_Latte_and_Iced_Matcha_Latte_-_Rawlab_Juice_%26_Tea_2025-07-12.jpg/1280px-Iced_Hojicha_Latte_and_Iced_Matcha_Latte_-_Rawlab_Juice_%26_Tea_2025-07-12.jpg", "status": "link" },
+        { "slot": "latte-iced", "query": "iced matcha latte glass", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Matcha_latte_in_tall_glass.jpg/1280px-Matcha_latte_in_tall_glass.jpg", "status": "link" },
+        { "slot": "tea-usucha", "query": "cup of matcha", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Secangkir_Matcha.jpg/1280px-Secangkir_Matcha.jpg", "status": "link" },
+        { "slot": "tea-koicha", "query": "matcha with wagashi kyoto", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Matcha_with_wagashi_by_rhosoi_in_Kyoto.jpg/1280px-Matcha_with_wagashi_by_rhosoi_in_Kyoto.jpg", "status": "link" },
+        { "slot": "tea-house-set", "query": "matcha tray kyoto", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Maccha_o_Kinkaku-ji_yn_Kyoto.JPG/1280px-Maccha_o_Kinkaku-ji_yn_Kyoto.JPG", "status": "link" },
+        { "slot": "cake-cheesecake", "query": "matcha cheesecake", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Matcha_Cheese_Cake.jpg/1280px-Matcha_Cheese_Cake.jpg", "status": "link" },
+        { "slot": "cake-tiramisu", "query": "matcha tiramisu", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Matcha_Tiramisu_Cake.jpg/1280px-Matcha_Tiramisu_Cake.jpg", "status": "link" },
+        { "slot": "cake-azuki-layer", "query": "red bean matcha cake", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Red_Bean_Matcha_Layer_Cake.jpg/1280px-Red_Bean_Matcha_Layer_Cake.jpg", "status": "link" },
+        { "slot": "mochi-azuki", "query": "azuki mochi matcha", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Maccha_tea_azuki_bean_paste_mochi.jpg/1280px-Maccha_tea_azuki_bean_paste_mochi.jpg", "status": "link" },
+        { "slot": "mochi-daifuku", "query": "green wagashi mochi", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Green_Wagashi_03.jpg/1280px-Green_Wagashi_03.jpg", "status": "link" },
+        { "slot": "mochi-yomogi", "query": "green mochi", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Green_Wagashi_04.jpg/1280px-Green_Wagashi_04.jpg", "status": "link" },
+        { "slot": "pairing-matsukaze", "query": "matsukaze kyoto sweet", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Matsukaze.jpg/1280px-Matsukaze.jpg", "status": "link" },
+        { "slot": "pairing-minazuki", "query": "minazuki wagashi", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Minaduki_001.jpg/1280px-Minaduki_001.jpg", "status": "link" },
+        { "slot": "pairing-afternoon", "query": "japanese cake green tea", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Japanese_cake_and_green_tea.jpg/1280px-Japanese_cake_and_green_tea.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Theo chú thích BA: cảm hứng trà đạo, cách chọn nguyên liệu, sự cân bằng hương vị, triết lý sống chậm",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Slow, on purpose + ảnh cối đá xay tencha" },
+        { "id": "inspiration", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Cảm hứng trà đạo, drop cap, trích dẫn Ichigo ichie" },
+        { "id": "sourcing", "catalog": "features", "variant": "features-alternate", "source": "ba", "note": "Cách chọn nguyên liệu: nguồn gốc, che nắng, độ tươi" },
+        { "id": "balance", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Cân bằng umami / ngọt / đắng" },
+        { "id": "slow-living", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ba", "note": "Triết lý sống chậm: 4 thẻ chữ kéo ngang (data-drag-scroll), không ảnh vì hết lượt kiểm link" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Find us dẫn về index.html#visit" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "tencha stone mill uji", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Tencha_on_traditional_stone_mill_in_Uji_Japan.jpg/1280px-Tencha_on_traditional_stone_mill_in_Uji_Japan.jpg", "status": "link" },
+        { "slot": "inspiration", "query": "bamboo chasen koicha", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bamboo_chasen_to_whisk_koicha_%2815455038443%29.jpg/1280px-Bamboo_chasen_to_whisk_koicha_%2815455038443%29.jpg", "status": "link" },
+        { "slot": "sourcing", "query": "uji tea plantation", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/%E5%AE%87%E6%B2%BB%E7%99%BD%E5%B7%9D%E3%81%AE%E8%8C%B6%E7%95%91_01.jpg/1280px-%E5%AE%87%E6%B2%BB%E7%99%BD%E5%B7%9D%E3%81%AE%E8%8C%B6%E7%95%91_01.jpg", "status": "link" },
+        { "slot": "balance", "query": "making wagashi hands", "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Making_of_azalea_wagashi_by_Noriko_Jazayeri_%281%29_2025-05-18.jpg/1280px-Making_of_azalea_wagashi_by_Noriko_Jazayeri_%281%29_2025-05-18.jpg", "status": "link" },
+        { "slot": "slow-living", "query": "handmade ceramic tea bowl, japanese tea room", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng 3 trang (Home, Menu, About) theo chú thích BA \"tối đa 3 trang\"; liên hệ / giờ mở cửa đặt ở section #visit của trang chủ và footer mọi trang",
+    "concept.md mục 2 ghi \"không tạo bộ chuyển ngôn ngữ\" nhưng chú thích BA (ưu tiên cao hơn) yêu cầu website song ngữ Việt - Anh và nút chuyển đổi (dòng cuối \"chuyển đổi ảnh việt\" hiểu là chuyển Anh - Việt): HTML mặc định tiếng Anh, lang=\"en\"; nút EN / VI trên header đổi chữ sang tiếng Việt bằng thuộc tính data-vi (site.js), lưu lựa chọn trong localStorage",
+    "Màu theo art direction của BA (#65764B, #F5F1E7, #242821, #B7C2A0) thay cho bảng màu preset nature; thêm matcha-deep #4B5937 cho chữ nhỏ / nút để đạt tương phản AA",
+    "Không có form, giỏ hàng, đặt hàng hay thanh toán theo chú thích BA; hành động chính là xem thực đơn và ghé quán (gọi điện, email, sao chép địa chỉ, bản đồ)",
+    "Chuyển trang mượt: main hiện mờ dần khi vào trang, mờ đi khi bấm link nội bộ (site.css + site.js), tắt khi prefers-reduced-motion",
+    "Ảnh: search_images (openverse) bị quá thời gian / trả ảnh lạc đề nên dùng ảnh thật Wikimedia Commons qua link_image; hết hạn mức 40 link nên hero trang Menu dùng mục lục chữ và section slow-living trang About dùng thẻ chữ thay vì ảnh"
+  ],
+  "limitations": [
+    "Địa chỉ, số điện thoại, email, giá và tên người sáng lập là nội dung mẫu, cần khách xác nhận",
+    "Bản dịch tiếng Việt nằm trong thuộc tính data-vi và chỉ hiện sau khi bấm nút VI (cần JavaScript)",
+    "Ảnh dùng link ngoài Wikimedia Commons (cần mạng); nên thay bằng ảnh chụp thật của quán",
+    "Bản đồ Google Maps nhúng bằng iframe, cần mạng và không hiển thị khi mở offline"
+  ]
+}

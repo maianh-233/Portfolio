@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="About — AZURE HAVEN">Giới thiệu — AZURE HAVEN</title>
+<meta name="description" content="Câu chuyện của AZURE HAVEN: triết lý nghỉ dưỡng dựa trên thiên nhiên, sự riêng tư và trải nghiệm cá nhân, cùng kiến trúc mở ra đại dương." data-en-content="The story of AZURE HAVEN: a philosophy of nature, privacy and personal experience, and architecture that opens onto the ocean.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-shell font-sans text-ocean">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="group/h fixed inset-x-0 top-0 z-40 text-shell [&.is-scrolled]:bg-shell/95 [&.is-scrolled]:text-ocean [&.is-scrolled]:shadow-[0_1px_0_rgba(18,59,70,.10)] [&.is-scrolled]:backdrop-blur-md">
+  <div class="mx-auto flex h-20 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 transition-[height] duration-500 sm:px-6 lg:px-10 2xl:px-16 group-[.is-scrolled]/h:h-16">
+    <a href="../index.html" class="font-display text-lg tracking-[0.22em] sm:text-xl">AZURE HAVEN</a>
+    <nav class="hidden items-center gap-10 text-[15px] lg:flex" aria-label="Điều hướng chính" data-en-aria="Main navigation">
+      <a href="../index.html" data-en="Home" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Trang chủ</a>
+      <a aria-current="page" href="../pages/about.html" data-en="About" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Giới thiệu</a>
+      <a href="../pages/accommodation.html" data-en="Rooms &amp; villas" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Phòng &amp; villa</a>
+      <a href="../pages/experiences.html" data-en="Experiences" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100">Trải nghiệm</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button type="button" data-lang-toggle aria-label="Chuyển sang tiếng Anh" data-en-aria="Switch to Vietnamese" class="inline-flex h-11 items-center gap-1.5 border border-current px-3 text-[13px] font-medium tracking-[0.12em] transition-colors duration-300 hover:border-current focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lagoon">
+        <span data-lang-opt="vi">VI</span><span aria-hidden="true" class="opacity-40">/</span><span data-lang-opt="en" class="is-off">EN</span>
+      </button>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" data-en-aria="Open menu" class="inline-flex h-11 w-11 items-center justify-center lg:hidden">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M9 17h12"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div id="mnav" class="fixed inset-y-0 right-0 z-50 flex w-[86%] max-w-sm flex-col bg-shell px-8 pb-10 pt-6 text-ocean lg:hidden">
+  <div class="flex items-center justify-between">
+    <span class="font-display text-lg tracking-[0.22em]">AZURE HAVEN</span>
+    <button type="button" data-menu-toggle="#mnav" aria-label="Đóng menu" data-en-aria="Close menu" class="inline-flex h-11 w-11 items-center justify-center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <span class="horizon mt-8"></span>
+  <nav class="mt-8 flex flex-col gap-1 font-display text-3xl" aria-label="Điều hướng điện thoại" data-en-aria="Mobile navigation">
+    <a href="../index.html" data-en="Home" class="py-3 aria-[current=page]:text-lagoon-ink aria-[current=page]:italic">Trang chủ</a>
+    <a aria-current="page" href="../pages/about.html" data-en="About" class="py-3 aria-[current=page]:text-lagoon-ink aria-[current=page]:italic">Giới thiệu</a>
+    <a href="../pages/accommodation.html" data-en="Rooms &amp; villas" class="py-3 aria-[current=page]:text-lagoon-ink aria-[current=page]:italic">Phòng &amp; villa</a>
+    <a href="../pages/experiences.html" data-en="Experiences" class="py-3 aria-[current=page]:text-lagoon-ink aria-[current=page]:italic">Trải nghiệm</a>
+  </nav>
+  <div class="mt-auto space-y-2 text-sm text-ocean/80">
+    <a href="tel:+842973846128" class="block py-1">+84 297 384 6128</a>
+    <a href="mailto:hello@azurehaven.vn" class="block py-1">hello@azurehaven.vn</a>
+  </div>
+</div>
+<!-- /@partial header -->
+<main>
+
+  <!-- HERO TRANG -->
+  <section id="page-hero" data-section="page-hero" class="relative flex min-h-[72vh] items-end overflow-hidden bg-ocean text-shell">
+    <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%]">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cote_D%27Or_Beach_-_Anse_Volbert_-_Praslin_-_Seychelles.jpg/1920px-Cote_D%27Or_Beach_-_Anse_Volbert_-_Praslin_-_Seychelles.jpg" referrerpolicy="no-referrer" fetchpriority="high" width="1920" height="1280" alt="Hàng dừa vươn ra bãi cát trắng bên làn nước xanh" data-en-alt="Palm trees leaning over white sand and clear blue water" class="hero-zoom h-full w-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ocean-deep/85 via-ocean-deep/20 to-ocean-deep/35"></div>
+    <div class="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pb-14 pt-32 sm:px-6 lg:px-10 lg:pb-20 2xl:px-16">
+      <span class="horizon"></span>
+      <h1 data-split="words" class="mt-7 max-w-5xl pb-1 font-display text-[clamp(2.6rem,6vw,5.75rem)] leading-[1.05]" data-en="A Sanctuary by the Sea">Chốn bình yên bên biển</h1>
+      <p data-reveal="up" data-reveal-delay="300" class="mt-5 max-w-lg text-lg font-light text-shell/85" data-en="Born from a love of the island and the people who live by its rhythm.">Ra đời từ tình yêu với hòn đảo và những người sống theo nhịp của nó.</p>
+    </div>
+  </section>
+
+  <!-- CÂU CHUYỆN -->
+  <section id="story" data-section="story-editorial" class="bg-shell py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-4xl leading-[1.12] sm:text-5xl" data-en="Our story">Câu chuyện của chúng tôi</h2>
+          <div data-reveal="clip" class="group mt-10 hidden aspect-[4/5] overflow-hidden bg-sand lg:block">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Sunrise_on_the_beach%2C_Koh_Yao_Noi_%28island%29%2C_Phang_Nga_Bay%2C_Thailand.jpg/960px-Sunrise_on_the_beach%2C_Koh_Yao_Noi_%28island%29%2C_Phang_Nga_Bay%2C_Thailand.jpg" referrerpolicy="no-referrer" loading="lazy" width="960" height="640" alt="Bình minh trên bãi biển vắng, mặt trời lên sau những hòn đảo xa" data-en-alt="Sunrise over an empty beach with distant islands" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div>
+        </div>
+      </div>
+      <div class="space-y-8 text-[18px] leading-[1.85] text-ocean/85 lg:col-span-6 lg:col-start-6">
+        <p data-reveal="up" class="dropcap" data-en="It began with a single morning. The tide was low, the sand still cool, and the only sound was water folding over the reef. We wanted to build a place that would let others feel exactly that.">Mọi thứ bắt đầu từ một buổi sáng. Thủy triều xuống thấp, cát còn mát, và âm thanh duy nhất là tiếng nước vỗ qua rạn san hô. Chúng tôi muốn xây một nơi để người khác cũng cảm nhận được đúng khoảnh khắc ấy.</p>
+        <p data-reveal="up" data-en="So we built slowly. Villas were placed around the old palms instead of replacing them. Paths follow the shape of the dunes. Every window was positioned for a view of the sea, or of nothing at all.">Vì thế chúng tôi xây chậm. Villa được đặt quanh những cây dừa lâu năm thay vì thay thế chúng. Lối đi men theo dáng đụn cát. Mỗi khung cửa sổ đều hướng ra biển, hoặc hướng về khoảng trống yên tĩnh.</p>
+        <blockquote data-reveal="up" class="border-l border-lagoon py-2 pl-8 font-display text-3xl italic leading-[1.3] text-ocean lg:-ml-24 lg:pl-24 lg:text-4xl" data-en="Luxury here is measured in silence, space and time.">Sự sang trọng ở đây được đo bằng sự tĩnh lặng, khoảng không và thời gian.</blockquote>
+        <p data-reveal="up" data-en="Today AZURE HAVEN welcomes guests who come to slow down: couples, families and those travelling alone. Our island team, most of them born nearby, look after every stay as they would welcome a friend home.">Hôm nay, AZURE HAVEN đón những vị khách tìm đến để sống chậm lại: các cặp đôi, gia đình và cả những người đi một mình. Đội ngũ trên đảo, phần lớn sinh ra ở vùng biển này, chăm sóc từng kỳ nghỉ như đón một người bạn trở về.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIẾT LÝ -->
+  <section id="philosophy" data-section="features-numbered" class="bg-sand-light py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="max-w-2xl">
+        <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] sm:text-5xl lg:text-6xl" data-en="Our philosophy of rest">Triết lý nghỉ dưỡng</h2>
+        <p data-reveal="up" class="mt-6 text-[17px] leading-relaxed text-ocean/75" data-en="Three principles guide every decision, from the shape of a room to the pace of a morning.">Ba nguyên tắc dẫn dắt mọi quyết định, từ hình dáng một căn phòng đến nhịp độ của một buổi sáng.</p>
+      </div>
+      <ol data-reveal-stagger="120" class="mt-16 border-t border-ocean/15">
+        <li class="group grid gap-4 border-b border-ocean/15 py-10 transition-colors duration-500 hover:bg-shell/60 md:grid-cols-12 md:items-baseline md:gap-10 md:px-4">
+          <span class="font-display text-5xl italic text-lagoon-ink md:col-span-2">01</span>
+          <h3 class="font-display text-3xl md:col-span-4" data-en="Nature first">Thiên nhiên đi trước</h3>
+          <p class="max-w-xl leading-relaxed text-ocean/75 md:col-span-6" data-en="Native plants, rainwater gardens and buildings that sit lightly on the land. The island sets the shape; we follow it.">Cây bản địa, vườn thu nước mưa và những công trình đặt nhẹ trên mặt đất. Hòn đảo định hình không gian, chúng tôi đi theo nó.</p>
+        </li>
+        <li class="group grid gap-4 border-b border-ocean/15 py-10 transition-colors duration-500 hover:bg-shell/60 md:grid-cols-12 md:items-baseline md:gap-10 md:px-4">
+          <span class="font-display text-5xl italic text-lagoon-ink md:col-span-2">02</span>
+          <h3 class="font-display text-3xl md:col-span-4" data-en="Privacy as a given">Riêng tư là mặc định</h3>
+          <p class="max-w-xl leading-relaxed text-ocean/75 md:col-span-6" data-en="Villas are spaced far apart and screened by greenery, so the only neighbours you notice are birds and waves.">Các villa cách xa nhau, được che chắn bởi cây xanh, để hàng xóm duy nhất bạn nhận ra là chim và sóng.</p>
+        </li>
+        <li class="group grid gap-4 border-b border-ocean/15 py-10 transition-colors duration-500 hover:bg-shell/60 md:grid-cols-12 md:items-baseline md:gap-10 md:px-4">
+          <span class="font-display text-5xl italic text-lagoon-ink md:col-span-2">03</span>
+          <h3 class="font-display text-3xl md:col-span-4" data-en="Made for you">Trải nghiệm của riêng bạn</h3>
+          <p class="max-w-xl leading-relaxed text-ocean/75 md:col-span-6" data-en="No fixed schedules. Breakfast when you wake, a boat when the sea is calm, a quiet table when you want one.">Không lịch trình cố định. Bữa sáng khi bạn thức dậy, chuyến thuyền khi biển lặng, một bàn ăn yên tĩnh khi bạn cần.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- KIẾN TRÚC & CẢNH QUAN -->
+  <section id="architecture" data-section="features-alternate" class="bg-shell py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl space-y-24 px-4 sm:px-6 lg:space-y-36 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-10">
+        <div data-reveal="clip" class="group aspect-[4/3] overflow-hidden bg-sand lg:col-span-7 lg:aspect-[16/11]">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-14.jpg/960px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-14.jpg" referrerpolicy="no-referrer" loading="lazy" width="960" height="480" alt="Cầu gỗ dài dẫn tới các villa trên mặt nước, một cây lớn bên lối đi" data-en-alt="A long wooden boardwalk leading to overwater villas, a lone tree by the path" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+        </div>
+        <div class="lg:col-span-4 lg:col-start-9">
+          <h2 data-reveal="up" class="font-display text-4xl leading-[1.12] sm:text-5xl" data-en="Architecture that breathes">Kiến trúc biết thở</h2>
+          <p data-reveal="up" class="mt-6 text-[17px] leading-relaxed text-ocean/80" data-en="Timber, thatch and coral stone, with deep eaves and walls that slide away. Sea breeze moves freely through every space.">Gỗ, mái lá và đá san hô, mái hiên sâu và những bức tường có thể trượt mở. Gió biển đi xuyên qua mọi không gian.</p>
+        </div>
+      </div>
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-10">
+        <div class="order-2 lg:order-1 lg:col-span-4">
+          <h2 data-reveal="up" class="font-display text-4xl leading-[1.12] sm:text-5xl" data-en="A landscape left wild">Cảnh quan được giữ hoang sơ</h2>
+          <p data-reveal="up" class="mt-6 text-[17px] leading-relaxed text-ocean/80" data-en="The lagoon, the reef and the palm grove were here first. Boardwalks float above the water so the shoreline stays untouched.">Đầm nước, rạn san hô và rừng dừa có mặt từ trước. Cầu gỗ đặt lơ lửng trên mặt nước để đường bờ biển được giữ nguyên.</p>
+        </div>
+        <div data-reveal="clip" class="group order-1 aspect-[4/3] overflow-hidden bg-sand lg:order-2 lg:col-span-7 lg:col-start-6 lg:aspect-[16/11]">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-05.jpg/960px-Diamonds_Thudufushi_Beach_and_Water_Villas%2C_May_2017_-05.jpg" referrerpolicy="no-referrer" loading="lazy" width="960" height="489" alt="Villa trên mặt nước xanh ngọc và một chiếc thuyền nhỏ" data-en-alt="Overwater villas on a turquoise lagoon with a small boat" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIÁ TRỊ THƯƠNG HIỆU -->
+  <section id="values" data-section="values-type" class="relative overflow-hidden bg-ocean py-24 text-shell lg:py-36" data-particles="dust" data-particles-color="#55B9B2" data-particles-density="0.45">
+    <div class="relative z-10 mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="max-w-3xl font-display text-4xl leading-[1.12] sm:text-5xl" data-en="What we hold on to">Những điều chúng tôi gìn giữ</h2>
+      <div data-reveal-stagger="120" class="mt-16 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="border-t border-lagoon/60 pt-8">
+          <p class="font-display text-5xl italic lg:text-6xl" data-en="Calm">Tĩnh</p>
+          <p class="mt-5 leading-relaxed text-shell/75" data-en="Quiet is part of the design, from soft lighting to the absence of loud music.">Sự yên tĩnh là một phần của thiết kế, từ ánh sáng dịu đến việc không có nhạc ồn ào.</p>
+        </div>
+        <div class="border-t border-lagoon/60 pt-8 lg:mt-16">
+          <p class="font-display text-5xl italic lg:text-6xl" data-en="Open">Mở</p>
+          <p class="mt-5 leading-relaxed text-shell/75" data-en="Spaces flow into gardens and water, with as few walls as possible.">Không gian nối liền vườn và mặt nước, với ít bức tường nhất có thể.</p>
+        </div>
+        <div class="border-t border-lagoon/60 pt-8">
+          <p class="font-display text-5xl italic lg:text-6xl" data-en="Genuine">Chân thành</p>
+          <p class="mt-5 leading-relaxed text-shell/75" data-en="Service that feels personal, led by people who know the island by heart.">Sự phục vụ gần gũi, từ những người hiểu hòn đảo như lòng bàn tay.</p>
+        </div>
+        <div class="border-t border-lagoon/60 pt-8 lg:mt-16">
+          <p class="font-display text-5xl italic lg:text-6xl" data-en="Lasting">Bền vững</p>
+          <p class="mt-5 leading-relaxed text-shell/75" data-en="Solar power, reef care and local sourcing, so the bay stays as beautiful as we found it.">Điện mặt trời, bảo vệ rạn san hô và nguyên liệu địa phương, để vịnh biển luôn đẹp như ngày đầu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOÀN CẢNH -->
+  <section id="panorama" data-section="cta-fullbleed" class="relative flex min-h-[90vh] items-end overflow-hidden bg-ocean-deep text-shell">
+    <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[15%]">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Jw-marriott-phu-quoc-bai-kem.jpg/1920px-Jw-marriott-phu-quoc-bai-kem.jpg" referrerpolicy="no-referrer" loading="lazy" width="1920" height="1280" alt="Toàn cảnh resort ven biển nhìn từ trên cao, bãi cát trắng và nước xanh ngọc" data-en-alt="Aerial view of a seaside resort, white sand and turquoise water" class="h-full w-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ocean-deep/85 via-ocean-deep/10 to-transparent"></div>
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 lg:py-24 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] sm:text-5xl lg:col-span-7 lg:text-6xl" data-en="A long stretch of shoreline, one quiet promise.">Một dải bờ biển dài, một lời hứa bình yên.</h2>
+      <div data-reveal="up" class="lg:col-span-4 lg:col-start-9">
+        <p class="text-lg font-light leading-relaxed text-shell/85" data-en="Stay in a villa above the lagoon or a bungalow under the palms, and let the island do the rest.">Lưu trú trong villa trên mặt nước hay bungalow dưới rặng dừa, và để hòn đảo lo phần còn lại.</p>
+        <a href="accommodation.html" class="group mt-8 inline-flex min-h-[48px] items-center gap-3 bg-lagoon px-7 text-[15px] font-medium text-ocean-deep transition-colors duration-500 hover:bg-shell active:scale-[.98]">
+          <span data-en="Explore rooms &amp; villas">Xem phòng &amp; villa</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="transition-transform duration-500 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden bg-ocean text-shell">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <a href="../index.html" class="font-display text-2xl tracking-[0.22em]">AZURE HAVEN</a>
+        <span class="horizon mt-6"></span>
+        <p class="mt-6 max-w-sm text-[15px] leading-relaxed text-shell/75" data-en="A tropical seaside sanctuary where open space, nature and privacy set the rhythm of every stay.">Một chốn nghỉ dưỡng nhiệt đới bên bờ biển, nơi không gian mở, thiên nhiên và sự riêng tư tạo nên nhịp sống của mỗi kỳ nghỉ.</p>
+      </div>
+      <nav class="lg:col-span-3" aria-label="Liên kết chân trang" data-en-aria="Footer links">
+        <p class="text-sm text-lagoon" data-en="Explore">Khám phá</p>
+        <ul class="mt-5 space-y-3 text-[15px]">
+          <li><a href="../index.html" data-en="Home" class="text-shell/80 transition-colors duration-300 hover:text-shell">Trang chủ</a></li>
+          <li><a aria-current="page" href="../pages/about.html" data-en="About" class="text-shell/80 transition-colors duration-300 hover:text-shell">Giới thiệu</a></li>
+          <li><a href="../pages/accommodation.html" data-en="Rooms &amp; villas" class="text-shell/80 transition-colors duration-300 hover:text-shell">Phòng &amp; villa</a></li>
+          <li><a href="../pages/experiences.html" data-en="Experiences" class="text-shell/80 transition-colors duration-300 hover:text-shell">Trải nghiệm</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-4">
+        <p class="text-sm text-lagoon" data-en="Contact">Liên hệ</p>
+        <address class="mt-5 space-y-3 text-[15px] not-italic text-shell/80">
+          <p data-en="Bai Dai beach, Ganh Dau, Phu Quoc, Vietnam">Bãi Dài, Gành Dầu, Phú Quốc, Việt Nam</p>
+          <p class="flex flex-wrap items-center gap-3">
+            <a href="tel:+842973846128" class="transition-colors duration-300 hover:text-shell">+84 297 384 6128</a>
+            <button type="button" data-copy="+84 297 384 6128" data-en="Copy" class="min-h-[44px] border-b border-shell/30 text-sm text-shell/70 transition-colors duration-300 hover:border-shell hover:text-shell">Sao chép</button>
+          </p>
+          <p><a href="mailto:hello@azurehaven.vn" class="transition-colors duration-300 hover:text-shell">hello@azurehaven.vn</a></p>
+        </address>
+      </div>
+    </div>
+    <p aria-hidden="true" class="pointer-events-none mt-20 select-none whitespace-nowrap font-display text-[15vw] leading-none text-shell/[0.07] lg:text-[13vw]">Azure Haven</p>
+    <div class="mt-6 flex flex-col gap-3 border-t border-shell/15 pt-6 text-sm text-shell/60 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 AZURE HAVEN</p>
+      <p data-en="An introductory website. Online booking is not available.">Website giới thiệu, không nhận đặt phòng trực tuyến.</p>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

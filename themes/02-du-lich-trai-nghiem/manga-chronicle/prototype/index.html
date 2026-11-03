@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MANGA CHRONICLE - Mỗi trang truyện là một dấu vết lịch sử</title>
+  <meta name="description" content="MANGA CHRONICLE là kho lưu trữ giới thiệu văn hóa manga Nhật Bản: tác giả, tác phẩm, lịch sử, nghệ thuật sáng tác và những bảo tàng có thật.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-paper font-body text-ink antialiased">
+  <div class="mc-grain" aria-hidden="true"></div>
+
+  <header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-ink/15 bg-paper/90 backdrop-blur-sm transition-colors duration-300 [&.is-scrolled]:bg-paper [&.is-scrolled]:shadow-[0_8px_30px_-18px_rgba(36,35,33,.45)]">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="index.html" class="group flex items-baseline gap-2 whitespace-nowrap" aria-label="MANGA CHRONICLE, về trang chủ">
+        <span class="font-display text-xl font-extrabold tracking-tight sm:text-2xl">MANGA</span>
+        <span class="text-xs font-semibold uppercase tracking-label text-vermilion transition-colors duration-300 group-hover:text-ink">Chronicle</span>
+      </a>
+      <nav aria-label="Menu chính" class="hidden items-center gap-9 lg:flex">
+        <a href="index.html" aria-current="page" class="relative py-2 text-[0.95rem] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-vermilion aria-[current=page]:after:scale-x-100">Trang chủ</a>
+        <a href="kho-luu-tru.html" class="relative py-2 text-[0.95rem] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-vermilion aria-[current=page]:after:scale-x-100">Kho lưu trữ</a>
+        <a href="index.html#gioi-thieu" class="relative py-2 text-[0.95rem] font-medium after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-vermilion after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100">Giới thiệu</a>
+      </nav>
+      <div class="flex items-center gap-1">
+        <button type="button" data-modal-open="tim-kiem" aria-label="Mở ô tìm kiếm" class="grid h-11 w-11 place-items-center rounded-full transition duration-300 hover:bg-ink hover:text-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vermilion">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20.5 20.5-4.2-4.2"/></svg>
+        </button>
+        <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center rounded-full transition duration-300 hover:bg-ink hover:text-paper lg:hidden">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-ink/20 bg-paper p-6 shadow-[0_30px_60px_-30px_rgba(36,35,33,.6)] lg:hidden">
+      <p class="text-xs font-semibold uppercase tracking-label text-archive-deep">Mục lục</p>
+      <nav aria-label="Menu điện thoại" class="mt-4 grid gap-1">
+        <a href="index.html" aria-current="page" class="flex min-h-[48px] items-center border-b border-ink/10 font-display text-2xl aria-[current=page]:text-vermilion">Trang chủ</a>
+        <a href="kho-luu-tru.html" class="flex min-h-[48px] items-center border-b border-ink/10 font-display text-2xl">Kho lưu trữ</a>
+        <a href="index.html#gioi-thieu" class="flex min-h-[48px] items-center font-display text-2xl">Giới thiệu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" data-section="hero-split" data-particles="dust" data-particles-color="#81735F" data-particles-density="0.6" class="relative overflow-hidden bg-paper">
+      <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl gap-10 px-4 pb-14 pt-10 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-10 lg:py-12 2xl:px-16">
+        <div class="lg:col-span-5">
+          <p data-reveal="fade" class="text-xs font-semibold uppercase tracking-label text-vermilion">Archive No. 001 &middot; Hồ sơ mở</p>
+          <h1 data-split="words" class="mt-5 font-display text-[2.6rem] font-bold leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl 2xl:text-[5.25rem]">Mở kho lưu trữ của <em class="font-medium italic text-vermilion">manga</em> Nhật Bản</h1>
+          <p data-reveal="up" data-reveal-delay="250" class="mt-6 max-w-[34rem] text-lg leading-relaxed text-ink/80">Tác giả, tác phẩm, cuộn tranh cổ và những bảo tàng có thật, xếp thành hồ sơ để bạn lần theo từng dấu vết.</p>
+          <div data-reveal="up" data-reveal-delay="400" class="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a href="kho-luu-tru.html" class="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-vermilion px-7 text-base font-semibold text-paper transition duration-300 hover:bg-ink active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-paper">
+              Bắt đầu khám phá
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#dong-thoi-gian" class="inline-flex min-h-[52px] items-center justify-center border border-ink/30 px-6 text-base font-medium transition duration-300 hover:border-ink hover:bg-ink hover:text-paper">Xem dòng thời gian</a>
+          </div>
+        </div>
+
+        <div class="relative lg:col-span-7 lg:-mr-10 2xl:-mr-16">
+          <figure class="relative">
+            <div data-reveal="clip" class="relative aspect-[4/3] overflow-hidden bg-paper-deep lg:aspect-[3/2]">
+              <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[12%]">
+                <img src="assets/img/hero-oyo-manga.webp" alt="Trang đôi màu đỏ son trong một cuốn sổ vẽ mẫu Nhật Bản in khắc gỗ, vẽ những nhành cỏ hoa trắng" width="1600" height="1068" class="h-full w-full object-cover">
+              </div>
+            </div>
+            <figcaption class="mt-3 flex flex-wrap items-baseline justify-between gap-2 pr-4 text-sm text-archive-deep sm:pr-6 lg:pr-10 2xl:pr-16">
+              <span>Practical Sketchbook (Ōyō manga), sổ vẽ mẫu in khắc gỗ.</span>
+              <span class="font-semibold uppercase tracking-[0.18em] text-ink/70">Tư liệu phạm vi công cộng</span>
+            </figcaption>
+          </figure>
+          <div class="pointer-events-none absolute -left-4 -top-10 hidden sm:block lg:-left-16">
+            <div data-stamp data-reveal="zoom" data-reveal-delay="900">
+              <div class="mc-stamp bg-paper/70"><span>Đã lưu trữ<b>漫画</b>MC &middot; 2026</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HỒ SƠ NỔI BẬT -->
+    <section id="ho-so-noi-bat" data-section="features-bento" class="border-t border-ink/15 bg-paper py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl 2xl:text-6xl">Hồ sơ nổi bật</h2>
+          <a href="kho-luu-tru.html" class="group inline-flex items-center gap-2 self-start border-b border-ink pb-1 text-sm font-semibold transition-colors duration-300 hover:border-vermilion hover:text-vermilion md:self-auto">Xem toàn bộ kho lưu trữ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+
+        <div data-reveal-stagger="90" class="mt-12 grid gap-5 lg:grid-cols-12 lg:grid-rows-[auto_auto] 2xl:gap-7">
+          <!-- A: tác phẩm, ảnh lớn -->
+          <a href="ho-so.html?id=hokusai-manga" class="group flex flex-col border border-ink/20 bg-paper-light transition duration-300 hover:-translate-y-1 hover:border-ink hover:shadow-[0_24px_50px_-30px_rgba(36,35,33,.55)] lg:col-span-7 lg:row-span-2">
+            <div class="relative aspect-[4/3] overflow-hidden bg-paper-deep lg:aspect-auto lg:flex-1">
+              <img src="assets/img/hoso-hokusai-manga.jpg" alt="Cuốn Hokusai Manga mở ra, hai trang vẽ cá và tôm bằng mực, trưng bày trong tủ kính" width="1024" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04] lg:absolute lg:inset-0">
+            </div>
+            <div class="grid gap-3 p-6 sm:p-8">
+              <div class="flex flex-wrap items-center justify-between gap-3 text-xs font-semibold uppercase tracking-[0.18em]">
+                <span class="text-vermilion">Archive No. 002</span><span class="border border-ink/30 px-2.5 py-1 text-ink/80">Tác phẩm</span>
+              </div>
+              <h3 class="font-display text-3xl font-bold leading-tight sm:text-4xl">Hokusai Manga <span class="text-xl font-medium text-archive-deep">1814-1878</span></h3>
+              <p class="max-w-[60ch] text-base leading-relaxed text-ink/80">Bộ sách phác thảo 15 tập của Katsushika Hokusai, nơi chữ "manga" xuất hiện trên một ấn phẩm nổi tiếng thời Edo.</p>
+              <span class="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-vermilion">Mở hồ sơ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+
+          <!-- B: tác giả, khối mực -->
+          <a href="ho-so.html?id=tezuka-osamu" class="group relative flex min-h-[20rem] flex-col justify-between overflow-hidden bg-ink p-6 text-paper transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-30px_rgba(36,35,33,.8)] sm:p-8 lg:col-span-5">
+            <span aria-hidden="true" class="pointer-events-none absolute -right-4 -top-6 select-none text-[9rem] leading-none text-paper/[0.07] [font-family:'Yu_Mincho','Hiragino_Mincho_ProN','Noto_Serif_JP',serif] transition-transform duration-[1200ms] ease-expo group-hover:-translate-x-3">手塚</span>
+            <div class="relative flex items-center justify-between text-xs font-semibold uppercase tracking-[0.18em]">
+              <span class="text-vermilion-light">Archive No. 008</span><span class="border border-paper/30 px-2.5 py-1 text-paper/85">Tác giả</span>
+            </div>
+            <div class="relative mt-10">
+              <h3 class="font-display text-3xl font-bold sm:text-4xl">Tezuka Osamu</h3>
+              <p class="mt-1 text-sm text-paper/70">1928-1989 &middot; Toyonaka, Osaka</p>
+              <p class="mt-4 max-w-[46ch] leading-relaxed text-paper/85">Tác giả có ảnh hưởng lớn nhất tới manga hậu chiến, từ truyện dài nhiều trang tới cách dàn khung như phim.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-paper">Mở hồ sơ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+
+          <!-- C: tác giả, ảnh dọc -->
+          <a href="ho-so.html?id=kawanabe-kyosai" class="group grid border border-ink/20 bg-paper-light transition duration-300 hover:-translate-y-1 hover:border-ink hover:shadow-[0_24px_50px_-30px_rgba(36,35,33,.55)] sm:grid-cols-[42%_1fr] lg:col-span-5">
+            <div class="relative aspect-[4/3] overflow-hidden bg-paper-deep sm:aspect-auto sm:min-h-[16rem]">
+              <img src="assets/img/hoso-kyosai-animal-circus.jpg" alt="Tranh mực màu: hai con chuột mặc áo cầm quạt nhào lộn" width="768" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04] sm:absolute sm:inset-0">
+            </div>
+            <div class="flex flex-col justify-between gap-4 p-6">
+              <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-semibold uppercase tracking-[0.18em]">
+                <span class="text-vermilion">No. 005</span><span class="border border-ink/30 px-2.5 py-1 text-ink/80">Tác giả</span>
+              </div>
+              <div>
+                <h3 class="font-display text-2xl font-bold">Kawanabe Kyōsai</h3>
+                <p class="mt-1 text-sm text-archive-deep">1831-1889</p>
+                <p class="mt-3 text-[0.95rem] leading-relaxed text-ink/80">Học trường phái Kanō nhưng nổi tiếng với tranh hài hước, yêu quái và động vật nhân hóa.</p>
+              </div>
+              <span class="inline-flex items-center gap-2 text-sm font-semibold text-vermilion">Mở hồ sơ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+
+          <!-- D: câu chuyện lịch sử, dải đỏ son -->
+          <a href="ho-so.html?id=cho-ju-giga" class="group relative grid gap-6 overflow-hidden bg-vermilion p-6 text-paper transition duration-300 hover:bg-vermilion-deep sm:p-8 md:grid-cols-[1fr_auto] md:items-end lg:col-span-12">
+            <div>
+              <div class="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em]">
+                <span>Archive No. 001</span><span class="border border-paper/40 px-2.5 py-1">Câu chuyện lịch sử</span>
+              </div>
+              <h3 class="mt-5 font-display text-3xl font-bold leading-tight sm:text-4xl xl:text-5xl">Ếch, thỏ và khỉ trong cuộn tranh thế kỷ 12</h3>
+              <p class="mt-3 max-w-[62ch] leading-relaxed text-paper/90">Chōjū-jinbutsu-giga của chùa Kōzan-ji, Kyoto: bốn cuộn tranh mực thường được nhắc tới như một tiền thân xa của manga.</p>
+            </div>
+            <span class="inline-flex min-h-[48px] items-center gap-2 self-start border border-paper/60 px-5 text-sm font-semibold transition duration-300 group-hover:bg-paper group-hover:text-vermilion md:self-end">Mở hồ sơ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            <span aria-hidden="true" class="pointer-events-none absolute -bottom-10 right-40 hidden select-none text-[11rem] leading-none text-paper/10 [font-family:'Yu_Mincho','Hiragino_Mincho_ProN','Noto_Serif_JP',serif] xl:block">戯画</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÒNG THỜI GIAN -->
+    <section id="dong-thoi-gian" data-section="timeline" class="bg-ink py-20 text-paper lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-8">
+            <h2 data-split="words" class="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl 2xl:text-6xl">Dòng thời gian manga</h2>
+            <p data-reveal="up" class="mt-4 max-w-[58ch] text-lg leading-relaxed text-paper/75">Mười mốc có nguồn tham khảo, từ cuộn tranh chùa Kōzan-ji tới bảo tàng manga đầu tiên của Kyoto. Bấm vào mốc để mở hồ sơ.</p>
+          </div>
+          <div class="flex gap-2 lg:col-span-4 lg:justify-end">
+            <button type="button" data-tl-prev aria-label="Mốc trước" class="grid h-12 w-12 place-items-center border border-paper/30 transition duration-300 hover:border-paper hover:bg-paper hover:text-ink">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            </button>
+            <button type="button" data-tl-next aria-label="Mốc tiếp theo" class="grid h-12 w-12 place-items-center border border-paper/30 transition duration-300 hover:border-paper hover:bg-paper hover:text-ink">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mt-14">
+        <div aria-hidden="true" class="absolute inset-x-0 top-[2.15rem] h-px bg-paper/25"></div>
+        <ol data-tl-track data-drag-scroll class="mc-noscroll relative flex snap-x snap-mandatory scroll-pl-4 gap-5 overflow-x-auto px-4 pb-4 sm:scroll-pl-6 sm:px-6 lg:scroll-pl-10 lg:px-10 2xl:scroll-pl-16 2xl:px-16">
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=cho-ju-giga" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">Thế kỷ 12-13</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Chōjū-jinbutsu-giga</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Cuộn tranh động vật nhân hóa của chùa Kōzan-ji, Kyoto.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=kibyoshi" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">1775</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Kibyōshi ở Edo</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Sách bìa vàng đặt lời thoại ngay cạnh nhân vật.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=hokusai-manga" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">1814</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Hokusai Manga, tập 1</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Tập đầu tiên của bộ sổ vẽ mẫu in tại Nagoya.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=ponchi-e" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">1862</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">The Japan Punch</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Charles Wirgman ra tạp chí biếm họa ở Yokohama.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=kitazawa-rakuten" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">1905</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Tokyo Puck</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Kitazawa Rakuten lập tạp chí biếm họa màu.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=sazae-san" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">1946</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Sazae-san lên báo</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Truyện bốn khung của Hasegawa Machiko ra mắt.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=shin-takarajima" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">1947</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Shin Takarajima</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Truyện dài in thành sách do Tezuka Osamu vẽ.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=gekiga" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">1957</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Gekiga</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Tatsumi Yoshihiro đặt tên cho dòng truyện hiện thực.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=tap-chi-tuan-1959" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">1959</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Tạp chí manga tuần</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Shōnen Magazine và Shōnen Sunday cùng ra mắt.</span>
+            </a>
+          </li>
+          <li class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] xl:w-[23%] 2xl:w-[19%]">
+            <a href="ho-so.html?id=kyoto-manga-museum" class="group block h-full">
+              <span class="block font-display text-2xl font-bold text-vermilion-light">2006</span>
+              <span aria-hidden="true" class="mt-3 block h-3 w-3 rotate-45 border border-paper bg-ink transition-colors duration-300 group-hover:bg-vermilion"></span>
+              <span class="mt-6 block font-display text-xl font-semibold leading-snug group-hover:text-vermilion-light">Bảo tàng manga Kyoto</span>
+              <span class="mt-2 block text-[0.95rem] leading-relaxed text-paper/75">Kyoto International Manga Museum mở cửa.</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PHÍA SAU TRANG TRUYỆN -->
+    <section id="phia-sau" data-section="features-numbered" class="bg-paper-deep py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+        <div class="lg:col-span-5">
+          <div class="lg:sticky lg:top-28">
+            <figure>
+              <div data-reveal="clip" class="aspect-[4/5] overflow-hidden bg-paper">
+                <img src="assets/img/process-ngoi-but.webp" alt="Cận cảnh một ngòi bút kim loại cũ đặt trên nền giấy sáng" width="1600" height="1022" loading="lazy" class="h-full w-full object-cover object-[28%_50%]">
+              </div>
+              <figcaption class="mt-3 text-sm text-archive-deep">Ngòi bút chấm mực, dụng cụ quen thuộc của công đoạn đi mực.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl 2xl:text-6xl">Phía sau trang truyện</h2>
+          <p data-reveal="up" class="mt-5 max-w-[58ch] text-lg leading-relaxed text-ink/80">Một trang manga in ra là kết quả của nhiều lượt vẽ chồng lên nhau. Đây là bốn công đoạn quen thuộc trong xưởng vẽ, từ bản nháp tới trang hoàn chỉnh.</p>
+
+          <ol class="mt-12 border-t border-ink/25">
+            <li data-reveal="up">
+              <a href="ho-so.html?id=name-phan-canh" class="group grid grid-cols-[3.5rem_1fr_auto] items-start gap-4 border-b border-ink/25 py-7 transition-colors duration-300 hover:bg-paper sm:grid-cols-[5rem_1fr_auto] sm:px-4">
+                <span class="font-display text-4xl font-bold text-vermilion sm:text-5xl">01</span>
+                <span>
+                  <span class="block font-display text-2xl font-bold">Name <span class="text-lg font-medium text-archive-deep">ネーム</span></span>
+                  <span class="mt-2 block max-w-[52ch] leading-relaxed text-ink/80">Bản phân cảnh thô: chia khung, đặt nhân vật, ghi lời thoại để biên tập viên duyệt.</span>
+                </span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="mt-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </li>
+            <li data-reveal="up">
+              <a href="ho-so.html?id=di-muc-va-tong" class="group grid grid-cols-[3.5rem_1fr_auto] items-start gap-4 border-b border-ink/25 py-7 transition-colors duration-300 hover:bg-paper sm:grid-cols-[5rem_1fr_auto] sm:px-4">
+                <span class="font-display text-4xl font-bold text-vermilion sm:text-5xl">02</span>
+                <span>
+                  <span class="block font-display text-2xl font-bold">Phác chì <span class="text-lg font-medium text-archive-deep">下書き</span></span>
+                  <span class="mt-2 block max-w-[52ch] leading-relaxed text-ink/80">Vẽ chì lên giấy bản thảo theo bố cục đã duyệt, chỉnh dáng người và phối cảnh.</span>
+                </span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="mt-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </li>
+            <li data-reveal="up">
+              <a href="ho-so.html?id=di-muc-va-tong" class="group grid grid-cols-[3.5rem_1fr_auto] items-start gap-4 border-b border-ink/25 py-7 transition-colors duration-300 hover:bg-paper sm:grid-cols-[5rem_1fr_auto] sm:px-4">
+                <span class="font-display text-4xl font-bold text-vermilion sm:text-5xl">03</span>
+                <span>
+                  <span class="block font-display text-2xl font-bold">Đi mực <span class="text-lg font-medium text-archive-deep">ペン入れ</span></span>
+                  <span class="mt-2 block max-w-[52ch] leading-relaxed text-ink/80">Ngòi G-pen cho nét dày mỏng theo lực tay, ngòi tròn cho tóc và chi tiết nhỏ.</span>
+                </span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="mt-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </li>
+            <li data-reveal="up">
+              <a href="ho-so.html?id=di-muc-va-tong" class="group grid grid-cols-[3.5rem_1fr_auto] items-start gap-4 border-b border-ink/25 py-7 transition-colors duration-300 hover:bg-paper sm:grid-cols-[5rem_1fr_auto] sm:px-4">
+                <span class="font-display text-4xl font-bold text-vermilion sm:text-5xl">04</span>
+                <span>
+                  <span class="block font-display text-2xl font-bold">Tông và hoàn thiện <span class="text-lg font-medium text-archive-deep">トーン</span></span>
+                  <span class="mt-2 block max-w-[52ch] leading-relaxed text-ink/80">Tô mảng đen, dán screentone tạo sắc xám, sửa bằng mực trắng rồi đặt chữ thoại.</span>
+                </span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="mt-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- THÔNG ĐIỆP -->
+    <section id="thong-diep" data-section="quote-full" class="relative overflow-hidden bg-ink text-paper">
+      <div data-parallax="0.15" class="absolute inset-x-0 -inset-y-[15%]">
+        <img src="assets/img/hoso-battle-of-frogs.jpg" alt="" width="1024" height="576" loading="lazy" class="h-full w-full object-cover opacity-40">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40"></div>
+      <div class="relative mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-36 2xl:px-16">
+        <blockquote class="lg:col-span-9">
+          <p data-split="words" class="font-display text-[2.4rem] font-medium italic leading-[1.12] sm:text-6xl xl:text-7xl 2xl:text-8xl">"Mỗi trang truyện là một dấu vết lịch sử."</p>
+          <footer data-reveal="up" class="mt-8 text-base text-paper/80">Thông điệp của MANGA CHRONICLE</footer>
+        </blockquote>
+        <p class="self-end text-sm text-paper/70 lg:col-span-3 lg:text-right">Nền: Battle of the Frogs (1877), tranh khắc gỗ ba tấm thời Minh Trị.</p>
+      </div>
+    </section>
+
+    <!-- DẤU TÍCH MANGA TẠI NHẬT BẢN -->
+    <section id="dau-tich" data-section="gallery-lookbook" class="bg-paper py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="max-w-[24ch] font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl 2xl:text-6xl">Dấu tích manga tại Nhật Bản</h2>
+        <p data-reveal="up" class="mt-5 max-w-[60ch] text-lg leading-relaxed text-ink/80">Những bảo tàng và địa điểm có thật, nơi bản thảo, căn phòng vẽ và thư viện truyện vẫn mở cửa cho người tìm đến.</p>
+
+        <div class="mt-14 grid gap-12 lg:grid-cols-12 lg:gap-14">
+          <a href="ho-so.html?id=ishinomori-museum" class="group block lg:col-span-7">
+            <figure>
+              <div data-reveal="clip" class="relative aspect-[16/10] overflow-hidden bg-paper-deep">
+                <img src="assets/img/hoso-ishinomaki-manga-museum.jpg" alt="Tòa nhà Ishinomori Manga Museum hình vỏ trứng màu trắng bên bờ sông Kitakami" width="1024" height="575" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+              </div>
+              <figcaption class="mt-5 grid gap-2 sm:grid-cols-[1fr_auto] sm:items-end">
+                <span>
+                  <span class="block text-sm font-semibold text-vermilion">Ishinomaki, Miyagi &middot; Mở cửa 2001</span>
+                  <span class="mt-1 block font-display text-3xl font-bold group-hover:text-vermilion">Ishinomori Manga Museum</span>
+                  <span class="mt-2 block max-w-[58ch] leading-relaxed text-ink/80">Tòa nhà hình vỏ trứng trên bãi sông Kitakami, dành cho tác phẩm của Ishinomori Shōtarō.</span>
+                </span>
+                <span class="inline-flex items-center gap-2 text-sm font-semibold">Mở hồ sơ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </figcaption>
+            </figure>
+          </a>
+
+          <ul data-reveal-stagger="100" class="grid content-start gap-5 lg:col-span-5">
+            <li>
+              <a href="ho-so.html?id=kyoto-manga-museum" class="mc-tab group mt-3 block border border-ink/25 bg-paper-light p-6 transition duration-300 hover:-translate-y-1 hover:border-ink">
+                <span class="flex items-center justify-between text-sm font-semibold"><span class="text-vermilion">Kyoto</span><span class="text-archive-deep">2006</span></span>
+                <span class="mt-2 block font-display text-2xl font-bold group-hover:text-vermilion">Kyoto International Manga Museum</span>
+                <span class="mt-2 block leading-relaxed text-ink/80">Bảo tàng kiêm thư viện trong ngôi trường tiểu học cũ ở trung tâm Kyoto.</span>
+              </a>
+            </li>
+            <li>
+              <a href="ho-so.html?id=tezuka-museum" class="mc-tab group mt-3 block border border-ink/25 bg-paper-light p-6 transition duration-300 hover:-translate-y-1 hover:border-ink">
+                <span class="flex items-center justify-between text-sm font-semibold"><span class="text-vermilion">Takarazuka, Hyōgo</span><span class="text-archive-deep">1994</span></span>
+                <span class="mt-2 block font-display text-2xl font-bold group-hover:text-vermilion">Tezuka Osamu Manga Museum</span>
+                <span class="mt-2 block leading-relaxed text-ink/80">Bảo tàng ở thành phố nơi Tezuka Osamu lớn lên.</span>
+              </a>
+            </li>
+            <li>
+              <a href="ho-so.html?id=tokiwa-so" class="mc-tab group mt-3 block border border-ink/25 bg-paper-light p-6 transition duration-300 hover:-translate-y-1 hover:border-ink">
+                <span class="flex items-center justify-between text-sm font-semibold"><span class="text-vermilion">Toshima, Tokyo</span><span class="text-archive-deep">2020</span></span>
+                <span class="mt-2 block font-display text-2xl font-bold group-hover:text-vermilion">Tokiwa-sō Manga Museum</span>
+                <span class="mt-2 block leading-relaxed text-ink/80">Bản dựng lại căn hộ gỗ nơi một thế hệ mangaka từng sống.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HỒ SƠ MỚI -->
+    <section id="ho-so-moi" data-section="teaser-row" class="border-t border-ink/15 bg-paper-light py-20 lg:py-28">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl 2xl:text-6xl">Hồ sơ mới cập nhật</h2>
+          <a href="kho-luu-tru.html?cat=lich-su" class="group inline-flex items-center gap-2 self-start border-b border-ink pb-1 text-sm font-semibold transition-colors duration-300 hover:border-vermilion hover:text-vermilion md:self-auto">Mọi hồ sơ lịch sử <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+
+        <div data-reveal-stagger="110" class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 2xl:gap-12">
+          <a href="ho-so.html?id=ponchi-e" class="group block">
+            <div class="aspect-[4/5] overflow-hidden bg-paper-deep">
+              <img src="assets/img/hoso-ponchi-e.jpg" alt="Tranh khắc gỗ màu năm 1874: người đàn ông cầm gương chiếu tia sáng xua đuổi yêu quái" width="768" height="1024" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+            </div>
+            <p class="mt-5 text-sm font-semibold text-vermilion">Lịch sử &middot; 1862</p>
+            <h3 class="mt-1 font-display text-2xl font-bold leading-snug group-hover:text-vermilion">The Japan Punch và ponchi-e</h3>
+            <p class="mt-2 leading-relaxed text-ink/80">Tạp chí biếm họa ở Yokohama để lại một từ mới cho tranh châm biếm.</p>
+          </a>
+          <a href="ho-so.html?id=kibyoshi" class="group block lg:mt-20">
+            <div class="aspect-[4/5] overflow-hidden bg-paper-deep">
+              <img src="assets/img/hoso-kibyoshi.webp" alt="Tranh khắc gỗ Torii Kiyonaga: nhóm nhạc công và diễn viên kịch thời Edo" width="1200" height="1822" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+            </div>
+            <p class="mt-5 text-sm font-semibold text-vermilion">Lịch sử &middot; 1775-1806</p>
+            <h3 class="mt-1 font-display text-2xl font-bold leading-snug group-hover:text-vermilion">Kibyōshi, sách bìa vàng thời Edo</h3>
+            <p class="mt-2 leading-relaxed text-ink/80">Chữ và tranh khắc gỗ nằm chung trên mỗi trang, dành cho người lớn ở Edo.</p>
+          </a>
+          <a href="ho-so.html?id=gekiga" class="group block sm:col-span-2 lg:col-span-1 lg:mt-40">
+            <div class="relative grid aspect-[4/5] place-items-center overflow-hidden bg-ink text-paper sm:aspect-[16/9] lg:aspect-[4/5]">
+              <span aria-hidden="true" class="select-none text-[8rem] leading-none text-paper/90 transition-transform duration-[1200ms] ease-expo [font-family:'Yu_Mincho','Hiragino_Mincho_ProN','Noto_Serif_JP',serif] group-hover:scale-[1.04] sm:text-[10rem]">劇画</span>
+              <span class="absolute bottom-5 left-5 text-xs font-semibold uppercase tracking-[0.18em] text-paper/70">Archive No. 011</span>
+            </div>
+            <p class="mt-5 text-sm font-semibold text-vermilion">Lịch sử &middot; 1957</p>
+            <h3 class="mt-1 font-display text-2xl font-bold leading-snug group-hover:text-vermilion">Gekiga, tranh kịch</h3>
+            <p class="mt-2 leading-relaxed text-ink/80">Tên gọi Tatsumi Yoshihiro đặt cho dòng truyện hiện thực viết cho người trưởng thành.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIỚI THIỆU -->
+    <section id="gioi-thieu" data-section="story-letter" class="bg-paper py-20 lg:py-28">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+        <figure class="lg:col-span-4 lg:pt-24">
+          <div data-reveal="clip" class="aspect-[4/3] overflow-hidden bg-paper-deep">
+            <img src="assets/img/index-frog-school.jpg" alt="Tranh mực thủy mặc: ba con ếch dưới tán lá sen, một con cầm gậy như thầy giáo" width="1024" height="576" loading="lazy" class="h-full w-full object-cover">
+          </div>
+          <figcaption class="mt-3 text-sm text-archive-deep">Frog School, đầu thập niên 1870, tranh mực trên giấy.</figcaption>
+        </figure>
+        <div class="relative lg:col-span-7 lg:col-start-6">
+          <h2 data-reveal="up" class="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl 2xl:text-6xl">Giới thiệu</h2>
+          <div class="mt-8 max-w-[62ch] space-y-5 text-lg leading-relaxed text-ink/85">
+            <p data-reveal="up" class="mc-dropcap">MANGA CHRONICLE là một kho lưu trữ biên tập về văn hóa manga Nhật Bản. Mỗi hồ sơ gom lại một tác giả, một tác phẩm, một giai đoạn hay một địa điểm, kèm bối cảnh và nguồn tham khảo để bạn tự kiểm chứng.</p>
+            <p data-reveal="up">Chúng tôi chỉ ghi lại những gì có thể xác minh, không bịa trích dẫn hay chuyện hậu trường. Ảnh trên trang là tranh, sách khắc gỗ đã thuộc phạm vi công cộng và ảnh công trình có giấy phép mở; chúng tôi không dùng tranh manga, bìa truyện hay nhân vật còn bản quyền.</p>
+            <p data-reveal="up" class="border-l-2 border-vermilion pl-5 text-base text-ink/80">Đây là bản thử nghiệm. Nội dung các hồ sơ là dữ liệu mẫu, cần được đối chiếu nguồn trước khi xuất bản chính thức.</p>
+          </div>
+          <div class="mt-10 flex items-center gap-6">
+            <div data-stamp data-reveal="zoom">
+              <div class="mc-stamp"><span>Ban biên tập<b>記録</b>MC</span></div>
+            </div>
+            <p class="font-display text-xl italic">Ban biên tập MANGA CHRONICLE</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" data-section="cta-type" class="bg-vermilion text-paper">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:items-end lg:px-10 lg:py-28 2xl:px-16">
+        <h2 data-split="words" class="font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-7xl lg:col-span-9 2xl:text-[7.5rem]">18 hồ sơ đang chờ được mở.</h2>
+        <div class="lg:col-span-3 lg:justify-self-end">
+          <a href="kho-luu-tru.html" class="group inline-flex min-h-[56px] w-full items-center justify-center gap-3 bg-paper px-8 text-base font-semibold text-ink transition duration-300 hover:bg-ink hover:text-paper active:scale-[.98] sm:w-auto">
+            Bắt đầu khám phá
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" data-section="footer-big" class="overflow-hidden bg-ink text-paper">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 border-b border-paper/15 pb-12 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <p class="font-display text-2xl font-bold">MANGA CHRONICLE</p>
+          <p class="mt-3 max-w-[44ch] leading-relaxed text-paper/75">Mỗi trang truyện là một dấu vết lịch sử. Kho lưu trữ giới thiệu văn hóa manga Nhật Bản, không mua bán.</p>
+        </div>
+        <nav aria-label="Trang" class="lg:col-span-2">
+          <p class="text-sm font-semibold text-paper/60">Trang</p>
+          <ul class="mt-4 grid gap-2">
+            <li><a href="index.html" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Trang chủ</a></li>
+            <li><a href="kho-luu-tru.html" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Kho lưu trữ</a></li>
+            <li><a href="index.html#gioi-thieu" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Giới thiệu</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Chuyên mục" class="lg:col-span-3">
+          <p class="text-sm font-semibold text-paper/60">Chuyên mục</p>
+          <ul class="mt-4 grid gap-2">
+            <li><a href="kho-luu-tru.html?cat=lich-su" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Lịch sử</a></li>
+            <li><a href="kho-luu-tru.html?cat=tac-gia" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Tác giả</a></li>
+            <li><a href="kho-luu-tru.html?cat=tac-pham" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Tác phẩm</a></li>
+            <li><a href="kho-luu-tru.html?cat=nghe-thuat" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Nghệ thuật sáng tác</a></li>
+            <li><a href="kho-luu-tru.html?cat=dia-diem" class="inline-flex min-h-[32px] items-center transition-colors duration-300 hover:text-vermilion-light">Địa điểm</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-paper/60">Liên hệ biên tập</p>
+          <a href="mailto:bientap@mangachronicle.vn" class="mt-4 inline-flex min-h-[32px] items-center break-words transition-colors duration-300 hover:text-vermilion-light">bientap@mangachronicle.vn</a>
+          <p class="mt-3 text-sm text-paper/60">Địa chỉ email mẫu của bản thử nghiệm.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 py-6 text-sm text-paper/60 sm:flex-row sm:justify-between">
+        <p>&copy; 2026 MANGA CHRONICLE. Dữ liệu mẫu, bản thử nghiệm.</p>
+        <p>Ảnh: tư liệu phạm vi công cộng và Creative Commons.</p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="select-none whitespace-nowrap px-2 font-display text-[9.4vw] font-extrabold leading-[0.85] tracking-tighter text-paper/[0.08]">MANGA CHRONICLE</p>
+  </footer>
+
+  <dialog id="tim-kiem" aria-labelledby="tim-kiem-title" class="w-[min(92vw,40rem)] border border-ink/30 bg-paper p-0 text-ink shadow-2xl backdrop:bg-ink/60">
+    <form action="kho-luu-tru.html" method="get" class="p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-4">
+        <p id="tim-kiem-title" class="font-display text-2xl font-bold sm:text-3xl">Tìm trong kho lưu trữ</p>
+        <button type="button" data-modal-close aria-label="Đóng ô tìm kiếm" class="grid h-11 w-11 shrink-0 place-items-center transition duration-300 hover:bg-ink hover:text-paper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <label for="q-global" class="mt-6 block text-sm font-semibold">Tên tác giả, tác phẩm hoặc chủ đề</label>
+      <div class="mt-2 flex flex-col gap-3 sm:flex-row">
+        <input id="q-global" name="q" type="search" autocomplete="off" placeholder="Ví dụ: Tezuka, Hokusai, bảo tàng" class="min-h-[52px] min-w-0 flex-1 border border-ink/40 bg-paper-light px-4 text-base text-ink placeholder:text-archive-deep focus:border-ink focus:outline-none focus:ring-2 focus:ring-vermilion">
+        <button type="submit" class="min-h-[52px] bg-vermilion px-6 font-semibold text-paper transition duration-300 hover:bg-ink">Tìm hồ sơ</button>
+      </div>
+      <p class="mt-4 text-sm text-ink/75">Gợi ý: <a href="kho-luu-tru.html?q=Tezuka" class="underline decoration-vermilion underline-offset-4 hover:text-vermilion">Tezuka</a>, <a href="kho-luu-tru.html?q=Kyoto" class="underline decoration-vermilion underline-offset-4 hover:text-vermilion">Kyoto</a>, <a href="kho-luu-tru.html?q=Hokusai" class="underline decoration-vermilion underline-offset-4 hover:text-vermilion">Hokusai</a></p>
+    </form>
+  </dialog>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/motion.js"></script>
+  <script src="assets/js/atmos.js"></script>
+</body>
+</html>

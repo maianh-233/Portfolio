@@ -1,0 +1,67 @@
+{
+  "slug": "clinique-24-7",
+  "name": "CLINIQUE 24/7",
+  "projectType": "website",
+  "concept": {
+    "topic": "website thẩm mỹ viện",
+    "brand": "CLINIQUE 24/7",
+    "purpose": "Thiết kế website giới thiệu CLINIQUE 24/7, một phòng khám thẩm mỹ và chăm sóc da theo định hướng y khoa hiện đại.\n\nArt direction: Swiss Medical Graphic Design. Sử dụng nền trắng, xanh cobalt, đỏ cam làm điểm nhấn và xám nhạt. Typography sans-serif rõ ràng, lưới bố cục nghiêm ngặt, đường kẻ mảnh, số thứ tự lớn và các khối thông tin trực quan. Không sử dụng phong cách luxury, pastel hay bố cục spa thông thường.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "Ba trang chính:\n\nTrang chủ: Hero với tiêu đề lớn, bố cục bất đối xứng, giới thiệu định hướng chuyên môn, nhóm dịch vụ, quy trình tư vấn và thông tin phòng khám.\n\nDịch vụ thẩm mỹ & Bảng giá: Trình bày dịch vụ theo danh sách đánh số, nhóm điều trị da, chăm sóc da chuyên sâu và thẩm mỹ không phẫu thuật. Mỗi dịch vụ có mô tả, mục đích, thông tin cần biết và giá tham khảo khi có dữ liệu. Thiết kế bảng giá gọn, dễ so sánh.\n\nVề chúng tôi: Giới thiệu phòng khám, đội ngũ, cơ sở vật chất, quy trình tiếp nhận và các tiêu chuẩn chuyên môn được cung cấp.\n\nWebsite song ngữ Việt – Anh, có công tắc chuyển đổi ngôn ngữ. Nút “Đặt lịch tư vấn / Book a Consultation” mở form tư vấn và xuất hiện ở header, cuối trang và dạng nút nổi trên điện thoại.\n\nĐây là website giới thiệu, không bán sản phẩm, không giỏ hàng, không thanh toán. Ưu tiên tính chính xác, dễ đọc, responsive và khả năng tra cứu nhanh. Không tự tạo chứng nhận hoặc số liệu y khoa.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-21T02:24:54.893Z",
+  "updatedAt": "2026-10-21T02:40:42.758Z",
+  "screen": "done",
+  "request": "website thẩm mỹ viện",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\clinique-24-7\\web",
+    "builtAt": "2026-10-21T02:40:28.964Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "55790f18-b10a-43c8-bbad-0c347e2160f2",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\clinique-24-7\\web",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-21T02:40:39.340Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 9
+  }
+}

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en" data-vi-title="Thực đơn — MATCHA ATELIER">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu — MATCHA ATELIER</title>
+  <meta name="description" content="The MATCHA ATELIER menu: matcha lattes, pure Uji teas, matcha cakes, mochi and small sweets made to pair with tea. Flavour notes and key ingredients for every item.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-ivory font-sans text-ink antialiased">
+
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 transition duration-500">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="../index.html" class="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-base font-semibold tracking-[0.12em] sm:gap-3 sm:text-xl sm:tracking-[0.18em]" aria-label="MATCHA ATELIER home"><span class="hanko" aria-hidden="true">抹茶</span>MATCHA ATELIER</a>
+    <nav class="hidden items-center gap-10 text-[15px] lg:flex" aria-label="Main">
+      <a href="../index.html" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" aria-current="page" class="relative py-2 font-bold after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-right after:scale-x-100 after:transition-transform after:duration-500" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex items-center rounded-full border border-ink/25 p-0.5 text-xs font-bold tracking-wider" role="group" aria-label="Language" data-vi-label="Ngôn ngữ">
+        <button type="button" data-lang-btn="en" aria-pressed="true" class="h-10 min-w-[2.75rem] rounded-full px-2 transition duration-300 hover:bg-ink/10 sm:h-9">EN</button>
+        <button type="button" data-lang-btn="vi" aria-pressed="false" class="h-10 min-w-[2.75rem] rounded-full px-2 transition duration-300 hover:bg-ink/10 sm:h-9">VI</button>
+      </div>
+      <a href="../index.html#visit" class="hidden h-10 items-center rounded-full bg-ink px-5 text-sm font-bold text-ivory transition duration-300 hover:bg-matcha-deep active:scale-[.98] sm:inline-flex" data-vi="Ghé quán">Find us</a>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/25 lg:hidden" aria-label="Open menu" data-vi-label="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[1.5rem] bg-ivory p-6 shadow-2xl shadow-ink/20 lg:hidden">
+    <nav class="flex flex-col font-display text-3xl" aria-label="Mobile">
+      <a href="../index.html" class="border-b border-line py-4" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" aria-current="page" class="border-b border-line py-4 italic text-matcha-deep" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" class="border-b border-line py-4" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <a href="../index.html#visit" class="mt-6 flex h-12 w-full items-center justify-center rounded-full bg-ink font-bold text-ivory" data-vi="Ghé quán">Find us</a>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section id="page-hero" data-section="page-hero" class="relative overflow-hidden bg-ivory pb-16 pt-28 lg:pb-24 lg:pt-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl items-end gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-6">
+        <h1 data-split="words" class="pb-2 font-display text-6xl leading-[1.02] tracking-tight sm:text-7xl lg:text-8xl 2xl:text-9xl" data-vi="Thực <em class=&quot;italic text-matcha&quot;>đơn</em>">The <em class="italic text-matcha">menu</em></h1>
+        <p class="mt-8 max-w-md text-[17px] leading-relaxed text-ink/75" data-reveal="up" data-vi="Năm nhóm món, ít đường, nhiều trà. Mỗi món ghi rõ hương vị và nguyên liệu nổi bật.">Five small sections, less sugar, more tea. Every item lists its flavour and its key ingredients.</p>
+      </div>
+      <div class="relative lg:col-span-5 lg:col-start-8">
+        <div class="pointer-events-none absolute -left-24 -bottom-14 hidden lg:block" aria-hidden="true">
+          <div data-float="6" data-float-rotate="2" class="h-32 w-32 rounded-full border border-matcha/60"></div>
+        </div>
+        <ol class="relative font-display text-2xl lg:text-3xl" data-reveal-stagger="80">
+          <li class="flex items-baseline justify-between gap-6 border-t border-ink/20 py-4"><span data-vi="Matcha latte">Matcha lattes</span><span class="font-sans text-sm font-bold text-matcha-deep" data-vi="3 món">3 items</span></li>
+          <li class="flex items-baseline justify-between gap-6 border-t border-ink/20 py-4"><span data-vi="Trà nguyên bản">Pure teas</span><span class="font-sans text-sm font-bold text-matcha-deep" data-vi="3 món">3 items</span></li>
+          <li class="flex items-baseline justify-between gap-6 border-t border-ink/20 py-4"><span data-vi="Bánh matcha">Matcha cakes</span><span class="font-sans text-sm font-bold text-matcha-deep" data-vi="3 món">3 items</span></li>
+          <li class="flex items-baseline justify-between gap-6 border-t border-ink/20 py-4"><span>Mochi</span><span class="font-sans text-sm font-bold text-matcha-deep" data-vi="3 món">3 items</span></li>
+          <li class="flex items-baseline justify-between gap-6 border-y border-ink/20 py-4"><span data-vi="Bánh dùng kèm trà">Tea pairings</span><span class="font-sans text-sm font-bold text-matcha-deep" data-vi="3 món">3 items</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU TABS -->
+  <section id="menu" data-section="features-tabs" class="bg-washi py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16" data-tabs>
+      <div class="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+        <div class="relative flex min-w-max gap-2 border-b border-ink/15" role="tablist">
+          <button type="button" data-tab="lattes" class="h-12 px-4 text-[15px] font-bold text-ink/60 transition duration-300 hover:text-ink [&.is-active]:text-ink"><span data-vi="Matcha latte">Matcha lattes</span></button>
+          <button type="button" data-tab="teas" class="h-12 px-4 text-[15px] font-bold text-ink/60 transition duration-300 hover:text-ink [&.is-active]:text-ink"><span data-vi="Trà nguyên bản">Pure teas</span></button>
+          <button type="button" data-tab="cakes" class="h-12 px-4 text-[15px] font-bold text-ink/60 transition duration-300 hover:text-ink [&.is-active]:text-ink"><span data-vi="Bánh matcha">Matcha cakes</span></button>
+          <button type="button" data-tab="mochi" class="h-12 px-4 text-[15px] font-bold text-ink/60 transition duration-300 hover:text-ink [&.is-active]:text-ink"><span data-vi="Mochi">Mochi</span></button>
+          <button type="button" data-tab="pairings" class="h-12 px-4 text-[15px] font-bold text-ink/60 transition duration-300 hover:text-ink [&.is-active]:text-ink"><span data-vi="Bánh dùng kèm trà">Tea pairings</span></button>
+          <span data-tab-indicator class="bottom-0 h-0.5 bg-matcha-deep"></span>
+        </div>
+      </div>
+
+      <!-- Lattes -->
+      <div data-tab-panel="lattes" class="mt-14 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="90">
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Matcha_Latte_with_Seasalt_Cream.jpg/1280px-Matcha_Latte_with_Seasalt_Cream.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="1707" alt="Matcha latte topped with a layer of sea salt cream" data-vi-alt="Matcha latte phủ lớp kem muối biển" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Matcha kem muối">Sea Salt Cream Matcha</h3><p class="shrink-0 font-bold text-matcha-deep">79,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Lớp kem mặn nhẹ trên nền matcha tươi, vị cỏ non.">A lightly salted cream over bright, grassy matcha.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="matcha Uji, kem muối biển Cần Giờ, sữa tươi">Uji matcha, Can Gio sea salt cream, fresh milk</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Iced_Hojicha_Latte_and_Iced_Matcha_Latte_-_Rawlab_Juice_%26_Tea_2025-07-12.jpg/1280px-Iced_Hojicha_Latte_and_Iced_Matcha_Latte_-_Rawlab_Juice_%26_Tea_2025-07-12.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="1700" alt="An iced hojicha latte next to an iced matcha latte" data-vi-alt="Hojicha latte đá bên cạnh matcha latte đá" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Hojicha latte đá">Iced Hojicha Latte</h3><p class="shrink-0 font-bold text-matcha-deep">69,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Hương rang, gợi caramel, ít caffeine cho buổi chiều.">Roasted and caramel-like, gentle on caffeine for the afternoon.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="hojicha Kyoto, sữa yến mạch hoặc sữa tươi">Kyoto hojicha, oat or fresh milk</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Matcha_latte_in_tall_glass.jpg/1280px-Matcha_latte_in_tall_glass.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="1920" alt="A layered iced matcha latte in a tall glass" data-vi-alt="Matcha latte đá phân tầng trong ly cao" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Matcha latte đá">Iced Matcha Latte</h3><p class="shrink-0 font-bold text-matcha-deep">72,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Sạch vị, béo nhẹ, rót tầng trên đá viên.">Clean and creamy, poured in layers over ice.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="matcha Uji, sữa tươi Đà Lạt, siro đường thốt nốt">Uji matcha, Da Lat milk, palm sugar syrup</span></p>
+        </article>
+      </div>
+
+      <!-- Pure teas -->
+      <div data-tab-panel="teas" class="mt-14 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Secangkir_Matcha.jpg/1280px-Secangkir_Matcha.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="1707" alt="A cup of freshly whisked matcha with fine foam" data-vi-alt="Một chén matcha vừa đánh với lớp bọt mịn" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Usucha (trà loãng)">Usucha</h3><p class="shrink-0 font-bold text-matcha-deep">65,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Trà loãng truyền thống: tươi, vị rau xanh, bọt mềm.">Traditional thin tea: bright, vegetal, with a soft foam.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="2 g matcha Uji thượng hạng, 70 ml nước 75°C">2 g ceremonial Uji matcha, 70 ml water at 75°C</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Matcha_with_wagashi_by_rhosoi_in_Kyoto.jpg/1280px-Matcha_with_wagashi_by_rhosoi_in_Kyoto.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="A bowl of matcha served with a small wagashi" data-vi-alt="Bát matcha dùng kèm một chiếc wagashi nhỏ" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Koicha &amp; bánh khô">Koicha &amp; Higashi</h3><p class="shrink-0 font-bold text-matcha-deep">120,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Trà đặc, umami sâu, dùng cùng một viên bánh đường khô.">Thick tea with deep umami, served with a dry sugar sweet.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="4 g matcha hái vụ đầu, đường wasanbon">4 g first-harvest matcha, wasanbon sugar</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Maccha_o_Kinkaku-ji_yn_Kyoto.JPG/1280px-Maccha_o_Kinkaku-ji_yn_Kyoto.JPG" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="Matcha served on a tray with a seasonal sweet" data-vi-alt="Matcha bày trên khay cùng bánh theo mùa" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Set trà thất">Tea House Set</h3><p class="shrink-0 font-bold text-matcha-deep">95,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Một bát usucha và một bánh theo mùa, như trong trà thất.">One bowl of usucha and a seasonal sweet, the way a tea room serves it.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="matcha Uji, wagashi chọn theo tuần">Uji matcha, wagashi chosen weekly</span></p>
+        </article>
+      </div>
+
+      <!-- Cakes -->
+      <div data-tab-panel="cakes" class="mt-14 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Matcha_Cheese_Cake.jpg/1280px-Matcha_Cheese_Cake.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="A slice of matcha cheesecake" data-vi-alt="Lát bánh phô mai matcha" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Cheesecake matcha">Matcha Cheesecake</h3><p class="shrink-0 font-bold text-matcha-deep">82,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Mịn, béo, đắng nhẹ ở hậu vị.">Silky and rich, with a gentle bitter finish.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="cream cheese, matcha Uji, đế bánh quy mè đen">cream cheese, Uji matcha, black sesame crust</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Matcha_Tiramisu_Cake.jpg/1280px-Matcha_Tiramisu_Cake.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="1707" alt="Matcha tiramisu dusted with green tea powder" data-vi-alt="Tiramisu matcha rắc bột trà xanh" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Tiramisu matcha">Matcha Tiramisu</h3><p class="shrink-0 font-bold text-matcha-deep">85,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Kem mascarpone nhẹ xen lớp bánh thấm trà.">Light mascarpone between layers soaked in tea.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="mascarpone, bánh ladyfinger, trà usucha">mascarpone, ladyfingers, usucha soak</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Red_Bean_Matcha_Layer_Cake.jpg/1280px-Red_Bean_Matcha_Layer_Cake.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="Matcha sponge cake layered with red bean" data-vi-alt="Bánh bông lan matcha nhiều lớp với đậu đỏ" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Bánh lớp đậu đỏ matcha">Azuki Matcha Layer</h3><p class="shrink-0 font-bold text-matcha-deep">78,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Bông lan mềm, kem trà và đậu đỏ ngọt bùi.">Soft sponge, tea cream and nutty sweet red bean.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="bột mì Nhật, kem tươi, đậu đỏ Hokkaido">Japanese flour, fresh cream, Hokkaido azuki</span></p>
+        </article>
+      </div>
+
+      <!-- Mochi -->
+      <div data-tab-panel="mochi" class="mt-14 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Maccha_tea_azuki_bean_paste_mochi.jpg/1280px-Maccha_tea_azuki_bean_paste_mochi.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="Mochi with azuki bean paste served with matcha" data-vi-alt="Mochi nhân đậu đỏ dùng kèm matcha" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Mochi đậu đỏ">Azuki Mochi</h3><p class="shrink-0 font-bold text-matcha-deep">45,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Vỏ dẻo, nhân đậu đỏ nấu chậm, ngọt vừa.">Chewy skin around slow-cooked red bean, softly sweet.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="gạo nếp shiratama, đậu đỏ, muối biển">shiratama rice flour, azuki, sea salt</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Green_Wagashi_03.jpg/1280px-Green_Wagashi_03.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="A green matcha mochi sweet" data-vi-alt="Bánh mochi matcha màu xanh" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Daifuku matcha">Matcha Daifuku</h3><p class="shrink-0 font-bold text-matcha-deep">49,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Vỏ trà xanh, nhân kem matcha và đậu trắng.">Tea-green skin filled with matcha cream and white bean.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="bột nếp, matcha Uji, đậu trắng shiro-an">glutinous rice, Uji matcha, shiro-an white bean</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Green_Wagashi_04.jpg/1280px-Green_Wagashi_04.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="A soft green mochi on a plate" data-vi-alt="Bánh mochi xanh mềm trên đĩa" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Mochi ngải cứu">Yomogi Mochi</h3><p class="shrink-0 font-bold text-matcha-deep">45,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Thơm thảo mộc, hơi đất, rất hợp trà đặc.">Herbal and earthy, made for a bowl of thick tea.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="lá ngải cứu non, bột nếp, đậu đỏ">young mugwort, rice flour, azuki</span></p>
+        </article>
+      </div>
+
+      <!-- Pairings -->
+      <div data-tab-panel="pairings" class="mt-14 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Matsukaze.jpg/1280px-Matsukaze.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="Matsukaze, a baked Kyoto sweet topped with poppy seeds" data-vi-alt="Bánh nướng Matsukaze của Kyoto rắc hạt anh túc" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl">Matsukaze</h3><p class="shrink-0 font-bold text-matcha-deep">42,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Bánh nướng kiểu Kyoto, vị miso trắng mặn ngọt.">A baked Kyoto sponge with a sweet-savoury white miso note.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="miso trắng, bột mì, hạt anh túc">white miso, wheat flour, poppy seeds</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Minaduki_001.jpg/1280px-Minaduki_001.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="850" alt="Minazuki, triangular rice jelly topped with red beans" data-vi-alt="Bánh Minazuki hình tam giác phủ đậu đỏ" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl">Minazuki</h3><p class="shrink-0 font-bold text-matcha-deep">45,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Thạch gạo mát lạnh hình tam giác, phủ đậu đỏ.">Cool triangular rice jelly topped with red beans.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="bột gạo, đường thốt nốt, đậu đỏ">rice flour, palm sugar, azuki</span></p>
+        </article>
+        <article class="group">
+          <div class="washi-mount"><div class="relative aspect-[4/5] overflow-hidden bg-sage/40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Japanese_cake_and_green_tea.jpg/1280px-Japanese_cake_and_green_tea.jpg" referrerpolicy="no-referrer" loading="lazy" width="1280" height="960" alt="A small Japanese cake served with a cup of green tea" data-vi-alt="Bánh Nhật nhỏ dùng kèm chén trà xanh" class="photo-tone h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+          </div></div>
+          <div class="mt-7 flex items-baseline justify-between gap-4"><h3 class="font-display text-2xl" data-vi="Đĩa bánh dùng kèm trà">Afternoon Pairing</h3><p class="shrink-0 font-bold text-matcha-deep">89,000 ₫</p></div>
+          <p class="mt-2 text-base leading-relaxed text-ink/75" data-vi="Bánh trong ngày và một ấm sencha, gợi ý cho hai người.">Cake of the day with a pot of sencha, sized for two.</p>
+          <p class="mt-3 text-sm text-ink/65"><span class="font-bold text-ink" data-vi="Nguyên liệu:">Made with:</span> <span data-vi="bánh theo ngày, sencha Shizuoka">daily cake, Shizuoka sencha</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEA NOTES -->
+  <section id="notes" data-section="faq" class="bg-ivory py-24 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <h2 class="font-display text-4xl leading-[1.1] tracking-tight lg:text-5xl" data-reveal="up" data-vi="Vài điều trước khi gọi món">Good to know before you order</h2>
+        <div class="mt-10 hidden lg:block" aria-hidden="true">
+          <div data-float="6" class="h-24 w-24 rounded-full border border-matcha/60"></div>
+        </div>
+      </div>
+      <div class="lg:col-span-7 lg:col-start-6" data-accordion>
+        <div data-acc-item data-open class="border-t border-ink/20">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl lg:text-2xl"><span data-vi="Có thể đổi sữa không?">Can I swap the milk?</span><span data-acc-icon class="text-2xl text-matcha-deep transition duration-300">+</span></button>
+          <div data-acc-panel><div class="max-w-prose pb-6 text-[17px] leading-relaxed text-ink/75" data-vi="Có. Mọi latte đều đổi được sang sữa yến mạch hoặc sữa hạnh nhân, không tính thêm phí.">Yes. Every latte can be made with oat or almond milk at no extra charge.</div></div>
+        </div>
+        <div data-acc-item class="border-t border-ink/20">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl lg:text-2xl"><span data-vi="Món nào ít caffeine?">Which drinks are low in caffeine?</span><span data-acc-icon class="text-2xl text-matcha-deep transition duration-300">+</span></button>
+          <div data-acc-panel><div class="max-w-prose pb-6 text-[17px] leading-relaxed text-ink/75" data-vi="Hojicha được rang nên ít caffeine hơn matcha, phù hợp cho buổi tối.">Hojicha is roasted, so it carries less caffeine than matcha. It is our evening suggestion.</div></div>
+        </div>
+        <div data-acc-item class="border-t border-ink/20">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl lg:text-2xl"><span data-vi="Có thể giảm đường không?">Can you make it less sweet?</span><span data-acc-icon class="text-2xl text-matcha-deep transition duration-300">+</span></button>
+          <div data-acc-panel><div class="max-w-prose pb-6 text-[17px] leading-relaxed text-ink/75" data-vi="Đồ uống mặc định đã ít ngọt. Bạn có thể chọn 50% đường hoặc không đường khi gọi món.">Our drinks are lightly sweet by default. Ask for half sugar or none when you order.</div></div>
+        </div>
+        <div data-acc-item class="border-y border-ink/20">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl lg:text-2xl"><span data-vi="Thông tin dị ứng">Allergy information</span><span data-acc-icon class="text-2xl text-matcha-deep transition duration-300">+</span></button>
+          <div data-acc-panel><div class="max-w-prose pb-6 text-[17px] leading-relaxed text-ink/75" data-vi="Bếp có dùng sữa, trứng, lúa mì và mè. Hãy báo nhân viên để được tư vấn món phù hợp.">Our kitchen handles dairy, eggs, wheat and sesame. Tell our team and we will guide you to a safe choice.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" data-section="cta-type" class="bg-sage/40 py-24 lg:py-32">
+    <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10 2xl:px-16">
+      <h2 class="max-w-4xl font-display text-5xl leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl 2xl:text-8xl" data-reveal="up" data-vi="Ngon nhất khi <em class=&quot;italic text-matcha-deep&quot;>thưởng thức tại quán</em>">Best tasted <em class="italic text-matcha-deep">in person</em></h2>
+      <a href="../index.html#visit" class="group inline-flex h-14 shrink-0 items-center justify-center gap-3 rounded-full bg-ink px-8 font-bold text-ivory transition duration-300 hover:bg-matcha-deep active:scale-[.98]">
+        <span data-vi="Ghé quán">Find us</span>
+        <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" data-section="footer-big" class="bg-ink pt-20 text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl italic" data-vi="Một tách matcha, một khoảnh khắc lặng.">One bowl, one quiet moment.</p>
+      </div>
+      <nav aria-label="Footer">
+        <p class="text-sm font-bold text-sage" data-vi="Trang">Pages</p>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li><a href="../index.html" class="transition duration-300 hover:text-sage" data-vi="Trang chủ">Home</a></li>
+          <li><a href="menu.html" class="transition duration-300 hover:text-sage" data-vi="Thực đơn">Menu</a></li>
+          <li><a href="about.html" class="transition duration-300 hover:text-sage" data-vi="Về chúng tôi">About</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="text-sm font-bold text-sage" data-vi="Ghé quán">Visit</p>
+        <p class="mt-4 text-[15px] leading-relaxed text-ivory/85">18 Ngo Thoi Nhiem, District 3<br>Ho Chi Minh City</p>
+        <p class="mt-3 text-[15px] text-ivory/85" data-vi="Mở cửa hằng ngày từ 7:30">Open daily from 7:30</p>
+      </div>
+      <div>
+        <p class="text-sm font-bold text-sage" data-vi="Liên hệ">Contact</p>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li><a href="tel:+842839304417" class="transition duration-300 hover:text-sage">+84 28 3930 4417</a></li>
+          <li><a href="mailto:hello@matchaatelier.vn" class="break-words transition duration-300 hover:text-sage">hello@matchaatelier.vn</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="mt-20 select-none overflow-hidden whitespace-nowrap font-display text-[10.5vw] leading-[0.9] tracking-tight text-ivory/90 2xl:text-[10rem]" aria-hidden="true">MATCHA ATELIER</p>
+    <div class="flex flex-col gap-2 border-t border-ivory/15 py-6 text-sm text-ivory/70 sm:flex-row sm:justify-between">
+      <p>© 2026 MATCHA ATELIER</p>
+      <a href="#top" class="transition duration-300 hover:text-sage" data-vi="Lên đầu trang">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gửi yêu cầu đổi trả · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-007" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-007 Gửi yêu cầu đổi trả (BR-BOOK-011): chọn sản phẩm + số lượng, lý do, hình thức, mô tả, video bắt buộc, ảnh ≤ 5.
+   * Tạo DOC-BOOK-RETURN ở Workflow.initial (Chờ xử lý), mã DT-{YYYY}-{00000}; gắn return_id vào đơn. ?id=<orderId> (mặc định đơn DH-2026-00008). */
+  (function () {
+    if (!Perm.role() || Perm.role() === 'ROLE-01') { location.replace(App.loginHref()); return; }
+    Layout.mount({ title: 'Gửi yêu cầu đổi trả', breadcrumb: [['Đơn hàng của tôi', 'pages/don-hang-cua-toi.html'], ['Chi tiết đơn', null], ['Yêu cầu đổi trả']], account: 'orders' }, function (main) {
+      var U = Perm.url, esc = UI.esc, R = UI.rules, me = App.me();
+      var o = DemoStore.get('orders', App.param('id') || 'dh-2026-00008');
+      if (!o || o.ownerId !== me.id) { main.innerHTML = '<div class="rounded-xl border border-neutral-200 bg-white">' + UI.emptyState({ title: 'Không tìm thấy đơn hàng', action: UI.button({ label: 'Về đơn hàng của tôi', href: U('pages/don-hang-cua-toi.html') }) }) + '</div>'; return; }
+      var detail = U('pages/chi-tiet-don.html?id=' + o.id);
+      var deadline = o.thoi_diem_giao ? new Date(o.thoi_diem_giao).getTime() + 24 * 3600e3 : 0;
+      var ok = App.docOf(o) === 'DOC-BOOK-ORDER' && o.state === 'DELIVERED' && !o.return_id && deadline > Date.now();
+      if (!ok) { main.innerHTML = '<div class="rounded-xl border border-neutral-200 bg-white">' + UI.emptyState({ title: 'Đơn hàng không còn trong thời hạn / không thuộc diện đổi trả', action: UI.button({ label: 'Về đơn hàng', href: detail }) }) + '</div>'; return; }
+      var paid = o.trang_thai_thanh_toan === 'DA_THANH_TOAN';
+      var sel = o.items.map(function (it) { return { on: false, qty: 1, max: it.so_luong }; });
+      var dirty = false;
+      function left() { var ms = deadline - Date.now(), h = Math.floor(ms / 3600e3), m = Math.floor((ms % 3600e3) / 60e3); return h + ' giờ ' + (m < 10 ? '0' : '') + m + ' phút'; }
+
+      main.innerHTML = UI.pageHeader({ title: 'Yêu cầu đổi trả: ' + esc(o.code) }) + '<div class="max-w-3xl" data-wrap>' + UI.skeleton(5) + '</div>';
+      setTimeout(function () {
+        main.querySelector('[data-wrap]').innerHTML =
+          UI.alert({ tone: 'warning', title: 'Còn ' + left() + ' để gửi yêu cầu', text: 'Chỉ nhận đổi trả khi giao nhầm hoặc hàng lỗi, trong vòng 1 ngày sau khi nhận. Sản phẩm phải còn nguyên, chưa xé / mở. Vui lòng gửi video quay lúc mở hàng.' }) +
+          '<form novalidate class="mt-5 flex flex-col gap-5" data-form><div data-form-summary></div>' +
+          UI.card({ body: '<fieldset data-field="items"><legend class="mb-3 text-lg font-bold text-neutral-800">1. Sản phẩm cần đổi / trả <span class="text-danger-600">*</span></legend><div data-items></div><p class="mt-2 hidden items-center gap-1 text-xs font-bold text-danger-700" data-err id="err-items"></p></fieldset>' }) +
+          UI.card({ body: UI.fieldGroup({ title: '2. Lý do & hình thức', fields: [
+            UI.field({ name: 'ly_do', label: 'Lý do', type: 'radio-cards', required: true, options: [{ value: 'GIAO_NHAM', label: 'Giao nhầm sản phẩm', icon: 'package' }, { value: 'HANG_LOI', label: 'Hàng bị lỗi', icon: 'triangle-alert' }] }),
+            UI.field({ name: 'hinh_thuc', label: 'Bạn muốn', type: 'radio-cards', required: true, options: [{ value: 'DOI_HANG', label: 'Đổi hàng', icon: 'repeat' }, { value: 'TRA_HANG', label: paid ? 'Trả hàng, hoàn tiền' : 'Trả hàng', icon: 'hand-coins', desc: paid ? '' : 'Đơn chưa thanh toán nên không phát sinh hoàn tiền' }] }),
+            UI.field({ name: 'mo_ta', label: 'Mô tả vấn đề', type: 'textarea', required: true, rows: 4, maxlength: 1000, placeholder: 'Ví dụ: nhận vị gà thay vì vị cá ngừ, gói còn nguyên' })] }) }) +
+          UI.card({ body: UI.fieldGroup({ title: '3. Video & ảnh', fields: [
+            UI.fileUpload({ name: 'video', label: 'Video quay lúc mở hàng', kind: 'video', required: true, maxMB: 100, hint: 'MP4 hoặc MOV, tối đa 100MB', sizeMsg: 'Video tối đa 100MB (MP4, MOV); ảnh tối đa 5MB' }),
+            UI.fileUpload({ name: 'anh', label: 'Ảnh sản phẩm', optional: true, kind: 'image', multiple: true, max: 5, maxMB: 5, hint: 'Tối đa 5 ảnh, mỗi ảnh ≤ 5MB', sizeMsg: 'Video tối đa 100MB (MP4, MOV); ảnh tối đa 5MB' })] }) }) +
+          '<div class="flex items-center justify-between gap-3">' + UI.button({ label: 'Hủy bỏ', variant: 'ghost', attrs: { 'data-cancel': '' } }) + UI.button({ label: 'Gửi yêu cầu', icon: 'send', size: 'lg', attrs: { 'data-submit': '', 'data-permission': 'BOOK.MY_RETURN.CREATE' } }) + '</div></form>';
+        paintItems();
+        var form = main.querySelector('[data-form]');
+        form.addEventListener('input', function () { dirty = true; });
+        form.addEventListener('change', function (e) { dirty = true; var c = e.target.closest('[data-pick]'); if (c) { sel[+c.getAttribute('data-pick')].on = c.checked; setItemsErr(''); } if (e.target.name === 'ly_do' || e.target.name === 'hinh_thuc') UI.setError(form, e.target.name, ''); });
+        form.addEventListener('qtychange', function (e) { var q = e.target.closest('[data-rq]'); if (q) sel[+q.getAttribute('data-rq')].qty = e.detail.value; });
+        UI.stickyBar('<div class="flex gap-2">' + UI.button({ label: 'Gửi yêu cầu', icon: 'send', full: true, attrs: { 'data-submit': '' } }) + '</div>', { watch: form.querySelector('[data-submit]') });
+      }, 400);
+
+      function paintItems() {
+        UI.lineItems(main.querySelector('[data-items]'), { rows: o.items.map(function (it, i) { return Object.assign({ i: i }, it); }), columns: [
+          { key: 'pick', label: 'Chọn', type: 'custom', width: 'w-14', render: function (it) { return '<input type="checkbox" data-pick="' + it.i + '" ' + (sel[it.i].on ? 'checked' : '') + ' class="size-5 accent-primary-500" aria-label="Chọn ' + esc(it.ten_hang) + '">'; } },
+          { key: 'name', label: 'Sản phẩm', type: 'custom', render: function (it) { return '<span class="flex items-center gap-3"><span class="size-12 shrink-0 overflow-hidden rounded-md bg-neutral-100">' + UI.img({ src: it.anh, alt: '' }) + '</span><span class="min-w-0"><span class="block font-bold text-neutral-800">' + esc(it.ten_hang) + '</span><span class="block text-xs text-neutral-600">' + esc(it.ten_bien_the) + ' · đã mua ' + it.so_luong + '</span></span></span>'; } },
+          { key: 'qty', label: 'Số lượng', type: 'custom', render: function (it) { return UI.quantityStepper({ value: sel[it.i].qty, max: it.so_luong, size: 'sm', limitMsg: 'Số lượng không được lớn hơn số đã mua', label: 'Số lượng đổi trả ' + it.ten_hang, attrs: { 'data-rq': it.i } }); } }] });
+      }
+      function setItemsErr(msg) { var e = main.querySelector('#err-items'); if (!e) return; e.innerHTML = msg ? UI.icon('triangle-alert', 'size-3.5') + '<span>' + esc(msg) + '</span>' : ''; e.classList.toggle('hidden', !msg); e.classList.toggle('flex', !!msg); }
+
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('[data-cancel]')) {
+          if (!dirty) { location.href = detail; return; }
+          UI.confirm({ title: 'Rời trang?', message: 'Bạn có thay đổi chưa lưu. Rời trang?', confirmLabel: 'Rời trang', danger: true }).then(function (ok) { if (ok) location.href = detail; });
+          return;
+        }
+        var b = e.target.closest('[data-submit]'); if (b && !b.disabled) submit(b);
+      });
+      function submit(btn) {
+        var form = main.querySelector('[data-form]');
+        var picked = sel.filter(function (s) { return s.on; });
+        var okItems = picked.length > 0 && picked.every(function (s) { return s.qty >= 1 && s.qty <= s.max; });
+        var valid = UI.validate(form, {
+          ly_do: [R.required('Vui lòng chọn lý do')], hinh_thuc: [R.required('Vui lòng chọn hình thức đổi trả')], mo_ta: [R.required('Vui lòng mô tả vấn đề')],
+          video: [R.custom(function (v) { return v && v.length > 0; }, 'Vui lòng tải video quay lúc mở hàng')]
+        });
+        setItemsErr(!picked.length ? 'Vui lòng chọn sản phẩm cần đổi / trả' : okItems ? '' : 'Số lượng không được lớn hơn số đã mua');
+        if (!okItems) { main.querySelector('[data-field="items"]').scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
+        if (!valid) return;
+        var d = UI.formData(form);
+        // Giả lập tải video: "Đang tải video… n%"
+        var buttons = document.querySelectorAll('[data-submit]'); buttons.forEach(function (x) { x.disabled = true; });
+        var pct = 0, t = setInterval(function () {
+          pct = Math.min(100, pct + 10);
+          buttons.forEach(function (x) { x.innerHTML = UI.icon('loader-circle', 'animate-spin') + '<span>Đang tải video… ' + pct + '%</span>'; });
+          if (pct < 100) return;
+          clearInterval(t);
+          var docId = 'DOC-BOOK-RETURN', now = new Date().toISOString();
+          var code = Workflow.nextCode(docId, DemoStore.list('returns').map(function (r) { return r.code; }));
+          var rec = { id: code.toLowerCase(), code: code, docId: docId, state: Workflow.initial(docId),
+            history: [{ at: now, role: 'ROLE-02', roleName: Perm.roleName(), by: o.ho_ten_nhan, event: 'Tạo mới', from: null, to: Workflow.initial(docId), note: '' }],
+            orderId: o.id, orderCode: o.code, ownerId: me.id, customerId: o.customerId, ho_ten: o.ho_ten_nhan, so_dien_thoai: o.so_dien_thoai_nhan,
+            ly_do: d.ly_do, hinh_thuc: d.hinh_thuc, mo_ta: d.mo_ta, tao_luc: now, video: (d.video[0] || {}).url || '', anh: (d.anh || []).map(function (x) { return x.url; }), ket_qua: '', ly_do_tu_choi: '', da_hoan_tien: false,
+            items: sel.map(function (s, i) { return s.on ? { ten: o.items[i].ten_hang, bien_the: o.items[i].ten_bien_the, so_luong: s.qty, gia: o.items[i].don_gia, variantId: o.items[i].variantId || null, comboId: o.items[i].comboId || null } : null; }).filter(Boolean) };
+          DemoStore.insert('returns', rec);
+          DemoStore.update('orders', o.id, { return_id: rec.id });
+          UI.toast('Đã gửi yêu cầu đổi trả ' + code + '. Cửa hàng sẽ kiểm tra và phản hồi sớm.', 'success');
+          setTimeout(function () { location.href = detail; }, 1200);
+        }, 200);
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

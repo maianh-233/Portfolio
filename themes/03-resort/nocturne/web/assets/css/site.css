@@ -1,0 +1,82 @@
+/* NOCTURNE — biến dùng chung + vài style Tailwind không làm được */
+:root {
+  --midnight: #153C40;
+  --petrol: #28545A;
+  --plum: #594653;
+  --mist: #B8C3C4;
+  --moon: #E7E8E2;
+  --charcoal: #20282A;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ui-accent: #E7E8E2;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: var(--font-body);
+  background: var(--charcoal);
+  color: var(--moon);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--petrol); color: var(--moon); }
+
+/* Nhãn section: sans in hoa, nhỏ, giãn chữ */
+.label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+}
+
+/* Ý tưởng thị giác: bóng phản chiếu mặt nước dưới tiêu đề lớn (chỉ trình duyệt hỗ trợ) */
+.reflect {
+  -webkit-box-reflect: below -0.12em linear-gradient(to bottom, transparent 58%, rgba(231, 232, 226, .14));
+}
+
+/* Vạch "waterline" mảnh Silver Mist */
+.waterline {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(184, 195, 196, .0), rgba(184, 195, 196, .55) 18%, rgba(184, 195, 196, .55) 82%, rgba(184, 195, 196, 0));
+}
+
+/* Hero: phóng ảnh rất nhẹ một lần khi tải, không lặp */
+.kenburns { animation: nc-settle 9s cubic-bezier(.16, 1, .3, 1) both; transform-origin: 50% 60%; }
+@keyframes nc-settle { from { transform: scale(1.08); } to { transform: scale(1); } }
+
+/* Hover ảnh tinh tế + lớp phủ màu nước */
+.tint { position: relative; }
+.tint::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(21, 60, 64, 0) 55%, rgba(21, 60, 64, .38));
+  transition: opacity 1.2s cubic-bezier(.16, 1, .3, 1);
+}
+.group:hover .tint::after { opacity: .45; }
+
+/* Ảnh hơi sáng so với tông đêm: hạ sáng + phủ xanh cổ vịt nhẹ (lớp phủ màu CSS theo BA) */
+.nightgrade { position: relative; }
+.nightgrade img { filter: brightness(.6) saturate(.7) contrast(1.06); }
+.nightgrade::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: var(--midnight); mix-blend-mode: multiply; opacity: .55;
+}
+
+/* Ảnh lỗi: ẩn ảnh, khung giữ nền màu thương hiệu */
+img.is-broken { opacity: 0; }
+
+/* Drop cap đoạn mở đầu */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left; font-size: 4.2em; line-height: .82; padding: .06em .12em 0 0;
+  color: var(--midnight);
+}
+
+:focus-visible { outline: 1px solid var(--moon); outline-offset: 4px; }
+.on-light :focus-visible { outline-color: var(--midnight); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .kenburns { animation: none !important; transform: none !important; }
+  .tint::after { transition: none !important; }
+}

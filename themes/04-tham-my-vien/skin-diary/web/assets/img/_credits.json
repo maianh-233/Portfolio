@@ -1,0 +1,182 @@
+[
+  {
+    "file": "assets/img/home-manifesto-portrait.jpg",
+    "purpose": "index.html — manifesto section portrait",
+    "source": "openverse",
+    "id": "openverse-00e4fd71-a531-4662-8588-f833ea1de377",
+    "title": "Thinking Woman",
+    "creator": "Kristin Hardwick",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/thinking-woman-SW6EAAU4R5"
+  },
+  {
+    "file": "assets/img/home-skin-care.jpg",
+    "purpose": "index.html — Skin Care category teaser",
+    "source": "openverse",
+    "id": "openverse-4c4cd71b-13a0-4ed7-9775-0bacfaff770f",
+    "title": "Beauty Skincare",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/beauty-skincare-LRSAT4NCLS"
+  },
+  {
+    "file": "assets/img/home-skin-renewal.jpg",
+    "purpose": "index.html — Skin Renewal category teaser",
+    "source": "openverse",
+    "id": "openverse-ff075f38-71f8-4dc0-b930-5e383c2bc8a7",
+    "title": "Woman Skin",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/woman-skin-HIZNJOUVSY"
+  },
+  {
+    "file": "assets/img/journal-serum.webp",
+    "purpose": "index.html — journal article serum",
+    "source": "openverse",
+    "id": "openverse-a4480ec7-aec4-48b7-95e2-849975e71af2",
+    "title": "Dropper bottle, blank retro label",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/11515770/dropper-bottle-blank-retro-label"
+  },
+  {
+    "file": "assets/img/home-cover-portrait.jpg",
+    "purpose": "index.html — hero magazine cover portrait",
+    "source": "openverse",
+    "id": "openverse-5b4952c5-d9a9-400f-b04c-bc18f6a11704",
+    "title": "Portrait Girl",
+    "creator": "Alexander Krivitskiy",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/portrait-girl-LGWI9MW3KR"
+  },
+  {
+    "file": "assets/img/home-skin-treatment.jpg",
+    "purpose": "index.html — Skin Treatment category teaser (laser)",
+    "source": "openverse",
+    "id": "openverse-ce8ddddb-39dd-418e-8a1b-cd2c88a41678",
+    "title": "CO2 Fractional Laser on Cheek",
+    "creator": "ama regen med",
+    "license": "CC BY-SA 2.0",
+    "page": "https://www.flickr.com/photos/198265846@N07/52883039705"
+  },
+  {
+    "file": "assets/img/svc-signature-facial.jpg",
+    "purpose": "pages/services.html — Signature Facial",
+    "source": "openverse",
+    "id": "openverse-a47b14f3-7760-49ed-8b48-0932673ebf9d",
+    "title": "Woman Skin",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/woman-skin-ETWN6UD9US"
+  },
+  {
+    "file": "assets/img/svc-hydration.jpg",
+    "purpose": "pages/services.html — Deep Hydration ritual",
+    "source": "openverse",
+    "id": "openverse-7e40b13a-384d-4d54-a890-15a5bc7a984d",
+    "title": "Woman Skin",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/woman-skin-VEP8AYJMNI"
+  },
+  {
+    "file": "assets/img/svc-peel.jpg",
+    "purpose": "pages/services.html — Chemical peel (Skin Renewal)",
+    "source": "openverse",
+    "id": "openverse-399a0998-3426-46ce-9cbd-db90086c77be",
+    "title": "Woman Skin",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/woman-skin-0CAUJR8SRJ"
+  },
+  {
+    "file": "assets/img/svc-microneedling.jpg",
+    "purpose": "pages/services.html — Microneedling (Skin Renewal)",
+    "source": "openverse",
+    "id": "openverse-edda94c6-2cb5-4f7b-a42a-fc28cac16531",
+    "title": "Woman Skin",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/woman-skin-ZD257KAS8U"
+  },
+  {
+    "file": "assets/img/svc-laser.jpg",
+    "purpose": "pages/services.html — Fractional laser (Skin Treatment)",
+    "source": "openverse",
+    "id": "openverse-80c5e24b-02e0-45c3-823e-0359215480cb",
+    "title": "CO2 Fractional Laser on Forehead",
+    "creator": "ama regen med",
+    "license": "CC BY-SA 2.0",
+    "page": "https://www.flickr.com/photos/198265846@N07/52883039500"
+  },
+  {
+    "file": "assets/img/svc-clarity.jpg",
+    "purpose": "pages/services.html — Clarity clinic (Skin Treatment)",
+    "source": "openverse",
+    "id": "openverse-7744ca05-7db0-4948-95c3-c9d96298bae3",
+    "title": "Woman Skin",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/woman-skin-G4O6VGZING"
+  },
+  {
+    "file": "assets/img/about-treatment-room.jpg",
+    "purpose": "pages/about.html — treatment room space",
+    "source": "openverse",
+    "id": "openverse-db3b0d7e-cda7-4d4e-9bdd-f5273821174e",
+    "title": "Spa treatment room",
+    "creator": "Malmaison Hotels & Brasseries",
+    "license": "CC BY-ND 2.0",
+    "page": "https://www.flickr.com/photos/63928727@N06/51294903415"
+  },
+  {
+    "file": "assets/img/about-studio-room.jpg",
+    "purpose": "pages/about.html — studio room",
+    "source": "openverse",
+    "id": "openverse-5ae5c826-42b0-44fa-b859-a3e57b3ca933",
+    "title": "Mal Spa - Treatment Room 1",
+    "creator": "Malmaison Hotels & Brasseries",
+    "license": "CC BY-ND 2.0",
+    "page": "https://www.flickr.com/photos/63928727@N06/54501467035"
+  },
+  {
+    "file": "assets/img/about-team-founder.jpg",
+    "purpose": "pages/about.html — team: founder dermatologist",
+    "source": "openverse",
+    "id": "openverse-63a01bc9-270c-4f69-a652-0dadf6d2a77c",
+    "title": "Female Doctor",
+    "creator": "Direct Media",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/female-doctor-WINC1QDMT4"
+  },
+  {
+    "file": "assets/img/journal-spf.jpg",
+    "purpose": "index.html — journal article SPF",
+    "source": "openverse",
+    "id": "openverse-24130565-32c1-4739-86af-360337a0ada4",
+    "title": "50-50 protection -[ HMM]-",
+    "creator": "Carbon Arc",
+    "license": "CC BY-NC-SA 2.0",
+    "page": "https://www.flickr.com/photos/41002268@N03/51320770706"
+  },
+  {
+    "file": "assets/img/journal-routine.jpg",
+    "purpose": "index.html — journal article evening routine",
+    "source": "openverse",
+    "id": "openverse-839c877b-8fc9-4499-8d90-5ed1b8815215",
+    "title": "Beauty Skincare",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/beauty-skincare-CC9TYE8VJY"
+  },
+  {
+    "file": "assets/img/about-editorial-portrait.jpg",
+    "purpose": "pages/about.html — story section portrait",
+    "source": "openverse",
+    "id": "openverse-3fdd8a7e-8641-44cb-b44f-2578e9d99b92",
+    "title": "Beauty Skincare",
+    "creator": "Authentic Stock",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/beauty-skincare-0Q23V7QFR8"
+  }
+]

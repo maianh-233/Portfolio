@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng ký · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-SYS-002" data-module="SYS" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-SYS-002 Đăng ký: họ tên, SĐT, email, mật khẩu, nhập lại; kiểm trùng (SYS-E02); tạo xong đăng nhập luôn (vai trò demo = Khách hàng). */
+  Layout.mount({ title: 'Đăng ký', breadcrumb: [['Đăng ký']] }, function (main) {
+    var U = Perm.url, ic = UI.icon, R = UI.rules;
+    var back = App.param('quay_lai') || '';
+    var loginHref = U('pages/dang-nhap.html') + (back ? '?quay_lai=' + encodeURIComponent(back) : '');
+    var who = Perm.role() === 'ROLE-02' && App.me() ? App.me().name : '';
+
+    var aside = '<div class="relative hidden h-full flex-col justify-between overflow-hidden rounded-2xl bg-secondary-50 p-8 lg:flex">' +
+      '<div class="flex flex-col gap-4"><h2 class="text-2xl font-extrabold text-neutral-800">Một tài khoản, nhiều niềm vui cho Boss</h2>' +
+      '<ul class="flex flex-col gap-3">' + [['tag', 'Tích điểm mỗi đơn, đổi voucher giảm giá'], ['package', 'Theo dõi đơn hàng từng bước'], ['calendar-heart', 'Đặt trước pate chay tự làm']].map(function (b) { return '<li class="flex items-center gap-3 text-base font-bold text-neutral-800"><span class="inline-flex size-10 items-center justify-center rounded-full bg-white text-secondary-700">' + ic(b[0]) + '</span>' + b[1] + '</li>'; }).join('') + '</ul></div>' +
+      '<div class="mt-6 aspect-video overflow-hidden rounded-xl">' + UI.img({ src: MOCK.photo('dog,cat', 15, 900, 600), alt: 'Chó và mèo' }) + '</div></div>';
+
+    var form = '<form novalidate class="flex flex-col gap-4" data-form><h1 class="text-2xl font-extrabold text-neutral-800">Tạo tài khoản Tiểu Bạch</h1>' +
+      (who ? UI.alert({ tone: 'info', text: 'Bạn đang đăng nhập với tài khoản ' + who + '.', actions: UI.button({ label: 'Về trang chủ', size: 'sm', href: U('index.html') }) }) : '') +
+      '<div data-err-box></div>' +
+      UI.field({ name: 'ho_ten', label: 'Họ và tên', required: true, maxlength: 100, autocomplete: 'name' }) +
+      UI.field({ name: 'so_dien_thoai', label: 'Số điện thoại', type: 'tel', required: true, maxlength: 10, autocomplete: 'tel' }) +
+      UI.field({ name: 'email', label: 'Email', type: 'email', required: true, autocomplete: 'email' }) +
+      UI.field({ name: 'mat_khau', label: 'Mật khẩu', type: 'password', required: true, hint: 'Ít nhất 8 ký tự', autocomplete: 'new-password' }) +
+      UI.field({ name: 'nhap_lai', label: 'Nhập lại mật khẩu', type: 'password', required: true, autocomplete: 'new-password' }) +
+      UI.button({ label: 'Tạo tài khoản', size: 'lg', full: true, type: 'submit', attrs: { 'data-submit': '', 'data-permission': 'SYS.ACCOUNT.CREATE', 'data-permission-mode': 'disable' } }) +
+      '<p class="text-center text-sm text-neutral-600">Đã có tài khoản? ' + UI.button({ label: 'Đăng nhập', variant: 'link', size: 'sm', href: loginHref }) + '</p></form>';
+
+    main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-10 pt-6 md:px-6 lg:px-8"><div class="grid items-stretch gap-8 lg:grid-cols-2">' + aside +
+      '<div class="mx-auto w-full max-w-md rounded-2xl border border-neutral-200 bg-white p-5 md:p-8 lg:self-center">' + form + '</div></div></div>');
+
+    var f = main.querySelector('[data-form]'), btn = f.querySelector('[data-submit]');
+    var rules = {
+      ho_ten: [R.required('Vui lòng nhập họ và tên'), R.len(2, 100, 'Họ tên cần từ 2 đến 100 ký tự')],
+      so_dien_thoai: [R.required('Vui lòng nhập số điện thoại'), R.phone('Số điện thoại không hợp lệ')],
+      email: [R.required('Vui lòng nhập email'), R.email('Email không hợp lệ')],
+      mat_khau: [R.required('Mật khẩu cần ít nhất 8 ký tự'), R.custom(function (v) { return String(v).length >= 8; }, 'Mật khẩu cần ít nhất 8 ký tự')],
+      nhap_lai: [R.required('Mật khẩu nhập lại không khớp'), R.match('mat_khau', 'Mật khẩu nhập lại không khớp')]
+    };
+    UI.validate.live(f, rules);
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      f.querySelector('[data-err-box]').innerHTML = '';
+      if (!btn || btn.disabled || !UI.validate(f, rules)) return;
+      var d = UI.formData(f);
+      UI.setLoading(btn, true);
+      setTimeout(function () {
+        var dup = DemoStore.list('customers').concat(DemoStore.list('accounts')).some(function (c) { return c.so_dien_thoai === d.so_dien_thoai || (c.email || '').toLowerCase() === d.email.toLowerCase(); });
+        if (dup) {
+          UI.setLoading(btn, false);
+          f.querySelector('[data-err-box]').innerHTML = UI.alert({ tone: 'warning', text: 'Số điện thoại hoặc email đã được đăng ký. Bạn muốn đăng nhập?', actions: UI.button({ label: 'Đăng nhập', size: 'sm', href: loginHref }) });
+          return;
+        }
+        DemoStore.insert('accounts', { id: 'acc' + Date.now(), ho_ten: d.ho_ten, so_dien_thoai: d.so_dien_thoai, email: d.email.toLowerCase(), mat_khau: d.mat_khau, diem: 0, trang_thai: 'HOAT_DONG', tao_luc: new Date().toISOString() });
+        Perm.setRole('ROLE-02');
+        UI.toast('Tạo tài khoản thành công! Chào mừng bạn đến với Tiểu Bạch.', 'success');
+        setTimeout(function () { location.href = back ? App.resolveBack(back) : U('index.html'); }, 900);
+      }, 600);
+    });
+  });
+  </script>
+</body>
+</html>

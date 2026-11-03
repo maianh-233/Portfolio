@@ -1,0 +1,93 @@
+{
+  "brand": "PIXEL SKIN STUDIO",
+  "language": "vi",
+  "preset": "bold",
+  "motionLevel": 2,
+  "visualIdea": "Ô pixel: khối màu phẳng bo góc vừa và ô vuông nhỏ đánh dấu nhóm, viền mảnh, bóng mềm; màu cam điện / tím / lime phân nhóm dịch vụ xuyên suốt, giọng hình ảnh trưởng thành và đáng tin",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Chăm da kỹ, sống chất riêng",
+    "description": "Giao diện graphic hiện đại cho studio thẩm mỹ và chăm sóc da dành cho khách trẻ."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu studio, bốn nhóm dịch vụ, triết lý chăm sóc da; dẫn sang Dịch vụ & Bảng giá, Về chúng tôi và mở form đặt lịch tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ba", "note": "Typography lớn, chân dung nổi bật, hình khối + sticker" },
+        { "id": "ticker", "catalog": "editorial", "variant": "marquee-band", "source": "ai", "note": "Dải tên dịch vụ chạy ngang (marquee duy nhất của trang)" },
+        { "id": "studio", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Giới thiệu studio ngắn, link sang pages/about.html" },
+        { "id": "nhom-dich-vu", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "4 nhóm dịch vụ màu phân nhóm, link sang pages/services.html" },
+        { "id": "triet-ly", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Triết lý chăm sóc da + 3 nguyên tắc" },
+        { "id": "danh-gia", "catalog": "testimonials", "variant": "carousel", "source": "ai", "note": "data-carousel, đánh giá mẫu" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Nút Đặt lịch tư vấn cuối trang mở modal" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "asian woman skincare portrait", "file": "assets/img/home-hero-portrait.jpg", "status": "ok" },
+        { "slot": "hero-phu", "query": "asian woman skincare portrait", "file": "assets/img/home-hero-smile.jpg", "status": "ok" },
+        { "slot": "studio", "query": "facial treatment beauty salon", "file": "assets/img/home-philosophy-skincare.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ & Bảng giá",
+      "purpose": "Trình bày dịch vụ bằng khối đồ họa có số thứ tự, màu phân nhóm, mô tả ngắn; cách báo giá; quy trình buổi chăm sóc; câu hỏi thường gặp",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "nhom", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "4 nhóm dịch vụ có ảnh, màu phân nhóm" },
+        { "id": "danh-muc", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "8 dịch vụ đánh số, lọc theo nhóm (data-filter-group)" },
+        { "id": "bang-gia", "catalog": "pricing", "variant": "stats-band", "source": "ba", "note": "Chưa có dữ liệu giá: báo giá sau buổi soi da, không hiển thị con số" },
+        { "id": "quy-trinh", "catalog": "process", "variant": "timeline", "source": "ai", "note": "" },
+        { "id": "faq", "catalog": "faq", "variant": "accordion", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "nhom-cham-soc-da", "query": "facial treatment beauty salon", "file": "assets/img/service-cham-soc-da.jpg", "status": "ok" },
+        { "slot": "nhom-lam-sach-sau", "query": "facial cleansing foam face", "file": "assets/img/service-lam-sach-sau.webp", "status": "ok" },
+        { "slot": "nhom-sac-to", "query": "skincare products bottles shelf", "file": "assets/img/service-sac-to.jpg", "status": "ok" },
+        { "slot": "nhom-dau-mun", "query": "skincare products bottles shelf", "file": "assets/img/service-mat-na-than.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Về chúng tôi",
+      "purpose": "Câu chuyện thương hiệu, không gian studio, đội ngũ và cách tiếp cận khách hàng",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "" },
+        { "id": "khong-gian", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Lightbox" },
+        { "id": "doi-ngu", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Chưa có ảnh đội ngũ thật: khối chữ cái đầu tên trên nền màu thương hiệu" },
+        { "id": "cach-tiep-can", "catalog": "process", "variant": "features-alternate", "source": "ba", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "" },
+        { "id": "footer", "catalog": "footer", "variant": "footer-big", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "cau-chuyen", "query": "skincare products bottles shelf", "file": "assets/img/about-cau-chuyen.jpg", "status": "ok" },
+        { "slot": "khong-gian-1", "query": "spa treatment room", "file": "assets/img/about-phong-tri-lieu.jpg", "status": "ok" },
+        { "slot": "khong-gian-2", "query": "spa treatment room", "file": "assets/img/about-giuong-cham-soc.jpg", "status": "ok" },
+        { "slot": "khong-gian-3", "query": "skincare products bottles shelf", "file": "assets/img/about-san-pham.webp", "status": "ok" },
+        { "slot": "cach-tiep-can", "query": "facial treatment beauty salon", "file": "assets/img/about-soi-da-guong.jpg", "status": "ok" },
+        { "slot": "doi-ngu", "query": "esthetician client consultation", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng 3 trang (Trang chủ, Dịch vụ & Bảng giá, Về chúng tôi) theo chú thích của BA; form tư vấn nằm trong cửa sổ (modal) dùng chung, không có trang Liên hệ riêng",
+    "Có công tắc Việt / English theo chú thích của BA (ghi đè quy tắc 'không tạo bộ chuyển ngôn ngữ'): nội dung song ngữ đầy đủ, mặc định tiếng Việt, <html lang> đổi theo lựa chọn",
+    "Bảng màu theo art direction của BA: cam điện (signal), tím (grape, thay cobalt của preset), lime (acid), trắng (paper), chữ đen (ink)",
+    "Bỏ Instrument Serif của preset vì thiếu ký tự tiếng Việt",
+    "Sửa theo góp ý 'phong cách hơi trẻ con': giữ nguyên màu và nội dung; đổi font sang Be Vietnam Pro (đậm vừa 600), bỏ sticker sao / nổ xoay, chữ xoay nghiêng, chấm nền, viền đen dày và bóng đổ cứng; thay bằng viền mảnh, bóng mềm, bo góc 16px, ô vuông 'pixel' làm điểm nhấn",
+    "Không hiển thị giá vì BA chưa cung cấp dữ liệu giá (theo chú thích); khối Bảng giá giải thích cách báo giá sau buổi soi da",
+    "Không dùng con trỏ tùy biến (data-cursor) để giữ tính dễ đọc, đáng tin cậy cho nội dung y khoa"
+  ],
+  "limitations": [
+    "Form Đặt lịch tư vấn là bản demo, chưa có backend",
+    "Giá dịch vụ chưa có dữ liệu: cần studio cung cấp để thêm vào trang Dịch vụ & Bảng giá",
+    "Địa chỉ, số điện thoại, giờ mở cửa, tên đội ngũ và đánh giá khách là nội dung mẫu, cần khách xác nhận",
+    "Cần ảnh thật của đội ngũ và không gian studio; ảnh hiện tại là ảnh minh họa có giấy phép mở",
+    "Thông báo lỗi form theo ngôn ngữ lúc mở trang; đổi ngôn ngữ xong tải lại trang để thông báo form đổi theo"
+  ]
+}

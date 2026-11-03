@@ -1,0 +1,84 @@
+{
+  "slug": "form-follicle",
+  "name": "FORM & FOLLICLE",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu salon tóc",
+    "brand": "FORM & FOLLICLE",
+    "purpose": "Thiết kế website giới thiệu FORM & FOLLICLE, salon tóc hiện đại dành cho khách hàng trẻ yêu thích các kiểu tóc cá tính, kỹ thuật cắt chính xác và màu nhuộm thời trang.",
+    "audience": "Khách có nhu cầu làm tóc sẽ xem",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "# PROJECT: FORM & FOLLICLE\n## Urban Contemporary × Swiss Graphic Design × Hair Culture\n\n### 1. CONCEPT & ART DIRECTION\n\nThiết kế website giới thiệu **FORM & FOLLICLE**, một salon tóc hiện đại dành cho khách hàng trẻ yêu thích kiểu tóc cá tính, kỹ thuật cắt chính xác và màu nhuộm thời trang.\n\nTinh thần thiết kế:\n- Urban Contemporary kết hợp Swiss Graphic Design.\n- Cá tính, mạnh mẽ, có tính biên tập và cảm giác như một tạp chí thời trang đô thị.\n- Grid rõ ràng, bố cục bất đối xứng, đường kẻ hình học và tiêu đề cỡ lớn.\n- Hình ảnh tóc là trọng tâm, không gian salon đóng vai trò bổ trợ.\n- Tránh phong cách nữ tính pastel, giao diện spa, luxury truyền thống hoặc các card bo tròn đại trà.\n\n### 2. COLOR PALETTE\n\n**Cobalt Blue là màu nhận diện chủ đạo**, tạo độ tương phản mạnh với trắng, đen và xám bạc.\n\n- Cobalt Blue — `#2455E8`: màu thương hiệu, CTA và khối nhấn.\n- Electric Blue — `#426BFF`: điểm nhấn phụ cho hover hoặc chi tiết đồ họa.\n- Pure White — `#FFFFFF`: nền chính, tạo khoảng trắng.\n- Jet Black — `#111111`: chữ, tiêu đề và nền tương phản.\n- Silver Gray — `#C5C7CC`: đường kẻ, nhãn phụ và chi tiết nền.\n- Light Gray — `#F2F3F5`: nền section phụ.\n\nQuy tắc phối màu:\n- Trắng và đen tạo cấu trúc chính; cobalt blue xuất hiện xuyên suốt để duy trì nhận diện.\n- Dùng xanh cobalt cho các mảng lớn ở Hero, Manifesto và CTA.\n- Không lạm dụng gradient, màu pastel hoặc hiệu ứng phát sáng.\n- Bảo đảm độ tương phản tốt giữa chữ và nền.\n\n### 3. TYPOGRAPHY & IMAGES\n\n**Typography**\n- Heading: Space Grotesk hoặc Archivo.\n- Body: Inter hoặc IBM Plex Sans.\n- Tiêu đề lớn, đậm, có thể viết hoa và ngắt dòng có chủ đích.\n- Sử dụng số thứ tự, nhãn nhỏ, mã bộ sưu tập và đường kẻ để tạo cảm giác Swiss Graphic Design.\n- Hỗ trợ đầy đủ dấu tiếng Việt; bố cục tự thích ứng khi chuyển sang tiếng Anh.\n\n**Hình ảnh**\n- Ưu tiên các kiểu tóc Bob, Wolf Cut, Mullet, Textured Layers, Pixie và tóc nhuộm màu nổi bật.\n- Hình ảnh chân dung thời trang, crop mạnh, ánh sáng có chiều sâu.\n- Ảnh stylist đang cắt, nhuộm hoặc tạo kiểu tóc.\n- Ảnh không gian salon hiện đại, vật liệu kim loại, gương lớn và nội thất tối giản.\n- Tránh ảnh spa, ảnh stock thiếu liên quan và việc lặp lại cùng một hình ảnh quá nhiều lần.\n\n### 4. GLOBAL HEADER & FOOTER\n\n**Header dùng thống nhất trên cả 4 trang:**\n- Logo chữ FORM & FOLLICLE.\n- Menu Home, Services, Archive, Studio.\n- Bộ chuyển ngôn ngữ VI / EN.\n- CTA Book a Visit / Đặt lịch.\n- Có trạng thái active cho trang hiện tại.\n- Header có thể chuyển nền khi cuộn.\n- Mobile sử dụng menu thu gọn, dễ thao tác.\n\n**Footer:**\n- Nền đen hoặc cobalt blue, chữ trắng.\n- Chia cột Brand, Navigation, Contact và Social.\n- Hiển thị địa chỉ, giờ hoạt động, điện thoại và email mẫu.\n- Có CTA Đặt lịch.\n- Giữ thiết kế mạnh mẽ, gọn gàng và đồng nhất trên mọi trang.\n\n### 5. PAGE 01 — HOME\n\n#### Hero: HAIR HAS A FORM.\n\n- Bố cục bất đối xứng, hình ảnh người mẫu lệch khỏi trung tâm.\n- Headline cực lớn: **“HAIR HAS A FORM.”**\n- Mô tả ngắn về nghệ thuật cắt tóc, kết cấu và màu nhuộm.\n- CTA Explore Services và View Archive.\n- Sử dụng khối cobalt blue, đường kẻ và nhãn nhỏ “CUT / COLOR / TEXTURE”.\n- Tránh để chữ và hình ảnh cạnh tranh, bảo đảm tiêu đề vẫn dễ đọc.\n\n#### Manifesto\n\n- Nền cobalt blue, chữ trắng.\n- Headline: “HAIR IS AN ATTITUDE.”\n- Một đoạn tuyên ngôn ngắn về mái tóc như phương tiện thể hiện cá tính.\n- Typography lớn, bố cục tối giản, không sử dụng card.\n\n#### Service Index\n\nGiới thiệu các dịch vụ theo dạng danh sách biên tập, gồm số thứ tự, tên, mô tả và liên kết:\n\n- 01 — Cut.\n- 02 — Color.\n- 03 — Texture.\n- 04 — Treatment.\n\nBa dịch vụ nổi bật có ảnh minh họa với tỷ lệ khác nhau. Tránh trình bày tất cả thành những card giống nhau.\n\n#### Style Archive Preview\n\n- Grid ảnh tóc bất đối xứng.\n- Hiển thị tên kiểu tóc, danh mục và mã ảnh.\n- CTA Explore the Archive dẫn đến trang Archive.\n\n#### Studio Snapshot\n\n- Ảnh stylist đang làm việc và không gian salon.\n- Giới thiệu ngắn về triết lý sáng tạo của studio.\n- CTA About the Studio dẫn đến trang Studio.\n\n### 6. PAGE 02 — SERVICES & PRICING\n\n#### Services Hero\n\n- Headline: **“THE SERVICE INDEX.”**\n- Mô tả ngắn về dịch vụ cắt, nhuộm, tạo kết cấu và chăm sóc tóc.\n- Bố cục typography lớn kết hợp ảnh tóc.\n\n#### Service Categories\n\nChia thành bốn nhóm:\n\n**01. CUT**\n- Signature Haircut.\n- Bob & Short Cut.\n- Wolf Cut & Mullet.\n- Textured Layers.\n\n**02. COLOR**\n- Full Hair Color.\n- Root Touch-up.\n- Highlights.\n- Balayage.\n- Creative Color.\n\n**03. TEXTURE**\n- Natural Perm.\n- Digital Perm.\n- Texture Styling.\n- Blowout & Styling.\n\n**04. TREATMENT**\n- Deep Conditioning.\n- Repair Treatment.\n- Color Care.\n- Scalp Care.\n\nMỗi dịch vụ cần có tên, mô tả ngắn, thời lượng và giá tham khảo. Có thể sử dụng dữ liệu mẫu, đồng thời ghi rõ giá và thời lượng có thể thay đổi tùy tình trạng tóc.\n\n#### The Process\n\nTrình bày quy trình thành bốn bước:\n\n1. Consult — Tư vấn nhu cầu.\n2. Define — Xác định kiểu tóc và kỹ thuật.\n3. Create — Thực hiện dịch vụ.\n4. Finish — Hoàn thiện và hướng dẫn chăm sóc.\n\nSử dụng số thứ tự lớn, đường kẻ và nhãn cobalt blue thay vì card truyền thống.\n\n#### Final CTA\n\n- Headline: “LET'S FIND YOUR FORM.”\n- CTA Explore the Archive.\n- Có thể thêm nút Đặt lịch dưới dạng minh họa.\n\n### 7. PAGE 03 — STYLE ARCHIVE\n\nĐây là trang trình diễn năng lực sáng tạo của FORM & FOLLICLE. Hình ảnh phải chiếm phần lớn diện tích.\n\n#### Archive Hero\n\n- Headline: **“ARCHIVE / 001”**\n- Mô tả ngắn về bộ sưu tập kiểu tóc, kết cấu và màu nhuộm của studio.\n- Hình ảnh nổi bật được crop theo phong cách editorial.\n\n#### Gallery Filters\n\nTạo bộ lọc:\n- All.\n- Cut.\n- Color.\n- Texture.\n\nBộ lọc hoạt động bằng JavaScript, không tải lại trang. Nhãn và trạng thái được cập nhật theo ngôn ngữ hiện tại.\n\n#### Gallery Grid\n\n- Tối thiểu 12 ảnh.\n- Sử dụng CSS Grid bất đối xứng, kết hợp ảnh dọc và ngang.\n- Có ảnh lớn làm điểm nhấn, không đóng khung tất cả ảnh trong card giống nhau.\n- Nội dung gồm mã bộ sưu tập, tên kiểu tóc, danh mục và mô tả ngắn.\n\nGợi ý nội dung:\n- Precision Bob.\n- Wolf Cut.\n- Modern Mullet.\n- Textured Layers.\n- Platinum Blonde.\n- Cobalt Accent.\n- Copper Red.\n- Soft Balayage.\n- Textured Pixie.\n- Wet Look.\n- Graphic Fringe.\n- Short Shag.\n\n#### Hover & Lightbox\n\n- Hover làm ảnh phóng to nhẹ và hiện thông tin.\n- Nhấn ảnh mở lightbox với ảnh lớn, tên, danh mục và mô tả.\n- Có nút đóng, điều hướng ảnh trước/sau và hỗ trợ phím Escape.\n- Không làm méo ảnh hoặc gây cuộn nền khi lightbox mở.\n\n#### Studio Hair Direction\n\nGiới thiệu ngắn các xu hướng và kỹ thuật mà studio theo đuổi: precision cutting, expressive color và natural texture.\n\nCTA dẫn đến Services.\n\n### 8. PAGE 04 — STUDIO\n\n#### Studio Hero\n\n- Headline: **“A STUDIO FOR SELF-EXPRESSION.”**\n- Ảnh stylist đang làm việc trong không gian hiện đại.\n- Mô tả ngắn về FORM & FOLLICLE và cách tiếp cận nghệ thuật tóc.\n\n#### Our Story\n\nGiới thiệu thương hiệu như một không gian sáng tạo dành cho những người muốn thể hiện cá tính qua kiểu tóc. Không tự tạo lịch sử thành lập hoặc thành tích chưa được xác minh.\n\n#### Our Method\n\nTrình bày ba nguyên tắc:\n\n- **FORM:** Chú trọng hình dáng, tỷ lệ và kỹ thuật cắt.\n- **COLOR:** Khám phá màu nhuộm phù hợp với phong cách cá nhân.\n- **TEXTURE:** Tạo chuyển động và kết cấu tự nhiên cho mái tóc.\n\nDùng bố cục typography lớn, đường kẻ và hình ảnh minh họa.\n\n#### Meet the Stylists\n\nGiới thiệu ba stylist bằng dữ liệu mẫu. Mỗi hồ sơ gồm:\n- Ảnh chân dung.\n- Tên và vai trò.\n- Chuyên môn.\n- Phong cách sáng tạo.\n\nKhông sử dụng avatar hoạt hình hoặc trình bày thông tin mẫu như dữ liệu đã xác minh.\n\n#### Inside the Studio\n\n- Gallery 4–6 ảnh không gian salon.\n- Tập trung vào khu vực cắt tóc, gương, ghế stylist, vật liệu kim loại và ánh sáng.\n- Bố cục ảnh bất đối xứng, thống nhất với phong cách đô thị.\n\n#### Contact & Visit\n\nHiển thị địa chỉ, giờ hoạt động, điện thoại, email và liên kết mạng xã hội dưới dạng dữ liệu mẫu có ghi chú rõ ràng.\n\n### 9. BILINGUAL — VIETNAMESE & ENGLISH\n\nToàn bộ 4 trang phải hỗ trợ tiếng Việt và tiếng Anh, bao gồm menu, nội dung, dịch vụ, bộ lọc, lightbox, CTA và footer.\n\n- Chuyển ngôn ngữ ngay trên trang hiện tại.\n- Duy trì ngôn ngữ khi điều hướng giữa các trang.\n- Không tự động quay về Home khi đổi ngôn ngữ.\n- Bố cục phải thích ứng với độ dài văn bản ở cả hai ngôn ngữ.\n\n### 10. TECHNICAL REQUIREMENTS\n\n- HTML, CSS và JavaScript thuần.\n- Bốn file HTML riêng: `index.html`, `services.html`, `archive.html`, `studio.html`.\n- Sử dụng CSS và JavaScript dùng chung.\n- Responsive trên desktop, tablet và mobile.\n- Tạo CSS variables cho bảng màu.\n- Menu, chuyển ngôn ngữ, bộ lọc và lightbox phải hoạt động.\n- Kiểm tra đường dẫn, tránh ảnh lỗi và bảo đảm các trang liên kết chính xác.\n- Hiệu ứng chuyển động tiết chế, ưu tiên trải nghiệm và tốc độ tải.\n\n### 11. SCOPE & FINAL REQUIREMENTS\n\nĐây là website giới thiệu salon, không phải website thương mại điện tử.\n\nKhông triển khai backend, database, đăng nhập, giỏ hàng, thanh toán, API hoặc quy trình đặt lịch thực tế. Nút Đặt lịch chỉ mang tính minh họa.\n\n**Kết quả mong muốn:** Website có bản sắc đô thị mạnh mẽ, sử dụng cobalt blue làm điểm nhận diện, kết hợp Swiss Graphic Design, typography lớn và gallery tóc cá tính. Bốn trang phải có bố cục riêng nhưng vẫn tạo thành một hệ thống thương hiệu nhất quán.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-30T02:28:23.889Z",
+  "updatedAt": "2026-10-30T03:10:33.214Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu salon tóc",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\form-follicle\\web",
+    "builtAt": "2026-10-30T03:10:16.291Z",
+    "pages": [
+      "index.html",
+      "pages/archive.html",
+      "pages/services.html",
+      "pages/studio.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/archive.html": [],
+      "pages/services.html": [],
+      "pages/studio.html": []
+    }
+  },
+  "job": {
+    "id": "d10af3a1-a874-4822-82e6-035b57851870",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\form-follicle\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 1,
+      "missing": 0,
+      "inputTokens": 20,
+      "outputTokens": 2391,
+      "cacheReadTokens": 325878,
+      "cacheCreationTokens": 48408,
+      "costUsd": 0.5003396,
+      "numTurns": 17,
+      "durationMs": 72397
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-30T03:10:29.555Z",
+    "critical": 0,
+    "major": 36,
+    "minor": 0,
+    "screenshots": 12
+  }
+}

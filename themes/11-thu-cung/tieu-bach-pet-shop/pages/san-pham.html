@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sản phẩm · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-PROD-001" data-module="PROD" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-PROD-001 Danh sách sản phẩm: chip thú cưng + FilterPanel (nhóm hàng, khoảng giá, còn hàng) + tìm kiếm + sắp xếp + "Xem thêm".
+   * Bộ lọc ghi lên URL: ?thu-cung=&nhom=a,b&gia=&con-hang=1&q=&sap-xep= (FR-PROD-001). */
+  Layout.mount({ title: 'Sản phẩm', active: 'products', breadcrumb: [['Sản phẩm']] }, function (main) {
+    var U = Perm.url, esc = UI.esc, ic = UI.icon;
+    var PAGE = 20;
+    var PRICES = [{ value: 'duoi-100', label: 'Dưới 100.000đ', min: 0, max: 99999 }, { value: '100-300', label: '100.000 - 300.000đ', min: 100000, max: 300000 }, { value: '300-500', label: '300.000 - 500.000đ', min: 300001, max: 500000 }, { value: 'tren-500', label: 'Trên 500.000đ', min: 500001, max: 1e12 }];
+    var SORTS = [{ value: 'moi-nhat', label: 'Mới nhất' }, { value: 'ban-chay', label: 'Bán chạy' }, { value: 'gia-tang', label: 'Giá tăng dần' }, { value: 'gia-giam', label: 'Giá giảm dần' }];
+    var cats = DemoStore.list('categories').filter(function (c) { return c.hien_thi; }).sort(function (a, b) { return a.thu_tu - b.thu_tu; });
+    var GROUPS = cats.map(function (c) { return { value: c.id, label: c.ten }; }).concat([{ value: 'combo', label: 'Combo tiết kiệm' }]);
+
+    var st = {
+      pet: App.param('thu-cung') || '', nhom: (App.param('nhom') || '').split(',').filter(Boolean), gia: App.param('gia') || '',
+      con: App.param('con-hang') === '1', q: App.param('q') || '', sort: App.param('sap-xep') || 'moi-nhat', shown: PAGE
+    };
+
+    /* Gộp sản phẩm + combo thành 1 danh sách thẻ */
+    function items() {
+      var ps = App.products().map(function (p) { return { kind: 'p', ref: p, name: p.ten, pets: p.pet_type_ids, cat: p.category_id, price: App.minPrice(p), created: p.tao_luc, sold: p.sold30, out: App.isOut(p) }; });
+      var cs = App.combos().map(function (c) {
+        var pets = {}; App.comboItems(c).forEach(function (i) { i.p.pet_type_ids.forEach(function (t) { pets[t] = 1; }); });
+        return { kind: 'c', ref: c, name: c.ten, pets: Object.keys(pets), cat: 'combo', price: c.gia_combo, created: c.tao_luc, sold: 15, out: App.comboOut(c) };
+      });
+      return ps.concat(cs);
+    }
+    function filtered() {
+      var pr = PRICES.filter(function (x) { return x.value === st.gia; })[0];
+      var l = items().filter(function (it) {
+        if (st.pet && it.pets.indexOf(st.pet) < 0) return false;
+        if (st.nhom.length ? st.nhom.indexOf(it.cat) < 0 : false) return false;
+        if (pr && (it.price < pr.min || it.price > pr.max)) return false;
+        if (st.con && it.out) return false;
+        if (st.q && UI.norm(it.name).indexOf(UI.norm(st.q)) < 0) return false;
+        return true;
+      });
+      var by = { 'moi-nhat': function (a, b) { return a.created < b.created ? 1 : -1; }, 'ban-chay': function (a, b) { return b.sold - a.sold; }, 'gia-tang': function (a, b) { return a.price - b.price; }, 'gia-giam': function (a, b) { return b.price - a.price; } }[st.sort] || function () { return 0; };
+      return l.sort(by);
+    }
+    function title() {
+      if (st.q) return 'Kết quả cho “' + esc(st.q) + '”';
+      if (st.nhom.length === 1 && st.nhom[0] === 'pate-chay') return 'Pate chay tự làm';
+      if (st.nhom.length === 1 && st.nhom[0] === 'combo') return 'Combo tiết kiệm';
+      var t = App.petType(st.pet); if (t) return 'Sản phẩm cho ' + esc(t.ten.toLowerCase());
+      return 'Tất cả sản phẩm';
+    }
+    function activeCount() { return st.nhom.length + (st.gia ? 1 : 0) + (st.con ? 1 : 0); }
+    function syncUrl() { App.setParams({ 'thu-cung': st.pet, nhom: st.nhom, gia: st.gia, 'con-hang': st.con ? '1' : '', q: st.q, 'sap-xep': st.sort === 'moi-nhat' ? '' : st.sort }); }
+
+    /* FilterPanel: dùng chung cho cột trái (desktop) và Drawer (mobile / tablet) */
+    function panelHtml() {
+      return '<div class="flex flex-col gap-6" data-panel>' +
+        '<fieldset><legend class="mb-2 text-base font-extrabold text-neutral-800">Nhóm hàng</legend><div class="flex flex-col">' +
+        GROUPS.map(function (g) { return UI.field({ type: 'checkbox', name: 'nhom', label: g.label, value: st.nhom.indexOf(g.value) >= 0, attrs: { value: g.value, 'data-nhom': g.value } }); }).join('') + '</div></fieldset>' +
+        '<fieldset><legend class="mb-2 text-base font-extrabold text-neutral-800">Khoảng giá</legend><div class="flex flex-col">' +
+        [{ value: '', label: 'Tất cả mức giá' }].concat(PRICES).map(function (p) { return '<label class="inline-flex min-h-11 cursor-pointer items-center gap-3"><input type="radio" name="gia-' + '{K}' + '" value="' + p.value + '" ' + (st.gia === p.value ? 'checked' : '') + ' data-gia class="size-5 accent-primary-500"><span class="text-base text-neutral-800">' + esc(p.label) + '</span></label>'; }).join('') + '</div></fieldset>' +
+        UI.field({ type: 'switch', name: 'con-hang', label: 'Chỉ hiện hàng còn', value: st.con }) + '</div>';
+    }
+    function readPanel(root) {
+      st.nhom = Array.prototype.map.call(root.querySelectorAll('[data-nhom]:checked'), function (x) { return x.value; });
+      var g = root.querySelector('[data-gia]:checked'); st.gia = g ? g.value : '';
+      var sw = root.querySelector('[data-switch]'); st.con = sw ? sw.getAttribute('aria-checked') === 'true' : false;
+    }
+
+    main.innerHTML = '<div class="mx-auto max-w-content px-4 pb-6 pt-4 md:px-6 lg:px-8">' +
+      '<div data-head></div>' +
+      '<div class="-mx-4 mb-4 flex gap-2 overflow-x-auto px-4 pb-1 no-scrollbar md:mx-0 md:px-0" data-pets></div>' +
+      '<div class="sticky top-16 z-20 -mx-4 mb-4 flex gap-2 border-b border-neutral-200 bg-neutral-50 px-4 py-2 lg:hidden">' +
+      UI.button({ label: 'Bộ lọc', icon: 'sliders-horizontal', variant: 'outline', cls: 'flex-1', attrs: { 'data-open-filter': '' } }) +
+      '<div class="flex-1" data-sort-m></div></div>' +
+      '<div class="lg:grid lg:grid-cols-12 lg:gap-8">' +
+      '<aside class="hidden lg:block lg:col-span-3" aria-label="Bộ lọc sản phẩm"><div class="sticky top-24 rounded-xl border border-neutral-200 bg-white p-5" data-aside>' + panelHtml().replace(/\{K\}/g, 'a') + '</div></aside>' +
+      '<section class="lg:col-span-9 min-w-0" aria-label="Danh sách sản phẩm">' +
+      '<div class="mb-3 flex flex-wrap items-end gap-3"><div class="min-w-0 flex-1 md:max-w-sm">' + UI.searchInput({ placeholder: 'Tìm trong sản phẩm…', value: st.q, attrs: { 'data-q': '' } }) + '</div>' +
+      '<div class="ml-auto hidden w-56 lg:block" data-sort-d></div></div>' +
+      '<div data-chips></div><div data-grid></div></section></div></div>';
+
+    function sortHtml() { return UI.field({ name: 'sap-xep', type: 'select', label: '', options: SORTS, value: st.sort, attrs: { 'data-sort': '', 'aria-label': 'Sắp xếp' } }); }
+    main.querySelector('[data-sort-d]').innerHTML = sortHtml();
+    main.querySelector('[data-sort-m]').innerHTML = sortHtml();
+
+    function paintHead(n) {
+      main.querySelector('[data-head]').innerHTML = UI.pageHeader({ title: title(), description: n + ' sản phẩm' });
+      var pets = [{ id: '', ten: 'Tất cả' }].concat(MOCK.petTypes.filter(function (t) { return t.hien_thi; }));
+      main.querySelector('[data-pets]').innerHTML = pets.map(function (t) {
+        return '<button type="button" data-pet="' + t.id + '" ' + (st.pet === t.id ? 'aria-pressed="true"' : 'aria-pressed="false"') + ' class="inline-flex h-11 shrink-0 items-center gap-2 rounded-full border-2 px-4 text-sm font-bold whitespace-nowrap transition ' + (st.pet === t.id ? 'border-primary-500 bg-primary-100 text-primary-700' : 'border-neutral-200 bg-white text-neutral-700 hover:border-primary-300') + '">' +
+          (t.img ? '<span class="size-7 overflow-hidden rounded-full">' + UI.img({ src: t.img, alt: '' }) + '</span>' : '') + esc(t.ten) + '</button>';
+      }).join('');
+      var fb = main.querySelector('[data-open-filter] span'); if (fb) fb.textContent = 'Bộ lọc' + (activeCount() ? ' (' + activeCount() + ')' : '');
+    }
+    function paintChips() {
+      var chips = [];
+      st.nhom.forEach(function (n) { var g = GROUPS.filter(function (x) { return x.value === n; })[0]; if (g) chips.push(['nhom', n, g.label]); });
+      if (st.gia) chips.push(['gia', '', PRICES.filter(function (p) { return p.value === st.gia; })[0].label]);
+      if (st.con) chips.push(['con', '', 'Còn hàng']);
+      main.querySelector('[data-chips]').innerHTML = chips.length ? '<div class="mb-4 flex flex-wrap items-center gap-2">' + chips.map(function (c) {
+        return '<button type="button" data-chip="' + c[0] + '" data-chip-v="' + esc(c[1]) + '" class="inline-flex h-8 items-center gap-1.5 rounded-full bg-primary-100 px-3 text-xs font-bold text-primary-700 hover:bg-primary-200" aria-label="Bỏ lọc ' + esc(c[2]) + '">' + esc(c[2]) + ic('x', 'size-3.5') + '</button>';
+      }).join('') + '<button type="button" data-clear class="px-1 text-xs font-bold text-primary-700 hover:underline">Xóa bộ lọc</button></div>' : '';
+    }
+    function card(it) { return it.kind === 'c' ? UI.comboCard(App.comboVM(it.ref)) : App.productCard(it.ref); }
+    function paintGrid(skeleton) {
+      var grid = main.querySelector('[data-grid]');
+      var gridCls = 'grid-cols-2 md:grid-cols-3 xl:grid-cols-4';
+      if (skeleton) { grid.innerHTML = UI.skeletonCards(8, gridCls); }
+      try {
+        var l = filtered();
+        paintHead(l.length); paintChips();
+        var render = function () {
+          if (!l.length) {
+            grid.innerHTML = '<div class="rounded-xl border border-neutral-200 bg-white">' + UI.emptyState({ title: 'Không tìm thấy sản phẩm phù hợp', text: 'Thử bỏ bớt bộ lọc hoặc tìm bằng từ khác nhé.', action: UI.button({ label: 'Xóa bộ lọc', variant: 'outline', attrs: { 'data-clear': '' } }) }) + '</div>';
+            return;
+          }
+          var shown = Math.min(st.shown, l.length);
+          grid.innerHTML = '<div class="grid gap-3 md:gap-4 ' + gridCls + '">' + l.slice(0, shown).map(card).join('') + '</div>' +
+            (l.length > PAGE ? UI.loadMore({ shown: shown, total: l.length }) : '');
+        };
+        if (skeleton) setTimeout(render, 400); else render();
+      } catch (e) {
+        grid.innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.', actions: UI.button({ label: 'Thử lại', size: 'sm', variant: 'outline', attrs: { onclick: 'location.reload()' } }) });
+      }
+    }
+    function apply() { st.shown = PAGE; syncUrl(); paintGrid(); syncAside(); }
+    function syncAside() { var a = main.querySelector('[data-aside]'); a.innerHTML = panelHtml().replace(/\{K\}/g, 'a'); main.querySelectorAll('[data-sort]').forEach(function (s) { s.value = st.sort; }); }
+
+    // Cột lọc desktop: áp dụng ngay
+    var aside = main.querySelector('[data-aside]');
+    aside.addEventListener('change', function () { readPanel(aside); apply(); });
+    aside.addEventListener('switchchange', function () { readPanel(aside); apply(); });
+
+    main.addEventListener('change', function (e) { if (e.target.matches('[data-sort]')) { st.sort = e.target.value; apply(); } });
+    var tq; main.addEventListener('input', function (e) { if (e.target.matches('[data-q]')) { clearTimeout(tq); var v = e.target.value; tq = setTimeout(function () { st.q = v.trim(); apply(); }, 300); } });
+    main.addEventListener('click', function (e) {
+      var t = e.target;
+      var p = t.closest('[data-pet]'); if (p) { st.pet = p.getAttribute('data-pet'); apply(); return; }
+      var c = t.closest('[data-chip]');
+      if (c) { var k = c.getAttribute('data-chip'); if (k === 'nhom') st.nhom = st.nhom.filter(function (x) { return x !== c.getAttribute('data-chip-v'); }); if (k === 'gia') st.gia = ''; if (k === 'con') st.con = false; apply(); return; }
+      if (t.closest('[data-clear]')) { st.nhom = []; st.gia = ''; st.con = false; st.q = ''; st.pet = ''; var qi = main.querySelector('[data-q]'); if (qi) qi.value = ''; apply(); return; }
+      if (t.closest('[data-load-more]')) { st.shown += PAGE; paintGrid(); return; }
+      if (t.closest('[data-open-filter]')) { openDrawer(); }
+    });
+
+    // Drawer bộ lọc (dưới lg): nút dính đáy "Xem {n} sản phẩm" + "Xóa lọc"
+    function openDrawer() {
+      var body = '<div data-dpanel>' + panelHtml().replace(/\{K\}/g, 'm') + '</div>' +
+        '<div class="sticky bottom-0 -mx-5 -mb-4 mt-6 flex gap-2 border-t border-neutral-100 bg-white px-5 py-3 safe-bottom">' +
+        UI.button({ label: 'Xóa lọc', variant: 'ghost', attrs: { 'data-d-clear': '' } }) + UI.button({ label: 'Xem sản phẩm', full: true, attrs: { 'data-d-apply': '' } }) + '</div>';
+      var d = UI.drawer({ title: 'Bộ lọc', side: 'bottom', body: body });
+      var dp = d.body.querySelector('[data-dpanel]');
+      function count() { var save = JSON.stringify(st); readPanel(dp); var n = filtered().length; var back = JSON.parse(save); Object.keys(back).forEach(function (k) { st[k] = back[k]; }); d.body.querySelector('[data-d-apply] span').textContent = 'Xem ' + n + ' sản phẩm'; }
+      dp.addEventListener('change', count); dp.addEventListener('switchchange', count); count();
+      d.body.addEventListener('click', function (e) {
+        if (e.target.closest('[data-d-apply]')) { readPanel(dp); apply(); d.close(); }
+        if (e.target.closest('[data-d-clear]')) { st.nhom = []; st.gia = ''; st.con = false; dp.innerHTML = panelHtml().replace(/\{K\}/g, 'm'); count(); }
+      });
+    }
+
+    paintGrid(true);
+  });
+  </script>
+</body>
+</html>

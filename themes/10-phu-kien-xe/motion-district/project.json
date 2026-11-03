@@ -1,0 +1,50 @@
+{
+  "slug": "motion-district",
+  "name": "MOTION DISTRICT",
+  "projectType": "website",
+  "concept": {
+    "topic": "PROMPT THIẾT KẾ WEBSITE BÁN PHỤ KIỆN XE",
+    "brand": "MOTION DISTRICT",
+    "purpose": "Thiết kế website thương mại điện tử cho MOTION DISTRICT, thương hiệu chuyên kinh doanh phụ kiện xe máy, đồ bảo hộ và đồ chơi xe dành cho giới trẻ yêu thích phong cách đường phố.\n\nĐịnh hướng thiết kế: Urban Moto Lifestyle, Street Culture, Contemporary Editorial.\n\nKhác với phong cách garage công nghiệp truyền thống, website mang tinh thần streetwear, năng động và phóng khoáng. Kết hợp hình ảnh xe máy trong bối cảnh đô thị, đường phố về đêm, những chuyến đi và văn hóa biker hiện đại.\n\nBảng màu: Kem nhạt #F3F0E8, xanh rêu đậm #35483B, đen mực #191A18, đỏ gạch #C6533B.\n\nSử dụng typography sans-serif đậm kết hợp font editorial, hình ảnh mang chất ảnh phim, bố cục bất đối xứng, nhãn dán đồ họa và các mảng màu tương phản. Giao diện phải có cá tính riêng, không giống các website bán phụ kiện xe thông thường.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Cấu trúc website — 3 trang chính\n\nTrang 1: Trang chủ (Home)\n\nHeader gồm logo MOTION DISTRICT và menu điều hướng đến 3 trang chính.\n\nHero banner với hình ảnh xe máy trong không gian đô thị, tiêu đề lớn “RIDE YOUR OWN WAY.”, mô tả ngắn và nút “Khám phá bộ sưu tập”.\n\nGiới thiệu ngắn về thương hiệu, triết lý thiết kế và tinh thần tự do.\n\nCác danh mục nổi bật: Phụ kiện xe, mũ bảo hiểm, đồ bảo hộ, túi gắn xe và đồ chơi xe.\n\nKhu vực giới thiệu các sản phẩm tiêu biểu bằng hình ảnh lớn, tên sản phẩm và mô tả ngắn.\n\nBanner kể câu chuyện về văn hóa biker và phong cách sống đô thị.\n\nFooter gồm thông tin thương hiệu, liên hệ và mạng xã hội.\n\nTrang 2: Bộ sưu tập (Collections)\n\nTrưng bày các dòng phụ kiện theo bố cục lưới 3–4 cột trên desktop.\n\nMỗi thẻ gồm ảnh sản phẩm, tên, danh mục và mô tả ngắn.\n\nPhân loại theo phụ kiện xe máy, mũ bảo hiểm, đồ bảo hộ, túi gắn xe và phụ kiện phong cách.\n\nCó bộ lọc danh mục và tìm kiếm để khách tham quan dễ khám phá.\n\nKhi nhấn vào sản phẩm, mở trang chi tiết hoặc cửa sổ giới thiệu sản phẩm.\n\nKhông hiển thị giá bán, giỏ hàng hoặc nút mua hàng.\n\nTrang 3: Chi tiết sản phẩm & Câu chuyện thiết kế (Product Showcase)\n\nTrình bày sản phẩm bằng hình ảnh lớn, ảnh cận cảnh chất liệu, kiểu dáng và chi tiết hoàn thiện.\n\nHiển thị tên sản phẩm, câu chuyện thiết kế, công năng, chất liệu, thông số kỹ thuật và khả năng tương thích với từng dòng xe nếu có.\n\nGiới thiệu điểm nổi bật, cảm hứng sáng tạo và giá trị sử dụng của sản phẩm.\n\nCó khu vực gợi ý các sản phẩm cùng bộ sưu tập.\n\nCho phép chuyển sang sản phẩm khác hoặc quay lại trang Bộ sưu tập.\n\nCó nút “Tìm hiểu thêm” hoặc “Liên hệ thương hiệu”, không có chức năng đặt mua.\n\n3. Ngôn ngữ thiết kế\n\nKết hợp ảnh sản phẩm nền trung tính với ảnh lifestyle ngoài đường phố.\n\nSử dụng chữ lớn, khoảng trắng rộng, bố cục bất đối xứng và các chi tiết đồ họa lấy cảm hứng từ poster đô thị.\n\nTạo cảm giác như một tạp chí về xe máy, phụ kiện và văn hóa đường phố.\n\nTránh phong cách gara công nghiệp, giao diện cửa hàng trực tuyến truyền thống và hiệu ứng neon.\n\nGiữ giao diện nhất quán trên cả 3 trang.\n\n4. Hiệu ứng và trải nghiệm\n\nSử dụng animation vừa phải: ảnh phóng to nhẹ khi hover, hiệu ứng xuất hiện khi cuộn, chuyển cảnh mượt và parallax nhẹ ở banner lớn. Ưu tiên hình ảnh và bố cục hơn hiệu ứng phức tạp.\n\nWebsite phải responsive trên máy tính, tablet và điện thoại. Các liên kết điều hướng, tìm kiếm, bộ lọc danh mục và chức năng xem chi tiết sản phẩm cần hoạt động tốt.\n\n5. Yêu cầu bắt buộc\n\nChỉ tạo 3 trang chính: Home, Collections và Product Showcase.\n\nĐây là website giới thiệu thương hiệu và trưng bày phụ kiện, KHÔNG phải website bán hàng.\n\nKhông có giá bán, giỏ hàng, thanh toán, đặt hàng, mã giảm giá hoặc tài khoản mua hàng.\n\nKhông sử dụng nút “Mua ngay”, “Thêm vào giỏ hàng” hoặc các CTA giao dịch.\n\nChỉ sử dụng CTA như “Khám phá bộ sưu tập”, “Xem chi tiết”, “Tìm hiểu thêm” và “Liên hệ”.\n\nKhông tạo thêm trang chính ngoài 3 trang đã chỉ định.\n\nƯu tiên giao diện có cá tính, hình ảnh ấn tượng, trải nghiệm khám phá trực quan và bản sắc thương hiệu rõ ràng.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-20T02:31:49.126Z",
+  "updatedAt": "2026-10-20T02:33:39.541Z",
+  "screen": "request",
+  "request": "PROMPT THIẾT KẾ WEBSITE BÁN PHỤ KIỆN XE",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "9ce62465-251e-490f-90e8-61cad2a40229",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\motion-district\\web",
+    "status": "running"
+  }
+}

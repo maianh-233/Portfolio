@@ -1,0 +1,168 @@
+{
+  "brand": "Linh An",
+  "language": "vi",
+  "preset": "gallery",
+  "motionLevel": 1,
+  "visualIdea": "Phòng triển lãm hoa: mỗi ảnh đi kèm một nhãn tường bảo tàng (tên tác phẩm in nghiêng + chất liệu hoa), một nét thân cây mảnh màu sage dẫn vào tiêu đề, nền Warm Ivory và điểm nhấn Burgundy",
+  "purposeInferred": "Portfolio cá nhân của nghệ nhân hoa cưới Linh An (thương hiệu BLOOMÉ): giới thiệu phong cách, trưng bày bộ sưu tập và hoa cầm tay, kể quy trình sáng tạo và dẫn các cặp đôi sắp cưới tới trang liên hệ để trao đổi hợp tác. Khách truy cập: cặp đôi sắp cưới và wedding planner tìm phong cách hoa nghệ thuật.",
+  "theme": {
+    "tagline": "Mỗi chuyện tình nở theo một cách riêng",
+    "description": "Giao diện portfolio nghệ nhân thiết kế hoa cưới theo phong cách tạp chí nghệ thuật."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Mở đầu bằng không gian hoa cưới, giới thiệu ngắn nghệ nhân, dẫn sang bộ sưu tập, trưng bày chi tiết, lời khách và kêu gọi liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ai", "note": "Tiêu đề lệch trái, ảnh lễ đường tràn mép phải; 2 nút: Xem tác phẩm, Triết lý sáng tạo" },
+        { "id": "artist", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "About the artist rút gọn, link sang pages/about.html" },
+        { "id": "collections", "catalog": "collections", "variant": "features-numbered", "source": "ai", "note": "4 bộ sưu tập dạng danh sách số lớn + 1 ảnh tiệc, mỗi dòng link tới trang chi tiết" },
+        { "id": "details", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "The Details: collage 5 ảnh cận cảnh, lightbox" },
+        { "id": "kind-words", "catalog": "testimonials", "variant": "quote-full", "source": "ai", "note": "Carousel 3 lời nhận xét, ghi rõ nội dung mẫu" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn tới pages/contact.html" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "wedding aisle flowers ceremony", "file": "assets/img/home-hero-le-duong.webp", "status": "ok" },
+        { "slot": "artist", "query": "florist arranging flowers", "file": "assets/img/home-story-ban-hoa.jpg", "status": "ok" },
+        { "slot": "collections", "query": "wedding reception floral decoration", "file": "assets/img/home-hero-tiec-cuoi.jpg", "status": "ok" },
+        { "slot": "details-1", "query": "garden roses pink bouquet", "file": "assets/img/detail-canh-hoa.jpg", "status": "ok" },
+        { "slot": "details-2", "query": "wedding aisle flowers ceremony", "file": "assets/img/detail-le-duong.jpg", "status": "ok" },
+        { "slot": "details-3", "query": "wedding table flowers candles", "file": "assets/img/detail-ban-tiec.webp", "status": "ok" },
+        { "slot": "details-4", "query": "burgundy dahlia bouquet", "file": "assets/img/detail-burgundy-kem.jpg", "status": "ok" },
+        { "slot": "details-5", "query": "candlelight table roses", "file": "assets/img/detail-nen-hoa.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Giới thiệu",
+      "purpose": "Câu chuyện nghệ nhân Linh An, triết lý thiết kế và quy trình sáng tạo Behind the Blooms",
+      "sections": [
+        { "id": "page-hero", "catalog": "story", "variant": "page-hero", "source": "ai", "note": "Ảnh nghệ nhân ôm hoa đặt lệch" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Flowers are my way of telling stories" },
+        { "id": "process", "catalog": "process", "variant": "timeline", "source": "ai", "note": "4 bước Discover, Imagine, Compose, Bring to Life xen 2 ảnh hậu trường" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-fullbleed", "source": "ai", "note": "Nền burgundy" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "woman florist flower shop", "file": "assets/img/about-nghe-nhan.jpg", "status": "ok" },
+        { "slot": "process-1", "query": "florist arranging flowers", "file": "assets/img/about-ban-lam-viec.jpg", "status": "ok" },
+        { "slot": "process-2", "query": "roses arrangement vase garden", "file": "assets/img/about-process-bang-mau.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/collections.html",
+      "title": "Bộ sưu tập",
+      "purpose": "Trưng bày 4 bộ sưu tập chữ ký với tỷ lệ ảnh và bố cục khác nhau, dẫn sang trang chi tiết",
+      "sections": [
+        { "id": "page-hero", "catalog": "collections", "variant": "page-hero", "source": "ai", "note": "Chữ là chính" },
+        { "id": "signature", "catalog": "collections", "variant": "list-cards", "source": "ai", "note": "4 khối bất đối xứng, không thẻ giống nhau" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "garden", "query": "garden roses pink bouquet", "file": "assets/img/col-garden-cover.jpg", "status": "ok" },
+        { "slot": "ivory", "query": "white peonies ranunculus bouquet", "file": "assets/img/col-ivory-cover.webp", "status": "ok" },
+        { "slot": "wildflower", "query": "florist arranging flowers", "file": "assets/img/home-about-cam-hoa.jpg", "status": "ok" },
+        { "slot": "velvet", "query": "dark red roses bouquet", "file": "assets/img/velvet-detail-hong-do.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/collection-garden-romance.html",
+      "title": "Garden Romance",
+      "purpose": "Chi tiết bộ sưu tập Garden Romance: ý tưởng, chất liệu hoa, bảng màu",
+      "sections": [
+        { "id": "page-hero", "catalog": "collections", "variant": "page-hero", "source": "ai", "note": "Breadcrumb" },
+        { "id": "concept", "catalog": "collections", "variant": "detail-article", "source": "ai", "note": "Ý tưởng + bảng màu sao chép mã" },
+        { "id": "next", "catalog": "cta", "variant": "teaser-row", "source": "ai", "note": "Bộ sưu tập khác + CTA" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "roses arrangement vase garden", "file": "assets/img/garden-detail-binh-hoa.jpg", "status": "ok" },
+        { "slot": "concept", "query": "roses arrangement vase garden", "file": "assets/img/garden-detail-hong-binh.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/collection-ivory-elegance.html",
+      "title": "Ivory Elegance",
+      "purpose": "Chi tiết bộ sưu tập Ivory Elegance",
+      "sections": [
+        { "id": "page-hero", "catalog": "collections", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "concept", "catalog": "collections", "variant": "detail-article", "source": "ai", "note": "" },
+        { "id": "next", "catalog": "cta", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "white peonies ranunculus bouquet", "file": "assets/img/ivory-detail-mau-don.webp", "status": "ok" },
+        { "slot": "concept", "query": "white peonies ranunculus bouquet", "file": "assets/img/ivory-detail-binh-trang.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/collection-wildflower-dreams.html",
+      "title": "Wildflower Dreams",
+      "purpose": "Chi tiết bộ sưu tập Wildflower Dreams",
+      "sections": [
+        { "id": "page-hero", "catalog": "collections", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "concept", "catalog": "collections", "variant": "detail-article", "source": "ai", "note": "" },
+        { "id": "next", "catalog": "cta", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "field flowers bouquet daisies", "file": "assets/img/wild-detail-hoa-dong.webp", "status": "ok" },
+        { "slot": "concept", "query": "dried grasses flower arrangement", "file": "assets/img/wild-detail-co-kho.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/collection-velvet-rose.html",
+      "title": "Velvet Rose",
+      "purpose": "Chi tiết bộ sưu tập Velvet Rose",
+      "sections": [
+        { "id": "page-hero", "catalog": "collections", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "concept", "catalog": "collections", "variant": "detail-article", "source": "ai", "note": "" },
+        { "id": "next", "catalog": "cta", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "burgundy roses dark moody", "file": "assets/img/col-velvet-cover.webp", "status": "ok" },
+        { "slot": "concept", "query": "dark red roses bouquet", "file": "assets/img/velvet-detail-tay-hong.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/bouquets.html",
+      "title": "Hoa cầm tay",
+      "purpose": "Gallery editorial các kiểu hoa cầm tay cô dâu, không hiển thị giá",
+      "sections": [
+        { "id": "page-hero", "catalog": "gallery", "variant": "page-hero", "source": "ai", "note": "Made to walk with you" },
+        { "id": "lookbook", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "5 ảnh khác tỷ lệ, lightbox, caption nhỏ" },
+        { "id": "shapes", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "Các dáng bó hoa, kể cả bó thác đổ (chưa có ảnh)" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "classic-round", "query": "bride holding bouquet", "file": "assets/img/bouquet-cascading.webp", "status": "ok" },
+        { "slot": "loose-garden", "query": "wedding bouquet roses bride", "file": "assets/img/bouquet-loose-garden.jpg", "status": "ok" },
+        { "slot": "posy", "query": "wedding bouquet roses bride", "file": "assets/img/bouquet-classic-round.webp", "status": "ok" },
+        { "slot": "sculptural", "query": "wedding bouquet roses bride", "file": "assets/img/bouquet-ivory-sculptural.webp", "status": "ok" },
+        { "slot": "burgundy-statement", "query": "burgundy dahlia bouquet", "file": "assets/img/bouquet-burgundy-statement.jpg", "status": "ok" },
+        { "slot": "cascading", "query": "cascade wedding bouquet trailing", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/contact.html",
+      "title": "Liên hệ",
+      "purpose": "Mời cặp đôi chia sẻ ý tưởng; form demo, thông tin liên hệ mẫu, câu hỏi thường gặp",
+      "sections": [
+        { "id": "contact", "catalog": "contact", "variant": "contact-split", "source": "ai", "note": "Nền Deep Burgundy, form demo tên/email/ngày cưới/lời nhắn" },
+        { "id": "faq", "catalog": "faq", "variant": "contact-page", "source": "ai", "note": "Accordion" }
+      ],
+      "images": []
+    }
+  ],
+  "adjustments": [
+    "Tên thương hiệu: concept.md yêu cầu dùng nguyên văn 'Linh An' ở title/header/footer; BLOOMÉ (tên thương hiệu cá nhân trong chú thích) hiển thị kèm như tên studio",
+    "Nội dung tiếng Anh trong chú thích (tiêu đề, nút) được dịch sang tiếng Việt vì concept.md chọn ngôn ngữ Tiếng Việt và cấm trộn ngôn ngữ; giữ tên riêng các bộ sưu tập (Garden Romance, Ivory Elegance, Wildflower Dreams, Velvet Rose)",
+    "Font body dùng Manrope theo chú thích của BA thay cho Montserrat của preset; màu theo bảng của BA",
+    "Mức chuyển động Level 1: bỏ parallax và chữ hiện theo từng dòng (data-split) mà chú thích đề cập; dùng reveal fade/up, clip cho ảnh theo preset Art Gallery, hover zoom nhẹ",
+    "Website 9 trang (nhiều hơn 4–7) vì chú thích yêu cầu mỗi bộ sưu tập mở được trang chi tiết riêng",
+    "Không tìm được ảnh bó hoa thác đổ (cascading) thật trên nguồn ảnh: dáng này được mô tả bằng chữ, ảnh thay bằng bó posy mẫu đơn",
+    "Yêu cầu tách index.html/style.css/script.js được hiện thực theo chuẩn công ty: assets/css/site.css và các script dùng chung"
+  ],
+  "limitations": [
+    "Form liên hệ là bản demo, chưa có backend; có liên kết email mẫu hello@bloome.example",
+    "Lời nhận xét khách hàng là nội dung mẫu giả lập",
+    "Thông tin liên hệ, Instagram và các dự án là dữ liệu giả lập"
+  ]
+}

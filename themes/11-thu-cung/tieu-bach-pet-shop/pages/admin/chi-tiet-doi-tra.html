@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết đổi trả · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-011" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-011 Chi tiết đổi trả: video + ảnh + yêu cầu + khách & đơn + hoàn tiền + kết quả xử lý + Timeline.
+   * Nút từ Workflow.actions('DOC-BOOK-RETURN'): Chấp nhận / Từ chối (lý do bắt buộc) / Hoàn tất (điều kiện BR-BOOK-013). ?id= */
+  (function () {
+    var r = DemoStore.get('returns', App.param('id') || 'dt-2026-00004');
+    Layout.mount({ area: 'admin', title: r ? r.code : 'Chi tiết đổi trả', active: 'returns', breadcrumb: [['Đổi trả', 'pages/admin/doi-tra.html'], [r ? r.code : 'Không tìm thấy']] }, function (main) {
+      var U = Perm.url, esc = UI.esc, DOC = 'DOC-BOOK-RETURN';
+      if (!r) { main.innerHTML = '<div class="rounded-lg border border-neutral-200 bg-white">' + UI.emptyState({ title: 'Không tìm thấy yêu cầu đổi trả', action: UI.button({ label: 'Về danh sách', href: U('pages/admin/doi-tra.html') }) }) + '</div>'; return; }
+      main.innerHTML = UI.skeleton(2) + '<div class="mt-4 grid gap-4 lg:grid-cols-5">' + UI.skeletonBlock('aspect-video rounded-lg lg:col-span-3') + UI.skeletonBlock('h-64 rounded-lg lg:col-span-2') + '</div>';
+      var acts = [];
+      function order() { return DemoStore.get('orders', r.orderId); }
+      function itemsValue() { return r.items.reduce(function (s, i) { return s + i.gia * i.so_luong; }, 0); }
+      function inTime() { var o = order(); return o && o.thoi_diem_giao && new Date(r.tao_luc) - new Date(o.thoi_diem_giao) <= 24 * 3600e3; }
+      function needRefund() { var o = order(); return r.hinh_thuc === 'TRA_HANG' && o && App.paid(o) > 0; }
+      function actions() {
+        return Workflow.actions(DOC, r.state).map(function (t) {
+          var a = { event: t.event, label: t.event, permission: t.permission, danger: t.event === 'Từ chối', primary: t.event !== 'Từ chối', icon: t.event === 'Từ chối' ? 'circle-x' : 'circle-check' };
+          if (t.event === 'Hoàn tất') {
+            if (needRefund() && !r.da_hoan_tien) { a.disabled = true; a.tooltip = 'Cần ghi nhận hoàn tiền trước'; }
+          }
+          return a;
+        });
+      }
+      function btns(full) { return acts.map(function (a, i) { var b = UI.button({ label: a.label, icon: a.icon, variant: a.danger ? 'danger-outline' : 'primary', disabled: a.disabled, full: full, attrs: { 'data-ract': i, 'data-permission': a.permission } }); return a.disabled ? UI.withTooltip(b, a.tooltip) : b; }).join(''); }
+      function paint() {
+        r = DemoStore.get('returns', r.id); acts = actions();
+        var o = order();
+        var video = '<div class="overflow-hidden rounded-lg bg-neutral-900 aspect-video"><video controls preload="metadata" class="h-full w-full" data-video><source src="' + esc(r.video) + '" type="video/mp4"></video></div>' +
+          '<p class="mt-2 hidden text-sm font-bold text-danger-700" data-video-err>Không phát được video. Bấm Tải về để xem.</p><div class="mt-3">' + UI.button({ label: 'Tải về', icon: 'download', variant: 'outline', size: 'sm', href: r.video, attrs: { download: '', target: '_blank', rel: 'noopener' } }) + '</div>';
+        var photos = r.anh && r.anh.length ? UI.card({ title: 'Ảnh (' + r.anh.length + ')', body: '<div class="grid grid-cols-3 gap-2 sm:grid-cols-5">' + r.anh.map(function (p, i) { return '<button type="button" data-zoom=\'' + esc(JSON.stringify(r.anh)) + '\' data-zoom-i="' + i + '" class="aspect-square overflow-hidden rounded-md border border-neutral-200" aria-label="Phóng to ảnh ' + (i + 1) + '">' + UI.img({ src: p, alt: 'Ảnh khách gửi ' + (i + 1) }) + '</button>'; }).join('') + '</div>' }) : '';
+        var req = UI.card({ title: 'Yêu cầu', body: UI.descriptionList([{ label: 'Lý do', value: r.ly_do === 'GIAO_NHAM' ? 'Giao nhầm sản phẩm' : 'Hàng bị lỗi' }, { label: 'Hình thức', value: r.hinh_thuc === 'DOI_HANG' ? 'Đổi hàng' : 'Trả hàng, hoàn tiền' }, { label: 'Mô tả của khách', value: esc(r.mo_ta), full: true }]) + '<div class="mt-4" data-items></div>' });
+        var result = r.state === 'ACCEPTED' ? UI.card({ title: 'Kết quả xử lý', body: '<form novalidate class="flex flex-col gap-3" data-result>' + UI.field({ name: 'ket_qua', label: 'Kết quả xử lý', type: 'textarea', rows: 3, maxlength: 500, value: r.ket_qua, required: r.hinh_thuc === 'DOI_HANG', placeholder: 'Ví dụ: Đã giao lại vị cá ngày 15/10' }) + '<div>' + UI.button({ label: 'Lưu', icon: 'save', size: 'sm', variant: 'outline', type: 'submit', attrs: { 'data-permission': 'BOOK.RETURN.UPDATE' } }) + '</div></form>' })
+          : (r.ket_qua || r.ly_do_tu_choi ? UI.card({ title: 'Kết quả xử lý', body: UI.descriptionList([r.ket_qua ? { label: 'Kết quả', value: esc(r.ket_qua), full: true } : null, r.ly_do_tu_choi ? { label: 'Lý do từ chối', value: esc(r.ly_do_tu_choi), full: true } : null]) }) : '');
+        var cus = UI.card({ title: 'Khách & đơn', body: UI.descriptionList([{ label: 'Khách', value: '<b>' + esc(r.ho_ten) + '</b>' }, { label: 'SĐT', value: '<a class="font-bold text-primary-700" href="tel:' + esc(r.so_dien_thoai) + '">' + esc(r.so_dien_thoai) + '</a>' },
+          { label: 'Đơn hàng', value: '<a class="font-mono font-bold text-primary-700 hover:underline" href="' + U('pages/admin/chi-tiet-don.html?id=' + r.orderId) + '">' + esc(r.orderCode) + '</a>' }, { label: 'Giao lúc', value: o && o.thoi_diem_giao ? UI.fmt.datetime(o.thoi_diem_giao) : '—' },
+          { label: 'Thanh toán', value: o ? esc(App.PAY_METHOD[o.cach_thanh_toan]) + ' ' + App.payTag(o.trang_thai_thanh_toan) : '—', full: true }, { label: 'Khách đã trả', value: o ? '<b>' + UI.fmt.money(App.paid(o)) + '</b>' : '—' }], 1) });
+        var refund = r.hinh_thuc === 'TRA_HANG' ? UI.card({ title: 'Hoàn tiền', body: (o && (o.refunds || []).length ? '<ul class="flex flex-col gap-1.5 text-sm">' + o.refunds.map(function (x) { return '<li class="flex justify-between gap-2"><span>' + UI.fmt.date(x.at) + ' · ' + esc(x.ly_do) + '</span><b class="text-danger-700">−' + UI.fmt.money(x.so_tien) + '</b></li>'; }).join('') + '</ul>' : '<p class="text-sm text-neutral-600">' + (needRefund() ? 'Chưa ghi nhận hoàn tiền. Giá trị hàng trả: ' + UI.fmt.money(itemsValue()) : 'Đơn chưa thanh toán nên không phát sinh hoàn tiền.') + '</p>') +
+          (r.state === 'ACCEPTED' && needRefund() && !r.da_hoan_tien ? '<div class="mt-3">' + UI.button({ label: 'Ghi nhận hoàn tiền', icon: 'hand-coins', variant: 'outline', full: true, attrs: { 'data-refund': '', 'data-permission': 'BOOK.REFUND.CREATE' } }) + '</div>' : '') }) : '';
+        var tl = UI.timeline(r.history.slice().reverse().map(function (h) { var s = h.to ? Workflow.state(DOC, h.to) : null; return { at: h.at, by: h.by || h.roleName, title: h.log ? esc(h.event) : '<b>' + esc(s ? s.name : h.event) + '</b> <span class="font-normal text-neutral-600">(' + esc(h.event) + ')</span>', tone: s ? s.tone : 'info', note: h.note }; }));
+
+        main.innerHTML = UI.detailHeader({ code: r.code, status: App.stateBadge(DOC, r.state, 'md'), tags: inTime() ? UI.tag('Còn hạn', 'success', 'check') : UI.tag('Quá hạn', 'danger'),
+          meta: 'Đơn <a class="font-mono font-bold text-primary-700 hover:underline" href="' + U('pages/admin/chi-tiet-don.html?id=' + r.orderId) + '">' + esc(r.orderCode) + '</a> · Gửi ' + UI.fmt.datetime(r.tao_luc), actions: acts.length ? '<span class="hidden md:contents">' + btns(false) + '</span>' : '' }) +
+          '<div class="grid gap-4 lg:grid-cols-5"><div class="flex min-w-0 flex-col gap-4 lg:col-span-3">' + UI.card({ title: 'Video mở hàng', body: video }) + photos + req + result + '</div>' +
+          '<div class="flex min-w-0 flex-col gap-4 lg:col-span-2">' + cus + refund + UI.card({ title: 'Lịch sử', body: tl }) + '</div></div>';
+        UI.lineItems(main.querySelector('[data-items]'), { rows: r.items, columns: [
+          { key: 'ten', label: 'Sản phẩm', type: 'custom', render: function (i) { return '<b>' + esc(i.ten) + '</b><span class="block text-xs text-neutral-600">' + esc(i.bien_the) + '</span>'; } },
+          { key: 'sl', label: 'SL đổi / trả', type: 'custom', align: 'right', render: function (i) { return '× ' + i.so_luong; } },
+          { key: 'gt', label: 'Giá trị', type: 'custom', align: 'right', render: function (i) { return UI.fmt.money(i.gia * i.so_luong); } }] });
+        var v = main.querySelector('[data-video]'); if (v) v.addEventListener('error', function () { main.querySelector('[data-video-err]').classList.remove('hidden'); }, true);
+        var form = main.querySelector('[data-result]');
+        if (form) form.addEventListener('submit', function (e) { e.preventDefault(); var d = UI.formData(form); DemoStore.update('returns', r.id, { ket_qua: d.ket_qua }); UI.toast('Đã lưu', 'success'); paint(); });
+        var old = document.getElementById('ui-sticky'); if (old) old.remove();
+        if (acts.length) UI.stickyBar('<div class="flex gap-2">' + btns(true) + '</div>');
+      }
+      function run(a) {
+        if (a.disabled) { UI.toast(a.tooltip, 'error'); return; }
+        var cfg = { title: a.event + ' yêu cầu ' + r.code + '?', confirmLabel: a.event, danger: a.danger };
+        if (a.event === 'Chấp nhận') cfg.message = 'Chấp nhận yêu cầu ' + r.code + '? Bạn đã kiểm tra video và hàng còn nguyên.';
+        if (a.event === 'Từ chối') cfg.reason = { label: 'Lý do từ chối', required: true, max: 500, errorMsg: 'Vui lòng nhập lý do từ chối', placeholder: 'Ví dụ: video không thấy lúc mở hàng' };
+        if (a.event === 'Hoàn tất') {
+          var kq = main.querySelector('[data-result] [name=ket_qua]'); var val = kq ? kq.value.trim() : r.ket_qua;
+          if (r.hinh_thuc === 'DOI_HANG' && !val) { UI.setError(main.querySelector('[data-result]'), 'ket_qua', 'Vui lòng ghi kết quả xử lý'); return; }
+          if (kq) DemoStore.update('returns', r.id, { ket_qua: val });
+          cfg.message = 'Đánh dấu yêu cầu đã xử lý xong.';
+        }
+        UI.confirm(cfg).then(function (res) {
+          if (!res) return;
+          var fresh = DemoStore.get('returns', r.id);
+          if (fresh.state !== r.state) { UI.toast('Trạng thái đã thay đổi, vui lòng tải lại', 'error'); paint(); return; }
+          var next = Workflow.apply(DOC, fresh, a.event, { note: res.note || (a.event === 'Hoàn tất' ? fresh.ket_qua : '') });
+          next.history[next.history.length - 1].by = App.adminName();
+          if (a.event === 'Từ chối') next.ly_do_tu_choi = res.note;
+          DemoStore.update('returns', r.id, next);
+          UI.toast({ 'Chấp nhận': 'Đã chấp nhận yêu cầu ', 'Từ chối': 'Đã từ chối yêu cầu ', 'Hoàn tất': 'Đã hoàn tất yêu cầu ' }[a.event] + r.code, 'success');
+          paint();
+        });
+      }
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-ract]'); if (b && !b.disabled) { run(acts[+b.getAttribute('data-ract')]); return; }
+        if (e.target.closest('[data-refund]')) {
+          App.refundModal(order(), function () { paint(); }, { reason: 'Trả hàng', amount: itemsValue(), onSaved: function (d) {
+            DemoStore.update('returns', r.id, function (x) { var n = Object.assign({}, x); n.da_hoan_tien = true; n.history = x.history.concat([{ at: new Date().toISOString(), role: Perm.role(), roleName: Perm.roleName(), by: App.adminName(), event: 'Ghi nhận hoàn tiền ' + UI.fmt.money(d.so_tien), from: null, to: null, note: '', log: true }]); return n; });
+          } });
+        }
+      });
+      setTimeout(paint, 400);
+    });
+  })();
+  </script>
+</body>
+</html>

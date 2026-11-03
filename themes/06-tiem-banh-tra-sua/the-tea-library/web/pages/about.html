@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" data-vi-title="Về chúng tôi | THE TEA LIBRARY" data-vi-desc="Câu chuyện của THE TEA LIBRARY: văn hóa trà, sự kết hợp giữa trà và bánh, và một không gian để dừng lại.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — THE TEA LIBRARY</title>
+  <meta name="description" content="The story of THE TEA LIBRARY: tea culture, the pairing of tea and pastry, and a quiet room made for pausing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-paper text-ink font-sans">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 bg-paper/95 transition-[background-color,box-shadow] duration-500">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="../index.html" class="whitespace-nowrap font-display text-lg font-semibold tracking-[0.1em] text-forest sm:text-2xl sm:tracking-[0.18em]">THE TEA LIBRARY</a>
+    <nav aria-label="Main" class="hidden items-center gap-10 lg:flex">
+      <a href="../index.html" class="relative py-2 text-[15px] text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="relative py-2 text-[15px] text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" aria-current="page" class="relative py-2 text-[15px] text-burgundy after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-burgundy" data-vi="Về chúng tôi">About</a>
+      <a href="../index.html#visit" class="relative py-2 text-[15px] text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-forest after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100" data-vi="Ghé thăm">Visit</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center text-[13px] font-medium tracking-[0.12em]" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="relative min-h-[44px] px-2 text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-2 after:bottom-2 after:h-px after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500">EN</button>
+        <span aria-hidden="true" class="text-wood/50">/</span>
+        <button type="button" data-lang="vi" class="relative min-h-[44px] px-2 text-ink-soft transition-colors duration-300 hover:text-forest after:absolute after:inset-x-2 after:bottom-2 after:h-px after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500">VI</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center text-forest lg:hidden" aria-label="Open menu" data-vi-aria="Mở menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div data-rule class="h-px w-full bg-forest/25"></div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-forest/15 bg-paper-light p-6 shadow-2xl lg:hidden">
+    <nav aria-label="Mobile" class="flex flex-col divide-y divide-forest/10 font-display text-2xl text-forest">
+      <a href="../index.html" class="py-3" data-vi="Trang chủ">Home</a>
+      <a href="menu.html" class="py-3" data-vi="Thực đơn">Menu</a>
+      <a href="about.html" aria-current="page" class="py-3 text-burgundy" data-vi="Về chúng tôi">About</a>
+      <a href="../index.html#visit" class="py-3" data-vi="Ghé thăm">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ABOUT HERO -->
+  <section id="about-hero" data-section="page-hero" class="relative overflow-hidden bg-forest-deep">
+    <div class="absolute inset-x-0 -inset-y-[10%]" data-parallax="0.08">
+      <img src="https://images.unsplash.com/photo-1759968646998-d94b93904082?w=2000&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" alt="A grand old library with tall wooden bookshelves" data-vi-alt="Thư viện cổ với những kệ sách gỗ cao" class="img-warm h-full w-full object-cover" width="2000" height="1333">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-forest-deep/40 to-forest-deep/10"></div>
+    <div class="relative mx-auto flex min-h-[64vh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-14 pt-32 sm:px-6 lg:min-h-[72vh] lg:px-10 lg:pb-20 2xl:px-16">
+      <h1 data-split="words" class="font-display text-[3.5rem] font-medium leading-[1.02] text-paper-light sm:text-7xl xl:text-[6.5rem]" data-vi="Một nơi để <em class='italic'>dừng lại</em>">A Place to <em class="italic">Pause</em></h1>
+      <p class="mt-6 max-w-xl text-[17px] leading-relaxed text-paper/85" data-reveal="up" data-vi="Câu chuyện về một căn phòng đầy sách, những ấm trà pha chậm và những người thích ngồi lâu.">The story of a room full of books, slow pots of tea and the people who like to stay a while.</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" data-section="story-editorial" class="bg-paper py-24 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          <p class="flex items-center gap-4 text-xs font-medium uppercase tracking-label text-burgundy"><span class="h-px w-10 bg-burgundy"></span><span data-vi="Câu chuyện thương hiệu">Our story</span></p>
+          <h2 class="mt-6 font-display text-4xl font-medium leading-tight text-forest sm:text-5xl" data-reveal="up" data-vi="Bắt đầu từ một kệ sách và một ấm trà">It began with one bookshelf and one teapot</h2>
+          <p class="mt-6 text-sm text-wood" data-vi="Viết bởi người sáng lập, Sài Gòn, mùa thu">Written by our founder, Saigon, autumn</p>
+          <div class="mt-10 hidden aspect-[4/5] overflow-hidden bg-paper-deep lg:block" data-reveal="clip">
+            <img src="https://images.unsplash.com/photo-1474366521946-c3d4b507abf2?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="An open book beside a porcelain teacup on a saucer" data-vi-alt="Cuốn sách mở bên tách trà sứ" class="img-warm h-full w-full object-cover" width="1200" height="1500">
+          </div>
+        </div>
+      </div>
+      <article class="lg:col-span-7 lg:col-start-6">
+        <p class="dropcap max-w-prose text-[18px] leading-[1.85] text-ink-soft" data-vi="THE TEA LIBRARY ra đời từ một thói quen rất nhỏ: mỗi chiều Chủ Nhật, chúng tôi pha một ấm trà, chọn một cuốn sách cũ và đọc cho đến khi trời tối. Bạn bè bắt đầu ghé qua, mang theo sách của họ. Kệ sách dài thêm, ấm trà lớn hơn, và căn phòng dần trở thành một nơi chốn.">THE TEA LIBRARY grew out of a very small habit. Every Sunday afternoon we brewed a pot of tea, picked an old book and read until the light ran out. Friends began to drop by with books of their own. The shelf grew longer, the teapot grew larger, and the room slowly became a place.</p>
+        <p class="mt-6 max-w-prose text-[18px] leading-[1.85] text-ink-soft" data-vi="Chúng tôi lấy cảm hứng từ những thư viện cổ ở châu Âu và những phòng trà nơi người ta ngồi hàng giờ mà không ai giục. Gỗ sồi, đèn vàng, giấy ngả màu và tiếng thìa chạm vào tách sứ. Mọi thứ ở đây được chọn để bạn quên đi đồng hồ.">We took our cues from the old libraries of Europe and from tea rooms where people sit for hours and nobody hurries them. Oak, warm lamps, yellowed paper and the sound of a spoon against porcelain. Everything here is chosen to help you forget the clock.</p>
+        <blockquote class="my-14 border-l-2 border-burgundy pl-6 sm:-ml-6 lg:-ml-16" data-reveal="up">
+          <p class="font-display text-3xl italic leading-snug text-forest sm:text-4xl" data-vi="“Chúng tôi không bán sự vội vàng. Chúng tôi phục vụ thời gian.”">“We do not sell hurry. We serve time.”</p>
+        </blockquote>
+        <p class="max-w-prose text-[18px] leading-[1.85] text-ink-soft" data-vi="Ngày nay, căn phòng có hơn 1.400 cuốn sách, hai mươi bốn loại trà và một lò nướng bắt đầu làm việc từ năm giờ sáng. Nhưng tinh thần vẫn như ngày đầu: một tách trà ngon, một chiếc bánh vừa ra lò và một trang sách chưa đọc.">Today the room holds more than 1,400 books, twenty-four teas and an oven that starts work at five each morning. The spirit is the same as on the first Sunday: a good cup of tea, a pastry still warm from the oven and a page you have not read yet.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CHAPTERS -->
+  <section id="chapters" data-section="features-alternate" class="bg-paper-light py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl space-y-24 px-4 sm:px-6 lg:space-y-32 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
+        <div class="aspect-[4/3] overflow-hidden bg-paper-deep lg:col-span-7" data-reveal="clip">
+          <img src="https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A tea set with small white cups and a teapot on a wooden table" data-vi-alt="Bộ ấm chén trắng nhỏ trên bàn gỗ" class="img-warm h-full w-full object-cover" width="1400" height="1050">
+        </div>
+        <div class="lg:col-span-4 lg:col-start-9">
+          <p class="font-display text-2xl italic text-burgundy" data-vi="Chương một">Chapter one</p>
+          <h2 class="mt-3 font-display text-4xl font-medium text-forest sm:text-5xl" data-reveal="up" data-vi="Văn hóa trà">Tea culture</h2>
+          <div data-rule class="mt-6 h-px w-20 bg-burgundy"></div>
+          <p class="mt-6 text-[17px] leading-relaxed text-ink-soft" data-vi="Từ trà Shan Tuyết trên núi Hà Giang đến phòng trà chiều ở London, mỗi nền văn hóa có một cách để dừng lại. Chúng tôi giữ những nghi thức ấy: ấm sứ, nước đúng độ và thời gian chờ.">From Shan Tuyet grown on the mountains of Ha Giang to afternoon tea in London, every culture has its own way of stopping. We keep those rituals: a porcelain pot, water at the right degree and time to wait.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
+        <div class="order-2 lg:order-1 lg:col-span-4">
+          <p class="font-display text-2xl italic text-burgundy" data-vi="Chương hai">Chapter two</p>
+          <h2 class="mt-3 font-display text-4xl font-medium text-forest sm:text-5xl" data-reveal="up" data-vi="Trà và bánh">Tea and pastry</h2>
+          <div data-rule class="mt-6 h-px w-20 bg-burgundy"></div>
+          <p class="mt-6 text-[17px] leading-relaxed text-ink-soft" data-vi="Mỗi chiếc bánh được làm để đi cùng một loại trà: scone bơ với Earl Grey, madeleine với Darjeeling, bánh chanh với trà xanh. Hãy hỏi chúng tôi về cặp đôi hợp nhất trong ngày.">Each pastry is made to sit beside a particular tea: butter scones with Earl Grey, madeleines with Darjeeling, lemon cake with green tea. Ask us for the pairing of the day.</p>
+        </div>
+        <div class="order-1 aspect-[4/3] overflow-hidden bg-paper-deep lg:order-2 lg:col-span-7 lg:col-start-6" data-reveal="clip">
+          <img src="https://images.unsplash.com/photo-1553595854-34a134b890c8?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Tea served with fresh bread on a plate" data-vi-alt="Trà dùng kèm bánh mì tươi trên đĩa" class="img-warm h-full w-full object-cover" width="1400" height="1050">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SPACE (quote band) -->
+  <section id="quote" data-section="quote-full" class="bg-forest text-paper">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="aspect-[4/3] overflow-hidden bg-forest-soft lg:aspect-auto lg:min-h-[640px]" data-reveal="clip">
+        <img src="https://images.unsplash.com/photo-1783085938835-ed3c145c44ec?w=1400&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A quiet room with a table by a window overlooking a green garden" data-vi-alt="Căn phòng yên tĩnh với chiếc bàn bên cửa sổ nhìn ra khu vườn xanh" class="img-warm h-full w-full object-cover" width="1400" height="1050">
+      </div>
+      <div class="flex flex-col justify-center px-4 py-20 sm:px-10 lg:px-16 xl:px-24">
+        <p class="font-display text-2xl italic text-paper-deep" data-vi="Chương ba, không gian thưởng thức">Chapter three, the room</p>
+        <p class="mt-8 font-display text-4xl leading-snug sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Ánh sáng cửa sổ, mùi gỗ cũ và một chỗ ngồi không ai giục bạn rời đi.">Window light, the smell of old wood and a seat nobody will ask you to leave.</p>
+        <p class="mt-8 max-w-md text-[16px] leading-relaxed text-paper/75" data-vi="32 chỗ ngồi, một góc đọc sách yên tĩnh trên tầng hai và chiếc bàn dài cạnh cửa sổ hướng tây.">Thirty-two seats, a quiet reading corner upstairs and a long table by the west window.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" data-section="gallery-masonry" class="bg-paper py-24 lg:py-32">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 class="font-display text-4xl font-medium text-forest sm:text-5xl 2xl:text-6xl" data-reveal="up" data-vi="Những trang hình">Plates from the Library</h2>
+      <div data-rule class="mt-8 h-px w-full bg-forest/25"></div>
+      <div class="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3 2xl:columns-4" data-reveal-stagger="90">
+        <figure class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1523920290228-4f321a939b4c?w=1200&q=80&auto=format&fit=crop" data-lightbox="library" data-caption="I. A teacup and white flowers by the window" data-vi-caption="I. Tách trà và hoa trắng bên cửa sổ" class="group block overflow-hidden bg-paper-deep">
+            <img src="https://images.unsplash.com/photo-1523920290228-4f321a939b4c?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A white teacup beside white flowers" data-vi-alt="Tách trà trắng bên hoa trắng" class="img-warm aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="1500">
+          </a>
+          <figcaption class="mt-3 flex gap-4 text-sm text-ink-soft"><span class="font-display text-lg italic text-burgundy">I.</span><span data-vi="Tách trà và hoa trắng bên cửa sổ">A teacup and white flowers by the window</span></figcaption>
+        </figure>
+        <figure class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1766232574096-4c4380105cc7?w=1200&q=80&auto=format&fit=crop" data-lightbox="library" data-caption="II. Glass pots for watching the leaves open" data-vi-caption="II. Ấm thủy tinh để ngắm lá trà nở" class="group block overflow-hidden bg-paper-deep">
+            <img src="https://images.unsplash.com/photo-1766232574096-4c4380105cc7?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Glass teapots filled with different teas" data-vi-alt="Những ấm thủy tinh chứa các loại trà khác nhau" class="img-warm aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="900">
+          </a>
+          <figcaption class="mt-3 flex gap-4 text-sm text-ink-soft"><span class="font-display text-lg italic text-burgundy">II.</span><span data-vi="Ấm thủy tinh để ngắm lá trà nở">Glass pots for watching the leaves open</span></figcaption>
+        </figure>
+        <figure class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1620130674275-d709994ed7c8?w=1200&q=80&auto=format&fit=crop" data-lightbox="library" data-caption="III. The shelves, free to borrow at your table" data-vi-caption="III. Kệ sách, đọc thoải mái tại bàn" class="group block overflow-hidden bg-paper-deep">
+            <img src="https://images.unsplash.com/photo-1620130674275-d709994ed7c8?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A wooden bookshelf filled with books" data-vi-alt="Kệ sách gỗ đầy sách" class="img-warm aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="1600">
+          </a>
+          <figcaption class="mt-3 flex gap-4 text-sm text-ink-soft"><span class="font-display text-lg italic text-burgundy">III.</span><span data-vi="Kệ sách, đọc thoải mái tại bàn">The shelves, free to borrow at your table</span></figcaption>
+        </figure>
+        <figure class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1610375233775-6e0166927193?w=1200&q=80&auto=format&fit=crop" data-lightbox="library" data-caption="IV. The long table by the west window" data-vi-caption="IV. Chiếc bàn dài cạnh cửa sổ hướng tây" class="group block overflow-hidden bg-paper-deep">
+            <img src="https://images.unsplash.com/photo-1610375233775-6e0166927193?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A wooden table near a window" data-vi-alt="Bàn gỗ cạnh cửa sổ" class="img-warm aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="1500">
+          </a>
+          <figcaption class="mt-3 flex gap-4 text-sm text-ink-soft"><span class="font-display text-lg italic text-burgundy">IV.</span><span data-vi="Chiếc bàn dài cạnh cửa sổ hướng tây">The long table by the west window</span></figcaption>
+        </figure>
+        <figure class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1763617702099-d956f3fd8324?w=1200&q=80&auto=format&fit=crop" data-lightbox="library" data-caption="V. Dried green tea leaves before brewing" data-vi-caption="V. Lá trà xanh khô trước khi pha" class="group block overflow-hidden bg-paper-deep">
+            <img src="https://images.unsplash.com/photo-1763617702099-d956f3fd8324?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="A close-up of dried green tea leaves" data-vi-alt="Cận cảnh lá trà xanh khô" class="img-warm aspect-square w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="1200">
+          </a>
+          <figcaption class="mt-3 flex gap-4 text-sm text-ink-soft"><span class="font-display text-lg italic text-burgundy">V.</span><span data-vi="Lá trà xanh khô trước khi pha">Dried green tea leaves before brewing</span></figcaption>
+        </figure>
+        <figure class="mb-10 break-inside-avoid">
+          <a href="https://images.unsplash.com/photo-1673530598977-ee0eda88f0a2?w=1200&q=80&auto=format&fit=crop" data-lightbox="library" data-caption="VI. Cake and a cup, the four o'clock ritual" data-vi-caption="VI. Bánh và trà, nghi thức lúc bốn giờ chiều" class="group block overflow-hidden bg-paper-deep">
+            <img src="https://images.unsplash.com/photo-1673530598977-ee0eda88f0a2?w=1200&q=80&auto=format&fit=crop" referrerpolicy="no-referrer" loading="lazy" alt="Slices of cake on a white plate next to a cup of tea" data-vi-alt="Những lát bánh trên đĩa trắng bên tách trà" class="img-warm aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1200" height="900">
+          </a>
+          <figcaption class="mt-3 flex gap-4 text-sm text-ink-soft"><span class="font-display text-lg italic text-burgundy">VI.</span><span data-vi="Bánh và trà, nghi thức lúc bốn giờ chiều">Cake and a cup, the four o'clock ritual</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="about-cta" data-section="cta-type" class="bg-paper-light py-24 lg:py-32">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-end gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <h2 class="font-display text-5xl font-medium leading-[1.05] text-forest sm:text-6xl lg:col-span-8 2xl:text-8xl" data-reveal="up" data-vi="Có một chỗ ngồi <em class='italic text-burgundy'>đang chờ bạn</em>">There is a seat <em class="italic text-burgundy">waiting for you</em></h2>
+      <div class="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:justify-end">
+        <a href="../index.html#visit" class="inline-flex min-h-[48px] items-center justify-center bg-forest px-7 text-[15px] font-medium text-paper-light transition-all duration-300 hover:bg-forest-deep active:scale-[.98]" data-vi="Ghé thăm thư viện">Visit the Library</a>
+        <a href="menu.html" class="inline-flex min-h-[48px] items-center justify-center border border-forest/40 px-7 text-[15px] text-forest transition-colors duration-300 hover:border-forest hover:bg-forest hover:text-paper-light" data-vi="Xem thực đơn">Read the Menu</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="bg-forest text-paper">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <a href="../index.html" class="font-display text-3xl font-semibold tracking-[0.18em] sm:text-4xl">THE TEA LIBRARY</a>
+        <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-paper/70" data-vi="Nhà của trà và bánh, lấy cảm hứng từ thư viện cổ và phòng trà châu Âu.">A house of tea and pastry, inspired by old libraries and European tea rooms.</p>
+      </div>
+      <nav aria-label="Footer" class="md:col-span-3">
+        <p class="font-display text-lg italic text-paper-deep" data-vi="Các trang">Pages</p>
+        <ul class="mt-4 space-y-2 text-[15px]">
+          <li><a href="../index.html" class="inline-flex min-h-[32px] items-center text-paper/80 transition-colors duration-300 hover:text-paper" data-vi="Trang chủ">Home</a></li>
+          <li><a href="menu.html" class="inline-flex min-h-[32px] items-center text-paper/80 transition-colors duration-300 hover:text-paper" data-vi="Thực đơn">Menu</a></li>
+          <li><a href="about.html" class="inline-flex min-h-[32px] items-center text-paper/80 transition-colors duration-300 hover:text-paper" data-vi="Về chúng tôi">About</a></li>
+          <li><a href="../index.html#visit" class="inline-flex min-h-[32px] items-center text-paper/80 transition-colors duration-300 hover:text-paper" data-vi="Ghé thăm">Visit</a></li>
+        </ul>
+      </nav>
+      <div class="md:col-span-4">
+        <p class="font-display text-lg italic text-paper-deep" data-vi="Ghé thăm">Visit</p>
+        <p class="mt-4 text-[15px] leading-relaxed text-paper/80">27 Ngo Duc Ke, Ben Nghe Ward<br><span data-vi="Quận 1, TP. Hồ Chí Minh">District 1, Ho Chi Minh City</span><br><a href="tel:+842838229147" class="transition-colors duration-300 hover:text-paper">+84 28 3822 9147</a><br><a href="mailto:hello@thetealibrary.vn" class="transition-colors duration-300 hover:text-paper">hello@thetealibrary.vn</a></p>
+      </div>
+    </div>
+    <div data-rule class="mt-16 h-px w-full bg-paper/20"></div>
+    <div class="mt-6 flex flex-col gap-3 text-[13px] text-paper/60 sm:flex-row sm:justify-between">
+      <p>&copy; 2026 THE TEA LIBRARY. <span data-vi="Bảo lưu mọi quyền.">All rights reserved.</span></p>
+      <a href="#top" class="transition-colors duration-300 hover:text-paper" data-vi="Lên đầu trang">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-30 inline-flex h-11 w-11 items-center justify-center bg-forest text-paper shadow-lg transition-colors duration-300 hover:bg-burgundy" aria-label="Back to top" data-vi-aria="Lên đầu trang">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

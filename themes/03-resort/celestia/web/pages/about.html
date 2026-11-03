@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="About — CELESTIA">Giới thiệu — CELESTIA</title>
+<meta name="description" content="Câu chuyện, kiến trúc và bốn giá trị của CELESTIA: tĩnh lặng, cân bằng, thiên nhiên và tái tạo năng lượng." data-en="The story, architecture and four values of CELESTIA: stillness, balance, nature and renewal.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-pearl font-sans text-midnight">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="group fixed inset-x-0 top-0 z-40 text-pearl transition-colors duration-500 [&.is-scrolled]:bg-pearl/90 [&.is-scrolled]:text-midnight [&.is-scrolled]:shadow-[0_1px_0_rgba(32,42,67,0.08)] [&.is-scrolled]:backdrop-blur-md">
+  <div class="wrap flex h-20 items-center justify-between gap-6 transition-[height] duration-500 group-[.is-scrolled]:h-16">
+    <a href="../index.html" class="font-display text-2xl font-medium tracking-[0.32em] sm:text-[1.7rem]" aria-label="CELESTIA, trang chủ" data-en-aria="CELESTIA, home">CELESTIA</a>
+
+    <nav class="hidden items-center gap-10 lg:flex" aria-label="Điều hướng chính" data-en-aria="Main navigation">
+      <a href="../index.html" class="relative py-2 text-sm tracking-wide after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a aria-current="page" href="../pages/about.html" class="relative py-2 text-sm tracking-wide after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="About">Giới thiệu</a>
+      <a href="../pages/stays.html" class="relative py-2 text-sm tracking-wide after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Stays">Lưu trú</a>
+      <a href="../pages/experiences.html" class="relative py-2 text-sm tracking-wide after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <div class="flex items-center text-xs font-medium tracking-[0.2em]" role="group" aria-label="Chọn ngôn ngữ" data-en-aria="Choose language">
+        <button type="button" data-lang-set="vi" class="min-h-11 px-2 opacity-55 transition-opacity duration-300 hover:opacity-100 [&.is-active]:underline [&.is-active]:opacity-100 [&.is-active]:underline-offset-[6px]">VI</button>
+        <span class="opacity-40" aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" class="min-h-11 px-2 opacity-55 transition-opacity duration-300 hover:opacity-100 [&.is-active]:underline [&.is-active]:opacity-100 [&.is-active]:underline-offset-[6px]">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center lg:hidden" aria-label="Mở menu" data-en-aria="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h18M7 16h14"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-md bg-pearl p-8 text-midnight shadow-[0_30px_80px_-20px_rgba(22,29,48,0.45)] lg:hidden">
+  <nav class="grid gap-1" aria-label="Điều hướng trên điện thoại" data-en-aria="Mobile navigation">
+    <a href="../index.html" class="flex min-h-12 items-center border-b border-silver/60 font-display text-3xl aria-[current=page]:text-lavender-deep" data-en="Home">Trang chủ</a>
+    <a aria-current="page" href="../pages/about.html" class="flex min-h-12 items-center border-b border-silver/60 font-display text-3xl aria-[current=page]:text-lavender-deep" data-en="About">Giới thiệu</a>
+    <a href="../pages/stays.html" class="flex min-h-12 items-center border-b border-silver/60 font-display text-3xl aria-[current=page]:text-lavender-deep" data-en="Stays">Lưu trú</a>
+    <a href="../pages/experiences.html" class="flex min-h-12 items-center font-display text-3xl aria-[current=page]:text-lavender-deep" data-en="Experiences">Trải nghiệm</a>
+  </nav>
+  <div class="mt-8 flex items-center gap-2 text-sm font-medium tracking-[0.2em]">
+    <button type="button" data-lang-set="vi" class="min-h-11 rounded-full border border-silver px-5 transition-colors duration-300 [&.is-active]:border-midnight [&.is-active]:bg-midnight [&.is-active]:text-pearl">VI</button>
+    <button type="button" data-lang-set="en" class="min-h-11 rounded-full border border-silver px-5 transition-colors duration-300 [&.is-active]:border-midnight [&.is-active]:bg-midnight [&.is-active]:text-pearl">EN</button>
+  </div>
+</div>
+<!-- /@partial header -->
+
+<main>
+  <!-- HERO -->
+  <section id="about-hero" data-section="page-hero" class="on-dark relative flex min-h-[82vh] items-end overflow-hidden bg-midnight text-pearl">
+    <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[15%]">
+      <img src="https://images.pexels.com/photos/18233791/pexels-photo-18233791.jpeg?auto=compress&cs=tinysrgb&w=1920" referrerpolicy="no-referrer" width="1920" height="1280" fetchpriority="high"
+        class="photo slow-zoom h-full w-full object-cover"
+        alt="Kiến trúc mộc mạc bao quanh một hồ nước phản chiếu giữa cây xanh"
+        data-en-alt="Natural architecture around a reflecting pool surrounded by greenery">
+    </div>
+    <div class="hero-shade absolute inset-0" aria-hidden="true"></div>
+    <div class="wrap relative z-10 grid gap-8 pb-20 pt-40 lg:grid-cols-12 lg:items-end lg:pb-24">
+      <div class="lg:col-span-8">
+        <p class="label text-pearl/85" data-en="About CELESTIA">Giới thiệu</p>
+        <h1 data-split="words" class="mt-6 pb-2 font-display text-[clamp(2.8rem,6.4vw,6.5rem)] leading-[1.02]" data-en="The Art of Returning to Yourself">Nghệ thuật trở về với chính mình</h1>
+      </div>
+      <p class="max-w-md text-base font-light leading-relaxed text-pearl/90 sm:text-lg lg:col-span-4 lg:pb-4" data-reveal="up" data-en="A place to set the busy rhythm of life aside for a while and find your balance again.">Một không gian để bạn tạm gác nhịp sống bận rộn và tìm lại sự cân bằng vốn có.</p>
+    </div>
+  </section>
+
+  <!-- CÂU CHUYỆN -->
+  <section id="story" data-section="story-editorial" class="bg-pearl py-24 lg:py-36">
+    <div class="wrap grid gap-12 lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-32">
+          <p class="label text-lavender-deep" data-en="Our story">Câu chuyện</p>
+          <h2 class="mt-6 font-display text-[clamp(2.3rem,3.8vw,4rem)] leading-[1.06]" data-reveal="up" data-en="It began with a quiet morning by the lake">Bắt đầu từ một buổi sáng lặng yên bên hồ</h2>
+        </div>
+      </div>
+      <div class="lg:col-span-7 lg:col-start-6">
+        <div class="ph aspect-[16/10] overflow-hidden rounded-sm" data-reveal="clip">
+          <img src="https://images.pexels.com/photos/35487947/pexels-photo-35487947.jpeg?auto=compress&cs=tinysrgb&w=1400" referrerpolicy="no-referrer" loading="lazy" width="1400" height="875"
+            class="photo h-full w-full object-cover"
+            alt="Bờ hồ trong sương mờ lúc rạng đông" data-en-alt="A lakeshore wrapped in mist at dawn">
+        </div>
+        <div class="mt-14 grid gap-6 text-[17px] leading-relaxed text-midnight/75 lg:pr-12" data-reveal="up">
+          <p class="first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.8] first-letter:text-lavender-deep" data-en="CELESTIA began with a simple question: what would a retreat feel like if it were designed around stillness rather than activities? The answer led us to misty water, pine-covered hills and the unhurried pace of the highlands.">CELESTIA bắt đầu từ một câu hỏi giản dị: một nơi nghỉ dưỡng sẽ ra sao nếu được thiết kế quanh sự tĩnh lặng, thay vì quanh các hoạt động? Câu trả lời dẫn chúng tôi đến mặt hồ phủ sương, những đồi thông và nhịp sống chậm của cao nguyên.</p>
+          <p data-en="Each retreat is set apart to protect your privacy. Paths follow the land, windows turn toward the water, and daylight remains the main source of light from morning to late afternoon.">Mỗi khu nghỉ được đặt cách xa nhau để giữ sự riêng tư. Lối đi men theo địa hình, cửa kính hướng về mặt nước, và ánh sáng ban ngày là nguồn sáng chính từ sáng sớm đến chiều muộn.</p>
+        </div>
+        <blockquote class="my-14 border-l border-lavender pl-8 font-display text-3xl italic leading-snug text-midnight sm:text-4xl lg:-ml-24" data-reveal="up">
+          <p data-en="“We add nothing to nature. We simply make room for you to sit down.”">“Chúng tôi không thêm gì vào thiên nhiên. Chúng tôi chỉ dọn chỗ để bạn ngồi xuống.”</p>
+        </blockquote>
+        <p class="text-[17px] leading-relaxed text-midnight/75 lg:pr-12" data-reveal="up" data-en="Wellbeing here is understood as a whole: deep sleep, balanced meals, gentle movement and stretches of quiet that nobody interrupts.">Chăm sóc sức khỏe ở đây được hiểu một cách toàn diện: giấc ngủ sâu, bữa ăn cân bằng, chuyển động nhẹ nhàng và những khoảng lặng không ai làm phiền.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KIẾN TRÚC & ÁNH SÁNG -->
+  <section id="architecture" data-section="cta-fullbleed" class="bg-pearl-warm py-24 lg:py-36">
+    <div class="wrap">
+      <h2 class="max-w-4xl font-display text-[clamp(2.4rem,4.8vw,5rem)] leading-[1.04]" data-reveal="up" data-en="Architecture shaped by <em class='text-lavender-deep'>light</em>">Kiến trúc được định hình bởi <em class="text-lavender-deep">ánh sáng</em></h2>
+    </div>
+    <div class="mx-auto mt-14 w-full max-w-[1800px] px-0 sm:px-6 lg:px-10">
+      <div class="ph aspect-[4/3] overflow-hidden sm:aspect-[21/9] sm:rounded-sm" data-reveal="clip">
+        <img src="https://images.pexels.com/photos/5563472/pexels-photo-5563472.jpeg?auto=compress&cs=tinysrgb&w=1920" referrerpolicy="no-referrer" loading="lazy" width="1920" height="823"
+          class="photo h-full w-full object-cover"
+          alt="Công trình nghỉ dưỡng tối giản với hồ bơi dưới bầu trời trong" data-en-alt="A minimalist resort building with a pool under a clear sky">
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8" data-reveal-stagger="90">
+        <div class="border-t border-midnight/20 pt-6">
+          <h3 class="font-display text-2xl" data-en="Natural light">Ánh sáng tự nhiên</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-midnight/70" data-en="Deep eaves soften the noon sun; mornings arrive gently through wide glass.">Mái hiên sâu làm dịu nắng trưa, buổi sáng đến nhẹ nhàng qua những ô kính rộng.</p>
+        </div>
+        <div class="border-t border-midnight/20 pt-6">
+          <h3 class="font-display text-2xl" data-en="Raw materials">Vật liệu mộc</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-midnight/70" data-en="Stone, pale timber and lime plaster are left honest, showing their natural texture.">Đá, gỗ sáng và vữa vôi được giữ nguyên bề mặt, để chất liệu tự kể câu chuyện của mình.</p>
+        </div>
+        <div class="border-t border-midnight/20 pt-6">
+          <h3 class="font-display text-2xl" data-en="Open space">Không gian mở</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-midnight/70" data-en="Few walls, long sightlines and air that moves freely between inside and out.">Ít tường ngăn, tầm nhìn xa và gió lưu thông tự do giữa trong nhà và ngoài trời.</p>
+        </div>
+        <div class="border-t border-midnight/20 pt-6">
+          <h3 class="font-display text-2xl" data-en="Landscape connection">Kết nối cảnh quan</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-midnight/70" data-en="Buildings sit low beneath the trees, so water and forest stay the main view.">Công trình nằm thấp dưới tán cây, để mặt nước và rừng luôn là khung cảnh chính.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BỐN GIÁ TRỊ -->
+  <section id="values" data-section="features-numbered" class="on-dark bg-midnight py-24 text-pearl lg:py-36">
+    <div class="wrap">
+      <div class="grid gap-6 lg:grid-cols-12">
+        <h2 class="font-display text-[clamp(2.4rem,4.6vw,4.75rem)] leading-[1.04] lg:col-span-7" data-reveal="up" data-en="Four values we live by">Bốn giá trị chúng tôi theo đuổi</h2>
+      </div>
+      <ol class="mt-16 border-t border-pearl/15" data-reveal-stagger="100">
+        <li class="group grid gap-4 border-b border-pearl/15 py-10 transition-colors duration-500 hover:bg-midnight-soft/60 sm:grid-cols-12 sm:items-baseline sm:px-4 lg:py-12">
+          <span class="font-display text-5xl text-lavender sm:col-span-2 lg:text-6xl">01</span>
+          <div class="sm:col-span-4">
+            <h3 class="font-display text-4xl lg:text-5xl">Stillness</h3>
+            <p class="mt-1 text-sm uppercase tracking-[0.2em] text-pearl/60" data-en="Finding quiet again">Tìm lại sự tĩnh lặng</p>
+          </div>
+          <p class="max-w-xl text-[16px] leading-relaxed text-pearl/75 sm:col-span-6" data-en="No televisions in the treatment areas, soft acoustics and quiet hours after dusk. Silence here is a gift, never an obligation.">Không gian trị liệu không tivi, vật liệu tiêu âm mềm và giờ yên tĩnh sau hoàng hôn. Sự im lặng ở đây là món quà, không phải quy định.</p>
+        </li>
+        <li class="group grid gap-4 border-b border-pearl/15 py-10 transition-colors duration-500 hover:bg-midnight-soft/60 sm:grid-cols-12 sm:items-baseline sm:px-4 lg:py-12">
+          <span class="font-display text-5xl text-lavender sm:col-span-2 lg:text-6xl">02</span>
+          <div class="sm:col-span-4">
+            <h3 class="font-display text-4xl lg:text-5xl">Balance</h3>
+            <p class="mt-1 text-sm uppercase tracking-[0.2em] text-pearl/60" data-en="Body and mind in tune">Cân bằng thân và tâm</p>
+          </div>
+          <p class="max-w-xl text-[16px] leading-relaxed text-pearl/75 sm:col-span-6" data-en="Movement and rest, nourishment and lightness. Each day keeps a gentle rhythm you can follow or simply ignore.">Vận động và nghỉ ngơi, no đủ và nhẹ nhõm. Mỗi ngày có một nhịp điệu nhẹ nhàng, bạn có thể theo hoặc đơn giản là bỏ qua.</p>
+        </li>
+        <li class="group grid gap-4 border-b border-pearl/15 py-10 transition-colors duration-500 hover:bg-midnight-soft/60 sm:grid-cols-12 sm:items-baseline sm:px-4 lg:py-12">
+          <span class="font-display text-5xl text-lavender sm:col-span-2 lg:text-6xl">03</span>
+          <div class="sm:col-span-4">
+            <h3 class="font-display text-4xl lg:text-5xl">Nature</h3>
+            <p class="mt-1 text-sm uppercase tracking-[0.2em] text-pearl/60" data-en="Connecting with nature">Kết nối với thiên nhiên</p>
+          </div>
+          <p class="max-w-xl text-[16px] leading-relaxed text-pearl/75 sm:col-span-6" data-en="Lake, forest and garden are not a backdrop but the heart of every stay, present from the first light to the stars.">Hồ, rừng và vườn không phải phông nền mà là trung tâm của mỗi kỳ nghỉ, hiện diện từ tia nắng đầu tiên đến lúc sao lên.</p>
+        </li>
+        <li class="group grid gap-4 border-b border-pearl/15 py-10 transition-colors duration-500 hover:bg-midnight-soft/60 sm:grid-cols-12 sm:items-baseline sm:px-4 lg:py-12">
+          <span class="font-display text-5xl text-lavender sm:col-span-2 lg:text-6xl">04</span>
+          <div class="sm:col-span-4">
+            <h3 class="font-display text-4xl lg:text-5xl">Renewal</h3>
+            <p class="mt-1 text-sm uppercase tracking-[0.2em] text-pearl/60" data-en="Restoring your energy">Tái tạo năng lượng</p>
+          </div>
+          <p class="max-w-xl text-[16px] leading-relaxed text-pearl/75 sm:col-span-6" data-en="Deep sleep, fresh air and slow mornings help you leave lighter than you arrived, ready to return to your own life.">Giấc ngủ sâu, không khí trong lành và những buổi sáng chậm giúp bạn rời đi nhẹ nhõm hơn lúc đến, sẵn sàng trở lại cuộc sống của mình.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CON NGƯỜI & THIÊN NHIÊN -->
+  <section id="nature" data-section="story-letter" class="bg-pearl py-24 lg:py-36">
+    <div class="wrap grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+      <figure class="mx-auto w-4/5 sm:w-3/5 lg:col-span-4 lg:col-start-2 lg:w-full">
+        <div class="ph aspect-[3/4] overflow-hidden rounded-t-full" data-reveal="clip">
+          <img src="https://images.pexels.com/photos/8964938/pexels-photo-8964938.jpeg?auto=compress&cs=tinysrgb&w=1400" referrerpolicy="no-referrer" loading="lazy" width="900" height="1200"
+            class="photo h-full w-full object-cover"
+            alt="Người phụ nữ áo trắng ngồi thiền trên thân cây giữa rừng buổi sáng" data-en-alt="A woman in white meditating on a fallen log in the morning forest">
+        </div>
+      </figure>
+      <div class="lg:col-span-5 lg:col-start-7">
+        <p class="label text-lavender-deep" data-en="People and nature">Con người và thiên nhiên</p>
+        <h2 class="mt-6 font-display text-[clamp(2.2rem,3.6vw,3.75rem)] leading-[1.06]" data-reveal="up" data-en="The landscape does the gentle work">Cảnh quan làm phần việc nhẹ nhàng nhất</h2>
+        <div class="mt-8 grid gap-5 text-[17px] leading-relaxed text-midnight/75" data-reveal="up">
+          <p data-en="Green space, the sound of water and an unhurried day create the conditions for deeper rest. A morning walk by the lake, an afternoon in the garden, an evening with nothing planned.">Không gian xanh, tiếng nước và một ngày không vội tạo điều kiện để bạn thư giãn sâu hơn. Một buổi tản bộ bên hồ, một buổi chiều trong vườn, một buổi tối không có kế hoạch gì.</p>
+          <p data-en="We make no medical promises. We simply invite you to stay long enough to feel the difference a slow day can make.">Chúng tôi không đưa ra cam kết về y tế. Chúng tôi chỉ mời bạn ở lại đủ lâu để cảm nhận sự khác biệt của một ngày chậm rãi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KẾT -->
+  <section id="about-cta" data-section="cta-sky" class="bg-veil relative overflow-hidden py-32 lg:py-44" data-gradient-shift="26" data-clouds="2" data-clouds-band="0-50" data-clouds-color="#ffffff" data-clouds-speed="0.6">
+    <div class="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2" aria-hidden="true"><div class="halo h-full w-full opacity-60" data-float="8"></div></div>
+    <div class="wrap relative z-10 text-center">
+      <h2 class="mx-auto max-w-4xl pb-2 font-display text-[clamp(2.6rem,5.6vw,5.75rem)] leading-[1.04]" data-split="words" data-en="Find Space for What Matters.">Tìm khoảng trống cho những điều quan trọng.</h2>
+      <a href="experiences.html" class="group mt-12 inline-flex min-h-12 items-center gap-3 rounded-full bg-midnight px-8 text-sm font-medium tracking-wide text-pearl transition duration-300 hover:bg-midnight-soft active:scale-[.98]" data-reveal="up">
+        <span data-en="Explore Our Experiences">Khám phá các trải nghiệm</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- @partial footer -->
+<footer id="footer" class="on-dark relative overflow-hidden bg-midnight text-pearl">
+  <div class="halo absolute -right-40 -top-40 h-[34rem] w-[34rem] opacity-25" aria-hidden="true"></div>
+  <div class="wrap relative pt-24 lg:pt-32">
+    <div class="grid gap-14 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-5">
+        <a href="../index.html" class="font-display text-3xl tracking-[0.32em]">CELESTIA</a>
+        <p class="mt-6 max-w-sm font-display text-2xl italic leading-snug text-pearl/85" data-en="A quiet place to slow down, breathe deeply and come back to yourself.">Một nơi tĩnh lặng để chậm lại, thở sâu và trở về với chính mình.</p>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender" data-en="Explore">Khám phá</p>
+        <ul class="mt-6 grid gap-3 text-[15px] text-pearl/80">
+          <li><a href="../index.html" class="transition-colors duration-300 hover:text-pearl" data-en="Home">Trang chủ</a></li>
+          <li><a aria-current="page" href="../pages/about.html" class="transition-colors duration-300 hover:text-pearl" data-en="About">Giới thiệu</a></li>
+          <li><a href="../pages/stays.html" class="transition-colors duration-300 hover:text-pearl" data-en="Stays">Lưu trú</a></li>
+          <li><a href="../pages/experiences.html" class="transition-colors duration-300 hover:text-pearl" data-en="Experiences">Trải nghiệm</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender" data-en="Contact">Liên hệ</p>
+        <ul class="mt-6 grid gap-3 text-[15px] text-pearl/80">
+          <li><a href="tel:+842633829147" class="transition-colors duration-300 hover:text-pearl">+84 263 3829 147</a></li>
+          <li><a href="mailto:hello@celestia-resort.vn" class="transition-colors duration-300 hover:text-pearl">hello@celestia-resort.vn</a></li>
+          <li class="leading-relaxed" data-en="Tuyen Lam Lake, Ward 3,<br>Da Lat, Lam Dong, Vietnam">Hồ Tuyền Lâm, Phường 3,<br>Đà Lạt, Lâm Đồng, Việt Nam</li>
+        </ul>
+        <p class="mt-4 text-[13px] text-pearl/55" data-en="Sample contact details for presentation.">Thông tin liên hệ mang tính minh họa.</p>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender" data-en="Language">Ngôn ngữ</p>
+        <div class="mt-5 flex gap-2 text-sm font-medium tracking-[0.2em]">
+          <button type="button" data-lang-set="vi" class="min-h-11 rounded-full border border-pearl/30 px-5 transition-colors duration-300 hover:border-pearl [&.is-active]:border-lavender [&.is-active]:bg-lavender [&.is-active]:text-midnight">VI</button>
+          <button type="button" data-lang-set="en" class="min-h-11 rounded-full border border-pearl/30 px-5 transition-colors duration-300 hover:border-pearl [&.is-active]:border-lavender [&.is-active]:bg-lavender [&.is-active]:text-midnight">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 flex flex-col gap-3 border-t border-pearl/15 py-8 text-[13px] text-pearl/60 sm:flex-row sm:items-center sm:justify-between">
+      <p data-en="© 2026 CELESTIA. All rights reserved.">© 2026 CELESTIA. Bảo lưu mọi quyền.</p>
+      <p data-en="An introduction website. Online booking is not available.">Website giới thiệu thương hiệu. Không hỗ trợ đặt phòng trực tuyến.</p>
+    </div>
+  </div>
+  <p class="pointer-events-none select-none whitespace-nowrap text-center font-display text-[21vw] leading-[0.72] tracking-[0.06em] text-pearl/[0.06]" aria-hidden="true">CELESTIA</p>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

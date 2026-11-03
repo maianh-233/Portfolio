@@ -1,0 +1,57 @@
+/* BLOOM & CRUMB — biến màu / font + vài style Tailwind không làm được */
+:root {
+  --sage: #A6B49A;
+  --sage-soft: #DFE5D8;
+  --oat: #F5F0E5;
+  --oat-deep: #ECE4D3;
+  --earth: #8B6F52;
+  --earth-deep: #6B533C;
+  --forest: #384A38;
+  --ink: #262E25;
+  --font-display: 'Fraunces', Georgia, system-ui, sans-serif;
+  --font-body: 'Manrope', 'Be Vietnam Pro', system-ui, sans-serif;
+  --ui-accent: #384A38;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--oat);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--sage); color: var(--forest); }
+
+/* Tông ảnh: ánh sáng tự nhiên, trung tính, hơi phai */
+.tone { filter: saturate(.88) sepia(.08); }
+
+/* Chữ hoa đầu đoạn */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.2em;
+  line-height: .82;
+  padding: .06em .12em 0 0;
+  color: var(--forest);
+}
+
+/* Nút ngôn ngữ đang chọn */
+[data-lang-set][aria-pressed="true"] { background: var(--forest); color: var(--oat); }
+
+/* Nét thực vật tối giản: tự vẽ chậm rồi đung đưa nhẹ */
+.botanic { overflow: visible; transform-origin: 50% 100%; }
+.botanic path { stroke-dasharray: 700; stroke-dashoffset: 700; animation: bc-draw 5.5s cubic-bezier(.16,1,.3,1) .3s forwards; }
+.botanic path:nth-child(2) { animation-delay: 1.2s; }
+.botanic path:nth-child(3) { animation-delay: 1.6s; }
+.botanic path:nth-child(4) { animation-delay: 2s; }
+.botanic path:nth-child(5) { animation-delay: 2.4s; }
+.botanic.sway { animation: bc-sway 11s ease-in-out infinite alternate; }
+
+@keyframes bc-draw { to { stroke-dashoffset: 0; } }
+@keyframes bc-sway { from { transform: rotate(-1.6deg); } to { transform: rotate(1.6deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .botanic path { animation: none; stroke-dashoffset: 0; }
+  .botanic.sway { animation: none; }
+}

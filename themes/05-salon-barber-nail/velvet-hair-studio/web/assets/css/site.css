@@ -1,0 +1,49 @@
+:root {
+  --velvet: #171615;
+  --ivory: #F5F0E8;
+  --mocha: #705548;
+  --gold: #C5A572;
+  --taupe: #B8AA9A;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Manrope, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ui-accent: var(--gold);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+  background: var(--ivory);
+  color: var(--velvet);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--gold); color: var(--velvet); }
+
+/* Chữ hoa đầu đoạn kiểu tạp chí */
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.6em;
+  line-height: .82;
+  padding: .06em .12em 0 0;
+  color: var(--mocha);
+}
+
+/* Khung ảnh có nền dự phòng khi ảnh lỗi */
+.img-frame { background: linear-gradient(135deg, #2a2725, #3a332e); }
+.img-frame.on-light { background: linear-gradient(135deg, #e3d9cb, #cfc2b2); }
+
+/* Bộ chuyển ngôn ngữ */
+[data-lang-set] { opacity: .55; }
+[data-lang-set].is-active { opacity: 1; color: var(--gold); }
+
+/* Hộp thoại đặt lịch: góc vuông theo hệ thống đường kẻ mảnh */
+dialog#book { border-radius: 0 !important; background: var(--ivory); color: var(--velvet); }
+
+/* Lightbox: phông chữ thương hiệu cho chú thích */
+.ui-lb figcaption { font-family: var(--font-body); letter-spacing: .02em; max-width: 60ch; text-align: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .group:hover img, img { transition: none !important; transform: none !important; }
+}

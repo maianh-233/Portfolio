@@ -1,0 +1,72 @@
+[
+  {
+    "file": "assets/img/hero-portrait.jpg",
+    "purpose": "index.html hero, portrait of the designer",
+    "source": "openverse",
+    "id": "openverse-b79b2f4e-7447-42ad-99f8-40bfd6545e3d",
+    "title": "Modernist",
+    "creator": "bdrc",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/30425209@N08/51778236769"
+  },
+  {
+    "file": "assets/img/work-poster.jpg",
+    "purpose": "index.html #work, poster project",
+    "source": "openverse",
+    "id": "openverse-811f9902-880b-450f-8160-0a2623a62d7b",
+    "title": "Craig Oldham poster 'May they never be deemed 'low skilled' again'",
+    "creator": "",
+    "license": "CC BY-NC-SA 4.0",
+    "page": "https://collection.sciencemuseumgroup.org.uk/documents/aa110128164/craig-oldham-poster-may-they-never-be-deemed-low-skilled-again"
+  },
+  {
+    "file": "assets/img/work-editorial.jpg",
+    "purpose": "index.html #work, editorial project",
+    "source": "openverse",
+    "id": "openverse-81ebefb8-a489-448e-bcec-eeb83009a1f6",
+    "title": "521140849",
+    "creator": "College Park Allstar",
+    "license": "CC PDM 1.0",
+    "page": "https://www.flickr.com/photos/39360824@N06/52281549088"
+  },
+  {
+    "file": "assets/img/work-campaign.webp",
+    "purpose": "index.html #work, visual campaign project",
+    "source": "openverse",
+    "id": "openverse-f413d095-9c8b-45f4-8779-4becd3c0ac35",
+    "title": "Shibuya, Japan",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/3291627/free-photo-image-advertisement-billboard-architecture"
+  },
+  {
+    "file": "assets/img/philosophy-sketch.jpg",
+    "purpose": "index.html #philosophy, logo sketching process",
+    "source": "openverse",
+    "id": "openverse-b7ba7b92-3f47-4b7f-9df0-77c86bf04423",
+    "title": "Designer Logo",
+    "creator": "Messala Ciulla",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/designer-logo-GW7VC9EJ0X"
+  },
+  {
+    "file": "assets/img/work-branding.jpg",
+    "purpose": "index.html #work, brand identity project",
+    "source": "openverse",
+    "id": "openverse-bdc89c86-909e-4a61-8f76-9a2d0727d8aa",
+    "title": "Modern Nose",
+    "creator": "TODO.TO.IT",
+    "license": "CC BY-NC-ND 2.0",
+    "page": "https://www.flickr.com/photos/47646729@N00/40940152730"
+  },
+  {
+    "file": "assets/img/work-magazine.webp",
+    "purpose": "index.html #work, editorial magazine project",
+    "source": "openverse",
+    "id": "openverse-1a34210d-b1a0-4ab4-8f9c-063ff789159e",
+    "title": "",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/5937838/free-public-domain-cc0-photo"
+  }
+]

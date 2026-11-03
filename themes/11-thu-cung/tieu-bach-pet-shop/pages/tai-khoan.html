@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tài khoản của tôi · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-SYS-004" data-module="SYS" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-SYS-004 Tài khoản của tôi: PointsCard (điểm dễ thấy — q23) + đơn gần đây + Tabs Hồ sơ / Sổ địa chỉ (Drawer form) / Đổi mật khẩu.
+   * Phạm vi dữ liệu: own (Perm.scope('SYS.ACCOUNT')) — chỉ dữ liệu của khách đang đăng nhập. */
+  (function () {
+    if (!Perm.role() || Perm.role() === 'ROLE-01') { location.replace(App.loginHref('tai-khoan')); return; }
+    Layout.mount({ title: 'Tài khoản của tôi', breadcrumb: [['Tài khoản']], account: 'profile' }, function (main) {
+      var U = Perm.url, esc = UI.esc, R = UI.rules, me = App.me();
+      var cid = App.customer().id;
+      function cus() { return DemoStore.get('customers', cid); }
+      function myOrders() { return DemoStore.list('orders').filter(function (o) { return o.customerId === cid; }).sort(function (a, b) { return a.tao_luc < b.tao_luc ? 1 : -1; }); }
+      function addrs() { return DemoStore.list('addresses').filter(function (a) { return a.customerId === cid; }).sort(function (a, b) { return b.mac_dinh - a.mac_dinh; }); }
+      function addrText(a) { return [a.chi_tiet, a.phuong, a.quan, a.tinh].filter(Boolean).join(', '); }
+
+      main.innerHTML = '<div data-head></div><div class="grid gap-4 md:grid-cols-2" data-top>' + UI.skeletonBlock('h-44 rounded-2xl') + UI.skeletonBlock('h-44 rounded-xl') + '</div><div class="mt-6 rounded-xl border border-neutral-200 bg-white p-4 md:p-5" data-tabs></div>';
+
+      function paintTop() {
+        var c = cus();
+        main.querySelector('[data-head]').innerHTML = UI.pageHeader({ title: 'Chào ' + esc(c.ho_ten.split(' ').pop()) + ' 👋', description: 'Quản lý hồ sơ, địa chỉ giao hàng và điểm tích lũy của bạn.' });
+        var pending = myOrders().filter(function (o) { return o.loai_don === 'THUONG' && ['NEW', 'CONFIRMED', 'SHIPPING'].indexOf(o.state) >= 0; }).reduce(function (s, o) { return s + (o.diem || 0); }, 0);
+        var rec = myOrders().slice(0, 3);
+        var recent = UI.card({ title: 'Đơn gần đây', actions: rec.length ? UI.button({ label: 'Xem tất cả', variant: 'link', size: 'sm', href: U('pages/don-hang-cua-toi.html') }) : '',
+          body: rec.length ? '<ul class="flex flex-col divide-y divide-neutral-100">' + rec.map(function (o) {
+            return '<li><a href="' + U('pages/chi-tiet-don.html?id=' + o.id) + '" class="flex items-center gap-3 py-3 hover:text-primary-700"><div class="min-w-0 flex-1"><p class="font-mono text-sm font-extrabold text-neutral-800">' + esc(o.code) + '</p><p class="text-xs text-neutral-600">' + UI.fmt.date(o.tao_luc) + ' · ' + UI.fmt.money(o.tong_cong) + '</p></div>' + App.stateBadge(App.docOf(o), o.state) + '</a></li>';
+          }).join('') + '</ul>' : UI.emptyState({ size: 'sm', title: 'Bạn chưa có đơn hàng nào. Boss đang chờ món ngon đó!', action: UI.button({ label: 'Mua sắm ngay', size: 'sm', href: U('pages/san-pham.html') }) }) });
+        main.querySelector('[data-top]').innerHTML = UI.pointsCard({ points: c.diem, pending: pending, action: UI.button({ label: 'Đổi voucher', icon: 'gift', variant: 'outline', href: U('pages/diem-voucher.html'), attrs: { 'data-permission': 'PROMO.POINT.VIEW' } }) }) + recent;
+      }
+
+      /* Tab Hồ sơ */
+      var profileRules = {
+        ho_ten: [R.required('Vui lòng nhập họ và tên'), R.len(2, 100, 'Vui lòng nhập họ và tên')],
+        so_dien_thoai: [R.required('Số điện thoại không hợp lệ'), R.phone('Số điện thoại không hợp lệ'), R.custom(function (v) { return !DemoStore.list('customers').some(function (c) { return c.id !== cid && c.so_dien_thoai === v; }); }, 'Số điện thoại hoặc email đã được đăng ký. Bạn muốn đăng nhập?')],
+        email: [R.required('Email không hợp lệ'), R.email('Email không hợp lệ'), R.custom(function (v) { return !DemoStore.list('customers').some(function (c) { return c.id !== cid && (c.email || '').toLowerCase() === String(v).toLowerCase(); }); }, 'Số điện thoại hoặc email đã được đăng ký. Bạn muốn đăng nhập?')]
+      };
+      function profileTab(panel) {
+        var c = cus();
+        panel.innerHTML = '<form novalidate class="flex max-w-2xl flex-col gap-4" data-profile>' + UI.fieldGroup({ columns: 2, fields: [
+          UI.field({ name: 'ho_ten', label: 'Họ và tên', required: true, value: c.ho_ten, maxlength: 100, cls: 'lg:col-span-2' }),
+          UI.field({ name: 'so_dien_thoai', label: 'Số điện thoại', type: 'tel', required: true, value: c.so_dien_thoai, maxlength: 10 }),
+          UI.field({ name: 'email', label: 'Email', type: 'email', required: true, value: c.email })] }) +
+          '<div>' + UI.button({ label: 'Lưu thông tin', icon: 'save', type: 'submit', disabled: true, attrs: { 'data-save': '', 'data-permission': 'SYS.ACCOUNT.UPDATE' } }) + '</div></form>';
+        var f = panel.querySelector('[data-profile]'), b = f.querySelector('[data-save]'), orig = JSON.stringify(UI.formData(f));
+        UI.validate.live(f, profileRules);
+        f.addEventListener('input', function () { if (b) b.disabled = JSON.stringify(UI.formData(f)) === orig; });
+        f.addEventListener('submit', function (e) {
+          e.preventDefault(); if (!UI.validate(f, profileRules)) return;
+          var d = UI.formData(f); UI.setLoading(b, true);
+          setTimeout(function () { DemoStore.update('customers', cid, { ho_ten: d.ho_ten, so_dien_thoai: d.so_dien_thoai, email: d.email }); UI.toast('Đã lưu thông tin', 'success'); paintTop(); profileTab(panel); }, 500);
+        });
+      }
+
+      /* Tab Sổ địa chỉ */
+      function addrTab(panel) {
+        var list = addrs();
+        panel.innerHTML = '<div class="mb-4 flex items-center justify-between gap-3"><p class="text-sm text-neutral-600">' + list.length + ' / 10 địa chỉ</p>' + UI.button({ label: 'Thêm địa chỉ', icon: 'plus', size: 'sm', disabled: list.length >= 10, attrs: { 'data-addr-add': '', 'data-permission': 'SYS.ACCOUNT.UPDATE' } }) + '</div>' +
+          (list.length ? '<div class="grid gap-3 lg:grid-cols-2">' + list.map(function (a) {
+            return '<article class="flex gap-3 rounded-lg border ' + (a.mac_dinh ? 'border-primary-300 bg-primary-50' : 'border-neutral-200 bg-white') + ' p-4"><span class="inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-secondary-100 text-secondary-700">' + UI.icon('map-pin') + '</span>' +
+              '<div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2"><p class="font-bold text-neutral-800">' + esc(a.nguoi_nhan) + '</p><span class="text-sm text-neutral-600">' + esc(a.so_dien_thoai) + '</span>' + (a.mac_dinh ? UI.tag('Mặc định', 'primary') : '') + '</div>' +
+              '<p class="mt-1 text-sm text-neutral-700 break-words">' + esc(addrText(a)) + '</p>' + (a.mac_dinh ? '' : '<div class="mt-2">' + UI.button({ label: 'Đặt làm mặc định', variant: 'link', size: 'sm', attrs: { 'data-addr-def': a.id, 'data-permission': 'SYS.ACCOUNT.UPDATE' } }) + '</div>') + '</div>' +
+              UI.iconButton({ icon: 'ellipsis', label: 'Thao tác địa chỉ', size: 'sm', variant: 'outline', attrs: { 'data-addr-more': a.id, 'aria-haspopup': 'menu', 'data-permission': 'SYS.ACCOUNT.UPDATE' } }) + '</article>';
+          }).join('') + '</div>' : UI.emptyState({ size: 'sm', title: 'Chưa có địa chỉ giao hàng', action: UI.button({ label: 'Thêm địa chỉ', icon: 'plus', size: 'sm', attrs: { 'data-addr-add': '' } }) }));
+      }
+      function addrForm(a) {
+        var L = MOCK.locations, t = a ? a.tinh : 'TP. Hồ Chí Minh', q = a ? a.quan : '';
+        return '<form novalidate class="flex flex-col gap-4" data-addr-form>' +
+          UI.field({ name: 'nguoi_nhan', label: 'Người nhận', required: true, value: a ? a.nguoi_nhan : cus().ho_ten, maxlength: 100 }) +
+          UI.field({ name: 'so_dien_thoai', label: 'Số điện thoại nhận hàng', type: 'tel', required: true, value: a ? a.so_dien_thoai : cus().so_dien_thoai, maxlength: 10 }) +
+          UI.field({ name: 'tinh', label: 'Tỉnh / thành', type: 'search-select', required: true, placeholder: 'Chọn tỉnh / thành', options: Object.keys(L), value: t }) +
+          UI.field({ name: 'quan', label: 'Quận / huyện', type: 'search-select', required: true, placeholder: 'Chọn quận / huyện', options: Object.keys(L[t] || {}), value: q }) +
+          UI.field({ name: 'phuong', label: 'Phường / xã', type: 'search-select', required: true, placeholder: 'Chọn phường / xã', options: (L[t] || {})[q] || [], value: a ? a.phuong : '', disabled: !q }) +
+          UI.field({ name: 'chi_tiet', label: 'Số nhà, tên đường', required: true, value: a ? a.chi_tiet : '', maxlength: 255 }) +
+          UI.field({ name: 'mac_dinh', type: 'switch', label: 'Đặt làm địa chỉ mặc định', value: a ? a.mac_dinh : !addrs().length }) + '</form>';
+      }
+      function openAddr(a, panel) {
+        var d = UI.drawer({ title: a ? 'Sửa địa chỉ' : 'Thêm địa chỉ', body: addrForm(a), actions: [{ label: 'Hủy', variant: 'ghost' }, { label: 'Lưu địa chỉ', icon: 'save', onClick: function (api) {
+          var f = api.body.querySelector('[data-addr-form]');
+          var ok = UI.validate(f, { nguoi_nhan: [R.required('Vui lòng nhập người nhận'), R.len(2, 100, 'Vui lòng nhập người nhận')], so_dien_thoai: [R.required('Số điện thoại không hợp lệ'), R.phone('Số điện thoại không hợp lệ')], tinh: [R.required('Vui lòng chọn tỉnh / thành')], quan: [R.required('Vui lòng chọn quận / huyện')], phuong: [R.required('Vui lòng chọn phường / xã')], chi_tiet: [R.required('Vui lòng nhập số nhà, tên đường')] });
+          if (!ok) return false;
+          var x = UI.formData(f), def = x.mac_dinh === '1';
+          if (def || !addrs().length) addrs().forEach(function (o) { if (o.mac_dinh) DemoStore.update('addresses', o.id, { mac_dinh: false }); });
+          var row = { nguoi_nhan: x.nguoi_nhan, so_dien_thoai: x.so_dien_thoai, tinh: x.tinh, quan: x.quan, phuong: x.phuong, chi_tiet: x.chi_tiet, mac_dinh: def || !addrs().length };
+          if (a) DemoStore.update('addresses', a.id, row); else DemoStore.insert('addresses', Object.assign({ id: 'ad' + Date.now(), customerId: cid, ownerId: me.id }, row));
+          UI.toast(a ? 'Đã lưu địa chỉ' : 'Đã thêm địa chỉ', 'success'); addrTab(panel);
+        } }] });
+        d.body.addEventListener('change', function (e) {
+          var n = e.target.name; if (n !== 'tinh' && n !== 'quan') return;
+          var f = d.body.querySelector('[data-addr-form]'), x = UI.formData(f), L = MOCK.locations;
+          if (n === 'tinh') f.querySelector('[name=quan]').innerHTML = '<option value="">Chọn quận / huyện</option>' + Object.keys(L[x.tinh] || {}).map(function (q) { return '<option>' + esc(q) + '</option>'; }).join('');
+          var ph = f.querySelector('[name=phuong]'), list = n === 'tinh' ? [] : ((L[x.tinh] || {})[x.quan] || []);
+          ph.innerHTML = '<option value="">Chọn phường / xã</option>' + list.map(function (p) { return '<option>' + esc(p) + '</option>'; }).join(''); ph.disabled = !list.length;
+        });
+      }
+
+      /* Tab Đổi mật khẩu */
+      function pwTab(panel) {
+        panel.innerHTML = '<form novalidate class="flex max-w-md flex-col gap-4" data-pw>' +
+          UI.field({ name: 'mat_khau_cu', label: 'Mật khẩu hiện tại', type: 'password', required: true }) +
+          UI.field({ name: 'mat_khau_moi', label: 'Mật khẩu mới', type: 'password', required: true, hint: 'Ít nhất 8 ký tự', autocomplete: 'new-password' }) +
+          UI.field({ name: 'nhap_lai', label: 'Nhập lại', type: 'password', required: true, autocomplete: 'new-password' }) +
+          '<p class="text-xs text-neutral-600">Mật khẩu demo hiện tại: meomeo123</p><div>' + UI.button({ label: 'Đổi mật khẩu', icon: 'key-round', type: 'submit', attrs: { 'data-permission': 'SYS.ACCOUNT.UPDATE' } }) + '</div></form>';
+        var f = panel.querySelector('[data-pw]');
+        var rules = { mat_khau_cu: [R.custom(function (v) { return v === 'meomeo123'; }, 'Mật khẩu hiện tại không đúng')], mat_khau_moi: [R.custom(function (v) { return String(v || '').length >= 8; }, 'Mật khẩu cần ít nhất 8 ký tự')], nhap_lai: [R.match('mat_khau_moi', 'Mật khẩu nhập lại không khớp')] };
+        f.addEventListener('submit', function (e) { e.preventDefault(); if (!UI.validate(f, rules)) return; UI.toast('Đã đổi mật khẩu', 'success'); f.reset(); });
+      }
+
+      setTimeout(function () {
+        try {
+          paintTop();
+          var tabs = UI.tabs(main.querySelector('[data-tabs]'), { hash: true, tabs: [{ id: 'ho-so', label: 'Hồ sơ', content: profileTab }, { id: 'so-dia-chi', label: 'Sổ địa chỉ', content: addrTab }, { id: 'doi-mat-khau', label: 'Đổi mật khẩu', content: pwTab }] });
+          var panel = tabs.panel;
+          panel.addEventListener('click', function (e) {
+            if (e.target.closest('[data-addr-add]')) { openAddr(null, panel); return; }
+            var df = e.target.closest('[data-addr-def]');
+            if (df) { addrs().forEach(function (o) { DemoStore.update('addresses', o.id, { mac_dinh: o.id === df.getAttribute('data-addr-def') }); }); UI.toast('Đã đặt làm địa chỉ mặc định', 'success'); addrTab(panel); return; }
+            var mo = e.target.closest('[data-addr-more]');
+            if (mo) {
+              var a = DemoStore.get('addresses', mo.getAttribute('data-addr-more'));
+              UI.dropdown(mo, [{ label: 'Sửa', icon: 'pencil', onClick: function () { openAddr(a, panel); } }, a.mac_dinh ? null : { label: 'Xóa', icon: 'trash-2', danger: true, onClick: function () {
+                UI.confirm({ title: 'Xóa địa chỉ này?', message: UI.esc(addrText(a)), confirmLabel: 'Xóa', danger: true }).then(function (ok) { if (ok) { DemoStore.remove('addresses', a.id); UI.toast('Đã xóa địa chỉ', 'success'); addrTab(panel); } });
+              } }]);
+            }
+          });
+        } catch (err) { main.innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.' }); }
+      }, 400);
+    });
+  })();
+  </script>
+</body>
+</html>

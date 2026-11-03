@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Góc chia sẻ của tiệm | Tiệm Bánh Kem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-009 Danh sách bài viết: FR-005. Chỉ hiện bài Đã đăng, 9 bài / trang. -->
+<body data-screen="SCR-009" data-layout="public" data-nav="blog" class="bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="mx-auto max-w-shell px-4 md:px-6 lg:px-8 pt-10 md:pt-14">
+    <h1 class="font-display font-bold text-[34px] md:text-[44px] leading-[1.15] text-primary-strong pb-1" data-i18n="blog.title">Góc chia sẻ của tiệm</h1>
+    <div id="tabs" class="mt-6 flex gap-2 overflow-x-auto no-scrollbar" role="tablist" aria-label="Chuyên mục"></div>
+    <div id="posts" class="mt-8" aria-live="polite"></div>
+    <nav id="pager" class="mt-10 flex justify-center gap-2" aria-label="Phân trang"></nav>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script>
+    /* SCR-009: tab chuyên mục + phân trang. Bài đầu tiên hiển thị lớn để tạo nhịp. */
+    App.onReady(function () {
+      var PER = 9, cat = 'all', page = 1;
+      var CATS = [['all', 'blog.all'], ['news', 'blog.news'], ['tips', 'blog.tips']];
+
+      function list() {
+        return DB.get('posts').filter(function (p) { return p.status === 'published' && (cat === 'all' || p.category === cat); })
+          .sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      }
+      function card(p, big) {
+        var catLabel = I18n.t(p.category === 'news' ? 'blog.news' : 'blog.tips');
+        return '<a href="chi-tiet-bai-viet.html?slug=' + p.slug + '" class="cake-card group block rounded-3xl focus-ring ' + (big ? 'md:col-span-2 lg:col-span-3 md:grid md:grid-cols-2 md:gap-8 md:items-center' : '') + '">' +
+          '<div class="overflow-hidden rounded-3xl bg-beige ' + (big ? 'aspect-[16/10]' : 'aspect-[16/10]') + '"><img src="' + p.cover + '" alt="" loading="lazy" class="cake-img w-full h-full object-cover"></div>' +
+          '<div class="' + (big ? 'pt-4 md:pt-0' : 'pt-4') + '"><p class="flex items-center gap-2 text-sm"><span class="badge ' + (p.category === 'news' ? 'bg-butter text-butter-strong' : 'bg-mint text-mint-strong') + '">' + catLabel + '</span><time class="text-ink-muted" datetime="' + p.date + '">' + Fmt.date(p.date) + '</time></p>' +
+          '<h2 class="mt-2 font-extrabold leading-snug line-clamp-2 group-hover:text-primary-strong transition-colors ' + (big ? 'text-2xl md:text-[28px]' : 'text-lg') + '">' + Fmt.esc(I18n.pick(p, 'title')) + '</h2>' +
+          '<p class="mt-2 text-ink-muted line-clamp-2">' + Fmt.esc(p.excerpt) + '</p></div></a>';
+      }
+      function render(loading) {
+        $('#tabs').innerHTML = CATS.map(function (c) {
+          return '<button type="button" role="tab" aria-selected="' + (cat === c[0]) + '" data-cat="' + c[0] + '" class="chip shrink-0">' + I18n.t(c[1]) + '</button>';
+        }).join('');
+        $all('[data-cat]').forEach(function (b) { b.onclick = function () { cat = b.dataset.cat; page = 1; render(true); App.fakeLoad(function () { render(false); }, 300); }; });
+        var box = $('#posts'), pager = $('#pager');
+        if (loading) {
+          box.innerHTML = '<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">' + Array(6).join('.').split('.').map(function () { return '<div><div class="skeleton aspect-[16/10] rounded-3xl"></div><div class="skeleton h-4 w-1/3 mt-4 rounded-full"></div><div class="skeleton h-6 w-4/5 mt-3 rounded-full"></div></div>'; }).join('') + '</div>';
+          pager.innerHTML = ''; return;
+        }
+        var all = list();
+        if (!all.length) { box.innerHTML = UI.empty({ icon: 'ph-article', title: I18n.t('blog.empty') }); pager.innerHTML = ''; return; }
+        var pages = Math.ceil(all.length / PER);
+        var slice = all.slice((page - 1) * PER, page * PER);
+        box.innerHTML = '<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">' + slice.map(function (p, i) { return card(p, i === 0 && page === 1 && slice.length > 2); }).join('') + '</div>';
+        pager.innerHTML = pages < 2 ? '' : Array.apply(null, { length: pages }).map(function (x, i) {
+          return '<button type="button" data-page="' + (i + 1) + '" class="grid place-items-center w-11 h-11 rounded-full font-bold ' + (page === i + 1 ? 'bg-primary-strong text-white' : 'bg-white hover:bg-primary-soft') + '"' + (page === i + 1 ? ' aria-current="page"' : '') + '>' + (i + 1) + '</button>';
+        }).join('');
+        $all('[data-page]').forEach(function (b) { b.onclick = function () { page = +b.dataset.page; render(false); window.scrollTo(0, 0); }; });
+      }
+      render(true);
+      App.fakeLoad(function () { render(false); });
+      document.addEventListener('langchange', function () { render(false); });
+    });
+  </script>
+</body>
+</html>

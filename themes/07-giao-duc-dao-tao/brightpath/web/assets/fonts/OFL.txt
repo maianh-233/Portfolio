@@ -1,0 +1,6 @@
+Be Vietnam Pro — Copyright 2021 The Be Vietnam Pro Project Authors (https://github.com/bettergui/BeVietnamPro)
+Bricolage Grotesque — Copyright 2022 The Bricolage Grotesque Project Authors (https://github.com/ateliertriay/bricolage)
+
+Cả hai font được phân phối theo SIL Open Font License, Version 1.1.
+Toàn văn giấy phép: https://openfontlicense.org/open-font-license-official-text/
+Tệp WOFF2 được tải từ Google Fonts ngày 19/10/2026, chỉ giữ subset vietnamese, latin, latin-ext.

@@ -1,0 +1,67 @@
+{
+  "slug": "the-tea-library",
+  "name": "THE TEA LIBRARY",
+  "projectType": "website",
+  "concept": {
+    "topic": "website tiệm bánh và trà sữa",
+    "brand": "THE TEA LIBRARY",
+    "purpose": "Thiết kế website giới thiệu THE TEA LIBRARY, thương hiệu trà và bánh lấy cảm hứng từ thư viện cổ, phòng trà châu Âu và nghệ thuật thưởng trà. Cảm giác cần đạt được là trầm tĩnh, có chiều sâu, giàu tính văn hóa nhưng không quá nặng nề.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Art direction\n\nXanh rừng #203D32, burgundy #6E2938, kem giấy #F0E7D5, nâu gỗ #604832.\n\nHeading serif cổ điển, nội dung sans-serif nhỏ gọn và dễ đọc.\n\nDùng số thứ tự, đường kẻ mảnh, tiêu đề phụ, nhãn phân loại và khoảng trắng lớn.\n\nHình ảnh tách trà sứ, trà lá, bánh nhỏ, sách, bàn gỗ và ánh sáng cửa sổ.\n\nKhông sử dụng hình minh họa hoạt hình hoặc các thẻ sản phẩm kiểu ứng dụng đặt đồ uống.\n\n3. Trang chủ\n\nHeader ngang với logo THE TEA LIBRARY, menu, VI–EN và đường kẻ dưới.\n\nHero chia hai cột: ảnh phòng trà bên phải, bên trái là nhãn “A House of Tea & Pastry”, headline “Every Cup Has a Story” và đoạn giới thiệu.\n\nSection “A Few Favorites” gồm 3 sản phẩm, ảnh tỷ lệ khác nhau và số thứ tự.\n\nSection “The Art of Tea”: bố cục hai cột, ảnh tách trà và nội dung về nghệ thuật thưởng trà.\n\nSection không gian phòng trà với một ảnh ngang lớn và chú thích như trang sách.\n\nFooter màu xanh rừng, logo và điều hướng.\n\n4. Trang Sản phẩm & Menu\n\nMở đầu như trang mục lục: số chương, tiêu đề “The Tea & Pastry Index”.\n\nChia nhóm Tea Selection, Milk Tea, Fruit Infusions, Pastries.\n\nMỗi nhóm có một đoạn giới thiệu ngắn, sau đó là danh sách món theo kiểu biên tập.\n\nCó thể kết hợp danh sách tên và mô tả với một ảnh sản phẩm lớn thay vì sử dụng quá nhiều thẻ.\n\nTên món, mô tả và nhãn danh mục phải được dịch đầy đủ.\n\n5. Trang Về chúng tôi\n\nHero có ảnh không gian và tiêu đề “A Place to Pause”.\n\nCâu chuyện thương hiệu trình bày như bài viết tạp chí.\n\nCác phần về văn hóa trà, sự kết hợp giữa trà và bánh, không gian thưởng thức.\n\nGallery ảnh có chú thích và số thứ tự.\n\n6. Chuyển động\n\nChuyển trang chậm vừa phải, ảnh fade-in nhẹ, đường kẻ xuất hiện tinh tế. Tránh animation liên tục hoặc parallax phức tạp.\n\n7. Ràng buộc\n\nTối đa 3 trang, Việt–Anh đầy đủ, responsive. Chỉ giới thiệu thương hiệu và menu; không có đặt hàng, giỏ hàng, thanh toán hoặc form giao dịch.  Có nút chuyển ngôn ngữ ,Đảm bảo font tiếng việt không được lỗi phông",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-23T07:28:15.302Z",
+  "updatedAt": "2026-10-23T07:43:56.715Z",
+  "screen": "done",
+  "request": "website tiệm bánh và trà sữa",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\the-tea-library\\web",
+    "builtAt": "2026-10-23T07:43:44.576Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/menu.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/menu.html": []
+    }
+  },
+  "job": {
+    "id": "0f1d1db6-366e-43dc-be48-6b75ba2d754d",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\the-tea-library\\web",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-23T07:43:53.940Z",
+    "critical": 0,
+    "major": 21,
+    "minor": 2,
+    "screenshots": 9
+  }
+}

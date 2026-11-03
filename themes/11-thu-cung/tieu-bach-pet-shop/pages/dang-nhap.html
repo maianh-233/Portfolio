@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-SYS-001" data-module="SYS" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-SYS-001 Đăng nhập (khách): SĐT hoặc email + mật khẩu; xong quay lại trang ?quay_lai= (q21), giỏ vẫn giữ.
+   * Prototype: tài khoản demo 0901234567 (hoặc lan@gmail.com) / meomeo123 → vai trò demo = Khách hàng. Sai 5 lần → khóa 15 phút (SYS-E06). */
+  Layout.mount({ title: 'Đăng nhập', breadcrumb: [['Đăng nhập']] }, function (main) {
+    var U = Perm.url, esc = UI.esc, ic = UI.icon, R = UI.rules;
+    var back = App.param('quay_lai') || '';
+    var LOCK = 'demo.login.lock', FAIL = 'demo.login.fail';
+    var reason = /thanh-toan/.test(back) ? 'Đăng nhập để tiếp tục thanh toán. Giỏ hàng của bạn vẫn được giữ nguyên.' : /dat-truoc-pate/.test(back) ? 'Đăng nhập để đặt trước pate chay.' : '';
+    var who = Perm.role() === 'ROLE-02' && App.me() ? App.me().name : '';
+    function store(k, v) { try { if (v == null) sessionStorage.removeItem(k); else sessionStorage.setItem(k, v); } catch (e) {} }
+    function read(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+
+    var aside = '<div class="relative hidden h-full flex-col justify-between overflow-hidden rounded-2xl bg-primary-100 p-8 lg:flex">' +
+      '<div class="flex flex-col gap-4"><h2 class="text-2xl font-extrabold text-neutral-800 text-balance">Đăng nhập để tích điểm, theo dõi đơn và đặt pate chay</h2>' +
+      '<ul class="flex flex-col gap-3">' + [['tag', 'Tích điểm mỗi đơn'], ['package', 'Theo dõi đơn hàng'], ['calendar-heart', 'Đặt trước pate chay']].map(function (b) { return '<li class="flex items-center gap-3 text-base font-bold text-neutral-800"><span class="inline-flex size-10 items-center justify-center rounded-full bg-white text-primary-700">' + ic(b[0]) + '</span>' + b[1] + '</li>'; }).join('') + '</ul></div>' +
+      '<div class="mt-6 aspect-video overflow-hidden rounded-xl">' + UI.img({ src: MOCK.photo('blackcat', 5, 900, 600), alt: 'Chú mèo đen Tiểu Bạch' }) + '</div></div>';
+
+    var form = '<form novalidate class="flex flex-col gap-4" data-form>' +
+      '<div class="flex flex-col items-center gap-2 text-center lg:items-start lg:text-left"><span class="lg:hidden">' + UI.mascot(96, 'happy') + '</span><h1 class="text-2xl font-extrabold text-neutral-800">Chào Sen, đăng nhập nhé!</h1></div>' +
+      (who ? UI.alert({ tone: 'success', text: 'Bạn đang đăng nhập với tài khoản ' + who + '.', actions: UI.button({ label: 'Tiếp tục', size: 'sm', href: back ? App.resolveBack(back) : U('index.html') }) }) : '') +
+      (reason ? UI.alert({ tone: 'info', text: reason }) : '') +
+      '<div data-err-box></div>' +
+      UI.field({ name: 'tai_khoan', label: 'Số điện thoại hoặc email', required: true, icon: 'user', autocomplete: 'username', placeholder: 'Ví dụ: 0901234567' }) +
+      UI.field({ name: 'mat_khau', label: 'Mật khẩu', type: 'password', required: true, autocomplete: 'current-password' }) +
+      '<div class="flex items-center justify-between gap-3">' + UI.field({ name: 'ghi_nho', type: 'checkbox', label: 'Ghi nhớ đăng nhập', value: true }) +
+      UI.button({ label: 'Quên mật khẩu?', variant: 'link', size: 'sm', href: U('pages/quen-mat-khau.html') }) + '</div>' +
+      UI.button({ label: 'Đăng nhập', size: 'lg', full: true, type: 'submit', attrs: { 'data-submit': '' } }) +
+      '<p class="text-xs text-neutral-600">Tài khoản demo: <b>0901234567</b> / <b>meomeo123</b></p>' +
+      '<div class="flex items-center gap-3 text-sm text-neutral-600"><span class="h-px flex-1 bg-neutral-200"></span>Chưa có tài khoản?<span class="h-px flex-1 bg-neutral-200"></span></div>' +
+      UI.button({ label: 'Tạo tài khoản', variant: 'outline', size: 'lg', full: true, href: U('pages/dang-ky.html') + (back ? '?quay_lai=' + encodeURIComponent(back) : '') }) + '</form>';
+
+    main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-10 pt-6 md:px-6 lg:px-8"><div class="grid items-stretch gap-8 lg:grid-cols-2">' + aside +
+      '<div class="mx-auto w-full max-w-md rounded-2xl border border-neutral-200 bg-white p-5 md:p-8 lg:self-center">' + form + '</div></div></div>');
+
+    var f = main.querySelector('[data-form]'), btn = f.querySelector('[data-submit]');
+    var rules = {
+      tai_khoan: [R.required('Vui lòng nhập số điện thoại hoặc email'),
+        R.custom(function (v) { return !/^\d+$/.test(v) || /^0\d{9}$/.test(v); }, 'Số điện thoại không hợp lệ'),
+        R.custom(function (v) { return v.indexOf('@') < 0 || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }, 'Email không hợp lệ')],
+      mat_khau: [R.required('Vui lòng nhập mật khẩu')]
+    };
+    UI.validate.live(f, rules);
+    function locked() { var t = +read(LOCK) || 0; return t > Date.now() ? t : 0; }
+    function showLock() { f.querySelector('[data-err-box]').innerHTML = UI.alert({ tone: 'danger', text: 'Bạn đã nhập sai quá nhiều lần, vui lòng thử lại sau 15 phút' }); btn.disabled = true; }
+    if (locked()) showLock();
+
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (locked()) { showLock(); return; }
+      f.querySelector('[data-err-box]').innerHTML = '';
+      if (!UI.validate(f, rules)) return;
+      var d = UI.formData(f);
+      UI.setLoading(btn, true); f.querySelectorAll('input').forEach(function (i) { i.readOnly = true; });
+      setTimeout(function () {
+        f.querySelectorAll('input').forEach(function (i) { i.readOnly = false; });
+        var cus = DemoStore.list('customers').filter(function (c) { return c.userId && (c.so_dien_thoai === d.tai_khoan || (c.email || '').toLowerCase() === d.tai_khoan.toLowerCase()); })[0];
+        var reg = DemoStore.list('accounts').filter(function (a) { return (a.so_dien_thoai === d.tai_khoan || a.email === d.tai_khoan.toLowerCase()) && a.mat_khau === d.mat_khau; })[0];
+        if ((cus && d.mat_khau === 'meomeo123') || reg) {
+          store(FAIL, null);
+          Perm.setRole('ROLE-02');
+          var name = reg ? reg.ho_ten : cus.ho_ten;
+          UI.toast('Chào mừng ' + name.split(' ').pop() + ' quay lại!', 'success');
+          setTimeout(function () { location.href = back ? App.resolveBack(back) : U('index.html'); }, 700);
+          return;
+        }
+        UI.setLoading(btn, false);
+        var n = (+read(FAIL) || 0) + 1; store(FAIL, n);
+        if (n >= 5) { store(LOCK, Date.now() + 15 * 60e3); store(FAIL, null); showLock(); return; }
+        f.querySelector('[data-err-box]').innerHTML = UI.alert({ tone: 'danger', text: 'Thông tin đăng nhập không đúng' });
+      }, 600);
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<footer id="footer" class="relative overflow-hidden border-t-3 border-ink bg-ink text-cream">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-8 pt-16 sm:px-6 lg:px-10 lg:pt-20 2xl:px-16">
+    <div class="grid gap-12 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="font-display text-3xl font-extrabold leading-tight sm:text-4xl" data-i18n="ft.tagline">Móng xinh, mood xinh.<br>Cứ thế lặp lại.</p>
+        <button type="button" data-modal-open="dat-lich" class="cc-btn cc-btn--pop mt-7 !shadow-[4px_4px_0_#FFE58A]" data-i18n="cta.book">Đặt lịch</button>
+      </div>
+      <nav class="lg:col-span-2" aria-label="Các trang" data-i18n-attr="aria-label:ft.pages">
+        <p class="text-sm font-extrabold uppercase tracking-[0.12em] text-butter" data-i18n="ft.explore">Khám phá</p>
+        <ul class="mt-4 space-y-3 text-base">
+          <li><a class="cc-focus underline-offset-4 transition-colors duration-300 hover:text-pop hover:underline" href="{{root}}index.html" data-i18n="nav.home">Trang chủ</a></li>
+          <li><a class="cc-focus underline-offset-4 transition-colors duration-300 hover:text-pop hover:underline" href="{{root}}pages/services.html" data-i18n="nav.services">Dịch vụ</a></li>
+          <li><a class="cc-focus underline-offset-4 transition-colors duration-300 hover:text-pop hover:underline" href="{{root}}pages/playground.html">Nail Playground</a></li>
+          <li><a class="cc-focus underline-offset-4 transition-colors duration-300 hover:text-pop hover:underline" href="{{root}}pages/artists.html" data-i18n="nav.artists">Gặp nghệ sĩ</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-extrabold uppercase tracking-[0.12em] text-butter" data-i18n="ft.visit">Ghé club</p>
+        <address class="mt-4 space-y-2 not-italic text-base text-cream/90">
+          <p data-i18n="info.address">27 đường Hoa Sứ, Phường 7, Phú Nhuận, TP.HCM</p>
+          <p><a class="cc-focus hover:text-pop" href="tel:0938214657">0938 214 657</a></p>
+          <p><a class="cc-focus hover:text-pop" href="mailto:hello@candycoat.club">hello@candycoat.club</a></p>
+          <p data-i18n="info.hours">Thứ 3 - Chủ nhật, 10:00 - 21:00</p>
+          <p class="pt-1 text-sm text-cream/70" data-i18n="info.sample">Thông tin liên hệ là dữ liệu minh họa.</p>
+        </address>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-extrabold uppercase tracking-[0.12em] text-butter" data-i18n="ft.social">Theo dõi club</p>
+        <ul class="mt-4 flex flex-wrap gap-3">
+          <li><a class="cc-tag !bg-cream hover:!bg-pop" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a class="cc-tag !bg-cream hover:!bg-pop" href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a class="cc-tag !bg-cream hover:!bg-pop" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+        <div class="mt-8 flex items-end gap-3" aria-hidden="true">
+          <svg class="cc-sticker h-12 w-12 text-pop"><use href="#s-flower"/></svg>
+          <svg class="cc-sticker h-10 w-10 text-butter"><use href="#s-smile"/></svg>
+          <svg class="cc-sticker h-9 w-9 text-baby"><use href="#s-star"/></svg>
+        </div>
+      </div>
+    </div>
+    <p class="mt-16 select-none font-display text-[clamp(3rem,13.5vw,15rem)] font-extrabold uppercase leading-[0.8] tracking-tighter text-pop" aria-hidden="true">Candy Coat</p>
+    <div class="mt-6 flex flex-col gap-2 border-t-2 border-cream/25 pt-6 text-sm text-cream/75 sm:flex-row sm:justify-between">
+      <p>© 2026 CANDY COAT NAIL CLUB</p>
+      <p data-i18n="ft.note">Website giới thiệu, không bán hàng trực tuyến.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="dat-lich" class="w-[min(94vw,560px)] max-h-[90dvh] overflow-y-auto rounded-3xl border-3 border-ink bg-cream p-0 text-ink shadow-hard-lg backdrop:bg-ink/60">
+  <div class="flex items-start justify-between gap-4 border-b-3 border-ink bg-pop px-6 py-5">
+    <div>
+      <p class="font-display text-3xl font-extrabold uppercase leading-none" data-i18n="bk.title">Đặt lịch</p>
+      <p class="mt-2 text-sm font-medium" data-i18n="bk.sub">Để lại thông tin, club sẽ gợi ý khung giờ phù hợp.</p>
+    </div>
+    <button type="button" data-modal-close class="cc-focus grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 border-ink bg-cream text-xl font-extrabold" aria-label="Đóng" data-i18n-attr="aria-label:bk.close">×</button>
+  </div>
+  <form data-form="dat-lich" class="grid gap-4 px-6 py-6" novalidate>
+    <label class="grid gap-1.5 text-sm font-extrabold"><span data-i18n="bk.name">Tên của bạn</span>
+      <input type="text" name="name" required minlength="2" autocomplete="name" class="min-h-[48px] rounded-2xl border-2 border-ink bg-white px-4 text-base font-medium outline-none focus:ring-4 focus:ring-pop/40">
+    </label>
+    <label class="grid gap-1.5 text-sm font-extrabold"><span data-i18n="bk.phone">Số điện thoại</span>
+      <input type="tel" name="phone" required minlength="9" autocomplete="tel" class="min-h-[48px] rounded-2xl border-2 border-ink bg-white px-4 text-base font-medium outline-none focus:ring-4 focus:ring-pop/40">
+    </label>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <label class="grid gap-1.5 text-sm font-extrabold"><span data-i18n="bk.service">Dịch vụ quan tâm</span>
+        <select name="service" required class="min-h-[48px] rounded-2xl border-2 border-ink bg-white px-3 text-base font-medium outline-none focus:ring-4 focus:ring-pop/40">
+          <option value="" data-i18n="bk.choose">Chọn một dịch vụ</option>
+          <option value="care" data-i18n="svc.cat.care">Chăm sóc móng</option>
+          <option value="gel" data-i18n="svc.cat.gel">Sơn gel</option>
+          <option value="extension" data-i18n="svc.cat.ext">Nối móng</option>
+          <option value="art" data-i18n="svc.cat.art">Nail art thiết kế riêng</option>
+          <option value="removal" data-i18n="svc.cat.rem">Tháo móng</option>
+        </select>
+      </label>
+      <label class="grid gap-1.5 text-sm font-extrabold"><span data-i18n="bk.date">Ngày mong muốn</span>
+        <input type="date" name="date" required class="min-h-[48px] rounded-2xl border-2 border-ink bg-white px-3 text-base font-medium outline-none focus:ring-4 focus:ring-pop/40">
+      </label>
+    </div>
+    <label class="grid gap-1.5 text-sm font-extrabold"><span data-i18n="bk.idea">Ý tưởng bộ móng (không bắt buộc)</span>
+      <textarea name="idea" rows="3" class="rounded-2xl border-2 border-ink bg-white px-4 py-3 text-base font-medium outline-none focus:ring-4 focus:ring-pop/40"></textarea>
+    </label>
+    <div class="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
+      <button type="submit" class="cc-btn cc-btn--ink" data-i18n="bk.submit">Gửi yêu cầu</button>
+      <p class="text-sm text-ink/80" data-i18n="bk.demo">Bản demo: form chưa gửi dữ liệu và chưa tạo lịch hẹn thật.</p>
+    </div>
+  </form>
+</dialog>
+
+<a href="#top" data-back-to-top class="cc-focus fixed bottom-5 right-5 z-30 grid h-12 w-12 place-items-center rounded-full border-3 border-ink bg-butter shadow-hard-sm" aria-label="Về đầu trang" data-i18n-attr="aria-label:top">
+  <svg class="h-5 w-5 -rotate-90" aria-hidden="true"><use href="#i-arrow"/></svg>
+</a>

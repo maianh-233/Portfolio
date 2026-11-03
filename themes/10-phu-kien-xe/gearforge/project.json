@@ -1,0 +1,50 @@
+{
+  "slug": "gearforge",
+  "name": "GEARFORGE",
+  "projectType": "website",
+  "concept": {
+    "topic": "PROMPT THIẾT KẾ WEBSITE BÁN PHỤ KIỆN XE",
+    "brand": "GEARFORGE",
+    "purpose": "Thiết kế website thương mại điện tử cho GEARFORGE, thương hiệu chuyên kinh doanh phụ kiện và đồ chơi xe máy, ô tô. Website có giao diện hiện đại, cá tính, mang tinh thần tốc độ và công nghệ cơ khí. Mục tiêu là trưng bày sản phẩm, giúp khách hàng tìm kiếm phụ kiện phù hợp và đặt mua dễ dàng.\n\nPhong cách thiết kế: Automotive Performance, Modern Industrial, Sporty, Premium Tech.\n\nMàu sắc chủ đạo: Đen than #111318, xám kim loại #292D33, trắng bạc #F3F4F6, cam nổi bật #FF6B2C.\n\nSử dụng hình ảnh xe độ, chi tiết cơ khí, phụ kiện kim loại và ánh sáng tương phản mạnh. Typography đậm, hiện đại, bố cục rõ ràng, tạo cảm giác chuyên nghiệp như một thương hiệu phụ kiện xe cao cấp.",
+    "preset": "auto",
+    "motion": "1",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Cấu trúc website — 3 trang chính\n\nTrang 1: Trang chủ (Home)\n\nHeader gồm logo GEARFORGE và menu điều hướng đến 3 trang chính.\n\nHero banner nổi bật với hình ảnh xe độ, tiêu đề “UPGRADE YOUR RIDE.”, mô tả thương hiệu và nút “Khám phá bộ sưu tập”.\n\nGiới thiệu ngắn về GEARFORGE, định hướng thiết kế và giá trị thương hiệu.\n\nKhu vực danh mục nổi bật: Phụ kiện ô tô, phụ kiện xe máy, đồ chơi xe, phụ kiện nội thất và thiết bị công nghệ.\n\nTrưng bày một số sản phẩm tiêu biểu dưới dạng thẻ hình ảnh, gồm tên, mô tả ngắn và nút “Xem chi tiết”.\n\nBanner giới thiệu phong cách sống, tinh thần tốc độ và chất lượng sản phẩm.\n\nKhu vực giá trị thương hiệu và footer có thông tin liên hệ, mạng xã hội.\n\nTrang 2: Bộ sưu tập sản phẩm (Collections)\n\nTrưng bày toàn bộ danh mục phụ kiện bằng bố cục lưới 3–4 cột trên desktop.\n\nMỗi thẻ sản phẩm gồm hình ảnh chất lượng cao, tên sản phẩm, loại phụ kiện và mô tả ngắn.\n\nPhân loại theo phụ kiện ô tô, xe máy, ngoại thất, nội thất và thiết bị công nghệ.\n\nCó bộ lọc danh mục và thanh tìm kiếm để khách tham quan dễ dàng khám phá sản phẩm.\n\nKhi chọn sản phẩm, mở trang chi tiết hoặc cửa sổ giới thiệu riêng.\n\nKhông hiển thị giá bán, nút mua hàng, giỏ hàng hoặc các yếu tố thúc đẩy giao dịch.\n\nTrang 3: Chi tiết sản phẩm & Công nghệ (Product Showcase)\n\nTrình bày chi tiết từng phụ kiện với thư viện hình ảnh lớn, hình chụp cận cảnh chất liệu và thiết kế.\n\nHiển thị tên sản phẩm, câu chuyện thiết kế, công dụng, chất liệu, thông số kỹ thuật và dòng xe tương thích.\n\nCó khu vực giới thiệu công nghệ, điểm nổi bật và giá trị sử dụng của sản phẩm.\n\nCho phép chuyển đổi giữa các sản phẩm liên quan và quay lại bộ sưu tập.\n\nCó nút “Tìm hiểu thêm” hoặc “Liên hệ tư vấn”, dẫn đến thông tin liên hệ ở footer hoặc trang chủ.\n\nThiết kế theo phong cách editorial kết hợp hình ảnh sản phẩm, tạo cảm giác như một catalogue phụ kiện xe cao cấp.\n\n3. Trải nghiệm người dùng\n\nĐiều hướng mạch lạc giữa 3 trang, header và footer đồng bộ.\n\nTìm kiếm, lọc danh mục và xem chi tiết sản phẩm hoạt động tốt.\n\nHình ảnh sản phẩm là trọng tâm, kết hợp mô tả ngắn gọn, dễ đọc.\n\nResponsive trên máy tính, tablet và điện thoại.\n\nNội dung, hình ảnh và dữ liệu sản phẩm thống nhất trên toàn website.\n\n4. Hiệu ứng và chuyển động\n\nSử dụng hiệu ứng xuất hiện nhẹ khi cuộn, hover phóng to ảnh sản phẩm, chuyển cảnh mượt và hiệu ứng tương tác tinh tế. Có thể dùng hình ảnh xe toàn màn hình và hiệu ứng parallax nhẹ để tăng cảm giác tốc độ. Tránh animation quá phức tạp.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-20T01:54:49.887Z",
+  "updatedAt": "2026-10-20T02:28:10.189Z",
+  "screen": "request",
+  "request": "PROMPT THIẾT KẾ WEBSITE BÁN PHỤ KIỆN XE",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "e53737d3-0003-47c3-ba5c-da0dcbe7318d",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\gearforge\\web",
+    "status": "running"
+  }
+}

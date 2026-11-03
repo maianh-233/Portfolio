@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tồn kho · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-PROD-007" data-module="PROD" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-PROD-007 Tồn kho theo biến thể (không gồm pate chay): Tabs Tất cả / Sắp hết / Hết hàng (?loc=sap-het|het), Drawer cập nhật tồn (ghi ENT-STOCK_LOG), Drawer lịch sử. */
+  Layout.mount({ area: 'admin', title: 'Tồn kho', active: 'stock', breadcrumb: [['Hàng hóa'], ['Tồn kho']] }, function (main) {
+    var U = Perm.url, esc = UI.esc, R = UI.rules, tbl, tabs;
+    var cats = DemoStore.list('categories').filter(function (c) { return !c.la_pate_chay; });
+    var tab = App.param('loc') === 'sap-het' ? 'sap-het' : App.param('loc') === 'het' ? 'het' : 'all';
+    function statusOf(v) { return v.ton_kho === 0 ? 'het' : v.ton_kho <= v.nguong ? 'sap-het' : 'con'; }
+    function rows() {
+      var logs = DemoStore.list('stockLogs'), out = [];
+      DemoStore.list('products').forEach(function (p) {
+        if (p.la_pate) return;
+        p.variants.forEach(function (v) {
+          var last = logs.filter(function (l) { return l.variantId === v.id; }).sort(function (a, b) { return a.at < b.at ? 1 : -1; })[0];
+          out.push({ id: v.id, pid: p.id, ten: p.ten, bien_the: v.ten, sku: v.sku, img: v.anh || p.anh[0], ton_kho: v.ton_kho || 0, nguong: v.nguong == null ? 5 : v.nguong, ss: statusOf(v), category_id: p.category_id, last: last });
+        });
+      });
+      return out;
+    }
+    function forTab(l) { return tab === 'all' ? l : l.filter(function (r) { return r.ss === tab; }); }
+    function head(l) { var s = l.filter(function (r) { return r.ss === 'sap-het'; }).length, h = l.filter(function (r) { return r.ss === 'het'; }).length; main.querySelector('[data-head]').innerHTML = UI.pageHeader({ title: 'Tồn kho', description: s + ' sắp hết · ' + h + ' hết hàng' }); return { 'all': l.length, 'sap-het': s, 'het': h }; }
+    var SS = { con: ['Còn hàng', 'success'], 'sap-het': ['Sắp hết', 'warning'], het: ['Hết hàng', 'danger'] };
+    main.innerHTML = '<div data-head></div><div class="mb-4" data-tabs></div><div data-tbl>' + UI.skeleton(5) + '</div>';
+
+    function refresh(id) { var l = rows(), c = head(l); tabs.setCounts(c); tbl.setRows(forTab(l)); if (id) setTimeout(function () { tbl.flash(id); }, 30); }
+    function update(r) {
+      var body = '<form novalidate class="flex flex-col gap-4" data-stock><div class="flex items-center gap-3 rounded-lg bg-neutral-50 p-3"><span class="size-12 shrink-0 overflow-hidden rounded-md">' + UI.img({ src: r.img, alt: '' }) + '</span><div><p class="font-bold">' + esc(r.ten) + '</p><p class="text-sm text-neutral-600">' + esc(r.bien_the) + ' · Hiện tại: <b>' + r.ton_kho + '</b></p></div></div>' +
+        UI.field({ name: 'ton_moi', label: 'Số lượng tồn mới', type: 'number', required: true, value: r.ton_kho, hint: 'Hiện tại: ' + r.ton_kho, attrs: { min: 0 } }) +
+        UI.field({ name: 'ly_do', label: 'Lý do', type: 'select', required: true, options: ['Nhập hàng', 'Kiểm kê', 'Hàng hỏng', 'Khác'], value: 'Nhập hàng' }) +
+        UI.field({ name: 'ly_do_khac', label: 'Ghi chú lý do', optional: true, maxlength: 255, placeholder: 'Bắt buộc khi chọn Khác' }) +
+        UI.field({ name: 'nguong', label: 'Báo sắp hết khi còn', type: 'number', value: r.nguong, suffix: 'sản phẩm', attrs: { min: 0 } }) + '</form>';
+      UI.drawer({ title: 'Cập nhật tồn', body: body, actions: [{ label: 'Hủy', variant: 'ghost' }, { label: 'Lưu', icon: 'save', attrs: { 'data-permission': 'PROD.STOCK.UPDATE' }, onClick: function (api) {
+        var f = api.body.querySelector('[data-stock]'), intOk = function (v) { return v !== '' && /^\d+$/.test(String(v)); };
+        var ok = UI.validate(f, { ton_moi: [R.custom(intOk, 'Số lượng phải là số nguyên từ 0 trở lên')], ly_do: [R.required('Vui lòng chọn lý do')], ly_do_khac: [R.custom(function (v, d) { return d.ly_do !== 'Khác' || !!v; }, 'Vui lòng chọn lý do')], nguong: [R.custom(function (v) { return v === '' || intOk(v); }, 'Số lượng phải là số nguyên từ 0 trở lên')] });
+        if (!ok) return false;
+        var d = UI.formData(f), to = +d.ton_moi, from = r.ton_kho;
+        DemoStore.update('products', r.pid, function (p) { var n = JSON.parse(JSON.stringify(p)); n.variants.forEach(function (v) { if (v.id === r.id) { v.ton_kho = to; if (d.nguong !== '') v.nguong = +d.nguong; } }); n.cap_nhat = new Date().toISOString(); return n; });
+        DemoStore.insert('stockLogs', { id: 'sl' + Date.now(), variantId: r.id, at: new Date().toISOString(), by: App.adminName(), from: from, to: to, reason: d.ly_do === 'Khác' ? d.ly_do_khac : d.ly_do + (d.ly_do_khac ? ' · ' + d.ly_do_khac : ''), source: 'Tay' });
+        UI.toast('Đã cập nhật tồn ' + r.ten + ' (' + r.bien_the + '): ' + from + ' → ' + to, 'success'); refresh(r.id);
+      } }] });
+    }
+    function history(r) {
+      var logs = DemoStore.list('stockLogs').filter(function (l) { return l.variantId === r.id; }).sort(function (a, b) { return a.at < b.at ? 1 : -1; });
+      UI.drawer({ title: 'Lịch sử tồn kho', body: '<p class="mb-4 text-sm text-neutral-600"><b class="text-neutral-800">' + esc(r.ten) + '</b> · ' + esc(r.bien_the) + '</p>' + (logs.length ? UI.timeline(logs.map(function (l) { return { at: l.at, by: l.by, title: l.from + ' → ' + l.to, note: l.reason + ' · ' + l.source, tone: l.to > l.from ? 'success' : 'warning' }; })) : '<p class="text-sm text-neutral-600">Chưa có lịch sử cập nhật.</p>') });
+    }
+    setTimeout(function () {
+      try {
+        var l = rows(), c = head(l);
+        tabs = UI.tabs(main.querySelector('[data-tabs]'), { panelCls: 'hidden', active: tab, tabs: [{ id: 'all', label: 'Tất cả', count: c.all }, { id: 'sap-het', label: 'Sắp hết', count: c['sap-het'] }, { id: 'het', label: 'Hết hàng', count: c.het }],
+          onChange: function (id) { tab = id; App.setParams({ loc: id === 'all' ? '' : id }); if (tbl) tbl.setRows(forTab(rows())); } });
+        tbl = UI.table(main.querySelector('[data-tbl]'), {
+          rows: forTab(l), pageSize: 20, sort: { key: 'ton_kho', dir: 'asc' }, columnToggle: true,
+          searchKeys: ['ten', 'bien_the', 'sku'], searchPlaceholder: 'Tìm tên hoặc SKU…',
+          filters: [{ key: 'category_id', label: 'Nhóm', type: 'select', options: cats.map(function (x) { return { value: x.id, label: x.ten }; }) }],
+          columns: [
+            { key: 'ten', label: 'Sản phẩm / biến thể', sortable: true, mobile: 'title', render: function (r) { return '<a href="' + U('pages/admin/sua-san-pham.html?id=' + r.pid) + '" class="flex items-center gap-3"><span class="size-10 shrink-0 overflow-hidden rounded-md bg-neutral-100">' + UI.img({ src: r.img, alt: '' }) + '</span><span class="min-w-0"><span class="block font-bold text-neutral-800 hover:text-primary-700">' + esc(r.ten) + '</span><span class="block text-xs text-neutral-600">' + esc(r.bien_the) + '</span></span></a>'; } },
+            { key: 'sku', label: 'SKU', hideBelow: 'lg', render: function (r) { return '<span class="font-mono text-xs">' + esc(r.sku) + '</span>'; } },
+            { key: 'ton_kho', label: 'Tồn', sortable: true, align: 'right', render: function (r) { return '<b class="text-base tabular-nums">' + r.ton_kho + '</b>'; } },
+            { key: 'nguong', label: 'Ngưỡng', align: 'right', render: function (r) { return r.nguong; } },
+            { key: 'ss', label: 'Tình trạng', mobile: 'badge', render: function (r) { return UI.tag(SS[r.ss][0], SS[r.ss][1]); } },
+            { key: 'last', label: 'Cập nhật lần cuối', sortable: true, hideBelow: 'lg', sortValue: function (r) { return r.last ? r.last.at : ''; }, render: function (r) { return r.last ? '<span class="whitespace-nowrap text-xs text-neutral-700">' + UI.fmt.dm(r.last.at) + ' ' + UI.fmt.time(r.last.at) + ' · ' + esc(r.last.by) + '</span>' : '<span class="text-neutral-400">—</span>'; } }],
+          rowActions: function (r) { return [{ label: 'Cập nhật tồn', icon: 'pencil', primary: true, variant: 'secondary', permission: 'PROD.STOCK.UPDATE', onClick: function () { update(r); } }, { label: 'Lịch sử', icon: 'history', primary: true, variant: 'outline', permission: 'PROD.STOCK.VIEW', onClick: function () { history(r); } }]; },
+          empty: { title: 'Không có biến thể nào sắp hết hàng 👍' }, emptyFiltered: { title: 'Không có biến thể phù hợp bộ lọc' }
+        });
+      } catch (e) { main.querySelector('[data-tbl]').innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.' }); }
+    }, 400);
+  });
+  </script>
+</body>
+</html>

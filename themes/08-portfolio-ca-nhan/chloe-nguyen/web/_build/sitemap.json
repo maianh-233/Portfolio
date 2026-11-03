@@ -1,0 +1,66 @@
+{
+  "brand": "Chloe Nguyen",
+  "language": "vi",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Trang tạp chí cưới: chữ Cormorant Garamond rất lớn cạnh ảnh kiến trúc tràn mép, chân dung chồng lệch, đường kẻ mảnh 1px và nhãn 'No.' như trang đôi ấn phẩm in; nền ngà xen dải be cát và một dải đen than, olive chỉ làm điểm nhấn",
+  "purposeInferred": "Portfolio cá nhân của wedding planner & creative director: giới thiệu chân dung, tư duy sáng tạo, 3 dự án tiêu biểu, kinh nghiệm / học vấn (CV) để các cặp đôi, studio và nhà tuyển dụng liên hệ hợp tác",
+  "theme": {
+    "tagline": "Lễ cưới hiện đại mang dấu ấn riêng",
+    "description": "Giao diện portfolio cá nhân cho wedding planner và creative director phong cách tạp chí."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Landing page portfolio: chân dung, giới thiệu, dự án (mở panel chi tiết), năng lực, điểm nổi bật, kinh nghiệm, học vấn, liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ai", "note": "Bìa tạp chí: ảnh không gian cưới tràn mép phải + chân dung chồng lệch, tên cực lớn" },
+        { "id": "about", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Tiêu đề + ảnh dính trái, thân drop cap, trích dẫn kéo ra lề, 6 thế mạnh" },
+        { "id": "work", "catalog": "projects", "variant": "gallery-lookbook", "source": "ai", "note": "3 dự án 3 bố cục: chữ mạnh + ảnh lớn / collage có lightbox / toàn cảnh + nội dung editorial; mỗi dự án mở dialog chi tiết" },
+        { "id": "expertise", "catalog": "features", "variant": "features-tabs", "source": "ai", "note": "4 nhóm năng lực, tab trái + ảnh phải trên dải đen than" },
+        { "id": "highlights", "catalog": "editorial", "variant": "stats-band", "source": "ai", "note": "3 con số chữ lớn, ghi rõ số liệu hư cấu" },
+        { "id": "experience", "catalog": "process", "variant": "timeline", "source": "ai", "note": "Timeline nghề nghiệp + học vấn & chứng chỉ, link CV" },
+        { "id": "contact", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Bạn đang có một ý tưởng? Email (mailto + sao chép), Tải CV, mạng xã hội demo; không form" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "wedding ceremony venue modern hall", "file": "assets/img/p01-san-dat-hoa.jpg", "status": "ok" },
+        { "slot": "hero-portrait", "query": "woman editorial portrait elegant", "file": "assets/img/hero-chan-dung.jpg", "status": "ok" },
+        { "slot": "about", "query": "woman editorial portrait elegant", "file": "assets/img/about-chan-dung.jpg", "status": "ok" },
+        { "slot": "project-01", "query": "white flowers wedding table long", "file": "assets/img/p01-hoa-trang.webp", "status": "ok" },
+        { "slot": "project-02-main", "query": "wedding ceremony venue modern hall", "file": "assets/img/p02-nghi-le-ngoai-troi.jpg", "status": "ok" },
+        { "slot": "project-02-flowers", "query": "white flowers wedding table long", "file": "assets/img/p02-hoa-hong-trang.jpg", "status": "ok" },
+        { "slot": "project-02-table", "query": "wedding reception minimalist architecture", "file": "assets/img/hero-ban-tiec.webp", "status": "ok" },
+        { "slot": "project-03-panorama", "query": "bali beach wedding ceremony", "file": "assets/img/p03-bien-bali.webp", "status": "ok" },
+        { "slot": "project-03-ceremony", "query": "bali beach wedding ceremony", "file": "assets/img/p03-le-cuoi-bai-bien.jpg", "status": "ok" },
+        { "slot": "expertise-direction", "query": "wedding invitation stationery", "file": "assets/img/expertise-thiep-cuoi.jpg", "status": "ok" },
+        { "slot": "expertise-styling", "query": "wedding reception minimalist architecture", "file": "assets/img/p02-leu-tiec.webp", "status": "ok" },
+        { "slot": "expertise-planning", "query": "white flowers wedding table long", "file": "assets/img/p01-sanh-tiec.webp", "status": "ok" },
+        { "slot": "expertise-guests", "query": "wedding invitation stationery", "file": "assets/img/expertise-ban-tiec.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/cv.html",
+      "title": "CV",
+      "purpose": "Bản CV đọc / in được; nút Tải CV mở hộp thoại in để lưu PDF",
+      "sections": [
+        { "id": "cv-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb, tên, chức danh, nút tải / email" },
+        { "id": "cv-body", "catalog": "story", "variant": "detail-article", "source": "ai", "note": "Liên hệ, kỹ năng, kinh nghiệm, học vấn, dự án tiêu biểu, CTA liên hệ" }
+      ],
+      "images": []
+    }
+  ],
+  "adjustments": [
+    "BA yêu cầu rõ 'landing page' và mở chi tiết dự án ngay trong trang → dựng trang chủ một trang dài (menu cuộn tới section) + 1 trang CV riêng để nút Xem CV / Tải CV có đích thật",
+    "Ngôn ngữ website là tiếng Việt → dịch các câu tiếng Anh BA đưa (tiêu đề, trích dẫn, menu, nút) sang tiếng Việt; giữ nguyên tên riêng: tên dự án (The Art of Stillness, Afterglow, Somewhere, Together), chức danh nghề (Wedding Planner & Creative Director), tên công ty, tên các năng lực",
+    "Font theo BA: Cormorant Garamond (tiêu đề) + Inter (thân), thay font preset; màu theo bảng BA (#FAF9F6, #E7DFD4, #242424, #B9B5AF, #737B68) + 2 sắc đậm phụ (olive-deep #555C4C, muted #5C5955) cho chữ nhỏ đạt tương phản AA",
+    "Không dùng form liên hệ (BA: không giả lập gửi thành công) → mailto + nút sao chép email",
+    "Ảnh tính năng (Spatial Styling, Event Planning) phủ grayscale nhẹ cho đồng tông editorial vì ảnh nguồn mở có màu cũ",
+    "Công cụ ảnh báo lỗi 403 giữa chừng → dùng 13 ảnh đã tải, mỗi ảnh một vị trí"
+  ],
+  "limitations": [
+    "Tải CV là in / lưu PDF từ trình duyệt, chưa có file PDF thật",
+    "LinkedIn / Instagram trỏ về trang chủ mạng xã hội (hồ sơ demo)",
+    "Toàn bộ dự án, số liệu, kinh nghiệm là dữ liệu hư cấu; ảnh từ nguồn mở, không phải sự kiện do Chloe tổ chức, chân dung là ảnh minh họa"
+  ]
+}

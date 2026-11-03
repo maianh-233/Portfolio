@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collection | The Mission</title>
+<meta name="description" content="The Mission collections: No Signal, Concrete Kids, Blue Collar Riot. Concepts, pieces and street lookbooks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;0,900;1,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: { 50:'#f2f2ef',100:'#e4e4e0',200:'#c8c8c3',300:'#a3a39e',400:'#7d7d79',500:'#5c5c59',600:'#40403e',700:'#2b2b2a',800:'#1b1b1a',900:'#131313',950:'#0c0c0c' },
+        bone: '#d6d3cb'
+      },
+      fontFamily: {
+        display: ['"Barlow Condensed"', 'Impact', 'sans-serif'],
+        sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<script src="../assets/js/ui.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body id="top" class="grain bg-ink-950 font-sans text-bone antialiased" data-cursor="ring">
+<div data-scroll-progress class="fixed inset-x-0 top-0 z-[70] h-0.5 bg-bone"></div>
+
+<!-- HEADER -->
+<header data-header="shrink" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300">
+  <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+    <a href="../index.html" class="font-display text-2xl uppercase leading-none tracking-tight" style="font-weight:900">The Mission</a>
+    <nav class="hidden items-center gap-9 text-sm font-semibold uppercase tracking-wider lg:flex">
+      <a href="../index.html" class="relative py-2 text-ink-300 transition hover:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">Home</a>
+      <a href="collection.html" aria-current="page" class="relative py-2 text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:bg-bone">Collection</a>
+      <a href="about.html" class="relative py-2 text-ink-300 transition hover:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">About</a>
+      <a href="../index.html#lookbook" class="relative py-2 text-ink-300 transition hover:text-bone after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-bone after:transition hover:after:scale-x-100">Lookbook</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="../index.html#lien-he" class="hidden border border-bone px-5 py-2.5 text-sm font-semibold uppercase tracking-wider transition hover:bg-bone hover:text-ink-950 active:scale-[.98] sm:inline-block">Join the list</a>
+      <button data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center border border-ink-600 lg:hidden" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-ink-700 bg-ink-900 p-6 lg:hidden">
+    <nav class="flex flex-col font-display text-4xl font-extrabold uppercase">
+      <a href="../index.html" class="border-b border-ink-700 py-3 hover:text-ink-300">Home</a>
+      <a href="collection.html" class="border-b border-ink-700 py-3 text-ink-300">Collection</a>
+      <a href="about.html" class="border-b border-ink-700 py-3 hover:text-ink-300">About</a>
+      <a href="../index.html#lookbook" class="border-b border-ink-700 py-3 hover:text-ink-300">Lookbook</a>
+      <a href="../index.html#lien-he" class="mt-5 bg-bone py-3 text-center text-2xl text-ink-950">Join the list</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO: COLLECTION INDEX -->
+<section id="muc-luc" class="pb-16 pt-28 lg:pb-24 lg:pt-36">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="lg:col-span-6 2xl:col-span-5">
+      <h1 class="font-display text-6xl uppercase leading-[.85] tracking-tight sm:text-7xl lg:text-8xl 2xl:text-9xl" style="font-weight:900" data-split="words">Every drop <span class="text-outline">tells a story.</span></h1>
+      <p class="mt-8 max-w-md text-lg leading-relaxed text-ink-300" data-reveal="up">Our three latest collections, told through ideas, real pieces and real people on the street. No prices, no cart.</p>
+    </div>
+    <ol class="self-end lg:col-span-6 2xl:col-span-7" data-reveal-stagger="100">
+      <li>
+        <a href="#no-signal" class="group grid grid-cols-[1fr_auto] items-center gap-6 border-t border-ink-700 py-6 transition hover:bg-ink-900 sm:grid-cols-[120px_1fr_auto] sm:px-4">
+          <span class="hidden aspect-[4/3] overflow-hidden sm:block"><img src="../assets/img/model-hoodie-3.jpg" alt="Black hooded windbreaker, No Signal collection" class="bw h-full w-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></span>
+          <span>
+            <span class="block font-display text-4xl uppercase leading-none sm:text-5xl 2xl:text-6xl" style="font-weight:900">No Signal</span>
+            <span class="mt-2 block text-sm text-ink-400">Fall / Winter 2026 · 14 designs</span>
+          </span>
+          <svg class="transition group-hover:translate-y-1" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#concrete-kids" class="group grid grid-cols-[1fr_auto] items-center gap-6 border-t border-ink-700 py-6 transition hover:bg-ink-900 sm:grid-cols-[120px_1fr_auto] sm:px-4">
+          <span class="hidden aspect-[4/3] overflow-hidden sm:block"><img src="../assets/img/model-graffiti-1.jpg" alt="Skater on a graffiti bowl, Concrete Kids collection" class="bw h-full w-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></span>
+          <span>
+            <span class="block font-display text-4xl uppercase leading-none sm:text-5xl 2xl:text-6xl" style="font-weight:900">Concrete Kids</span>
+            <span class="mt-2 block text-sm text-ink-400">Spring / Summer 2026 · 11 designs</span>
+          </span>
+          <svg class="transition group-hover:translate-y-1" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#blue-collar-riot" class="group grid grid-cols-[1fr_auto] items-center gap-6 border-y border-ink-700 py-6 transition hover:bg-ink-900 sm:grid-cols-[120px_1fr_auto] sm:px-4">
+          <span class="hidden aspect-[4/3] overflow-hidden sm:block"><img src="../assets/img/sp-ao-denim.jpg" alt="Denim jacket, Blue Collar Riot collection" class="bw h-full w-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></span>
+          <span>
+            <span class="block font-display text-4xl uppercase leading-none sm:text-5xl 2xl:text-6xl" style="font-weight:900">Blue Collar Riot</span>
+            <span class="mt-2 block text-sm text-ink-400">Fall / Winter 2025 · 9 designs</span>
+          </span>
+          <svg class="transition group-hover:translate-y-1" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<div class="sticky top-16 z-40 border-y border-ink-800 bg-ink-950/95 backdrop-blur lg:top-[72px]">
+  <nav data-scrollspy class="no-scrollbar mx-auto flex w-full max-w-screen-2xl gap-8 overflow-x-auto px-4 font-display text-xl font-extrabold uppercase tracking-wide sm:px-6 lg:px-10 2xl:px-16">
+    <a href="#no-signal" class="shrink-0 border-b-2 border-transparent py-3 text-ink-400 transition hover:text-bone [&.is-active]:border-bone [&.is-active]:text-bone">No Signal</a>
+    <a href="#concrete-kids" class="shrink-0 border-b-2 border-transparent py-3 text-ink-400 transition hover:text-bone [&.is-active]:border-bone [&.is-active]:text-bone">Concrete Kids</a>
+    <a href="#blue-collar-riot" class="shrink-0 border-b-2 border-transparent py-3 text-ink-400 transition hover:text-bone [&.is-active]:border-bone [&.is-active]:text-bone">Blue Collar Riot</a>
+    <a href="#kho-luu-tru" class="shrink-0 border-b-2 border-transparent py-3 text-ink-400 transition hover:text-bone [&.is-active]:border-bone [&.is-active]:text-bone">Archive</a>
+  </nav>
+</div>
+
+<!-- NO SIGNAL -->
+<section id="no-signal" class="scroll-mt-32">
+  <div class="relative isolate flex min-h-[80vh] items-end overflow-hidden">
+    <div class="absolute inset-0 -z-10" data-parallax="0.15">
+      <img src="../assets/img/model-hoodie-cau.jpg" alt="Person in a hoodie standing alone on a suspension bridge" class="bw h-[115%] w-full object-cover object-[50%_60%]" loading="lazy" width="3168" height="4752">
+    </div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink-950 via-ink-950/30 to-ink-950/10"></div>
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 sm:px-6 lg:px-10 lg:pb-16 2xl:px-16">
+      <p class="text-sm font-semibold uppercase tracking-widest text-ink-200">Fall / Winter 2026</p>
+      <h2 class="mt-2 font-display text-[22vw] uppercase leading-[.8] tracking-tighter sm:text-[16vw] lg:text-[13vw]" style="font-weight:900" data-split="chars">No Signal</h2>
+    </div>
+  </div>
+
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 lg:py-24 2xl:px-16">
+    <div class="lg:col-span-4" data-reveal="up">
+      <h3 class="font-display text-4xl uppercase leading-[.9] sm:text-5xl" style="font-weight:900">Off the grid in a city of ten million.</h3>
+      <p class="mt-6 text-lg leading-relaxed text-ink-300">The idea came from a blackout night in District 4: phones dead, the whole alley dark, everyone sitting outside with their hoods up. No Signal is for the moments you want to disappear.</p>
+      <dl class="mt-10 grid grid-cols-2 gap-6 border-t border-ink-700 pt-6">
+        <div><dt class="text-sm text-ink-400">Materials</dt><dd class="mt-1 font-semibold">420gsm cotton fleece, windproof nylon</dd></div>
+        <div><dt class="text-sm text-ink-400">Run size</dt><dd class="mt-1 font-semibold">120 pieces per design</dd></div>
+        <div><dt class="text-sm text-ink-400">Colours</dt><dd class="mt-1 font-semibold">Charcoal black, ash grey</dd></div>
+        <div><dt class="text-sm text-ink-400">Pop-up</dt><dd class="mt-1 font-semibold">Alley 82 Ton Dan, Nov 2026</dd></div>
+      </dl>
+    </div>
+
+    <div class="min-w-0 lg:col-span-8" data-tabs>
+      <div class="relative flex gap-8 border-b border-ink-700">
+        <button data-tab="ns-model" class="pb-3 font-display text-2xl font-extrabold uppercase text-ink-400 transition hover:text-bone [&.is-active]:text-bone">Lookbook</button>
+        <button data-tab="ns-sp" class="pb-3 font-display text-2xl font-extrabold uppercase text-ink-400 transition hover:text-bone [&.is-active]:text-bone">Pieces</button>
+        <span data-tab-indicator class="bottom-0 h-0.5 bg-bone"></span>
+      </div>
+      <div data-tab-panel="ns-model" class="mt-8 grid grid-cols-2 gap-4 lg:gap-5">
+        <a href="../assets/img/model-hoodie-3.jpg" data-lightbox="no-signal" data-caption="No Signal - black hooded windbreaker" data-cursor-label="Enlarge" class="group row-span-2 overflow-hidden">
+          <img src="../assets/img/model-hoodie-3.jpg" alt="Model in a black hooded windbreaker in the city" class="bw h-full min-h-[360px] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+        </a>
+        <a href="../assets/img/model-rapper-hoodie.jpg" data-lightbox="no-signal" data-caption="No Signal - ash grey zip hoodie, raw tee" data-cursor-label="Enlarge" class="group overflow-hidden">
+          <img src="../assets/img/model-rapper-hoodie.jpg" alt="Rapper in a grey zip hoodie in a recording studio" class="bw aspect-[4/5] w-full object-cover object-top transition duration-700 group-hover:scale-105" loading="lazy">
+        </a>
+        <a href="../assets/img/model-hoodie-2.jpg" data-lightbox="no-signal" data-caption="No Signal - ash grey hoodie, black backpack" data-cursor-label="Enlarge" class="group overflow-hidden">
+          <img src="../assets/img/model-hoodie-2.jpg" alt="Person in a grey hoodie with a black backpack walking down the road" class="bw aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+        </a>
+      </div>
+      <div data-tab-panel="ns-sp" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <a href="../assets/img/model-hoodie-1.webp" data-lightbox="no-signal-sp" data-caption="Dead Zone Hoodie - 420gsm fleece, double-layer hood" class="group block">
+          <span class="block overflow-hidden bg-ink-900"><img src="../assets/img/model-hoodie-1.webp" alt="Black hoodie with a double-layer hood in the dark" class="bw aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></span>
+          <span class="mt-4 block font-display text-2xl font-extrabold uppercase">Dead Zone Hoodie</span>
+          <span class="mt-1 block text-sm text-ink-400">420gsm fleece, double-layer hood that covers half the face</span>
+        </a>
+        <a href="../assets/img/sp-ao-thun-moc.webp" data-lightbox="no-signal-sp" data-caption="Static Tee - 250gsm cotton, screen-printed back" class="group block">
+          <span class="block overflow-hidden bg-ink-900"><img src="../assets/img/sp-ao-thun-moc.webp" alt="Raw tee hanging on a wooden hanger" class="bw aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></span>
+          <span class="mt-4 block font-display text-2xl font-extrabold uppercase">Static Tee</span>
+          <span class="mt-1 block text-sm text-ink-400">250gsm cotton, hand screen-printed on the back</span>
+        </a>
+        <a href="../assets/img/sp-mu-luoi-trai.webp" data-lightbox="no-signal-sp" data-caption="No Bar Cap - heavy twill, raised embroidery" class="group block">
+          <span class="block overflow-hidden bg-ink-900"><img src="../assets/img/sp-mu-luoi-trai.webp" alt="Baseball cap lying on the grass" class="bw aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></span>
+          <span class="mt-4 block font-display text-2xl font-extrabold uppercase">No Bar Cap</span>
+          <span class="mt-1 block text-sm text-ink-400">Heavy twill, raised embroidery on the back</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCRETE KIDS (light) -->
+<section id="concrete-kids" class="scroll-mt-32 bg-bone py-20 text-ink-950 lg:py-28">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-7">
+        <p class="text-sm font-semibold uppercase tracking-widest text-ink-600">Spring / Summer 2026</p>
+        <h2 class="mt-2 font-display text-7xl uppercase leading-[.82] tracking-tight sm:text-8xl 2xl:text-[10rem]" style="font-weight:900" data-split="words">Concrete <span class="text-outline-dark">Kids</span></h2>
+      </div>
+      <div class="self-end lg:col-span-5" data-reveal="up">
+        <p class="text-lg leading-relaxed text-ink-700">For kids who grew up on concrete: community-centre steps, the Thu Thiem underpass, closed schoolyards. Built to survive skate falls. Patch it when it tears; it only gets better with age.</p>
+        <p class="mt-4 text-sm font-medium text-ink-600">14oz denim · heavy cotton · 150 pieces per design · sold out after 2 pop-ups</p>
+      </div>
+    </div>
+
+    <div class="mt-14" data-tabs>
+      <div class="relative flex gap-8 border-b border-ink-300">
+        <button data-tab="ck-model" class="pb-3 font-display text-2xl font-extrabold uppercase text-ink-500 transition hover:text-ink-950 [&.is-active]:text-ink-950">Lookbook</button>
+        <button data-tab="ck-sp" class="pb-3 font-display text-2xl font-extrabold uppercase text-ink-500 transition hover:text-ink-950 [&.is-active]:text-ink-950">Pieces</button>
+        <span data-tab-indicator class="bottom-0 h-0.5 bg-ink-950"></span>
+      </div>
+      <div data-tab-panel="ck-model" class="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-12 lg:gap-5">
+        <a href="../assets/img/model-skater-be-tong.jpg" data-lightbox="concrete-kids" data-caption="Concrete Kids - bone-print hoodie, black jeans" data-cursor-label="Enlarge" class="group col-span-2 overflow-hidden lg:col-span-7">
+          <img src="../assets/img/model-skater-be-tong.jpg" alt="Girl carrying a skateboard along a cracked concrete wall" class="bw aspect-[3/2] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+        </a>
+        <a href="../assets/img/hero-skate-dem.jpg" data-lightbox="concrete-kids" data-caption="Concrete Kids - black jacket, night street" data-cursor-label="Enlarge" class="group overflow-hidden lg:col-span-5">
+          <img src="../assets/img/hero-skate-dem.jpg" alt="Young man skateboarding through the street at night" class="bw aspect-[3/4] h-full w-full object-cover transition duration-700 group-hover:scale-105 lg:aspect-auto" loading="lazy">
+        </a>
+        <a href="../assets/img/skate-trang-den.jpg" data-lightbox="concrete-kids" data-caption="Concrete Kids - the plaza at midnight" data-cursor-label="Enlarge" class="group overflow-hidden lg:col-span-4">
+          <img src="../assets/img/skate-trang-den.jpg" alt="Skater gliding across a stone plaza" class="bw aspect-[3/4] h-full w-full object-cover transition duration-700 group-hover:scale-105 lg:aspect-auto" loading="lazy">
+        </a>
+        <a href="../assets/img/model-graffiti-1.jpg" data-lightbox="concrete-kids" data-caption="Concrete Kids - sitting on the bowl edge" data-cursor-label="Enlarge" class="group col-span-2 overflow-hidden lg:col-span-8">
+          <img src="../assets/img/model-graffiti-1.jpg" alt="Skater sitting on the edge of a graffiti bowl" class="bw aspect-[16/9] w-full object-cover transition duration-700 group-hover:scale-105 lg:aspect-[2/1]" loading="lazy">
+        </a>
+      </div>
+      <div data-tab-panel="ck-sp" class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <a href="../assets/img/sp-giay.jpg" data-lightbox="concrete-kids-sp" data-caption="Ledge Sneaker - suede, vulcanised rubber sole" class="group grid grid-cols-1 gap-5 sm:grid-cols-2 sm:items-end">
+          <span class="block overflow-hidden"><img src="../assets/img/sp-giay.jpg" alt="White sneakers resting on a concrete ledge" class="bw aspect-square w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></span>
+          <span>
+            <span class="block font-display text-3xl font-extrabold uppercase leading-none">Ledge Sneaker</span>
+            <span class="mt-2 block text-ink-600">White suede, vulcanised rubber sole, reinforced toe for ollies.</span>
+          </span>
+        </a>
+        <a href="../assets/img/sp-van-truot.jpg" data-lightbox="concrete-kids-sp" data-caption="Kids Deck - 7-ply maple, printed underside" class="group grid grid-cols-1 gap-5 sm:grid-cols-2 sm:items-end">
+          <span class="block overflow-hidden"><img src="../assets/img/sp-van-truot.jpg" alt="Skateboard lying on asphalt" class="bw aspect-square w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></span>
+          <span>
+            <span class="block font-display text-3xl font-extrabold uppercase leading-none">Kids Deck</span>
+            <span class="mt-2 block text-ink-600">7-ply maple, 8.25 inch, black and white logo on the underside.</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLUE COLLAR RIOT -->
+<section id="blue-collar-riot" class="scroll-mt-32 py-20 lg:py-28">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+    <div class="relative lg:col-span-5">
+      <div class="overflow-hidden" data-reveal="zoom">
+        <img src="../assets/img/model-denim.jpg" alt="Model in a denim jacket standing on the street" class="bw aspect-[4/5] w-full object-cover" loading="lazy">
+      </div>
+      <div class="tape absolute -bottom-5 -right-2 bg-bone px-4 py-2 font-display text-xl font-extrabold uppercase text-ink-950 sm:-right-6">Workwear, weekend-ready</div>
+    </div>
+    <div class="flex flex-col justify-between gap-10 lg:col-span-7">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-widest text-ink-300">Fall / Winter 2025</p>
+        <h2 class="mt-2 font-display text-6xl uppercase leading-[.85] tracking-tight sm:text-7xl lg:text-8xl 2xl:text-9xl" style="font-weight:900" data-split="words">Blue Collar <span class="text-outline">Riot</span></h2>
+        <p class="mt-8 max-w-xl text-lg leading-relaxed text-ink-300" data-reveal="up">Inspired by the work clothes of our fathers and uncles in the machine shops of Binh Tan. Heavy denim, triple-stitched seams, big box pockets. Workwear reworked for the weekend.</p>
+      </div>
+      <div class="grid grid-cols-3 gap-3 sm:gap-6" data-reveal-stagger="100">
+        <a href="../assets/img/sp-ao-denim.jpg" data-lightbox="bcr-sp" data-caption="Riot Jacket - 14oz denim, triple-stitched" class="group block">
+          <span class="block overflow-hidden"><img src="../assets/img/sp-ao-denim.jpg" alt="Dark blue denim jacket" class="bw aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></span>
+          <span class="mt-3 block font-display text-lg font-extrabold uppercase leading-tight sm:text-2xl">Riot Jacket</span>
+          <span class="hidden text-sm text-ink-400 sm:block">14oz denim, triple-stitched</span>
+        </a>
+        <a href="../assets/img/sp-ao-denim-chi-tiet.webp" data-lightbox="bcr-sp" data-caption="Riot Vest - short sleeves, spread collar, brass buttons" class="group block">
+          <span class="block overflow-hidden bg-ink-900"><img src="../assets/img/sp-ao-denim-chi-tiet.webp" alt="Short-sleeve denim jacket with spread collar on a mannequin" class="bw aspect-[3/4] w-full object-cover object-top transition duration-700 group-hover:scale-105" loading="lazy"></span>
+          <span class="mt-3 block font-display text-lg font-extrabold uppercase leading-tight sm:text-2xl">Riot Vest</span>
+          <span class="hidden text-sm text-ink-400 sm:block">Short sleeves, spread collar, brass buttons</span>
+        </a>
+        <a href="../assets/img/model-graffiti-3.jpg" data-lightbox="bcr-sp" data-caption="Distressed Biker Jeans - black denim, hand-distressed" class="group block">
+          <span class="block overflow-hidden"><img src="../assets/img/model-graffiti-3.jpg" alt="Close-up of distressed biker jeans in front of a painted wall" class="bw aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></span>
+          <span class="mt-3 block font-display text-lg font-extrabold uppercase leading-tight sm:text-2xl">Biker Jeans</span>
+          <span class="hidden text-sm text-ink-400 sm:block">Black denim, each pair distressed by hand</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-16 lg:mt-24">
+    <div class="mx-auto mb-6 flex w-full max-w-screen-2xl items-end justify-between gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h3 class="font-display text-4xl uppercase sm:text-5xl" style="font-weight:900">Lookbook</h3>
+      <p class="hidden text-ink-400 sm:block">Drag sideways to browse, click to enlarge.</p>
+    </div>
+    <div data-drag-scroll class="no-scrollbar flex snap-x snap-mandatory items-end gap-4 overflow-x-auto px-4 pb-4 sm:px-6 lg:gap-6 lg:px-10 2xl:px-16">
+      <a href="../assets/img/model-nu-pho.jpg" data-lightbox="bcr" data-caption="Blue Collar Riot - black star-print blazer" data-cursor-label="Enlarge" class="group w-[75%] shrink-0 snap-start overflow-hidden sm:w-[40%] lg:w-[24%]">
+        <img src="../assets/img/model-nu-pho.jpg" alt="Female model in a black star-print blazer" class="bw aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+      </a>
+      <a href="../assets/img/model-graffiti-2.jpg" data-lightbox="bcr" data-caption="Blue Collar Riot - black leather bomber, grey wool trousers" data-cursor-label="Enlarge" class="group w-[75%] shrink-0 snap-start overflow-hidden sm:w-[40%] lg:w-[24%]">
+        <img src="../assets/img/model-graffiti-2.jpg" alt="Model in a leather bomber sitting on a graffiti wall" class="bw aspect-[2/3] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+      </a>
+      <a href="../assets/img/model-chan-dung.jpg" data-lightbox="bcr" data-caption="Blue Collar Riot - work shirt worn as a jacket" data-cursor-label="Enlarge" class="group w-[85%] shrink-0 snap-start overflow-hidden sm:w-[55%] lg:w-[34%]">
+        <img src="../assets/img/model-chan-dung.jpg" alt="Black and white portrait of a male model" class="bw aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+      </a>
+      <a href="../assets/img/model-denim.jpg" data-lightbox="bcr" data-caption="Blue Collar Riot - Riot Jacket on the street" data-cursor-label="Enlarge" class="group w-[75%] shrink-0 snap-start overflow-hidden sm:w-[40%] lg:w-[24%]">
+        <img src="../assets/img/model-denim.jpg" alt="Model wearing a denim jacket" class="bw aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHIVE -->
+<section id="kho-luu-tru" class="scroll-mt-32 border-t border-ink-800 py-20 lg:py-28">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <h2 class="font-display text-5xl uppercase leading-[.9] sm:text-6xl lg:text-7xl" style="font-weight:900" data-reveal="up">The archive.<br><span class="text-outline">Sold out, never remade.</span></h2>
+    <div class="mt-12 grid grid-cols-2 gap-x-5 sm:gap-x-10 xl:grid-cols-4" data-reveal-stagger="60">
+      <div class="border-t border-ink-700 py-5"><p class="font-display text-3xl font-extrabold uppercase">Dead End</p><p class="text-sm text-ink-400">Spring / Summer 2025</p></div>
+      <div class="border-t border-ink-700 py-5"><p class="font-display text-3xl font-extrabold uppercase">Curfew</p><p class="text-sm text-ink-400">Fall / Winter 2024</p></div>
+      <div class="border-t border-ink-700 py-5"><p class="font-display text-3xl font-extrabold uppercase">Spray Paint</p><p class="text-sm text-ink-400">Spring / Summer 2024</p></div>
+      <div class="border-t border-ink-700 py-5"><p class="font-display text-3xl font-extrabold uppercase">Night Shift</p><p class="text-sm text-ink-400">Fall / Winter 2023</p></div>
+      <div class="border-t border-ink-700 py-5"><p class="font-display text-3xl font-extrabold uppercase">District 4 Club</p><p class="text-sm text-ink-400">Spring / Summer 2023</p></div>
+      <div class="border-t border-ink-700 py-5"><p class="font-display text-3xl font-extrabold uppercase">Insomnia</p><p class="text-sm text-ink-400">2022</p></div>
+      <div class="border-t border-ink-700 py-5"><p class="font-display text-3xl font-extrabold uppercase">Our Own Way</p><p class="text-sm text-ink-400">2021</p></div>
+      <div class="border-t border-ink-700 py-5"><p class="font-display text-3xl font-extrabold uppercase">Drop 001</p><p class="text-sm text-ink-400">2019, 30 hand-printed tees</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="relative overflow-hidden border-t border-ink-800 py-20 lg:py-28" data-spotlight data-spotlight-color="rgba(214,211,203,.06)">
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10 2xl:px-16">
+    <h2 class="font-display text-6xl uppercase leading-[.85] sm:text-7xl lg:text-8xl 2xl:text-9xl" style="font-weight:900" data-split="words">The next drop <span class="text-outline">comes unannounced.</span></h2>
+    <a href="../index.html#lien-he" data-magnetic="0.3" data-ripple class="group inline-flex h-14 shrink-0 items-center justify-center gap-3 self-start bg-bone px-8 font-display text-xl font-extrabold uppercase tracking-wide text-ink-950 transition hover:bg-ink-200 active:scale-[.98] lg:self-auto">Join the list
+      <svg class="transition group-hover:translate-x-1 group-hover:-translate-y-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-ink-800 pt-16">
+  <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-10 2xl:px-16">
+    <div>
+      <p class="font-display text-3xl uppercase" style="font-weight:900">The Mission</p>
+      <p class="mt-3 max-w-xs text-ink-400">Saigon streetwear label. Brand showcase only, no online sales.</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Pages</p>
+      <ul class="mt-4 space-y-2">
+        <li><a href="../index.html" class="hover:underline">Home</a></li>
+        <li><a href="collection.html" class="hover:underline">Collection</a></li>
+        <li><a href="about.html" class="hover:underline">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Studio</p>
+      <p class="mt-4 text-ink-200">3rd Floor, 14 Ton That Dam St, District 1, Ho Chi Minh City<br>Open on pop-up days only</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wider text-ink-400">Contact</p>
+      <ul class="mt-4 space-y-2">
+        <li><a href="https://instagram.com/themission.sgn" target="_blank" rel="noopener" class="hover:underline">Instagram @themission.sgn</a></li>
+        <li><a href="https://www.tiktok.com/@themission.sgn" target="_blank" rel="noopener" class="hover:underline">TikTok @themission.sgn</a></li>
+        <li><button data-copy="hello@themission.vn" class="hover:underline">hello@themission.vn (click to copy)</button></li>
+      </ul>
+    </div>
+  </div>
+  <p class="mt-16 select-none overflow-hidden whitespace-nowrap text-center font-display text-[18.6vw] uppercase leading-[.78] tracking-tighter text-outline" style="font-weight:900" aria-hidden="true">The Mission</p>
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 border-t border-ink-800 px-4 py-6 text-sm text-ink-400 sm:flex-row sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+    <p>© 2026 The Mission. Saigon.</p>
+    <p>Placeholder photos, to be replaced with the brand's own shoots.</p>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center border border-bone bg-ink-950 transition hover:bg-bone hover:text-ink-950" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="../assets/js/motion.js"></script>
+</body>
+</html>

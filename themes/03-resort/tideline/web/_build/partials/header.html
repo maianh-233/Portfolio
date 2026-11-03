@@ -1,0 +1,42 @@
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-copper/15 bg-chalk/95 backdrop-blur-sm transition-shadow duration-500 [&.is-scrolled]:bg-chalk [&.is-scrolled]:shadow-[0_8px_30px_-18px_rgba(73,50,59,.35)]">
+  <div class="wrap flex h-[72px] items-center justify-between gap-3 sm:gap-6">
+    <a href="{{root}}index.html" class="group flex min-w-0 items-center gap-2 sm:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta" aria-label="TIDELINE, về trang chủ" data-en-aria-label="TIDELINE, back to home">
+      <span class="relative block h-5 w-9" aria-hidden="true">
+        <span class="absolute inset-x-0 top-[62%] h-px bg-terracotta transition-transform duration-500 group-hover:scale-x-110"></span>
+        <span class="absolute left-1/2 top-[62%] h-[9px] w-[18px] -translate-x-1/2 -translate-y-full rounded-t-full border border-b-0 border-terracotta"></span>
+      </span>
+      <span class="font-display text-[1.2rem] font-semibold leading-none tracking-[0.2em] text-plum sm:text-[1.55rem] sm:tracking-[0.3em]">TIDELINE</span>
+    </a>
+
+    <nav class="hidden lg:block" aria-label="Điều hướng chính" data-en-aria-label="Main navigation">
+      <ul class="flex items-center gap-10 text-[13px] font-medium uppercase tracking-[0.2em] text-plum">
+        <li><a class="navlink" href="{{root}}index.html" data-en="Home">Trang chủ</a></li>
+        <li><a class="navlink" href="{{root}}pages/about.html" data-en="The Retreat">Khu nghỉ</a></li>
+        <li><a class="navlink" href="{{root}}pages/stays.html" data-en="Stays">Lưu trú</a></li>
+        <li><a class="navlink" href="{{root}}pages/experiences.html" data-en="Experiences">Trải nghiệm</a></li>
+      </ul>
+    </nav>
+
+    <div class="flex shrink-0 items-center gap-1 sm:gap-2">
+      <div class="flex items-center text-[12px] font-medium tracking-[0.2em] text-plum/70" role="group" aria-label="Chọn ngôn ngữ" data-en-aria-label="Choose language">
+        <button type="button" data-lang-set="vi" class="grid h-11 min-w-[2.75rem] place-items-center transition-colors duration-300 hover:text-terracotta-ink [&.is-active]:text-terracotta-ink [&.is-active]:font-semibold" aria-pressed="true">VI</button>
+        <span aria-hidden="true" class="h-3 w-px bg-copper/40"></span>
+        <button type="button" data-lang-set="en" class="grid h-11 min-w-[2.75rem] place-items-center transition-colors duration-300 hover:text-terracotta-ink [&.is-active]:text-terracotta-ink [&.is-active]:font-semibold" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center text-plum lg:hidden" aria-label="Mở menu" data-en-aria-label="Open menu">
+        <svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h18M3 16h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-0 top-[72px] z-50 border-t border-copper/20 bg-chalk px-6 pb-10 pt-6 lg:hidden">
+    <ul class="divide-y divide-copper/15 font-display text-3xl text-plum">
+      <li><a class="navlink block py-4" href="{{root}}index.html" data-en="Home">Trang chủ</a></li>
+      <li><a class="navlink block py-4" href="{{root}}pages/about.html" data-en="The Retreat">Khu nghỉ</a></li>
+      <li><a class="navlink block py-4" href="{{root}}pages/stays.html" data-en="Stays">Lưu trú</a></li>
+      <li><a class="navlink block py-4" href="{{root}}pages/experiences.html" data-en="Experiences">Trải nghiệm</a></li>
+    </ul>
+    <span class="rule mt-8"></span>
+    <p class="mt-4 text-sm text-plum/80" data-en="A desert coastal retreat on the cliffs of Mui Dinh.">Khu nghỉ ven biển hoang mạc trên vách đá Mũi Dinh.</p>
+  </div>
+</header>

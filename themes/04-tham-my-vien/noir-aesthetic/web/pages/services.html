@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Treatments — NOIR AESTHETIC</title>
+    <meta name="description" content="Rejuvenation, deep skin care, surface improvement, and non-surgical aesthetics at NOIR AESTHETIC, with indicative fees.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/tw-config.js"></script>
+    <link rel="stylesheet" href="../assets/css/site.css">
+    <script src="../assets/js/ui.js"></script>
+  </head>
+  <body class="bg-ink text-paper font-sans antialiased pb-20 lg:pb-0">
+    <header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-50 border-b border-paper/10 bg-ink/80">
+      <div class="frame flex h-16 items-center justify-between gap-4 lg:h-[72px]">
+        <a href="../index.html" class="font-display text-xl tracking-tight text-paper sm:text-2xl">NOIR AESTHETIC</a>
+        <nav class="hidden items-center gap-8 text-xs uppercase tracking-[0.2em] text-stone lg:flex">
+          <a href="../index.html" class="nav-link"><span data-lang="en">Home</span><span data-lang="vi">Trang chủ</span></a>
+          <a href="services.html" aria-current="page" class="nav-link text-paper"><span data-lang="en">Treatments</span><span data-lang="vi">Dịch vụ</span></a>
+          <a href="about.html" class="nav-link"><span data-lang="en">About</span><span data-lang="vi">Về chúng tôi</span></a>
+        </nav>
+        <div class="flex items-center gap-3 sm:gap-5">
+          <div class="lang-switch" role="group" aria-label="Language / Ngôn ngữ">
+            <button type="button" data-lang-set="en" aria-pressed="true" title="English">EN</button>
+            <button type="button" data-lang-set="vi" aria-pressed="false" title="Tiếng Việt">VI</button>
+          </div>
+          <button type="button" data-modal-open="consult" class="hidden min-h-11 bg-paper px-4 text-xs uppercase tracking-[0.16em] text-ink transition duration-300 hover:bg-stone lg:inline-flex lg:items-center">
+            <span data-lang="en">Book a Consultation</span><span data-lang="vi">Đặt lịch tư vấn</span>
+          </button>
+          <button type="button" data-menu-toggle="#mnav" class="inline-flex min-h-11 min-w-11 items-center justify-center border border-paper/20 lg:hidden" aria-label="Open menu">
+            <span class="sr-only">Menu</span>
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M0 1h18M0 6h18M0 11h18" stroke="currentColor" stroke-width="1.4"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-paper/15 bg-ink p-6 lg:hidden">
+        <nav class="flex flex-col gap-1 text-lg">
+          <a href="../index.html" class="min-h-11 py-2"><span data-lang="en">Home</span><span data-lang="vi">Trang chủ</span></a>
+          <a href="services.html" aria-current="page" class="min-h-11 py-2"><span data-lang="en">Treatments</span><span data-lang="vi">Dịch vụ</span></a>
+          <a href="about.html" class="min-h-11 py-2"><span data-lang="en">About</span><span data-lang="vi">Về chúng tôi</span></a>
+          <button type="button" data-modal-open="consult" class="mt-4 min-h-11 w-full bg-paper px-4 text-xs uppercase tracking-[0.16em] text-ink">
+            <span data-lang="en">Book a Consultation</span><span data-lang="vi">Đặt lịch tư vấn</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="page-hero" data-section="page-hero" class="border-b border-paper/15 bg-ink pt-28 pb-16 lg:pt-32 lg:pb-20">
+        <div class="frame grid grid-cols-12 gap-8">
+          <div class="col-span-12 lg:col-span-8" data-reveal="up">
+            <h1 class="font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.08] tracking-tight">
+              <span data-lang="en">Treatments, written plainly.</span>
+              <span data-lang="vi">Dịch vụ, viết rõ ràng.</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-base text-stone" data-lang="en">Four medical-aesthetic groups. Fees below are indicative and confirmed only after consult. No packages sold at the desk.</p>
+            <p class="mt-5 max-w-xl text-base text-stone" data-lang="vi">Bốn nhóm thẩm mỹ y khoa. Phí bên dưới là tham khảo, chỉ chốt sau tư vấn. Không bán gói tại quầy.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" data-section="features-tabs" class="bg-espresso py-20 lg:py-28">
+        <div class="frame" data-tabs>
+          <div class="relative flex flex-wrap gap-2 border-b border-paper/15 pb-3">
+            <button type="button" data-tab="rejuvenation" class="min-h-11 px-3 text-xs uppercase tracking-[0.16em] text-stone [&.is-active]:text-paper">
+              <span data-lang="en">Rejuvenation</span><span data-lang="vi">Trẻ hóa</span>
+            </button>
+            <button type="button" data-tab="skin" class="min-h-11 px-3 text-xs uppercase tracking-[0.16em] text-stone [&.is-active]:text-paper">
+              <span data-lang="en">Deep skin</span><span data-lang="vi">Da sâu</span>
+            </button>
+            <button type="button" data-tab="surface" class="min-h-11 px-3 text-xs uppercase tracking-[0.16em] text-stone [&.is-active]:text-paper">
+              <span data-lang="en">Surface</span><span data-lang="vi">Bề mặt</span>
+            </button>
+            <button type="button" data-tab="nonsurgical" class="min-h-11 px-3 text-xs uppercase tracking-[0.16em] text-stone [&.is-active]:text-paper">
+              <span data-lang="en">Non-surgical</span><span data-lang="vi">Không phẫu thuật</span>
+            </button>
+            <span data-tab-indicator class="bottom-0 h-px bg-bronze"></span>
+          </div>
+
+          <div data-tab-panel="rejuvenation" class="grid grid-cols-12 gap-8 pt-10">
+            <p class="col-span-12 font-display text-6xl text-bronze lg:col-span-2">01</p>
+            <div class="col-span-12 max-w-prose lg:col-span-7">
+              <h2 class="font-display text-4xl leading-[1.1]"><span data-lang="en">Rejuvenation</span><span data-lang="vi">Trẻ hóa</span></h2>
+              <p class="mt-4 text-sm leading-relaxed text-stone" data-lang="en">Regenerative facials, collagen-support infusions, and evening recovery nights. We work on skin quality over a course, then stop when the plan is met. Not a promise of youth. A plan for healthier skin under clinic light.</p>
+              <p class="mt-4 text-sm leading-relaxed text-stone" data-lang="vi">Facial tái tạo, truyền hỗ trợ collagen, và buổi tối phục hồi. Chúng tôi làm chất lượng da theo liệu trình, rồi dừng khi đạt kế hoạch. Không hứa trẻ mãi. Là kế hoạch cho da khỏe hơn dưới ánh sáng phòng khám.</p>
+              <p class="mt-6 text-xs uppercase tracking-[0.2em] text-bronze">From 6,800,000 VND</p>
+              <a href="service-rejuvenation.html" class="mt-6 inline-flex min-h-11 items-center text-xs uppercase tracking-[0.2em] text-paper hover:text-bronze">
+                <span data-lang="en">Full protocol note</span><span data-lang="vi">Ghi chú liệu trình</span>
+              </a>
+            </div>
+          </div>
+          <div data-tab-panel="skin" class="grid grid-cols-12 gap-8 pt-10">
+            <p class="col-span-12 font-display text-6xl text-bronze lg:col-span-2">02</p>
+            <div class="col-span-12 max-w-prose lg:col-span-7">
+              <h2 class="font-display text-4xl leading-[1.1]"><span data-lang="en">Deep skin care</span><span data-lang="vi">Chăm sóc da sâu</span></h2>
+              <p class="mt-4 text-sm leading-relaxed text-stone" data-lang="en">Medical cleansing, barrier repair, and calm for reactive or over-treated skin. Extraction is done only when the skin can take it. Home care is written on one page, not a basket of products.</p>
+              <p class="mt-4 text-sm leading-relaxed text-stone" data-lang="vi">Làm sạch y khoa, phục hồi hàng rào, làm dịu da kích ứng hoặc bị điều trị quá mức. Nặn mụn chỉ khi da chịu được. Chăm sóc tại nhà viết trong một trang, không phải giỏ sản phẩm.</p>
+              <p class="mt-6 text-xs uppercase tracking-[0.2em] text-bronze">From 4,200,000 VND</p>
+              <a href="service-skin.html" class="mt-6 inline-flex min-h-11 items-center text-xs uppercase tracking-[0.2em] text-paper hover:text-bronze">
+                <span data-lang="en">Full protocol note</span><span data-lang="vi">Ghi chú liệu trình</span>
+              </a>
+            </div>
+          </div>
+          <div data-tab-panel="surface" class="grid grid-cols-12 gap-8 pt-10">
+            <p class="col-span-12 font-display text-6xl text-bronze lg:col-span-2">03</p>
+            <div class="col-span-12 max-w-prose lg:col-span-7">
+              <h2 class="font-display text-4xl leading-[1.1]"><span data-lang="en">Surface improvement</span><span data-lang="vi">Cải thiện bề mặt da</span></h2>
+              <p class="mt-4 text-sm leading-relaxed text-stone" data-lang="en">Texture, pigment, and fine-line work. Energy devices and peels are used after a skin analysis and a written downtime note. If work or travel cannot pause, we delay the first pass.</p>
+              <p class="mt-4 text-sm leading-relaxed text-stone" data-lang="vi">Xử lý kết cấu, sắc tố và nếp nhăn mảnh. Thiết bị năng lượng và peel chỉ sau phân tích da và ghi chú thời gian nghỉ. Nếu công việc hoặc đi lại không dừng được, chúng tôi hoãn lần đầu.</p>
+              <p class="mt-6 text-xs uppercase tracking-[0.2em] text-bronze">From 5,500,000 VND</p>
+            </div>
+          </div>
+          <div data-tab-panel="nonsurgical" class="grid grid-cols-12 gap-8 pt-10">
+            <p class="col-span-12 font-display text-6xl text-bronze lg:col-span-2">04</p>
+            <div class="col-span-12 max-w-prose lg:col-span-7">
+              <h2 class="font-display text-4xl leading-[1.1]"><span data-lang="en">Non-surgical aesthetics</span><span data-lang="vi">Thẩm mỹ không phẫu thuật</span></h2>
+              <p class="mt-4 text-sm leading-relaxed text-stone" data-lang="en">Contour and skin-quality consults. Injectables are discussed only after photographs, medical history, and a cooling-off interval. We decline requests aimed at a single event photograph.</p>
+              <p class="mt-4 text-sm leading-relaxed text-stone" data-lang="vi">Tư vấn đường nét và chất lượng da. Tiêm chỉ thảo luận sau ảnh, tiền sử y khoa, và khoảng nghỉ suy nghĩ. Từ chối yêu cầu chỉ để đẹp trong một bức ảnh sự kiện.</p>
+              <p class="mt-6 text-xs uppercase tracking-[0.2em] text-bronze"><span data-lang="en">Consult required</span><span data-lang="vi">Bắt buộc tư vấn</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fees" data-section="features-numbered" class="border-t border-paper/15 bg-ink py-20 lg:py-28">
+        <div class="frame">
+          <h2 class="font-display text-4xl leading-[1.1] sm:text-5xl" data-reveal="up">
+            <span data-lang="en">Indicative fees</span>
+            <span data-lang="vi">Phí tham khảo</span>
+          </h2>
+          <p class="mt-4 max-w-prose text-sm text-stone" data-lang="en">Sample ranges for planning. Final fees follow the written plan. Currency is Vietnamese dong.</p>
+          <p class="mt-4 max-w-prose text-sm text-stone" data-lang="vi">Khoảng giá mẫu để hình dung. Phí cuối theo kế hoạch bằng văn bản. Đơn vị là đồng Việt Nam.</p>
+          <div class="mt-10 divide-y divide-paper/10 border-y border-paper/10">
+            <div class="grid grid-cols-12 gap-3 py-6" data-reveal="up">
+              <p class="col-span-2 font-display text-2xl text-bronze">01</p>
+              <p class="col-span-6 font-display text-xl sm:col-span-7"><span data-lang="en">Regenerative facial, 90 min</span><span data-lang="vi">Facial tái tạo, 90 phút</span></p>
+              <p class="col-span-4 text-right text-sm text-stone sm:col-span-3">6,800,000-8,200,000</p>
+            </div>
+            <div class="grid grid-cols-12 gap-3 py-6" data-reveal="up">
+              <p class="col-span-2 font-display text-2xl text-bronze">02</p>
+              <p class="col-span-6 font-display text-xl sm:col-span-7"><span data-lang="en">Medical skin protocol, 75 min</span><span data-lang="vi">Liệu trình da y khoa, 75 phút</span></p>
+              <p class="col-span-4 text-right text-sm text-stone sm:col-span-3">4,200,000-5,600,000</p>
+            </div>
+            <div class="grid grid-cols-12 gap-3 py-6" data-reveal="up">
+              <p class="col-span-2 font-display text-2xl text-bronze">03</p>
+              <p class="col-span-6 font-display text-xl sm:col-span-7"><span data-lang="en">Surface course, 4 visits</span><span data-lang="vi">Khóa bề mặt, 4 buổi</span></p>
+              <p class="col-span-4 text-right text-sm text-stone sm:col-span-3">22,000,000-28,000,000</p>
+            </div>
+            <div class="grid grid-cols-12 gap-3 py-6" data-reveal="up">
+              <p class="col-span-2 font-display text-2xl text-bronze">04</p>
+              <p class="col-span-6 font-display text-xl sm:col-span-7"><span data-lang="en">Private consult, 45 min</span><span data-lang="vi">Tư vấn riêng, 45 phút</span></p>
+              <p class="col-span-4 text-right text-sm text-stone sm:col-span-3">1,200,000</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" data-section="faq" class="border-t border-paper/15 bg-espresso py-20 lg:py-28">
+        <div class="frame grid grid-cols-12 gap-x-4 gap-y-10 lg:gap-x-10">
+          <h2 class="col-span-12 font-display text-4xl leading-[1.1] lg:col-span-4" data-reveal="up">
+            <span data-lang="en">Before you book</span>
+            <span data-lang="vi">Trước khi đặt lịch</span>
+          </h2>
+          <div class="col-span-12 lg:col-span-8" data-accordion>
+            <div data-acc-item data-open class="border-t border-paper/15">
+              <button type="button" data-acc-trigger class="flex min-h-14 w-full items-center justify-between gap-4 py-4 text-left font-display text-2xl">
+                <span data-lang="en">Are fees paid before the consult?</span>
+                <span data-lang="vi">Có trả phí trước khi tư vấn không?</span>
+                <span data-acc-icon class="text-bronze">+</span>
+              </button>
+              <div data-acc-panel>
+                <div class="max-w-prose pb-5 text-sm leading-relaxed text-stone">
+                  <p data-lang="en">No. You pay the consult fee after the visit. Treatment fees are issued with the written plan. This website does not take payment.</p>
+                  <p data-lang="vi">Không. Phí tư vấn thanh toán sau buổi hẹn. Phí điều trị đi kèm kế hoạch bằng văn bản. Website này không thu tiền.</p>
+                </div>
+              </div>
+            </div>
+            <div data-acc-item class="border-t border-paper/15">
+              <button type="button" data-acc-trigger class="flex min-h-14 w-full items-center justify-between gap-4 py-4 text-left font-display text-2xl">
+                <span data-lang="en">Do you treat on the first visit?</span>
+                <span data-lang="vi">Có điều trị ngay buổi đầu không?</span>
+                <span data-acc-icon class="text-bronze">+</span>
+              </button>
+              <div data-acc-panel>
+                <div class="max-w-prose pb-5 text-sm leading-relaxed text-stone">
+                  <p data-lang="en">Only low-risk skin care, and only if the clinician agrees. Energy devices and injectables wait for a second visit.</p>
+                  <p data-lang="vi">Chỉ chăm sóc da nguy cơ thấp, và chỉ khi bác sĩ đồng ý. Thiết bị năng lượng và tiêm chờ buổi thứ hai.</p>
+                </div>
+              </div>
+            </div>
+            <div data-acc-item class="border-t border-paper/15 border-b">
+              <button type="button" data-acc-trigger class="flex min-h-14 w-full items-center justify-between gap-4 py-4 text-left font-display text-2xl">
+                <span data-lang="en">Can I buy products here?</span>
+                <span data-lang="vi">Có mua sản phẩm tại đây không?</span>
+                <span data-acc-icon class="text-bronze">+</span>
+              </button>
+              <div data-acc-panel>
+                <div class="max-w-prose pb-5 text-sm leading-relaxed text-stone">
+                  <p data-lang="en">No cart and no checkout. Home care, if needed, is prescribed after the plan. This site does not sell products.</p>
+                  <p data-lang="vi">Không giỏ hàng, không thanh toán. Chăm sóc tại nhà, nếu cần, được kê sau kế hoạch. Site này không bán sản phẩm.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" data-section="cta-type" class="border-t border-paper/15 bg-ink py-24 lg:py-32">
+        <div class="frame" data-reveal="up">
+          <h2 class="font-display text-[clamp(2.25rem,6vw,5.5rem)] leading-[1.05] tracking-tight">
+            <span data-lang="en">Bring your questions. We write the answers down.</span>
+            <span data-lang="vi">Mang câu hỏi tới. Chúng tôi viết câu trả lời ra giấy.</span>
+          </h2>
+          <button type="button" data-modal-open="consult" class="mt-10 inline-flex min-h-11 items-center bg-paper px-6 text-xs uppercase tracking-[0.16em] text-ink transition duration-300 hover:bg-stone">
+            <span data-lang="en">Book a Consultation</span><span data-lang="vi">Đặt lịch tư vấn</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" data-section="footer-big" class="border-t border-paper/15 bg-ink pb-10 pt-16">
+      <div class="frame grid grid-cols-12 gap-8 border-b border-paper/10 pb-12">
+        <div class="col-span-12 sm:col-span-6 lg:col-span-3">
+          <p class="text-xs uppercase tracking-[0.2em] text-bronze"><span data-lang="en">Visit</span><span data-lang="vi">Địa chỉ</span></p>
+          <p class="mt-3 text-sm leading-relaxed text-stone">NOIR AESTHETIC<br>12 Ngô Đức Kế, District 1<br>Ho Chi Minh City</p>
+        </div>
+        <div class="col-span-12 sm:col-span-6 lg:col-span-3">
+          <p class="text-xs uppercase tracking-[0.2em] text-bronze"><span data-lang="en">Contact</span><span data-lang="vi">Liên hệ</span></p>
+          <p class="mt-3 text-sm text-stone">
+            <a href="tel:+842838221908" class="hover:text-paper">+84 28 3822 1908</a><br>
+            <a href="mailto:hello@noiraesthetic.vn" class="hover:text-paper">hello@noiraesthetic.vn</a>
+          </p>
+          <button type="button" data-copy="+84 28 3822 1908" class="mt-3 min-h-11 text-left text-xs uppercase tracking-[0.2em] text-bronze">
+            <span data-lang="en">Copy number</span><span data-lang="vi">Sao chép số</span>
+          </button>
+        </div>
+        <div class="col-span-12 sm:col-span-6 lg:col-span-3">
+          <p class="text-xs uppercase tracking-[0.2em] text-bronze"><span data-lang="en">Pages</span><span data-lang="vi">Trang</span></p>
+          <ul class="mt-3 space-y-2 text-sm text-stone">
+            <li><a href="../index.html" class="hover:text-paper"><span data-lang="en">Home</span><span data-lang="vi">Trang chủ</span></a></li>
+            <li><a href="services.html" class="hover:text-paper"><span data-lang="en">Treatments</span><span data-lang="vi">Dịch vụ</span></a></li>
+            <li><a href="about.html" class="hover:text-paper"><span data-lang="en">About</span><span data-lang="vi">Về chúng tôi</span></a></li>
+            <li><a href="service-rejuvenation.html" class="hover:text-paper"><span data-lang="en">Rejuvenation</span><span data-lang="vi">Trẻ hóa</span></a></li>
+            <li><a href="service-skin.html" class="hover:text-paper"><span data-lang="en">Deep skin care</span><span data-lang="vi">Chăm sóc da sâu</span></a></li>
+          </ul>
+        </div>
+        <div class="col-span-12 sm:col-span-6 lg:col-span-3">
+          <p class="text-xs uppercase tracking-[0.2em] text-bronze"><span data-lang="en">Hours</span><span data-lang="vi">Giờ mở</span></p>
+          <p class="mt-3 text-sm text-stone">Tue-Sun, 10:00-19:00<br><span data-lang="en">Closed Monday. Appointment only.</span><span data-lang="vi">Nghỉ Thứ Hai. Chỉ nhận lịch hẹn.</span></p>
+        </div>
+      </div>
+      <p class="frame mt-8 font-display text-[clamp(2.5rem,12vw,10rem)] leading-[0.9] tracking-tight text-paper/90">NOIR AESTHETIC</p>
+      <p class="frame mt-4 text-xs text-muted">© NOIR AESTHETIC</p>
+    </footer>
+
+    <div class="fixed inset-x-0 bottom-0 z-40 flex border-t border-paper/15 bg-ink lg:hidden">
+      <a href="tel:+842838221908" class="flex min-h-12 flex-1 items-center justify-center text-xs uppercase tracking-[0.16em] text-paper"><span data-lang="en">Call</span><span data-lang="vi">Gọi điện</span></a>
+      <button type="button" data-modal-open="consult" class="flex min-h-12 min-w-0 flex-1 items-center justify-center bg-paper px-2 text-center text-xs uppercase tracking-[0.08em] text-ink">
+        <span data-lang="en">Book a Consultation</span><span data-lang="vi">Đặt lịch tư vấn</span>
+      </button>
+    </div>
+
+    <dialog id="consult">
+      <div class="flex items-start justify-between border-b border-paper/10 px-6 py-4">
+        <div>
+          <p class="font-display text-2xl"><span data-lang="en">Book a Consultation</span><span data-lang="vi">Đặt lịch tư vấn</span></p>
+          <p class="mt-1 text-xs text-stone" data-lang="en">Demo form. Nothing is sent to the clinic.</p>
+          <p class="mt-1 text-xs text-stone" data-lang="vi">Biểu mẫu thử nghiệm. Không gửi dữ liệu tới phòng khám.</p>
+        </div>
+        <button type="button" data-modal-close aria-label="Close" class="min-h-11 min-w-11 text-xl leading-none">×</button>
+      </div>
+      <form data-form="consult" class="grid gap-4 px-6 py-6">
+        <label class="grid gap-2 text-sm">
+          <span data-lang="en">Full name</span><span data-lang="vi">Họ và tên</span>
+          <input name="name" required minlength="2" class="min-h-11 border border-paper/20 bg-ink px-3 text-paper outline-none focus-visible:border-bronze">
+        </label>
+        <label class="grid gap-2 text-sm">
+          <span data-lang="en">Phone</span><span data-lang="vi">Số điện thoại</span>
+          <input name="phone" type="tel" required class="min-h-11 border border-paper/20 bg-ink px-3 text-paper outline-none focus-visible:border-bronze">
+        </label>
+        <label class="grid gap-2 text-sm">
+          <span data-lang="en">Email</span><span data-lang="vi">Thư điện tử</span>
+          <input name="email" type="email" required class="min-h-11 border border-paper/20 bg-ink px-3 text-paper outline-none focus-visible:border-bronze">
+        </label>
+        <label class="grid gap-2 text-sm">
+          <span data-lang="en">What would you like to discuss?</span><span data-lang="vi">Bạn muốn trao đổi về việc gì?</span>
+          <textarea name="note" rows="4" class="border border-paper/20 bg-ink px-3 py-2 text-paper outline-none focus-visible:border-bronze"></textarea>
+        </label>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <button type="submit" class="min-h-11 bg-paper px-6 text-xs uppercase tracking-[0.16em] text-ink">
+            <span data-lang="en">Submit demo</span><span data-lang="vi">Gửi bản thử</span>
+          </button>
+          <p class="text-xs text-muted" data-lang="en">This is a demonstration. The clinic will not receive the message.</p>
+          <p class="text-xs text-muted" data-lang="vi">Đây là bản thử nghiệm. Phòng khám sẽ không nhận được thư.</p>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/motion.js"></script>
+  </body>
+</html>

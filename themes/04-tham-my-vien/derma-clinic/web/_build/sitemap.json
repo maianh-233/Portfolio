@@ -1,0 +1,82 @@
+{
+  "brand": "DERMA CLINIC",
+  "language": "vi",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Các lớp da (biểu bì, trung bì, hạ bì) vẽ thành dải mint → teal trừu tượng kèm vạch đo mảnh, xuất hiện ở hero, các mốc chuyển section và footer như một sơ đồ lâm sàng sạch sẽ",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Chăm sóc da bằng khoa học, minh bạch từng bước",
+    "description": "Giao diện phòng khám thẩm mỹ và chăm sóc da phong cách Clinical Modern, song ngữ Việt – English."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu phòng khám, định hướng chăm sóc da, nhóm dịch vụ chính, quy trình thăm khám, điểm nổi bật chuyên môn; dẫn sang Dịch vụ & Bảng giá và mở form đặt lịch tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ai", "note": "Chữ trái, ảnh chăm sóc da thật tràn mép phải kèm thẻ chú thích 3 lớp da" },
+        { "id": "approach", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Định hướng chăm sóc da" },
+        { "id": "services", "catalog": "services", "variant": "features-numbered", "source": "ba", "note": "5 nhóm dịch vụ chính, link sang pages/services.html" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "Quy trình thăm khám 5 bước" },
+        { "id": "expertise", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Điểm nổi bật về chuyên môn, link sang pages/about.html" },
+        { "id": "faq", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "Câu hỏi trước buổi tư vấn đầu tiên" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Nút Đặt lịch tư vấn cuối trang" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "facial skin treatment clinic", "file": "assets/img/home-hero-skin.jpg", "status": "ok" },
+        { "slot": "expertise", "query": "dermatology clinic treatment room (healthcaresnapshots.com — Meru Dermatology Clinic)", "file": "https://media.healthcaresnapshots.com/wp-content/uploads/sites/5/2025/04/meru-dermatology-clinic-3-1200x799-compact.jpg", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ thẩm mỹ & Bảng giá",
+      "purpose": "Tra cứu danh mục điều trị: mỗi dịch vụ có mô tả, đối tượng phù hợp, giá tham khảo; lọc theo nhóm; đặt lịch theo từng dịch vụ",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "catalog", "catalog": "pricing", "variant": "list-cards", "source": "ba", "note": "Lọc theo nhóm bằng data-filter-group; giá: báo sau thăm khám vì BA chưa cung cấp dữ liệu giá" },
+        { "id": "pricing-policy", "catalog": "features", "variant": "story-editorial", "source": "ai", "note": "Cách phòng khám báo giá" },
+        { "id": "service-faq", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "catalog-acne", "query": "acne treatment clinic", "file": null, "status": "none" },
+        { "slot": "catalog-pigment", "query": "laser skin pigmentation treatment", "file": null, "status": "none" },
+        { "slot": "catalog-rejuvenation", "query": "facial skin rejuvenation treatment", "file": null, "status": "none" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Về chúng tôi",
+      "purpose": "Giới thiệu phòng khám, đội ngũ chuyên gia, trang thiết bị, quy trình tư vấn và tiêu chuẩn vệ sinh",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "intro", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Giới thiệu phòng khám" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "Theo vai trò, không ghi bằng cấp / chứng chỉ (BA yêu cầu không tự tạo)" },
+        { "id": "equipment", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Trang thiết bị theo nhóm" },
+        { "id": "consultation", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Quy trình tư vấn" },
+        { "id": "hygiene", "catalog": "features", "variant": "stats-band", "source": "ba", "note": "Tiêu chuẩn vệ sinh, dải nền teal đậm" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "intro", "query": "dermatology clinic reception", "file": null, "status": "none" },
+        { "slot": "team", "query": "dermatologist doctor portrait", "file": null, "status": "none" },
+        { "slot": "equipment", "query": "skin analysis device clinic", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Dựng đúng 3 trang chính theo chú thích của BA; form đặt lịch là cửa sổ (modal) dùng chung trên mọi trang thay cho trang Liên hệ riêng",
+    "Concept mục 2 ghi 'không tạo bộ chuyển ngôn ngữ' nhưng chú thích BA yêu cầu công tắc Việt – English với nội dung đầy đủ → làm theo BA: HTML mặc định tiếng Việt (lang=vi), bản tiếng Anh nằm trong thuộc tính data-en, công tắc lưu lựa chọn và tải lại trang để đổi lang và thông báo form",
+    "Font preset Instrument Serif thiếu ký tự tiếng Việt và không hợp phong cách Clinical Modern → dùng Be Vietnam Pro (tiêu đề) + Geist (nội dung)",
+    "Bảng màu preset (giấy ấm, đồng) thay bằng art direction của BA: trắng, xanh mint, xanh teal, xám lạnh",
+    "Công cụ ảnh không phản hồi (2 lần tìm đều lỗi) → mọi vị trí ảnh dựng bằng sơ đồ lớp da trừu tượng, khối màu và chữ; cần ảnh thật chuyên gia và thiết bị từ khách",
+    "Không ghi tên, bằng cấp, chứng chỉ chuyên gia, số liệu hiệu quả hay tên thiết bị cụ thể vì BA chưa cung cấp"
+  ],
+  "limitations": [
+    "Form Đặt lịch tư vấn là bản demo, chưa có backend (dữ liệu chỉ lưu tạm trong trình duyệt)",
+    "Giá tham khảo hiển thị 'Báo giá sau thăm khám' vì chưa có dữ liệu giá từ phòng khám",
+    "Địa chỉ, số điện thoại, email, giờ làm việc là thông tin mẫu cần khách xác nhận",
+    "Trang chủ đã có ảnh thật (hero tải về; khối chuyên môn dùng link ngoài vì Pinterest chặn truy cập tự động); trang Dịch vụ và Về chúng tôi vẫn chưa có ảnh thật, cần ảnh đội ngũ và thiết bị từ khách"
+  ]
+}

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đỗ Mai Anh · Frontend &amp; Fullstack Developer</title>
+  <meta name="description" content="Đỗ Mai Anh, frontend and fullstack developer. React 19 and Spring Boot fashion platform, 79 shipped website themes, and an AI tool that builds websites from an SRS.">
+  <meta name="theme-color" content="#f2f2ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f11" media="(prefers-color-scheme: dark)">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Be+Vietnam+Pro:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="Đỗ Mai Anh, back to top">
+      <span class="brand__mark">MA</span><span class="brand__name">Đỗ Mai Anh</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#experience"><span class="roll"><span>Experience</span></span></a>
+      <a href="#work"><span class="roll"><span>Work</span></span></a>
+      <a href="#themes"><span class="roll"><span>Themes</span></span></a>
+      <a href="#about"><span class="roll"><span>About</span></span></a>
+      <a href="#contact"><span class="roll"><span>Contact</span></span></a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
+        <i class="ph ph-moon" aria-hidden="true"></i>
+      </button>
+      <a class="btn btn--small magnetic" href="cv/Do-Mai-Anh-CV.pdf" target="_blank" rel="noopener">
+        <i class="ph-bold ph-download-simple" aria-hidden="true"></i><span>Download CV</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO: kinetic name + a deck of real theme screenshots -->
+  <section class="hero wrap" id="top">
+    <div class="hero__copy">
+      <p class="eyebrow status" data-scramble>Open to frontend &amp; fullstack roles</p>
+      <h1 class="hero__name" id="hero-name" aria-label="Đỗ Mai Anh">
+        <span class="line" aria-hidden="true">Đỗ Mai</span>
+        <span class="line" aria-hidden="true">Anh<em>.</em></span>
+      </h1>
+      <p class="hero__lead">I build products end to end: React interfaces that move, Spring Boot services behind them, 79 shipped themes.</p>
+      <div class="hero__cta">
+        <a class="btn magnetic" href="#work"><span>See work</span><i class="ph-bold ph-arrow-down-right" aria-hidden="true"></i></a>
+        <a class="btn btn--ghost magnetic" href="cv/Do-Mai-Anh-CV.pdf" target="_blank" rel="noopener"><span>Download CV</span></a>
+      </div>
+    </div>
+    <figure class="deck" id="deck" aria-label="Rotating preview of website themes I built">
+      <div class="deck__glow" aria-hidden="true"></div>
+      <div class="deck__tilt" id="deck-tilt">
+        <div class="deck__stage" id="deck-stage"></div>
+      </div>
+      <figcaption class="deck__caption"><span id="deck-name"></span><span id="deck-cat"></span></figcaption>
+      <a class="badge" href="#experience" aria-label="Jump to my experience">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="badge-ring" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+          <text><textPath href="#badge-ring" textLength="462" lengthAdjust="spacing">FRONTEND / FULLSTACK / OPEN TO WORK / </textPath></text>
+        </svg>
+        <i class="ph-bold ph-arrow-down-right" aria-hidden="true"></i>
+      </a>
+    </figure>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="numbers wrap" aria-label="At a glance">
+    <div class="num"><strong data-count="79">79</strong><span>website themes shipped</span></div>
+    <div class="num"><strong data-count="333">333</strong><span>responsive HTML pages</span></div>
+    <div class="num"><strong data-count="11">11</strong><span>industries, from resorts to clinics</span></div>
+    <div class="num"><strong data-count="13">13</strong><span>recorded product demos</span></div>
+  </section>
+
+  <!-- STACK MARQUEE (the only marquee on the page) -->
+  <div class="marquee" aria-label="Tools I work with">
+    <div class="marquee__track" id="marquee">
+      <span>React</span><span>TypeScript</span><span>Next.js</span><span>Tailwind CSS</span><span>Vite</span>
+      <span>HTML5</span><span>CSS3</span><span>Responsive design</span><span>Figma</span><span>REST APIs</span>
+      <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>PostgreSQL</span><span>Kafka</span><span>Redis</span><span>WebSocket</span><span>Git</span><span>Claude Agent SDK</span>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE: sticky company column + scroll-drawn timeline -->
+  <section class="exp wrap" id="experience">
+    <aside class="exp__side">
+      <h2 class="section-title split-words">Experience</h2>
+      <div class="exp__company">
+        <span class="exp__logo" aria-hidden="true">S</span>
+        <div>
+          <h3>Samset Solutions</h3>
+          <p class="exp__role" id="exp-role">Software Development Intern</p>
+          <p class="exp__period" id="exp-period" hidden></p>
+        </div>
+      </div>
+      <p class="exp__lead">My first time building inside a real product team: business modules, internal tools and client-facing UI, shipped against real requirements.</p>
+      <a class="link" href="#themes">See the 79 themes from this internship <i class="ph-bold ph-arrow-down" aria-hidden="true"></i></a>
+    </aside>
+    <ol class="exp__list" id="exp-list">
+      <li class="exp__line" aria-hidden="true"><span></span></li>
+      <li class="exp__item">
+        <i class="ph-bold ph-users-three" aria-hidden="true"></i>
+        <div>
+          <h3>Recruitment management</h3>
+          <p>Contributed to the modules that run recruitment workflows and the internal operations around them.</p>
+        </div>
+      </li>
+      <li class="exp__item">
+        <i class="ph-bold ph-package" aria-hidden="true"></i>
+        <div>
+          <h3>Material management</h3>
+          <p>Built features for organising and tracking the company's internal resources.</p>
+        </div>
+      </li>
+      <li class="exp__item">
+        <i class="ph-bold ph-path" aria-hidden="true"></i>
+        <div>
+          <h3>Learning paths and class progress</h3>
+          <p>Worked on learning-path management and class progress tracking to support learning activities and monitor learner progress.</p>
+        </div>
+      </li>
+      <li class="exp__item">
+        <i class="ph-bold ph-sparkle" aria-hidden="true"></i>
+        <div>
+          <h3>AI-powered internal tools</h3>
+          <p>Helped build AI tools and AI-assisted workflows used inside the company.</p>
+        </div>
+      </li>
+      <li class="exp__item" data-role="fe">
+        <i class="ph-bold ph-layout" aria-hidden="true"></i>
+        <div>
+          <h3>Interface development</h3>
+          <p>Implemented UI components from project requirements, and delivered 79 responsive client website themes across 11 industries.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- SELECTED WORK: project cards that rise in on scroll -->
+  <section class="work" id="work">
+    <div class="work__head wrap">
+      <h2 class="section-title split-words">Selected work</h2>
+      <div class="lens" role="radiogroup" aria-label="Highlight work for a role">
+        <span class="lens__label">View as</span>
+        <button type="button" role="radio" aria-checked="true" data-lens="all">All</button>
+        <button type="button" role="radio" aria-checked="false" data-lens="frontend">Frontend</button>
+        <button type="button" role="radio" aria-checked="false" data-lens="fullstack">Fullstack</button>
+      </div>
+    </div>
+    <div class="stack" id="stack">
+
+      <article class="stack__card" style="--tint: var(--surface)">
+        <div class="stack__inner wrap">
+          <div class="proj">
+            <div class="proj__text">
+              <p class="proj__kind">Fullstack: React 19 + Spring Boot</p>
+              <h3>Lunaria Boutique</h3>
+              <p class="proj__lead">A multi-store fashion platform: customer storefront plus a back office for POS sales, inventory, orders and staff.</p>
+              <ul class="facts">
+                <li data-role="fe">React 19 storefront and role-scoped admin for every store, styled with Tailwind.</li>
+                <li data-role="fe">Realtime notifications pushed to the browser over WebSocket / STOMP.</li>
+                <li data-role="be">Store-level stock with pessimistic locking, so concurrent orders never oversell.</li>
+                <li data-role="be">COD, VNPay and MoMo payments with signed callbacks and auto-expiry of unpaid orders.</li>
+                <li data-role="be">Kafka events after commit, transactional-outbox audit log, Redis caching.</li>
+              </ul>
+              <ul class="chips"><li data-role="fe">React 19</li><li data-role="fe">Tailwind CSS</li><li data-role="be">Java 21</li><li data-role="be">Spring Boot</li><li data-role="be">Spring Security</li><li data-role="be">PostgreSQL</li><li data-role="be">Kafka</li><li data-role="be">Redis</li></ul>
+              <a class="link" href="https://github.com/maianh-233/Fashion-System" target="_blank" rel="noopener">Source on GitHub <i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="proj__media">
+              <div class="screen">
+                <video id="lunaria-video" muted playsinline preload="none" poster="fashion-system/poster.jpg" controls></video>
+              </div>
+              <p class="screen__caption" id="lunaria-caption"></p>
+              <div class="chapters" id="chapters" role="tablist" aria-label="Lunaria demo chapters"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="stack__card" style="--tint: var(--surface-2)">
+        <div class="stack__inner wrap">
+          <div class="proj proj--flip">
+            <div class="proj__text">
+              <p class="proj__kind">AI agent with a React + Express app</p>
+              <h3>Layout_Agent</h3>
+              <p class="proj__lead">Upload an SRS or type a brief; the agent asks what is missing, then builds a multi-page responsive website.</p>
+              <ul class="facts">
+                <li data-role="fe">Live preview at phone, tablet, desktop and 1920px widths.</li>
+                <li data-role="fe">Plain-language change requests for a whole site or one section.</li>
+                <li data-role="be">Express + TypeScript server that runs the Claude Agent SDK and tracks long build jobs.</li>
+                <li data-role="be">Automated Playwright QA. This is the tool behind the themes below.</li>
+              </ul>
+              <ul class="chips"><li data-role="fe">React</li><li>TypeScript</li><li data-role="fe">Vite</li><li data-role="fe">Tailwind CSS</li><li data-role="be">Express</li><li data-role="be">Claude Agent SDK</li></ul>
+              <a class="link" href="https://github.com/maianh-233/Layout_Agent" target="_blank" rel="noopener">Source on GitHub <i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="proj__media">
+              <div class="screen">
+                <video muted playsinline preload="none" poster="layout-agent/poster.jpg" src="layout-agent/demo.webm" controls data-autoplay></video>
+              </div>
+              <p class="screen__caption">Demo tour, 1:52</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="stack__card" style="--tint: var(--surface)">
+        <div class="stack__inner wrap">
+          <div class="proj">
+            <div class="proj__text">
+              <p class="proj__kind">Java desktop app</p>
+              <h3>FreshMart</h3>
+              <p class="proj__lead">Convenience store management: sales, stock, goods receipts, customers, promotions and charts.</p>
+              <ul class="facts">
+                <li data-role="be">Layered GUI / business / DAO design on Hibernate with connection pooling.</li>
+                <li data-role="be">Goods receipts raise stock on approval; sales check stock per line.</li>
+                <li data-role="be">BCrypt + JWT login, menus built from role permissions in the database.</li>
+              </ul>
+              <ul class="chips"><li data-role="be">Java 21</li><li>Swing</li><li data-role="be">Hibernate</li><li data-role="be">MySQL</li></ul>
+              <a class="link" href="https://github.com/maianh-233/ConvenienceStore_Ver2" target="_blank" rel="noopener">Source on GitHub <i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="proj__media">
+              <div class="screen">
+                <video muted playsinline preload="none" poster="freshmart/poster.jpg" src="freshmart/demo.webm" controls data-autoplay></video>
+              </div>
+              <p class="screen__caption">Login, goods receipt, approval and a POS sale, 2:41</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- THEMES: filterable, FLIP-animated gallery -->
+  <section class="themes wrap" id="themes">
+    <p class="eyebrow">Internship at Samset Solutions</p>
+    <h2 class="section-title split-words"><span id="themes-count">79</span> themes, <span id="themes-cats">11</span> industries</h2>
+    <p class="section-lead">Brand websites built from client briefs: responsive, multi-page, animated, with Vietnamese typography. Every card opens the live theme.</p>
+    <div class="filters" id="filters" role="toolbar" aria-label="Filter themes by industry"></div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <div class="grid__more">
+      <button class="btn btn--ghost magnetic" id="more" type="button"><span>Show all themes</span></button>
+      <button class="btn btn--ghost magnetic" id="shuffle" type="button"><i class="ph-bold ph-shuffle" aria-hidden="true"></i><span>Surprise me</span></button>
+    </div>
+  </section>
+
+  <!-- ABOUT: bento with exactly five cells -->
+  <section class="about wrap" id="about">
+    <h2 class="section-title split-words">A bit about me</h2>
+    <div class="bento" id="bento">
+      <div class="cell cell--bio">
+        <p class="big">Final-year Software Engineering student at Saigon University. I like owning a feature from the database table to the last hover state.</p>
+        <p>At my internship I worked on business modules and shipped brand websites at volume, so I learned to keep things fast, consistent and maintainable on both sides of the API.</p>
+        <ul class="now">
+          <li><i class="ph-bold ph-map-pin" aria-hidden="true"></i>Ho Chi Minh City, Vietnam</li>
+          <li><i class="ph-bold ph-hourglass-medium" aria-hidden="true"></i>Final year, graduation pending</li>
+          <li><i class="ph-bold ph-briefcase" aria-hidden="true"></i>Open to frontend &amp; fullstack roles</li>
+        </ul>
+      </div>
+      <div class="cell cell--accent">
+        <i class="ph-bold ph-graduation-cap" aria-hidden="true"></i>
+        <h3>Saigon University</h3>
+        <p>B.Eng. Software Engineering, 2022 to now</p>
+        <div class="gpa">
+          <svg class="gpa__ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="52" class="gpa__track"/>
+            <circle cx="60" cy="60" r="52" class="gpa__fill" id="gpa-fill"/>
+          </svg>
+          <strong><span data-count="3.35" data-decimals="2">3.35</span><small>/ 4.00 GPA</small></strong>
+        </div>
+      </div>
+      <div class="cell cell--skills">
+        <h3>Toolbox</h3>
+        <dl>
+          <div data-role="fe"><dt>Frontend</dt><dd>React, Next.js, TypeScript, JavaScript (ES6+), Vite, Tailwind CSS, HTML5, CSS3, responsive design</dd></div>
+          <div data-role="be"><dt>Backend</dt><dd>Java, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Spring Security, ASP.NET MVC, REST APIs</dd></div>
+          <div data-role="be"><dt>Data</dt><dd>PostgreSQL, MySQL, MariaDB, Redis, Kafka</dd></div>
+          <div data-role="fe"><dt>Design</dt><dd>Photoshop, CapCut, Canva, Figma (basics)</dd></div>
+          <div><dt>Tools</dt><dd>Git, GitHub, Postman, VS Code, Node.js, MCP, Claude Agent SDK</dd></div>
+        </dl>
+        <div class="interests" id="interests"></div>
+      </div>
+      <div class="cell cell--collage" aria-hidden="true" id="collage"></div>
+      <div class="cell cell--off">
+        <h3>Off-screen</h3>
+        <ul class="off">
+          <li class="hobby hobby--music">
+            <span class="hobby__icon"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span></span>
+            <span>Listening to music</span>
+          </li>
+          <li class="hobby hobby--film">
+            <span class="hobby__icon"><i class="ph-bold ph-film-slate" aria-hidden="true"></i></span>
+            <span>Watching films</span>
+          </li>
+          <li class="hobby hobby--paint">
+            <span class="hobby__icon"><i class="ph-bold ph-paint-brush" aria-hidden="true"></i></span>
+            <span>Painting</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="contact__title split-words">Hiring for frontend or fullstack?</h2>
+      <div class="contact__row">
+        <a class="mail magnetic" href="mailto:maianhdo20042303@gmail.com" id="mail">maianhdo20042303@gmail.com</a>
+        <button class="icon-btn icon-btn--lg" id="copy" type="button" aria-label="Copy email address"><i class="ph ph-copy" aria-hidden="true"></i></button>
+      </div>
+      <div class="contact__links">
+        <a class="btn magnetic" href="mailto:maianhdo20042303@gmail.com"><span>Email me</span><i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i></a>
+        <a class="btn btn--ghost magnetic" href="https://github.com/maianh-233" target="_blank" rel="noopener"><i class="ph-bold ph-github-logo" aria-hidden="true"></i><span>GitHub</span></a>
+        <a class="btn btn--ghost magnetic" href="cv/Do-Mai-Anh-CV.pdf" target="_blank" rel="noopener"><span>Download CV</span></a>
+      </div>
+      <p class="colophon">Designed and hand-coded by Đỗ Mai Anh. Vanilla JavaScript and GSAP, no build step.</p>
+    </div>
+  </section>
+
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+<script src="assets/js/themes-data.js"></script>
+<script src="assets/js/profile.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

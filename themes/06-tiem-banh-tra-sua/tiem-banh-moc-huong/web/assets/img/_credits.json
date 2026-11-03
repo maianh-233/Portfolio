@@ -1,0 +1,261 @@
+[
+  {
+    "file": "assets/img/hero-croissant.jpg",
+    "purpose": "index.html — ảnh hero khung vòm",
+    "source": "openverse",
+    "id": "openverse-e7ca3a3a-d482-4ec9-a078-72a1ca7c403d",
+    "title": "Croissant Pastries",
+    "creator": "Olenka Kotyk",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/croissant-pastries-8WRBOOQO4X"
+  },
+  {
+    "file": "assets/img/bento-banh-ngot.jpg",
+    "purpose": "index.html — ô bento bánh ngọt",
+    "source": "openverse",
+    "id": "openverse-06dbfe4f-0902-47ae-9f57-8cc46bc992c7",
+    "title": "Croissants Pastries",
+    "creator": "Daria Nepriakhina",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/croissants-pastries-3D35639910"
+  },
+  {
+    "file": "assets/img/gallery-tay-cam-banh.webp",
+    "purpose": "index.html — gallery",
+    "source": "openverse",
+    "id": "openverse-7560d6a4-860e-4379-b06c-3b86c8f24ee3",
+    "title": "Croissant pastry, food image",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/6041549/photo-image-public-domain-hand-person"
+  },
+  {
+    "file": "assets/img/menu-croissant-mut.jpg",
+    "purpose": "pages/menu.html — tab bánh ngọt",
+    "source": "openverse",
+    "id": "openverse-e37a298d-ce68-4c73-b316-a61aff90253e",
+    "title": "Croissants Pastries",
+    "creator": "JESHOOTS.com",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/croissants-pastries-0442A07431"
+  },
+  {
+    "file": "assets/img/gallery-bua-sang.jpg",
+    "purpose": "index.html — gallery",
+    "source": "openverse",
+    "id": "openverse-4d3827ec-ff92-48d9-9efd-38f76714d89c",
+    "title": "Breakfast Table",
+    "creator": "Matt Bango",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/breakfast-table-BT5N1WHKER"
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Strawberry_Cake_I.jpg/1920px-Strawberry_Cake_I.jpg",
+    "purpose": "index.html — ảnh hero khung vòm",
+    "source": "web",
+    "id": "web-inx8zm",
+    "title": "Bánh kem dâu",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:Strawberry_Cake_I.jpg",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Vietnamese_B%C3%A1nh_m%C3%AC_%28Banh_Mi%29_Sandwich.jpg/1920px-Vietnamese_B%C3%A1nh_m%C3%AC_%28Banh_Mi%29_Sandwich.jpg",
+    "purpose": "index.html — ô bento bánh mì",
+    "source": "web",
+    "id": "web-1vqu2ld",
+    "title": "Bánh mì Việt Nam",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:Vietnamese_B%C3%A1nh_m%C3%AC_(Banh_Mi)_Sandwich.jpg",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg/1920px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg",
+    "purpose": "index.html — gallery phố Hội",
+    "source": "web",
+    "id": "web-1bmza14",
+    "title": "Phố cổ Hội An",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:H%E1%BB%99i_An,_Ancient_Town,_2020-01_CN-06.jpg",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Lanterns_in_Hoi_An_2.jpg/1920px-Lanterns_in_Hoi_An_2.jpg",
+    "purpose": "index.html — gallery đèn lồng",
+    "source": "web",
+    "id": "web-1d16rtq",
+    "title": "Đèn lồng Hội An",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:Lanterns_in_Hoi_An_2.jpg",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/3/37/Strawberry_Cream_Cake.jpg",
+    "purpose": "index.html — ô bento bánh kem đặt trước",
+    "source": "web",
+    "id": "web-ljflor",
+    "title": "Bánh kem dâu kem tươi",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:Strawberry_Cream_Cake.jpg",
+    "remote": true
+  },
+  {
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Counter_of_the_Paillard_bakery%2C_Vieux-Qu%C3%A9bec.jpg/1920px-Counter_of_the_Paillard_bakery%2C_Vieux-Qu%C3%A9bec.jpg",
+    "purpose": "index.html — gallery quầy bánh",
+    "source": "web",
+    "id": "web-19f3egn",
+    "title": "Quầy bánh trong tiệm",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://commons.wikimedia.org/wiki/File:Counter_of_the_Paillard_bakery,_Vieux-Qu%C3%A9bec.jpg",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/16045981/pexels-photo-16045981.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "purpose": "index.html — ảnh hero khung vòm",
+    "source": "web",
+    "id": "web-1y04iav",
+    "title": "Bánh kem dâu và macaron trong tủ bánh",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/16045981/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/10481790/pexels-photo-10481790.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "purpose": "index.html — một ngày ở lò",
+    "source": "web",
+    "id": "web-1wngm1",
+    "title": "Bánh mì trong lò nướng",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/10481790/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/40180976/pexels-photo-40180976.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "purpose": "index.html — gallery",
+    "source": "web",
+    "id": "web-g29d65",
+    "title": "Croissant tại tiệm bánh Việt Nam",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/40180976/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/3983710/pexels-photo-3983710.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "purpose": "index.html — gallery",
+    "source": "web",
+    "id": "web-1hbhd3r",
+    "title": "Trang trí cupcake hồng",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/3983710/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/29445730/pexels-photo-29445730.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "purpose": "index.html — gallery",
+    "source": "web",
+    "id": "web-lejkir",
+    "title": "Muffin và croissant trên quầy",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/29445730/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/15009979/pexels-photo-15009979.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "purpose": "pages/menu.html — page-hero",
+    "source": "web",
+    "id": "web-deelh",
+    "title": "Kệ gỗ bánh mì trong tiệm",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/15009979/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/3789032/pexels-photo-3789032.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "purpose": "pages/menu.html — tab bánh mì",
+    "source": "web",
+    "id": "web-pfks6v",
+    "title": "Bánh mì que vàng giòn",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/3789032/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/7543099/pexels-photo-7543099.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "purpose": "pages/menu.html — tab bánh mì",
+    "source": "web",
+    "id": "web-1uk65p3",
+    "title": "Bánh mì tròn mới ra lò",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/7543099/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/5112580/pexels-photo-5112580.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "purpose": "pages/menu.html — tab bánh ngọt",
+    "source": "web",
+    "id": "web-1jux4dz",
+    "title": "Hộp bánh su kem éclair",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/5112580/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/29192543/pexels-photo-29192543.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "purpose": "pages/menu.html — tab bánh kem",
+    "source": "web",
+    "id": "web-1auymgp",
+    "title": "Bánh kem sinh nhật tông pastel",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/29192543/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/11136872/pexels-photo-11136872.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "purpose": "pages/menu.html — tab bánh kem",
+    "source": "web",
+    "id": "web-iwz02d",
+    "title": "Bánh shortcake dâu kem tươi",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/11136872/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/7966511/pexels-photo-7966511.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "purpose": "pages/menu.html — quy trình đặt bánh kem",
+    "source": "web",
+    "id": "web-12df2zd",
+    "title": "Hoàn thiện bánh kem với trái cây tươi",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/7966511/",
+    "remote": true
+  },
+  {
+    "file": "https://images.pexels.com/photos/29388479/pexels-photo-29388479.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "purpose": "pages/contact.html — page-hero",
+    "source": "web",
+    "id": "web-kdeje5",
+    "title": "Mặt tiền tiệm bánh",
+    "creator": "",
+    "license": "Chưa rõ — chỉ dùng cho prototype",
+    "page": "https://www.pexels.com/photo/29388479/",
+    "remote": true
+  }
+]

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Câu chuyện — An Nam Ký Test</title>
+  <meta name="description" content="Câu chuyện của An Nam Ký Test: từ chiếc rương áo dài của bà ở Huế đến một xưởng may đo áo dài lấy cảm hứng từ văn hóa Việt Nam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-cream font-sans text-ink antialiased">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-transparent bg-cream/95">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="font-display text-xl tracking-tight text-ink sm:text-2xl">An Nam Ký <span class="italic text-wine">Test</span></a>
+    <nav aria-label="Điều hướng chính" class="hidden items-center gap-8 text-[15px] lg:flex xl:gap-10">
+      <a href="index.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Trang chủ</a>
+      <a href="about.html" aria-current="page" class="link-run py-2 text-wine">Câu chuyện</a>
+      <a href="collections.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Bộ sưu tập</a>
+      <a href="may-do.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">May đo</a>
+      <a href="journal.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Ghi chép</a>
+      <a href="contact.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Liên hệ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="contact.html#hen-may" class="hidden h-11 items-center bg-wine px-6 text-sm font-medium text-cream transition-colors duration-300 hover:bg-wine-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine active:scale-[.98] sm:inline-flex">Hẹn may đo</a>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center border border-line text-ink transition-colors duration-300 hover:border-wine hover:text-wine lg:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-line bg-cream p-6 lg:hidden">
+    <nav aria-label="Điều hướng trên điện thoại" class="flex flex-col font-display text-2xl">
+      <a href="index.html" class="border-b border-line py-3">Trang chủ</a>
+      <a href="about.html" aria-current="page" class="border-b border-line py-3 text-wine">Câu chuyện</a>
+      <a href="collections.html" class="border-b border-line py-3">Bộ sưu tập</a>
+      <a href="may-do.html" class="border-b border-line py-3">May đo</a>
+      <a href="journal.html" class="border-b border-line py-3">Ghi chép</a>
+      <a href="contact.html" class="py-3">Liên hệ</a>
+    </nav>
+    <a href="contact.html#hen-may" class="mt-6 flex h-12 items-center justify-center bg-wine text-sm font-medium text-cream">Hẹn may đo</a>
+  </div>
+</header>
+
+<main>
+  <section id="page-hero" data-section="page-hero" class="bg-cream">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-24 lg:pt-16 2xl:px-16">
+      <div class="lg:col-span-7">
+        <p data-reveal="fade" class="text-xs uppercase tracking-[0.2em] text-muted">Câu chuyện thương hiệu</p>
+        <h1 data-reveal="up" class="mt-6 pb-2 font-display text-[clamp(2.8rem,6.4vw,7rem)] leading-[1.05] tracking-tight">Từ chiếc rương áo đến một <span class="italic text-wine">xưởng may nhỏ</span></h1>
+        <p data-reveal="up" class="mt-8 max-w-xl text-lg leading-relaxed text-muted">Chúng tôi may áo dài để những nếp xưa của người Việt được mặc tiếp, chứ không chỉ được cất đi.</p>
+      </div>
+      <figure data-reveal="fade" class="lg:col-span-5 lg:mt-20">
+        <div class="aspect-[4/3] overflow-hidden bg-moss-soft">
+          <img src="assets/img/about-hue-ngo-mon.jpg" alt="Điện Thái Hòa trong Đại Nội Huế sau cơn mưa, hai bên là chậu hoa vàng" width="1024" height="652" class="h-full w-full object-cover">
+        </div>
+        <figcaption class="mt-3 text-sm text-muted">Đại Nội Huế, nơi xưởng may bắt đầu những chuyến đi tìm hoa văn.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Câu chuyện dài: tiêu đề dính trái, thân phải -->
+  <section id="cau-chuyen" data-section="story-editorial" class="stitch bg-cream">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl">Cảm hứng từ văn hóa Việt</h2>
+          <figure data-reveal="fade" class="mt-10 hidden lg:block">
+            <div class="aspect-[3/4] overflow-hidden bg-wine-soft">
+              <img src="assets/img/home-story-ao-dai.jpg" alt="Ba người phụ nữ mặc áo ngũ thân đỏ, vàng, xanh đội khăn vấn đứng trò chuyện bên đường" width="683" height="1024" loading="lazy" class="h-full w-full object-cover">
+            </div>
+            <figcaption class="mt-3 text-sm text-muted">Áo ngũ thân và khăn vấn, dáng áo xưa nhất mà xưởng học lại.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div data-reveal="up" class="max-w-prose space-y-6 text-[17px] leading-relaxed text-ink/85 lg:col-span-6 lg:col-start-6">
+        <p class="dropcap">Mùa sen năm 2016, sau khi bà ngoại mất, Hạnh Dung mở chiếc rương gỗ trong nhà rường ở Phú Hội. Bên trong là mười một tà áo: áo ngũ thân bằng the, áo dài lụa hồng phai, một chiếc áo cưới gấm đỏ đã sờn cổ. Cô mang chúng tới bà Tôn Nữ Thị Lan, người thợ cắt áo dài lâu năm nhất trong xóm, để hỏi cách giữ lại.</p>
+        <p>Bà Lan không chỉ vá lại. Bà tháo đường may, trải từng thân áo ra bàn và chỉ cho Dung thấy vì sao vạt trước dài hơn vạt sau một đốt tay, vì sao cổ áo Huế cao và mềm. Những buổi chiều ấy trở thành lớp học đầu tiên của An Nam Ký Test.</p>
+        <blockquote class="my-10 border-l-2 border-wine pl-6 font-display text-3xl italic leading-snug text-wine lg:-mr-24 lg:text-4xl">
+          &ldquo;Mỗi tà áo cũ là một bản vẽ, chỉ cần người chịu đọc.&rdquo;
+        </blockquote>
+        <p>Chúng tôi tìm cảm hứng ở những thứ rất gần: màu ngói men của Đại Nội, đầm sen trước cửa Hiển Nhơn, lụa Nha Xá phơi trên giàn tre, tiếng kéo cắt vải trong những tiệm may ở chợ Đông Ba. Hoa văn được vẽ tay trên lụa, màu nhuộm lấy cảm hứng từ cây lá: vỏ cây bàng, lá chàm, hoa hòe.</p>
+        <p>Thương hiệu mang tên An Nam như một lời nhắc về gốc gác. Chữ Ký trong tiếng Hán Việt là ghi nhớ: mỗi tà áo may ra là một lần ghi lại dáng người Việt hôm nay, bằng ngôn ngữ của những người thợ hôm qua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dải ảnh lụa tràn viền -->
+  <section id="lua" data-section="gallery-band" class="bg-cream">
+    <figure data-reveal="fade" class="w-full">
+      <div class="aspect-[4/3] overflow-hidden bg-wine-soft sm:aspect-[21/9]">
+        <img src="assets/img/lookbook-06.jpg" alt="Những dải lụa hồng, tím, vàng, đỏ treo trên giàn tre bay trong gió" width="1024" height="683" loading="lazy" class="h-full w-full object-cover">
+      </div>
+      <figcaption class="mx-auto w-full max-w-screen-2xl px-4 pt-3 text-sm text-muted sm:px-6 lg:px-10 2xl:px-16">Lụa nhuộm màu cây lá, phơi trên giàn tre trước khi cắt.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Quy trình -->
+  <section id="quy-trinh" data-section="process-steps" class="bg-cream">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+        <div class="lg:col-span-4">
+          <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl">Từ tấm lụa đến tà áo</h2>
+          <figure data-reveal="fade" class="mt-10">
+            <div class="aspect-[4/5] overflow-hidden bg-moss-soft">
+              <img src="assets/img/about-tiem-may.jpg" alt="Những chiếc áo may đo đang mặc trên ma-nơ-canh trong tiệm may" width="768" height="1024" loading="lazy" class="h-full w-full object-cover">
+            </div>
+            <figcaption class="mt-3 text-sm text-muted">Áo đang chờ lần thử thứ hai trên ma-nơ-canh.</figcaption>
+          </figure>
+        </div>
+        <ol data-reveal-stagger="90" class="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:col-span-7 lg:col-start-6 lg:pt-4">
+          <li class="stitch pt-6">
+            <p class="font-display text-5xl text-wine">01</p>
+            <h3 class="mt-4 font-display text-2xl">Chọn lụa</h3>
+            <p class="mt-3 text-muted">Bạn chạm tay vào từng loại lụa, lãnh, gấm tại xưởng. Chúng tôi gợi ý chất vải theo dịp mặc và khí hậu nơi bạn sống.</p>
+          </li>
+          <li class="stitch pt-6">
+            <p class="font-display text-5xl text-wine">02</p>
+            <h3 class="mt-4 font-display text-2xl">Đo dáng</h3>
+            <p class="mt-3 text-muted">Hai mươi sáu số đo, ghi tay vào sổ riêng của bạn. Lần may sau chỉ cần đo lại vài chỗ.</p>
+          </li>
+          <li class="stitch pt-6">
+            <p class="font-display text-5xl text-wine">03</p>
+            <h3 class="mt-4 font-display text-2xl">Cắt và vẽ</h3>
+            <p class="mt-3 text-muted">Thợ cắt rập theo số đo, họa sĩ vẽ hoặc thêu hoa văn trực tiếp lên thân áo trước khi ráp.</p>
+          </li>
+          <li class="stitch pt-6">
+            <p class="font-display text-5xl text-wine">04</p>
+            <h3 class="mt-4 font-display text-2xl">Thử và hoàn thiện</h3>
+            <p class="mt-3 text-muted">Ba lần thử để chỉnh eo, tà và cổ. Áo hoàn thiện được gấp trong giấy dó, kèm sổ hướng dẫn giữ lụa.</p>
+          </li>
+        </ol>
+      </div>
+      <dl data-reveal="up" class="mt-20 grid grid-cols-1 border-y border-line sm:grid-cols-3">
+        <div class="py-8 sm:border-r sm:border-line sm:pr-8">
+          <dt class="text-sm text-muted">Số đo cho một tà áo</dt>
+          <dd class="mt-2 font-display text-6xl text-wine"><span data-count-to="26">26</span></dd>
+        </div>
+        <div class="border-t border-line py-8 sm:border-r sm:border-t-0 sm:px-8">
+          <dt class="text-sm text-muted">Lần thử trước khi giao</dt>
+          <dd class="mt-2 font-display text-6xl text-wine"><span data-count-to="3">3</span></dd>
+        </div>
+        <div class="border-t border-line py-8 sm:border-t-0 sm:pl-8">
+          <dt class="text-sm text-muted">Ngày may trung bình</dt>
+          <dd class="mt-2 font-display text-6xl text-wine"><span data-count-to="14">14</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Hành trình -->
+  <section id="hanh-trinh" data-section="timeline" class="bg-cream-deep">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl lg:col-span-4">Những mốc đã đi qua</h2>
+      <ol class="stitch-v space-y-12 pl-8 lg:col-span-7 lg:col-start-6">
+        <li data-reveal="up" class="relative">
+          <span aria-hidden="true" class="absolute -left-[37px] top-3 h-2 w-2 bg-wine"></span>
+          <p class="font-display text-3xl text-wine">2016</p>
+          <p class="mt-2 max-w-prose text-ink/85">Mở rương áo của bà, học cắt áo dài với bà Tôn Nữ Thị Lan trong căn nhà rường ở Phú Hội.</p>
+        </li>
+        <li data-reveal="up" class="relative">
+          <span aria-hidden="true" class="absolute -left-[37px] top-3 h-2 w-2 bg-wine"></span>
+          <p class="font-display text-3xl text-wine">2018</p>
+          <p class="mt-2 max-w-prose text-ink/85">Bộ sưu tập đầu tiên, Cố Đô, gồm mười hai mẫu áo dài cổ cao may từ lụa Nha Xá.</p>
+        </li>
+        <li data-reveal="up" class="relative">
+          <span aria-hidden="true" class="absolute -left-[37px] top-3 h-2 w-2 bg-wine"></span>
+          <p class="font-display text-3xl text-wine">2021</p>
+          <p class="mt-2 max-w-prose text-ink/85">Bắt đầu cộng tác với hai hộ dệt ở Nha Xá và Vạn Phúc, đặt dệt riêng khổ lụa cho xưởng.</p>
+        </li>
+        <li data-reveal="up" class="relative">
+          <span aria-hidden="true" class="absolute -left-[37px] top-3 h-2 w-2 bg-wine"></span>
+          <p class="font-display text-3xl text-wine">2024</p>
+          <p class="mt-2 max-w-prose text-ink/85">Mở phòng đo và thử áo trên đường Chi Lăng, nhận may theo lịch hẹn.</p>
+        </li>
+        <li data-reveal="up" class="relative">
+          <span aria-hidden="true" class="absolute -left-[37px] top-3 h-2 w-2 bg-wine"></span>
+          <p class="font-display text-3xl text-wine">2026</p>
+          <p class="mt-2 max-w-prose text-ink/85">Ra mắt Sen Hạ và Hỷ Sự, hai bộ sưu tập cho mùa hè và mùa cưới.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="cta" data-section="cta-type" class="bg-wine text-cream">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="pb-2 font-display text-[clamp(2.6rem,6.5vw,7rem)] leading-[1.05] tracking-tight">Ghé xưởng, <span class="italic">chạm vào lụa.</span></h2>
+      <div data-reveal="up" class="mt-10 flex flex-col gap-6 border-t border-dashed border-cream/50 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <p class="max-w-xl text-lg text-cream/85">Một buổi đo kéo dài khoảng một giờ, có trà và các mẫu lụa để bạn chọn.</p>
+        <a href="contact.html#hen-may" class="inline-flex h-14 items-center justify-center bg-cream px-10 text-base font-medium text-wine transition-colors duration-300 hover:bg-cream-deep active:scale-[.98]">Hẹn may đo</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" data-section="footer-big" class="bg-moss-dark text-cream">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl">An Nam Ký Test</p>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-cream/75">Áo dài may đo từ lụa Việt. Xưởng nhỏ ở Huế, may theo lịch hẹn.</p>
+      </div>
+      <nav aria-label="Liên kết cuối trang">
+        <p class="text-sm font-medium text-cream/60">Trang</p>
+        <ul class="mt-4 space-y-3">
+          <li><a href="index.html" class="link-run">Trang chủ</a></li>
+          <li><a href="about.html" class="link-run">Câu chuyện</a></li>
+          <li><a href="collections.html" class="link-run">Bộ sưu tập</a></li>
+          <li><a href="may-do.html" class="link-run">May đo</a></li>
+          <li><a href="journal.html" class="link-run">Ghi chép</a></li>
+          <li><a href="contact.html" class="link-run">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="text-sm font-medium text-cream/60">Ghé xưởng</p>
+        <address class="mt-4 not-italic leading-relaxed">68 Chi Lăng, phường Phú Hội<br>TP. Huế</address>
+        <p class="mt-3 text-sm text-cream/75">9:00 đến 19:00, Thứ Ba đến Chủ Nhật</p>
+      </div>
+      <div>
+        <p class="text-sm font-medium text-cream/60">Liên hệ</p>
+        <p class="mt-4"><a href="tel:+842343826517" class="link-run">0234 3826 517</a></p>
+        <p class="mt-3"><a href="mailto:xinchao@annamky.vn" class="link-run">xinchao@annamky.vn</a></p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="mt-20 whitespace-nowrap font-display text-[11vw] leading-[0.9] tracking-tight text-cream/90 2xl:text-[11.5rem]">An Nam Ký Test</p>
+    <div class="mt-6 flex flex-col gap-2 border-t border-cream/20 py-6 text-sm text-cream/70 sm:flex-row sm:justify-between">
+      <p>&copy; 2026 An Nam Ký Test. Bảo lưu mọi quyền.</p>
+      <a href="#top" class="link-run self-start">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

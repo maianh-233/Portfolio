@@ -1,0 +1,79 @@
+{
+  "slug": "voltcraft-industries",
+  "name": "VOLTCRAFT INDUSTRIES",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website Giowis thiệu xưởng cơ khí VOLTCRAFT INDUSTRIES",
+    "brand": "VOLTCRAFT INDUSTRIES",
+    "purpose": "Thiết kế và xây dựng website đa trang giới thiệu VOLTCRAFT INDUSTRIES, doanh nghiệp chuyên gia công cơ khí chính xác, chế tạo máy, tích hợp hệ thống tự động hóa và phát triển giải pháp sản xuất công nghiệp.\n\nWebsite định vị thương hiệu như một đơn vị cơ khí thế hệ mới, kết hợp năng lực chế tạo thực tế với công nghệ tự động hóa hiện đại. Giao diện cần thể hiện sự chính xác, mạnh mẽ, tiên tiến và đáng tin cậy, đồng thời tạo ấn tượng thị giác khác biệt so với website doanh nghiệp cơ khí truyền thống.\n\nMục tiêu chính:\n\nGiới thiệu thương hiệu, năng lực kỹ thuật và hệ thống sản xuất.\n\nTrình bày dịch vụ gia công, chế tạo máy và tự động hóa.\n\nGiới thiệu nhà xưởng, thiết bị và các dự án tiêu biểu.\n\nThể hiện quy trình kiểm soát chất lượng và định hướng công nghệ.\n\nTạo kênh liên hệ để khách hàng doanh nghiệp trao đổi nhu cầu hợp tác.\n\nĐây là website giới thiệu doanh nghiệp, không phải website thương mại điện tử. Không xây dựng giỏ hàng, thanh toán hoặc chức năng mua sản phẩm trực tuyến.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Art Direction — Industrial Sci-Fi\n\nPhong cách tổng thể\n\nKết hợp ba yếu tố:\n\nIndustrial Sci-Fi: Không gian công nghiệp tương lai, hệ thống điều khiển, lưới kỹ thuật và ánh sáng điện tử.\n\nFuturistic Manufacturing: Robot công nghiệp, máy CNC, dây chuyền tự động hóa và hệ thống chế tạo thông minh.\n\nCinematic Technology: Hình ảnh có chiều sâu, ánh sáng tương phản, vùng tối rộng và điểm nhấn phát sáng có kiểm soát.\n\nWebsite phải có cá tính của một thương hiệu công nghệ công nghiệp cao cấp, không giống dashboard quản trị, trang thương mại điện tử hoặc template doanh nghiệp có sẵn.\n\nBảng màu\n\nDeep Space #10121C: nền chính.\n\nElectric Purple #8B5CF6: màu nhận diện, điểm nhấn và đường sáng.\n\nNeon Cyan #46E5FF: thông số kỹ thuật, trạng thái và chi tiết tương tác.\n\nCold White #F1F5F9: tiêu đề và nội dung chính.\n\nSlate Gray #7B8498: nội dung phụ và nhãn kỹ thuật.\n\nPanel Dark #191D2B: nền các khối nội dung và card.\n\nSử dụng nền tối làm chủ đạo. Tím điện và cyan chỉ xuất hiện tại các chi tiết quan trọng để giữ sự tinh tế, tránh biến toàn bộ website thành giao diện neon quá rực rỡ.\n\nTypography\n\nDùng font sans-serif hiện đại, hình học, rõ ràng.\n\nTiêu đề lớn, đậm, có thể viết hoa để tạo cảm giác kỹ thuật.\n\nNội dung dài sử dụng cỡ chữ dễ đọc và khoảng cách dòng thoáng.\n\nThông số, mã dự án và nhãn kỹ thuật có thể dùng font monospace.\n\nPhân cấp rõ giữa tiêu đề, mô tả, thông số và chú thích hình ảnh.\n\nHình ảnh\n\nƯu tiên hình ảnh chất lượng cao về:\n\nRobot công nghiệp và cánh tay robot.\n\nMáy CNC, máy tiện, máy phay và thiết bị gia công chính xác.\n\nDây chuyền sản xuất tự động.\n\nChi tiết kim loại được gia công với độ chính xác cao.\n\nTủ điều khiển, cảm biến, hệ thống kỹ thuật và khu vực lắp ráp máy.\n\nNhà xưởng hiện đại với ánh sáng tương phản và chiều sâu không gian.\n\nCó thể sử dụng hình ảnh nhà máy thực tế kết hợp ánh sáng tím hoặc cyan trong khâu trình bày. Không thay thế hình ảnh máy móc thật bằng các hình minh họa viễn tưởng thiếu tính thực tế.\n\n3. Cấu trúc website — 8 trang độc lập\n\nTrang 1: Home /\n\nĐây là trang tạo ấn tượng đầu tiên, thể hiện rõ nhất cá tính Industrial Sci-Fi.\n\nHeader\n\nLogo chữ VOLTCRAFT INDUSTRIES.\n\nMenu: Home, About, Capabilities, Workshop, Projects, Automation, Quality, Contact.\n\nNút CTA “LET'S ENGINEER”.\n\nHeader trong suốt trên hero và chuyển sang nền tối đặc khi cuộn.\n\nHiển thị trạng thái active của trang hiện tại.\n\nHero Section\n\nChiếm phần lớn màn hình đầu tiên.\n\nHình ảnh robot công nghiệp hoặc dây chuyền tự động hóa làm nền chính.\n\nPhủ lớp gradient tối để đảm bảo độ tương phản cho chữ.\n\nTiêu đề lớn: “ENGINEERING BEYOND LIMITS”.\n\nMô tả: “Precision manufacturing. Intelligent automation. Industrial solutions built for the future.”\n\nHai nút: “EXPLORE OUR CAPABILITIES” và “VIEW PROJECTS”.\n\nBổ sung đường lưới kỹ thuật mờ, các đường chỉ dẫn và một vài điểm sáng cyan.\n\nCó nhãn nhỏ như “MECHANICAL ENGINEERING / INDUSTRIAL AUTOMATION”.\n\nCapabilities Preview\n\nGiới thiệu ngắn về năng lực của doanh nghiệp.\n\nBốn nhóm chính: Precision Machining, Machine Manufacturing, Industrial Automation và System Integration.\n\nMỗi nhóm có hình ảnh riêng, tiêu đề, mô tả ngắn và liên kết đến trang liên quan.\n\nEngineering at a Glance\n\nTrình bày một số chỉ số minh họa như số nhóm thiết bị, nhóm năng lực hoặc lĩnh vực phục vụ.\n\nDùng typography lớn và bố cục dạng bảng điều khiển tối giản.\n\nKhông tự nhận các số liệu như công suất, số năm kinh nghiệm hoặc số dự án là dữ liệu thật. Dùng placeholder dễ thay thế nếu chưa có thông tin.\n\nFeatured Projects\n\nHiển thị 3 dự án tiêu biểu dưới dạng các khối hình ảnh lớn.\n\nMỗi dự án có tên, lĩnh vực, mô tả ngắn và liên kết xem chi tiết.\n\nDùng bố cục bất đối xứng thay vì các card giống nhau hoàn toàn.\n\nTechnology Preview\n\nHình ảnh robot, cảm biến, máy móc hoặc hệ thống tự động hóa.\n\nMô tả định hướng ứng dụng công nghệ vào quy trình sản xuất.\n\nCTA dẫn đến trang Automation Technology.\n\nFinal CTA\n\nTiêu đề: “HAVE A COMPLEX ENGINEERING CHALLENGE?”\n\nMô tả ngắn mời khách hàng trao đổi nhu cầu gia công hoặc chế tạo máy.\n\nNút “TALK TO OUR TEAM”.\n\nTrang 2: About Us /about\n\nMục tiêu: Xây dựng niềm tin và giới thiệu định hướng doanh nghiệp.\n\nCác phần nội dung:\n\nHero với tiêu đề “ENGINEERED WITH PURPOSE”.\n\nGiới thiệu VOLTCRAFT INDUSTRIES, lĩnh vực hoạt động và định hướng phát triển.\n\nTriết lý kỹ thuật: Precision, Reliability, Innovation và Accountability.\n\nPhương pháp làm việc từ phân tích yêu cầu đến triển khai giải pháp.\n\nGiới thiệu đội ngũ kỹ thuật, vận hành và kiểm soát chất lượng.\n\nHình ảnh nhà xưởng, kỹ sư và hoạt động chế tạo.\n\nCTA dẫn đến trang năng lực hoặc liên hệ.\n\nTrình bày bằng bố cục editorial, hình ảnh lớn xen kẽ các khối nội dung. Không dùng timeline thành lập hoặc thành tích giả như dữ liệu thực tế.\n\nTrang 3: Capabilities /capabilities\n\nMục tiêu: Giải thích rõ doanh nghiệp có thể thực hiện những công việc nào.\n\nChia thành các nhóm năng lực:\n\nPrecision Machining\n\nGia công CNC, tiện, phay và xử lý chi tiết cơ khí theo bản vẽ.\n\nTrình bày loại chi tiết, vật liệu và ứng dụng phù hợp.\n\nHình ảnh cận cảnh bề mặt kim loại và máy gia công.\n\nMachine Manufacturing\n\nChế tạo cụm máy, chi tiết máy và hệ thống cơ khí theo yêu cầu.\n\nMô tả quy trình từ thiết kế, chế tạo đến lắp ráp.\n\nMetal Fabrication\n\nGia công kim loại, cắt, hàn và lắp ráp kết cấu.\n\nSử dụng hình ảnh thực tế, tránh mô tả chung chung.\n\nIndustrial Automation\n\nTích hợp thiết bị, cảm biến, cơ cấu chấp hành và hệ thống điều khiển.\n\nTrình bày khả năng hỗ trợ tự động hóa quy trình sản xuất khi phù hợp.\n\nCustom Engineering\n\nTiếp nhận yêu cầu kỹ thuật và phát triển giải pháp theo từng dự án.\n\nMỗi nhóm cần có tiêu đề, mô tả, hình ảnh, ứng dụng và liên kết đến trang liên quan. Bố cục phải đa dạng, không lặp lại cùng một mẫu card cho toàn bộ trang.\n\nTrang 4: Workshop & Machinery /workshop\n\nMục tiêu: Cho khách hàng hình dung rõ về không gian sản xuất và thiết bị.\n\nCác phần:\n\nHero “INSIDE OUR WORKSHOP”.\n\nGiới thiệu môi trường sản xuất và các khu vực làm việc.\n\nPhân khu gia công CNC, gia công kim loại, lắp ráp và kiểm tra.\n\nThư viện hình ảnh máy móc với bố cục dạng gallery.\n\nDanh mục thiết bị trình bày dưới dạng bảng thông số.\n\nKhu vực kiểm tra, đo lường và hoàn thiện sản phẩm.\n\nCTA dẫn đến trang Quality Control.\n\nMỗi thiết bị có thể hiển thị tên, loại máy, chức năng, ứng dụng và thông số khi có dữ liệu. Thông tin chưa được xác nhận phải dùng placeholder, không tự bịa model máy hoặc thông số chính xác.\n\nTrang 5: Projects /projects\n\nMục tiêu: Trưng bày năng lực qua các dự án chế tạo và giải pháp kỹ thuật.\n\nHero “BUILT FOR REAL-WORLD CHALLENGES”.\n\nBộ lọc theo nhóm: CNC Machining, Machine Manufacturing, Automation và Metal Fabrication.\n\nGallery hình ảnh với bố cục bất đối xứng, thay đổi kích thước ảnh có chủ đích.\n\nMỗi dự án có hình ảnh, tên dự án, lĩnh vực, phạm vi công việc và mô tả kết quả.\n\nCó trang chi tiết riêng cho từng dự án, ví dụ /projects/automated-assembly-system.\n\nTrang chi tiết gồm tổng quan, yêu cầu, phương pháp triển khai, hình ảnh và kết quả thực hiện.\n\nCó thể sử dụng dự án mẫu để minh họa giao diện nhưng phải đánh dấu rõ là nội dung giả lập có thể chỉnh sửa, không tuyên bố đó là dự án khách hàng thật.\n\nTrang 6: Automation Technology /automation\n\nMục tiêu: Thể hiện định hướng công nghệ và năng lực tích hợp hệ thống.\n\nCác phần:\n\nHero “INTELLIGENCE MEETS INDUSTRY”.\n\nGiới thiệu vai trò của tự động hóa trong sản xuất.\n\nCác nhóm giải pháp: Industrial Robotics, Control Systems, Sensors & Monitoring, Automated Workflows.\n\nSơ đồ quy trình từ tín hiệu đầu vào đến điều khiển và vận hành thiết bị.\n\nHình ảnh robot, cảm biến, tủ điều khiển và dây chuyền tự động.\n\nKhu vực mô tả khả năng tích hợp theo yêu cầu.\n\nCTA dẫn đến trang Contact.\n\nSơ đồ phải đơn giản, trực quan và dễ hiểu. Không cần xây dựng mô phỏng kỹ thuật phức tạp hoặc dashboard tương tác giả lập.\n\nTrang 7: Quality Control /quality\n\nMục tiêu: Thể hiện cách tiếp cận về độ chính xác, tính ổn định và an toàn sản xuất.\n\nCác phần:\n\nHero “PRECISION IS A STANDARD”.\n\nGiới thiệu nguyên tắc kiểm soát chất lượng.\n\nQuy trình kiểm tra từ vật liệu đầu vào đến sản phẩm hoàn thiện.\n\nThiết bị đo lường và phương pháp kiểm tra.\n\nKiểm tra kích thước, bề mặt, độ phù hợp với bản vẽ và yêu cầu kỹ thuật.\n\nQuy trình xử lý sai lệch và xác nhận trước khi bàn giao.\n\nCTA liên hệ bộ phận kỹ thuật.\n\nDùng sơ đồ quy trình, các bước được đánh số, đường kết nối và hình ảnh cận cảnh thiết bị kiểm tra. Chỉ công bố tiêu chuẩn hoặc chứng nhận khi doanh nghiệp có thông tin xác thực.\n\nTrang 8: Contact /contact\n\nMục tiêu: Giúp khách hàng liên hệ nhanh để trao đổi nhu cầu kỹ thuật.\n\nCác phần:\n\nHero “LET'S BUILD SOMETHING PRECISE”.\n\nThông tin liên hệ doanh nghiệp.\n\nĐịa chỉ, email, điện thoại và giờ làm việc ở dạng có thể chỉnh sửa.\n\nForm liên hệ gồm họ tên, công ty, email, số điện thoại, loại nhu cầu và nội dung mô tả.\n\nCó thể cho phép nhập thông tin bản vẽ hoặc tài liệu kỹ thuật nếu hệ thống thực sự hỗ trợ tải tệp.\n\nKhu vực bản đồ nếu có địa chỉ thực.\n\nCTA gửi yêu cầu tư vấn.\n\nForm cần có kiểm tra dữ liệu đầu vào, thông báo thành công hoặc lỗi và trạng thái đang gửi. Nếu chưa có backend, tạo giao diện và validation rõ ràng, không giả vờ đã gửi dữ liệu đến doanh nghiệp.\n\n4. Thiết kế hệ thống điều hướng\n\nTám trang chính phải có URL riêng và nội dung thực sự khác nhau.\n\nDùng header và footer thống nhất trên toàn bộ website.\n\nMenu điều hướng hoạt động trên desktop và mobile.\n\nCó trạng thái active cho trang đang xem.\n\nLogo dẫn về trang Home.\n\nCác CTA phải dẫn đến đúng trang hoặc đúng khu vực.\n\nCác dự án có thể mở trang chi tiết riêng.\n\nHỗ trợ truy cập trực tiếp URL và tải lại trang mà không bị lỗi routing.\n\nKhông tạo các menu chỉ để trang trí hoặc liên kết trỏ đến # mà không có mục tiêu thực tế.\n\n5. Animation và tương tác\n\nSử dụng chuyển động có chủ đích, không làm ảnh hưởng khả năng đọc và tốc độ tải trang.\n\nĐược sử dụng:\n\nHero có chuyển động nền rất nhẹ hoặc hiệu ứng parallax giới hạn.\n\nCác đường kỹ thuật và điểm sáng cyan chuyển động chậm.\n\nNội dung xuất hiện nhẹ khi cuộn vào vùng nhìn thấy.\n\nẢnh dự án phóng nhẹ khi hover.\n\nNút CTA đổi màu hoặc phát sáng nhẹ khi tương tác.\n\nCác con số hoặc nhãn kỹ thuật có hiệu ứng xuất hiện đơn giản.\n\nChuyển cảnh giữa các trang mượt nếu framework hỗ trợ.\n\nKhông sử dụng:\n\nWebGL hoặc 3D nặng nếu không thực sự cần thiết.\n\nHàng loạt hiệu ứng neon đồng thời.\n\nCon trỏ chuột tùy biến gây cản trở thao tác.\n\nVideo nền dung lượng lớn tự động phát không cần thiết.\n\nAnimation làm chậm menu, biểu mẫu hoặc nội dung chính.\n\nHỗ trợ prefers-reduced-motion để giảm chuyển động cho người dùng có nhu cầu.\n\n6. Responsive và khả năng sử dụng\n\nDesktop: Tận dụng không gian rộng, hero ấn tượng, gallery lớn và bố cục bất đối xứng.\n\nTablet: Điều chỉnh lưới nội dung, khoảng cách và kích thước tiêu đề; tránh ảnh bị cắt mất chủ thể.\n\nMobile: Menu dạng hamburger, nội dung xếp theo cột, nút đủ lớn để thao tác, bảng thông số có thể cuộn ngang khi cần. Giảm các hiệu ứng trang trí để đảm bảo hiệu năng.\n\nĐảm bảo độ tương phản, nội dung dễ đọc, trạng thái focus rõ ràng và các nút có nhãn dễ hiểu.\n\n7. Yêu cầu kỹ thuật\n\nXây dựng website bằng cấu trúc component rõ ràng, dễ bảo trì.\n\nTách layout dùng chung, header, footer, navigation, gallery, CTA và các thành phần lặp lại.\n\nTổ chức nội dung từng trang độc lập, không nhồi toàn bộ website vào một component.\n\nRouting hoạt động thực tế, hỗ trợ truy cập trực tiếp từng trang.\n\nTối ưu kích thước ảnh, lazy-load hình ảnh bên dưới màn hình đầu tiên và tránh tải thư viện không cần thiết.\n\nĐảm bảo không có lỗi console nghiêm trọng, liên kết hỏng, nội dung tràn ngang hoặc nút không hoạt động.\n\nKhông thêm chức năng backend giả lập nếu không cần thiết.\n\nGiữ phong cách thiết kế nhất quán nhưng mỗi trang phải có bố cục phù hợp với nội dung riêng.",
+    "mood": "",
+    "reference": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-17T03:41:55.086Z",
+  "updatedAt": "2026-10-17T04:18:13.196Z",
+  "screen": "done",
+  "request": "Website Giowis thiệu xưởng cơ khí VOLTCRAFT INDUSTRIES",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\voltcraft-industries\\prototype",
+    "builtAt": "2026-10-17T04:17:51.397Z",
+    "pages": [
+      "index.html",
+      "about.html",
+      "automation.html",
+      "capabilities.html",
+      "contact.html",
+      "project-automated-assembly-system.html",
+      "project-precision-shaft.html",
+      "project-steel-frame.html",
+      "projects.html",
+      "quality.html",
+      "workshop.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "about.html": [],
+      "automation.html": [],
+      "capabilities.html": [],
+      "contact.html": [],
+      "project-automated-assembly-system.html": [],
+      "project-precision-shaft.html": [],
+      "project-steel-frame.html": [],
+      "projects.html": [],
+      "quality.html": [],
+      "workshop.html": []
+    }
+  },
+  "job": {
+    "id": "cf974bbd-12e0-409a-9fc4-440b0c0e1b74",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\voltcraft-industries\\prototype",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-17T04:18:13.123Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 33
+  }
+}

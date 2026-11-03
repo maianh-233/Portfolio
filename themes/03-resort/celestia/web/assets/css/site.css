@@ -1,0 +1,102 @@
+/* CELESTIA — biến màu / font chung + vài style Tailwind không làm được */
+:root {
+  --midnight: #202A43;
+  --midnight-deep: #161D30;
+  --lavender: #B7A8CC;
+  --lavender-deep: #6B5C88;
+  --pearl: #F7F4F1;
+  --rose: #D5B8B0;
+  --silver: #C9CBD3;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, serif;
+  --font-body: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ui-accent: #B7A8CC;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--pearl);
+  color: var(--midnight);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--lavender); color: var(--midnight); }
+
+/* Khung nội dung rộng dùng chung */
+.wrap {
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px) { .wrap { padding-inline: 2rem; } }
+@media (min-width: 1024px) { .wrap { padding-inline: 3rem; } }
+@media (min-width: 1536px) { .wrap { padding-inline: 4rem; } }
+
+/* Nhãn section: chữ in hoa nhỏ + đường chân trời mảnh */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: .9rem;
+  font-size: .75rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.label::before {
+  content: "";
+  width: 2.5rem;
+  height: 1px;
+  background: currentColor;
+  opacity: .55;
+}
+
+/* Quầng sáng Lavender — ý tưởng mặt trời bình minh */
+.halo {
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 50%, rgba(183,168,204,.85), rgba(183,168,204,.35) 45%, rgba(247,244,241,0) 70%);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+/* Gradient Lavender – Pearl rất nhẹ */
+.bg-veil {
+  background-image: linear-gradient(120deg, #F7F4F1 0%, #ECE6F2 38%, #F3EEF0 62%, #E7E0EE 100%);
+  background-size: 220% 220%;
+}
+
+/* Ảnh: tông mềm, nền dự phòng khi ảnh lỗi */
+.ph { background-color: #E4DEEA; }
+.photo { filter: saturate(.9) contrast(.98); }
+
+/* Hero: lớp phủ để chữ đọc rõ */
+.hero-shade {
+  background:
+    linear-gradient(180deg, rgba(22,29,48,.55) 0%, rgba(22,29,48,0) 26%),
+    linear-gradient(15deg, rgba(22,29,48,.78) 0%, rgba(32,42,67,.35) 45%, rgba(32,42,67,0) 75%);
+}
+
+/* Phóng chậm ảnh hero (Ken Burns rất nhẹ) */
+@keyframes slow-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+.slow-zoom { animation: slow-zoom 9s cubic-bezier(.16,1,.3,1) both; }
+
+/* Chỉ dẫn cuộn */
+@keyframes drift { 0%,100% { transform: translateY(0); opacity: .4; } 50% { transform: translateY(8px); opacity: 1; } }
+.drift { animation: drift 2.8s ease-in-out infinite; }
+
+/* Focus rõ ràng */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--lavender-deep);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.on-dark a:focus-visible, .on-dark button:focus-visible, header a:focus-visible, header button:focus-visible { outline-color: var(--lavender); }
+
+/* Ẩn thanh cuộn của dải ảnh kéo ngang */
+.no-bar { scrollbar-width: none; }
+.no-bar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .slow-zoom, .drift { animation: none !important; }
+}

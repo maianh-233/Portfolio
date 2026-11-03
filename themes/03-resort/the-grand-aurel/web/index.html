@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE GRAND AUREL — Dinh thự di sản châu Âu, nghỉ dưỡng vượt thời gian</title>
+<meta name="description" content="THE GRAND AUREL, resort cao cấp lấy cảm hứng từ dinh thự quý tộc và khu vườn hoàng gia châu Âu: kiến trúc di sản, phòng nghỉ cổ điển và nghệ thuật hiếu khách.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body data-title-en="THE GRAND AUREL — A European heritage residence, timeless retreat" data-desc-en="THE GRAND AUREL, a luxury resort inspired by European aristocratic residences and royal gardens: heritage architecture, classic suites and the art of hospitality.">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="group fixed inset-x-0 top-0 z-40 text-ivory transition-colors duration-500 [&.is-scrolled]:bg-ivory/95 [&.is-scrolled]:text-royal [&.is-scrolled]:shadow-[0_1px_0_rgba(182,154,98,.45)] [&.is-scrolled]:backdrop-blur-sm">
+  <div class="header-veil pointer-events-none absolute inset-0 -z-10 h-28"></div>
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 transition-all duration-500 sm:px-6 lg:px-10 2xl:px-16 group-[.is-scrolled]:h-16">
+    <a aria-current="page" href="index.html" class="flex items-center gap-3" aria-label="THE GRAND AUREL" data-en-aria="THE GRAND AUREL, home">
+      <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-gold font-display text-[15px] italic text-gold">GA</span>
+      <span class="text-[13px] font-medium tracking-crest sm:text-sm">THE GRAND AUREL</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 lg:flex" aria-label="Điều hướng chính" data-en-aria="Main navigation">
+      <a aria-current="page" href="index.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="pages/about.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Our Heritage">Di sản</a>
+      <a href="pages/stays.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Suites &amp; Villas</a>
+      <a href="pages/experiences.html" class="relative py-2 text-[13px] uppercase tracking-[0.2em] opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-palace hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <div class="hidden items-center border border-gold/60 text-xs tracking-[0.2em] sm:flex" role="group" aria-label="Ngôn ngữ" data-en-aria="Language">
+        <button type="button" data-lang="vi" class="min-h-[40px] px-3 opacity-70 transition duration-300 hover:opacity-100 [&.is-active]:bg-gold [&.is-active]:text-royal-deep [&.is-active]:opacity-100">VI</button>
+        <button type="button" data-lang="en" class="min-h-[40px] px-3 opacity-70 transition duration-300 hover:opacity-100 [&.is-active]:bg-gold [&.is-active]:text-royal-deep [&.is-active]:opacity-100">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center lg:hidden" aria-label="Mở menu" data-en-aria="Open menu">
+        <span class="flex w-6 flex-col gap-[6px]"><span class="h-px w-full bg-current"></span><span class="h-px w-4 bg-current"></span><span class="h-px w-full bg-current"></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-gold/60 bg-ivory p-8 text-royal shadow-[0_24px_60px_rgba(27,42,65,.25)] lg:hidden">
+    <div class="rule-ornament mb-6"><i></i></div>
+    <nav class="flex flex-col gap-1 font-display text-3xl" aria-label="Menu điện thoại" data-en-aria="Mobile menu">
+      <a aria-current="page" href="index.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Home">Trang chủ</a>
+      <a href="pages/about.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Our Heritage">Di sản</a>
+      <a href="pages/stays.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink">Suites &amp; Villas</a>
+      <a href="pages/experiences.html" class="py-2 aria-[current=page]:italic aria-[current=page]:text-gold-ink" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+    <div class="mt-8 flex items-center gap-3 text-xs tracking-[0.2em]">
+      <span class="text-espresso" data-en="Language">Ngôn ngữ</span>
+      <button type="button" data-lang="vi" class="min-h-[44px] border border-gold/60 px-4 [&.is-active]:bg-royal [&.is-active]:text-ivory">VI</button>
+      <button type="button" data-lang="en" class="min-h-[44px] border border-gold/60 px-4 [&.is-active]:bg-royal [&.is-active]:text-ivory">EN</button>
+    </div>
+  </div>
+</header>
+<!-- /@partial header -->
+<main>
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-cinematic" class="relative isolate min-h-[100dvh] overflow-hidden bg-royal-deep text-ivory">
+    <div data-parallax="0.12" class="absolute inset-x-0 -inset-y-[15%] -z-20">
+      <img src="https://images.unsplash.com/photo-1760458695992-b87db08d43bb?auto=format&fit=crop&w=2000&q=80" referrerpolicy="no-referrer" alt="Dinh thự cổ điển phía sau khu vườn kiểu Pháp với hàng cây cắt tỉa đối xứng" data-en-alt="Classical chateau behind a French formal garden with symmetrical clipped trees" class="h-full w-full object-cover saturate-[.9]" width="2000" height="1333">
+    </div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-royal-deep via-royal-deep/45 to-royal-deep/25"></div>
+    <div class="pointer-events-none absolute inset-3 border border-gold/50 sm:inset-6"></div>
+
+    <div class="mx-auto flex min-h-[100dvh] w-full max-w-screen-2xl flex-col items-center justify-end px-6 pb-16 pt-28 text-center sm:px-10 lg:px-16 lg:pb-20 2xl:px-24">
+      <p class="text-xs font-medium uppercase tracking-crest text-gold-pale" data-reveal="fade" data-en="European Heritage Resort">Khu nghỉ dưỡng di sản châu Âu</p>
+      <h1 data-split="words" class="mt-6 max-w-5xl font-display text-[clamp(2.9rem,7.4vw,7.5rem)] font-medium leading-[1.02] tracking-[-0.01em]" data-en="An Extraordinary Sense of Time">Một cảm thức phi thường về thời gian</h1>
+      <div class="rule-ornament mt-8 w-40 sm:w-56" data-reveal="fade"><i></i></div>
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-ivory/85 sm:text-lg" data-reveal="up" data-reveal-delay="250" data-en="The art of retreat in a European residence, where architecture, gardens and hospitality move at an unhurried pace.">Nghệ thuật nghỉ dưỡng trong một dinh thự châu Âu, nơi kiến trúc, khu vườn và lòng hiếu khách hòa cùng một nhịp chậm rãi.</p>
+      <a href="pages/about.html" data-reveal="up" data-reveal-delay="400" class="mt-10 inline-flex min-h-[52px] w-full items-center justify-center gap-3 border border-gold bg-gold px-9 text-[13px] font-medium uppercase tracking-[0.22em] text-royal-deep transition duration-300 hover:bg-transparent hover:text-ivory active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ivory sm:w-auto">
+        <span data-en="Discover Our Heritage">Khám phá di sản</span>
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- GIỚI THIỆU THƯƠNG HIỆU -->
+  <section id="intro" data-section="story-letter" class="bg-ivory py-24 lg:py-36">
+    <div class="mx-auto grid w-full max-w-screen-2xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+      <figure class="lg:col-span-5 lg:col-start-1">
+        <div class="frame-outer arch border-gold/60">
+          <div data-reveal="clip" class="frame arch relative aspect-[4/5] overflow-hidden bg-ivory-deep">
+            <img src="https://images.unsplash.com/photo-1784460843438-ff907f72dc3f?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Căn phòng trang trí cổ điển với ô cửa vòm nhìn ra cảnh quan" data-en-alt="Ornate classical room with an arched doorway opening onto the landscape" class="h-full w-full object-cover saturate-[.9]" width="1200" height="1500">
+          </div>
+        </div>
+        <figcaption class="mt-4 text-sm italic text-espresso" data-en="The arched doorway: a frame for every view.">Ô cửa vòm, khung tranh cho mọi khung cảnh.</figcaption>
+      </figure>
+
+      <div class="lg:col-span-6 lg:col-start-7 lg:pt-24">
+        <h2 data-split="words" class="font-display text-[clamp(2.4rem,4.6vw,4.75rem)] font-medium leading-[1.05] text-royal" data-en="Where architectural heritage meets the art of hospitality">Nơi di sản kiến trúc gặp gỡ nghệ thuật hiếu khách</h2>
+        <div class="rule-draw mt-10 h-px w-40 bg-gold" data-reveal="fade"></div>
+        <p class="mt-10 max-w-[56ch] text-lg leading-relaxed text-espresso" data-reveal="up" data-en="THE GRAND AUREL draws from aristocratic residences and royal gardens of Europe. Stone, wood and fabric are chosen with care, so that every stay feels like being welcomed into a home kept across generations.">THE GRAND AUREL lấy cảm hứng từ những dinh thự quý tộc và khu vườn hoàng gia châu Âu. Đá, gỗ và vải được chọn lựa kỹ lưỡng, để mỗi kỳ nghỉ giống như được đón tiếp trong một ngôi nhà gìn giữ qua nhiều thế hệ.</p>
+        <p class="mt-10 font-display text-2xl italic text-gold-ink" data-reveal="fade" data-en="Heritage. Craftsmanship. Hospitality.">Di sản. Thủ công. Hiếu khách.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KIẾN TRÚC -->
+  <section id="architecture" data-section="gallery-lookbook" class="paper py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid gap-10 lg:grid-cols-12">
+        <h2 data-split="words" class="font-display text-[clamp(2.4rem,5vw,5.25rem)] font-medium leading-[1.02] text-royal lg:col-span-7" data-en="A Legacy in Every Detail">Di sản trong từng chi tiết</h2>
+      </div>
+
+      <div class="mt-14 grid gap-6 lg:mt-20 lg:grid-cols-12 lg:gap-8">
+        <figure class="lg:col-span-7">
+          <div data-reveal="clip" class="frame relative aspect-[4/3] overflow-hidden bg-ivory-line lg:aspect-[7/6]">
+            <img src="https://images.unsplash.com/photo-1713291185595-9f0cbcedb15f?auto=format&fit=crop&w=1600&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Mặt tiền dinh thự đối xứng với đài phun nước phía trước" data-en-alt="Symmetrical residence facade with a fountain in front" class="h-full w-full object-cover object-bottom saturate-[.9]" width="1600" height="1370">
+          </div>
+          <figcaption class="mt-4 flex gap-4 text-sm text-espresso"><span class="text-gold-ink" aria-hidden="true">I.</span><span data-en="The facade: symmetry, tall windows and a fountain at the axis.">Mặt tiền: đối xứng, cửa sổ cao và đài phun nước nằm trên trục chính.</span></figcaption>
+        </figure>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1 lg:gap-8">
+          <p class="max-w-[46ch] text-lg leading-relaxed text-espresso sm:col-span-2 lg:col-span-1" data-reveal="up" data-en="Stone columns, marble staircases and high windows set the rhythm of every space. Each classical detail is kept for its proportion and its light, never for mere ornament.">Cột đá, cầu thang cẩm thạch và cửa sổ cao định nhịp cho từng không gian. Mỗi chi tiết cổ điển được giữ lại vì tỷ lệ và ánh sáng của nó, không chỉ để trang trí.</p>
+          <figure class="lg:ml-16">
+            <div data-reveal="clip" class="relative aspect-[4/5] overflow-hidden bg-ivory-line lg:aspect-[5/4]">
+              <img src="https://images.unsplash.com/photo-1767460775489-be2fd312eaf8?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Cầu thang cẩm thạch lớn bên trong cung điện dưới trần chạm trổ" data-en-alt="Grand marble staircase inside a palace beneath an ornate ceiling" class="h-full w-full object-cover saturate-[.9]" width="1000" height="800">
+            </div>
+            <figcaption class="mt-3 flex gap-4 text-sm text-espresso"><span class="text-gold-ink" aria-hidden="true">II.</span><span data-en="The marble staircase of the great hall.">Cầu thang cẩm thạch của đại sảnh.</span></figcaption>
+          </figure>
+          <figure class="lg:mr-24">
+            <div data-reveal="clip" class="relative aspect-[4/5] overflow-hidden bg-ivory-line lg:aspect-[4/3]">
+              <img src="https://images.unsplash.com/photo-1758820736219-8b4932f67918?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Cận cảnh đầu cột Ionic bằng đá trắng" data-en-alt="Close-up of a white stone Ionic capital" class="h-full w-full object-cover saturate-[.9]" width="1000" height="750">
+            </div>
+            <figcaption class="mt-3 flex gap-4 text-sm text-espresso"><span class="text-gold-ink" aria-hidden="true">III.</span><span data-en="An Ionic capital, carved in pale stone.">Đầu cột Ionic tạc từ đá sáng màu.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUITES & VILLAS -->
+  <section id="suites" data-section="teaser-row" class="bg-ivory py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="mx-auto max-w-5xl text-center">
+        <h2 data-split="words" class="font-display text-[clamp(2.4rem,4.8vw,5rem)] font-medium leading-[1.05] text-royal" data-en="A private collection of residences">Một bộ sưu tập không gian riêng</h2>
+        <div class="rule-ornament mx-auto mt-8 w-48"><i></i></div>
+      </div>
+
+      <div class="mt-16 grid gap-14 md:grid-cols-3 md:gap-8 lg:mt-24 lg:gap-12 2xl:gap-16" data-reveal-stagger="140">
+        <article class="group">
+          <a href="pages/stays.html#grand-suite" class="block">
+            <div class="frame-outer arch border-gold/60">
+              <div class="frame arch relative aspect-[3/4] overflow-hidden bg-ivory-deep">
+                <img src="https://images.unsplash.com/photo-1767050387941-b97f0d5a3232?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Phòng ngủ sang trọng với giường bốn cột và rèm vải cầu kỳ" data-en-alt="Luxurious bedroom with a four-poster bed and ornate drapery" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="1600">
+              </div>
+            </div>
+            <h3 class="mt-8 font-display text-4xl text-royal">Grand Suite</h3>
+            <p class="mt-3 max-w-[38ch] text-[17px] leading-relaxed text-espresso" data-en="Classic furnishings and warm tones, balancing modern comfort with a heritage design language.">Nội thất cổ điển, tông màu ấm, cân bằng giữa tiện nghi hiện đại và ngôn ngữ thiết kế di sản.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.2em] text-gold-ink"><span data-en="View suite">Xem hạng phòng</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></span>
+          </a>
+        </article>
+        <article class="group md:mt-24">
+          <a href="pages/stays.html#garden-residence" class="block">
+            <div class="frame-outer arch border-gold/60">
+              <div class="frame arch relative aspect-[3/4] overflow-hidden bg-ivory-deep">
+                <img src="https://images.unsplash.com/photo-1779505576192-803dd8c9b55a?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Góc tiếp khách thanh lịch với ghế bành bên cửa sổ đầy nắng" data-en-alt="Elegant sitting area with armchairs beside sunlit windows" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="1600">
+              </div>
+            </div>
+            <h3 class="mt-8 font-display text-4xl text-royal">Garden Residence</h3>
+            <p class="mt-3 max-w-[38ch] text-[17px] leading-relaxed text-espresso" data-en="Opening onto the garden, with natural materials and softened colours.">Không gian hướng ra khu vườn, vật liệu tự nhiên và màu sắc dịu nhẹ.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.2em] text-gold-ink"><span data-en="View residence">Xem hạng phòng</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></span>
+          </a>
+        </article>
+        <article class="group md:mt-10">
+          <a href="pages/stays.html#signature-villa" class="block">
+            <div class="frame-outer arch border-gold/60">
+              <div class="frame arch relative aspect-[3/4] overflow-hidden bg-ivory-deep">
+                <img src="https://images.unsplash.com/photo-1780245994710-23f2642c7403?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Phòng khách mang phong cách lịch sử với đồ nội thất cổ" data-en-alt="Historic living room with period furniture" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="1600">
+              </div>
+            </div>
+            <h3 class="mt-8 font-display text-4xl text-royal">Signature Villa</h3>
+            <p class="mt-3 max-w-[38ch] text-[17px] leading-relaxed text-espresso" data-en="A private retreat with a generous salon and carefully curated furnishings.">Không gian riêng tư, phòng khách rộng và những món nội thất được tuyển chọn.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.2em] text-gold-ink"><span data-en="View villa">Xem hạng phòng</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE ART OF LIVING -->
+  <section id="art-of-living" data-section="features-bento" class="bg-ivory-deep py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-split="words" class="max-w-4xl font-display text-[clamp(2.4rem,5vw,5.25rem)] font-medium leading-[1.02] text-royal" data-en="The Art of Living">Nghệ thuật sống</h2>
+
+      <div class="mt-14 grid gap-x-8 gap-y-14 lg:mt-20 lg:grid-cols-12" data-reveal-stagger="120">
+        <a href="pages/experiences.html#fine-dining" class="group block lg:col-span-7 lg:row-span-2">
+          <div class="relative aspect-[4/3] overflow-hidden bg-ivory-line lg:aspect-[6/5]">
+            <img src="https://images.unsplash.com/photo-1766832255363-c9f060ade8b0?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Bàn ăn được bày biện tinh tế trong nhà hàng ấm cúng" data-en-alt="Finely laid dining tables in a warm restaurant" class="h-full w-full object-cover object-bottom saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="1000">
+          </div>
+          <div class="mt-6 flex items-start justify-between gap-6">
+            <div>
+              <h3 class="font-display text-4xl text-royal">Fine Dining</h3>
+              <p class="mt-2 max-w-[48ch] text-[17px] leading-relaxed text-espresso" data-en="European cuisine served beneath chandeliers, at tables laid with quiet precision.">Ẩm thực châu Âu dưới ánh đèn chùm, trên những bàn tiệc được bày biện tỉ mỉ.</p>
+            </div>
+            <span aria-hidden="true" class="mt-3 text-xl text-gold-ink transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+          </div>
+        </a>
+
+        <a href="pages/experiences.html#wellness" class="group block lg:col-span-5">
+          <div class="relative aspect-[16/10] overflow-hidden bg-ivory-line">
+            <img src="https://images.unsplash.com/photo-1781795035627-fa93f2863bba?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Bồn tắm đồng giữa không gian kiến trúc đá ấm áp" data-en-alt="Copper bathtub within warm stone architecture" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1200" height="750">
+          </div>
+          <h3 class="mt-6 font-display text-3xl text-royal">Palace Spa</h3>
+          <p class="mt-2 max-w-[44ch] text-[17px] leading-relaxed text-espresso" data-en="Natural stone, warm light and rituals of rest.">Đá tự nhiên, ánh sáng ấm và những nghi thức thư giãn.</p>
+        </a>
+
+        <a href="pages/experiences.html#royal-garden" class="group grid gap-6 bg-forest p-5 text-ivory sm:grid-cols-2 sm:items-end lg:col-span-5 lg:p-6">
+          <div class="relative aspect-square overflow-hidden bg-forest-deep">
+            <img src="https://images.unsplash.com/photo-1776696123814-5f9c8fd67424?auto=format&fit=crop&w=1200&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Khu vườn kiểu Pháp với các luống hoa văn cắt tỉa" data-en-alt="French formal garden with clipped parterre patterns" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1000" height="1000">
+          </div>
+          <div class="pb-2">
+            <h3 class="font-display text-3xl">Royal Garden</h3>
+            <p class="mt-2 text-[16px] leading-relaxed text-ivory/85" data-en="Symmetrical paths, clipped hedges and the sound of fountains.">Lối đi đối xứng, hàng cây cắt tỉa và tiếng đài phun nước.</p>
+          </div>
+        </a>
+
+        <a href="pages/experiences.html#wellness" class="group grid items-center gap-8 lg:col-span-12 lg:grid-cols-12">
+          <div class="relative aspect-[16/9] overflow-hidden bg-ivory-line lg:col-span-8 lg:aspect-[21/9]">
+            <img src="https://images.unsplash.com/photo-1780245992686-1f5c341655c2?auto=format&fit=crop&w=1600&q=80" referrerpolicy="no-referrer" loading="lazy" alt="Phòng khách cổ điển với lò sưởi, ghế bành và bộ ấm trà" data-en-alt="Antique parlour with a fireplace, armchairs and a tea set" class="h-full w-full object-cover saturate-[.9] transition-transform duration-[1200ms] ease-palace group-hover:scale-[1.04]" width="1600" height="686">
+          </div>
+          <div class="lg:col-span-4">
+            <h3 class="font-display text-4xl text-royal">Heritage Lounge</h3>
+            <p class="mt-3 max-w-[40ch] text-[17px] leading-relaxed text-espresso" data-en="Tea by the fireplace, upholstered chairs and long, unhurried evenings.">Thưởng trà bên lò sưởi, ghế bọc vải và những buổi tối dài không vội vã.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STATEMENT -->
+  <section id="statement" data-section="quote-full" class="relative overflow-hidden bg-royal py-28 text-ivory lg:py-44" data-particles="dust" data-particles-color="#D9C9A3" data-particles-density="0.6">
+    <div class="pointer-events-none absolute inset-4 border border-gold/30 sm:inset-8"></div>
+    <div class="relative z-10 mx-auto flex w-full max-w-screen-2xl flex-col items-center px-6 text-center sm:px-10 lg:px-16">
+      <div data-float="6">
+        <span class="grid h-16 w-16 place-items-center rounded-full border border-gold font-display text-2xl italic text-gold">GA</span>
+      </div>
+      <p class="mt-8 text-xs font-medium uppercase tracking-crest text-gold-pale" data-en="Our philosophy">Triết lý của chúng tôi</p>
+      <h2 data-split="words" class="mt-6 max-w-5xl font-display text-[clamp(3rem,8vw,8.5rem)] font-medium leading-[1] text-ivory" data-en="Elegance Beyond Time">Thanh lịch vượt thời gian</h2>
+      <div class="rule-draw rule-center mt-10 h-px w-full max-w-md bg-gold" data-reveal="fade"></div>
+      <p class="mt-10 max-w-2xl text-lg leading-relaxed text-ivory/85" data-reveal="up" data-en="We believe a true retreat rests on three things: respect for heritage, care in every detail and hospitality that is quiet yet attentive.">Chúng tôi tin rằng một kỳ nghỉ đích thực dựa trên ba điều: sự trân trọng di sản, sự tinh tế trong từng chi tiết và lòng hiếu khách lặng lẽ mà chu đáo.</p>
+      <a href="mailto:concierge@thegrandaurel.com" data-reveal="up" class="mt-12 inline-flex min-h-[52px] w-full items-center justify-center gap-3 border border-gold px-9 text-[13px] font-medium uppercase tracking-[0.22em] text-ivory transition duration-300 hover:bg-gold hover:text-royal-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ivory sm:w-auto">
+        <span data-en="Write to our concierge">Viết thư cho concierge</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="relative overflow-hidden bg-royal-deep text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <a aria-current="page" href="index.html" class="inline-flex items-center gap-3">
+          <span class="grid h-12 w-12 place-items-center rounded-full border border-gold font-display text-lg italic text-gold">GA</span>
+          <span class="text-sm font-medium tracking-crest">THE GRAND AUREL</span>
+        </a>
+        <p class="mt-6 max-w-sm font-display text-2xl leading-snug text-ivory/90" data-en="A European residence for those who wish to slow down and live gracefully.">Một dinh thự châu Âu dành cho những ai muốn sống chậm và sống đẹp.</p>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-xs uppercase tracking-[0.24em] text-gold" data-en="Explore">Khám phá</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-ivory/80">
+          <li><a aria-current="page" href="index.html" class="transition-colors duration-300 hover:text-gold" data-en="Home">Trang chủ</a></li>
+          <li><a href="pages/about.html" class="transition-colors duration-300 hover:text-gold" data-en="Our Heritage">Di sản</a></li>
+          <li><a href="pages/stays.html" class="transition-colors duration-300 hover:text-gold">Suites &amp; Villas</a></li>
+          <li><a href="pages/experiences.html" class="transition-colors duration-300 hover:text-gold" data-en="Experiences">Trải nghiệm</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-xs uppercase tracking-[0.24em] text-gold" data-en="Contact (sample)">Liên hệ (mẫu)</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-ivory/80">
+          <li data-en="Aurel Estate, a fictional address for illustration">Dinh thự Aurel, địa chỉ minh họa</li>
+          <li><a href="tel:+842838229140" class="transition-colors duration-300 hover:text-gold">+84 28 3822 9140</a></li>
+          <li><a href="mailto:concierge@thegrandaurel.com" class="break-words transition-colors duration-300 hover:text-gold">concierge@thegrandaurel.com</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-xs uppercase tracking-[0.24em] text-gold" data-en="Follow">Theo dõi</p>
+        <ul class="mt-5 space-y-3 text-[15px] text-ivory/80">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-gold">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-gold">Facebook</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-gold">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule-ornament mt-16"><i></i></div>
+    <p class="select-none pt-8 text-center font-display whitespace-nowrap text-[clamp(2rem,8.4vw,10rem)] leading-none tracking-[0.02em] text-ivory/90">THE GRAND AUREL</p>
+    <div class="flex flex-col gap-3 border-t border-gold/30 py-8 text-sm text-ivory/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 THE GRAND AUREL.</p>
+      <p data-en="Contact details are samples for this brand presentation.">Thông tin liên hệ mang tính minh họa cho bản giới thiệu thương hiệu.</p>
+      <a href="#top" class="transition-colors duration-300 hover:text-gold" data-en="Back to top">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

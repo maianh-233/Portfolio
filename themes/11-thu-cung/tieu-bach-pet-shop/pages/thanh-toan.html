@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thanh toán · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-BOOK-002" data-module="BOOK" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-BOOK-002 Thanh toán 3 bước: (1) Người nhận & địa chỉ → (2) Giao hàng, mã giảm giá & cách trả tiền → (3) Xem lại & đặt hàng.
+   * Tạo DOC-BOOK-ORDER ở trạng thái Workflow.initial (NEW), mã DH-{YYYY}-{00000}; làm trống giỏ; ghi lượt dùng mã → SCR-BOOK-004. */
+  (function () {
+    var role = Perm.role();
+    if (!role || role === 'ROLE-01') { location.replace(App.loginHref('thanh-toan')); return; }
+    if (role === 'ROLE-02' && !App.cart.lines().length) { location.replace(Perm.url('pages/gio-hang.html?trong=1')); return; }
+
+    Layout.mount({ title: 'Thanh toán', breadcrumb: [['Giỏ hàng', 'pages/gio-hang.html'], ['Thanh toán']] }, function (main) {
+      var U = Perm.url, esc = UI.esc, ic = UI.icon, S = MOCK.settings, cart = App.cart, R = UI.rules;
+      var cus = App.customer(), me = App.me();
+      var addrs = DemoStore.list('addresses').filter(function (a) { return a.customerId === cus.id; });
+      var def = addrs.filter(function (a) { return a.mac_dinh; })[0] || addrs[0];
+      var st = {
+        step: 1, ho_ten: cus.ho_ten, sdt: cus.so_dien_thoai, email: cus.email, cach_nhan: 'GIAO', addrId: def ? def.id : 'new',
+        newAddr: { tinh: 'TP. Hồ Chí Minh', quan: '', phuong: '', chi_tiet: '', luu: true }, ghi_chu: '', pay: '', voucher: null, ship: null
+      };
+      var LABELS = ['Người nhận & địa chỉ', 'Giao hàng & thanh toán', 'Xem lại & đặt hàng'];
+
+      main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-6 pt-5 md:px-6 lg:px-8">' +
+        '<div class="mb-5 flex flex-wrap items-center justify-between gap-3"><h1 class="text-3xl font-extrabold text-neutral-800">Thanh toán</h1><span class="inline-flex items-center gap-1.5 text-sm font-bold text-success-700">' + ic('shield-check', 'size-4') + 'Thanh toán an toàn</span></div>' +
+        '<div class="mb-6 rounded-xl border border-neutral-200 bg-white p-4" data-stepper></div>' +
+        '<div class="mb-4 lg:hidden" data-sum-m></div>' +
+        '<div class="grid gap-6 lg:grid-cols-12"><form novalidate class="lg:col-span-7 min-w-0" data-form>' + UI.skeleton(6) + '</form>' +
+        '<aside class="hidden lg:block lg:col-span-5"><div class="sticky top-24" data-sum></div></aside></div></div>');
+      var form = main.querySelector('[data-form]');
+
+      /* ---------- Tính toán ---------- */
+      function addrOf() {
+        if (st.cach_nhan === 'TU_LAY') return null;
+        if (st.addrId !== 'new') return addrs.filter(function (a) { return a.id === st.addrId; })[0];
+        return { nguoi_nhan: st.ho_ten, tinh: st.newAddr.tinh, quan: st.newAddr.quan, phuong: st.newAddr.phuong, chi_tiet: st.newAddr.chi_tiet };
+      }
+      function addrText(a) { return a ? [a.chi_tiet, a.phuong, a.quan, a.tinh].filter(Boolean).join(', ') : ''; }
+      /** FR-BOOK-002: tự lấy / 3 quận tự giao miễn phí / ≥ 400.000đ cửa hàng chịu / còn lại theo ĐVVC */
+      function calcShip() {
+        var sub = cart.subtotal();
+        if (st.cach_nhan === 'TU_LAY') return { mode: 'TU_LAY', fee: 0, label: 'Nhận tại cửa hàng', note: 'Miễn phí' };
+        var a = addrOf(), q = a ? a.quan : '';
+        if (a && a.tinh === 'TP. Hồ Chí Minh' && S.freeDistricts.indexOf(q) >= 0) return { mode: 'TU_GIAO', fee: 0, label: 'Cửa hàng tự giao (' + S.freeDistricts.join(', ') + ')', note: 'Miễn phí', quan: q };
+        if (sub >= S.freeShip) return { mode: 'DVVC', fee: 0, free: true, label: 'Giao qua đơn vị vận chuyển', note: 'Cửa hàng chịu phí ship', quan: q };
+        var fee = a && a.tinh !== 'TP. Hồ Chí Minh' ? 45000 : 32000;
+        return { mode: 'DVVC', fee: fee, label: 'Giao qua đơn vị vận chuyển (' + S.carriers[0] + ')', note: UI.fmt.money(fee), quan: q };
+      }
+      function discount() {
+        var v = st.voucher; if (!v) return 0;
+        var sub = cart.subtotal();
+        if (v.kieu === 'PHAN_TRAM') return Math.min(Math.round(sub * v.gia_tri / 100), v.toi_da || 1e12);
+        if (v.kieu === 'SHIP') return Math.min(v.gia_tri, st.ship ? st.ship.fee : 0);
+        return Math.min(v.gia_tri, sub);
+      }
+      function totals() { var sub = cart.subtotal(), d = discount(), fee = st.ship ? st.ship.fee : 0; return { sub: sub, d: d, fee: fee, total: Math.max(0, sub - d + fee) }; }
+
+      /** FR-PROMO-003: kiểm tra mã (PROMO-E02…E05) → voucher | thông báo lỗi */
+      function checkCode(code) {
+        code = String(code || '').trim().toUpperCase();
+        if (!/^[A-Z0-9-]{4,20}$/.test(code)) return 'Mã giảm giá không hợp lệ';
+        var v = DemoStore.list('vouchers').filter(function (x) { return x.ma && x.ma.toUpperCase() === code && x.loai !== 'MAU_DOI_DIEM'; })[0];
+        if (!v || v.trang_thai !== 'BAT' || (v.loai === 'VOUCHER_KHACH' && v.customerId !== cus.id)) return 'Mã giảm giá không hợp lệ';
+        var now = new Date();
+        if ((v.bat_dau && new Date(v.bat_dau) > now) || new Date(v.ket_thuc) < now) return 'Mã giảm giá đã hết hạn hoặc chưa đến thời gian áp dụng';
+        if (v.loai === 'VOUCHER_KHACH' ? v.used : DemoStore.list('voucherUsage').some(function (u) { return u.ma === v.ma && u.customerId === cus.id; })) return 'Bạn đã sử dụng mã này';
+        if (v.tong_luot != null && v.da_dung >= v.tong_luot) return 'Mã giảm giá không hợp lệ';
+        if (v.don_toi_thieu && cart.subtotal() < v.don_toi_thieu) return 'Đơn hàng cần tối thiểu ' + UI.fmt.money(v.don_toi_thieu) + ' để dùng mã này';
+        return v;
+      }
+
+      /* ---------- Tóm tắt ---------- */
+      function paintSummary() {
+        var t = totals(), n = cart.count();
+        var o = {
+          title: 'Tóm tắt đơn',
+          headExtra: '<div class="mb-3 flex items-center justify-between text-sm"><span class="font-bold text-neutral-800">' + n + ' sản phẩm</span>' + UI.button({ label: 'Sửa giỏ', variant: 'link', size: 'sm', href: U('pages/gio-hang.html') }) + '</div>' +
+            '<ul class="mb-4 flex flex-col gap-2">' + cart.lines().slice(0, 4).map(function (l) { return '<li class="flex items-center gap-3"><span class="size-10 shrink-0 overflow-hidden rounded-md bg-neutral-100">' + UI.img({ src: l.img, alt: '' }) + '</span><span class="min-w-0 flex-1 truncate text-sm text-neutral-700">' + esc(l.name) + ' <span class="text-neutral-500">× ' + l.qty + '</span></span><span class="text-sm font-bold tabular-nums">' + UI.fmt.money(l.total) + '</span></li>'; }).join('') +
+            (cart.lines().length > 4 ? '<li class="text-xs text-neutral-600">và ' + (cart.lines().length - 4) + ' sản phẩm khác</li>' : '') + '</ul>',
+          rows: [
+            { label: 'Tạm tính', value: UI.fmt.money(t.sub) },
+            st.voucher ? { label: 'Giảm giá (' + st.voucher.ma + ')', value: '−' + UI.fmt.money(t.d), tone: 'success' } : { label: 'Giảm giá', value: '0đ' },
+            { label: 'Phí giao hàng', value: st.ship ? (st.ship.fee ? UI.fmt.money(st.ship.fee) : '0đ <span class="font-semibold text-success-700">(' + esc(st.ship.note) + ')</span>') : '<span class="font-semibold text-neutral-600">Tính sau bước 1</span>' }
+          ],
+          total: t.total, points: '+' + UI.fmt.number(App.points(t.total)) + ' điểm khi đơn giao thành công'
+        };
+        main.querySelector('[data-sum]').innerHTML = UI.orderSummary(o);
+        o.collapsible = true; main.querySelector('[data-sum-m]').innerHTML = UI.orderSummary(o);
+      }
+
+      /* ---------- Bước 1 ---------- */
+      function addrFields() {
+        var A = st.newAddr, L = MOCK.locations;
+        var quans = A.tinh ? Object.keys(L[A.tinh] || {}) : [], phuongs = A.tinh && A.quan ? (L[A.tinh][A.quan] || []) : [];
+        return '<div class="grid gap-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 lg:grid-cols-2" data-new-addr>' +
+          UI.field({ name: 'tinh', label: 'Tỉnh / thành', type: 'select', required: true, placeholder: 'Chọn tỉnh / thành', options: Object.keys(L), value: A.tinh }) +
+          UI.field({ name: 'quan', label: 'Quận / huyện', type: 'select', required: true, placeholder: 'Chọn quận / huyện', options: quans, value: A.quan, disabled: !A.tinh }) +
+          UI.field({ name: 'phuong', label: 'Phường / xã', type: 'select', required: true, placeholder: 'Chọn phường / xã', options: phuongs, value: A.phuong, disabled: !A.quan }) +
+          UI.field({ name: 'chi_tiet', label: 'Số nhà, đường', required: true, placeholder: 'Ví dụ: 12 Hoàng Văn Thụ', value: A.chi_tiet, maxlength: 200 }) +
+          UI.field({ name: 'luu', type: 'checkbox', label: 'Lưu vào sổ địa chỉ', value: A.luu, cls: 'lg:col-span-2' }) + '</div>';
+      }
+      function step1() {
+        var opts = addrs.map(function (a) { return { value: a.id, label: a.nguoi_nhan + ' · ' + a.so_dien_thoai + (a.mac_dinh ? ' (mặc định)' : ''), desc: esc(addrText(a)) }; }).concat([{ value: 'new', label: '+ Thêm địa chỉ mới', desc: 'Nhập tỉnh / thành, quận / huyện, phường / xã, số nhà' }]);
+        return '<div class="flex flex-col gap-6"><div data-form-summary></div>' +
+          UI.card({ body: UI.fieldGroup({ title: 'Người nhận', columns: 2, fields: [
+            UI.field({ name: 'ho_ten', label: 'Họ tên người nhận', required: true, value: st.ho_ten, maxlength: 100, autocomplete: 'name', cls: 'lg:col-span-2' }),
+            UI.field({ name: 'sdt', label: 'Số điện thoại', type: 'tel', required: true, value: st.sdt, maxlength: 10, autocomplete: 'tel' }),
+            UI.field({ name: 'email', label: 'Email', type: 'email', required: true, value: st.email, autocomplete: 'email' })] }) }) +
+          UI.card({ body: UI.fieldGroup({ title: 'Cách nhận hàng', fields: [
+            UI.field({ name: 'cach_nhan', type: 'radio-cards', value: st.cach_nhan, options: [{ value: 'GIAO', label: 'Giao tận nơi', icon: 'truck', desc: 'Miễn phí ở ' + S.freeDistricts.join(', ') + ' hoặc đơn từ ' + UI.fmt.money(S.freeShip) }, { value: 'TU_LAY', label: 'Nhận tại cửa hàng', icon: 'store', desc: 'Miễn phí, lấy hàng khi cửa hàng báo' }] }),
+            '<div data-pickup class="' + (st.cach_nhan === 'TU_LAY' ? '' : 'hidden') + ' rounded-lg bg-secondary-50 p-4">' + UI.storeInfo(S, 'compact') + '</div>',
+            '<div data-addr class="' + (st.cach_nhan === 'TU_LAY' ? 'hidden' : '') + ' flex flex-col gap-3">' + UI.field({ name: 'addr', label: 'Địa chỉ giao hàng', type: 'radio-cards', cols: 1, required: true, value: st.addrId, options: opts }) +
+            '<div data-addr-new class="' + (st.addrId === 'new' ? '' : 'hidden') + '">' + addrFields() + '</div></div>'] }) }) +
+          UI.card({ body: UI.field({ name: 'ghi_chu', label: 'Ghi chú cho cửa hàng', type: 'textarea', required: true, rows: 3, maxlength: 500, value: st.ghi_chu, placeholder: 'Ví dụ: giao giờ hành chính, gọi trước khi giao', hint: 'Cửa hàng đang xác nhận ghi chú có bắt buộc hay không.' }) }) +
+          '<div class="flex justify-end">' + UI.button({ label: 'Tiếp tục', iconRight: 'arrow-right', size: 'lg', attrs: { 'data-next': '' } }) + '</div></div>';
+      }
+      var rules1 = {
+        ho_ten: [R.required('Vui lòng nhập Họ tên người nhận'), R.len(2, 100, 'Vui lòng nhập Họ tên người nhận')],
+        sdt: [R.required('Vui lòng nhập Số điện thoại'), R.phone('Số điện thoại không hợp lệ')],
+        email: [R.required('Vui lòng nhập Email'), R.email('Email không hợp lệ')],
+        ghi_chu: [R.required('Vui lòng nhập Ghi chú')]
+      };
+      function rulesNewAddr() {
+        if (st.cach_nhan === 'TU_LAY' || st.addrId !== 'new') return {};
+        var m = 'Vui lòng nhập Địa chỉ giao hàng';
+        return { tinh: [R.required(m)], quan: [R.required(m)], phuong: [R.required(m)], chi_tiet: [R.required(m)] };
+      }
+      function readStep1() {
+        var d = UI.formData(form);
+        st.ho_ten = d.ho_ten; st.sdt = d.sdt; st.email = d.email; st.ghi_chu = d.ghi_chu; st.cach_nhan = d.cach_nhan || 'GIAO'; st.addrId = d.addr || st.addrId;
+        if (form.querySelector('[data-new-addr]')) { st.newAddr = { tinh: d.tinh, quan: d.quan, phuong: d.phuong, chi_tiet: d.chi_tiet, luu: d.luu }; }
+      }
+
+      /* ---------- Bước 2 ---------- */
+      function myVouchers() { return DemoStore.list('vouchers').filter(function (v) { return v.loai === 'VOUCHER_KHACH' && v.customerId === cus.id && !v.used && new Date(v.ket_thuc) > new Date(); }); }
+      function step2() {
+        var vs = myVouchers();
+        var shipBox = '<div data-ship>' + UI.skeleton(2) + '</div>';
+        var applied = st.voucher ? '<div class="flex flex-wrap items-center justify-between gap-2 rounded-lg bg-success-50 px-4 py-3 text-sm font-bold text-success-700"><span class="inline-flex items-center gap-2">' + ic('circle-check', 'size-4') + esc(st.voucher.ma) + ' · Giảm ' + UI.fmt.money(discount()) + '</span>' + UI.button({ label: 'Bỏ mã', variant: 'link', size: 'sm', attrs: { 'data-unapply': '' } }) + '</div>' : '';
+        return '<div class="flex flex-col gap-6"><div data-form-summary></div>' +
+          UI.card({ title: 'Phí giao hàng', body: shipBox }) +
+          UI.card({ title: 'Mã giảm giá', body: '<div class="flex flex-col gap-4">' + applied +
+            '<div class="flex items-start gap-2"><div class="min-w-0 flex-1">' + UI.field({ name: 'ma', label: '', placeholder: 'Nhập mã, ví dụ TIEUBACH20K', upper: true, maxlength: 20, attrs: { 'aria-label': 'Mã giảm giá' } }) + '</div>' + UI.button({ label: 'Áp dụng', variant: 'secondary', attrs: { 'data-apply': '' } }) + '</div>' +
+            (vs.length ? '<div><p class="mb-2 text-sm font-bold text-neutral-800">Voucher của tôi</p><div class="grid gap-3 px-2 sm:grid-cols-2">' + vs.map(function (v) {
+              var on = st.voucher && st.voucher.id === v.id;
+              return UI.voucherCard({ value: v.kieu === 'SHIP' ? 'Free' : UI.fmt.compact(v.gia_tri), unit: v.kieu === 'SHIP' ? 'ship' : 'giảm', title: v.ten, cond: v.don_toi_thieu ? 'Đơn từ ' + UI.fmt.money(v.don_toi_thieu) : 'Mọi đơn', expires: UI.fmt.date(v.ket_thuc), code: v.ma, state: 'available',
+                action: UI.button({ label: on ? 'Đang dùng' : 'Dùng', size: 'sm', variant: on ? 'secondary' : 'outline', disabled: on, attrs: { 'data-use-v': v.ma } }) });
+            }).join('') + '</div></div>' : '') + '</div>' }) +
+          UI.card({ body: UI.field({ name: 'pay', label: 'Cách thanh toán', type: 'radio-cards', required: true, cols: 1, value: st.pay, options: [
+            { value: 'COD', label: 'Thanh toán khi nhận hàng (COD)', icon: 'banknote', desc: 'Trả tiền mặt cho người giao hàng' },
+            { value: 'CHUYEN_KHOAN', label: 'Chuyển khoản ngân hàng', icon: 'landmark', desc: 'Thông tin chuyển khoản hiện sau khi đặt hàng' },
+            { value: 'QR', label: 'Quét mã QR', icon: 'scan-barcode', desc: 'Thông tin chuyển khoản hiện sau khi đặt hàng' }] }) }) +
+          '<div class="flex items-center justify-between gap-3">' + UI.button({ label: 'Quay lại', icon: 'arrow-left', variant: 'ghost', attrs: { 'data-back': '' } }) + UI.button({ label: 'Tiếp tục', iconRight: 'arrow-right', size: 'lg', attrs: { 'data-next': '' } }) + '</div></div>';
+      }
+      function paintShip() {
+        var box = form.querySelector('[data-ship]'); if (!box) return;
+        box.innerHTML = UI.skeleton(2);
+        setTimeout(function () {
+          try { st.ship = calcShip(); } catch (e) { st.ship = null; }
+          if (!st.ship) { box.innerHTML = UI.alert({ tone: 'danger', text: 'Chưa tính được phí giao hàng, vui lòng thử lại hoặc chọn nhận tại cửa hàng', actions: UI.button({ label: 'Thử lại', size: 'sm', variant: 'outline', attrs: { 'data-ship-retry': '' } }) }); paintSummary(); return; }
+          box.innerHTML = '<div class="flex items-center gap-3"><span class="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-secondary-100 text-secondary-700">' + ic(st.ship.mode === 'TU_LAY' ? 'store' : 'truck') + '</span><div class="min-w-0 flex-1"><p class="font-bold text-neutral-800">' + esc(st.ship.label) + '</p>' +
+            (st.ship.mode !== 'TU_LAY' ? '<p class="text-sm text-neutral-600 break-words">' + esc(addrText(addrOf())) + '</p>' : '') + '</div><span class="text-base font-extrabold ' + (st.ship.fee ? 'text-neutral-800' : 'text-success-700') + '">' + esc(st.ship.note) + '</span></div>';
+          paintSummary();
+        }, 500);
+      }
+
+      /* ---------- Bước 3 ---------- */
+      function step3() {
+        var a = addrOf();
+        var recv = UI.descriptionList([{ label: 'Họ tên', value: esc(st.ho_ten) }, { label: 'Số điện thoại', value: esc(st.sdt) }, { label: 'Email', value: esc(st.email) },
+          { label: 'Cách nhận', value: st.cach_nhan === 'TU_LAY' ? 'Nhận tại cửa hàng' : 'Giao tận nơi' }, st.cach_nhan === 'TU_LAY' ? { label: 'Địa chỉ cửa hàng', value: esc(S.address), full: true } : { label: 'Địa chỉ giao hàng', value: esc(addrText(a)), full: true },
+          { label: 'Ghi chú', value: esc(st.ghi_chu), full: true }]);
+        var pay = UI.descriptionList([{ label: 'Giao hàng', value: esc(st.ship.label) + ' · ' + esc(st.ship.note) }, { label: 'Cách thanh toán', value: App.PAY_METHOD[st.pay] }, { label: 'Mã giảm giá', value: st.voucher ? esc(st.voucher.ma) + ' (−' + UI.fmt.money(discount()) + ')' : 'Không dùng' }]);
+        return '<div class="flex flex-col gap-6">' +
+          UI.card({ title: 'Người nhận', actions: UI.button({ label: 'Sửa', icon: 'pencil', variant: 'ghost', size: 'sm', attrs: { 'data-go': '1' } }), body: recv }) +
+          UI.card({ title: 'Giao hàng & thanh toán', actions: UI.button({ label: 'Sửa', icon: 'pencil', variant: 'ghost', size: 'sm', attrs: { 'data-go': '2' } }), body: pay }) +
+          UI.card({ title: 'Sản phẩm', body: '<div data-items></div>' }) +
+          '<div class="flex items-center justify-between gap-3">' + UI.button({ label: 'Quay lại', icon: 'arrow-left', variant: 'ghost', attrs: { 'data-back': '' } }) + UI.button({ label: 'Đặt hàng', size: 'lg', icon: 'circle-check', attrs: { 'data-place': '', 'data-permission': 'BOOK.MY_ORDER.CREATE' } }) + '</div></div>';
+      }
+
+      /* ---------- Vẽ theo bước ---------- */
+      function paint() {
+        main.querySelector('[data-stepper]').innerHTML = UI.checkoutStepper(st.step, LABELS);
+        form.innerHTML = st.step === 1 ? step1() : st.step === 2 ? step2() : step3();
+        if (st.step === 1) UI.validate.live(form, rules1);
+        if (st.step === 2) paintShip();
+        if (st.step === 3) UI.lineItems(form.querySelector('[data-items]'), { rows: cart.lines(), columns: [
+          { key: 'img', label: 'Ảnh', type: 'custom', width: 'w-16', render: function (l) { return '<span class="hidden size-12 overflow-hidden rounded-md bg-neutral-100 md:block">' + UI.img({ src: l.img, alt: '' }) + '</span>'; } },
+          { key: 'name', label: 'Sản phẩm', type: 'custom', render: function (l) { return '<p class="font-bold text-neutral-800">' + esc(l.name) + '</p><p class="text-xs text-neutral-600">' + esc(l.variant) + '</p>'; } },
+          { key: 'qty', label: 'Số lượng', type: 'custom', align: 'right', render: function (l) { return '× ' + l.qty; } },
+          { key: 'total', label: 'Thành tiền', type: 'custom', align: 'right', render: function (l) { return '<b>' + UI.fmt.money(l.total) + '</b>'; } }] });
+        paintSummary();
+        var t = totals();
+        var nextBtn = form.querySelector('[data-next],[data-place]');
+        UI.stickyBar('<div class="flex items-center gap-3"><div class="flex-1"><p class="text-xs text-neutral-600">Tổng cộng</p><p class="text-lg font-extrabold tabular-nums">' + UI.fmt.money(t.total) + '</p></div>' +
+          (st.step === 3 ? UI.button({ label: 'Đặt hàng', attrs: { 'data-place': '' } }) : UI.button({ label: 'Tiếp tục', iconRight: 'arrow-right', attrs: { 'data-next': '' } })) + '</div>', { watch: nextBtn });
+        window.scrollTo({ top: 0, behavior: UI.reducedMotion() ? 'auto' : 'smooth' });
+      }
+
+      function next() {
+        if (st.step === 1) {
+          var rules = Object.assign({}, rules1, rulesNewAddr());
+          readStep1();
+          if (!UI.validate(form, rules)) return;
+          st.ship = null; st.step = 2; paint(); return;
+        }
+        if (st.step === 2) {
+          st.pay = (UI.formData(form).pay) || '';
+          if (!st.ship) { UI.toast('Chưa tính được phí giao hàng, vui lòng thử lại hoặc chọn nhận tại cửa hàng', 'error'); return; }
+          if (!st.pay) { UI.setError(form, 'pay', 'Vui lòng chọn cách thanh toán'); form.querySelector('[data-field="pay"]').scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
+          st.step = 3; paint();
+        }
+      }
+      function place(btn) {
+        // Kiểm tra lại tồn / giá / mã trước khi tạo đơn (BOOK-E04)
+        var bad = cart.lines().filter(function (l) { return l.out || /Chỉ còn/.test(l.error); })[0];
+        if (bad) { UI.toast('Sản phẩm ' + bad.name + ' vừa hết hàng', 'error'); setTimeout(function () { location.href = U('pages/gio-hang.html'); }, 1200); return; }
+        if (st.voucher && typeof checkCode(st.voucher.ma) === 'string') { UI.toast(checkCode(st.voucher.ma), 'error'); st.voucher = null; st.step = 2; paint(); return; }
+        UI.setLoading(btn, true);
+        setTimeout(function () {
+          var orders = DemoStore.list('orders'), t = totals(), a = addrOf(), now = new Date().toISOString(), doc = 'DOC-BOOK-ORDER';
+          var code = Workflow.nextCode(doc, orders.map(function (o) { return o.code; }));
+          var items = cart.lines().map(function (l) {
+            return l.kind === 'combo' ? { comboId: l.ref.id, ten_hang: l.name, ten_bien_the: 'Combo', don_gia: l.price, so_luong: l.qty, anh: l.img, mon: l.items }
+              : { productId: l.ref.id, variantId: l.v.id, ten_hang: l.name, ten_bien_the: l.variant, don_gia: l.price, so_luong: l.qty, anh: l.img };
+          });
+          var rec = {
+            id: code.toLowerCase(), code: code, docId: doc, loai_don: 'THUONG', state: Workflow.initial(doc),
+            history: [{ at: now, role: 'ROLE-02', roleName: Perm.roleName(), by: st.ho_ten, event: 'Tạo mới', from: null, to: Workflow.initial(doc), note: 'Đặt đơn trên website' }],
+            ownerId: me.id, customerId: cus.id, teamId: me.teamId, branchId: me.branchId,
+            ho_ten_nhan: st.ho_ten, so_dien_thoai_nhan: st.sdt, email: st.email,
+            cach_giao: st.ship.mode, quan: st.ship.quan || '', dia_chi_giao: st.cach_nhan === 'TU_LAY' ? '' : addrText(a),
+            phi_ship: st.ship.fee, cua_hang_chiu_ship: !!st.ship.free, don_vi_van_chuyen: '', ma_van_don: '',
+            cach_thanh_toan: st.pay, trang_thai_thanh_toan: 'CHUA_THANH_TOAN', payments: [], refunds: [],
+            items: items, tam_tinh: t.sub, giam_gia: t.d, ma_giam_gia: st.voucher ? st.voucher.ma : '', tong_cong: t.total,
+            tien_coc: 0, ngay_giao_du_kien: null, ghi_chu: st.ghi_chu, yeu_cau_huy: null, bao_da_ck: null,
+            tao_luc: now, thoi_diem_giao: null, diem: App.points(t.total), diem_da_cong: false, return_id: null
+          };
+          DemoStore.insert('orders', rec);
+          if (st.voucher) {
+            DemoStore.insert('voucherUsage', { id: 'vu' + Date.now(), ma: st.voucher.ma, customerId: cus.id, at: now });
+            if (st.voucher.loai === 'VOUCHER_KHACH') DemoStore.update('vouchers', st.voucher.id, { used: true });
+            else DemoStore.update('vouchers', st.voucher.id, { da_dung: (st.voucher.da_dung || 0) + 1 });
+          }
+          if (st.cach_nhan !== 'TU_LAY' && st.addrId === 'new' && st.newAddr.luu) DemoStore.insert('addresses', { id: 'ad' + Date.now(), customerId: cus.id, ownerId: me.id, nguoi_nhan: st.ho_ten, so_dien_thoai: st.sdt, tinh: a.tinh, quan: a.quan, phuong: a.phuong, chi_tiet: a.chi_tiet, mac_dinh: !addrs.length });
+          cart.clear();
+          location.href = U('pages/dat-hang-thanh-cong.html?id=' + rec.id);
+        }, 700);
+      }
+
+      /* ---------- Sự kiện ---------- */
+      form.addEventListener('submit', function (e) { e.preventDefault(); next(); });
+      form.addEventListener('change', function (e) {
+        var n = e.target.name;
+        if (n === 'cach_nhan') { st.cach_nhan = e.target.value; form.querySelector('[data-pickup]').classList.toggle('hidden', st.cach_nhan !== 'TU_LAY'); form.querySelector('[data-addr]').classList.toggle('hidden', st.cach_nhan === 'TU_LAY'); }
+        if (n === 'addr') { st.addrId = e.target.value; form.querySelector('[data-addr-new]').classList.toggle('hidden', st.addrId !== 'new'); }
+        if (n === 'tinh' || n === 'quan') {
+          var d = UI.formData(form);
+          st.newAddr.tinh = d.tinh; st.newAddr.quan = n === 'tinh' ? '' : d.quan; st.newAddr.phuong = ''; st.newAddr.chi_tiet = d.chi_tiet; st.newAddr.luu = d.luu;
+          form.querySelector('[data-addr-new]').innerHTML = addrFields();
+        }
+        if (n === 'pay') UI.setError(form, 'pay', '');
+      });
+      document.addEventListener('click', function (e) {
+        var t = e.target;
+        if (t.closest('[data-next]')) { e.preventDefault(); next(); return; }
+        var pl = t.closest('[data-place]'); if (pl && !pl.disabled) { e.preventDefault(); place(pl); return; }
+        if (t.closest('[data-back]')) { if (st.step === 2) st.pay = UI.formData(form).pay || st.pay; st.step--; paint(); return; }
+        var go = t.closest('[data-go],[data-step-go]'); if (go) { st.step = +(go.getAttribute('data-go') || go.getAttribute('data-step-go')); paint(); return; }
+        if (t.closest('[data-ship-retry]')) { paintShip(); return; }
+        var use = t.closest('[data-use-v]'); if (use) { applyCode(use.getAttribute('data-use-v')); return; }
+        if (t.closest('[data-apply]')) { var inp = form.querySelector('[name=ma]'); applyCode(inp ? inp.value : ''); return; }
+        if (t.closest('[data-unapply]')) { st.voucher = null; st.pay = UI.formData(form).pay || st.pay; paint(); }
+      });
+      function applyCode(code) {
+        if (!String(code || '').trim()) { UI.setError(form, 'ma', 'Mã giảm giá không hợp lệ'); return; }
+        var r = checkCode(code);
+        if (typeof r === 'string') { UI.setError(form, 'ma', r); return; }
+        st.voucher = r; st.pay = UI.formData(form).pay || st.pay;
+        var keepShip = st.ship; paint(); st.ship = keepShip;
+        UI.toast('Đã áp dụng mã ' + r.ma, 'success');
+      }
+
+      setTimeout(paint, 400);
+    });
+  })();
+  </script>
+</body>
+</html>

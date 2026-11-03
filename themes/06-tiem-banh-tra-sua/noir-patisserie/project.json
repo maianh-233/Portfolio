@@ -1,0 +1,75 @@
+{
+  "slug": "noir-patisserie",
+  "name": "NOIR PATISSERIE",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website giới thiệu thương hiệu trà sữa và bánh ngọt",
+    "brand": "NOIR PATISSERIE",
+    "purpose": "Tạo website giới thiệu NOIR PATISSERIE, thương hiệu bánh ngọt cao cấp lấy cảm hứng từ nghệ thuật làm bánh Pháp. Cảm giác cần đạt được: tinh tế, đắt giá, trưởng thành và có tính biên tập. Không sử dụng phong cách dễ thương hoặc các thẻ bo tròn kiểu ứng dụng.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Art direction\n\nNền chính #171615; nền phụ #24211E.\n\nTrắng ngà #F2EEE6; vàng champagne #C4A574; chữ phụ #B7AEA2.\n\nHeading dùng serif thanh lịch; nội dung dùng sans-serif trung tính.\n\nLưới 12 cột trên desktop, khoảng trắng rộng, đường kẻ 1px và các số thứ tự nhỏ.\n\nẢnh bánh chocolate, entremet, macaron, tart trái cây chụp cận cảnh, ánh sáng tương phản mạnh.\n\nTránh gradient neon, icon hoạt hình, bóng đổ dày và quá nhiều khung viền.\n\n3. Trang chủ\n\nHeader tối giản, logo chữ NOIR PATISSERIE, điều hướng và VI–EN.\n\nHero gần toàn màn hình: ảnh bánh signature chiếm khoảng 60–65% chiều ngang; bên còn lại là dòng chữ “The Art of Fine Pâtisserie”, mô tả ngắn và CTA “Khám phá bộ sưu tập”.\n\nDải chữ nhỏ giới thiệu tinh thần thủ công và nghệ thuật hương vị.\n\nSection “Signature Creations”: 3 sản phẩm, ảnh lớn, tên món và mô tả súc tích.\n\nSection editorial chia hai nửa: ảnh quy trình chế tác và nội dung về sự tỉ mỉ.\n\nSection ảnh không gian tiệm theo dạng gallery ngang.\n\nFooter tối, ít thành phần, trình bày như trang cuối tạp chí.\n\n4. Trang Sản phẩm & Menu\n\nMở đầu bằng tiêu đề lớn “The Collection”.\n\nPhân loại Signature Cakes, Chocolate & Entremets, Macarons, French Pastries.\n\nDùng bố cục xen kẽ: ảnh ngang lớn đi cùng mô tả, sau đó là lưới ảnh bất đối xứng.\n\nMỗi món chỉ có tên, mô tả nguyên liệu/hương vị và ảnh.\n\nKhông dùng giá, nút mua hoặc giao diện giống sàn thương mại điện tử.\n\n5. Trang Về chúng tôi\n\nHero với ảnh nghệ nhân hoặc bàn chế tác bánh.\n\nBài giới thiệu thương hiệu theo dạng tạp chí.\n\nBa nội dung: tuyển chọn nguyên liệu, kỹ thuật làm bánh, cảm hứng sáng tạo.\n\nMột dải ảnh cận cảnh kết cấu bánh và không gian.\n\nFooter nhất quán.\n\n6. Chuyển động\n\nChuyển cảnh mượt, ảnh xuất hiện bằng fade nhẹ, zoom ảnh cực chậm khi hover. Không dùng parallax nhiều lớp hoặc hiệu ứng gây phân tâm.\n\n7. Ràng buộc\n\nTuân thủ QUY CHUẨN CHUNG; tối đa 3 trang; Việt–Anh hoàn chỉnh; không có giỏ hàng, checkout, form đặt bánh hoặc chức năng giao dịch.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-22T04:06:34.563Z",
+  "updatedAt": "2026-10-22T04:31:13.836Z",
+  "screen": "done",
+  "request": "Website giới thiệu thương hiệu trà sữa và bánh ngọt",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\noir-patisserie\\web",
+    "builtAt": "2026-10-22T04:31:01.664Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/collection.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/collection.html": []
+    }
+  },
+  "job": {
+    "id": "bbadfd58-6c50-451d-b52d-4a3a8186a05b",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\noir-patisserie\\web",
+    "feedback": "Bạn thiếu mode tiếng việt nữa chuyển qua tiếng anh và tiếng việt . Hãy chọn font chữ không lỗi tiếng việt nhưng vẫn phù hợp phong cách trang",
+    "page": "index.html",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-22T04:31:10.788Z",
+    "critical": 0,
+    "major": 23,
+    "minor": 2,
+    "screenshots": 9
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-22T04:31:01.657Z",
+      "text": "Bạn thiếu mode tiếng việt nữa chuyển qua tiếng anh và tiếng việt . Hãy chọn font chữ không lỗi tiếng việt nhưng vẫn phù hợp phong cách trang"
+    }
+  ]
+}

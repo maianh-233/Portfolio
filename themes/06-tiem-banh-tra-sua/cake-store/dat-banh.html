@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt bánh | Tiệm Bánh Kem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+  <style>
+    /* Nút nổi thu gọn nằm trên thanh dính đáy 2 hàng ở điện thoại */
+    @media (max-width: 1023px) { body .floating-contact.is-compact { bottom: 148px; } body .site-footer > div:first-child { padding-bottom: 190px; } }
+  </style>
+</head>
+<!-- SCR-005 Đặt bánh 4 bước: FR-010 → FR-018, FR-036, FR-038.
+     Vào từ SCR-004: dat-banh.html?cake=<slug>&size=<id>. Thử ?demo=save-error để xem lỗi lưu E-DB-11. -->
+<body data-screen="SCR-005" data-layout="public" data-nav="cakes" data-compact-contact class="bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="mx-auto max-w-shell px-4 md:px-6 lg:px-8 pt-6 md:pt-10">
+    <h1 class="font-display font-bold text-[34px] md:text-[44px] leading-[1.15] text-primary-strong pb-1" data-i18n="order.title">Đặt bánh</h1>
+
+    <!-- Thanh tiến độ (CMP-09) -->
+    <nav id="stepper" class="mt-5" aria-label="Tiến độ đặt bánh"></nav>
+
+    <div id="order-wrap" class="mt-6 grid lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+      <section class="lg:col-span-8">
+        <form id="step-form" novalidate class="rounded-3xl bg-white shadow-soft p-5 md:p-8" aria-live="polite"></form>
+        <!-- Nút điều hướng (máy tính) -->
+        <div class="hidden lg:flex items-center justify-between mt-6">
+          <button type="button" class="btn btn-ghost h-12 px-5 btn-back"><i class="ph ph-arrow-left" aria-hidden="true"></i><span data-i18n="order.back">Quay lại</span></button>
+          <button type="button" class="btn btn-primary h-12 px-8 btn-next"></button>
+        </div>
+      </section>
+      <!-- Tóm tắt đơn (CMP-10): cột phải dính -->
+      <aside class="hidden lg:block lg:col-span-4 lg:sticky lg:top-28" aria-labelledby="sum-title">
+        <div class="rounded-3xl bg-white shadow-soft p-6">
+          <h2 id="sum-title" class="font-extrabold text-lg" data-i18n="order.summary">Tóm tắt đơn</h2>
+          <div id="summary" class="mt-4"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Thanh dính đáy (điện thoại): tổng tiền + Chi tiết, nút Quay lại / Tiếp tục -->
+  <div id="mobile-bar" class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-t border-beige px-4 pt-2.5 pb-3">
+    <button type="button" id="open-summary" class="w-full flex items-center justify-between min-h-[40px]" aria-haspopup="dialog">
+      <span class="text-sm text-ink-muted font-semibold">Tạm tính</span>
+      <span class="flex items-center gap-2"><span id="mb-total" class="font-extrabold text-lg tabular-nums"></span><span class="text-sm font-bold text-primary-strong">Chi tiết <i class="ph ph-caret-up" aria-hidden="true"></i></span></span>
+    </button>
+    <div class="flex gap-2 mt-1.5">
+      <button type="button" class="btn btn-secondary h-12 w-12 !px-0 btn-back" aria-label="Quay lại"><i class="ph ph-arrow-left text-lg" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-primary h-12 flex-1 btn-next"></button>
+    </div>
+  </div>
+
+  <div id="app-footer"></div>
+
+  <script>
+    /* =====================================================================
+     * SCR-005 Đặt bánh. Dữ liệu form lưu tạm trên trình duyệt (tải lại không mất).
+     * Ảnh mẫu chỉ giữ trong phiên (không lưu vào localStorage).
+     * ===================================================================== */
+    App.onReady(function () {
+      var S = DB.get('settings');
+      var STEPS = [1, 2, 3, 4];
+      var form = $('#step-form');
+      var saveError = App.param('demo') === 'save-error';
+
+      function blank() { return { items: [], deliveryType: '', address: '', date: '', slot: '', name: '', phone: '', email: '', note: '', usePoints: false, points: 0, payment: '', step: 1, maxStep: 1, adding: false, replaceIndex: null }; }
+      var D = Store.get('order_draft', null) || blank();
+      D.items.forEach(function (it) { it.samples = []; });
+
+      function save() {
+        var copy = JSON.parse(JSON.stringify(D));
+        copy.items.forEach(function (it) { it.samples = []; });
+        Store.set('order_draft', copy);
+      }
+
+      /* ----- Nhận bánh + cỡ từ SCR-004 ----- */
+      (function entry() {
+        var c = Cakes.bySlug(App.param('cake') || '');
+        if (!c || c.status !== 'active') return;
+        var sid = App.param('size');
+        var size = Cakes.sizes(c).filter(function (s) { return s.id === sid; })[0] || Cakes.sizes(c)[0];
+        var it = { cakeId: c.id, sizeId: size.id, qty: 1, message: '', samples: [] };
+        var dup = D.items.filter(function (x) { return x.cakeId === c.id && x.sizeId === size.id; })[0];
+        if (D.replaceIndex != null && D.items[D.replaceIndex]) { it.message = D.items[D.replaceIndex].message; D.items[D.replaceIndex] = it; }
+        else if (D.adding) { if (!dup) D.items.push(it); }
+        else if (!dup || D.items.length !== 1) { D.items = [it]; }
+        D.adding = false; D.replaceIndex = null; D.step = 1;
+        save();
+        try { history.replaceState(null, '', 'dat-banh.html' + (saveError ? '?demo=save-error' : '')); } catch (e) { /* bỏ qua */ }
+      })();
+
+      /* ----- Tính tiền ----- */
+      function cakeOf(it) { return Cakes.byId(it.cakeId); }
+      function sizeOf(it) { var c = cakeOf(it); return c ? c.sizes.filter(function (s) { return s.id === it.sizeId; })[0] : null; }
+      function unitSale(it) { return Promo.apply(sizeOf(it).price, Promo.forCake(cakeOf(it))); }
+      function qtyTotal() { return D.items.reduce(function (n, it) { return n + it.qty; }, 0); }
+      function customer() { return FormUI.validPhone(D.phone) ? Customers.byPhone(D.phone) : null; }
+      function maxPoints(t) { var c = customer(); return c ? Math.min(c.points, Math.floor((t.sub - t.disc) / S.pointValue)) : 0; }
+      function totals() {
+        var t = { sub: 0, disc: 0 };
+        D.items.forEach(function (it) { var s = sizeOf(it); t.sub += s.price * it.qty; t.disc += (s.price - unitSale(it)) * it.qty; });
+        t.pts = D.usePoints ? Math.min(D.points || 0, maxPoints(t)) * S.pointValue : 0;
+        t.total = t.sub - t.disc - t.pts;
+        t.deposit = Math.round(S.depositRate / 100 * (t.sub - t.disc) / 1000) * 1000;
+        t.ship = D.deliveryType === 'pickup' ? 0 : (D.deliveryType === 'delivery' ? null : undefined);
+        t.remaining = Math.max(0, t.total - t.deposit);
+        return t;
+      }
+
+      /* ----- Tóm tắt đơn ----- */
+      function summaryHtml() {
+        if (!D.items.length) return '<p class="text-ink-muted">Chưa có bánh nào.</p>';
+        var t = totals();
+        var promo = D.items.map(function (it) { return Promo.forCake(cakeOf(it)); }).filter(Boolean)[0];
+        var rows = D.items.map(function (it) {
+          var c = cakeOf(it), s = sizeOf(it);
+          return '<li class="flex gap-3"><img src="' + c.images[0] + '" alt="" class="w-14 h-14 rounded-xl object-cover bg-beige shrink-0">' +
+            '<div class="flex-1 min-w-0"><p class="font-bold leading-snug line-clamp-2">' + Fmt.esc(I18n.pick(c, 'name')) + '</p><p class="text-sm text-ink-muted">' + s.label + ' · x' + it.qty + '</p></div>' +
+            '<p class="font-bold tabular-nums text-right">' + Fmt.money(s.price * it.qty) + '</p></li>';
+        }).join('');
+        function line(label, value, cls) { return '<div class="flex justify-between gap-3 ' + (cls || '') + '"><dt>' + label + '</dt><dd class="tabular-nums text-right">' + value + '</dd></div>'; }
+        return '<ul class="space-y-3">' + rows + '</ul>' +
+          '<dl class="mt-5 pt-4 border-t border-beige space-y-2 text-[15px]">' +
+          line('Tạm tính', Fmt.money(t.sub)) +
+          (t.disc ? line('Giảm giá' + (promo ? ' (' + Fmt.esc(promo.name) + ')' : ''), '-' + Fmt.money(t.disc), 'text-primary-strong font-semibold') : '') +
+          (t.pts ? line('Dùng ' + Fmt.num(t.pts / S.pointValue) + ' điểm', '-' + Fmt.money(t.pts), 'text-mint-strong font-semibold') : '') +
+          line('Phí giao', t.ship === 0 ? '0 ₫' : (t.ship === null ? '<span class="text-ink-muted">Tiệm báo khi gọi xác nhận</span>' : '<span class="text-ink-muted">-</span>')) +
+          line('<b>Tổng' + (t.ship === null ? ' (chưa gồm phí giao)' : '') + '</b>', '<b class="text-lg">' + Fmt.money(t.total) + '</b>', 'pt-2 border-t border-beige') +
+          line('Tiền cọc (' + S.depositRate + '%)', '<b>' + Fmt.money(t.deposit) + '</b>', 'rounded-xl bg-mint/60 px-3 py-2 text-mint-strong') +
+          line('Còn lại khi nhận bánh', Fmt.money(t.remaining) + (t.ship === null ? ' + phí giao' : ''), 'text-ink-muted') +
+          '</dl>';
+      }
+      function renderSummary() {
+        var html = summaryHtml();
+        $('#summary').innerHTML = html;
+        $('#mb-total').textContent = Fmt.money(totals().total);
+      }
+
+      /* ----- Thanh tiến độ ----- */
+      function renderStepper() {
+        var desktop = STEPS.map(function (n, i) {
+          var cls = n === D.step ? 'step-current' : (n < D.step || n <= D.maxStep && n !== D.step ? 'step-done' : '');
+          var can = n <= D.maxStep && n !== D.step;
+          var done = n < D.step || (n <= D.maxStep && n !== D.step);
+          return '<li class="flex items-center ' + (i < 3 ? 'flex-1' : '') + '"><button type="button" ' + (can ? 'data-goto="' + n + '"' : 'disabled') + ' class="flex items-center gap-2.5 ' + cls + ' ' + (can ? 'cursor-pointer' : 'cursor-default') + '"' + (n === D.step ? ' aria-current="step"' : '') + '>' +
+            '<span class="stepper-dot">' + (done ? '<i class="ph-bold ph-check" aria-hidden="true"></i><span class="sr-only">Đã xong: </span>' : n) + '</span>' +
+            '<span class="font-bold text-[15px] whitespace-nowrap ' + (n === D.step ? 'text-primary-strong' : 'text-ink-muted') + '">' + I18n.t('step.' + n) + '</span></button>' +
+            (i < 3 ? '<span class="stepper-line ' + (n < D.maxStep ? 'is-done' : '') + '" aria-hidden="true"></span>' : '') + '</li>';
+        }).join('');
+        $('#stepper').innerHTML =
+          '<ol class="hidden md:flex items-center">' + desktop + '</ol>' +
+          '<div class="md:hidden"><p class="font-bold"><span class="text-primary-strong">Bước ' + D.step + '/4</span> · ' + I18n.t('step.' + D.step) + '</p>' +
+          '<div class="mt-2 h-2 rounded-full bg-beige overflow-hidden" role="progressbar" aria-valuemin="1" aria-valuemax="4" aria-valuenow="' + D.step + '" aria-label="Tiến độ"><div class="h-full rounded-full bg-primary-strong transition-all" style="width:' + (D.step * 25) + '%"></div></div></div>';
+        $all('[data-goto]').forEach(function (b) { b.onclick = function () { go(+b.getAttribute('data-goto')); }; });
+        $all('.btn-next').forEach(function (b) { b.innerHTML = D.step === 4 ? '<i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>' + I18n.t('order.submit') : I18n.t('order.next') + '<i class="ph ph-arrow-right" aria-hidden="true"></i>'; });
+        $all('.btn-back').forEach(function (b) { b.disabled = D.step === 1; });
+      }
+
+      /* =================== BƯỚC 1: Bánh của bạn =================== */
+      function step1() {
+        var items = D.items.map(function (it, i) {
+          var c = cakeOf(it), s = sizeOf(it), promo = Promo.forCake(c);
+          var chips = Cakes.sizes(c).map(function (z) {
+            return '<button type="button" role="radio" aria-checked="' + (z.id === it.sizeId) + '" data-i="' + i + '" data-size="' + z.id + '" class="chip chip-sm">' + (z.id === it.sizeId ? '<i class="ph-bold ph-check" aria-hidden="true"></i>' : '') + z.label + ' · ' + z.servings + ' người</button>';
+          }).join('');
+          return '<fieldset class="item-card ' + (i ? 'pt-6 mt-6 border-t border-beige' : '') + '"><legend class="sr-only">Bánh ' + (i + 1) + '</legend>' +
+            '<div class="flex gap-4"><img src="' + c.images[0] + '" alt="' + Fmt.esc(c.name) + '" class="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-cover bg-beige shrink-0">' +
+            '<div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3"><h2 class="font-extrabold text-lg leading-snug">' + Fmt.esc(I18n.pick(c, 'name')) + '</h2>' +
+            '<div class="flex shrink-0 -mr-2">' + '<button type="button" class="btn btn-ghost h-9 px-3 text-sm text-primary-strong" data-change="' + i + '">Đổi bánh</button>' +
+            (D.items.length > 1 ? '<button type="button" class="grid place-items-center w-9 h-9 rounded-full hover:bg-cream text-danger" data-remove="' + i + '" aria-label="Bỏ bánh này khỏi đơn"><i class="ph ph-trash" aria-hidden="true"></i></button>' : '') + '</div></div>' +
+            '<p class="text-sm text-ink-muted">' + Fmt.esc(I18n.pick(c, 'flavor')) + (promo ? ' · <span class="text-primary-strong font-bold">' + Fmt.esc(promo.name) + ' ' + Promo.label(promo) + '</span>' : '') + '</p></div></div>' +
+            '<div class="mt-5" role="radiogroup" aria-label="Kích cỡ"><p class="field-label mb-2">Kích cỡ</p><div class="flex flex-wrap gap-2">' + chips + '</div></div>' +
+            '<div class="mt-5 flex items-center justify-between gap-4"><div><p class="field-label mb-2" id="qty-l-' + i + '">Số lượng</p>' +
+            '<div class="inline-flex items-center rounded-full border border-beige bg-white" role="group" aria-labelledby="qty-l-' + i + '">' +
+            '<button type="button" class="grid place-items-center w-11 h-11 rounded-full hover:bg-cream text-lg" data-qty="-1" data-i="' + i + '" aria-label="Giảm số lượng"' + (it.qty <= 1 ? ' disabled' : '') + '><i class="ph ph-minus" aria-hidden="true"></i></button>' +
+            '<output class="w-10 text-center font-extrabold tabular-nums" aria-live="polite">' + it.qty + '</output>' +
+            '<button type="button" class="grid place-items-center w-11 h-11 rounded-full hover:bg-cream text-lg" data-qty="1" data-i="' + i + '" aria-label="Tăng số lượng"><i class="ph ph-plus" aria-hidden="true"></i></button></div></div>' +
+            '<p class="text-right"><span class="block font-extrabold text-xl tabular-nums">' + Fmt.money(unitSale(it) * it.qty) + '</span>' + (promo ? '<span class="text-sm text-ink-muted line-through tabular-nums">' + Fmt.money(s.price * it.qty) + '</span>' : '') + '</p></div>' +
+            '<div class="field mt-5"><label class="field-label flex items-center gap-2" for="msg-' + i + '">Lời chúc trên bánh <span class="badge bg-mint text-mint-strong">Miễn phí</span></label>' +
+            '<div class="relative"><input id="msg-' + i + '" data-msg="' + i + '" type="text" maxlength="50" class="field-input !pr-16" value="' + Fmt.esc(it.message) + '" placeholder="Ví dụ: Happy Birthday Mẹ yêu" aria-describedby="msg-' + i + '-err msg-' + i + '-help">' +
+            '<span id="msg-c-' + i + '" class="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-ink-muted tabular-nums"></span></div>' +
+            '<p id="msg-' + i + '-err" class="field-error hidden"></p><p id="msg-' + i + '-help" class="field-help">Tối đa 50 ký tự để chữ trên bánh to, rõ.</p></div>' +
+            '<div class="mt-5"><p class="field-label mb-2">Ảnh mẫu tham khảo <span class="font-semibold text-ink-muted">(không bắt buộc)</span></p><div data-up="' + i + '"></div>' +
+            '<p class="mt-3 flex gap-2 text-sm text-ink-muted"><i class="ph ph-info text-lg text-info shrink-0" aria-hidden="true"></i>Tiệm chỉ nhận một số mẫu đơn giản; nhân viên sẽ xác nhận khi gọi điện.</p></div>' +
+            '</fieldset>';
+        }).join('');
+        form.innerHTML = items + '<button type="button" id="add-cake" class="btn btn-secondary h-11 px-5 mt-8"><i class="ph ph-plus" aria-hidden="true"></i>Thêm bánh khác vào đơn</button>';
+
+        $all('[data-size]', form).forEach(function (b) { b.onclick = function () { D.items[+b.dataset.i].sizeId = b.dataset.size; save(); step1(); renderSummary(); }; });
+        $all('[data-qty]', form).forEach(function (b) { b.onclick = function () { var it = D.items[+b.dataset.i]; it.qty = Math.max(1, Math.min(10, it.qty + +b.dataset.qty)); save(); step1(); renderSummary(); }; });
+        $all('[data-msg]', form).forEach(function (inp) {
+          var i = +inp.dataset.msg;
+          FormUI.counter(inp, $('#msg-c-' + i), 50);
+          inp.oninput = function () { D.items[i].message = inp.value; save(); };
+        });
+        $all('[data-up]', form).forEach(function (h) {
+          var i = +h.dataset.up;
+          Uploader.mount(h, { max: 3, files: D.items[i].samples, error: 'Ảnh phải là JPG, PNG, WEBP và không quá 5 MB.', onChange: function (f) { D.items[i].samples = f; } });
+        });
+        $all('[data-change]', form).forEach(function (b) { b.onclick = function () { D.replaceIndex = +b.dataset.change; save(); location.href = 'danh-sach-banh.html'; }; });
+        $all('[data-remove]', form).forEach(function (b) { b.onclick = function () { D.items.splice(+b.dataset.remove, 1); save(); step1(); renderSummary(); }; });
+        $('#add-cake').onclick = function () { D.adding = true; save(); location.href = 'danh-sach-banh.html'; };
+      }
+      function validate1() {
+        var errs = [];
+        D.items.forEach(function (it, i) {
+          var s = sizeOf(it);
+          if (!s || !s.active || cakeOf(it).status !== 'active') errs.push([$('[data-i="' + i + '"][data-size]', form), 'Bánh / kích cỡ này không còn bán.']); // E-DB-08
+          if (it.message.length > 50) errs.push([$('#msg-' + i), 'Lời chúc tối đa 50 ký tự.']); // E-DB-04
+        });
+        return errs;
+      }
+
+      /* =================== BƯỚC 2: Nhận bánh =================== */
+      var calMonth = null;
+      function step2() {
+        var shop = MOCK.shop;
+        var first = Fmt.parse(MOCK.today); first.setDate(first.getDate() + S.minDays);
+        if (!calMonth) calMonth = D.date ? Fmt.parse(D.date) : first;
+        form.innerHTML =
+          '<fieldset><legend class="font-extrabold text-lg mb-3">Bạn muốn nhận bánh thế nào?</legend>' +
+          '<div class="grid sm:grid-cols-2 gap-3" id="dtype">' +
+          '<label class="option-card"><input type="radio" name="dtype" value="delivery" class="sr-only"' + (D.deliveryType === 'delivery' ? ' checked' : '') + '><span class="grid place-items-center w-11 h-11 rounded-full bg-primary-soft text-primary-strong text-2xl"><i class="ph ph-moped" aria-hidden="true"></i></span><span><span class="block font-extrabold">Giao tận nơi</span><span class="text-sm text-ink-muted">Phí giao theo khoảng cách</span></span></label>' +
+          '<label class="option-card"><input type="radio" name="dtype" value="pickup" class="sr-only"' + (D.deliveryType === 'pickup' ? ' checked' : '') + '><span class="grid place-items-center w-11 h-11 rounded-full bg-primary-soft text-primary-strong text-2xl"><i class="ph ph-storefront" aria-hidden="true"></i></span><span><span class="block font-extrabold">Nhận tại tiệm</span><span class="text-sm text-ink-muted">Miễn phí, ghé lấy theo khung giờ</span></span></label>' +
+          '</div><p id="dtype-err" class="field-error hidden"></p></fieldset>' +
+          '<div id="dtype-detail" class="mt-5"></div>' +
+          '<div class="mt-8 grid md:grid-cols-2 gap-6">' +
+          '<div><p class="field-label mb-2" id="date-label">Ngày nhận <span class="text-danger">*</span></p>' +
+          '<div id="cal" class="rounded-2xl border border-beige p-3 bg-cream/40" role="group" aria-labelledby="date-label"></div>' +
+          '<ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs font-semibold text-ink-muted"><li class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-white border border-beige"></span>Còn suất</li><li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#E0A100]"></span>Gần đầy</li><li class="flex items-center gap-1.5"><span class="line-through">12</span>Hết suất / ngày nghỉ</li><li class="flex items-center gap-1.5"><span class="text-[#B9A3A8]">12</span>Quá gấp</li></ul>' +
+          '<p id="date-err" class="field-error hidden"></p></div>' +
+          '<div class="field"><label class="field-label" for="slot">Khung giờ <span class="text-danger">*</span></label><div id="slot-box"></div>' +
+          '<p class="field-help">Cần đặt trước ít nhất ' + S.minDays + ' ngày. Ngày mờ là ngày tiệm không nhận thêm đơn.</p></div>' +
+          '</div>';
+
+        function detail() {
+          var box = $('#dtype-detail');
+          if (D.deliveryType === 'delivery') {
+            box.innerHTML = '<div class="field"><label class="field-label" for="address">Địa chỉ giao bánh <span class="text-danger">*</span></label>' +
+              '<textarea id="address" rows="2" maxlength="255" class="field-input" placeholder="Số nhà, tên đường, phường" aria-describedby="address-err">' + Fmt.esc(D.address) + '</textarea><p id="address-err" class="field-error hidden"></p>' +
+              '<div class="mt-2 rounded-2xl bg-cream p-4 text-sm"><p class="flex gap-2 font-semibold"><i class="ph ph-info text-lg text-info shrink-0" aria-hidden="true"></i>Phí giao tính theo khoảng cách, tiệm báo khi gọi xác nhận. Tham khảo:</p>' +
+              '<ul class="mt-2 grid grid-cols-3 gap-2 text-center">' + S.shippingTable.map(function (r) { return '<li class="rounded-xl bg-white py-2"><span class="block text-ink-muted text-xs">' + r.area + '</span><b class="tabular-nums">' + Fmt.money(r.fee) + '</b></li>'; }).join('') + '</ul></div></div>';
+            $('#address').oninput = function () { D.address = this.value; save(); };
+          } else if (D.deliveryType === 'pickup') {
+            box.innerHTML = '<div class="rounded-2xl bg-mint/50 p-4 flex flex-col sm:flex-row sm:items-center gap-3"><i class="ph-fill ph-storefront text-3xl text-mint-strong" aria-hidden="true"></i><div class="flex-1"><p class="font-extrabold">' + shop.address + '</p><p class="text-sm">' + shop.hours.map(function (h) { return h.days + ': ' + h.open + ' - ' + h.close; }).join(' · ') + '</p></div>' +
+              '<a href="' + UI.mapUrl() + '" target="_blank" rel="noopener" class="btn btn-secondary h-10 px-4 text-sm"><i class="ph ph-map-trifold" aria-hidden="true"></i>Xem bản đồ</a></div>';
+          } else box.innerHTML = '';
+        }
+        detail();
+        $all('input[name=dtype]', form).forEach(function (r) { r.onchange = function () { D.deliveryType = r.value; FormUI.clearError(r); $('#dtype-err').classList.add('hidden'); save(); detail(); renderSummary(); }; });
+
+        function slots() {
+          var box = $('#slot-box');
+          if (!D.date) { box.innerHTML = '<select id="slot" class="field-input" disabled><option>Chọn ngày nhận trước</option></select>'; return; }
+          box.innerHTML = '<div class="skeleton h-12 rounded-xl"></div>';
+          setTimeout(function () { // giả lập tải khung giờ của ngày
+            box.innerHTML = '<select id="slot" class="field-input" aria-describedby="slot-err"><option value="">Chọn khung giờ</option>' +
+              S.timeSlots.map(function (s) { return '<option value="' + s + '"' + (D.slot === s ? ' selected' : '') + '>' + s + '</option>'; }).join('') + '</select><p id="slot-err" class="field-error hidden"></p>';
+            $('#slot').onchange = function () { D.slot = this.value; save(); };
+          }, 250);
+        }
+        Calendar.render($('#cal'), {
+          month: calMonth, minMonth: Fmt.parse(MOCK.today), selected: D.date,
+          dayInfo: function (iso) { return Capacity.state(iso); },
+          onSelect: function (iso) {
+            D.date = iso; D.slot = ''; save(); $('#date-err').classList.add('hidden'); slots();
+            var st = Capacity.state(iso);
+            if (st.left != null && qtyTotal() > st.left) { var e = $('#date-err'); e.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Ngày này tiệm chỉ còn ' + st.left + ' suất, vui lòng giảm số lượng hoặc chọn ngày khác.'; e.classList.remove('hidden'); }
+          }
+        });
+        slots();
+      }
+      function validate2() {
+        var errs = [];
+        if (!D.deliveryType) { var e = $('#dtype-err'); e.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Vui lòng chọn cách nhận bánh.'; e.classList.remove('hidden'); errs.push([$('input[name=dtype]'), null]); }
+        if (D.deliveryType === 'delivery') {
+          var a = D.address.trim();
+          if (a.length < 10) errs.push([$('#address'), a ? 'Địa chỉ cần ít nhất 10 ký tự để tiệm giao đúng chỗ.' : 'Vui lòng nhập địa chỉ giao bánh.']); // E-DB-03
+        }
+        var de = $('#date-err');
+        if (!D.date) { de.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Vui lòng chọn ngày nhận.'; de.classList.remove('hidden'); errs.push([$('#cal .cal-day:not([aria-disabled])') || $('#cal button'), null]); }
+        else {
+          var st = Capacity.state(D.date);
+          if (st.state === 'tooSoon' || st.state === 'past') { de.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Tiệm cần đặt trước ít nhất ' + S.minDays + ' ngày.'; de.classList.remove('hidden'); errs.push([$('#cal button'), null]); } // E-DB-06
+          else if (st.state === 'full' || st.state === 'off' || (st.left != null && qtyTotal() > st.left)) { de.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Ngày này tiệm đã nhận đủ đơn, vui lòng chọn ngày khác.'; de.classList.remove('hidden'); errs.push([$('#cal button'), null]); } // E-DB-07
+        }
+        if (D.date && !D.slot && $('#slot')) errs.push([$('#slot'), 'Vui lòng chọn khung giờ.']);
+        return errs;
+      }
+
+      /* =================== BƯỚC 3: Thông tin của bạn =================== */
+      function step3() {
+        form.innerHTML =
+          '<div class="grid md:grid-cols-2 gap-x-5 gap-y-4">' +
+          '<div class="field"><label class="field-label" for="name">Họ tên <span class="text-danger">*</span></label><input id="name" type="text" maxlength="100" autocomplete="name" class="field-input" value="' + Fmt.esc(D.name) + '" aria-describedby="name-err"><p id="name-err" class="field-error hidden"></p></div>' +
+          '<div class="field"><label class="field-label" for="phone">Số điện thoại <span class="text-danger">*</span></label><div class="relative"><input id="phone" type="tel" inputmode="numeric" autocomplete="tel" class="field-input !pr-11" placeholder="0xxx xxx xxx" value="' + Fmt.esc(Fmt.phone(D.phone)) + '" aria-describedby="phone-err">' +
+          '<i id="phone-ok" class="ph-fill ph-check-circle absolute right-3.5 top-1/2 -translate-y-1/2 text-xl text-mint-strong hidden" aria-hidden="true"></i></div><p id="phone-err" class="field-error hidden"></p></div>' +
+          '<div id="points-box" class="md:col-span-2"></div>' +
+          '<div class="field md:col-span-2"><label class="field-label" for="email">Email <span class="font-semibold text-ink-muted">(để nhận xác nhận, không bắt buộc)</span></label><input id="email" type="email" autocomplete="email" class="field-input" value="' + Fmt.esc(D.email) + '" aria-describedby="email-err"><p id="email-err" class="field-error hidden"></p></div>' +
+          '<div class="field md:col-span-2"><div class="flex justify-between"><label class="field-label" for="note">Ghi chú thêm</label><span id="note-c" class="text-sm text-ink-muted tabular-nums"></span></div><textarea id="note" rows="3" maxlength="500" class="field-input" placeholder="Ví dụ: dị ứng hạt, gọi trước khi giao..." aria-describedby="note-err">' + Fmt.esc(D.note) + '</textarea><p id="note-err" class="field-error hidden"></p></div>' +
+          '</div>';
+        var phone = $('#phone');
+        FormUI.phoneMask(phone);
+        FormUI.counter($('#note'), $('#note-c'), 500);
+        $('#name').oninput = function () { D.name = this.value; save(); };
+        $('#email').oninput = function () { D.email = this.value.trim(); save(); };
+        $('#note').oninput = function () { D.note = this.value; save(); };
+        $('#name').onblur = function () { if (this.value.trim().length < 2) FormUI.setError(this, 'Vui lòng nhập họ tên.'); };
+        $('#email').onblur = function () { if (this.value && !FormUI.validEmail(this.value)) FormUI.setError(this, 'Email không hợp lệ.'); };
+        function phoneState() {
+          D.phone = phone.value.replace(/\D/g, ''); save();
+          var ok = FormUI.validPhone(D.phone);
+          $('#phone-ok').classList.toggle('hidden', !ok); phone.classList.toggle('is-valid', ok);
+          points();
+        }
+        phone.addEventListener('input', phoneState);
+        phone.onblur = function () { if (phone.value && !FormUI.validPhone(phone.value)) FormUI.setError(phone, 'Số điện thoại không hợp lệ (10 số, bắt đầu bằng 0).'); };
+        function points() {
+          var box = $('#points-box'), c = customer(), t = totals();
+          if (!c) { box.innerHTML = FormUI.validPhone(D.phone) ? '<p class="text-sm text-ink-muted flex gap-2"><i class="ph ph-star text-lg text-primary-strong" aria-hidden="true"></i>Số này chưa có điểm. Hoàn thành đơn đầu tiên để bắt đầu tích điểm nha.</p>' : ''; D.usePoints = false; return; }
+          var max = maxPoints(t);
+          if (D.points > max) D.points = max;
+          box.innerHTML = '<div class="rounded-2xl bg-butter/70 p-4"><p class="flex items-center gap-2 font-extrabold"><i class="ph-fill ph-star text-xl text-butter-strong" aria-hidden="true"></i>Bạn đang có ' + Fmt.num(c.points) + ' điểm</p>' +
+            '<div class="mt-3 flex flex-wrap items-center gap-3"><label class="flex items-center gap-3 font-semibold cursor-pointer"><span class="switch"><input id="use-points" type="checkbox"' + (D.usePoints ? ' checked' : '') + '><span></span></span>Dùng điểm</label>' +
+            '<div class="flex items-center gap-2 ' + (D.usePoints ? '' : 'opacity-40') + '"><label for="points" class="sr-only">Số điểm dùng</label><input id="points" type="number" min="0" max="' + max + '" step="1" class="field-input !w-28 !min-h-[44px]" value="' + (D.points || max) + '"' + (D.usePoints ? '' : ' disabled') + ' aria-describedby="points-err points-help"><span class="text-sm text-ink-muted" id="points-help">điểm (tối đa ' + Fmt.num(max) + ', 1 điểm = ' + Fmt.money(S.pointValue) + ')</span></div></div>' +
+            '<p id="points-err" class="field-error hidden"></p></div>';
+          $('#use-points').onchange = function () { D.usePoints = this.checked; if (D.usePoints && !D.points) D.points = max; save(); points(); renderSummary(); };
+          var pi = $('#points');
+          pi.oninput = function () {
+            var v = Math.floor(+pi.value || 0);
+            if (v > c.points) { FormUI.setError(pi, 'Số điểm dùng vượt quá điểm hiện có.'); return; } // E-DB-10
+            if (v > max) { FormUI.setError(pi, 'Tiền giảm từ điểm không được vượt tạm tính.'); return; }
+            FormUI.clearError(pi); D.points = Math.max(0, v); save(); renderSummary();
+          };
+        }
+        phoneState();
+      }
+      function validate3() {
+        var errs = [];
+        if (D.name.trim().length < 2) errs.push([$('#name'), 'Vui lòng nhập họ tên.']); // E-DB-01
+        if (!FormUI.validPhone(D.phone)) errs.push([$('#phone'), 'Số điện thoại không hợp lệ (10 số, bắt đầu bằng 0).']); // E-DB-02
+        if (D.email && !FormUI.validEmail(D.email)) errs.push([$('#email'), 'Email không hợp lệ.']); // E-DB-12
+        if (D.note.length > 500) errs.push([$('#note'), 'Ghi chú tối đa 500 ký tự.']);
+        var pi = $('#points'); if (pi && pi.classList.contains('is-invalid')) errs.push([pi, 'Số điểm dùng vượt quá điểm hiện có.']);
+        return errs;
+      }
+
+      /* =================== BƯỚC 4: Thanh toán & xem lại =================== */
+      function step4() {
+        var shop = MOCK.shop;
+        function pay(v, icon, title, sub) {
+          return '<label class="option-card"><input type="radio" name="pay" value="' + v + '" class="sr-only"' + (D.payment === v ? ' checked' : '') + '><span class="grid place-items-center w-11 h-11 rounded-full bg-primary-soft text-primary-strong text-2xl shrink-0"><i class="ph ' + icon + '" aria-hidden="true"></i></span><span><span class="block font-extrabold">' + title + '</span><span class="text-sm text-ink-muted">' + sub + '</span></span></label>';
+        }
+        function edit(n) { return '<button type="button" class="text-sm font-bold text-primary-strong hover:underline min-h-[32px]" data-goto="' + n + '">Sửa</button>'; }
+        var items = D.items.map(function (it) {
+          var c = cakeOf(it), s = sizeOf(it);
+          return '<li class="flex gap-3"><img src="' + c.images[0] + '" alt="" class="w-12 h-12 rounded-xl object-cover bg-beige"><div><p class="font-bold">' + Fmt.esc(c.name) + ' · ' + s.label + ' · x' + it.qty + '</p><p class="text-sm text-ink-muted">' + (it.message ? 'Lời chúc: “' + Fmt.esc(it.message) + '”' : 'Không viết lời chúc') + (it.samples.length ? ' · ' + it.samples.length + ' ảnh mẫu' : '') + '</p></div></li>';
+        }).join('');
+        form.innerHTML =
+          '<fieldset><legend class="font-extrabold text-lg mb-3">Cách thanh toán <span class="text-danger">*</span></legend>' +
+          '<div class="grid gap-3">' + pay('bank', 'ph-bank', 'Chuyển khoản ngân hàng', 'Chuyển cọc sau khi tiệm gọi xác nhận') + pay('wallet', 'ph-wallet', 'Ví MoMo / ZaloPay', 'Chuyển cọc qua ví điện tử') + pay('cash', 'ph-money', 'Tiền mặt', 'Trả khi nhận bánh') + '</div>' +
+          '<p id="pay-err" class="field-error hidden"></p></fieldset>' +
+          '<div id="pay-info" class="mt-4"></div>' +
+          '<div class="mt-8"><h2 class="font-extrabold text-lg">Xem lại đơn</h2>' +
+          '<div class="mt-3 divide-y divide-beige rounded-2xl border border-beige">' +
+          '<section class="p-4"><div class="flex justify-between items-center mb-2"><h3 class="font-extrabold text-ink-muted text-sm">Bánh</h3>' + edit(1) + '</div><ul class="space-y-3">' + items + '</ul></section>' +
+          '<section class="p-4"><div class="flex justify-between items-center"><h3 class="font-extrabold text-ink-muted text-sm">Nhận bánh</h3>' + edit(2) + '</div><p class="font-bold">' + (D.deliveryType === 'delivery' ? 'Giao tận nơi' : 'Nhận tại tiệm') + ' · ' + (D.date ? Fmt.date(D.date) : '-') + ' · ' + (D.slot || '-') + '</p><p class="text-ink-muted">' + Fmt.esc(D.deliveryType === 'delivery' ? D.address : shop.address) + '</p></section>' +
+          '<section class="p-4"><div class="flex justify-between items-center"><h3 class="font-extrabold text-ink-muted text-sm">Người đặt</h3>' + edit(3) + '</div><p class="font-bold">' + Fmt.esc(D.name) + ' · ' + Fmt.phone(D.phone) + '</p><p class="text-ink-muted">' + (D.email ? Fmt.esc(D.email) : 'Không có email') + (D.note ? ' · ' + Fmt.esc(D.note) : '') + '</p></section>' +
+          '</div></div>' +
+          '<div class="lg:hidden mt-6 rounded-2xl bg-cream p-4">' + summaryHtml() + '</div>';
+        function info() {
+          var box = $('#pay-info');
+          var wait = '<p class="mt-3 flex gap-2 text-sm font-semibold text-mint-strong"><i class="ph-fill ph-phone-call text-lg shrink-0" aria-hidden="true"></i>Vui lòng chờ tiệm gọi xác nhận trước khi chuyển cọc.</p>';
+          if (D.payment === 'bank') box.innerHTML = '<div class="rounded-2xl bg-mint/50 p-4 flex gap-4"><img src="' + S.qrImage + '" alt="Mã QR chuyển khoản (ảnh minh họa)" class="w-24 h-24 rounded-xl bg-white object-cover shrink-0"><div class="text-[15px]"><p><span class="text-ink-muted">Ngân hàng:</span> <b>' + S.bank.name + '</b></p><p><span class="text-ink-muted">Số TK:</span> <b class="tabular-nums">' + S.bank.accountNo + '</b></p><p><span class="text-ink-muted">Chủ TK:</span> <b>' + S.bank.accountName + '</b></p><p><span class="text-ink-muted">Nội dung:</span> <b>mã đơn</b> (hiện sau khi gửi đơn)</p></div></div>' + wait;
+          else if (D.payment === 'wallet') box.innerHTML = '<div class="rounded-2xl bg-mint/50 p-4 text-[15px]"><p><span class="text-ink-muted">MoMo:</span> <b class="tabular-nums">' + Fmt.phone(S.momo) + '</b></p><p><span class="text-ink-muted">ZaloPay:</span> <b class="tabular-nums">' + Fmt.phone(S.zalopay) + '</b></p><p><span class="text-ink-muted">Nội dung:</span> <b>mã đơn</b> (hiện sau khi gửi đơn)</p></div>' + wait;
+          else if (D.payment === 'cash') box.innerHTML = '<div class="rounded-2xl bg-butter/70 p-4 text-[15px] flex gap-2"><i class="ph ph-info text-lg text-butter-strong shrink-0" aria-hidden="true"></i><p>Tiệm sẽ trao đổi cách đặt cọc khi gọi xác nhận đơn với bạn.</p></div>';
+          else box.innerHTML = '';
+        }
+        info();
+        $all('input[name=pay]', form).forEach(function (r) { r.onchange = function () { D.payment = r.value; save(); $('#pay-err').classList.add('hidden'); info(); }; });
+        $all('[data-goto]', form).forEach(function (b) { b.onclick = function () { go(+b.dataset.goto); }; });
+      }
+      function validate4() {
+        if (D.payment) return [];
+        var e = $('#pay-err'); e.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Vui lòng chọn cách thanh toán.'; e.classList.remove('hidden'); // E-DB-09
+        return [[$('input[name=pay]'), null]];
+      }
+
+      /* ----- Điều hướng bước ----- */
+      var RENDER = { 1: step1, 2: step2, 3: step3, 4: step4 };
+      var VALIDATE = { 1: validate1, 2: validate2, 3: validate3, 4: validate4 };
+      function showErrors(errs) {
+        errs.forEach(function (e) { if (e[0] && e[1]) FormUI.setError(e[0], e[1]); });
+        var first = errs[0] && errs[0][0];
+        if (first) { first.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'center' }); first.focus({ preventScroll: true }); }
+      }
+      function go(n) {
+        D.step = n; D.maxStep = Math.max(D.maxStep, n); save();
+        RENDER[n](); renderStepper(); renderSummary();
+        window.scrollTo({ top: 0, behavior: reducedMotion() ? 'auto' : 'smooth' });
+      }
+      function next() {
+        var errs = VALIDATE[D.step]();
+        if (errs.length) { showErrors(errs); return; }
+        if (D.step < 4) { go(D.step + 1); return; }
+        submit();
+      }
+
+      /* ----- Gửi đơn (FR-018): khóa nút chống bấm 2 lần ----- */
+      function submit() {
+        var btns = $all('.btn-next');
+        btns.forEach(function (b) { FormUI.busy(b, true, I18n.t('order.sending')); });
+        $all('.btn-back').forEach(function (b) { b.disabled = true; });
+        setTimeout(function () {
+          btns.forEach(function (b) { FormUI.busy(b, false); });
+          $all('.btn-back').forEach(function (b) { b.disabled = false; });
+          /* Lỗi lưu (E-DB-11): giữ dữ liệu, cho gửi lại */
+          if (saveError) {
+            saveError = false;
+            Toast.show('Chưa gửi được đơn, dữ liệu của bạn vẫn còn nguyên. Bạn bấm gửi lại giúp tiệm nha.', 'error', { actionLabel: 'Gửi lại', onAction: submit, duration: 7000 });
+            return;
+          }
+          /* Kiểm tra lại suất ngày (E-DB-07) -> về Bước 2 */
+          var st = Capacity.state(D.date);
+          if (['full', 'off', 'tooSoon', 'past'].indexOf(st.state) > -1 || (st.left != null && qtyTotal() > st.left)) {
+            go(2);
+            setTimeout(function () { var e = $('#date-err'); e.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Ngày này tiệm đã nhận đủ đơn, vui lòng chọn ngày khác.'; e.classList.remove('hidden'); }, 50);
+            Toast.show('Ngày nhận vừa hết suất, bạn chọn ngày khác giúp tiệm nha.', 'error');
+            return;
+          }
+          var t = totals();
+          var code = Orders.nextCode();
+          var ptsUsed = t.pts / S.pointValue;
+          var o = {
+            code: code, createdAt: new Date().toISOString(), status: 'pending', seen: false,
+            customer: { name: D.name.trim(), phone: D.phone, email: D.email, note: D.note.trim() },
+            items: D.items.map(function (it) { var c = cakeOf(it), s = sizeOf(it); return { cakeId: c.id, cakeName: c.name, sizeId: s.id, sizeLabel: s.label, servings: s.servings, qty: it.qty, unitPrice: s.price, message: it.message.trim(), sampleImages: it.samples.map(function (f) { return f.src; }), image: c.images[0] }; }),
+            delivery: { type: D.deliveryType, address: D.deliveryType === 'delivery' ? D.address.trim() : '', date: D.date, slot: D.slot },
+            payment: { method: D.payment }, discount: t.disc, pointsUsed: ptsUsed,
+            shippingFee: D.deliveryType === 'pickup' ? 0 : null, depositRate: S.depositRate, paid: 0, depositStatus: 'unpaid',
+            history: [{ at: new Date().toISOString(), by: 'Khách', text: 'Khách gửi đơn' }], internalNote: '', reviewed: {}
+          };
+          Orders.add(o);
+          if (ptsUsed) Customers.addPoints(D.phone, D.name, -ptsUsed, code, 'Tạm giữ điểm khi đặt bánh');
+          Store.set('last_order', { code: code, phone: D.phone, fresh: true });
+          Store.remove('order_draft');
+          location.href = 'dat-banh-thanh-cong.html';
+        }, 900);
+      }
+
+      /* ----- Khởi động ----- */
+      $all('.btn-next').forEach(function (b) { b.onclick = next; });
+      $all('.btn-back').forEach(function (b) { b.onclick = function () { if (D.step > 1) go(D.step - 1); }; });
+      $('#open-summary').onclick = function () { Modal.open({ title: I18n.t('order.summary'), body: summaryHtml(), actions: [{ label: 'Đóng', variant: 'secondary' }] }); };
+      form.addEventListener('submit', function (e) { e.preventDefault(); next(); });
+      document.addEventListener('langchange', function () { RENDER[D.step](); renderStepper(); renderSummary(); });
+
+      if (!D.items.length) {
+        $('#stepper').innerHTML = '';
+        $('#order-wrap').innerHTML = '<div class="lg:col-span-12 rounded-3xl bg-white shadow-soft">' + UI.empty({ icon: 'ph-cake', title: 'Bạn chưa chọn bánh nào', text: 'Chọn một mẫu bánh bạn thích rồi bấm "Đặt bánh này" để bắt đầu nha.', action: '<a href="danh-sach-banh.html" class="btn btn-primary h-12 px-6">' + I18n.t('cta.viewCakes') + '</a>' }) + '</div>';
+        $('#mobile-bar').remove();
+        return;
+      }
+      go(Math.min(D.step || 1, D.maxStep || 1));
+    });
+  </script>
+</body>
+</html>

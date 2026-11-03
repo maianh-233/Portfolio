@@ -1,0 +1,63 @@
+{
+  "slug": "manga-chronicle",
+  "name": "MANGA CHRONICLE",
+  "projectType": "website",
+  "concept": {
+    "topic": "Web Quảng cáo du lịch khám phá các studio manga Nhật Bản",
+    "brand": "MANGA CHRONICLE",
+    "purpose": "Thiết kế và xây dựng website MANGA CHRONICLE, một nền tảng giới thiệu và khám phá văn hóa manga Nhật Bản. Đây là website nhiều trang, không phải landing page, không có chức năng mua bán.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": ". Phong cách thiết kế\n\nXây dựng giao diện theo phong cách Mysterious Archive Editorial — kho lưu trữ bí ẩn kết hợp tạp chí văn hóa.\n\nMàu chủ đạo: giấy ngà #F0E8D8, đen mực #242321, đỏ son #A6382B, nâu lưu trữ #81735F.\n\nTypography mang phong cách tạp chí nghệ thuật, tiêu đề serif nổi bật, nội dung dễ đọc.\n\nHình ảnh gợi cảm giác hồ sơ cũ, giấy lưu trữ, nét mực, bản phác thảo, thư viện và không gian văn hóa Nhật Bản.\n\nBố cục biên tập bất đối xứng, có khoảng trắng, hình ảnh lớn và các nhãn hồ sơ như ARCHIVE NO. 001.\n\nAnimation nhẹ: nội dung xuất hiện khi cuộn, ảnh phóng nhẹ khi hover, dấu đóng lưu trữ xuất hiện tinh tế.\n\nTránh hiệu ứng 3D phức tạp, glitch, neon và chuyển động gây rối.\n\nThông điệp thương hiệu: “Mỗi trang truyện là một dấu vết lịch sử.”\n\nToàn bộ giao diện sử dụng tiếng Việt, ngoại trừ tên riêng và thuật ngữ cần giữ nguyên.\n\n2. Chỉ xây dựng 3 trang chính\n\nTrang 1 — Trang chủ /\n\nHeader có logo MANGA CHRONICLE, menu điều hướng và biểu tượng tìm kiếm.\n\nHero mang cảm giác mở một kho lưu trữ bí mật, gồm tiêu đề lớn, hình ảnh manga-related hợp pháp và nút “Bắt đầu khám phá”.\n\nKhu vực “Hồ sơ nổi bật”: các thẻ giới thiệu tác giả, tác phẩm và câu chuyện lịch sử.\n\nKhu vực “Dòng thời gian manga”: giới thiệu một số giai đoạn lịch sử có nguồn xác minh.\n\nKhu vực “Phía sau trang truyện”: giới thiệu quá trình sáng tác manga.\n\nKhu vực “Dấu tích manga tại Nhật Bản”: giới thiệu các bảo tàng hoặc địa điểm văn hóa có thật.\n\nKhu vực bài viết mới và footer.\n\nTrang chủ phải có chiều sâu thị giác, không chỉ là danh sách các thẻ xếp nối tiếp nhau.\n\nTrang 2 — Kho lưu trữ /kho-luu-tru\n\nĐây là trang khám phá nội dung tổng hợp, gộp các chuyên mục lịch sử, mangaka, tác phẩm, nghệ thuật sáng tác và địa điểm.\n\nCó tiêu đề “Kho lưu trữ manga”.\n\nHiển thị các thẻ nội dung với ảnh, tên, mô tả ngắn, danh mục và liên kết xem chi tiết.\n\nBộ lọc gồm: Tất cả, Lịch sử, Tác giả, Tác phẩm, Nghệ thuật sáng tác, Địa điểm.\n\nCó ô tìm kiếm theo tên tác giả, tác phẩm hoặc chủ đề.\n\nCó thể lọc nội dung bằng JavaScript phía giao diện, không cần xây dựng backend trong bản thử nghiệm.\n\nKhi nhấp vào thẻ, mở trang chi tiết tương ứng.\n\nTrang 3 — Chi tiết hồ sơ /ho-so/:slug\n\nDùng một template chung để hiển thị nội dung chi tiết của từng hồ sơ. Không tạo một trang riêng cho mỗi tác giả hoặc tác phẩm trong giai đoạn test.\n\nTemplate gồm:\n\nĐường dẫn điều hướng phân cấp.\n\nNhãn danh mục và mã hồ sơ.\n\nTiêu đề lớn, ảnh đại diện và phần giới thiệu.\n\nNội dung chính được chia thành các mục rõ ràng.\n\nThông tin lịch sử, tác giả hoặc bối cảnh liên quan nếu có căn cứ.\n\nKhu vực nguồn tham khảo.\n\nCác hồ sơ liên quan ở cuối trang.\n\nNút quay lại kho lưu trữ.\n\nDữ liệu mẫu có thể gồm hồ sơ tác giả, tác phẩm manga, giai đoạn lịch sử, kỹ thuật sáng tác và địa điểm văn hóa. Các hồ sơ sử dụng chung một template nhưng nội dung phải phù hợp với từng loại.\n\n3. Điều hướng và chức năng\n\nMenu chính chỉ gồm:\n\nTrang chủ\n\nKho lưu trữ\n\nGiới thiệu\n\nMục “Giới thiệu” có thể là một khu vực ngắn ở cuối trang chủ hoặc một trang đơn giản nếu cần.\n\nYêu cầu chức năng:\n\nĐiều hướng giữa 3 trang hoạt động.\n\nBộ lọc và tìm kiếm có thể sử dụng được.\n\nThẻ nội dung mở đúng hồ sơ.\n\nCó trạng thái đang chọn cho bộ lọc.\n\nCó giao diện responsive cho desktop và điện thoại.\n\nCó trạng thái không tìm thấy kết quả.\n\nKhông tạo nút giả hoặc liên kết hỏng.\n\n4. Nội dung và bản quyền\n\nChỉ sử dụng thông tin lịch sử, tác giả, tác phẩm và địa điểm có thể xác minh.\n\nKhông bịa trích dẫn, sự kiện hậu trường, ngày tháng hoặc địa điểm.\n\nKhông sử dụng tranh manga, bìa truyện, nhân vật hoặc logo có bản quyền nếu chưa có quyền sử dụng.\n\nƯu tiên hình ảnh được cấp phép, tư liệu có quyền sử dụng hoặc hình minh họa nguyên bản.\n\nNếu nội dung chỉ để minh họa giao diện, ghi rõ đó là dữ liệu mẫu.\n\nKhông giả làm ảnh lịch sử thật bằng hình ảnh AI.\n\n5. Yêu cầu kỹ thuật và giới hạn triển khai\n\nƯu tiên tạo ra kết quả trực quan nhanh, hoàn chỉnh và có thể tương tác.\n\nChỉ triển khai 3 template trang; dùng dữ liệu mẫu để tái sử dụng template chi tiết.\n\nKhông tạo hàng loạt trang riêng, không xây dựng CMS hoặc backend phức tạp trong bản test.\n\nTách dữ liệu nội dung khỏi giao diện để dễ thay thế sau này.\n\nTối ưu ảnh, responsive, cấu trúc HTML và khả năng đọc.\n\nGiữ code gọn, tránh thư viện không cần thiết.\n\nKhông hy sinh chất lượng giao diện để chạy theo số lượng nội dung.\n\nMục tiêu: Hoàn thành một bản prototype MANGA CHRONICLE có thể chạy thử ngay, thể hiện rõ phong cách kho lưu trữ manga bí ẩn, có 3 template trang, dữ liệu mẫu, điều hướng và tương tác thực tế. Hãy ưu tiên hoàn thiện bản thử nghiệm này trước, không mở rộng phạm vi khi chưa được yêu cầu.",
+    "mood": "",
+    "reference": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-16T08:18:32.400Z",
+  "updatedAt": "2026-10-16T08:41:20.011Z",
+  "screen": "done",
+  "request": "Web Quảng cáo du lịch khám phá các studio manga Nhật Bản",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\manga-chronicle\\prototype",
+    "builtAt": "2026-10-16T08:41:10.231Z",
+    "pages": [
+      "index.html",
+      "ho-so.html",
+      "kho-luu-tru.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "ho-so.html": [],
+      "kho-luu-tru.html": []
+    }
+  },
+  "job": {
+    "id": "b3ecd019-5ee2-4e85-b340-15a2fbcfebed",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\manga-chronicle\\prototype",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-16T08:41:19.974Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 9
+  }
+}

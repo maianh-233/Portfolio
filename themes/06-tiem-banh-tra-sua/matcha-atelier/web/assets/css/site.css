@@ -1,0 +1,68 @@
+:root {
+  --matcha: #65764B;
+  --matcha-deep: #4B5937;
+  --ivory: #F5F1E7;
+  --ink: #242821;
+  --sage: #B7C2A0;
+  --washi: #ECE7DA;
+  --line: #D6D1C2;
+  --ui-accent: #4B5937;
+  --font-display: 'Fraunces', Georgia, system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+}
+
+html { background: var(--ivory); }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--ivory);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Washi paper grain: fixed, non-interactive layer (never on scrolling containers) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: .5;
+  background-image:
+    radial-gradient(rgba(36,40,33,.035) 1px, transparent 1px),
+    radial-gradient(rgba(36,40,33,.025) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+  mix-blend-mode: multiply;
+}
+
+/* Washi mount: an image sits on paper with a hairline offset frame */
+.washi-mount { position: relative; isolation: isolate; }
+.washi-mount::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(14px, 14px);
+  border: 1px solid rgba(36,40,33,.28);
+  pointer-events: none;
+  z-index: -1;
+}
+@media (max-width: 767px) { .washi-mount::after { transform: translate(8px, 8px); } }
+
+/* Photo tone: warm and slightly faded */
+.photo-tone { filter: saturate(.9) sepia(.08); }
+
+/* Header state after scroll */
+#top.is-scrolled { background: rgba(245,241,231,.94); box-shadow: 0 1px 0 rgba(36,40,33,.12); }
+
+/* Language switch: content hidden only while swapping */
+[data-lang-btn][aria-pressed="true"] { background: var(--ink); color: var(--ivory); }
+
+/* Smooth page transition (fade in on load, fade out on internal navigation) */
+@keyframes page-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+main { animation: page-in .9s cubic-bezier(.16,1,.3,1) both; }
+body.is-leaving main { opacity: 0; transform: translateY(-6px); transition: opacity .35s ease-in, transform .35s ease-in; }
+
+@media (prefers-reduced-motion: reduce) {
+  main { animation: none; }
+  body.is-leaving main { transition: none; opacity: 1; transform: none; }
+}

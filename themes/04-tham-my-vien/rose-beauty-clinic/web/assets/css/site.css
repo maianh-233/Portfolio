@@ -1,0 +1,47 @@
+:root {
+  --cream: #FBF5EF;
+  --ivory: #FFFCF8;
+  --blush: #F2D9D3;
+  --petal: #E8C1BA;
+  --rose: #B5727C;
+  --rosedeep: #8E4E58;
+  --ink: #35262A;
+  --muted: #6E5A5E;
+  --line: #E6D3CC;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, serif;
+  --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
+  --ui-accent: #8E4E58;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--ink); background: var(--cream); -webkit-font-smoothing: antialiased; }
+
+/* Khung vòm - ý tưởng thị giác xuyên suốt */
+.arch { border-radius: 999px 999px 1.5rem 1.5rem; }
+.arch-rings {
+  background:
+    radial-gradient(circle at 50% 100%, transparent 38%, rgba(181,114,124,.28) 38.3%, transparent 38.8%),
+    radial-gradient(circle at 50% 100%, transparent 52%, rgba(181,114,124,.22) 52.3%, transparent 52.8%),
+    radial-gradient(circle at 50% 100%, transparent 66%, rgba(181,114,124,.16) 66.3%, transparent 66.8%),
+    radial-gradient(circle at 50% 100%, transparent 80%, rgba(181,114,124,.12) 80.3%, transparent 80.8%),
+    linear-gradient(180deg, #F6E3DE 0%, #F2D9D3 55%, #ECCDC6 100%);
+}
+.arch-soft { background: radial-gradient(120% 90% at 30% 10%, #FFFCF8 0%, #F6E3DE 45%, #E8C1BA 100%); }
+
+/* Header khi cuộn */
+#top.is-scrolled { background: rgba(251,245,239,.94); box-shadow: 0 1px 0 var(--line); }
+
+/* Nút ngôn ngữ đang chọn */
+[data-lang-set][aria-pressed="true"] { background: var(--ink); color: var(--ivory); }
+
+/* Dialog */
+dialog#book::backdrop { background: rgba(53,38,42,.45); }
+
+/* Đường cong trang trí cuối section */
+.curve-top { border-top-left-radius: 50% 4rem; border-top-right-radius: 50% 4rem; }
+@media (min-width: 1024px) { .curve-top { border-top-left-radius: 50% 7rem; border-top-right-radius: 50% 7rem; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0ms !important; }
+}

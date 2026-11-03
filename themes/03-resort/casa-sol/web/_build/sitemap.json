@@ -1,0 +1,152 @@
+{
+  "brand": "CASA SOL",
+  "language": "en",
+  "preset": "cinematic",
+  "motionLevel": 3,
+  "visualIdea": "Tạp chí du lịch Địa Trung Hải: khung vòm cửa, ảnh postcard viền trắng nghiêng nhẹ và chú thích in nghiêng chạy xuyên các trang như những trang album mùa hè",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Nắng Địa Trung Hải, nhịp sống chậm",
+    "description": "Giao diện giới thiệu resort boutique phong cách làng ven biển Địa Trung Hải."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Mở đầu như trang bìa tạp chí: giới thiệu CASA SOL, ba loại lưu trú, kiến trúc, đời sống resort và album mùa hè, dẫn sang các trang con",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ai", "note": "Theo chú thích BA: chia chữ / ảnh, postcard chồng lên ảnh chính" },
+        { "id": "intro", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Giới thiệu resort, link sang About" },
+        { "id": "rooms", "catalog": "collections", "variant": "teaser-row", "source": "ai", "note": "Ba postcard tỉ lệ khác nhau, link sang Stays" },
+        { "id": "architecture", "catalog": "story", "variant": "story-pinned", "source": "ai", "note": "The Beauty of Mediterranean Living — cảnh ghim 3 bước" },
+        { "id": "life", "catalog": "features", "variant": "features-alternate", "source": "ai", "note": "Dining / Pool / Gardens, xen kẽ ảnh ngang – dọc" },
+        { "id": "summer", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "Album mùa hè có lightbox" },
+        { "id": "next", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn sang Experiences / About" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "santorini terrace sea", "file": "https://images.unsplash.com/photo-1678266587841-ca65ff1b5b1d?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "hero-postcard", "query": "bougainvillea white wall", "file": "https://images.unsplash.com/photo-1778199793901-dc0f6e5de393?auto=format&fit=crop&w=900&q=80", "status": "link" },
+        { "slot": "intro", "query": "white courtyard arches", "file": "https://images.unsplash.com/photo-1788184851263-f832bf6c76f3?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "rooms-coastal", "query": "mediterranean hotel room", "file": "https://images.unsplash.com/photo-1790419683322-b08a7050c424?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "rooms-courtyard", "query": "mediterranean hotel room", "file": "https://images.unsplash.com/photo-1639678349557-ffe5bed73ce7?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "rooms-villa", "query": "white house above sea", "file": "https://images.unsplash.com/photo-1618500031461-a5fc01e96763?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "architecture", "query": "white colonnade", "file": "https://images.unsplash.com/photo-1779249920897-64dcb2255269?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "life-dining", "query": "mediterranean dinner table outdoor", "file": "https://images.unsplash.com/photo-1780914117972-7997f4459523?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "life-pool", "query": "mediterranean pool", "file": "https://images.unsplash.com/photo-1765999906700-2d4dfd392966?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "life-gardens", "query": "bougainvillea white wall", "file": "https://images.unsplash.com/photo-1783085939775-0eadd03106d8?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "summer-1", "query": "bougainvillea blue sky", "file": "https://images.unsplash.com/photo-1763161468860-4e695738d985?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "summer-2", "query": "sea view hillside", "file": "https://images.unsplash.com/photo-1715685696399-f4f92ecf6c7a?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "summer-3", "query": "breakfast terrace ocean", "file": "https://images.unsplash.com/photo-1781456507236-2342945a284e?auto=format&fit=crop&w=1200&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Câu chuyện thương hiệu, kiến trúc & vật liệu, ba giá trị Địa Trung Hải, gallery kiến trúc; dẫn sang Experiences",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "A Place Shaped by the Mediterranean" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Hai cột bất đối xứng, không bịa lịch sử / giải thưởng" },
+        { "id": "materials", "catalog": "editorial", "variant": "features-numbered", "source": "ai", "note": "Tường trắng & vòm, đá & gỗ, đất nung, ánh sáng, vườn" },
+        { "id": "values", "catalog": "features", "variant": "quote-full", "source": "ai", "note": "Warm Hospitality / Local Flavours / Slow Living" },
+        { "id": "arch-gallery", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "Lightbox + chú thích" },
+        { "id": "closing", "catalog": "cta", "variant": "cta-split", "source": "ai", "note": "The Art of Living Slowly → Experiences" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "archway garden", "file": "https://images.unsplash.com/photo-1761629756386-15cdc055e504?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "story", "query": "courtyard potted plants tiles", "file": "https://images.unsplash.com/photo-1777788795060-cc5dae2ab1b0?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "materials-arches", "query": "white building archway", "file": "https://images.pexels.com/photos/6010266/pexels-photo-6010266.jpeg?auto=compress&cs=tinysrgb&w=1600", "status": "link" },
+        { "slot": "materials-terracotta", "query": "terracotta house garden", "file": "https://images.unsplash.com/photo-1767034240382-06e7b16bfbd4?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "materials-garden", "query": "stone courtyard tree", "file": "https://images.unsplash.com/photo-1767034241672-bd354b8a20a8?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "gallery-1", "query": "courtyard arched balconies", "file": "https://images.unsplash.com/photo-1790090398561-e73e53ff39d0?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "gallery-2", "query": "flowering tree white building", "file": "https://images.unsplash.com/photo-1601581875039-e899893d520c?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "gallery-3", "query": "white blue building", "file": "https://images.unsplash.com/photo-1612352354338-5f4a482544b0?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "gallery-4", "query": "arch mediterranean sea", "file": "https://images.pexels.com/photos/13506777/pexels-photo-13506777.jpeg?auto=compress&cs=tinysrgb&w=1400", "status": "link" },
+        { "slot": "closing", "query": "blue door bougainvillea", "file": "https://images.unsplash.com/photo-1788184851780-e0d4e323a64e?auto=format&fit=crop&w=1000&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/stays.html",
+      "title": "Stays",
+      "purpose": "Giới thiệu ba loại lưu trú (mỗi loại bố cục ảnh khác nhau), tiện ích resort và chi tiết cận cảnh; không giá, không đặt phòng",
+      "sections": [
+        { "id": "stays-hero", "catalog": "hero", "variant": "page-hero-wide", "source": "ai", "note": "Rooms with a Mediterranean Soul + mục lục ba loại phòng" },
+        { "id": "coastal-suite", "catalog": "collections", "variant": "feature-split", "source": "ai", "note": "Ảnh lớn + ảnh chi tiết chồng, danh sách tiện nghi" },
+        { "id": "courtyard-room", "catalog": "collections", "variant": "feature-arch", "source": "ai", "note": "Nền Warm Sand, khung vòm, dải Terracotta" },
+        { "id": "private-villa", "catalog": "collections", "variant": "feature-wide", "source": "ai", "note": "Ảnh ngang lớn + ảnh dọc chi tiết" },
+        { "id": "amenities", "catalog": "features", "variant": "features-alternate", "source": "ai", "note": "Hồ bơi, nhà hàng, vườn, lounge — mảng Chalk / Sea Blue / Terracotta" },
+        { "id": "details", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ai", "note": "Dải postcard kéo ngang + lightbox" },
+        { "id": "stays-closing", "catalog": "cta", "variant": "cta-fullbleed", "source": "ai", "note": "A Stay Made for Slow Days → Home / About" }
+      ],
+      "images": [
+        { "slot": "stays-hero", "query": "ocean view sunset room", "file": "https://images.unsplash.com/photo-1760204741315-abfc98ce3bf5?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "coastal-suite", "query": "balcony ocean view", "file": "https://images.unsplash.com/photo-1683387656179-6110eed7dfe2?auto=format&fit=crop&w=1800&q=80", "status": "link" },
+        { "slot": "coastal-suite-detail", "query": "blue headboard bedroom", "file": "https://images.unsplash.com/photo-1722095454514-661600984095?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "courtyard-room", "query": "white bed blue pillows", "file": "https://images.unsplash.com/photo-1611971263023-105938ce12ed?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "courtyard-room-detail", "query": "outdoor seating flowering tree", "file": "https://images.unsplash.com/photo-1765784606995-fd43684463eb?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "private-villa", "query": "white villa sea staircase", "file": "https://images.unsplash.com/photo-1787155394469-0dccd2e83b4f?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "private-villa-detail", "query": "rattan armchairs blue doors", "file": "https://images.unsplash.com/photo-1561586003-e1bcd340f5d9?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "amenities-pool", "query": "resort pool loungers garden", "file": "https://images.unsplash.com/photo-1780914149187-c4f302dafbb0?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "amenities-restaurant", "query": "stone patio tables sea", "file": "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "amenities-garden", "query": "olive tree", "file": "https://images.unsplash.com/photo-1632739148604-53b9fd796690?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "amenities-lounge", "query": "lounge chairs white terrace sea", "file": "https://images.unsplash.com/photo-1469796466635-455ede028aca?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "details-ceramics", "query": "white ceramic plates", "file": "https://images.unsplash.com/photo-1705598122310-c7532144a329?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "details-pottery", "query": "blue white striped cup vase", "file": "https://images.unsplash.com/photo-1721415290761-8202b0a094d3?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "details-table", "query": "table lemons sunlight", "file": "https://images.unsplash.com/photo-1586718520704-f7f9db04b8c0?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "details-flowers", "query": "table vase flowers", "file": "https://images.unsplash.com/photo-1652627703214-c982c57904f8?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "details-stone", "query": "stone building blue window", "file": "https://images.unsplash.com/photo-1698517092454-c8ee5ed74b02?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "details-door", "query": "blue door white building", "file": "https://images.unsplash.com/photo-1598376700101-3138a0d40f6d?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "stays-closing", "query": "white table chairs water", "file": "https://images.unsplash.com/photo-1504823349073-5a888013012e?auto=format&fit=crop&w=1400&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/experiences.html",
+      "title": "Experiences",
+      "purpose": "Ẩm thực địa phương, khám phá làng ven biển, buổi chiều bên hồ, vườn & thiên nhiên, gallery postcard; không đặt bàn / đặt dịch vụ",
+      "sections": [
+        { "id": "exp-hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ai", "note": "Savour Every Moment — letterbox, ảnh hoàng hôn" },
+        { "id": "cuisine", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Ảnh ngang + đoạn văn ngắn, không menu / đặt bàn" },
+        { "id": "village", "catalog": "editorial", "variant": "postcard-journey", "source": "ai", "note": "Hành trình qua 4 postcard" },
+        { "id": "pool", "catalog": "features", "variant": "feature-split", "source": "ai", "note": "Nền Sea Blue" },
+        { "id": "gardens", "catalog": "story", "variant": "story-asymmetric", "source": "ai", "note": "Bất đối xứng + chú thích nhỏ" },
+        { "id": "postcards", "catalog": "gallery", "variant": "gallery-postcard", "source": "ai", "note": "Tỉ lệ đa dạng, hover phóng nhẹ, lightbox" },
+        { "id": "exp-closing", "catalog": "cta", "variant": "cta-split-sunset", "source": "ai", "note": "Let the Days Unfold Slowly → Return to CASA SOL" }
+      ],
+      "images": [
+        { "slot": "exp-hero", "query": "wine food ocean sunset", "file": "https://images.unsplash.com/photo-1743427522092-3e3ef36e0a24?auto=format&fit=crop&w=2000&q=80", "status": "link" },
+        { "slot": "cuisine-1", "query": "table bowls of food", "file": "https://images.unsplash.com/photo-1682617666455-3a80f4e58840?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "cuisine-2", "query": "dining table near water", "file": "https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "cuisine-3", "query": "grilled octopus salad wine", "file": "https://images.unsplash.com/photo-1764397514746-e58523d0eaff?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "village-1", "query": "narrow street flowering tree", "file": "https://images.unsplash.com/photo-1719518788261-fcb2f203a931?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "village-2", "query": "white building green door", "file": "https://images.unsplash.com/photo-1695552703641-96f5d0fb5b05?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "village-3", "query": "oia white buildings evening", "file": "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "village-4", "query": "alley pink tree", "file": "https://images.unsplash.com/photo-1685697454294-122b79c6f602?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "pool-1", "query": "cliff pool ocean", "file": "https://images.unsplash.com/photo-1646519034169-fd82895985ff?auto=format&fit=crop&w=1600&q=80", "status": "link" },
+        { "slot": "pool-2", "query": "coffee by the pool", "file": "https://images.unsplash.com/photo-1653206339283-f4f7547901a1?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "pool-3", "query": "reading a book", "file": "https://images.unsplash.com/photo-1666813721996-42956e40788e?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "gardens-1", "query": "olive grove", "file": "https://images.unsplash.com/photo-1675719215722-19ba24cb677d?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "gardens-2", "query": "cobblestone potted plants", "file": "https://images.unsplash.com/photo-1684903611564-230eb285e833?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "gardens-3", "query": "white wall green plant sunlight", "file": "https://images.unsplash.com/photo-1544959223-693c51f4774f?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "postcards-1", "query": "blue domes santorini", "file": "https://images.unsplash.com/photo-1783442828255-cd8ea1f13750?auto=format&fit=crop&w=1400&q=80", "status": "link" },
+        { "slot": "postcards-2", "query": "white building tables ocean", "file": "https://images.unsplash.com/photo-1649053679570-4e0f268002af?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "postcards-3", "query": "sun hat table water", "file": "https://images.unsplash.com/photo-1530996667992-a35e832cdba0?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "postcards-4", "query": "plate of salad", "file": "https://images.unsplash.com/photo-1659270157059-06aa84f64532?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "postcards-5", "query": "white houses island", "file": "https://images.unsplash.com/photo-1539288541332-0efaa4749f34?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "postcards-6", "query": "wooden table white terrace", "file": "https://images.unsplash.com/photo-1604145195376-e2c8195adf29?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "exp-closing", "query": "sunset over sea buildings", "file": "https://images.unsplash.com/photo-1672622851784-0dbd3df4c088?auto=format&fit=crop&w=2000&q=80", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Dùng đúng 4 trang theo yêu cầu kỹ thuật của BA (index, about, stays, experiences) — không thêm trang chi tiết.",
+    "Bảng màu và font theo chú thích BA (Chalk White, Terracotta, Sea Blue, Olive, Warm Sand; Cormorant Garamond + Be Vietnam Pro) thay cho màu / font của preset Cinematic; preset chỉ giữ cách kể chuyện bằng ảnh lớn, cảnh ghim và letterbox ở hero trang Experiences.",
+    "Màu Terracotta #C66B4E dùng cho chi tiết trang trí; chữ trắng trên nền đất nung dùng sắc đậm #A4523A để đạt tương phản WCAG AA.",
+    "BA yêu cầu công tắc VI / EN: HTML mặc định tiếng Anh (lang=en), site.js đổi nội dung sang tiếng Việt qua data-i18n và ghi nhớ lựa chọn bằng localStorage — ghi đè mục 'không tạo bộ chuyển ngôn ngữ' của brief vì chú thích BA cụ thể hơn.",
+    "Mức chuyển động Level 3 được tiết chế theo chú thích BA: không hạt sáng (data-particles), không parallax mạnh, không tilt / con trỏ tùy biến; chỉ reveal, chữ trượt lên, scrub phóng ảnh nhẹ, một cảnh ghim ở trang chủ, nền chuyển màu mềm (data-sky).",
+    "Nguồn ảnh tự động (openverse) lỗi → dùng link ảnh thật qua link_image."
+  ],
+  "limitations": [
+    "Không có chức năng đặt phòng, đặt bàn, đặt dịch vụ hay thanh toán — theo phạm vi BA; các nút chỉ điều hướng giữa các trang.",
+    "Thông tin liên hệ ở footer là dữ liệu mẫu.",
+    "Ảnh dùng bằng link ngoài (Unsplash / Pexels), cần mạng để hiển thị; khung ảnh có nền dự phòng khi ảnh không tải được."
+  ]
+}

@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lilou Atelier | Romantic lingerie made in Saigon</title>
+  <meta name="description" content="Lilou Atelier is a Saigon lingerie label of lace, satin and hand-tied ribbons for girls who love soft, romantic things.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: { 50:'#fdf6f7', 100:'#fae9ed', 200:'#f5d3db', 300:'#ecb3c0', 400:'#df8ea1', 500:'#cd6c83', 600:'#b2526a', 700:'#924155', 800:'#713447', 900:'#4e2532' },
+            ivory: { 50:'#fffcf9', 100:'#fdf7f2', 200:'#f8eee6', 300:'#f1e2d6', 400:'#e6cfbf', 500:'#d6b8a3', 600:'#b8957e', 700:'#927261', 800:'#6c5347', 900:'#45352e' },
+            plum: { 50:'#f7f2f4', 100:'#ece0e5', 200:'#d6bfc9', 300:'#b897a6', 400:'#93697d', 500:'#74495d', 600:'#5c3749', 700:'#472a39', 800:'#36202c', 900:'#2a1922' }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="assets/js/ui.js"></script>
+  <style>
+    :root { --ui-accent: #b2526a; }
+    html { scroll-behavior: smooth; }
+    .arch { border-radius: 999px 999px 28px 28px; }
+    header.is-scrolled { background: rgba(255,252,249,.94); box-shadow: 0 10px 30px -18px rgba(78,37,50,.35); }
+    header.is-scrolled .nav-inner { height: 4rem; }
+    dialog::backdrop { background: rgba(42,25,34,.55); }
+    .grain::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.05;
+      background-image: radial-gradient(rgba(78,37,50,.9) 1px, transparent 1px); background-size: 3px 3px; }
+  </style>
+</head>
+<body id="top" class="bg-ivory-50 font-sans text-plum-800 antialiased selection:bg-blush-200">
+
+  <div data-scroll-progress class="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-blush-500"></div>
+
+  <!-- HEADER -->
+  <header data-header="shrink" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+    <div class="nav-inner mx-auto flex h-20 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 transition-all duration-300 sm:px-6 lg:px-10 2xl:px-16">
+      <a href="#top" class="group flex items-baseline gap-2" aria-label="Lilou Atelier home">
+        <span class="font-serif text-3xl font-medium italic tracking-tight text-plum-900">Lilou</span>
+        <span class="text-xs font-semibold uppercase tracking-[0.3em] text-blush-600 transition group-hover:text-plum-700">Atelier</span>
+      </a>
+      <nav data-scrollspy class="hidden items-center gap-8 text-[15px] font-medium text-plum-700 lg:flex" aria-label="Main">
+        <a href="#about" class="relative py-1 transition hover:text-blush-600 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-blush-500 after:transition hover:after:scale-x-100 [&.is-active]:text-blush-600 [&.is-active]:after:scale-x-100">About</a>
+        <a href="#collections" class="relative py-1 transition hover:text-blush-600 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-blush-500 after:transition hover:after:scale-x-100 [&.is-active]:text-blush-600 [&.is-active]:after:scale-x-100">Collections</a>
+        <a href="#products" class="relative py-1 transition hover:text-blush-600 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-blush-500 after:transition hover:after:scale-x-100 [&.is-active]:text-blush-600 [&.is-active]:after:scale-x-100">Our Pieces</a>
+        <a href="#story" class="relative py-1 transition hover:text-blush-600 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-blush-500 after:transition hover:after:scale-x-100 [&.is-active]:text-blush-600 [&.is-active]:after:scale-x-100">Our Story</a>
+        <a href="#journal" class="relative py-1 transition hover:text-blush-600 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-blush-500 after:transition hover:after:scale-x-100 [&.is-active]:text-blush-600 [&.is-active]:after:scale-x-100">Journal</a>
+        <a href="#instagram" class="relative py-1 transition hover:text-blush-600 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-blush-500 after:transition hover:after:scale-x-100 [&.is-active]:text-blush-600 [&.is-active]:after:scale-x-100">Instagram</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#letters" class="hidden rounded-full border border-plum-800 px-5 py-2.5 text-sm font-semibold text-plum-900 transition duration-300 hover:bg-plum-900 hover:text-ivory-50 active:scale-[.98] sm:inline-flex">Join the Letters</a>
+        <button data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-plum-200 text-plum-900 transition hover:bg-blush-100 lg:hidden" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[28px] bg-ivory-50 p-6 shadow-2xl shadow-plum-900/20 lg:hidden">
+    <nav class="flex flex-col font-serif text-3xl text-plum-900" aria-label="Mobile">
+      <a href="#about" class="border-b border-blush-100 py-3 transition hover:text-blush-600">About</a>
+      <a href="#collections" class="border-b border-blush-100 py-3 transition hover:text-blush-600">Collections</a>
+      <a href="#products" class="border-b border-blush-100 py-3 transition hover:text-blush-600">Our Pieces</a>
+      <a href="#story" class="border-b border-blush-100 py-3 transition hover:text-blush-600">Our Story</a>
+      <a href="#journal" class="border-b border-blush-100 py-3 transition hover:text-blush-600">Journal</a>
+      <a href="#instagram" class="py-3 transition hover:text-blush-600">Instagram</a>
+    </nav>
+    <a href="#letters" class="mt-5 flex h-12 w-full items-center justify-center rounded-full bg-plum-900 text-sm font-semibold text-ivory-50 transition hover:bg-blush-700">Join the Letters</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="relative overflow-hidden bg-ivory-50 pt-24 lg:min-h-[100dvh]">
+      <div aria-hidden="true" class="grain absolute inset-y-0 right-0 hidden w-[46%] bg-blush-100 lg:block"></div>
+      <div class="relative mx-auto grid w-full max-w-screen-2xl items-center gap-12 px-4 pb-16 sm:px-6 lg:min-h-[calc(100dvh-6rem)] lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-12 2xl:px-16">
+        <div class="lg:col-span-6 xl:col-span-6">
+          <p class="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-blush-600">Spring 2026 collection</p>
+          <h1 data-split="words" class="font-serif text-[3.2rem] font-normal leading-[1.02] tracking-tight text-plum-900 sm:text-7xl xl:text-[5.6rem] 2xl:text-[6.4rem]">
+            Softness, worn like a <em class="font-medium italic text-blush-600">secret.</em>
+          </h1>
+          <p class="mt-7 max-w-[34ch] text-lg leading-relaxed text-plum-600 sm:text-xl">Lace, satin and hand-tied ribbons, sewn in Saigon for girls who love being gentle with themselves.</p>
+          <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <a href="#about" data-magnetic="0.25" data-ripple class="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-plum-900 px-8 text-[15px] font-semibold text-ivory-50 shadow-lg shadow-plum-900/20 transition duration-300 hover:bg-blush-700 active:scale-[.98]">
+              Discover Lilou
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#collections" class="group inline-flex h-14 items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold text-plum-800 transition hover:text-blush-600">
+              View the collections
+              <svg class="transition group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative lg:col-span-6 lg:pl-8 xl:pl-16">
+          <div data-parallax="0.08" class="relative mx-auto w-full max-w-[560px] lg:ml-auto lg:mr-0">
+            <div data-reveal="zoom" class="arch relative aspect-[4/5] overflow-hidden bg-blush-200 shadow-2xl shadow-blush-900/20 sm:aspect-[3/4]">
+              <img src="assets/img/hero-reve-des-roses.jpg" alt="A young woman in an ivory satin slip holding a pink rose in a field of roses" class="h-full w-full object-cover object-[center_35%]" width="717" height="1024">
+            </div>
+          </div>
+          <div data-follow="0.05" class="absolute -bottom-6 left-0 hidden w-40 sm:block lg:-left-6 xl:w-48">
+            <div class="aspect-square overflow-hidden rounded-full border-[6px] border-ivory-50 bg-blush-100 shadow-xl shadow-plum-900/15">
+              <img src="assets/img/perfume-lace-pink.jpg" alt="A pale pink rose resting on ivory lace" class="h-full w-full object-cover" width="1024" height="683">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="border-y border-blush-200 bg-ivory-100 py-5" aria-hidden="true">
+      <div data-marquee="35" class="flex items-center gap-10 whitespace-nowrap font-serif text-2xl italic text-plum-700 sm:text-3xl">
+        <span>Chantilly lace</span><span class="h-2 w-2 rotate-45 bg-blush-400"></span>
+        <span>Mulberry silk satin</span><span class="h-2 w-2 rotate-45 bg-blush-400"></span>
+        <span>Hand-tied bows</span><span class="h-2 w-2 rotate-45 bg-blush-400"></span>
+        <span>Wire-free comfort</span><span class="h-2 w-2 rotate-45 bg-blush-400"></span>
+        <span>Sewn in small batches in Saigon</span><span class="h-2 w-2 rotate-45 bg-blush-400"></span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-ivory-50 py-20 lg:py-32">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+        <div data-reveal="up" class="lg:col-span-5">
+          <div class="arch aspect-[4/5] overflow-hidden bg-blush-100">
+            <img src="assets/img/woman-bouquet-1.jpg" alt="A woman in an ivory knit top holding a small bouquet of pink asters" class="h-full w-full object-cover transition duration-700 hover:scale-105" loading="lazy" width="1216" height="1824">
+          </div>
+        </div>
+        <div class="flex flex-col justify-center lg:col-span-7">
+          <h2 data-reveal="up" class="font-serif text-4xl leading-[1.12] text-plum-900 sm:text-5xl xl:text-6xl 2xl:text-[4.2rem]">
+            We make lingerie for the girl who keeps pressed flowers, writes long letters and wears <em class="italic text-blush-600">lace on ordinary days.</em>
+          </h2>
+          <p data-reveal="up" data-reveal-delay="120" class="mt-8 max-w-[60ch] text-lg leading-relaxed text-plum-600">
+            Lilou Atelier began as a small sewing table in District 3. We believe femininity is not a costume for special occasions. It is the quiet pleasure of choosing something beautiful just for you, every morning.
+          </p>
+          <div data-reveal-stagger="100" class="mt-12 grid gap-8 sm:grid-cols-3">
+            <div class="border-t border-blush-300 pt-5">
+              <h3 class="font-serif text-2xl text-plum-900">Gentle on skin</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-plum-600">Soft cotton gussets, brushed straps and lace that never scratches.</p>
+            </div>
+            <div class="border-t border-blush-300 pt-5">
+              <h3 class="font-serif text-2xl text-plum-900">Made slowly</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-plum-600">Each piece is cut and finished by hand in runs of under 200.</p>
+            </div>
+            <div class="border-t border-blush-300 pt-5">
+              <h3 class="font-serif text-2xl text-plum-900">Every body, softly</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-plum-600">Fits drafted on Vietnamese bodies, from petite to fuller cups.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTIONS -->
+    <section id="collections" class="bg-blush-50 py-20 lg:py-32">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div data-reveal="up" class="max-w-3xl">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-blush-600">Collections</p>
+          <h2 class="font-serif text-4xl leading-[1.1] text-plum-900 sm:text-5xl xl:text-6xl">Three chapters of a romantic wardrobe</h2>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-12 lg:grid-rows-2 lg:gap-8">
+          <a href="#products" data-reveal="up" class="group relative block overflow-hidden rounded-[28px] bg-blush-200 lg:col-span-7 lg:row-span-2">
+            <div class="aspect-[4/5] sm:aspect-[16/11] lg:aspect-auto lg:h-full">
+              <img src="assets/img/peony-pink.webp" alt="A bunch of soft pink garden roses lying on a white table" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="5184" height="3456">
+            </div>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-plum-900/75 via-plum-900/25 to-transparent p-6 pt-24 sm:p-10 sm:pt-32">
+              <h3 class="font-serif text-4xl italic text-ivory-50 sm:text-5xl">Rose Garden</h3>
+              <p class="mt-3 max-w-[44ch] text-[15px] leading-relaxed text-ivory-100 sm:text-base">Blush Chantilly lace embroidered with tiny climbing roses. Our spring signature, 14 pieces.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ivory-50">See the pieces <svg class="transition group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+
+          <a href="#products" data-reveal="up" data-reveal-delay="120" class="group relative grid overflow-hidden rounded-[28px] bg-ivory-200 sm:grid-cols-2 lg:col-span-5">
+            <div class="aspect-[4/3] overflow-hidden sm:aspect-auto sm:h-full">
+              <img src="assets/img/woman-bouquet-2.jpg" alt="A woman in a white blouse holding wild white flowers at sunset" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="3840" height="5760">
+            </div>
+            <div class="flex flex-col justify-end p-6 sm:p-8">
+              <h3 class="font-serif text-3xl italic text-plum-900 xl:text-4xl">Ivory Morning</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-plum-600">Cream cotton-silk bralettes and slips for slow, sunlit mornings. 9 pieces.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blush-700">See the pieces <svg class="transition group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+
+          <a href="#products" data-reveal="up" data-reveal-delay="200" class="group relative grid overflow-hidden rounded-[28px] bg-plum-800 sm:grid-cols-2 lg:col-span-5">
+            <div class="flex flex-col justify-end p-6 sm:order-1 sm:p-8">
+              <h3 class="font-serif text-3xl italic text-ivory-50 xl:text-4xl">Ribbon Hour</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-plum-100">Satin sets finished with bows we tie by hand, one by one. 11 pieces.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blush-200">See the pieces <svg class="transition group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+            <div class="aspect-[4/3] overflow-hidden sm:order-2 sm:aspect-auto sm:h-full">
+              <img src="assets/img/woman-bouquet-3.jpg" alt="White roses held against a satin sash tied in an ivory bow" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="2317" height="2896">
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="bg-ivory-50 py-20 lg:py-32">
+      <div data-tabs class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+        <div class="lg:col-span-5">
+          <h2 data-reveal="up" class="font-serif text-4xl leading-[1.1] text-plum-900 sm:text-5xl xl:text-6xl">Our pieces</h2>
+          <p data-reveal="up" class="mt-5 max-w-[46ch] text-lg leading-relaxed text-plum-600">Five families, one feeling. Choose a line to see its fabrics, fit and the little details we love.</p>
+          <div class="mt-10 flex flex-col">
+            <button data-tab="bra" class="is-active group flex items-baseline justify-between gap-4 border-b border-blush-200 py-4 text-left transition hover:pl-2 [&.is-active]:pl-2">
+              <span class="font-serif text-3xl text-plum-400 transition group-hover:text-plum-900 group-[.is-active]:italic group-[.is-active]:text-blush-600 sm:text-4xl">Bras</span>
+              <span class="hidden text-sm text-plum-500 sm:block">Lightly lined, wire-free</span>
+            </button>
+            <button data-tab="panties" class="group flex items-baseline justify-between gap-4 border-b border-blush-200 py-4 text-left transition hover:pl-2 [&.is-active]:pl-2">
+              <span class="font-serif text-3xl text-plum-400 transition group-hover:text-plum-900 group-[.is-active]:italic group-[.is-active]:text-blush-600 sm:text-4xl">Panties</span>
+              <span class="hidden text-sm text-plum-500 sm:block">Lace trims, cotton lined</span>
+            </button>
+            <button data-tab="bralette" class="group flex items-baseline justify-between gap-4 border-b border-blush-200 py-4 text-left transition hover:pl-2 [&.is-active]:pl-2">
+              <span class="font-serif text-3xl text-plum-400 transition group-hover:text-plum-900 group-[.is-active]:italic group-[.is-active]:text-blush-600 sm:text-4xl">Bralettes</span>
+              <span class="hidden text-sm text-plum-500 sm:block">Bustier shapes, soft cups</span>
+            </button>
+            <button data-tab="sets" class="group flex items-baseline justify-between gap-4 border-b border-blush-200 py-4 text-left transition hover:pl-2 [&.is-active]:pl-2">
+              <span class="font-serif text-3xl text-plum-400 transition group-hover:text-plum-900 group-[.is-active]:italic group-[.is-active]:text-blush-600 sm:text-4xl">Lingerie sets</span>
+              <span class="hidden text-sm text-plum-500 sm:block">Made to be worn together</span>
+            </button>
+            <button data-tab="sleep" class="group flex items-baseline justify-between gap-4 py-4 text-left transition hover:pl-2 [&.is-active]:pl-2">
+              <span class="font-serif text-3xl text-plum-400 transition group-hover:text-plum-900 group-[.is-active]:italic group-[.is-active]:text-blush-600 sm:text-4xl">Sleepwear</span>
+              <span class="hidden text-sm text-plum-500 sm:block">Slips, robes, pajamas</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div data-tab-panel="bra" class="grid gap-8 sm:grid-cols-5">
+            <div class="arch aspect-[4/5] overflow-hidden bg-ivory-200 sm:col-span-3"><img src="assets/img/product-satin-bra.webp" alt="An ivory satin bra with floral lace panels on a white mannequin" class="h-full w-full object-cover" loading="lazy" width="6086" height="6122"></div>
+            <div class="flex flex-col justify-end sm:col-span-2">
+              <h3 class="font-serif text-3xl text-plum-900">The Céleste bra</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-plum-600">Silk satin cups veiled in floral lace, shaped to lift without a single wire.</p>
+              <dl class="mt-6 space-y-4 text-sm">
+                <div><dt class="font-semibold text-plum-900">Fabrics</dt><dd class="mt-1 text-plum-600">Silk satin, Chantilly lace, cotton lining</dd></div>
+                <div><dt class="font-semibold text-plum-900">Sizes</dt><dd class="mt-1 text-plum-600">70A to 85D</dd></div>
+                <div><dt class="font-semibold text-plum-900">Shades</dt><dd class="mt-1 text-plum-600">Ivory, Blush, Nude Rose</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div data-tab-panel="panties" hidden class="grid gap-8 sm:grid-cols-5">
+            <div class="arch aspect-[4/5] overflow-hidden bg-blush-100 sm:col-span-3"><img src="assets/img/perfume-lace-pink.jpg" alt="Close-up of a pale pink rose on scalloped ivory lace" class="h-full w-full object-cover" loading="lazy" width="1024" height="683"></div>
+            <div class="flex flex-col justify-end sm:col-span-2">
+              <h3 class="font-serif text-3xl text-plum-900">The Rosette brief</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-plum-600">Scalloped lace edges and a tiny satin rosette at the front. Soft enough to forget.</p>
+              <dl class="mt-6 space-y-4 text-sm">
+                <div><dt class="font-semibold text-plum-900">Cuts</dt><dd class="mt-1 text-plum-600">Classic brief, high-waist, cheeky</dd></div>
+                <div><dt class="font-semibold text-plum-900">Sizes</dt><dd class="mt-1 text-plum-600">XS to XL</dd></div>
+                <div><dt class="font-semibold text-plum-900">Care</dt><dd class="mt-1 text-plum-600">Hand wash cold, dry flat</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div data-tab-panel="bralette" hidden class="grid gap-8 sm:grid-cols-5">
+            <div class="arch aspect-[4/5] overflow-hidden bg-ivory-200 sm:col-span-3"><img src="assets/img/vintage-corset.webp" alt="A nude stitched bustier with sweetheart neckline on a dress form" class="h-full w-full object-cover" loading="lazy" width="2919" height="4000"></div>
+            <div class="flex flex-col justify-end sm:col-span-2">
+              <h3 class="font-serif text-3xl text-plum-900">The Margot bustier</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-plum-600">A sweetheart bralette inspired by vintage corsetry, softened for everyday wear.</p>
+              <dl class="mt-6 space-y-4 text-sm">
+                <div><dt class="font-semibold text-plum-900">Fabrics</dt><dd class="mt-1 text-plum-600">Cotton sateen, flexible boning</dd></div>
+                <div><dt class="font-semibold text-plum-900">Sizes</dt><dd class="mt-1 text-plum-600">XS to L</dd></div>
+                <div><dt class="font-semibold text-plum-900">Wear it</dt><dd class="mt-1 text-plum-600">Under a cardigan or a sheer blouse</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div data-tab-panel="sets" hidden class="grid gap-8 sm:grid-cols-5">
+            <div class="arch aspect-[4/5] overflow-hidden bg-blush-200 sm:col-span-3"><img src="assets/img/product-set-pink.webp" alt="A twisted bandeau top and matching brief with gold rings on a pink background" class="h-full w-full object-cover" loading="lazy" width="4460" height="2901"></div>
+            <div class="flex flex-col justify-end sm:col-span-2">
+              <h3 class="font-serif text-3xl text-plum-900">The Ribbon Hour set</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-plum-600">A twisted bandeau and a low brief with delicate golden rings. Sold as a pair, designed as one.</p>
+              <dl class="mt-6 space-y-4 text-sm">
+                <div><dt class="font-semibold text-plum-900">Fabrics</dt><dd class="mt-1 text-plum-600">Satin jersey, gold-tone hardware</dd></div>
+                <div><dt class="font-semibold text-plum-900">Sizes</dt><dd class="mt-1 text-plum-600">XS to L</dd></div>
+                <div><dt class="font-semibold text-plum-900">Shades</dt><dd class="mt-1 text-plum-600">Midnight, Petal</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div data-tab-panel="sleep" hidden class="grid gap-8 sm:grid-cols-5">
+            <div class="arch aspect-[4/5] overflow-hidden bg-ivory-200 sm:col-span-3"><img src="assets/img/product-silk-slip.webp" alt="A cream silk slip dress with a sheer lace inset on a mannequin" class="h-full w-full object-cover object-top" loading="lazy" width="6132" height="8176"></div>
+            <div class="flex flex-col justify-end sm:col-span-2">
+              <h3 class="font-serif text-3xl text-plum-900">The Linh slip</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-plum-600">A bias-cut silk slip with a sheer diamond inset. For sleeping in, or not sleeping at all.</p>
+              <dl class="mt-6 space-y-4 text-sm">
+                <div><dt class="font-semibold text-plum-900">Fabrics</dt><dd class="mt-1 text-plum-600">19 momme mulberry silk</dd></div>
+                <div><dt class="font-semibold text-plum-900">Sizes</dt><dd class="mt-1 text-plum-600">XS to XL</dd></div>
+                <div><dt class="font-semibold text-plum-900">Also in the line</dt><dd class="mt-1 text-plum-600">Robes, cotton pajamas, camisoles</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" class="relative overflow-hidden bg-plum-900 py-20 text-ivory-100 lg:py-32">
+      <div class="mx-auto grid w-full max-w-screen-2xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+        <div data-reveal="up" class="lg:col-span-5">
+          <div class="arch aspect-[4/5] overflow-hidden bg-plum-700">
+            <img src="assets/img/story-silk-roses.webp" alt="A vintage sepia portrait of a young woman in a soft ruffled dress" class="h-full w-full origin-[50%_40%] scale-[1.9] object-cover object-[50%_38%]" loading="lazy" width="4430" height="6464">
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <h2 data-reveal="up" class="font-serif text-4xl leading-[1.1] text-ivory-50 sm:text-5xl xl:text-6xl">It began with my grandmother's <em class="italic text-blush-300">silk slip.</em></h2>
+          <div data-reveal="up" data-reveal-delay="100" class="mt-8 max-w-[62ch] space-y-5 text-lg leading-relaxed text-plum-100">
+            <p>She kept it folded in tissue paper for fifty years. When I finally held it, the lace was still perfect, and I wondered why the things we wear closest to us are so often the least loved.</p>
+            <p>Lilou is my answer: pieces made with the same patience, for women who deserve to feel cherished on a Tuesday.</p>
+          </div>
+          <p data-reveal="up" class="mt-6 font-serif text-xl italic text-blush-200">Linh Tran, founder</p>
+
+          <ol data-reveal-stagger="120" class="mt-14 grid gap-8 sm:grid-cols-3">
+            <li class="border-t border-plum-600 pt-5">
+              <span class="font-serif text-4xl text-blush-300">2019</span>
+              <p class="mt-2 text-[15px] leading-relaxed text-plum-100">First sketches and 30 hand-sewn bras, sold to friends.</p>
+            </li>
+            <li class="border-t border-plum-600 pt-5">
+              <span class="font-serif text-4xl text-blush-300">2021</span>
+              <p class="mt-2 text-[15px] leading-relaxed text-plum-100">Our atelier opens on Tran Quoc Thao street, District 3.</p>
+            </li>
+            <li class="border-t border-plum-600 pt-5">
+              <span class="font-serif text-4xl text-blush-300">2026</span>
+              <p class="mt-2 text-[15px] leading-relaxed text-plum-100">Rose Garden, our sixth collection, made by a team of nine.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL -->
+    <section id="journal" class="bg-ivory-50 py-20 lg:py-32">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="max-w-3xl font-serif text-4xl leading-[1.1] text-plum-900 sm:text-5xl xl:text-6xl">Journal, notes on living softly</h2>
+
+        <div class="mt-14 grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <button type="button" data-modal-open="art-vanity" data-reveal="up" class="group text-left lg:col-span-7">
+            <div class="aspect-[16/10] overflow-hidden rounded-[28px] bg-blush-100">
+              <img src="assets/img/vanity-rose-brush.jpg" alt="Pink roses and makeup brushes beside an oval mirror on a vanity table" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="5228" height="3485">
+            </div>
+            <p class="mt-6 text-sm font-medium text-blush-600">Style notes, 6 min read</p>
+            <h3 class="mt-2 font-serif text-3xl leading-tight text-plum-900 transition group-hover:text-blush-700 sm:text-4xl">How to build a vanity corner that feels like a love letter</h3>
+            <p class="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-plum-600">Fresh roses, one good mirror and the ritual of getting ready slowly.</p>
+          </button>
+
+          <div class="flex flex-col gap-10 lg:col-span-5">
+            <button type="button" data-modal-open="art-morning" data-reveal="up" data-reveal-delay="100" class="group grid grid-cols-5 gap-5 text-left">
+              <div class="col-span-2 aspect-square overflow-hidden rounded-[28px] bg-ivory-200">
+                <img src="assets/img/journal-morning-bed.jpg" alt="A woman in a knit sweater reading a book in bed with a cup of coffee" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="2736" height="1824">
+              </div>
+              <div class="col-span-3 flex flex-col justify-center">
+                <p class="text-sm font-medium text-blush-600">Rituals, 4 min read</p>
+                <h3 class="mt-2 font-serif text-2xl leading-tight text-plum-900 transition group-hover:text-blush-700 sm:text-[1.75rem]">The slow Sunday morning, a small manifesto</h3>
+              </div>
+            </button>
+            <button type="button" data-modal-open="art-sleep" data-reveal="up" data-reveal-delay="200" class="group grid grid-cols-5 gap-5 text-left">
+              <div class="col-span-2 aspect-square overflow-hidden rounded-[28px] bg-blush-100">
+                <img src="assets/img/sleepwear-bed-reading.jpg" alt="A woman in pale pink pajamas holding a pink mug in a white bed" class="h-full w-full object-cover object-top transition duration-700 group-hover:scale-105" loading="lazy" width="3766" height="5641">
+              </div>
+              <div class="col-span-3 flex flex-col justify-center">
+                <p class="text-sm font-medium text-blush-600">Care guide, 5 min read</p>
+                <h3 class="mt-2 font-serif text-2xl leading-tight text-plum-900 transition group-hover:text-blush-700 sm:text-[1.75rem]">Caring for silk and lace so they last a lifetime</h3>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section id="instagram" class="bg-blush-50 py-20 lg:py-32">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div data-reveal="up">
+            <p class="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-blush-600">@lilou.atelier</p>
+            <h2 class="font-serif text-4xl leading-[1.1] text-plum-900 sm:text-5xl xl:text-6xl">Little moments, shared softly</h2>
+          </div>
+          <a href="https://www.instagram.com/lilou.atelier" target="_blank" rel="noopener" data-magnetic="0.2" class="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full border border-plum-800 px-6 text-sm font-semibold text-plum-900 transition duration-300 hover:bg-plum-900 hover:text-ivory-50 active:scale-[.98]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+            Follow on Instagram
+          </a>
+        </div>
+
+        <div data-reveal-stagger="80" class="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3 lg:gap-6 xl:grid-cols-6">
+          <a href="assets/img/rose-petals.jpg" data-lightbox="ig" data-caption="Petals in the studio light" class="group block overflow-hidden rounded-[28px] bg-blush-100"><img src="assets/img/rose-petals.jpg" alt="Macro of soft lilac and cream rose petals" class="aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="2492" height="3323"></a>
+          <a href="assets/img/woman-bouquet-4.jpg" data-lightbox="ig" data-caption="Market roses for the atelier" class="group block overflow-hidden rounded-[28px] bg-blush-100 xl:translate-y-10"><img src="assets/img/woman-bouquet-4.jpg" alt="Pink roses and statice tucked into a round woven straw bag" class="aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="4000" height="6000"></a>
+          <a href="assets/img/lace-flounce.webp" data-lightbox="ig" data-caption="Lace swatch from our archive" class="group block overflow-hidden rounded-[28px] bg-ivory-200"><img src="assets/img/lace-flounce.webp" alt="A piece of intricate ivory needle lace" class="aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="1200" height="1436"></a>
+          <a href="assets/img/ig-teacup-roses.jpg" data-lightbox="ig" data-caption="Tea time at the atelier" class="group block overflow-hidden rounded-[28px] bg-blush-100 xl:translate-y-10"><img src="assets/img/ig-teacup-roses.jpg" alt="Rose-painted teacups and a teapot beside a bouquet of roses" class="aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="1024" height="854"></a>
+          <a href="assets/img/ig-peony-bouquet.webp" data-lightbox="ig" data-caption="Peony season" class="group block overflow-hidden rounded-[28px] bg-blush-200"><img src="assets/img/ig-peony-bouquet.webp" alt="Close-up of bright pink peony petals in sunlight" class="aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="4752" height="3168"></a>
+          <a href="assets/img/perfume-ribbon.webp" data-lightbox="ig" data-caption="A bow on everything" class="group block overflow-hidden rounded-[28px] bg-blush-100 xl:translate-y-10"><img src="assets/img/perfume-ribbon.webp" alt="A pink perfume bottle tied with a satin bow" class="aspect-[3/4] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="4288" height="2848"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTERS (final CTA) -->
+    <section id="letters" class="bg-ivory-100 py-20 lg:py-32">
+      <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10 2xl:px-16">
+        <div data-reveal="up" class="lg:col-span-6">
+          <h2 class="font-serif text-5xl leading-[1.05] text-plum-900 sm:text-6xl xl:text-7xl">Letters from <em class="italic text-blush-600">the atelier</em></h2>
+          <p class="mt-6 max-w-[48ch] text-lg leading-relaxed text-plum-600">One gentle email a month: new collections first, journal stories and invitations to our open studio days in Saigon.</p>
+          <div class="mt-10 grid gap-6 sm:grid-cols-2">
+            <div>
+              <h3 class="text-sm font-semibold text-plum-900">Visit the atelier</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-plum-600">27 Tran Quoc Thao, Vo Thi Sau Ward, District 3, Ho Chi Minh City</p>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-plum-900">Opening hours</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-plum-600">Tuesday to Sunday<br>10:00 to 20:00</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal="up" data-reveal-delay="120" class="lg:col-span-6">
+          <form data-form="letters" data-success="Thank you! Your first letter is on its way." class="rounded-[28px] bg-ivory-50 p-6 shadow-xl shadow-blush-900/5 sm:p-10" novalidate>
+            <div class="grid gap-6 sm:grid-cols-2">
+              <label class="flex flex-col gap-2 text-sm font-semibold text-plum-900">First name
+                <input type="text" name="name" required minlength="2" autocomplete="given-name" placeholder="Mai" class="h-12 rounded-2xl border border-plum-200 bg-white px-4 text-base font-normal text-plum-900 placeholder:text-plum-300 outline-none transition focus:border-blush-500 focus:ring-4 focus:ring-blush-100">
+              </label>
+              <label class="flex flex-col gap-2 text-sm font-semibold text-plum-900">Email
+                <input type="email" name="email" required autocomplete="email" placeholder="mai@example.com" class="h-12 rounded-2xl border border-plum-200 bg-white px-4 text-base font-normal text-plum-900 placeholder:text-plum-300 outline-none transition focus:border-blush-500 focus:ring-4 focus:ring-blush-100">
+              </label>
+            </div>
+            <fieldset class="mt-6">
+              <legend class="text-sm font-semibold text-plum-900">I'd love to hear about</legend>
+              <div class="mt-3 flex flex-wrap gap-3 text-sm text-plum-700">
+                <label class="inline-flex min-h-[44px] cursor-pointer items-center gap-2 rounded-full border border-plum-200 px-4 transition hover:border-blush-400 has-[:checked]:border-blush-500 has-[:checked]:bg-blush-50"><input type="checkbox" name="topics" value="collections" checked class="accent-blush-600"> New collections</label>
+                <label class="inline-flex min-h-[44px] cursor-pointer items-center gap-2 rounded-full border border-plum-200 px-4 transition hover:border-blush-400 has-[:checked]:border-blush-500 has-[:checked]:bg-blush-50"><input type="checkbox" name="topics" value="journal" class="accent-blush-600"> Journal stories</label>
+                <label class="inline-flex min-h-[44px] cursor-pointer items-center gap-2 rounded-full border border-plum-200 px-4 transition hover:border-blush-400 has-[:checked]:border-blush-500 has-[:checked]:bg-blush-50"><input type="checkbox" name="topics" value="studio" class="accent-blush-600"> Open studio days</label>
+              </div>
+            </fieldset>
+            <button type="submit" data-ripple class="mt-8 inline-flex h-14 w-full items-center justify-center rounded-full bg-plum-900 px-8 text-[15px] font-semibold text-ivory-50 transition duration-300 hover:bg-blush-700 active:scale-[.98] sm:w-auto">Join the Letters</button>
+            <p class="mt-4 text-sm text-plum-500">No spam, ever. Unsubscribe with one click.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-plum-900 text-plum-100">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-12 lg:px-10 lg:py-20 2xl:px-16">
+      <div class="lg:col-span-4">
+        <a href="#top" class="flex items-baseline gap-2">
+          <span class="font-serif text-4xl italic text-ivory-50">Lilou</span>
+          <span class="text-xs font-semibold uppercase tracking-[0.3em] text-blush-300">Atelier</span>
+        </a>
+        <p class="mt-5 max-w-[36ch] text-[15px] leading-relaxed text-plum-200">Romantic lingerie, cut and finished by hand in Saigon since 2019.</p>
+      </div>
+      <div class="lg:col-span-3">
+        <h3 class="text-sm font-semibold text-ivory-50">Contact</h3>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li><a href="tel:+84908316274" class="transition hover:text-blush-200">+84 908 316 274</a></li>
+          <li class="flex flex-wrap items-center gap-3">
+            <a href="mailto:hello@lilouatelier.vn" class="transition hover:text-blush-200">hello@lilouatelier.vn</a>
+            <button data-copy="hello@lilouatelier.vn" class="rounded-full border border-plum-600 px-3 py-1 text-xs font-semibold transition hover:border-blush-300 hover:text-blush-200">Copy</button>
+          </li>
+          <li class="text-plum-200">27 Tran Quoc Thao, District 3, Ho Chi Minh City</li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <h3 class="text-sm font-semibold text-ivory-50">Explore</h3>
+        <ul class="mt-4 space-y-3 text-[15px]">
+          <li><a href="#collections" class="transition hover:text-blush-200">Collections</a></li>
+          <li><a href="#products" class="transition hover:text-blush-200">Our Pieces</a></li>
+          <li><a href="#story" class="transition hover:text-blush-200">Our Story</a></li>
+          <li><a href="#journal" class="transition hover:text-blush-200">Journal</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h3 class="text-sm font-semibold text-ivory-50">Follow us</h3>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="https://www.instagram.com/lilou.atelier" target="_blank" rel="noopener" data-magnetic="0.3" class="inline-flex h-11 items-center rounded-full border border-plum-600 px-4 text-sm transition hover:border-blush-300 hover:text-blush-200">Instagram</a>
+          <a href="https://www.facebook.com/lilou.atelier" target="_blank" rel="noopener" data-magnetic="0.3" class="inline-flex h-11 items-center rounded-full border border-plum-600 px-4 text-sm transition hover:border-blush-300 hover:text-blush-200">Facebook</a>
+          <a href="https://www.tiktok.com/@lilou.atelier" target="_blank" rel="noopener" data-magnetic="0.3" class="inline-flex h-11 items-center rounded-full border border-plum-600 px-4 text-sm transition hover:border-blush-300 hover:text-blush-200">TikTok</a>
+          <a href="https://zalo.me/0908316274" target="_blank" rel="noopener" data-magnetic="0.3" class="inline-flex h-11 items-center rounded-full border border-plum-600 px-4 text-sm transition hover:border-blush-300 hover:text-blush-200">Zalo</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-plum-700">
+      <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-2 px-4 py-6 text-sm text-plum-300 sm:flex-row sm:justify-between sm:px-6 lg:px-10 2xl:px-16">
+        <p>© 2026 Lilou Atelier. All rights reserved.</p>
+        <p>Made with lace and patience in Saigon.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-plum-900 text-ivory-50 shadow-lg transition hover:bg-blush-700" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <!-- JOURNAL ARTICLES -->
+  <dialog id="art-vanity" class="w-[min(92vw,680px)] overflow-hidden rounded-[28px] bg-ivory-50 p-0 text-plum-800">
+    <div class="relative">
+      <img src="assets/img/vanity-rose-brush.jpg" alt="Pink roses and makeup brushes beside an oval mirror" class="aspect-[16/9] w-full object-cover" width="5228" height="3485">
+      <button data-modal-close class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-ivory-50 text-plum-900 shadow transition hover:bg-blush-100" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="max-h-[50vh] overflow-y-auto p-6 sm:p-10">
+      <p class="text-sm font-medium text-blush-600">Style notes, 6 min read</p>
+      <h3 class="mt-2 font-serif text-3xl leading-tight text-plum-900">How to build a vanity corner that feels like a love letter</h3>
+      <div class="mt-5 space-y-4 text-[16px] leading-relaxed text-plum-600">
+        <p>Start with light. A small table near a window gives you soft, honest light that makes getting ready feel calm instead of rushed.</p>
+        <p>Add one thing that lives and changes: a few garden roses in a glass jar. Replace them on Sundays and the corner never feels static.</p>
+        <p>Keep only what you love on the surface. Brushes in a lace-cut holder, one perfume, one mirror with a pretty frame. The rest goes in a drawer.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="art-morning" class="w-[min(92vw,680px)] overflow-hidden rounded-[28px] bg-ivory-50 p-0 text-plum-800">
+    <div class="relative">
+      <img src="assets/img/journal-morning-bed.jpg" alt="A woman reading in bed with a cup of coffee" class="aspect-[16/9] w-full object-cover" width="2736" height="1824">
+      <button data-modal-close class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-ivory-50 text-plum-900 shadow transition hover:bg-blush-100" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="max-h-[50vh] overflow-y-auto p-6 sm:p-10">
+      <p class="text-sm font-medium text-blush-600">Rituals, 4 min read</p>
+      <h3 class="mt-2 font-serif text-3xl leading-tight text-plum-900">The slow Sunday morning, a small manifesto</h3>
+      <div class="mt-5 space-y-4 text-[16px] leading-relaxed text-plum-600">
+        <p>No alarm. Phone in the other room. A book you started three weeks ago and a coffee you actually drink while it is warm.</p>
+        <p>Wear something that feels good against your skin, even if nobody will see it. That is the whole point.</p>
+        <p>Our team keeps one rule: one slow morning a week is not a luxury. It is maintenance for the heart.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="art-sleep" class="w-[min(92vw,680px)] overflow-hidden rounded-[28px] bg-ivory-50 p-0 text-plum-800">
+    <div class="relative">
+      <img src="assets/img/sleepwear-bed-reading.jpg" alt="A woman in pale pink pajamas in a white bed" class="aspect-[16/9] w-full object-cover object-top" width="3766" height="5641">
+      <button data-modal-close class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-ivory-50 text-plum-900 shadow transition hover:bg-blush-100" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="max-h-[50vh] overflow-y-auto p-6 sm:p-10">
+      <p class="text-sm font-medium text-blush-600">Care guide, 5 min read</p>
+      <h3 class="mt-2 font-serif text-3xl leading-tight text-plum-900">Caring for silk and lace so they last a lifetime</h3>
+      <div class="mt-5 space-y-4 text-[16px] leading-relaxed text-plum-600">
+        <p>Hand wash in cool water with a few drops of silk wash. Never wring; press the water out between two towels instead.</p>
+        <p>Dry flat and away from direct sun, which fades blush tones faster than you think.</p>
+        <p>Store bras with cups nested, not folded in half, and keep a little lavender sachet in the drawer.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

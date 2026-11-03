@@ -1,0 +1,94 @@
+{
+  "brand": "JAPAN MATSURI",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 1,
+  "visualIdea": "Sợi dây đèn lồng đỏ son: mỗi trang mở bằng một dải đèn lồng chấm đỏ trên nền giấy washi / đen mực, nhãn mùa và loại trải nghiệm đặt như con dấu hanko đỏ, tiêu đề serif lớn kiểu tạp chí du lịch",
+  "purposeInferred": "Website giới thiệu du lịch khám phá lễ hội truyền thống Nhật Bản (Matsuri): lễ hội, địa điểm, văn hóa, gợi ý trải nghiệm",
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Tạo ấn tượng và truyền cảm hứng, dẫn sang danh sách lễ hội và trang chi tiết",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Ảnh xe đèn Nebuta ban đêm, tiêu đề 'Nhật Bản – Nơi mỗi mùa đều có một lễ hội', nút 'Khám phá lễ hội' → le-hoi.html" },
+        { "id": "le-hoi-noi-bat", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "4 thẻ: Gion, Nebuta, Awa Odori, Sapporo Snow → trang chi tiết" },
+        { "id": "theo-mua", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Tabs Xuân/Hạ/Thu/Đông, mỗi mùa có ảnh, mô tả, lễ hội và link le-hoi.html?mua=…" },
+        { "id": "trai-nghiem", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Yukata, ẩm thực đường phố, điệu múa, diễu hành, pháo hoa" },
+        { "id": "gioi-thieu", "catalog": "story", "variant": "story-editorial", "source": "ai", "note": "Mục 'Giới thiệu' trong menu chính trỏ tới đây; dải số liệu data-count-to theo dữ liệu mẫu" },
+        { "id": "vung-mien", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ba", "note": "Carousel ui.js: Kyoto, Tokyo, Aomori, Tokushima, Hokkaido → le-hoi.html?q=…" },
+        { "id": "cta-cuoi", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn sang trang Khám phá lễ hội" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "nebuta festival float", "file": "assets/img/hero-nebuta-dem.jpg", "status": "ok" },
+        { "slot": "le-hoi-noi-bat: Gion", "query": "gion matsuri float", "file": "assets/img/le-hoi-gion-matsuri.jpg", "status": "ok" },
+        { "slot": "le-hoi-noi-bat: Nebuta", "query": "nebuta festival float", "file": "assets/img/le-hoi-aomori-nebuta.jpg", "status": "ok" },
+        { "slot": "le-hoi-noi-bat: Awa Odori", "query": "awa odori festival street dancers", "file": "assets/img/le-hoi-awa-odori.jpg", "status": "ok" },
+        { "slot": "le-hoi-noi-bat: Sapporo", "query": "sapporo snow festival sculpture", "file": "assets/img/le-hoi-sapporo-snow.jpg", "status": "ok" },
+        { "slot": "theo-mua: xuân", "query": "sakura temple japan spring", "file": "assets/img/mua-xuan-hanami.jpg", "status": "ok" },
+        { "slot": "theo-mua: hạ", "query": "bon odori dance yukata (dây đèn lồng Bon Odori)", "file": "assets/img/le-hoi-awa-odori-2.jpg", "status": "ok" },
+        { "slot": "theo-mua: thu", "query": "kyoto autumn maple temple", "file": "assets/img/mua-thu-la-do.jpg", "status": "ok" },
+        { "slot": "theo-mua: đông", "query": "shirakawa-go snow winter", "file": "assets/img/mua-dong-tuyet.jpg", "status": "ok" },
+        { "slot": "trai-nghiem: yukata", "query": "yukata women festival", "file": "assets/img/trai-nghiem-yukata.webp", "status": "ok" },
+        { "slot": "trai-nghiem: ẩm thực", "query": "takoyaki street stall japan", "file": "assets/img/trai-nghiem-am-thuc.jpg", "status": "ok" },
+        { "slot": "trai-nghiem: điệu múa", "query": "bon odori dance yukata", "file": "assets/img/trai-nghiem-dieu-mua.jpg", "status": "ok" },
+        { "slot": "trai-nghiem: diễu hành", "query": "matsuri parade mikoshi street", "file": "assets/img/trai-nghiem-dieu-hanh.webp", "status": "ok" },
+        { "slot": "trai-nghiem: pháo hoa", "query": "fireworks tokyo summer night", "file": "assets/img/trai-nghiem-phao-hoa.jpg", "status": "ok" },
+        { "slot": "vung-mien: Kyoto", "query": "kyoto yasaka pagoda street", "file": "assets/img/vung-kyoto.jpg", "status": "ok" },
+        { "slot": "vung-mien: Tokyo", "query": "japanese festival lanterns night (Sensō-ji)", "file": "assets/img/vung-tokyo.jpg", "status": "ok" },
+        { "slot": "vung-mien: Aomori", "query": "aomori hirosaki oirase landscape", "file": "assets/img/vung-aomori.jpg", "status": "ok" },
+        { "slot": "vung-mien: Tokushima", "query": "naruto whirlpools strait", "file": "assets/img/vung-tokushima.jpg", "status": "ok" },
+        { "slot": "vung-mien: Hokkaido", "query": "otaru canal hokkaido", "file": "assets/img/vung-hokkaido.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "le-hoi.html",
+      "title": "Khám phá lễ hội",
+      "purpose": "Tìm kiếm và lọc lễ hội theo tên / địa điểm, mùa, loại trải nghiệm (dữ liệu mẫu assets/js/data.js); nhận tham số ?mua= ?loai= ?q=",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Tiêu đề 'Tìm lễ hội dành cho chuyến đi của bạn'" },
+        { "id": "tim-le-hoi", "catalog": "projects", "variant": "list-cards", "source": "ba", "note": "Ô tìm kiếm (không dấu cũng được) + chip lọc mùa + chip lọc loại trải nghiệm + lưới thẻ + trạng thái không có kết quả + Xóa bộ lọc" },
+        { "id": "cta-cuoi", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Dẫn về phần lễ hội theo mùa ở trang chủ" }
+      ],
+      "images": [
+        { "slot": "thẻ: Gion Matsuri", "query": "gion matsuri float", "file": "assets/img/le-hoi-gion-matsuri.jpg", "status": "ok" },
+        { "slot": "thẻ: Aomori Nebuta", "query": "nebuta festival float", "file": "assets/img/le-hoi-aomori-nebuta.jpg", "status": "ok" },
+        { "slot": "thẻ: Awa Odori", "query": "awa odori festival street dancers", "file": "assets/img/le-hoi-awa-odori.jpg", "status": "ok" },
+        { "slot": "thẻ: Sapporo Snow Festival", "query": "sapporo snow festival sculpture", "file": "assets/img/le-hoi-sapporo-snow.jpg", "status": "ok" },
+        { "slot": "thẻ: Hirosaki Cherry Blossom", "query": "hirosaki castle cherry blossom", "file": "assets/img/le-hoi-hirosaki-sakura.jpg", "status": "ok" },
+        { "slot": "thẻ: Sumidagawa Fireworks", "query": "fireworks tokyo summer night", "file": "assets/img/le-hoi-sumidagawa-hanabi.jpg", "status": "ok" },
+        { "slot": "thẻ: Takayama Autumn", "query": "takayama festival yatai float", "file": "assets/img/le-hoi-takayama-mua-thu.jpg", "status": "ok" },
+        { "slot": "thẻ: Jidai Matsuri", "query": "jidai matsuri procession kyoto", "file": "assets/img/le-hoi-jidai-matsuri.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "le-hoi-chi-tiet.html",
+      "title": "Chi tiết lễ hội",
+      "purpose": "Một mẫu trang chi tiết dùng chung cho mọi lễ hội (le-hoi-chi-tiet.html?slug=…), render từ dữ liệu mẫu; mặc định Gion Matsuri",
+      "sections": [
+        { "id": "anh-bia", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh bìa lớn: tên, địa điểm, thời gian thường tổ chức, breadcrumb" },
+        { "id": "cau-chuyen", "catalog": "story", "variant": "detail-article", "source": "ba", "note": "Nguồn gốc, ý nghĩa, giá trị + cột Thông tin nhanh" },
+        { "id": "diem-noi-bat", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "" },
+        { "id": "trai-nghiem-du-khach", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Nhãn Quan sát / Tham gia" },
+        { "id": "thong-tin-chuyen-di", "catalog": "faq", "variant": "accordion", "source": "ba", "note": "Địa điểm, di chuyển khái quát, thời gian phù hợp, lưu ý" },
+        { "id": "le-hoi-lien-quan", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "3 lễ hội cùng khu vực / cùng mùa + nút Quay lại danh sách lễ hội và Về trang chủ" }
+      ],
+      "images": [
+        { "slot": "anh-bia + lễ hội liên quan", "query": "dùng ảnh thẻ của lễ hội tương ứng", "file": "assets/img/le-hoi-gion-matsuri.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Giữ đúng 3 trang theo chú thích BA (Trang chủ, Khám phá lễ hội, Chi tiết lễ hội); mục menu 'Giới thiệu' trỏ tới section #gioi-thieu của trang chủ thay vì tạo trang thứ 4",
+    "Đường dẫn /le-hoi và /le-hoi/:slug chạy bằng file:// nên thành le-hoi.html và le-hoi-chi-tiet.html?slug=<slug> (một mẫu trang chi tiết render từ dữ liệu mẫu trong assets/js/data.js)",
+    "Màu theo BA (đỏ son shu, trắng ngà ivory, đen mực sumi, be washi) thay bảng màu preset nature; giữ font preset Fraunces + Manrope (đủ ký tự tiếng Việt)",
+    "Thêm 3 lễ hội mẫu ngoài danh sách BA (Sumidagawa Fireworks, Takayama mùa thu, Jidai Matsuri) để bộ lọc mùa Thu và loại 'Pháo hoa' có kết quả",
+    "Level 1: chỉ data-reveal fade/up, data-count-to, data-header, hover; 'chuyển ảnh nhẹ' dùng tabs + carousel của ui.js, không nạp atmos.js",
+    "Ảnh Awa Odori là cảnh biểu diễn trên sân khấu (nguồn openverse không có ảnh diễu hành ngoài phố đủ tốt); ảnh Tokushima là lối đi trên cầu Ōnaruto nhìn xuống eo biển Naruto"
+  ],
+  "limitations": [
+    "Dữ liệu lễ hội là nội dung mẫu; thời gian ghi là 'thời gian thường tổ chức', cần kiểm tra lịch chính thức theo từng năm",
+    "Không có backend, đặt tour, đăng nhập hay thanh toán (theo yêu cầu)",
+    "Bộ lọc / tìm kiếm chạy phía trình duyệt trên dữ liệu mẫu"
+  ]
+}

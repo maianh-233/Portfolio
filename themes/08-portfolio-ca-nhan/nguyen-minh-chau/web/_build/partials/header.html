@@ -1,0 +1,34 @@
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-colors duration-500 [&.is-scrolled]:border-cream-line [&.is-scrolled]:bg-cream/95 [&.is-scrolled]:backdrop-blur-sm">
+  <div class="mx-auto flex h-[76px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html#home" class="group flex min-w-0 flex-col leading-none" aria-label="Nguyễn Minh Châu, về đầu trang">
+      <span class="font-display text-[1.35rem] font-semibold tracking-[0.08em] text-crimson sm:text-2xl">NGUYỄN MINH CHÂU</span>
+      <span class="mt-1.5 whitespace-nowrap text-xs font-medium tracking-[0.08em] sm:tracking-[0.12em] text-cocoa-soft">CHUYÊN VIÊN TỔ CHỨC CƯỚI HỎI TRUYỀN THỐNG</span>
+    </a>
+
+    <nav data-scrollspy aria-label="Điều hướng chính" class="hidden items-center gap-7 xl:flex xl:gap-9">
+      <a href="#home" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">TRANG CHỦ</a>
+      <a href="#about" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">VỀ TÔI</a>
+      <a href="#portfolio" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">DỰ ÁN</a>
+      <a href="#experience" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">KINH NGHIỆM</a>
+      <a href="#contact" class="relative py-2 text-[0.78rem] font-medium tracking-[0.18em] text-cocoa transition-colors duration-300 hover:text-crimson after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-crimson after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-crimson [&.is-active]:after:scale-x-100">LIÊN HỆ</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button type="button" data-modal-open="cv" class="hidden h-11 items-center whitespace-nowrap bg-crimson px-6 text-[0.75rem] font-semibold tracking-[0.2em] text-cream transition duration-300 hover:bg-crimson-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson sm:inline-flex">XEM CV</button>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="inline-flex h-11 w-11 items-center justify-center border border-cocoa/30 text-cocoa transition duration-300 hover:border-crimson hover:text-crimson xl:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-cream-line bg-cream p-6 shadow-2xl shadow-cocoa/20 xl:hidden">
+    <nav aria-label="Điều hướng trên điện thoại" class="flex flex-col">
+      <a href="#home" class="border-b border-cream-line py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Trang chủ</a>
+      <a href="#about" class="border-b border-cream-line py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Về tôi</a>
+      <a href="#portfolio" class="border-b border-cream-line py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Dự án</a>
+      <a href="#experience" class="border-b border-cream-line py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Kinh nghiệm</a>
+      <a href="#contact" class="py-3.5 font-display text-2xl text-cocoa hover:text-crimson">Liên hệ</a>
+    </nav>
+    <button type="button" data-modal-open="cv" class="mt-5 flex h-12 w-full items-center justify-center bg-crimson text-[0.78rem] font-semibold tracking-[0.2em] text-cream">XEM CV</button>
+  </div>
+</header>

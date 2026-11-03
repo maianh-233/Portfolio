@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MONOCHROME · Kiến trúc sư và thiết kế nội thất</title>
+<meta name="description" content="MONOCHROME: portfolio và lý lịch của kiến trúc sư, nhà thiết kế nội thất. Dự án chọn lọc, cách tiếp cận ánh sáng, vật liệu, không gian và thông tin liên hệ.">
+<!-- @partial head -->
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-paper text-ink">
+<!-- @partial header -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:bg-ink focus:px-4 focus:py-2 focus:text-paper">Bỏ qua đến nội dung</a>
+<header id="top" data-header="shrink" class="sticky top-0 z-50 border-b border-transparent bg-paper/90 transition-colors duration-300">
+  <div class="frame flex h-16 items-center justify-between gap-6">
+    <a href="#main" class="group flex min-w-0 items-baseline gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink">
+      <span class="font-display text-[17px] font-bold tracking-[0.14em] text-ink">MONOCHROME</span>
+      <span class="hidden truncate font-mono text-[12px] uppercase tracking-[0.12em] text-graphite sm:inline">Kiến trúc sư / Thiết kế nội thất</span>
+    </a>
+    <nav data-scrollspy aria-label="Điều hướng chính" class="hidden lg:block">
+      <ul class="flex items-center gap-8 text-[14px]">
+        <li><a href="#projects" class="relative py-2 text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100">Dự án</a></li>
+        <li><a href="#approach" class="relative py-2 text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100">Cách tiếp cận</a></li>
+        <li><a href="#expertise" class="relative py-2 text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100">Năng lực</a></li>
+        <li><a href="#resume" class="relative py-2 text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100">Lý lịch</a></li>
+        <li><a href="#contact" class="relative py-2 text-graphite transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:text-ink [&.is-active]:after:scale-x-100">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="-mr-2 inline-flex h-11 w-11 items-center justify-center text-ink transition-colors duration-300 hover:bg-ink/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink lg:hidden">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+    </button>
+  </div>
+  <div id="mnav" class="fixed inset-x-0 top-16 z-50 border-y border-ink/15 bg-paper px-5 py-6 lg:hidden">
+    <ul class="divide-y divide-ink/10 font-display text-2xl">
+      <li><a href="#projects" class="flex min-h-[52px] items-center justify-between py-3">Dự án <span class="font-mono text-xs text-graphite">01</span></a></li>
+      <li><a href="#approach" class="flex min-h-[52px] items-center justify-between py-3">Cách tiếp cận <span class="font-mono text-xs text-graphite">02</span></a></li>
+      <li><a href="#expertise" class="flex min-h-[52px] items-center justify-between py-3">Năng lực <span class="font-mono text-xs text-graphite">03</span></a></li>
+      <li><a href="#resume" class="flex min-h-[52px] items-center justify-between py-3">Lý lịch <span class="font-mono text-xs text-graphite">04</span></a></li>
+      <li><a href="#contact" class="flex min-h-[52px] items-center justify-between py-3">Liên hệ <span class="font-mono text-xs text-graphite">05</span></a></li>
+    </ul>
+  </div>
+</header>
+<!-- /@partial header -->
+<main id="main">
+
+  <!-- HERO -->
+  <section id="hero" data-section="hero-split" class="relative bg-paper">
+    <div class="grid grid-cols-1 lg:min-h-[calc(100dvh-4rem)] lg:grid-cols-12">
+      <div class="order-1 flex flex-col justify-between gap-12 px-5 pb-12 pt-10 sm:px-8 lg:col-span-5 lg:py-14 lg:pl-[5vw] lg:pr-12">
+        <p class="rise font-mono text-[12px] uppercase tracking-[0.14em] text-graphite">MONOCHROME / Kiến trúc sư, thiết kế nội thất</p>
+        <div>
+          <h1 class="rise rise-2 font-display text-[2.4rem] font-semibold leading-[1.08] tracking-[-0.02em] sm:text-5xl xl:text-[3.6rem] 2xl:text-[4.2rem]">Thiết kế không gian cân bằng ánh sáng, vật liệu và con người.</h1>
+          <p class="rise rise-3 mt-7 max-w-[46ch] text-[17px] leading-relaxed text-graphite">Mỗi dự án bắt đầu từ cách ánh sáng chạm vào bề mặt và cách con người di chuyển, dừng lại trong không gian.</p>
+          <div class="rise rise-4 mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#projects" class="inline-flex min-h-[48px] items-center justify-center gap-3 bg-ink px-6 text-[15px] font-medium text-paper transition duration-300 hover:bg-graphite active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink">Xem dự án chọn lọc <span aria-hidden="true">→</span></a>
+            <a href="#about" class="inline-flex min-h-[48px] items-center justify-center border border-ink px-6 text-[15px] font-medium transition duration-300 hover:bg-ink hover:text-paper active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink">Tìm hiểu hồ sơ</a>
+          </div>
+        </div>
+        <dl class="rise rise-4 grid grid-cols-3 gap-4 border-t border-ink/20 pt-5 font-mono text-[12px]">
+          <div><dt class="uppercase tracking-[0.1em] text-graphite">Lĩnh vực</dt><dd class="mt-1">Nhà ở, nội thất</dd></div>
+          <div><dt class="uppercase tracking-[0.1em] text-graphite">Kinh nghiệm</dt><dd class="mt-1">8 năm</dd></div>
+          <div><dt class="uppercase tracking-[0.1em] text-graphite">Khu vực</dt><dd class="mt-1">TP. Hồ Chí Minh</dd></div>
+        </dl>
+      </div>
+      <figure class="order-2 relative lg:col-span-7">
+        <div class="aspect-[4/3] overflow-hidden bg-concrete sm:aspect-[16/10] lg:absolute lg:inset-0 lg:aspect-auto">
+          <img src="assets/img/hero-be-tong-anh-sang.jpg" alt="Các khối tường bê tông đổ bóng chéo dưới nắng, ảnh đen trắng" width="5184" height="2592" fetchpriority="high" class="h-full w-full object-cover object-[30%_50%]">
+        </div>
+        <figcaption class="px-5 py-3 font-mono text-[12px] text-graphite sm:px-8 lg:absolute lg:bottom-0 lg:right-0 lg:bg-paper lg:px-4 lg:py-2">Nghiên cứu ánh sáng · 15:40, hướng tây</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DỰ ÁN CHỌN LỌC -->
+  <section id="projects" data-section="gallery-lookbook" class="bg-paper py-20 lg:py-32">
+    <div class="frame">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <h2 data-reveal="up" class="font-display text-4xl font-semibold tracking-[-0.02em] lg:col-span-7 lg:text-6xl">Dự án chọn lọc</h2>
+        <p data-reveal="fade" class="max-w-[52ch] self-end text-[15px] leading-relaxed text-graphite lg:col-span-5">Bốn dự án từ 2017 đến 2024: một ngôi nhà, một sảnh, một nghiên cứu và một đồ án. Mỗi dự án được kể theo cách riêng của nó, từ bối cảnh tới quyết định vật liệu.</p>
+      </div>
+      <div data-rule class="mt-10 h-px bg-ink"></div>
+
+      <!-- Dự án 01: featured -->
+      <article class="pt-12 lg:pt-16" aria-labelledby="p1-title">
+        <a href="assets/img/du-an-01-nha-o.webp" data-lightbox="p1" data-caption="Dự án 01 · Ảnh minh họa nhà ở ven đô" class="zoom group block overflow-hidden bg-concrete" aria-label="Phóng to ảnh dự án 01">
+          <img src="assets/img/du-an-01-nha-o.webp" alt="Ngôi nhà hai tầng tường trắng và gạch sẫm giữa bãi cỏ hoa dại" width="5472" height="3648" loading="lazy" class="aspect-[4/3] w-full object-cover sm:aspect-[16/9] lg:aspect-[2/1]">
+        </a>
+        <div class="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-6">
+          <div class="lg:col-span-5">
+            <p class="font-mono text-[12px] text-graphite">01 / Thiết kế ý tưởng</p>
+            <h3 id="p1-title" class="mt-3 font-display text-3xl font-semibold tracking-[-0.015em] lg:text-[2.6rem] lg:leading-[1.1]">Nhà Cỏ May, ven đô Thủ Đức</h3>
+            <p class="mt-5 max-w-[56ch] text-[16px] leading-relaxed text-graphite">Hai khối đặc và rỗng đặt lệch nhau: khối gạch sẫm giữ phần riêng tư, khối trắng mở kính lớn ra vườn hoang để ánh sáng chiều đi sâu vào sinh hoạt chung.</p>
+          </div>
+          <dl class="grid grid-cols-2 gap-x-6 gap-y-5 self-start border-t border-ink/20 pt-5 sm:grid-cols-3 lg:col-span-6 lg:col-start-7">
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Loại công trình</dt><dd class="mt-1 text-[15px]">Nhà ở gia đình</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Địa điểm</dt><dd class="mt-1 text-[15px]">TP. Thủ Đức, TP.HCM</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Năm</dt><dd class="mt-1 text-[15px]">2024</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Quy mô</dt><dd class="mt-1 text-[15px]">320 m² sàn</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Vai trò</dt><dd class="mt-1 text-[15px]">Thiết kế ý tưởng, diễn họa</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Vật liệu chính</dt><dd class="mt-1 text-[15px]">Gạch nung, vữa trắng, kính</dd></div>
+          </dl>
+        </div>
+        <div data-accordion class="mt-10 border-y border-ink/20">
+          <div data-acc-item>
+            <button type="button" data-acc-trigger class="group flex min-h-[56px] w-full items-center justify-between gap-4 text-left font-mono text-[13px] uppercase tracking-[0.12em] transition-colors duration-300 hover:text-graphite focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink">Khám phá dự án <span data-acc-icon class="text-xl leading-none transition-transform duration-500 [&.is-open]:rotate-45 [.is-open_&]:rotate-45" aria-hidden="true">+</span></button>
+            <div data-acc-panel>
+              <div class="grid grid-cols-1 gap-8 pb-10 pt-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+                <div><h4 class="font-mono text-[12px] text-graphite">Bối cảnh</h4><p class="mt-2 text-[15px] leading-relaxed">Lô đất ven đô giáp cánh đồng cỏ, gia đình ba thế hệ cần không gian chung rộng nhưng vẫn giữ góc riêng cho từng người.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Thách thức</h4><p class="mt-2 text-[15px] leading-relaxed">Hướng nắng tây chiếu thẳng mặt mở chính; cần lấy cảnh đồng mà không làm nóng nhà vào buổi chiều.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Phát triển ý tưởng</h4><p class="mt-2 text-[15px] leading-relaxed">Tách nhà thành hai khối, đặt khối đặc làm tấm chắn nắng tây, khối rỗng quay góc để đón sáng phản xạ từ mặt cỏ.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Chiến lược vật liệu</h4><p class="mt-2 text-[15px] leading-relaxed">Gạch nung sẫm tích nhiệt và già đi đẹp theo thời gian; vữa trắng phản sáng vào trong; khung kính mảnh màu than.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Kết quả thiết kế</h4><p class="mt-2 text-[15px] leading-relaxed">Mục tiêu: sinh hoạt chung sáng đều cả ngày, giảm kính hướng tây, mọi phòng ngủ có tầm nhìn ra vườn. Diện tích kính hướng tây giảm còn 18%, phòng khách không cần bật đèn trước 17:30.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Dự án 02: bố cục dọc lệch trục -->
+      <article class="mt-24 grid grid-cols-1 gap-10 lg:mt-36 lg:grid-cols-12 lg:gap-6" aria-labelledby="p2-title">
+        <a href="assets/img/du-an-02-noi-that.jpg" data-lightbox="p2" data-caption="Dự án 02 · Ảnh minh họa sảnh nội thất" class="zoom block self-start overflow-hidden bg-concrete lg:col-span-4 lg:col-start-2" aria-label="Phóng to ảnh dự án 02">
+          <img src="assets/img/du-an-02-noi-that.jpg" alt="Sảnh nội thất trần cao, vách kính lớn nhìn ra sân trong và tường gạch xám" width="819" height="1024" loading="lazy" class="aspect-[4/5] w-full object-cover">
+        </a>
+        <div class="lg:col-span-5 lg:col-start-7 lg:pt-40">
+          <p class="font-mono text-[12px] text-graphite">02 / Dự án chưa xây dựng</p>
+          <h3 id="p2-title" class="mt-3 font-display text-3xl font-semibold tracking-[-0.015em] lg:text-[2.6rem] lg:leading-[1.1]">Sảnh căn hộ dịch vụ The Courtyard An Phú</h3>
+          <p class="mt-5 max-w-[52ch] text-[16px] leading-relaxed text-graphite">Một sảnh hai tầng cao lấy sân trong làm trung tâm. Vách kính chạy suốt chiều cao biến khoảng cây xanh thành bức tường sống của không gian chờ.</p>
+          <dl class="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-ink/20 pt-5">
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Loại công trình</dt><dd class="mt-1 text-[15px]">Nội thất sảnh</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Địa điểm / Năm</dt><dd class="mt-1 text-[15px]">An Phú, TP.HCM, 2022</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Vai trò</dt><dd class="mt-1 text-[15px]">Thiết kế nội thất chính</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Vật liệu chính</dt><dd class="mt-1 text-[15px]">Gạch men xám, đá lát, khung thép</dd></div>
+          </dl>
+          <div data-accordion class="mt-8 border-y border-ink/20">
+            <div data-acc-item>
+              <button type="button" data-acc-trigger class="flex min-h-[56px] w-full items-center justify-between gap-4 text-left font-mono text-[13px] uppercase tracking-[0.12em] transition-colors duration-300 hover:text-graphite focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink">Khám phá dự án <span data-acc-icon class="text-xl leading-none transition-transform duration-500 [&.is-open]:rotate-45 [.is-open_&]:rotate-45" aria-hidden="true">+</span></button>
+              <div data-acc-panel>
+                <div class="space-y-6 pb-8 pt-2">
+                  <div><h4 class="font-mono text-[12px] text-graphite">Bối cảnh</h4><p class="mt-2 text-[15px] leading-relaxed">Tầng trệt tòa căn hộ dịch vụ, sảnh vừa là nơi đón khách vừa là phòng khách chung của cư dân.</p></div>
+                  <div><h4 class="font-mono text-[12px] text-graphite">Thách thức</h4><p class="mt-2 text-[15px] leading-relaxed">Mặt bằng sâu, chỉ có một nguồn sáng tự nhiên từ sân trong; khu chờ dễ tối và thiếu riêng tư.</p></div>
+                  <div><h4 class="font-mono text-[12px] text-graphite">Phát triển ý tưởng</h4><p class="mt-2 text-[15px] leading-relaxed">Đẩy toàn bộ chỗ ngồi về phía sân trong, dùng bệ ngồi liền khối thay cho đồ rời để giữ mặt bằng thoáng.</p></div>
+                  <div><h4 class="font-mono text-[12px] text-graphite">Chiến lược vật liệu</h4><p class="mt-2 text-[15px] leading-relaxed">Tường gạch xám sẫm hút bớt chói, sàn đá sáng phản ánh sáng sâu vào trong, một hốc tường màu ấm làm điểm định hướng.</p></div>
+                  <div><h4 class="font-mono text-[12px] text-graphite">Kết quả thiết kế</h4><p class="mt-2 text-[15px] leading-relaxed">Phương án dừng ở giai đoạn thiết kế cơ sở khi chủ đầu tư đổi công năng tầng trệt; bố cục bệ ngồi liền khối được tái sử dụng cho dự án văn phòng sau đó.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Dự án 03: bản vẽ & nghiên cứu không gian -->
+    <article class="mt-24 bg-white py-16 lg:mt-36 lg:py-24" aria-labelledby="p3-title">
+      <div class="frame">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <div class="lg:col-span-6">
+            <p class="font-mono text-[12px] text-graphite">03 / Nghiên cứu cá nhân</p>
+            <h3 id="p3-title" class="mt-3 font-display text-3xl font-semibold tracking-[-0.015em] lg:text-[2.6rem] lg:leading-[1.1]">Đọc lại một mặt bằng cổ điển</h3>
+          </div>
+          <p class="max-w-[54ch] self-end text-[16px] leading-relaxed text-graphite lg:col-span-5 lg:col-start-8">Phân tích bản vẽ tư liệu thế kỷ 18 (nguồn mở) để học cách một trục đối xứng và chuỗi phòng nối tiếp tạo nhịp di chuyển. Bản vẽ không phải của tác giả.</p>
+        </div>
+        <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <figure class="lg:col-span-7">
+            <a href="assets/img/du-an-03-mat-bang.webp" data-lightbox="p3" data-caption="Mặt bằng tầng trệt, bản vẽ tư liệu nguồn mở" class="group relative block border border-ink/15 bg-paper p-3 sm:p-6" aria-label="Phóng to bản vẽ mặt bằng">
+              <img src="assets/img/du-an-03-mat-bang.webp" alt="Bản vẽ mặt bằng tầng trệt cổ điển với phòng khách tròn ở trung tâm và các phòng hai bên" width="4096" height="3908" loading="lazy" class="aspect-[1/1] w-full object-contain">
+              <span class="absolute right-3 top-3 bg-ink px-3 py-1.5 font-mono text-[12px] text-paper transition-opacity duration-300 sm:right-6 sm:top-6">Phóng to bản vẽ</span>
+            </a>
+            <figcaption class="mt-3 font-mono text-[12px] text-graphite">Hình 3.1 · Mặt bằng tầng trệt. Bấm để xem kích thước đầy đủ.</figcaption>
+          </figure>
+          <div class="flex flex-col gap-8 lg:col-span-5">
+            <figure>
+              <a href="assets/img/du-an-03-mo-hinh.webp" data-lightbox="p3" data-caption="Ảnh tham chiếu: ánh sáng xuyên qua hệ dầm" class="zoom block overflow-hidden bg-concrete" aria-label="Phóng to ảnh tham chiếu">
+                <img src="assets/img/du-an-03-mo-hinh.webp" alt="Góc nhìn ngước lên hệ dầm bê tông và khoảng trời giữa hai khối nhà, ảnh đen trắng" width="4000" height="4000" loading="lazy" class="aspect-[4/3] w-full object-cover">
+              </a>
+              <figcaption class="mt-3 font-mono text-[12px] text-graphite">Hình 3.2 · Ảnh tham chiếu ánh sáng qua kết cấu</figcaption>
+            </figure>
+            <ol class="border-t border-ink/20 font-mono text-[13px]">
+              <li data-reveal="fade" class="grid grid-cols-[2.5rem_1fr] gap-3 border-b border-ink/10 py-3"><span class="text-graphite">A</span><span>Trục đối xứng chính đi từ sảnh vào phòng tròn 25 ft</span></li>
+              <li data-reveal="fade" class="grid grid-cols-[2.5rem_1fr] gap-3 border-b border-ink/10 py-3"><span class="text-graphite">B</span><span>Hai cánh phụ: thư viện và phòng chờ đặt cân xứng</span></li>
+              <li data-reveal="fade" class="grid grid-cols-[2.5rem_1fr] gap-3 border-b border-ink/10 py-3"><span class="text-graphite">C</span><span>Hốc tủ cong làm vùng chuyển tiếp giữa sảnh và phòng</span></li>
+              <li data-reveal="fade" class="grid grid-cols-[2.5rem_1fr] gap-3 py-3"><span class="text-graphite">D</span><span>Phòng ăn mở cửa sổ lồi đón sáng ba hướng</span></li>
+            </ol>
+          </div>
+        </div>
+        <div data-accordion class="mt-12 border-y border-ink/20">
+          <div data-acc-item>
+            <button type="button" data-acc-trigger class="flex min-h-[56px] w-full items-center justify-between gap-4 text-left font-mono text-[13px] uppercase tracking-[0.12em] transition-colors duration-300 hover:text-graphite focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink">Khám phá nghiên cứu <span data-acc-icon class="text-xl leading-none transition-transform duration-500 [&.is-open]:rotate-45 [.is-open_&]:rotate-45" aria-hidden="true">+</span></button>
+            <div data-acc-panel>
+              <div class="grid grid-cols-1 gap-8 pb-10 pt-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+                <div><h4 class="font-mono text-[12px] text-graphite">Bối cảnh</h4><p class="mt-2 text-[15px] leading-relaxed">Bài tập tự đặt: đọc mặt bằng lịch sử như một văn bản để rút ra nguyên tắc tổ chức còn dùng được hôm nay.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Câu hỏi</h4><p class="mt-2 text-[15px] leading-relaxed">Vì sao một chuỗi phòng khép kín vẫn tạo cảm giác rộng và dễ định hướng khi đi qua?</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Phương pháp</h4><p class="mt-2 text-[15px] leading-relaxed">Vẽ lại trục, đo tỷ lệ phòng, đánh dấu điểm dừng mắt và cửa mở để tìm nhịp nén, giãn của lộ trình.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Vật liệu &amp; ánh sáng</h4><p class="mt-2 text-[15px] leading-relaxed">Đối chiếu với ảnh tham chiếu hiện đại: dầm và khe sáng làm điều mà tường dày cổ điển làm bằng hốc cửa.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Kết luận</h4><p class="mt-2 text-[15px] leading-relaxed">Chuyển tiếp hẹp trước phòng lớn là công cụ đơn giản nhất để tạo cảm giác mở. Nguyên tắc này được áp dụng lại ở lối vào Nhà Cỏ May.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Dự án 04: lưới biên tập -->
+    <div class="frame">
+      <article class="mt-24 lg:mt-36" aria-labelledby="p4-title">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6">
+          <a href="assets/img/du-an-04-hospitality.webp" data-lightbox="p4" data-caption="Dự án 04 · Ảnh minh họa khu thư giãn spa" class="zoom block overflow-hidden bg-concrete sm:col-span-2 lg:col-span-8 lg:row-span-2" aria-label="Phóng to ảnh dự án 04">
+            <img src="assets/img/du-an-04-hospitality.webp" alt="Khu thư giãn spa với tường đá travertine, đèn hắt và ghế nằm gỗ uốn cong" width="4320" height="3240" loading="lazy" class="aspect-[4/3] h-full w-full object-cover">
+          </a>
+          <a href="assets/img/du-an-04-chi-tiet-1.jpg" data-lightbox="p4" data-caption="Chi tiết: tường đá khối và lanh tô gỗ" class="zoom block overflow-hidden bg-concrete lg:col-span-4" aria-label="Phóng to ảnh chi tiết đá">
+            <img src="assets/img/du-an-04-chi-tiet-1.jpg" alt="Tường đá khối thô với cửa gỗ đỏ và lanh tô gỗ" width="1024" height="683" loading="lazy" class="aspect-[3/2] h-full w-full object-cover">
+          </a>
+          <a href="assets/img/du-an-04-chi-tiet-2.jpg" data-lightbox="p4" data-caption="Chi tiết: khung gỗ trên nền gạch" class="zoom block overflow-hidden bg-concrete lg:col-span-4" aria-label="Phóng to ảnh chi tiết gỗ">
+            <img src="assets/img/du-an-04-chi-tiet-2.jpg" alt="Hệ khung gỗ chịu lực đặt trên mảng tường gạch cũ" width="1024" height="1024" loading="lazy" class="aspect-[3/2] h-full w-full object-cover">
+          </a>
+        </div>
+        <div class="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-6">
+          <div class="lg:col-span-4">
+            <p class="font-mono text-[12px] text-graphite">04 / Dự án học thuật</p>
+            <h3 id="p4-title" class="mt-3 font-display text-3xl font-semibold tracking-[-0.015em] lg:text-[2.6rem] lg:leading-[1.1]">Khu thư giãn spa Tĩnh Thạch</h3>
+          </div>
+          <p class="max-w-[54ch] text-[16px] leading-relaxed text-graphite lg:col-span-4">Đồ án hospitality xoay quanh nhịp chậm: đá ấm dưới ánh sáng hắt thấp, gỗ uốn theo dáng người nằm và một hành lang dài dẫn từ ồn ào vào yên tĩnh.</p>
+          <dl class="grid grid-cols-2 gap-x-6 gap-y-5 self-start border-t border-ink/20 pt-5 lg:col-span-4">
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Loại công trình</dt><dd class="mt-1 text-[15px]">Spa, hospitality</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Trường / Năm</dt><dd class="mt-1 text-[15px]">ĐH Kiến trúc TP.HCM, 2017</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Vai trò</dt><dd class="mt-1 text-[15px]">Đồ án cá nhân</dd></div>
+            <div data-reveal="fade"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Vật liệu chính</dt><dd class="mt-1 text-[15px]">Đá travertine, gỗ, gạch</dd></div>
+          </dl>
+        </div>
+        <div data-accordion class="mt-10 border-y border-ink/20">
+          <div data-acc-item>
+            <button type="button" data-acc-trigger class="flex min-h-[56px] w-full items-center justify-between gap-4 text-left font-mono text-[13px] uppercase tracking-[0.12em] transition-colors duration-300 hover:text-graphite focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink">Khám phá dự án <span data-acc-icon class="text-xl leading-none transition-transform duration-500 [&.is-open]:rotate-45 [.is-open_&]:rotate-45" aria-hidden="true">+</span></button>
+            <div data-acc-panel>
+              <div class="grid grid-cols-1 gap-8 pb-10 pt-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+                <div><h4 class="font-mono text-[12px] text-graphite">Bối cảnh</h4><p class="mt-2 text-[15px] leading-relaxed">Đề bài năm cuối: cải tạo tầng hầm một khách sạn thành khu thư giãn cho khách lưu trú dài ngày.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Thách thức</h4><p class="mt-2 text-[15px] leading-relaxed">Không có ánh sáng tự nhiên, trần thấp và hệ kỹ thuật lộ; cần cảm giác ấm mà không ngột ngạt.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Phát triển ý tưởng</h4><p class="mt-2 text-[15px] leading-relaxed">Giấu kỹ thuật trong một dải trần, dùng đèn hắt chạy dọc tường để kéo dài chiều sâu và dẫn hướng.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Chiến lược vật liệu</h4><p class="mt-2 text-[15px] leading-relaxed">Đá travertine lỗ rỗng tán sáng mềm, gỗ chạm vào da, gạch và khung gỗ thô cho khu chuyển tiếp.</p></div>
+                <div><h4 class="font-mono text-[12px] text-graphite">Kết quả thiết kế</h4><p class="mt-2 text-[15px] leading-relaxed">Hồ sơ gồm mặt bằng, mặt cắt dải trần và bảng vật liệu; đồ án tốt nghiệp đạt điểm 9,2 và được chọn trưng bày tại triển lãm đồ án khoa Nội thất.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CÁCH TIẾP CẬN -->
+  <section id="approach" data-section="features-bento" class="border-t border-ink/15 bg-paper py-20 lg:py-32">
+    <div class="frame">
+      <h2 data-reveal="up" class="max-w-[18ch] font-display text-4xl font-semibold tracking-[-0.02em] lg:text-6xl">Một cách nhìn không gian</h2>
+      <div data-rule class="mt-10 h-px bg-ink"></div>
+      <div class="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-6">
+        <div class="lg:col-span-6">
+          <div data-reveal="fade" class="zoom overflow-hidden bg-concrete">
+            <img src="assets/img/approach-anh-sang.jpg" alt="Mảng tường trắng với vệt bóng nắng chéo phía trên chân tường xám và bụi hoa" width="3024" height="4032" loading="lazy" class="aspect-[4/5] w-full object-cover">
+          </div>
+          <div class="mt-6 grid grid-cols-[4rem_1fr] gap-4">
+            <p class="font-mono text-[12px] text-graphite">I</p>
+            <div>
+              <h3 class="font-display text-2xl font-semibold">Ánh sáng</h3>
+              <p class="mt-3 max-w-[52ch] text-[16px] leading-relaxed text-graphite">Ánh sáng là vật liệu đầu tiên. Hướng nắng quyết định vị trí lỗ mở, chiều sâu phòng và nơi bóng đổ rơi trong ngày, để không gian thay đổi theo giờ thay vì cần thêm đèn.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-12 lg:col-span-5 lg:col-start-8 lg:pt-24">
+          <div>
+            <div data-reveal="fade" class="zoom overflow-hidden bg-concrete">
+              <img src="assets/img/hero-kien-truc-toi-gian.jpg" alt="Lối vào công trình bê tông trần, lam kim loại dọc và bậc đá xám" width="1024" height="768" loading="lazy" class="aspect-[4/3] w-full object-cover">
+            </div>
+            <div class="mt-6 grid grid-cols-[4rem_1fr] gap-4">
+              <p class="font-mono text-[12px] text-graphite">II</p>
+              <div>
+                <h3 class="font-display text-2xl font-semibold">Vật liệu</h3>
+                <p class="mt-3 text-[16px] leading-relaxed text-graphite">Bê tông, đá, gỗ và kim loại được chọn theo cách chúng nhận ánh sáng, độ ấm khi chạm và cách chúng già đi. Ít loại vật liệu hơn để mỗi bề mặt rõ vai trò.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-reveal="fade" class="zoom overflow-hidden bg-concrete">
+              <img src="assets/img/approach-khong-gian.webp" alt="Góc tường bê tông với vệt nắng chéo cắt qua hai mặt phẳng" width="2400" height="1600" loading="lazy" class="aspect-[3/2] w-full object-cover">
+            </div>
+            <div class="mt-6 grid grid-cols-[4rem_1fr] gap-4">
+              <p class="font-mono text-[12px] text-graphite">III</p>
+              <div>
+                <h3 class="font-display text-2xl font-semibold">Không gian</h3>
+                <p class="mt-3 text-[16px] leading-relaxed text-graphite">Tổ chức công năng theo lộ trình: điểm vào, khoảng nén, nơi mở ra tầm nhìn. Không gian chuyển tiếp được thiết kế kỹ như phòng chính.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NĂNG LỰC & CÔNG CỤ -->
+  <section id="expertise" data-section="features-numbered" class="bg-ink py-20 text-paper lg:py-32">
+    <div class="frame">
+      <h2 data-reveal="up" class="font-display text-4xl font-semibold tracking-[-0.02em] lg:text-6xl">Năng lực &amp; công cụ</h2>
+      <div data-rule class="mt-10 h-px bg-paper/40"></div>
+      <div class="mt-12 grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-6">
+        <ol class="grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:col-span-8">
+          <li data-reveal="up" class="grid grid-cols-[3rem_1fr] gap-3 border-t border-paper/15 py-6"><span class="font-mono text-[13px] text-concrete">01</span><div><h3 class="font-display text-xl font-semibold">Thiết kế kiến trúc</h3><p class="mt-2 text-[15px] leading-relaxed text-concrete">Từ phân tích khu đất tới phương án khối và mặt đứng.</p></div></li>
+          <li data-reveal="up" class="grid grid-cols-[3rem_1fr] gap-3 border-t border-paper/15 py-6"><span class="font-mono text-[13px] text-concrete">02</span><div><h3 class="font-display text-xl font-semibold">Kiến trúc nội thất</h3><p class="mt-2 text-[15px] leading-relaxed text-concrete">Không gian trong gắn với kết cấu, ánh sáng và chi tiết.</p></div></li>
+          <li data-reveal="up" class="grid grid-cols-[3rem_1fr] gap-3 border-t border-paper/15 py-6"><span class="font-mono text-[13px] text-concrete">03</span><div><h3 class="font-display text-xl font-semibold">Quy hoạch không gian</h3><p class="mt-2 text-[15px] leading-relaxed text-concrete">Sơ đồ công năng, luồng di chuyển và tầm nhìn.</p></div></li>
+          <li data-reveal="up" class="grid grid-cols-[3rem_1fr] gap-3 border-t border-paper/15 py-6"><span class="font-mono text-[13px] text-concrete">04</span><div><h3 class="font-display text-xl font-semibold">Phát triển ý tưởng</h3><p class="mt-2 text-[15px] leading-relaxed text-concrete">Phác thảo, mô hình khối và sơ đồ để kiểm chứng concept.</p></div></li>
+          <li data-reveal="up" class="grid grid-cols-[3rem_1fr] gap-3 border-t border-paper/15 py-6"><span class="font-mono text-[13px] text-concrete">05</span><div><h3 class="font-display text-xl font-semibold">Diễn họa 3D</h3><p class="mt-2 text-[15px] leading-relaxed text-concrete">Phối cảnh trung thực về ánh sáng và vật liệu.</p></div></li>
+          <li data-reveal="up" class="grid grid-cols-[3rem_1fr] gap-3 border-t border-paper/15 py-6"><span class="font-mono text-[13px] text-concrete">06</span><div><h3 class="font-display text-xl font-semibold">Bản vẽ kỹ thuật</h3><p class="mt-2 text-[15px] leading-relaxed text-concrete">Hồ sơ mặt bằng, mặt cắt, chi tiết cấu tạo.</p></div></li>
+          <li data-reveal="up" class="grid grid-cols-[3rem_1fr] gap-3 border-t border-paper/15 py-6 sm:col-span-2 lg:col-span-1"><span class="font-mono text-[13px] text-concrete">07</span><div><h3 class="font-display text-xl font-semibold">Nghiên cứu vật liệu</h3><p class="mt-2 text-[15px] leading-relaxed text-concrete">Mẫu vật liệu, bảng hoàn thiện và cách chúng lão hóa.</p></div></li>
+        </ol>
+        <div class="lg:col-span-3 lg:col-start-10">
+          <h3 class="font-mono text-[12px] uppercase tracking-[0.12em] text-concrete">Phần mềm</h3>
+          <dl class="mt-6 space-y-6">
+            <div data-reveal="fade"><dt class="text-[13px] text-concrete">Bản vẽ &amp; BIM</dt><dd class="mt-1 font-display text-2xl font-semibold">AutoCAD, Revit</dd></div>
+            <div data-reveal="fade"><dt class="text-[13px] text-concrete">Mô hình</dt><dd class="mt-1 font-display text-2xl font-semibold">SketchUp, Rhino</dd></div>
+            <div data-reveal="fade"><dt class="text-[13px] text-concrete">Diễn họa</dt><dd class="mt-1 font-display text-2xl font-semibold">V-Ray, Blender</dd></div>
+            <div data-reveal="fade"><dt class="text-[13px] text-concrete">Trình bày</dt><dd class="mt-1 font-display text-2xl font-semibold">Adobe Creative Suite</dd></div>
+          </dl>
+          <p class="mt-8 border-t border-paper/15 pt-4 text-[13px] leading-relaxed text-concrete">Vẽ tay và mô hình giấy bìa vẫn là bước đầu tiên của mọi phương án.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LÝ LỊCH -->
+  <section id="resume" data-section="timeline" class="bg-paper py-20 lg:py-32">
+    <div class="frame grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-6">
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-4xl font-semibold tracking-[-0.02em] lg:text-6xl">Lý lịch nghề nghiệp</h2>
+          <p class="mt-6 max-w-[40ch] text-[15px] leading-relaxed text-graphite">Tám năm làm việc giữa kiến trúc và nội thất, từ studio nhỏ tới văn phòng thiết kế nhà ở tại TP.HCM.</p>
+          <p class="mt-6 inline-flex border border-ink/40 px-4 py-3 font-mono text-[12px] text-graphite">CV đầy đủ gửi theo yêu cầu qua email</p>
+        </div>
+      </div>
+      <div class="lg:col-span-7 lg:col-start-6">
+        <div class="relative border-l border-ink/25 pl-6 sm:pl-10">
+          <h3 class="font-mono text-[12px] uppercase tracking-[0.12em] text-graphite">Kinh nghiệm làm việc</h3>
+          <div data-reveal="up" class="relative mt-6 grid grid-cols-1 gap-2 pb-10 sm:grid-cols-[9rem_1fr] sm:gap-6">
+            <span class="absolute -left-[29px] top-1.5 h-2 w-2 bg-ink sm:-left-[45px]" aria-hidden="true"></span>
+            <p class="font-mono text-[13px] text-graphite">2021 - nay</p>
+            <div><h4 class="font-display text-xl font-semibold">Kiến trúc sư thiết kế</h4><p class="mt-1 text-[15px]">Hạ Studio Architects, TP.HCM</p><p class="mt-2 max-w-[60ch] text-[15px] leading-relaxed text-graphite">Chủ trì concept và hồ sơ thiết kế cơ sở cho 12 dự án nhà ở và căn hộ dịch vụ; phối hợp kết cấu, MEP và giám sát tác giả tại công trường.</p></div>
+          </div>
+          <div data-reveal="up" class="relative grid grid-cols-1 gap-2 pb-14 sm:grid-cols-[9rem_1fr] sm:gap-6">
+            <span class="absolute -left-[29px] top-1.5 h-2 w-2 bg-ink sm:-left-[45px]" aria-hidden="true"></span>
+            <p class="font-mono text-[13px] text-graphite">2017 - 2021</p>
+            <div><h4 class="font-display text-xl font-semibold">Nhà thiết kế nội thất</h4><p class="mt-1 text-[15px]">Mộc Interior Lab, TP.HCM</p><p class="mt-2 max-w-[60ch] text-[15px] leading-relaxed text-graphite">Thiết kế nội thất hơn 30 căn hộ và quán cà phê nhỏ, lập bảng vật liệu, làm việc trực tiếp với xưởng mộc về chi tiết liên kết.</p></div>
+          </div>
+
+          <h3 class="font-mono text-[12px] uppercase tracking-[0.12em] text-graphite">Học vấn</h3>
+          <div data-reveal="up" class="relative mt-6 grid grid-cols-1 gap-2 pb-14 sm:grid-cols-[9rem_1fr] sm:gap-6">
+            <span class="absolute -left-[29px] top-1.5 h-2 w-2 border border-ink bg-paper sm:-left-[45px]" aria-hidden="true"></span>
+            <p class="font-mono text-[13px] text-graphite">2012 - 2017</p>
+            <div><h4 class="font-display text-xl font-semibold">Kiến trúc sư, chuyên ngành Thiết kế nội thất</h4><p class="mt-1 text-[15px]">Đại học Kiến trúc TP. Hồ Chí Minh</p><p class="mt-2 max-w-[60ch] text-[15px] leading-relaxed text-graphite">Đồ án tốt nghiệp "Tĩnh Thạch": cải tạo tầng hầm khách sạn thành khu thư giãn, loại Giỏi.</p></div>
+          </div>
+
+          <h3 class="font-mono text-[12px] uppercase tracking-[0.12em] text-graphite">Chứng chỉ &amp; giải thưởng</h3>
+          <div data-reveal="up" class="relative mt-6 grid grid-cols-1 gap-2 pb-2 sm:grid-cols-[9rem_1fr] sm:gap-6">
+            <span class="absolute -left-[29px] top-1.5 h-2 w-2 border border-ink bg-paper sm:-left-[45px]" aria-hidden="true"></span>
+            <p class="font-mono text-[13px] text-graphite">2020 · 2023</p>
+            <div><h4 class="font-display text-xl font-semibold">Chứng chỉ hành nghề kiến trúc hạng II</h4><p class="mt-2 max-w-[60ch] text-[15px] leading-relaxed text-graphite">Cấp năm 2020. Năm 2023, Nhà Cỏ May vào vòng chung khảo hạng mục Nhà ở của một giải thưởng kiến trúc trẻ trong nước.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIỚI THIỆU -->
+  <section id="about" data-section="story-letter" class="border-t border-ink/15 bg-white py-20 lg:py-32">
+    <div class="frame grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-6">
+      <figure class="lg:col-span-4 lg:col-start-2">
+        <div data-reveal="fade" class="zoom overflow-hidden bg-concrete">
+          <img src="assets/img/about-mo-hinh-nghien-cuu.jpg" alt="Compa vẽ kỹ thuật đặt trên mặt bàn gỗ cạnh bao da và sách" width="4000" height="3000" loading="lazy" class="aspect-[4/5] w-full object-cover object-[35%_50%]">
+        </div>
+        <figcaption class="mt-3 font-mono text-[12px] text-graphite">Ảnh minh họa bàn làm việc</figcaption>
+      </figure>
+      <div class="lg:col-span-5 lg:col-start-7 lg:self-center">
+        <h2 data-reveal="up" class="font-display text-4xl font-semibold tracking-[-0.02em] lg:text-5xl">Thiết kế bắt đầu từ việc quan sát</h2>
+        <div class="mt-8 space-y-5 text-[17px] leading-relaxed text-graphite">
+          <p>Tôi quan tâm tới những không gian nhỏ nhưng được nghĩ kỹ: một ngôi nhà, một sảnh, một khoảng hiên. Ở quy mô đó, từng quyết định về ánh sáng hay mép vật liệu đều chạm trực tiếp vào người sử dụng.</p>
+          <p>Cách làm việc của tôi là vẽ tay trước, mô hình sau, diễn họa cuối cùng. Tôi tìm kiếm cơ hội làm việc cùng văn phòng kiến trúc và chủ nhà coi trọng sự bền lâu hơn hiệu ứng.</p>
+        </div>
+        <p class="mt-10 border-t border-ink/20 pt-5 font-display text-lg font-bold tracking-[0.14em]">MONOCHROME</p>
+        <p class="font-mono text-[12px] text-graphite">Trần Minh Khang, TP. Hồ Chí Minh</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section id="contact" data-section="cta-fullbleed" class="bg-paper">
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+      <div class="overflow-hidden bg-concrete lg:col-span-7">
+        <img src="assets/img/contact-cau-thang-be-tong.webp" alt="Bóng lan can in lên các mặt tường bê tông, ảnh đen trắng" width="3871" height="2581" loading="lazy" class="aspect-[3/2] h-full w-full object-cover lg:aspect-auto lg:min-h-[620px]">
+      </div>
+      <div class="flex flex-col justify-center px-5 py-16 sm:px-8 lg:col-span-5 lg:px-16 lg:py-24 2xl:pr-[5vw]">
+        <h2 data-reveal="up" class="font-display text-4xl font-semibold leading-[1.08] tracking-[-0.02em] lg:text-[3.4rem]">Cùng tạo nên những không gian có ý nghĩa.</h2>
+        <p data-reveal="fade" class="mt-6 max-w-[44ch] text-[17px] leading-relaxed text-graphite">Sẵn sàng trao đổi về vị trí làm việc, hợp tác dự án hoặc tư vấn thiết kế nhà ở và nội thất.</p>
+        <dl class="mt-10 border-t border-ink/20">
+          <div data-reveal="fade" class="grid grid-cols-[5.5rem_1fr] gap-3 sm:grid-cols-[7rem_1fr] sm:gap-4 border-b border-ink/10 py-4"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Email</dt><dd class="min-w-0 text-[15px] sm:text-[16px] [overflow-wrap:anywhere]"><a href="mailto:khang@monochrome.studio" class="border-b border-ink/30 transition-colors duration-300 hover:border-ink">khang@monochrome.studio</a></dd></div>
+          <div data-reveal="fade" class="grid grid-cols-[5.5rem_1fr] gap-3 sm:grid-cols-[7rem_1fr] sm:gap-4 border-b border-ink/10 py-4"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Điện thoại</dt><dd class="text-[16px]"><a href="tel:+84908246135" class="border-b border-ink/30 transition-colors duration-300 hover:border-ink">0908 246 135</a></dd></div>
+          <div data-reveal="fade" class="grid grid-cols-[5.5rem_1fr] gap-3 sm:grid-cols-[7rem_1fr] sm:gap-4 border-b border-ink/10 py-4"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">LinkedIn</dt><dd class="min-w-0 text-[15px] sm:text-[16px] [overflow-wrap:anywhere]">linkedin.com/in/tranminhkhang</dd></div>
+          <div data-reveal="fade" class="grid grid-cols-[5.5rem_1fr] gap-3 sm:grid-cols-[7rem_1fr] sm:gap-4 py-4"><dt class="font-mono text-[12px] uppercase tracking-[0.1em] text-graphite">Studio</dt><dd class="text-[16px]">12 Trần Ngọc Diện, Thảo Điền, TP. Thủ Đức</dd></div>
+        </dl>
+        <p class="mt-6 text-[13px] leading-relaxed text-graphite">Phản hồi trong vòng 2 ngày làm việc. Thông tin liên hệ là nội dung mẫu của bản prototype.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @partial footer -->
+<footer id="footer" class="bg-ink text-paper">
+  <div class="frame grid grid-cols-1 gap-10 py-14 md:grid-cols-12 md:gap-6">
+    <div class="md:col-span-5">
+      <p class="font-display text-2xl font-bold tracking-[0.14em]">MONOCHROME</p>
+      <p class="mt-2 font-mono text-[12px] uppercase tracking-[0.12em] text-concrete">Kiến trúc sư / Thiết kế nội thất</p>
+    </div>
+    <nav aria-label="Điều hướng chân trang" class="md:col-span-4">
+      <ul class="grid grid-cols-2 gap-x-6 gap-y-1 text-[15px] text-concrete">
+        <li><a href="#projects" class="inline-flex min-h-[44px] items-center transition-colors duration-300 hover:text-paper">Dự án</a></li>
+        <li><a href="#approach" class="inline-flex min-h-[44px] items-center transition-colors duration-300 hover:text-paper">Cách tiếp cận</a></li>
+        <li><a href="#expertise" class="inline-flex min-h-[44px] items-center transition-colors duration-300 hover:text-paper">Năng lực</a></li>
+        <li><a href="#resume" class="inline-flex min-h-[44px] items-center transition-colors duration-300 hover:text-paper">Lý lịch</a></li>
+        <li><a href="#about" class="inline-flex min-h-[44px] items-center transition-colors duration-300 hover:text-paper">Giới thiệu</a></li>
+        <li><a href="#contact" class="inline-flex min-h-[44px] items-center transition-colors duration-300 hover:text-paper">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="flex flex-col justify-between gap-6 md:col-span-3 md:items-end md:text-right">
+      <a href="#top" data-back-to-top class="inline-flex min-h-[44px] items-center gap-2 border border-paper/30 px-4 text-[14px] transition-colors duration-300 hover:border-paper hover:bg-paper hover:text-ink">Về đầu trang <span aria-hidden="true">↑</span></a>
+      <p class="text-[13px] text-concrete">© 2026 MONOCHROME. Ảnh minh họa thuộc tác giả gốc, xem assets/img/CREDITS.md.</p>
+    </div>
+  </div>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

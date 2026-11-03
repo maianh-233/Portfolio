@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cài đặt | Quản lý tiệm</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-023 Cài đặt vận hành: FR-034. Chỉ Chủ tiệm. Hiệu lực ngay khi lưu (lịch đặt bánh ở SCR-005 dùng các giá trị này). -->
+<body data-screen="SCR-023" data-layout="admin" data-nav="settings" data-title="Cài đặt" class="admin bg-[#FFFBF6] text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="lg:pl-60 pb-40 lg:pb-12">
+    <form id="settings" novalidate class="mx-auto max-w-admin px-4 md:px-6 lg:px-8 pt-4 lg:pt-8">
+      <div class="flex items-center justify-between gap-3">
+        <h1 class="text-[20px] lg:text-2xl font-extrabold">Cài đặt</h1>
+        <button type="submit" class="hidden lg:inline-flex btn btn-primary h-10 px-6 btn-save">Lưu</button>
+      </div>
+      <div id="groups" class="mt-4 space-y-4"></div>
+      <div class="lg:hidden fixed bottom-16 inset-x-0 z-20 bg-white/95 backdrop-blur border-t border-beige px-4 py-3">
+        <button type="submit" class="btn btn-primary h-12 w-full btn-save">Lưu cài đặt</button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    App.onReady(function () {
+      var S0 = DB.get('settings');
+      var S = JSON.parse(JSON.stringify(S0)); // bản nháp, chỉ ghi khi bấm Lưu
+      var calMonth = new Date();
+
+      /* Nhóm dạng khối thu gọn trên điện thoại (details), luôn mở trên máy tính */
+      function group(id, title, icon, body) {
+        return '<details class="group rounded-2xl bg-white border border-beige" open id="g-' + id + '"><summary class="list-none cursor-pointer flex items-center gap-3 p-4 md:p-5 lg:cursor-default"><span class="grid place-items-center w-9 h-9 rounded-full bg-primary-soft text-primary-strong text-lg"><i class="ph ' + icon + '" aria-hidden="true"></i></span><h2 class="flex-1 font-extrabold">' + title + '</h2><i class="ph ph-caret-down lg:hidden transition-transform group-open:rotate-180" aria-hidden="true"></i></summary><div class="px-4 md:px-5 pb-5">' + body + '</div></details>';
+      }
+      function num(id, label, val, unit, help) {
+        return '<div class="field"><label class="field-label" for="' + id + '">' + label + ' <span class="text-danger">*</span></label><div class="flex items-center gap-2"><input id="' + id + '" type="number" inputmode="numeric" class="field-input !w-28 tabular-nums" value="' + val + '" aria-describedby="' + id + '-err"><span class="font-semibold text-ink-muted">' + unit + '</span></div><p id="' + id + '-err" class="field-error hidden"></p>' + (help ? '<p class="field-help">' + help + '</p>' : '') + '</div>';
+      }
+      function txt(id, label, val, req) { return '<div class="field"><label class="field-label" for="' + id + '">' + label + (req ? ' <span class="text-danger">*</span>' : '') + '</label><input id="' + id + '" class="field-input" value="' + Fmt.esc(val || '') + '"></div>'; }
+
+      function render() {
+        $('#groups').innerHTML =
+          group('order', 'Đặt bánh', 'ph-cake',
+            '<div class="grid md:grid-cols-2 gap-4">' + num('min-days', 'Số ngày đặt trước tối thiểu', S.minDays, 'ngày', 'Khách không chọn được ngày nhận sớm hơn số ngày này.') + num('capacity', 'Sức chứa mặc định mỗi ngày', S.defaultCapacity, 'bánh') + '</div>' +
+            '<div class="mt-5"><p class="field-label">Khung giờ nhận <span class="text-danger">*</span></p><ul id="slots" class="mt-2 flex flex-wrap gap-2"></ul>' +
+            '<div class="mt-3 flex flex-wrap items-end gap-2"><div class="field"><label class="text-xs font-bold text-ink-muted" for="slot-from">Từ</label><input id="slot-from" type="time" class="field-input !w-32"></div><div class="field"><label class="text-xs font-bold text-ink-muted" for="slot-to">Đến</label><input id="slot-to" type="time" class="field-input !w-32" aria-describedby="slot-err"></div><button type="button" id="add-slot" class="btn btn-secondary h-[42px] px-4 text-sm"><i class="ph ph-plus" aria-hidden="true"></i>Thêm</button></div><p id="slot-err" class="field-error hidden"></p></div>' +
+            '<div class="mt-6"><p class="field-label">Lịch sức chứa và ngày nghỉ</p><p class="field-help mb-2">Mỗi ô ghi "đã nhận / sức chứa". Bấm vào ngày để đặt sức chứa riêng hoặc đánh dấu ngày nghỉ.</p><div id="cal" class="max-w-xl rounded-2xl border border-beige p-3"></div></div>') +
+          group('pay', 'Thanh toán và cọc', 'ph-hand-coins',
+            num('deposit', 'Tỉ lệ cọc', S.depositRate, '%') +
+            '<div class="mt-4 grid md:grid-cols-3 gap-4">' + txt('bank-name', 'Ngân hàng', S.bank.name, true) + txt('bank-no', 'Số tài khoản', S.bank.accountNo, true) + txt('bank-owner', 'Chủ tài khoản', S.bank.accountName, true) + '</div>' +
+            '<div class="mt-4 grid md:grid-cols-2 gap-4">' + txt('momo', 'Số ví MoMo', Fmt.phone(S.momo)) + txt('zalopay', 'Số ví ZaloPay', Fmt.phone(S.zalopay)) + '</div>' +
+            '<div class="mt-4 grid md:grid-cols-2 gap-5"><div><p class="field-label mb-2">Ảnh mã QR</p><div id="qr-up"></div></div><div><p class="field-label mb-2">Khách sẽ thấy ở trang đặt thành công</p><div id="pay-preview"></div></div></div>') +
+          group('ship', 'Giao hàng', 'ph-moped',
+            '<p class="field-help mb-3">Bảng phí giao tham khảo, nhân viên dùng khi gọi xác nhận đơn.</p><ul id="ship" class="space-y-2"></ul><button type="button" id="add-ship" class="btn btn-ghost h-10 px-4 mt-3 border border-beige text-sm"><i class="ph ph-plus" aria-hidden="true"></i>Thêm dòng</button>') +
+          group('notify', 'Thông báo', 'ph-envelope-simple',
+            '<p class="field-help mb-3">Email nhận thông báo khi có đơn mới.</p><ul id="emails" class="flex flex-wrap gap-2"></ul><div class="mt-3 flex gap-2 max-w-md"><label for="new-email" class="sr-only">Thêm email</label><input id="new-email" type="email" class="field-input" placeholder="ten@email.com" aria-describedby="new-email-err"><button type="button" id="add-email" class="btn btn-secondary h-[42px] px-4 text-sm shrink-0">Thêm email</button></div><p id="new-email-err" class="field-error hidden"></p>');
+
+        renderSlots(); renderCal(); renderShip(); renderEmails(); preview();
+        Uploader.mount($('#qr-up'), { max: 1, files: S.qrImage ? [{ src: S.qrImage, name: 'QR' }] : [], error: 'Ảnh phải là JPG, PNG, WEBP, tối đa 5 MB.', onChange: function (f) { S.qrImage = f[0] ? f[0].src : ''; preview(); } });
+        ['bank-name', 'bank-no', 'bank-owner'].forEach(function (id) { $('#' + id).addEventListener('input', preview); });
+        $('#add-slot').onclick = addSlot;
+        $('#add-ship').onclick = function () { S.shippingTable.push({ area: '', fee: 0 }); renderShip(); $all('#ship input')[(S.shippingTable.length - 1) * 2].focus(); };
+        $('#add-email').onclick = addEmail;
+        if (window.innerWidth < 1024) $all('#groups details').forEach(function (d, i) { if (i) d.removeAttribute('open'); });
+      }
+      function renderSlots() {
+        $('#slots').innerHTML = S.timeSlots.map(function (s, i) { return '<li class="chip chip-sm !pr-1.5 tabular-nums">' + s + '<button type="button" data-rm-slot="' + i + '" class="grid place-items-center w-7 h-7 rounded-full hover:bg-cream" aria-label="Xóa khung giờ ' + s + '"><i class="ph ph-x" aria-hidden="true"></i></button></li>'; }).join('');
+        $all('[data-rm-slot]').forEach(function (b) { b.onclick = function () { S.timeSlots.splice(+b.dataset.rmSlot, 1); renderSlots(); }; });
+      }
+      function addSlot() {
+        var f = $('#slot-from').value, t = $('#slot-to').value, err = $('#slot-err');
+        var bad = !f || !t || f >= t || S.timeSlots.some(function (s) { var p = s.split('-'); return f < p[1] && t > p[0]; });
+        if (bad) { err.innerHTML = '<i class="ph-fill ph-warning-circle" aria-hidden="true"></i> Khung giờ không hợp lệ.'; err.classList.remove('hidden'); return; }
+        err.classList.add('hidden'); S.timeSlots.push(f + '-' + t); S.timeSlots.sort(); renderSlots(); $('#slot-from').value = ''; $('#slot-to').value = '';
+      }
+      function renderCal() {
+        Calendar.render($('#cal'), {
+          month: calMonth, admin: true, selected: '',
+          dayInfo: function (iso) {
+            var o = S.dayOverrides[iso] || {}, cap = o.capacity || S.defaultCapacity, booked = Capacity.bookedOf(iso);
+            if (o.off) return { state: 'off', reason: 'Ngày nghỉ', sub: 'Nghỉ' };
+            return { state: booked >= cap ? 'full' : cap - booked <= 2 ? 'almost' : 'ok', reason: booked + '/' + cap + ' bánh' + (o.capacity ? ' (sức chứa riêng)' : ''), sub: booked + '/' + cap + (o.capacity ? '*' : '') };
+          },
+          onSelect: function (iso) { dayDialog(iso); }
+        });
+      }
+      function dayDialog(iso) {
+        var o = S.dayOverrides[iso] || {}, booked = Capacity.bookedOf(iso);
+        Modal.open({ title: 'Ngày ' + Fmt.date(iso),
+          body: '<p class="text-ink-muted">Đã nhận ' + booked + ' bánh.</p><div class="mt-4 space-y-4">' + num('day-cap', 'Sức chứa riêng', o.capacity || S.defaultCapacity, 'bánh', 'Để bằng sức chứa mặc định nếu không cần đổi.') +
+            '<label class="flex items-center gap-3 font-semibold"><input id="day-off" type="checkbox"' + (o.off ? ' checked' : '') + '>Tiệm nghỉ ngày này</label><div id="day-warn"></div></div>',
+          actions: [{ label: 'Đóng' }, { label: 'Áp dụng', variant: 'primary', onClick: function (c, el) {
+            var inp = $('#day-cap', el), v = +inp.value;
+            if (!Number.isInteger(v) || v < 1 || v > 100) { FormUI.setError(inp, 'Giá trị phải trong khoảng 1-100.'); return false; } // E-QB-06
+            var warn = $('#day-warn', el);
+            if (v < booked && !warn.dataset.ok) { // W-QB-01: cảnh báo vàng, cho xác nhận
+              warn.dataset.ok = '1';
+              warn.innerHTML = '<p class="rounded-xl bg-butter px-4 py-3 text-sm font-semibold text-butter-strong"><i class="ph-fill ph-warning" aria-hidden="true"></i> Ngày này đã nhận ' + booked + ' bánh, lớn hơn sức chứa mới. Đơn đã nhận vẫn giữ. Bấm Áp dụng lần nữa để xác nhận.</p>';
+              return false;
+            }
+            var off = $('#day-off', el).checked;
+            if (v === S.defaultCapacity && !off) delete S.dayOverrides[iso];
+            else S.dayOverrides[iso] = { capacity: v !== S.defaultCapacity ? v : undefined, off: off || undefined };
+            renderCal(); Toast.show('Đã cập nhật ngày ' + Fmt.dateShort(iso) + '. Nhớ bấm Lưu.', 'info');
+          } }] });
+      }
+      function renderShip() {
+        $('#ship').innerHTML = S.shippingTable.map(function (r, i) {
+          return '<li class="grid grid-cols-[1fr_140px_auto] gap-2 items-start"><div><label class="sr-only" for="sa-' + i + '">Khu vực / khoảng cách</label><input id="sa-' + i + '" data-ship="area" data-i="' + i + '" class="field-input" value="' + Fmt.esc(r.area) + '" placeholder="Khu vực / khoảng cách"></div>' +
+            '<div><label class="sr-only" for="sf-' + i + '">Phí (₫)</label><input id="sf-' + i + '" data-ship="fee" data-i="' + i + '" inputmode="numeric" class="field-input tabular-nums" value="' + (r.fee ? r.fee.toLocaleString('vi-VN') : '') + '" placeholder="Phí (₫)"></div>' +
+            '<button type="button" data-rm-ship="' + i + '" class="grid place-items-center w-[42px] h-[42px] rounded-xl hover:bg-cream text-danger" aria-label="Xóa dòng"><i class="ph ph-trash" aria-hidden="true"></i></button></li>';
+        }).join('');
+        $all('[data-ship]').forEach(function (inp) {
+          inp.oninput = function () {
+            var r = S.shippingTable[+inp.dataset.i];
+            if (inp.dataset.ship === 'fee') { var v = inp.value.replace(/\D/g, ''); inp.value = v ? (+v).toLocaleString('vi-VN') : ''; r.fee = v === '' ? null : +v; }
+            else r.area = inp.value;
+          };
+        });
+        $all('[data-rm-ship]').forEach(function (b) { b.onclick = function () { S.shippingTable.splice(+b.dataset.rmShip, 1); renderShip(); }; });
+      }
+      function renderEmails() {
+        $('#emails').innerHTML = S.notifyEmails.map(function (m, i) { return '<li class="chip chip-sm !pr-1.5">' + Fmt.esc(m) + '<button type="button" data-rm-mail="' + i + '" class="grid place-items-center w-7 h-7 rounded-full hover:bg-cream" aria-label="Xóa email ' + Fmt.esc(m) + '"><i class="ph ph-x" aria-hidden="true"></i></button></li>'; }).join('') || '<li class="text-sm text-danger font-semibold">Cần ít nhất 1 email.</li>';
+        $all('[data-rm-mail]').forEach(function (b) { b.onclick = function () { S.notifyEmails.splice(+b.dataset.rmMail, 1); renderEmails(); }; });
+      }
+      function addEmail() {
+        var inp = $('#new-email'), v = inp.value.trim();
+        if (!FormUI.validEmail(v)) { FormUI.setError(inp, 'Email không hợp lệ.'); return; }
+        if (S.notifyEmails.indexOf(v) === -1) S.notifyEmails.push(v);
+        inp.value = ''; renderEmails();
+      }
+      function preview() {
+        $('#pay-preview').innerHTML = '<div class="rounded-2xl bg-mint/60 polka-mint p-4 text-sm"><p class="font-extrabold text-mint-strong">Hướng dẫn đặt cọc</p><div class="mt-2 flex gap-3">' + (S.qrImage ? '<img src="' + S.qrImage + '" alt="" class="w-16 h-16 rounded-lg object-cover bg-white">' : '') +
+          '<div><p>Ngân hàng: <b>' + Fmt.esc($('#bank-name') ? $('#bank-name').value : S.bank.name) + '</b></p><p>Số TK: <b class="tabular-nums">' + Fmt.esc($('#bank-no') ? $('#bank-no').value : S.bank.accountNo) + '</b></p><p>Chủ TK: <b>' + Fmt.esc($('#bank-owner') ? $('#bank-owner').value : S.bank.accountName) + '</b></p><p>Nội dung: <b>TB...</b> (mã đơn)</p></div></div></div>';
+      }
+
+      /* ----- Lưu toàn trang ----- */
+      $('#settings').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var errs = [];
+        function range(id, lo, hi) { var inp = $('#' + id), v = +inp.value; if (inp.value === '' || !Number.isInteger(v) || v < lo || v > hi) errs.push([inp, 'Giá trị phải trong khoảng ' + lo + '-' + hi + '.']); return v; } // E-QB-06
+        var minDays = range('min-days', 0, 30), cap = range('capacity', 1, 100), dep = range('deposit', 0, 100);
+        ['bank-name', 'bank-owner'].forEach(function (id) { if (!$('#' + id).value.trim()) errs.push([$('#' + id), 'Vui lòng nhập đủ các trường bắt buộc.']); });
+        if (!/^[\d\s]+$/.test($('#bank-no').value.trim())) errs.push([$('#bank-no'), 'Số tài khoản chỉ gồm chữ số.']);
+        ['momo', 'zalopay'].forEach(function (id) { var v = $('#' + id).value; if (v && !FormUI.validPhone(v)) errs.push([$('#' + id), 'Số điện thoại không hợp lệ (10 số, bắt đầu bằng 0).']); });
+        S.shippingTable.forEach(function (r, i) { if (r.fee == null || r.fee < 0) errs.push([$('#sf-' + i), 'Giá trị phải trong khoảng 0-100.000.000.']); });
+        if (!S.timeSlots.length) errs.push([$('#slot-from'), 'Cần ít nhất 1 khung giờ.']);
+        if (!S.notifyEmails.length) errs.push([$('#new-email'), 'Cần ít nhất 1 email.']);
+        if (errs.length) {
+          errs.forEach(function (x) { FormUI.setError(x[0], x[1]); var d = x[0].closest('details'); if (d) d.setAttribute('open', ''); });
+          Toast.show('Có ô chưa hợp lệ, bạn kiểm tra lại giúp nha.', 'error'); FormUI.focusFirst($('#settings')); return;
+        }
+        $all('.btn-save').forEach(function (b) { FormUI.busy(b, true, 'Đang lưu...'); });
+        setTimeout(function () {
+          S.minDays = minDays; S.defaultCapacity = cap; S.depositRate = dep;
+          S.bank = { name: $('#bank-name').value.trim(), accountNo: $('#bank-no').value.trim(), accountName: $('#bank-owner').value.trim() };
+          S.momo = $('#momo').value.replace(/\D/g, ''); S.zalopay = $('#zalopay').value.replace(/\D/g, '');
+          Object.keys(S).forEach(function (k) { S0[k] = S[k]; });
+          DB.save('settings');
+          $all('.btn-save').forEach(function (b) { FormUI.busy(b, false); });
+          Toast.show('Đã lưu cài đặt', 'success');
+          renderCal();
+        }, 500);
+      });
+
+      render();
+    });
+  </script>
+</body>
+</html>

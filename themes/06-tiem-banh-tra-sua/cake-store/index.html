@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiệm Bánh Kem | Ngọt ngào cho mọi dịp</title>
+  <meta name="description" content="Bánh kem làm theo đơn, ít ngọt, viết lời chúc miễn phí. Đặt bánh trực tuyến, tiệm gọi xác nhận.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-001 Trang chủ: FR-001, FR-003, FR-004, FR-006, FR-036 -->
+<body data-screen="SCR-001" data-layout="public" data-nav="home" class="bg-cream text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main">
+    <!-- HERO: ảnh bánh nổi bật + khẩu hiệu + "Đặt bánh ngay" (q7) -->
+    <section class="relative overflow-hidden">
+      <div class="polka absolute inset-0 opacity-60 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-shell px-4 md:px-6 lg:px-8 pt-6 md:pt-14 lg:pt-16 pb-12 md:pb-20 grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div class="md:col-span-6 lg:col-span-6 order-2 md:order-1 hero-in">
+          <h1 id="hero-title" class="font-display font-bold text-[40px] md:text-[52px] lg:text-[56px] leading-[1.1] text-primary-strong pb-1"></h1>
+          <p id="hero-intro" class="mt-4 text-lg text-ink-muted leading-relaxed max-w-[44ch]"></p>
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <a href="danh-sach-banh.html" class="btn btn-primary h-12 px-7 text-[17px]" data-i18n="cta.order">Đặt bánh ngay</a>
+            <a href="danh-sach-banh.html?sort=best" class="btn btn-secondary h-12 px-7" data-i18n="cta.viewCakes">Xem các mẫu bánh</a>
+          </div>
+          <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink-muted">
+            <i class="ph ph-pencil-simple-line text-lg text-primary-strong" aria-hidden="true"></i>
+            <span id="hero-note"></span>
+          </p>
+        </div>
+        <div class="md:col-span-6 lg:col-span-6 order-1 md:order-2 relative">
+          <div class="relative md:ml-8 lg:ml-14">
+            <img id="hero-img" src="" alt="Bánh kem dâu tây phủ kem tươi của tiệm" class="w-full aspect-[4/5] md:aspect-[5/6] object-cover rounded-3xl shadow-lift bg-beige" fetchpriority="high">
+            <img id="hero-img-2" src="" alt="" class="hidden md:block absolute -left-10 lg:-left-14 bottom-10 w-36 lg:w-44 aspect-square object-cover rounded-2xl border-[6px] border-cream shadow-soft bg-beige">
+            <div class="hidden md:flex absolute -right-3 top-8 items-center gap-2 rounded-full bg-white shadow-soft px-4 h-11 text-sm font-bold">
+              <i class="ph-fill ph-heart text-primary-strong" aria-hidden="true"></i><span id="hero-pill">Ít ngọt, kem tươi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BĂNG KHUYẾN MÃI: chỉ hiện khi có chương trình đang hiệu lực (FR-001, FR-036) -->
+    <section id="promo-band" class="hidden mx-auto max-w-shell px-4 md:px-6 lg:px-8"></section>
+
+    <!-- BÁNH BÁN CHẠY (q8) -->
+    <section id="best-section" class="mx-auto max-w-shell px-4 md:px-6 lg:px-8 mt-16 md:mt-24 reveal" aria-labelledby="best-title">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <h2 id="best-title" class="font-display font-bold text-[28px] md:text-[36px] leading-tight" data-i18n="home.best">Bánh bán chạy</h2>
+        <a href="danh-sach-banh.html?sort=best" class="inline-flex items-center gap-1 font-bold text-primary-strong hover:underline underline-offset-4 shrink-0 min-h-[44px]"><span data-i18n="cta.viewAll">Xem tất cả</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <div id="best-list" class="rail rail-desktop-grid"></div>
+    </section>
+
+    <!-- BÁNH MỚI RA (q8): lưới bento trên máy tính, hàng vuốt ngang trên điện thoại -->
+    <section id="new-section" class="mt-16 md:mt-24 py-14 md:py-20 bg-white/60 reveal" aria-labelledby="new-title">
+      <div class="mx-auto max-w-shell px-4 md:px-6 lg:px-8">
+        <div class="flex items-end justify-between gap-4 mb-6">
+          <h2 id="new-title" class="font-display font-bold text-[28px] md:text-[36px] leading-tight" data-i18n="home.new">Bánh mới ra</h2>
+          <a href="danh-sach-banh.html?sort=newest" class="inline-flex items-center gap-1 font-bold text-primary-strong hover:underline underline-offset-4 shrink-0 min-h-[44px]"><span data-i18n="cta.viewAll">Xem tất cả</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div id="new-rail" class="rail lg:hidden"></div>
+        <div id="new-bento" class="hidden lg:grid grid-cols-4 grid-rows-[auto_auto] gap-6"></div>
+      </div>
+    </section>
+
+    <!-- CẢM NHẬN KHÁCH (CMP-13, FR-004) -->
+    <section id="testi-section" class="mx-auto max-w-shell px-4 md:px-6 lg:px-8 mt-16 md:mt-24 reveal" aria-labelledby="testi-title">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <h2 id="testi-title" class="font-display font-bold text-[28px] md:text-[36px] leading-tight" data-i18n="home.reviews">Khách nói gì về tiệm</h2>
+        <div class="hidden md:flex gap-2">
+          <button type="button" id="testi-prev" class="grid place-items-center w-11 h-11 rounded-full bg-white border border-beige hover:border-primary text-xl" aria-label="Cảm nhận trước"><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
+          <button type="button" id="testi-next" class="grid place-items-center w-11 h-11 rounded-full bg-white border border-beige hover:border-primary text-xl" aria-label="Cảm nhận kế tiếp"><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div id="testi-track" class="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-2" tabindex="0" aria-label="Danh sách cảm nhận, vuốt ngang để xem thêm"></div>
+      <div id="testi-dots" class="hidden md:flex justify-center gap-2 mt-5" aria-hidden="true"></div>
+    </section>
+
+    <!-- ĐỊA CHỈ, GIỜ MỞ CỬA, BẢN ĐỒ (q8, FR-003) -->
+    <section class="mx-auto max-w-shell px-4 md:px-6 lg:px-8 mt-16 md:mt-24 reveal" aria-labelledby="visit-title">
+      <div class="grid lg:grid-cols-12 gap-6 items-stretch">
+        <div class="lg:col-span-5 rounded-3xl bg-white shadow-soft p-6 md:p-8">
+          <h2 id="visit-title" class="font-display font-bold text-[28px] md:text-[36px] leading-tight" data-i18n="home.visit">Ghé tiệm chơi nha</h2>
+          <dl class="mt-6 space-y-5">
+            <div class="flex gap-3"><dt class="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-primary-soft text-primary-strong text-xl"><i class="ph ph-map-pin" aria-hidden="true"></i><span class="sr-only" data-i18n="common.address">Địa chỉ</span></dt><dd id="visit-address" class="pt-2 font-bold"></dd></div>
+            <div class="flex gap-3"><dt class="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-primary-soft text-primary-strong text-xl"><i class="ph ph-phone" aria-hidden="true"></i><span class="sr-only" data-i18n="common.phone">Điện thoại</span></dt><dd class="pt-2"><a id="visit-phone" class="font-bold hover:text-primary-strong" href="#"></a></dd></div>
+          </dl>
+          <div class="mt-6 rounded-2xl bg-mint/60 polka-mint p-4">
+            <p class="flex items-center justify-between gap-2 font-extrabold"><span data-i18n="common.hours">Giờ mở cửa</span><span id="visit-open" class="badge"></span></p>
+            <ul id="visit-hours" class="mt-2 space-y-1 text-[15px]"></ul>
+          </div>
+          <a id="visit-direction" href="#" target="_blank" rel="noopener" class="btn btn-primary h-12 px-6 mt-6 w-full sm:w-auto"><i class="ph ph-navigation-arrow" aria-hidden="true"></i><span data-i18n="common.directions">Chỉ đường</span></a>
+        </div>
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden bg-beige min-h-[220px] md:min-h-[380px] relative">
+          <iframe id="visit-map" title="Bản đồ đường tới tiệm" class="absolute inset-0 w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script>
+    /* SCR-001: dựng các khối trang chủ. Khối không có dữ liệu thì ẩn (FR-001). */
+    App.onReady(function () {
+      var shop = MOCK.shop, settings = DB.get('settings');
+      var bestBox = $('#best-list'), newRail = $('#new-rail'), newBento = $('#new-bento');
+
+      function renderHero() {
+        $('#hero-title').textContent = I18n.pick(shop, 'slogan');
+        $('#hero-intro').textContent = I18n.pick(shop, 'intro');
+        $('#hero-note').textContent = I18n.t('home.heroNote', { n: settings.minDays });
+        $('#hero-pill').textContent = I18n.lang === 'en' ? 'Less sweet, fresh cream' : 'Ít ngọt, kem tươi';
+        $('#hero-img').src = shop.heroImage;
+        $('#hero-img-2').src = shop.heroImage2;
+      }
+
+      function renderPromo() {
+        var p = Promo.active()[0], box = $('#promo-band');
+        if (!p) { box.classList.add('hidden'); return; }
+        box.classList.remove('hidden');
+        box.innerHTML = '<div class="mt-2 md:mt-0 rounded-3xl bg-butter px-5 py-5 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">' +
+          '<span class="shrink-0 grid place-items-center w-14 h-14 rounded-full bg-white text-butter-strong text-3xl"><i class="ph-fill ph-gift" aria-hidden="true"></i></span>' +
+          '<div class="flex-1"><p class="font-extrabold text-xl text-ink">' + Fmt.esc(I18n.pick(p, 'name')) + ': ' + (I18n.lang === 'en' ? 'save ' : 'giảm ') + (p.type === 'percent' ? p.value + '%' : Fmt.money(p.value)) + '</p>' +
+          '<p class="text-butter-strong font-semibold mt-0.5">' + Fmt.esc(p.description) + ' ' + I18n.t('home.until') + ' ' + Fmt.date(p.end) + '.</p></div>' +
+          '<a href="danh-sach-banh.html?promo=' + p.id + '" class="btn btn-primary h-12 px-6 shrink-0">' + I18n.t('home.promoCta') + '<i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>';
+      }
+
+      function renderCakes(loading) {
+        var visible = Cakes.visible();
+        var best = visible.filter(function (c) { return c.bestSeller; }).sort(function (a, b) { return b.sold - a.sold; }).slice(0, 8);
+        var fresh = visible.filter(function (c) { return c.isNew; }).sort(function (a, b) { return a.createdAt < b.createdAt ? 1 : -1; }).slice(0, 8);
+        $('#best-section').classList.toggle('hidden', !best.length);
+        $('#new-section').classList.toggle('hidden', !fresh.length);
+        if (loading) {
+          bestBox.innerHTML = UI.skeletonCards(4);
+          newRail.innerHTML = UI.skeletonCards(3);
+          newBento.innerHTML = '<div class="col-span-2 row-span-2 skeleton rounded-3xl min-h-[420px]"></div>' + UI.skeletonCards(4);
+          return;
+        }
+        bestBox.innerHTML = best.map(function (c) { return UI.cakeCard(c, { tag: 'best' }); }).join('');
+        newRail.innerHTML = fresh.map(function (c) { return UI.cakeCard(c, { tag: 'new' }); }).join('');
+        /* Bento: đúng số ô bằng số bánh mới (tối đa 5 ô; ô đầu lớn) */
+        newBento.innerHTML = fresh.slice(0, 5).map(function (c, i) {
+          return i === 0 && fresh.length > 1
+            ? '<div class="col-span-2 row-span-2">' + UI.cakeCard(c, { tag: 'new', ratio: 'aspect-[4/3.6]' }) + '</div>'
+            : '<div>' + UI.cakeCard(c, { tag: 'new' }) + '</div>';
+        }).join('');
+        if (fresh.length === 3) newBento.className = 'hidden lg:grid grid-cols-4 gap-6';
+      }
+
+      function renderTestimonials() {
+        var list = DB.get('testimonials').filter(function (t) { return t.visible; });
+        var sec = $('#testi-section');
+        if (!list.length) { sec.classList.add('hidden'); return; }
+        var track = $('#testi-track');
+        track.innerHTML = list.map(function (t) {
+          return '<figure class="testi-card snap-start shrink-0 w-[86%] sm:w-[48%] lg:w-[31.6%] rounded-3xl bg-white shadow-soft p-6 flex flex-col">' +
+            UI.stars(t.rating, 'text-lg') +
+            '<blockquote class="mt-3 text-[17px] leading-relaxed flex-1 line-clamp-4">“' + Fmt.esc(t.content) + '”</blockquote>' +
+            '<figcaption class="mt-5 flex items-center gap-3"><img src="' + t.avatar + '" alt="" class="w-11 h-11 rounded-full object-cover bg-beige">' +
+            '<span><span class="block font-extrabold">' + Fmt.esc(t.name) + '</span><span class="text-sm text-ink-muted">' + (I18n.lang === 'en' ? 'Customer' : 'Khách của tiệm') + '</span></span></figcaption></figure>';
+        }).join('');
+        var cards = $all('.testi-card', track);
+        var dots = $('#testi-dots');
+        dots.innerHTML = cards.map(function () { return '<span class="w-2.5 h-2.5 rounded-full bg-beige transition-colors"></span>'; }).join('');
+        function step(dir) { track.scrollBy({ left: dir * (cards[0].offsetWidth + 24), behavior: reducedMotion() ? 'auto' : 'smooth' }); }
+        $('#testi-prev').onclick = function () { step(-1); };
+        $('#testi-next').onclick = function () { step(1); };
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { var i = cards.indexOf(e.target); if (dots.children[i]) dots.children[i].className = 'w-2.5 h-2.5 rounded-full transition-colors ' + (e.isIntersecting ? 'bg-primary-strong' : 'bg-beige'); });
+          }, { root: track, threshold: 0.6 });
+          cards.forEach(function (c) { io.observe(c); });
+        }
+      }
+
+      function renderVisit() {
+        $('#visit-address').textContent = shop.address;
+        var ph = $('#visit-phone'); ph.textContent = shop.phone; ph.href = 'tel:' + shop.phone.replace(/\s/g, '');
+        $('#visit-hours').innerHTML = shop.hours.map(function (h) { return '<li class="flex justify-between gap-4"><span>' + (I18n.lang === 'en' ? h.days_en : h.days) + '</span><span class="font-bold tabular-nums">' + h.open + ' - ' + h.close + '</span></li>'; }).join('');
+        var open = UI.isOpenNow(), b = $('#visit-open');
+        b.textContent = I18n.t(open ? 'common.openNow' : 'common.closed');
+        b.className = 'badge ' + (open ? 'bg-white text-mint-strong' : 'bg-white text-stone2-strong');
+        $('#visit-direction').href = UI.mapUrl();
+        var map = $('#visit-map'); if (!map.src) map.src = UI.mapEmbed();
+      }
+
+      function renderAll(loading) { renderHero(); renderPromo(); renderCakes(loading); renderTestimonials(); renderVisit(); }
+      renderAll(true);
+      App.fakeLoad(function () { renderCakes(false); });
+      document.addEventListener('langchange', function () { renderAll(false); });
+    });
+  </script>
+</body>
+</html>

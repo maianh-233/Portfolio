@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEXFORM | Beyond the Known Form</title>
+  <meta name="description" content="NEXFORM is an independent experimental fashion studio exploring the body, material and digital space.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap&subset=vietnamese" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            /* Cold mist + ink + one volt accent (replaces the warm ivory / olive palette) */
+            ivory: { DEFAULT: '#E9EBEE', 50: '#F5F6F7', 100: '#E9EBEE', 200: '#DADEE3' },
+            carbon: { DEFAULT: '#111317', 50: '#F1F2F4', 100: '#D6D9DE', 300: '#8A9099', 500: '#4A5059', 700: '#1D2127', 800: '#111317', 900: '#08090B' },
+            silver: { DEFAULT: '#A9B0B9', 300: '#C4C9D0', 500: '#A9B0B9', 700: '#7C848F' },
+            stone: { DEFAULT: '#D2D6DC', 300: '#DEE1E6', 500: '#D2D6DC', 700: '#AEB4BC' },
+            olive: { DEFAULT: '#CBF23D', 300: '#DDF77F', 500: '#CBF23D', 700: '#4A6600', 800: '#3A5000' }
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif']
+          },
+          maxWidth: { 'screen-2xl': '1680px' }
+        }
+      }
+    }
+  </script>
+  <script src="assets/js/ui.js"></script>
+  <style>
+    :root { --ui-accent: #111317; }
+    html { scroll-padding-top: 4.5rem; }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+    body { -webkit-font-smoothing: antialiased; }
+    ::selection { background: #CBF23D; color: #111317; }
+    /* Monochrome plates regain colour under the pointer */
+    .mono { filter: grayscale(1) contrast(1.04); transition: filter 1.2s cubic-bezier(.16,1,.3,1), transform 1.2s cubic-bezier(.16,1,.3,1); }
+    a:hover .mono, a:focus-visible .mono, figure:hover .mono { filter: grayscale(0) contrast(1); }
+    /* Word-by-word reading highlight driven by scroll (--p from data-scrub) */
+    [data-words] .w { opacity: clamp(.16, calc((var(--p, 1) - .08) * 2.6 * var(--n, 1) - var(--i, 0)), 1); transition: opacity .25s linear; }
+    @media (prefers-reduced-motion: reduce) { [data-words] .w { opacity: 1; } }
+    .hl { background: linear-gradient(transparent 58%, #CBF23D 58%, #CBF23D 92%, transparent 92%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .balance { text-wrap: balance; }
+    [data-category] { transition: opacity .32s cubic-bezier(.16,1,.3,1), transform .32s cubic-bezier(.16,1,.3,1); }
+    [data-category].is-out { opacity: 0; transform: translateY(8px); }
+    [data-category].is-gone { display: none; }
+    dialog.project { margin: auto; }
+  </style>
+</head>
+<body class="bg-ivory font-sans text-carbon" data-cursor="ring">
+
+  <div data-scroll-progress class="fixed inset-x-0 top-0 z-50 h-[3px] bg-olive"></div>
+
+  <!-- HEADER -->
+  <header data-header="shrink" class="group fixed inset-x-0 top-0 z-40 transition-colors duration-500 [&.is-scrolled]:bg-ivory/90 [&.is-scrolled]:backdrop-blur-sm [&.is-scrolled]:border-b [&.is-scrolled]:border-carbon/10">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-5 sm:px-8 lg:px-10 2xl:px-16">
+      <a href="#top" class="font-sans text-[15px] font-medium tracking-[0.42em] text-carbon focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon" aria-label="NEXFORM, back to top">NEXFORM</a>
+      <nav data-scrollspy class="hidden items-center gap-9 lg:flex" aria-label="Primary">
+        <a href="#manifesto" class="relative py-2 text-[13px] uppercase tracking-[0.16em] text-carbon/70 transition-colors duration-300 hover:text-carbon [&.is-active]:text-carbon after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-carbon after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Manifesto</a>
+        <a href="#collections" class="relative py-2 text-[13px] uppercase tracking-[0.16em] text-carbon/70 transition-colors duration-300 hover:text-carbon [&.is-active]:text-carbon after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-carbon after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Collections</a>
+        <a href="#lab" class="relative py-2 text-[13px] uppercase tracking-[0.16em] text-carbon/70 transition-colors duration-300 hover:text-carbon [&.is-active]:text-carbon after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-carbon after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Creative Lab</a>
+        <a href="#archive" class="relative py-2 text-[13px] uppercase tracking-[0.16em] text-carbon/70 transition-colors duration-300 hover:text-carbon [&.is-active]:text-carbon after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-carbon after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Archive</a>
+        <a href="#contact" class="relative py-2 text-[13px] uppercase tracking-[0.16em] text-carbon/70 transition-colors duration-300 hover:text-carbon [&.is-active]:text-carbon after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-carbon after:origin-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 [&.is-active]:after:scale-x-100">Contact</a>
+      </nav>
+      <button data-menu-toggle="#mnav" class="group/btn -mr-2 flex h-11 w-11 items-center justify-center lg:hidden focus-visible:outline focus-visible:outline-1 focus-visible:outline-carbon" aria-label="Open menu">
+        <span class="relative block h-3 w-6">
+          <span class="absolute inset-x-0 top-0 h-px bg-carbon transition-transform duration-500 group-[.is-open]/btn:translate-y-[6px] group-[.is-open]/btn:rotate-45"></span>
+          <span class="absolute inset-x-0 bottom-0 h-px bg-carbon transition-transform duration-500 group-[.is-open]/btn:-translate-y-[5px] group-[.is-open]/btn:-rotate-45"></span>
+        </span>
+      </button>
+    </div>
+    <div id="mnav" class="fixed inset-x-0 top-16 z-50 border-y border-carbon/10 bg-ivory px-5 pb-10 pt-6 sm:px-8 lg:hidden">
+      <nav class="flex flex-col" aria-label="Mobile">
+        <a href="#manifesto" class="flex min-h-[56px] items-center justify-between border-b border-carbon/10 font-display text-3xl">Manifesto <span class="font-sans text-xs tracking-[0.2em] text-carbon/60">I</span></a>
+        <a href="#collections" class="flex min-h-[56px] items-center justify-between border-b border-carbon/10 font-display text-3xl">Collections <span class="font-sans text-xs tracking-[0.2em] text-carbon/60">II</span></a>
+        <a href="#lab" class="flex min-h-[56px] items-center justify-between border-b border-carbon/10 font-display text-3xl">Creative Lab <span class="font-sans text-xs tracking-[0.2em] text-carbon/60">III</span></a>
+        <a href="#archive" class="flex min-h-[56px] items-center justify-between border-b border-carbon/10 font-display text-3xl">Archive <span class="font-sans text-xs tracking-[0.2em] text-carbon/60">IV</span></a>
+        <a href="#contact" class="flex min-h-[56px] items-center justify-between font-display text-3xl">Contact <span class="font-sans text-xs tracking-[0.2em] text-carbon/60">V</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 01 EXHIBITION HERO -->
+    <section id="top" class="relative lg:grid lg:min-h-[100dvh] lg:grid-cols-12">
+      <div class="relative isolate flex flex-col justify-between overflow-hidden px-5 pb-10 pt-24 sm:px-8 lg:col-span-6 lg:pb-14 lg:pl-10 lg:pr-8 lg:pt-28 2xl:pl-16">
+        <span data-follow="0.12" aria-hidden="true" class="pointer-events-none absolute right-[6%] top-[44%] -z-10 hidden h-48 w-48 rounded-full bg-olive mix-blend-multiply lg:block xl:h-72 xl:w-72"></span>
+        <div class="flex flex-wrap gap-x-8 gap-y-1 text-xs uppercase tracking-[0.24em] text-carbon/70" data-reveal="fade">
+          <span>Independent Fashion Studio</span>
+          <span>Visual Research / 001</span>
+        </div>
+
+        <div class="mt-14 lg:mt-0">
+          <h1 data-split="words" class="font-display text-[3.4rem] font-light uppercase leading-[0.92] tracking-[-0.01em] sm:text-7xl lg:text-[6rem] xl:text-[7.5rem] 2xl:text-[9.5rem]">
+            Beyond<br>the <em class="font-light normal-case italic">known</em><br>form.
+          </h1>
+          <p class="mt-8 max-w-[34ch] text-[17px] leading-relaxed text-carbon/80 lg:text-lg" data-reveal="up" data-reveal-delay="350">
+            An independent exploration of fashion, material and digital space.
+          </p>
+        </div>
+
+        <div class="mt-12 flex items-end justify-between gap-6 lg:mt-0" data-reveal="up" data-reveal-delay="500">
+          <a href="#manifesto" data-magnetic="0.3" class="group inline-flex min-h-[52px] items-center gap-4 bg-carbon px-7 text-[13px] font-medium uppercase tracking-[0.22em] text-ivory transition-colors duration-300 hover:bg-olive hover:text-carbon active:scale-[.98] focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+            Explore the exhibition
+            <svg class="h-4 w-4 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+          </a>
+          <span class="hidden text-xs uppercase tracking-[0.24em] text-carbon/60 sm:block">Digital Exhibition</span>
+        </div>
+      </div>
+
+      <figure class="relative lg:col-span-6">
+        <div class="relative aspect-[4/5] overflow-hidden bg-stone sm:aspect-[5/4] lg:absolute lg:inset-x-0 lg:bottom-0 lg:top-16 lg:aspect-auto" data-reveal="clip">
+          <div class="absolute inset-x-0 -inset-y-[15%]" data-parallax="0.12">
+            <img data-cursor-label="Plate I" src="assets/img/posthuman-armor.jpg" alt="Sculptural pleated metal gown with armoured shoulders and cuffs, displayed on a reflective plinth under soft studio light" class="h-full w-full object-cover object-[50%_20%]" width="683" height="1024" fetchpriority="high">
+          </div>
+        </div>
+        <figcaption class="flex justify-between gap-4 px-5 py-3 text-xs uppercase tracking-[0.2em] text-carbon/60 sm:px-8 lg:absolute lg:bottom-0 lg:left-0 lg:right-0 lg:bg-gradient-to-t lg:from-carbon/50 lg:to-transparent lg:px-8 lg:pb-5 lg:pt-16 lg:text-ivory/85">
+          <span>Plate I</span>
+          <span>Pleated metal bodice study</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- KINETIC STRIP (the only marquee on the page) -->
+    <div class="overflow-hidden bg-carbon py-5 text-ivory lg:py-7" aria-label="Studio principles">
+      <div data-marquee="55" class="flex">
+        <div class="flex shrink-0 items-center gap-10 pr-10 font-display text-3xl font-light lg:gap-14 lg:pr-14 lg:text-5xl">
+          <span>Form is <em class="italic text-olive">expression</em></span><span aria-hidden="true" class="h-3 w-3 bg-olive"></span>
+          <span>Material is <em class="italic text-olive">language</em></span><span aria-hidden="true" class="h-3 w-3 bg-olive"></span>
+          <span>Technology expands <em class="italic text-olive">imagination</em></span><span aria-hidden="true" class="h-3 w-3 bg-olive"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 BRAND MANIFESTO -->
+    <section id="manifesto">
+      <div class="mx-auto w-full max-w-screen-2xl px-5 py-24 sm:px-8 lg:px-10 lg:py-36 2xl:px-16">
+        <div class="grid grid-cols-1 gap-y-10 lg:grid-cols-12 lg:gap-x-8">
+          <p class="text-xs uppercase tracking-[0.24em] text-carbon/60 lg:col-span-2 lg:pt-6">Manifesto</p>
+          <h2 data-split="words" class="balance font-display text-5xl font-light leading-[1.08] sm:text-6xl lg:col-span-10 lg:text-[5.5rem] 2xl:text-[7rem]">
+            We do not follow form. <em class="hl italic">We question it.</em>
+          </h2>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-y-10 lg:mt-24 lg:grid-cols-12 lg:gap-x-8">
+          <p data-scrub data-words class="max-w-[30ch] font-display text-3xl font-light leading-[1.2] text-carbon sm:text-4xl lg:col-span-9 lg:col-start-3 lg:text-5xl 2xl:text-6xl">
+            NEXFORM explores fashion as a language of structure, material, and identity. Through experimental silhouettes and digital image-making, each project investigates how the human form can be interpreted beyond familiar boundaries.
+          </p>
+          <p class="max-w-[40ch] text-base leading-relaxed text-carbon/70 lg:col-span-4 lg:col-start-8 lg:pt-6" data-reveal="up">
+            The studio works between the cutting table and the render engine. Garments are drafted by hand, rebuilt as digital volumes, then photographed as objects in their own right.
+          </p>
+        </div>
+
+        <ol class="mt-20 grid grid-cols-1 border-t border-carbon/15 sm:grid-cols-3 lg:mt-28" data-reveal-stagger="120">
+          <li class="group relative isolate flex items-baseline gap-5 px-4 before:absolute before:inset-0 before:-z-10 before:origin-bottom before:scale-y-0 before:bg-olive before:transition-transform before:duration-500 before:ease-[cubic-bezier(.16,1,.3,1)] hover:before:scale-y-100border-b border-carbon/15 py-8 sm:border-b-0 sm:border-r sm:pr-8 lg:py-10">
+            <span class="font-display text-2xl italic text-olive-700 transition-transform duration-500 group-hover:-translate-y-1">i.</span>
+            <span class="font-display text-3xl font-light leading-tight lg:text-4xl">Form is<br>Expression.</span>
+          </li>
+          <li class="group relative isolate flex items-baseline gap-5 px-4 before:absolute before:inset-0 before:-z-10 before:origin-bottom before:scale-y-0 before:bg-olive before:transition-transform before:duration-500 before:ease-[cubic-bezier(.16,1,.3,1)] hover:before:scale-y-100border-b border-carbon/15 py-8 sm:border-b-0 sm:border-r sm:px-8 lg:py-10">
+            <span class="font-display text-2xl italic text-olive-700 transition-transform duration-500 group-hover:-translate-y-1">ii.</span>
+            <span class="font-display text-3xl font-light leading-tight lg:text-4xl">Material is<br>Language.</span>
+          </li>
+          <li class="group relative isolate flex items-baseline gap-5 px-4 before:absolute before:inset-0 before:-z-10 before:origin-bottom before:scale-y-0 before:bg-olive before:transition-transform before:duration-500 before:ease-[cubic-bezier(.16,1,.3,1)] hover:before:scale-y-100py-8 sm:pl-8 lg:py-10">
+            <span class="font-display text-2xl italic text-olive-700 transition-transform duration-500 group-hover:-translate-y-1">iii.</span>
+            <span class="font-display text-3xl font-light leading-tight lg:text-4xl">Technology Expands<br>Imagination.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 03 COLLECTIONS AS ART -->
+    <section id="collections" aria-labelledby="collections-title">
+      <div class="mx-auto w-full max-w-screen-2xl px-5 pb-16 pt-6 sm:px-8 lg:px-10 lg:pb-24 2xl:px-16">
+        <h2 id="collections-title" class="font-display text-5xl font-light leading-none sm:text-7xl lg:text-[7rem] 2xl:text-[9rem]" data-reveal="up">
+          Collections <em class="italic">as art</em>
+        </h2>
+        <p class="mt-6 max-w-[48ch] text-base leading-relaxed text-carbon/70 lg:ml-[calc(100%/12*5)]" data-reveal="up">
+          Three conceptual projects, presented as rooms in one exhibition. Each is a fictional study, not a released line.
+        </p>
+      </div>
+
+      <!-- Room A: POST-HUMAN (carbon room) -->
+      <article id="post-human" class="bg-carbon text-ivory" aria-labelledby="ph-title" data-spotlight data-spotlight-color="rgba(203,242,61,.10)">
+        <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-y-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:gap-x-8 lg:px-10 lg:py-32 2xl:px-16">
+          <div class="relative lg:col-span-6">
+            <a href="#post-human" data-modal-open="dlg-post-human" class="group block overflow-hidden bg-carbon-700 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory" data-reveal="clip" data-cursor-label="Enter" aria-label="Open project Post-Human">
+              <img src="assets/img/hero-sculptural-gown.jpg" alt="Pale pleated gown with an oversized angular black headpiece and black articulated arms, shown on a mannequin" class="mono aspect-square w-full object-cover object-top transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="683" height="1024" loading="lazy">
+            </a>
+          </div>
+
+          <div class="flex flex-col lg:col-span-5 lg:col-start-8">
+            <div class="flex items-baseline justify-between border-b border-ivory/20 pb-4 text-xs uppercase tracking-[0.24em] text-ivory/60">
+              <span class="mr-6 whitespace-nowrap">Project 01</span><span>Body, structure, transformation</span>
+            </div>
+            <h3 id="ph-title" class="mt-10 font-display text-6xl font-light leading-[0.9] sm:text-7xl 2xl:text-[7.5rem]" data-reveal="up">Post<br><em class="italic text-olive">Human</em></h3>
+            <p class="mt-8 max-w-[44ch] text-[17px] leading-relaxed text-ivory/80" data-reveal="up">
+              The body as scaffold. Architectural silhouettes and exaggerated proportions turn clothing into a structure the wearer inhabits.
+            </p>
+
+            <dl class="mt-10 grid grid-cols-2 gap-x-6 gap-y-6 text-sm" data-reveal="up">
+              <div><dt class="text-xs uppercase tracking-[0.22em] text-ivory/50">Inspiration</dt><dd class="mt-2 leading-relaxed text-ivory/85">Exoskeletons, load-bearing frames, shadow as volume</dd></div>
+              <div><dt class="text-xs uppercase tracking-[0.22em] text-ivory/50">Visual language</dt><dd class="mt-2 leading-relaxed text-ivory/85">Carbon black, hard shadow, monochrome plates</dd></div>
+              <div class="col-span-2"><dt class="text-xs uppercase tracking-[0.22em] text-ivory/50">Research note</dt><dd class="mt-2 leading-relaxed text-ivory/85">Boned bodices tested against free-hanging volume to find where support ends and silhouette begins.</dd></div>
+            </dl>
+
+            <div class="mt-12 flex items-end justify-between gap-8">
+              <button type="button" data-modal-open="dlg-post-human" class="group inline-flex min-h-[48px] items-center gap-4 border-b border-ivory pb-2 text-[13px] font-medium uppercase tracking-[0.22em] transition-colors duration-300 hover:border-olive hover:text-olive focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">
+                Enter the project
+                <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+              </button>
+              <figure class="hidden w-36 shrink-0 overflow-hidden sm:block xl:w-44" data-reveal="clip">
+                <img src="assets/img/posthuman-corset.webp" alt="Black boned corset with black bloomers and laced boots on a white mannequin" class="mono aspect-[3/4] w-full object-cover" width="557" height="1024" loading="lazy">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Room B: SYNTHETIC NATURE (landscape + overlapping portrait) -->
+      <article id="synthetic-nature" class="bg-stone-300" aria-labelledby="sn-title">
+        <div class="mx-auto w-full max-w-screen-2xl px-5 py-20 sm:px-8 lg:px-10 lg:py-32 2xl:px-16">
+          <div class="flex items-baseline justify-between border-b border-carbon/20 pb-4 text-xs uppercase tracking-[0.24em] text-carbon/60">
+            <span class="mr-6 whitespace-nowrap">Project 02</span><span>Material, light, organic geometry</span>
+          </div>
+          <a href="#synthetic-nature" data-modal-open="dlg-synthetic" class="group mt-10 block overflow-hidden bg-carbon focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon" data-reveal="clip" data-cursor-label="Enter" aria-label="Open project Synthetic Nature">
+            <div data-scrub style="transform: scale(calc(1.2 - var(--p, 1) * .2))">
+              <img src="assets/img/synthetic-chrome-surface.jpg" alt="Macro study of a curved chrome surface catching a bright bloom of light along fine ridges" class="aspect-[16/10] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04] md:aspect-[21/9]" width="5472" height="3648" loading="lazy">
+            </div>
+          </a>
+
+          <div class="mt-12 grid grid-cols-1 gap-y-12 lg:mt-0 lg:grid-cols-12 lg:gap-x-8">
+            <div class="lg:col-span-6 lg:pt-16">
+              <h3 id="sn-title" class="font-display text-6xl font-light leading-[0.9] sm:text-7xl 2xl:text-[7.5rem]" data-reveal="up">Synthetic<br><em class="italic">Nature</em></h3>
+              <p class="mt-8 max-w-[46ch] text-[17px] leading-relaxed text-carbon/80" data-reveal="up">
+                Organic structures rebuilt in reflective, translucent and metallic matter. Leaves become plates; growth patterns become seams.
+              </p>
+              <dl class="mt-10 grid max-w-xl grid-cols-1 gap-6 text-sm sm:grid-cols-2" data-reveal="up">
+                <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Inspiration</dt><dd class="mt-2 leading-relaxed">Seed pods, mineral growth, scales and shells</dd></div>
+                <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Visual language</dt><dd class="mt-2 leading-relaxed">Ivory, silver, soft grey, realistic 3D material studies</dd></div>
+                <div class="sm:col-span-2"><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Material note</dt><dd class="mt-2 leading-relaxed">Riveted aluminium plates linked by rings, then rendered digitally to test how light travels across hundreds of facets.</dd></div>
+              </dl>
+              <button type="button" data-modal-open="dlg-synthetic" class="group mt-12 inline-flex min-h-[48px] items-center gap-4 border-b border-carbon pb-2 text-[13px] font-medium uppercase tracking-[0.22em] transition-colors duration-300 hover:text-olive-700 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+                Enter the project
+                <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+            <figure class="relative lg:col-span-4 lg:col-start-9 lg:-mt-40">
+              <div class="overflow-hidden bg-silver" data-reveal="clip">
+                <img src="assets/img/synthetic-metal-dress.webp" alt="Mini dress of square aluminium plates joined with metal rings, on a white mannequin against grey" class="aspect-[3/4] w-full object-cover object-[50%_35%]" width="1424" height="2048" loading="lazy">
+              </div>
+              <figcaption class="mt-3 flex justify-between text-xs uppercase tracking-[0.2em] text-carbon/60"><span>Plate II</span><span>Linked plate shell</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- Room C: FORM / FLUX (text-led, asymmetric pairing) -->
+      <article id="form-flux" class="overflow-hidden bg-ivory" aria-labelledby="ff-title">
+        <div class="mx-auto w-full max-w-screen-2xl px-5 py-20 sm:px-8 lg:px-10 lg:py-32 2xl:px-16">
+          <div class="flex items-baseline justify-between border-b border-carbon/20 pb-4 text-xs uppercase tracking-[0.24em] text-carbon/60">
+            <span class="mr-6 whitespace-nowrap">Project 03</span><span>Motion, digital identity, fluidity</span>
+          </div>
+
+          <h3 id="ff-title" data-scrub class="mt-10 whitespace-nowrap font-display text-[3.4rem] font-light uppercase leading-[0.9] sm:text-[8rem] lg:text-[11rem] 2xl:text-[14rem]">
+            <span class="inline-block">Form</span>
+            <span class="inline-block font-light text-silver-700 will-change-transform" style="transform: translate3d(calc(var(--p, .5) * 5vw), 0, 0) rotate(calc(var(--p, .5) * 90deg))">/</span>
+            <em class="inline-block pr-2 normal-case italic will-change-transform" style="transform: translate3d(calc(var(--p, .5) * 10vw), 0, 0)">Flux</em>
+          </h3>
+
+          <div class="mt-14 grid grid-cols-1 gap-y-12 lg:grid-cols-12 lg:gap-x-8">
+            <a href="#form-flux" data-modal-open="dlg-flux" class="group block self-start overflow-hidden bg-carbon lg:col-span-7 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon" data-reveal="clip" data-cursor-label="Enter" aria-label="Open project Form / Flux">
+              <img src="assets/img/flux-smoke-study.webp" alt="Ribbon of smoke twisting into a fluid, garment-like form against a black background" class="mono aspect-[4/3] w-full object-cover object-right transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="2900" height="2084" loading="lazy">
+            </a>
+            <div class="flex flex-col lg:col-span-4 lg:col-start-9">
+              <p class="max-w-[42ch] text-[17px] leading-relaxed text-carbon/80" data-reveal="up">
+                Silhouettes that refuse to hold still. Flowing cloth and simulated motion describe identity as something in transit.
+              </p>
+              <dl class="mt-8 space-y-6 text-sm" data-reveal="up">
+                <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Inspiration</dt><dd class="mt-2 leading-relaxed">Smoke, long exposure, the drape of a cape in mid-turn</dd></div>
+                <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Research note</dt><dd class="mt-2 leading-relaxed">Cloth simulations frozen at single frames, then cut and sewn as physical patterns.</dd></div>
+              </dl>
+              <figure class="mt-10 w-2/3 self-end overflow-hidden sm:w-1/2 lg:w-full" data-reveal="clip">
+                <img src="assets/img/archive-cape.jpg" alt="Voluminous silk cape gathered at the shoulder, swinging away from a mannequin" class="mono aspect-[3/4] w-full object-cover object-top" width="576" height="1024" loading="lazy">
+              </figure>
+              <button type="button" data-modal-open="dlg-flux" class="group mt-10 inline-flex min-h-[48px] items-center gap-4 self-start border-b border-carbon pb-2 text-[13px] font-medium uppercase tracking-[0.22em] transition-colors duration-300 hover:text-olive-700 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+                Enter the project
+                <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 04 CREATIVE LAB -->
+    <section id="lab" class="bg-stone" aria-labelledby="lab-title">
+      <div class="mx-auto w-full max-w-screen-2xl px-5 py-24 sm:px-8 lg:px-10 lg:py-36 2xl:px-16">
+        <h2 id="lab-title" data-split="words" class="max-w-[14ch] font-display text-5xl font-light uppercase leading-[0.95] sm:text-7xl lg:text-[6.5rem] 2xl:text-[8rem]">
+          From form to <em class="normal-case italic">possibility.</em>
+        </h2>
+        <p class="mt-8 max-w-[52ch] text-[17px] leading-relaxed text-carbon/80" data-reveal="up">
+          Technology is a working tool here, not a finish. Every piece moves through three stages of research before it is photographed.
+        </p>
+
+        <!-- Stage A -->
+        <div class="mt-20 grid grid-cols-1 gap-y-8 border-t border-carbon/20 pt-8 md:grid-cols-12 md:gap-x-8 lg:mt-28">
+          <div class="md:col-span-4 lg:col-span-3">
+            <p class="text-xs uppercase tracking-[0.24em] text-carbon/60">Stage A</p>
+            <h3 class="mt-3 font-display text-4xl font-light lg:text-5xl">Form research</h3>
+            <p class="mt-5 max-w-[34ch] text-sm leading-relaxed text-carbon/75">Silhouette studies, gesture drawings and proportion tests on the stand. The line is found on paper before it is found in cloth.</p>
+            <ul class="mt-6 space-y-1 text-[12px] uppercase tracking-[0.16em] text-carbon/60">
+              <li>Gesture sketch</li><li>Toile on stand</li><li>Proportion grid</li>
+            </ul>
+          </div>
+          <figure class="md:col-span-4 lg:col-span-4">
+            <div class="overflow-hidden" data-reveal="clip"><img src="assets/img/lab-figure-sketch.webp" alt="Chalk sketch of a figure seen from behind, arm extended, skirt drawn in loose strokes" class="mono aspect-[3/4] w-full object-cover" width="2976" height="4307" loading="lazy"></div>
+            <figcaption class="mt-3 text-xs uppercase tracking-[0.2em] text-carbon/60">Gesture study, chalk on paper</figcaption>
+          </figure>
+          <figure class="md:col-span-4 lg:col-span-3 lg:col-start-10 lg:mt-32">
+            <div class="overflow-hidden" data-reveal="clip"><img src="assets/img/lab-form-mannequin.webp" alt="Sheer white gown with a long train on a mannequin, lit against a dark grey backdrop" class="aspect-[4/5] w-full object-cover" width="3898" height="5457" loading="lazy"></div>
+            <figcaption class="mt-3 text-xs uppercase tracking-[0.2em] text-carbon/60">Toile, train volume test</figcaption>
+          </figure>
+        </div>
+
+        <!-- Stage B -->
+        <div class="mt-20 grid grid-cols-1 gap-y-8 border-t border-carbon/20 pt-8 md:grid-cols-12 md:gap-x-8 lg:mt-28">
+          <figure class="order-2 md:order-1 md:col-span-8 lg:col-span-7">
+            <div class="overflow-hidden" data-reveal="clip"><img src="assets/img/lab-chrome-reflection.jpg" alt="Close view of a polished transparent shell with ribbed edges reflecting studio light" class="mono aspect-[16/10] w-full object-cover" width="5179" height="3453" loading="lazy"></div>
+            <figcaption class="mt-3 text-xs uppercase tracking-[0.2em] text-carbon/60">Material preview, ribbed shell</figcaption>
+          </figure>
+          <div class="order-1 md:order-2 md:col-span-4 lg:col-span-4 lg:col-start-9 lg:self-end">
+            <p class="text-xs uppercase tracking-[0.24em] text-carbon/60">Stage B</p>
+            <h3 class="mt-3 font-display text-4xl font-light lg:text-5xl">Digital prototyping</h3>
+            <p class="mt-5 max-w-[36ch] text-sm leading-relaxed text-carbon/75">Patterns are rebuilt as 3D garments. Wireframes show where volume collapses; material previews show how a surface will hold light.</p>
+            <ul class="mt-6 space-y-1 text-[12px] uppercase tracking-[0.16em] text-carbon/60">
+              <li>3D garment model</li><li>Wireframe pass</li><li>Material preview</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage C -->
+        <div class="mt-20 grid grid-cols-1 gap-y-8 border-t border-carbon/20 pt-8 md:grid-cols-12 md:gap-x-8 lg:mt-28">
+          <div class="md:col-span-4 lg:col-span-3 lg:col-start-2">
+            <p class="text-xs uppercase tracking-[0.24em] text-carbon/60">Stage C</p>
+            <h3 class="mt-3 font-display text-4xl font-light lg:text-5xl">Visual experiments</h3>
+            <p class="mt-5 max-w-[34ch] text-sm leading-relaxed text-carbon/75">Lighting studies and abstract compositions decide how each piece will be seen. The photograph is treated as the final garment.</p>
+            <ul class="mt-6 space-y-1 text-[12px] uppercase tracking-[0.16em] text-carbon/60">
+              <li>Lighting study</li><li>Editorial test</li><li>Composition</li>
+            </ul>
+          </div>
+          <figure class="md:col-span-8 lg:col-span-7 lg:col-start-6">
+            <div class="overflow-hidden" data-reveal="clip"><img src="assets/img/lab-translucent-light.jpg" alt="Layers of curved translucent glass overlapping, light bending through their edges" class="mono aspect-[16/9] w-full object-cover" width="1024" height="684" loading="lazy"></div>
+            <figcaption class="mt-3 text-xs uppercase tracking-[0.2em] text-carbon/60">Lighting study, layered glass</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 VISUAL ARCHIVE -->
+    <section id="archive" aria-labelledby="archive-title" data-filter-group>
+      <div class="mx-auto w-full max-w-screen-2xl px-5 py-24 sm:px-8 lg:px-10 lg:py-36 2xl:px-16">
+        <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <h2 id="archive-title" class="font-display text-5xl font-light leading-none sm:text-7xl lg:text-[6.5rem] 2xl:text-[8rem]" data-reveal="up">Visual <em class="italic">archive</em></h2>
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter archive">
+            <button type="button" data-filter="all" class="is-active min-h-[44px] border border-carbon/25 px-5 text-[12px] uppercase tracking-[0.18em] transition-colors duration-300 hover:border-carbon [&.is-active]:border-carbon [&.is-active]:bg-carbon [&.is-active]:text-ivory focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-carbon">All</button>
+            <button type="button" data-filter="editorial" class="min-h-[44px] border border-carbon/25 px-5 text-[12px] uppercase tracking-[0.18em] transition-colors duration-300 hover:border-carbon [&.is-active]:border-carbon [&.is-active]:bg-carbon [&.is-active]:text-ivory focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-carbon">Editorial</button>
+            <button type="button" data-filter="material" class="min-h-[44px] border border-carbon/25 px-5 text-[12px] uppercase tracking-[0.18em] transition-colors duration-300 hover:border-carbon [&.is-active]:border-carbon [&.is-active]:bg-carbon [&.is-active]:text-ivory focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-carbon">Material</button>
+            <button type="button" data-filter="process" class="min-h-[44px] border border-carbon/25 px-5 text-[12px] uppercase tracking-[0.18em] transition-colors duration-300 hover:border-carbon [&.is-active]:border-carbon [&.is-active]:bg-carbon [&.is-active]:text-ivory focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-carbon">Process</button>
+          </div>
+        </div>
+
+        <div class="mt-14 columns-1 gap-6 sm:columns-2 lg:mt-20 lg:columns-3 lg:gap-8">
+          <figure data-category="editorial process" class="mb-6 break-inside-avoid lg:mb-8">
+            <a href="assets/img/archive-runway.webp" data-lightbox="archive" data-tilt="6" data-tilt-glare data-cursor-label="Open"data-caption="ARC 014 / Show documentation, final walk" class="group block overflow-hidden bg-stone focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+              <img src="assets/img/archive-runway.webp" alt="Models walking away down a long white runway under a rig of stage lights" class="mono aspect-[3/2] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="4137" height="2758" loading="lazy">
+            </a>
+            <figcaption class="mt-3 flex justify-between gap-4 text-xs uppercase tracking-[0.18em] text-carbon/60"><span>ARC 014</span><span>Show documentation</span></figcaption>
+          </figure>
+
+          <figure data-category="material" class="mb-6 break-inside-avoid lg:mb-8">
+            <a href="assets/img/archive-glass-facade.jpg" data-lightbox="archive" data-tilt="6" data-tilt-glare data-cursor-label="Open"data-caption="ARC 009 / Diamond lattice reference, curved facade" class="group block overflow-hidden bg-stone focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+              <img src="assets/img/archive-glass-facade.jpg" alt="Curved glass tower wrapped in a diamond lattice, reflecting the street" class="mono aspect-[3/4] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="768" height="1024" loading="lazy">
+            </a>
+            <figcaption class="mt-3 flex justify-between gap-4 text-xs uppercase tracking-[0.18em] text-carbon/60"><span>ARC 009</span><span>Lattice reference</span></figcaption>
+          </figure>
+
+          <figure data-category="process" class="mb-6 break-inside-avoid lg:mb-8">
+            <a href="assets/img/archive-studio-rail.webp" data-lightbox="archive" data-tilt="6" data-tilt-glare data-cursor-label="Open"data-caption="ARC 021 / Studio rail before fittings" class="group block overflow-hidden bg-stone focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+              <img src="assets/img/archive-studio-rail.webp" alt="Ivory garments hanging on a rail, lit by a narrow band of window light" class="mono aspect-square w-full object-cover object-right transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="5184" height="3456" loading="lazy">
+            </a>
+            <figcaption class="mt-3 flex justify-between gap-4 text-xs uppercase tracking-[0.18em] text-carbon/60"><span>ARC 021</span><span>Behind the scenes</span></figcaption>
+          </figure>
+
+          <figure data-category="material" class="mb-6 break-inside-avoid lg:mb-8">
+            <a href="assets/img/archive-metal-mesh.jpg" data-lightbox="archive" data-tilt="6" data-tilt-glare data-cursor-label="Open"data-caption="ARC 017 / Perforated metal mesh, light test" class="group block overflow-hidden bg-stone focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+              <img src="assets/img/archive-metal-mesh.jpg" alt="Band of fine perforated metal mesh curving over a dark surface, scattered with points of light" class="mono aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="5472" height="3648" loading="lazy">
+            </a>
+            <figcaption class="mt-3 flex justify-between gap-4 text-xs uppercase tracking-[0.18em] text-carbon/60"><span>ARC 017</span><span>Material experiment</span></figcaption>
+          </figure>
+
+          <figure data-category="editorial" class="mb-6 break-inside-avoid lg:mb-8">
+            <a href="assets/img/archive-couture-dress.webp" data-lightbox="archive" data-tilt="6" data-tilt-glare data-cursor-label="Open"data-caption="ARC 006 / Empire line, lace over silk" class="group block overflow-hidden bg-stone focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+              <img src="assets/img/archive-couture-dress.webp" alt="High-waisted gown of diagonal lace over silk with a satin sash, on a mannequin" class="mono aspect-[2/3] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="3964" height="5826" loading="lazy">
+            </a>
+            <figcaption class="mt-3 flex justify-between gap-4 text-xs uppercase tracking-[0.18em] text-carbon/60"><span>ARC 006</span><span>Silhouette reference</span></figcaption>
+          </figure>
+
+          <figure data-category="process" class="mb-6 break-inside-avoid lg:mb-8">
+            <a href="assets/img/archive-concrete.jpg" data-lightbox="archive" data-tilt="6" data-tilt-glare data-cursor-label="Open"data-caption="ARC 011 / Symmetry and steel, site study" class="group block overflow-hidden bg-stone focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon">
+              <img src="assets/img/archive-concrete.jpg" alt="Long steel escalator rising through a concrete vaulted hall" class="mono aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="768" height="1024" loading="lazy">
+            </a>
+            <figcaption class="mt-3 flex justify-between gap-4 text-xs uppercase tracking-[0.18em] text-carbon/60"><span>ARC 011</span><span>Visual research</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 CONTACT -->
+    <section id="contact" class="border-t border-carbon/10" aria-labelledby="contact-title">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-y-16 px-5 py-24 sm:px-8 lg:grid-cols-12 lg:gap-x-8 lg:px-10 lg:py-36 2xl:px-16">
+        <div class="lg:col-span-7">
+          <h2 id="contact-title" data-split="words" class="font-display text-5xl font-light uppercase leading-[0.95] sm:text-7xl lg:text-[5.75rem] 2xl:text-[7rem]">
+            Every form begins with a <em class="normal-case italic">question.</em>
+          </h2>
+          <p class="mt-10 max-w-[46ch] text-[17px] leading-relaxed text-carbon/80" data-reveal="up">
+            For creative collaborations, editorial projects, and conversations at the intersection of fashion and digital art.
+          </p>
+          <p class="mt-10 max-w-[46ch] border-l border-olive pl-5 text-sm leading-relaxed text-carbon/65" data-reveal="up">
+            Direct studio email and social channels will be published with the first public exhibition. Until then, inquiries arrive through this form.
+          </p>
+        </div>
+
+        <form data-form="nexform-inquiry" data-success="Thank you. Your question has reached the studio." class="lg:col-span-5 lg:pt-4" novalidate>
+          <div class="grid grid-cols-1 gap-7 sm:grid-cols-2">
+            <div class="flex flex-col gap-2">
+              <label for="f-name" class="text-xs uppercase tracking-[0.22em] text-carbon/70">Name</label>
+              <input id="f-name" name="name" type="text" required minlength="2" autocomplete="name" class="min-h-[48px] border-0 border-b border-carbon/40 bg-transparent px-0 text-base text-carbon placeholder:text-carbon/50 focus:border-carbon focus:outline-none focus:ring-0">
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="f-email" class="text-xs uppercase tracking-[0.22em] text-carbon/70">Email</label>
+              <input id="f-email" name="email" type="email" required autocomplete="email" class="min-h-[48px] border-0 border-b border-carbon/40 bg-transparent px-0 text-base text-carbon placeholder:text-carbon/50 focus:border-carbon focus:outline-none focus:ring-0">
+            </div>
+            <div class="flex flex-col gap-2 sm:col-span-2">
+              <label for="f-topic" class="text-xs uppercase tracking-[0.22em] text-carbon/70">Subject</label>
+              <select id="f-topic" name="topic" required class="min-h-[48px] border-0 border-b border-carbon/40 bg-transparent px-0 text-base text-carbon focus:border-carbon focus:outline-none focus:ring-0">
+                <option value="">Choose a subject</option>
+                <option>Creative collaboration</option>
+                <option>Editorial project</option>
+                <option>Exhibition or installation</option>
+                <option>Research conversation</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-2 sm:col-span-2">
+              <label for="f-msg" class="text-xs uppercase tracking-[0.22em] text-carbon/70">Your question</label>
+              <textarea id="f-msg" name="message" rows="4" required minlength="10" class="resize-none border-0 border-b border-carbon/40 bg-transparent px-0 py-3 text-base text-carbon focus:border-carbon focus:outline-none focus:ring-0"></textarea>
+            </div>
+          </div>
+          <button type="submit" data-magnetic="0.2" class="group mt-10 inline-flex min-h-[52px] w-full items-center justify-between gap-6 bg-carbon px-7 text-[13px] font-medium uppercase tracking-[0.22em] text-ivory transition-colors duration-300 hover:bg-olive hover:text-carbon active:scale-[.99] focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-carbon sm:w-auto">
+            Send inquiry
+            <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-carbon text-ivory">
+    <div class="mx-auto w-full max-w-screen-2xl px-5 pb-10 pt-20 sm:px-8 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+        <div class="lg:col-span-6">
+          <a href="#top" class="font-sans text-2xl font-medium tracking-[0.42em] focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ivory">NEXFORM</a>
+          <p class="mt-6 max-w-[38ch] font-display text-2xl font-light italic leading-snug text-ivory/80">Not simply presenting clothes. Exploring what fashion can become.</p>
+        </div>
+        <nav class="grid grid-cols-2 gap-x-8 gap-y-3 text-[13px] uppercase tracking-[0.16em] sm:grid-cols-3 lg:col-span-5 lg:col-start-8" aria-label="Footer">
+          <a href="#manifesto" class="py-1 text-ivory/70 transition-colors duration-300 hover:text-ivory">Manifesto</a>
+          <a href="#collections" class="py-1 text-ivory/70 transition-colors duration-300 hover:text-ivory">Collections</a>
+          <a href="#lab" class="py-1 text-ivory/70 transition-colors duration-300 hover:text-ivory">Creative Lab</a>
+          <a href="#archive" class="py-1 text-ivory/70 transition-colors duration-300 hover:text-ivory">Archive</a>
+          <a href="#contact" class="py-1 text-ivory/70 transition-colors duration-300 hover:text-ivory">Contact</a>
+          <a href="#top" class="py-1 text-ivory/70 transition-colors duration-300 hover:text-ivory">Back to top</a>
+        </nav>
+      </div>
+      <div class="mt-20 flex flex-col gap-3 border-t border-ivory/15 pt-6 text-[12px] text-ivory/60 sm:flex-row sm:justify-between">
+        <p>&copy; <span id="year">2026</span> NEXFORM. A fictional creative concept.</p>
+        <p>Beyond the Known Form.</p>
+      </div>
+    </div>
+    <div class="overflow-hidden px-3" aria-hidden="true">
+      <p data-split="chars" class="select-none whitespace-nowrap text-center font-sans text-[19vw] font-medium leading-[0.8] tracking-[-0.04em] text-olive/90 translate-y-[12%]">NEXFORM</p>
+    </div>
+  </footer>
+
+  <!-- PROJECT DIALOGS -->
+  <dialog id="dlg-post-human" class="project w-[min(68rem,calc(100%-1.5rem))] max-h-[92dvh] overflow-y-auto bg-ivory p-0 text-carbon" aria-labelledby="dlg-ph-title">
+    <div class="grid grid-cols-1 md:grid-cols-12">
+      <div class="md:col-span-5"><img src="assets/img/posthuman-corset.webp" alt="Black boned corset with bloomers and laced boots on a white mannequin" class="mono aspect-[4/5] h-full w-full object-cover md:aspect-auto" width="557" height="1024" loading="lazy"></div>
+      <div class="relative p-6 sm:p-10 md:col-span-7">
+        <button type="button" data-modal-close class="absolute right-3 top-3 flex h-11 w-11 items-center justify-center transition-colors duration-300 hover:text-olive-700 focus-visible:outline focus-visible:outline-1 focus-visible:outline-carbon" aria-label="Close project">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
+        <p class="text-xs uppercase tracking-[0.24em] text-carbon/60">Project 01 / Conceptual study</p>
+        <h3 id="dlg-ph-title" class="mt-4 font-display text-5xl font-light leading-none sm:text-6xl">Post <em class="italic">Human</em></h3>
+        <p class="mt-6 max-w-[52ch] leading-relaxed text-carbon/80">Explores the relationship between the human body and sculptural clothing through architectural silhouettes, exaggerated proportions and experimental forms. The garment is read as a frame the body moves inside, rather than a surface it wears.</p>
+        <dl class="mt-8 grid grid-cols-1 gap-6 border-t border-carbon/15 pt-6 text-sm sm:grid-cols-2">
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Theme</dt><dd class="mt-2">Body, structure, transformation</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Visual language</dt><dd class="mt-2">Carbon black, dramatic shadows, monochrome editorial photography</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Materials explored</dt><dd class="mt-2">Boned coutil, moulded felt, lacquered panels</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Research stages</dt><dd class="mt-2">Silhouette drawings, half-scale toiles, shadow studies</dd></div>
+        </dl>
+        <p class="mt-8 text-xs leading-relaxed text-carbon/60">A fictional concept by NEXFORM. Not a released collection and not for sale.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-synthetic" class="project w-[min(68rem,calc(100%-1.5rem))] max-h-[92dvh] overflow-y-auto bg-ivory p-0 text-carbon" aria-labelledby="dlg-sn-title">
+    <div class="grid grid-cols-1 md:grid-cols-12">
+      <div class="bg-silver md:col-span-5"><img src="assets/img/synthetic-metal-dress.webp" alt="Mini dress of square aluminium plates joined with rings, on a white mannequin" class="aspect-[4/5] h-full w-full object-cover md:aspect-auto" width="1424" height="2048" loading="lazy"></div>
+      <div class="relative p-6 sm:p-10 md:col-span-7">
+        <button type="button" data-modal-close class="absolute right-3 top-3 flex h-11 w-11 items-center justify-center transition-colors duration-300 hover:text-olive-700 focus-visible:outline focus-visible:outline-1 focus-visible:outline-carbon" aria-label="Close project">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
+        <p class="text-xs uppercase tracking-[0.24em] text-carbon/60">Project 02 / Conceptual study</p>
+        <h3 id="dlg-sn-title" class="mt-4 font-display text-5xl font-light leading-none sm:text-6xl">Synthetic <em class="italic">Nature</em></h3>
+        <p class="mt-6 max-w-[52ch] leading-relaxed text-carbon/80">Reinterprets organic structures through reflective surfaces, translucent materials, metallic textures and digitally constructed forms. Natural growth logic is copied, then translated into matter that could never grow.</p>
+        <dl class="mt-8 grid grid-cols-1 gap-6 border-t border-carbon/15 pt-6 text-sm sm:grid-cols-2">
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Theme</dt><dd class="mt-2">Material, light, organic geometry</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Visual language</dt><dd class="mt-2">Ivory, silver, soft grey, reflective surfaces, realistic 3D material studies</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Materials explored</dt><dd class="mt-2">Aluminium plate, ring links, translucent resin, chrome film</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Research stages</dt><dd class="mt-2">Specimen drawings, facet renders, light-path tests</dd></div>
+        </dl>
+        <p class="mt-8 text-xs leading-relaxed text-carbon/60">A fictional concept by NEXFORM. Not a released collection and not for sale.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-flux" class="project w-[min(68rem,calc(100%-1.5rem))] max-h-[92dvh] overflow-y-auto bg-ivory p-0 text-carbon" aria-labelledby="dlg-ff-title">
+    <div class="grid grid-cols-1 md:grid-cols-12">
+      <div class="bg-carbon md:col-span-5"><img src="assets/img/flux-smoke-study.webp" alt="Ribbon of smoke twisting against black" class="mono aspect-[4/5] h-full w-full object-cover object-right md:aspect-auto" width="2900" height="2084" loading="lazy"></div>
+      <div class="relative p-6 sm:p-10 md:col-span-7">
+        <button type="button" data-modal-close class="absolute right-3 top-3 flex h-11 w-11 items-center justify-center transition-colors duration-300 hover:text-olive-700 focus-visible:outline focus-visible:outline-1 focus-visible:outline-carbon" aria-label="Close project">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
+        <p class="text-xs uppercase tracking-[0.24em] text-carbon/60">Project 03 / Conceptual study</p>
+        <h3 id="dlg-ff-title" class="mt-4 font-display text-5xl font-light uppercase leading-none sm:text-6xl">Form / <em class="normal-case italic">Flux</em></h3>
+        <p class="mt-6 max-w-[52ch] leading-relaxed text-carbon/80">Explores evolving silhouettes and fluid forms through digital visualization, flowing materials and experimental compositions. Identity is treated as movement: never a fixed outline, always a passage between shapes.</p>
+        <dl class="mt-8 grid grid-cols-1 gap-6 border-t border-carbon/15 pt-6 text-sm sm:grid-cols-2">
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Theme</dt><dd class="mt-2">Motion, digital identity, fluidity</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Visual language</dt><dd class="mt-2">Cool neutrals, abstract movement, refined digital art</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Materials explored</dt><dd class="mt-2">Silk organza, bias-cut jersey, simulated cloth</dd></div>
+          <div><dt class="text-xs uppercase tracking-[0.22em] text-carbon/60">Research stages</dt><dd class="mt-2">Motion capture of drape, frozen frames, pattern extraction</dd></div>
+        </dl>
+        <p class="mt-8 text-xs leading-relaxed text-carbon/60">A fictional concept by NEXFORM. Not a released collection and not for sale.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* ÉCLAT BEAUTY ACADEMY — biến dùng chung + vài style Tailwind không làm được */
+:root {
+  --cream: #F7F1E9;
+  --nude: #D8B9A5;
+  --burgundy: #713B45;
+  --cocoa: #49362F;
+  --soot: #211E1D;
+  --warm: #FFFCF8;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-sans: Geist, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ui-accent: #713B45;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--cocoa);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--burgundy); color: var(--warm); }
+
+/* Header: trong suốt trên hero, nền kem khi cuộn (motion.js thêm .is-scrolled) */
+.site-header { transition: background-color .4s ease, box-shadow .4s ease, transform .5s cubic-bezier(.16,1,.3,1); }
+.site-header.is-scrolled { background-color: rgba(247, 241, 233, .96); box-shadow: 0 1px 0 rgba(73, 54, 47, .12); }
+
+/* Khung vòm như gương bàn trang điểm — ý tưởng thị giác xuyên suốt */
+.arch { border-radius: 999px 999px 0 0; overflow: hidden; }
+
+/* Chữ hoa đầu đoạn kiểu tạp chí */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.2em;
+  line-height: .82;
+  padding: .06em .12em 0 0;
+  color: var(--burgundy);
+}
+
+/* Masonry: không cắt ngang thẻ giữa hai cột */
+.masonry-item { break-inside: avoid; }
+
+/* Mục gallery bị lọc ẩn */
+[data-category][hidden] { display: none !important; }
+
+/* Cuộn ngang cho timeline trên màn nhỏ không lộ thanh cuộn thô */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .site-header { transition: none; }
+}

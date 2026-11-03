@@ -1,0 +1,16 @@
+# Verified duplicates kept locally for review — not part of the portfolio
+_duplicates/
+
+# Internal build-tool logs (token usage, costs, job traces) and QA output
+**/logs/
+**/_qa/
+**/_qa-report.md
+**/_audit_*.js
+
+# Internal review documents
+*.docx
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/

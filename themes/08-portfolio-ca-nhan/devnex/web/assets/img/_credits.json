@@ -1,0 +1,52 @@
+[
+  {
+    "file": "assets/img/project-chat-realtime.jpg",
+    "purpose": "index.html — #projects ảnh dự án Realtime Chat",
+    "source": "openverse",
+    "id": "openverse-2d0a785b-5576-4578-9874-143c53c1b313",
+    "title": "News feed in social media, post message, comment and profile page in mobile phone. Online conversation in digital community network blog. Swipe smartphone screen with finger. Holding cellphone in hand",
+    "creator": "galvindna",
+    "license": "CC BY-NC 2.0",
+    "page": "https://www.flickr.com/photos/202685229@N07/54497529507"
+  },
+  {
+    "file": "assets/img/project-analytics-dashboard.jpg",
+    "purpose": "index.html — #projects ảnh dự án dashboard phân tích",
+    "source": "openverse",
+    "id": "openverse-61755ef9-e4f0-4e62-820c-80f61f0107c5",
+    "title": "Seo Ppc",
+    "creator": "Serpstat",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/seo-ppc-9699Y6WKLD"
+  },
+  {
+    "file": "assets/img/project-ecommerce-api.jpg",
+    "purpose": "index.html — #projects ảnh dự án API thương mại điện tử",
+    "source": "openverse",
+    "id": "openverse-2a193679-7178-4472-8d71-52c4a70197c8",
+    "title": "Interpreting Ecommerce Website Analytics",
+    "creator": "Zuko.io Images",
+    "license": "CC BY 2.0",
+    "page": "https://www.flickr.com/photos/196637446@N07/52474344349"
+  },
+  {
+    "file": "assets/img/about-code-screen.webp",
+    "purpose": "index.html — #about ảnh minh họa màn hình code",
+    "source": "openverse",
+    "id": "openverse-e53ac6f8-4cfe-4087-912a-19ab9c7c513a",
+    "title": "Programmer Code",
+    "creator": "",
+    "license": "CC CC0 1.0",
+    "page": "https://www.rawpixel.com/image/5967847/programmer-code"
+  },
+  {
+    "file": "assets/img/project-task-api.jpg",
+    "purpose": "index.html — #projects ảnh dự án Task Management API",
+    "source": "openverse",
+    "id": "openverse-3c928305-ee63-40a3-9ed9-7e54ce4bed62",
+    "title": "Computer Code",
+    "creator": "One Idea LLC",
+    "license": "CC CC0 1.0",
+    "page": "https://stocksnap.io/photo/computer-code-AWXC4NOFZN"
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "slug": "blackline-barber-club",
+  "name": "BLACKLINE BARBER CLUB",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu barber",
+    "brand": "BLACKLINE BARBER CLUB",
+    "purpose": "Thiết kế website giới thiệu thương hiệu BLACKLINE BARBER CLUB, một barber shop chuyên cắt tóc nam, tạo kiểu râu và chăm sóc ngoại hình dành cho nam giới hiện đại.\n\nWebsite phải thể hiện được tinh thần barber truyền thống, tay nghề thủ công và sự mạnh mẽ của phong cách nam tính. Kết hợp hình ảnh editorial cao cấp với những chi tiết vintage, tạo cảm giác như một tạp chí thời trang nam kết hợp không gian barber shop cổ điển.\n\nĐịnh hướng: Masculine, Refined, Timeless, Bold.\n\nWebsite gồm 4 trang chính:\n\nHome\n\nServices & Pricing\n\nCuts Gallery\n\nOur Barbers\n\nKhông thiết kế website thương mại điện tử. Không thêm giỏ hàng, thanh toán hoặc chức năng mua sản phẩm.",
+    "audience": "Khách có nhu cầu sẽ xem",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. VISUAL IDENTITY & ART DIRECTION\n\nPhong cách thiết kế:\nClassic Barber kết hợp Vintage Editorial, lấy cảm hứng từ những barber shop truyền thống châu Âu và tạp chí thời trang nam cao cấp.\n\nBảng màu:\n\nDeep Black: #111111 — màu nền chủ đạo.\n\nCharcoal: #242321 — nền section phụ.\n\nWarm Ivory: #F2EBDD — màu chữ sáng và nền tương phản.\n\nBurgundy Red: #702B35 — màu nhấn cho CTA, đường kẻ và chi tiết đồ họa.\n\nMuted Brass: #A68A5B — màu phụ dùng tiết chế cho biểu tượng và đường viền.\n\nMàu đen và trắng ngà chiếm phần lớn diện tích giao diện. Đỏ rượu vang tạo điểm nhấn mạnh mẽ, trong khi màu đồng cũ chỉ xuất hiện ở những chi tiết nhỏ.\n\nTypography:\n\nHeading: Serif cổ điển, tương phản nét cao, tạo cảm giác editorial.\n\nBody: Sans-serif gọn, dễ đọc và hiện đại.\n\nLabel, số thứ tự, thông tin phụ: Chữ in hoa, tracking rộng.\n\nSử dụng typography phân cấp rõ ràng; kết hợp heading lớn với mô tả nhỏ và khoảng trắng rộng.\n\nHình ảnh:\n\nNam giới với kiểu tóc skin fade, textured crop, pompadour và classic slick back.\n\nCận cảnh đường cắt tóc, tạo kiểu râu, kéo barber và dao cạo.\n\nGhế barber da tối màu, gương lớn, gỗ sẫm và ánh sáng vàng ấm.\n\nƯu tiên ảnh editorial có tương phản mạnh, bóng đổ tự nhiên và màu sắc trầm.\n\nGiữ phong cách xử lý ảnh nhất quán giữa các trang.\n\nKhông sử dụng ảnh salon nữ tính, màu pastel, gradient sặc sỡ hoặc hình minh họa hoạt hình.\n\n3. GLOBAL LAYOUT & NAVIGATION\n\nHeader:\n\nLogo BLACKLINE BARBER CLUB đặt bên trái, có thể kết hợp biểu tượng monogram BL.\n\nMenu Home, Services, Cuts Gallery, Our Barbers.\n\nBộ chuyển đổi ngôn ngữ VI / EN.\n\nNút BOOK A VISIT nổi bật.\n\nHeader nền đen, đường viền dưới mảnh màu trắng ngà.\n\nKhi cuộn trang, header chuyển sang trạng thái sticky với nền đen đặc và chiều cao gọn hơn.\n\nTrên desktop, menu bố trí theo một hàng ngang. Trên mobile, chuyển thành menu hamburger với bảng điều hướng dễ sử dụng.\n\nFooter:\nThiết kế footer nền đen, chia thành các cột:\n\nLogo, slogan và giới thiệu ngắn.\n\nĐiều hướng website.\n\nĐịa chỉ, giờ hoạt động và thông tin liên hệ.\n\nMạng xã hội và nút đặt lịch.\n\nBổ sung một dòng typography lớn: \"STAY SHARP. STAY YOURSELF.\"\n\nFooter có đường kẻ đỏ rượu vang và chi tiết trang trí mang phong cách barber cổ điển.\n\n4. PAGE 01 — HOME\n\nSection 01: Editorial Hero\n\nTạo hero section có sức hút thị giác mạnh ngay khi mở trang.\n\nBố cục desktop:\n\nChiếm phần lớn chiều cao màn hình đầu tiên.\n\nChia thành hai khu vực: nội dung bên trái khoảng 45%, hình ảnh bên phải khoảng 55%.\n\nNền đen sâu, hình ảnh tràn khung với chiều cao lớn.\n\nCó thể sử dụng đường viền mảnh, số thứ tự hoặc nhãn editorial để tạo chiều sâu.\n\nNội dung:\nEyebrow: EST. 2018 — MEN'S GROOMING\n\nHeading:\n\"A CUT ABOVE\nTHE ORDINARY.\"\n\nMô tả: Giới thiệu ngắn về nghệ thuật cắt tóc, sự chính xác trong từng đường kéo và phong cách riêng của mỗi khách hàng.\n\nHai CTA:\n\nEXPLORE OUR SERVICES\n\nBOOK A VISIT\n\nHình ảnh hero là chân dung nam giới với kiểu tóc classic slick back hoặc skin fade. Ưu tiên ảnh chụp nghiêng, ánh sáng tương phản mạnh và phông nền tối.\n\nThêm dòng chữ trang trí \"PRECISION • TRADITION • CHARACTER\" ở vị trí phụ.\n\nTrên mobile, chuyển thành bố cục một cột, hình ảnh xuất hiện ngay dưới heading hoặc làm nền với lớp phủ tối để bảo đảm khả năng đọc.\n\nSection 02: Brand Philosophy — The Craft\n\nNền trắng ngà hoặc đen tùy nhịp điệu thị giác của trang.\n\nBố cục editorial bất đối xứng:\n\nMột ảnh lớn thể hiện barber đang thực hiện đường cắt.\n\nMột cột nội dung giới thiệu triết lý thương hiệu.\n\nHeading: \"MORE THAN A HAIRCUT.\"\n\nMô tả về tay nghề, sự tỉ mỉ và trải nghiệm cá nhân hóa.\n\nPhía dưới là ba giá trị thương hiệu:\n\n01 — PRECISION\nMỗi đường cắt được thực hiện với sự chính xác và chú ý đến từng chi tiết.\n\n02 — TRADITION\nTôn trọng kỹ thuật barber truyền thống, đồng thời cập nhật những xu hướng hiện đại.\n\n03 — PERSONAL STYLE\nMỗi kiểu tóc được điều chỉnh để phù hợp với khuôn mặt, cá tính và phong cách sống.\n\nSử dụng số thứ tự lớn, đường kẻ mảnh và typography rõ ràng thay vì các card bo góc thông thường.\n\nSection 03: Signature Services\n\nNền charcoal, heading lớn \"THE SIGNATURE CUTS\".\n\nGiới thiệu ba dịch vụ chủ lực theo dạng các cột editorial hoặc danh sách ngang có hình ảnh:\n\nCLASSIC CUT\n\nCắt tóc cổ điển, gọn gàng và vượt thời gian.\n\nHình ảnh: Classic side part hoặc slick back.\n\nGiá tham khảo: 180.000 VNĐ.\n\nSKIN FADE\n\nKỹ thuật fade chuyển tiếp mượt, đường cắt sắc nét.\n\nHình ảnh: Low fade hoặc mid skin fade.\n\nGiá tham khảo: 200.000 VNĐ.\n\nBEARD GROOMING\n\nTạo hình râu, căn chỉnh đường viền và chăm sóc râu.\n\nHình ảnh: Barber tạo đường viền râu bằng dao cạo.\n\nGiá tham khảo: 120.000 VNĐ.\n\nMỗi dịch vụ gồm ảnh, tên, mô tả ngắn, thời lượng tham khảo và giá.\n\nKhi hover, ảnh phóng to nhẹ và xuất hiện đường kẻ đỏ rượu vang. Có liên kết \"VIEW ALL SERVICES\" dẫn đến trang Services & Pricing.\n\nGiá chỉ là dữ liệu minh họa.\n\nSection 04: Featured Cuts\n\nHeading: \"FIND YOUR SIGNATURE.\"\n\nThiết kế gallery ảnh tóc nam theo dạng lưới bất đối xứng, lấy cảm hứng từ editorial photography.\n\nHiển thị tối thiểu 4–6 ảnh với các kiểu:\n\nClassic Pompadour.\n\nTextured Crop.\n\nMid Skin Fade.\n\nModern Side Part.\n\nSlick Back.\n\nBeard & Hair Combination.\n\nMỗi ảnh có nhãn kiểu tóc, số thứ tự hoặc chú thích nhỏ.\n\nẢnh sử dụng tỷ lệ khung hình đa dạng nhưng có sự cân bằng tổng thể. Tránh biến gallery thành một hàng card giống nhau.\n\nCTA: EXPLORE THE GALLERY.\n\nSection 05: Meet Our Barbers\n\nNền trắng ngà, chữ đen để tạo tương phản với các section phía trên.\n\nHeading: \"THE HANDS BEHIND THE CRAFT.\"\n\nGiới thiệu ba barber với thông tin mẫu:\n\nJames Carter — Classic Cuts Specialist.\n\nDaniel Brooks — Fade & Modern Styles.\n\nAlex Morgan — Beard Grooming Expert.\n\nMỗi hồ sơ bao gồm:\n\nẢnh chân dung.\n\nTên barber.\n\nChuyên môn.\n\nMột câu giới thiệu ngắn.\n\nThiết kế ảnh chân dung theo phong cách ảnh tạp chí, có thể dùng ảnh đen trắng hoặc tông ấm.\n\nKhông sử dụng card bo tròn lớn. Ưu tiên đường kẻ mảnh, số thứ tự và typography có cá tính.\n\nCTA: MEET THE TEAM.\n\nSection 06: Closing CTA\n\nTạo section kết thúc mạnh mẽ với ảnh barber shop hoặc chân dung nam giới chiếm toàn bộ chiều rộng.\n\nHeading:\n\"YOUR NEXT GREAT CUT\nSTARTS HERE.\"\n\nMô tả ngắn mời khách khám phá phong cách phù hợp với mình.\n\nCTA: BOOK YOUR VISIT.\n\nSử dụng lớp phủ tối trên ảnh, chữ trắng ngà và nút đỏ rượu vang.\n\n5. PAGE 02 — SERVICES & PRICING\n\nHero\n\nBố cục chia đôi:\n\nMột bên là hình ảnh barber đang cắt tóc.\n\nMột bên là heading \"THE ART OF GROOMING\".\n\nMô tả ngắn về kỹ thuật và dịch vụ.\n\nThêm nhãn nhỏ: OUR SERVICES / EST. 2018.\n\nService Menu\n\nThiết kế bảng dịch vụ giống menu barber cao cấp, không dùng lưới card thông thường.\n\nChia thành bốn nhóm:\n\n01 — HAIRCUTS\n\nClassic Haircut.\n\nExecutive Cut.\n\nScissor Cut.\n\nKids Haircut.\n\n02 — FADE & MODERN CUTS\n\nSkin Fade.\n\nLow Fade.\n\nMid Fade.\n\nTextured Crop.\n\n03 — BEARD & SHAVE\n\nBeard Trim.\n\nBeard Shape & Line-up.\n\nTraditional Shave.\n\n04 — WASH & STYLING\n\nHair Wash.\n\nStyling & Finish.\n\nHaircut + Wash + Styling.\n\nMỗi dòng dịch vụ hiển thị:\n\nTên dịch vụ.\n\nMô tả ngắn.\n\nThời lượng tham khảo.\n\nGiá tham khảo.\n\nDùng đường kẻ ngang mảnh để phân chia các dịch vụ. Giá căn phải, tên dịch vụ có typography nổi bật.\n\nKhông hiển thị quá nhiều thông tin cùng cấp. Giữ khoảng cách hợp lý để bảng giá dễ đọc trên desktop và mobile.\n\nOur Craft\n\nHeading: \"EVERY DETAIL MATTERS.\"\n\nGiải thích ba kỹ thuật:\n\nClassic Cut: Tập trung vào hình dáng, tỷ lệ và khả năng tạo kiểu.\n\nSkin Fade: Chuyển tiếp độ dài tóc mượt và chính xác.\n\nBeard Sculpting: Định hình râu theo cấu trúc khuôn mặt.\n\nMỗi kỹ thuật có một ảnh cận cảnh và mô tả vừa đủ.\n\nBooking CTA\n\nHeading: \"READY FOR A SHARPER LOOK?\"\n\nNút BOOK A VISIT.\n\nNút chỉ là minh họa, có thể hiển thị thông báo khi nhấn. Không tạo hệ thống đặt lịch thật hoặc kết nối backend.\n\n6. PAGE 03 — CUTS GALLERY\n\nHero\n\nHeading lớn: \"THE ART OF THE CUT.\"\n\nDùng ảnh chân dung nam giới có tỷ lệ lớn, kết hợp typography editorial và nhãn \"OUR WORK / 2026\".\n\nMô tả ngắn nhấn mạnh sự đa dạng trong phong cách và kỹ thuật cắt.\n\nFilterable Gallery\n\nTạo bộ lọc:\n\nALL CUTS\n\nCLASSIC\n\nFADE\n\nTEXTURED\n\nBEARD\n\nKhi nhấn bộ lọc, JavaScript lọc ảnh tương ứng mà không tải lại trang.\n\nGallery sử dụng bố cục masonry hoặc CSS Grid bất đối xứng, với ảnh chân dung, góc nghiêng và ảnh cận cảnh đường cắt.\n\nMỗi ảnh có:\n\nTên kiểu tóc.\n\nNhóm phong cách.\n\nChú thích ngắn.\n\nKhi hover, hiển thị lớp phủ tối nhẹ và tên kiểu tóc.\n\nKhi nhấn ảnh, mở lightbox với ảnh kích thước lớn, tên kiểu tóc, mô tả và nút đóng. Hỗ trợ đóng bằng phím Escape và nhấn ra ngoài ảnh.\n\nTrên mobile, gallery chuyển sang hai cột hoặc một cột tùy chiều rộng màn hình. Không để ảnh bị méo hoặc cắt mất kiểu tóc.\n\nCuối trang có CTA \"FIND YOUR NEXT LOOK\" dẫn đến trang dịch vụ.\n\n7. PAGE 04 — OUR BARBERS\n\nHero\n\nHeading: \"BUILT ON CRAFT. DEFINED BY CHARACTER.\"\n\nSử dụng ảnh nội thất barber shop với ghế da, gương lớn, dụng cụ cắt tóc và ánh sáng ấm.\n\nBố cục có chiều sâu, thể hiện không gian làm nghề chuyên nghiệp và truyền thống.\n\nOur Story\n\nHeading: \"A TRADITION OF PRECISION.\"\n\nGiới thiệu câu chuyện thương hiệu BLACKLINE BARBER CLUB: bắt đầu từ niềm đam mê với nghệ thuật barber, phát triển kỹ thuật truyền thống và tạo ra không gian nơi mỗi khách hàng có thể tìm thấy phong cách riêng.\n\nChia bố cục thành hai phần:\n\nMột ảnh nội thất hoặc ảnh barber đang làm việc.\n\nMột cột nội dung với các đoạn văn ngắn, số liệu minh họa và chi tiết trang trí.\n\nKhông viết nội dung quá dài hoặc mang tính quảng cáo sáo rỗng.\n\nMeet the Team\n\nGiới thiệu chi tiết ba barber:\n\nJAMES CARTER\nClassic Cuts Specialist.\n\nDANIEL BROOKS\nFade & Modern Styles.\n\nALEX MORGAN\nBeard Grooming Expert.\n\nMỗi hồ sơ có ảnh chân dung lớn, tên, chuyên môn và phần giới thiệu khoảng 2–3 câu.\n\nBố cục có thể xen kẽ ảnh trái – phải giữa các nhân vật để tạo nhịp điệu thị giác. Trên mobile, tất cả chuyển thành một cột.\n\nInside the Club\n\nGallery không gian gồm:\n\nGhế barber cổ điển.\n\nBộ dụng cụ cắt tóc.\n\nQuầy gương và bàn làm việc.\n\nKhông gian chờ.\n\nChi tiết nội thất gỗ và ánh sáng.\n\nẢnh có thể mở lightbox khi nhấn.\n\nVisit Us\n\nHiển thị:\n\nĐịa chỉ mẫu.\n\nSố điện thoại mẫu.\n\nGiờ hoạt động.\n\nEmail liên hệ.\n\nLiên kết mạng xã hội.\n\nĐịa chỉ và thông tin liên hệ phải được đánh dấu là dữ liệu mẫu, không trình bày như thông tin của một cơ sở có thật.\n\nThêm nút GET DIRECTIONS dưới dạng liên kết minh họa nếu chưa có địa chỉ thực tế.\n\n8. BILINGUAL VIETNAMESE–ENGLISH\n\nWebsite phải có đầy đủ nội dung tiếng Việt và tiếng Anh trên cả bốn trang.\n\nSử dụng nút chuyển đổi VI / EN trên header.\n\nKhi đổi ngôn ngữ:\n\nChỉ thay đổi nội dung ngôn ngữ, không điều hướng về trang chủ.\n\nGiữ nguyên trang hiện tại và vị trí section nếu có thể.\n\nKhông tải lại trang.\n\nDịch đầy đủ menu, heading, mô tả, dịch vụ, giá, bộ lọc gallery, CTA, footer và thông báo tương tác.\n\nLưu ngôn ngữ đã chọn bằng localStorage.\n\nKhi tải lại trang hoặc chuyển trang, giữ ngôn ngữ đang sử dụng.\n\nKhông trộn lẫn tiếng Việt và tiếng Anh trong cùng một trạng thái giao diện, ngoại trừ tên thương hiệu và tên dịch vụ được giữ nguyên có chủ đích.\n\n9. MOTION & INTERACTIONS\n\nSử dụng hiệu ứng chuyển động tiết chế, phù hợp với thương hiệu barber cao cấp.\n\nPage entrance:\n\nHeading xuất hiện bằng hiệu ứng fade-up nhẹ.\n\nẢnh hero có hiệu ứng reveal hoặc zoom rất nhẹ.\n\nScroll animation:\n\nCác section xuất hiện dần khi cuộn đến.\n\nƯu tiên opacity và translateY nhỏ.\n\nKhông để nội dung biến mất nếu JavaScript animation không hoạt động.\n\nHover:\n\nẢnh zoom nhẹ.\n\nĐường kẻ hoặc màu đỏ rượu vang xuất hiện ở CTA.\n\nLiên kết có hiệu ứng underline.\n\nKhông sử dụng hiệu ứng nhảy, xoay hoặc phóng đại quá mức.\n\nGallery:\n\nBộ lọc hoạt động thật bằng JavaScript.\n\nLightbox mở và đóng được.\n\nHỗ trợ phím Escape.\n\nNavigation:\n\nMenu điều hướng đúng trang.\n\nHeader sticky.\n\nMobile hamburger mở và đóng bình thường.\n\nNút đặt lịch hiển thị thông báo minh họa rõ ràng.\n\nTôn trọng thiết lập prefers-reduced-motion của người dùng.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-30T06:37:27.565Z",
+  "updatedAt": "2026-10-30T07:04:11.689Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu barber",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\blackline-barber-club\\web",
+    "builtAt": "2026-10-30T07:03:53.728Z",
+    "pages": [
+      "index.html",
+      "pages/barbers.html",
+      "pages/gallery.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/barbers.html": [],
+      "pages/gallery.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "7fd622dd-c4f6-4a9f-a775-4cb11f872dbc",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\blackline-barber-club\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 79066,
+      "outputTokens": 100645,
+      "cacheReadTokens": 5166134,
+      "cacheCreationTokens": 228209,
+      "costUsd": 4.5865151000000015,
+      "numTurns": 97,
+      "durationMs": 1097395
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-30T07:04:07.723Z",
+    "critical": 0,
+    "major": 36,
+    "minor": 1,
+    "screenshots": 12
+  }
+}

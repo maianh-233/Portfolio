@@ -1,0 +1,84 @@
+{
+  "slug": "bloom-hair-atelier",
+  "name": "BLOOM HAIR ATELIER",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu tiệm salon tóc",
+    "brand": "BLOOM HAIR ATELIER",
+    "purpose": "Thiết kế website giới thiệu BLOOM HAIR ATELIER, một salon tóc nghệ thuật dành cho khách hàng yêu thích vẻ đẹp nữ tính, màu nhuộm sáng tạo và những kiểu tóc mềm mại, giàu tính thẩm mỹ.\n\nBLOOM không chỉ là nơi cắt và nhuộm tóc mà còn là không gian để mỗi khách hàng thể hiện cá tính qua màu sắc, kiểu dáng và phong cách riêng.\n\nWebsite cần mang tinh thần của một thương hiệu làm đẹp hiện đại, kết hợp vẻ mềm mại của hoa lá với phong cách editorial của các tạp chí thời trang.",
+    "audience": "Khách có nhu cầu làm tóc sẽ xem",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "# PROJECT: BLOOM HAIR ATELIER\n## Soft Feminine × Contemporary Editorial × Artistic Hair Color\n\n### 1. CONCEPT\n\nThiết kế website giới thiệu **BLOOM HAIR ATELIER**, salon tóc theo đuổi phong cách nữ tính, hiện đại và sáng tạo trong nghệ thuật tạo kiểu, nhuộm tóc.\n\nTinh thần thiết kế:\n- Nữ tính nhưng không trẻ con, lãng mạn nhưng không sến.\n- Pastel nhưng vẫn có chiều sâu, sang trọng nhưng gần gũi.\n- Bố cục editorial bất đối xứng, typography thanh lịch, khoảng trắng thoáng.\n- Hình ảnh tóc và màu nhuộm là trọng tâm, không gian salon chỉ đóng vai trò bổ trợ.\n- Tránh giao diện spa truyền thống, quá nhiều hoa trang trí hoặc các card bo tròn giống nhau.\n\n### 2. COLOR PALETTE\n\n**Lavender phải là màu nhận diện nổi bật của toàn bộ website.**\n\n- Bloom Lavender — `#B7A1D9`: màu chủ đạo, CTA và điểm nhấn.\n- Soft Lavender — `#E9E0F3`: nền các section.\n- Milky White — `#FFFDFB`: nền chính.\n- Petal Pink — `#F2DDE5`: màu phụ nữ tính.\n- Smoky Lilac — `#87768F`: tiêu đề và chi tiết nhấn.\n- Deep Plum — `#382B3D`: chữ chính và footer.\n- Soft Taupe — `#B9AEB7`: đường phân cách và chi tiết phụ.\n\nPhối màu nhẹ nhàng nhưng có tương phản rõ ràng. Lavender phải xuất hiện xuyên suốt, không để hồng hoặc màu trung tính lấn át. Hạn chế gradient, màu neon và hiệu ứng trang trí rườm rà.\n\n### 3. TYPOGRAPHY & IMAGES\n\n- Heading: Cormorant Garamond hoặc DM Serif Display.\n- Body: Manrope hoặc Inter, hỗ trợ đầy đủ tiếng Việt.\n- Hình ảnh ưu tiên tóc layer, tóc uốn sóng, balayage và các màu Rose Brown, Lavender Brown, Beige Blonde, Soft Pink.\n- Sử dụng ảnh chất lượng cao, ánh sáng tự nhiên, thể hiện rõ kết cấu và màu tóc.\n- Không dùng ảnh spa, massage hoặc chăm sóc da làm hình ảnh chính.\n\n### 4. WEBSITE STRUCTURE\n\nXây dựng 4 trang HTML riêng biệt:\n\n#### PAGE 01 — HOME\n\n- **Hero:** Ảnh người mẫu tóc nổi bật, headline “Bloom Into Your Own Beauty”, mô tả thương hiệu và nút khám phá dịch vụ, bộ sưu tập.\n- **Our Signature:** Giới thiệu triết lý tôn vinh vẻ đẹp cá nhân.\n- **Signature Services:** Cắt tạo kiểu, nhuộm màu, chăm sóc tóc; có ảnh, mô tả và giá tham khảo.\n- **Color Stories:** Giới thiệu Rose Brown, Lavender Brown, Beige Blonde và Soft Pink bằng hình ảnh riêng.\n- **Meet the Artists:** Ba hồ sơ stylist với ảnh, chuyên môn và mô tả ngắn.\n- **Brand Quote & CTA:** Trích dẫn thương hiệu và nút khám phá dịch vụ.\n\n#### PAGE 02 — SERVICES\n\n- Hero giới thiệu dịch vụ.\n- Quy trình tư vấn gồm 4 bước: Discover, Consult, Create, Finish.\n- Chia dịch vụ thành 4 nhóm:\n  1. Haircut & Styling.\n  2. Hair Coloring.\n  3. Perm & Texture.\n  4. Hair Treatment.\n- Mỗi dịch vụ hiển thị tên, mô tả, thời lượng và giá tham khảo.\n- Thêm section “Find Your Hair Mood” với 4 phong cách: Soft, Romantic, Modern, Bold.\n- Có ghi chú giá và thời lượng có thể thay đổi tùy tình trạng tóc.\n\n#### PAGE 03 — GALLERY\n\n- Hero với headline “A Little More Color”.\n- Bộ lọc All Looks, Hair Color, Haircut, Styling.\n- Tối thiểu 12 ảnh tóc, sử dụng CSS Grid hoặc masonry bất đối xứng.\n- Hiệu ứng hover phóng to nhẹ.\n- Nhấn ảnh mở lightbox, hỗ trợ xem ảnh trước/sau, đóng bằng nút hoặc phím Escape.\n- Section “The Colors We Love” giới thiệu bảng màu tóc đặc trưng.\n- CTA dẫn đến trang Services.\n\n#### PAGE 04 — ABOUT\n\n- Hero giới thiệu không gian BLOOM.\n- **Our Story:** Ý nghĩa tên thương hiệu và triết lý làm đẹp cá nhân hóa.\n- **Our Philosophy:** Ba giá trị Beauty, Creativity, Individuality.\n- **Meet the Artists:** Hồ sơ chi tiết của các stylist.\n- **Inside the Atelier:** Gallery 4–6 ảnh không gian salon.\n- **Contact & Visit:** Địa chỉ, giờ hoạt động, điện thoại, email dưới dạng dữ liệu minh họa.\n\nKhông tự tạo lịch sử thành lập, giải thưởng hoặc thành tích chưa được xác minh.\n\n### 5. GLOBAL HEADER & FOOTER\n\n**Header dùng thống nhất trên cả 4 trang:**\n- Logo BLOOM HAIR ATELIER.\n- Menu Home, Services, Gallery, About.\n- Bộ chuyển ngôn ngữ VI / EN.\n- Nút Book a Visit / Đặt lịch.\n- Header responsive, có menu mobile và trạng thái khi cuộn.\n\n**Footer dùng thống nhất:**\n- Logo và giới thiệu ngắn.\n- Liên kết đến 4 trang.\n- Thông tin liên hệ mẫu.\n- Liên kết mạng xã hội dạng minh họa.\n- Bản quyền.\n\n### 6. BILINGUAL — VIETNAMESE & ENGLISH\n\nToàn bộ website phải hỗ trợ tiếng Việt và tiếng Anh, bao gồm:\n- Menu, tiêu đề, mô tả và nút CTA.\n- Tên dịch vụ, giá, bộ lọc và thông tin stylist.\n- Lightbox, footer và các nội dung phụ.\n\nChuyển ngôn ngữ ngay trên trang hiện tại, không tự động quay về Home. Bố cục phải thích ứng với độ dài văn bản của từng ngôn ngữ.\n\n### 7. TECHNICAL REQUIREMENTS\n\n- Sử dụng HTML, CSS và JavaScript thuần.\n- Tổ chức 4 file HTML riêng, dùng chung CSS và JavaScript.\n- Responsive trên desktop, tablet và mobile.\n- Tạo CSS variables cho toàn bộ bảng màu.\n- Menu, chuyển ngôn ngữ, bộ lọc gallery và lightbox phải hoạt động.\n- Tối ưu hình ảnh, hiệu ứng chuyển động nhẹ nhàng và khả năng truy cập.\n- Kiểm tra đường dẫn, tránh ảnh lỗi và bảo đảm các trang liên kết chính xác.\n\n### 8. SCOPE & FINAL REQUIREMENTS\n\nĐây là website giới thiệu salon, **không phải website thương mại điện tử**.\n\nKhông triển khai backend, database, đăng nhập, giỏ hàng, thanh toán, API hoặc quy trình đặt lịch thực tế. Nút Đặt lịch chỉ là thành phần giao diện minh họa.\n\nSử dụng dữ liệu mẫu có ghi chú rõ ràng. Ưu tiên chất lượng hình ảnh, bố cục editorial và sự nhất quán của màu lavender. Mỗi trang cần có cách sắp xếp nội dung riêng, tránh lặp lại cùng một bố cục.\n\n**Kết quả mong muốn:** Một website salon tóc nữ tính, hiện đại, giàu tính nghệ thuật, nhận diện lavender rõ ràng và có thể sử dụng tốt bằng cả tiếng Việt lẫn tiếng Anh.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-30T02:07:36.770Z",
+  "updatedAt": "2026-10-30T02:27:58.308Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu tiệm salon tóc",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\bloom-hair-atelier\\web",
+    "builtAt": "2026-10-30T02:27:45.898Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/gallery.html",
+      "pages/services.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/gallery.html": [],
+      "pages/services.html": []
+    }
+  },
+  "job": {
+    "id": "c3264b42-8f28-4846-9a89-7f11a886ec80",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\bloom-hair-atelier\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 236660,
+      "outputTokens": 111770,
+      "cacheReadTokens": 8076248,
+      "cacheCreationTokens": 300919,
+      "costUsd": 5.781938800000002,
+      "numTurns": 114,
+      "durationMs": 1008395
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-30T02:27:55.613Z",
+    "critical": 0,
+    "major": 40,
+    "minor": 1,
+    "screenshots": 12
+  }
+}

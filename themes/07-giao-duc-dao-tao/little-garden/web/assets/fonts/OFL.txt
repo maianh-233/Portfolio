@@ -1,0 +1,6 @@
+Baloo 2 — Copyright 2019 The Baloo 2 Project Authors (https://github.com/EkType/Baloo2)
+Nunito — Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito)
+
+Cả hai font được phân phối theo SIL Open Font License, Version 1.1.
+Toàn văn: https://openfontlicense.org/open-font-license-official-text/
+Tệp WOFF2 tải từ Google Fonts ngày 19/10/2026, chỉ giữ subset vietnamese, latin, latin-ext.

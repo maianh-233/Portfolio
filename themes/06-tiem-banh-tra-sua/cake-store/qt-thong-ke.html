@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thống kê | Quản lý tiệm</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-021 Thống kê: FR-039 → FR-042. Chỉ Chủ tiệm (Nhân viên -> E-TS-02). Số liệu là dữ liệu giả 90 ngày gần nhất. -->
+<body data-screen="SCR-021" data-layout="admin" data-nav="stats" data-title="Thống kê" data-deny-msg="Bạn không có quyền xem thống kê." class="admin bg-[#FFFBF6] text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="lg:pl-60 pb-24 lg:pb-12">
+    <div class="mx-auto max-w-admin px-4 md:px-6 lg:px-8 pt-4 lg:pt-8">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h1 class="text-[20px] lg:text-2xl font-extrabold">Thống kê</h1>
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Khoảng thời gian" id="ranges"></div>
+      </div>
+      <div id="custom" class="hidden mt-3 rounded-2xl bg-white border border-beige p-3 grid grid-cols-2 md:grid-cols-[180px_180px_auto] gap-3 items-end">
+        <div class="field"><label class="field-label text-sm" for="from">Từ ngày</label><input id="from" type="date" class="field-input"></div>
+        <div class="field"><label class="field-label text-sm" for="to">Đến ngày</label><input id="to" type="date" class="field-input" aria-describedby="to-err"></div>
+        <button type="button" id="apply" class="btn btn-primary h-[42px] px-5 col-span-2 md:col-span-1">Xem</button>
+        <p id="to-err" class="field-error hidden col-span-full"></p>
+      </div>
+      <div id="content" class="mt-5" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <script>
+    App.onReady(function () {
+      var daily = MOCK.stats.daily, range = 'month', from, to;
+      var today = MOCK.today;
+      var RANGES = [['today', 'Hôm nay'], ['7d', '7 ngày'], ['month', 'Tháng này'], ['custom', 'Tùy chọn']];
+
+      function setRange(r) {
+        range = r;
+        if (r === 'today') { from = to = today; }
+        else if (r === '7d') { from = MOCK.helpers.d(-6); to = today; }
+        else if (r === 'month') { from = today.slice(0, 8) + '01'; to = today; }
+        $('#ranges').innerHTML = RANGES.map(function (x) { return '<button type="button" class="chip chip-sm" aria-pressed="' + (range === x[0]) + '" data-r="' + x[0] + '">' + x[1] + '</button>'; }).join('');
+        $all('[data-r]').forEach(function (b) { b.onclick = function () { setRange(b.dataset.r); }; });
+        $('#custom').classList.toggle('hidden', r !== 'custom');
+        if (r !== 'custom') load();
+      }
+      $('#apply').onclick = function () {
+        var f = $('#from').value, t = $('#to').value, toEl = $('#to');
+        var months = f && t ? (Fmt.parse(t) - Fmt.parse(f)) / 864e5 / 30.4 : 0;
+        if (!f || !t || f > t || months > 12) { FormUI.setError(toEl, 'Khoảng thời gian không hợp lệ.'); return; } // E-TS-01
+        FormUI.clearError(toEl); from = f; to = t; load();
+      };
+
+      function load() {
+        $('#content').innerHTML = '<div class="grid grid-cols-2 lg:grid-cols-4 gap-3">' + Array(5).join('.').split('.').map(function () { return '<div class="skeleton h-24 rounded-2xl"></div>'; }).join('') + '</div><div class="skeleton h-64 rounded-2xl mt-4"></div>';
+        App.fakeLoad(render, 400);
+      }
+
+      function render() {
+        var days = daily.filter(function (x) { return x.date >= from && x.date <= to; });
+        var box = $('#content');
+        var label = from === to ? Fmt.date(from) : Fmt.date(from) + ' - ' + Fmt.date(to);
+        if (!days.length || !days.some(function (x) { return x.done + x.processing + x.cancelled; })) {
+          box.innerHTML = '<p class="text-sm font-bold text-ink-muted">' + label + '</p><div class="mt-2 rounded-2xl bg-white border border-beige">' + UI.empty({ icon: 'ph-chart-bar', title: 'Chưa có dữ liệu trong khoảng này' }) + '</div>';
+          return;
+        }
+        var sum = days.reduce(function (s, x) { s.rev += x.revenue; s.done += x.done; s.proc += x.processing; s.cancel += x.cancelled; return s; }, { rev: 0, done: 0, proc: 0, cancel: 0 });
+        var total = sum.done + sum.proc + sum.cancel;
+        var rate = total ? Math.round(sum.cancel / total * 1000) / 10 : 0;
+        function kpi(lbl, val, sub, icon, tone) {
+          return '<div class="rounded-2xl bg-white border border-beige p-4"><p class="flex items-center gap-2 text-sm font-bold text-ink-muted"><span class="grid place-items-center w-8 h-8 rounded-full ' + tone + '"><i class="ph ' + icon + '" aria-hidden="true"></i></span>' + lbl + '</p><p class="mt-2 text-[22px] md:text-2xl font-extrabold tabular-nums">' + val + '</p>' + (sub ? '<p class="text-xs text-ink-muted">' + sub + '</p>' : '') + '</div>';
+        }
+
+        /* Biểu đồ cột doanh thu theo ngày (rê / chạm cột xem số chính xác) */
+        var maxRev = Math.max.apply(null, days.map(function (x) { return x.revenue; })) || 1;
+        var revBars = days.map(function (x) {
+          var h = Math.max(2, Math.round(x.revenue / maxRev * 100));
+          return '<button type="button" class="bar group relative flex-1 min-w-[10px] h-full flex items-end" aria-label="' + Fmt.date(x.date) + ': ' + Fmt.money(x.revenue) + '" data-tip="' + Fmt.dateShort(x.date) + ': ' + Fmt.money(x.revenue) + '">' +
+            '<span class="block w-full rounded-t-md bg-primary group-hover:bg-primary-strong group-focus:bg-primary-strong transition-colors" style="height:' + h + '%"></span></button>';
+        }).join('');
+
+        /* Cột chồng số đơn: hoàn thành / đang xử lý / hủy + đường mốc ~4 đơn/ngày */
+        var maxOrd = Math.max.apply(null, days.map(function (x) { return x.done + x.processing + x.cancelled; }).concat([MOCK.stats.baselinePerDay])) || 1;
+        var ordBars = days.map(function (x) {
+          var t = x.done + x.processing + x.cancelled;
+          function seg(n, cls) { return n ? '<span class="block w-full ' + cls + '" style="height:' + (n / maxOrd * 100) + '%"></span>' : ''; }
+          return '<button type="button" class="bar flex-1 min-w-[10px] h-full flex flex-col-reverse" aria-label="' + Fmt.date(x.date) + ': ' + t + ' đơn, ' + x.done + ' hoàn thành, ' + x.processing + ' đang xử lý, ' + x.cancelled + ' hủy" data-tip="' + Fmt.dateShort(x.date) + ': ' + x.done + ' xong · ' + x.processing + ' đang làm · ' + x.cancelled + ' hủy">' +
+            seg(x.done, 'bg-mint-strong rounded-b-sm') + seg(x.processing, 'bg-primary') + seg(x.cancelled, 'bg-[#C9B8BC] rounded-t-sm') + '</button>';
+        }).join('');
+        var base = MOCK.stats.baselinePerDay / maxOrd * 100;
+
+        /* Bánh bán chạy (top 10) */
+        var top = MOCK.stats.topCakes.map(function (t, i) {
+          return '<li class="flex items-center gap-3 py-2.5"><span class="w-6 text-center font-extrabold text-ink-muted tabular-nums">' + (i + 1) + '</span><a href="qt-sua-banh.html?id=' + t.cakeId + '" class="flex-1 min-w-0 font-bold hover:text-primary-strong truncate">' + Fmt.esc(t.name) + '</a><span class="text-sm text-ink-muted hidden sm:inline">' + t.topSize + '</span><span class="w-12 text-right tabular-nums font-semibold">' + t.qty + '</span><span class="w-20 text-right tabular-nums text-sm text-ink-muted">' + (t.revenue / 1e6).toLocaleString('vi-VN', { maximumFractionDigits: 1 }) + ' tr</span></li>';
+        }).join('');
+
+        /* Đơn bị hủy (từ dữ liệu đơn) */
+        var cancelled = Orders.all().filter(function (o) { return o.status === 'cancelled'; });
+        var byCus = cancelled.filter(function (o) { return o.cancel && o.cancel.by === 'Khách'; }).length;
+
+        /* Doanh thu theo tháng */
+        var months = {};
+        daily.forEach(function (x) { var m = x.date.slice(0, 7); months[m] = months[m] || { rev: 0, done: 0 }; months[m].rev += x.revenue; months[m].done += x.done; });
+        var mKeys = Object.keys(months).sort();
+        var mRows = mKeys.slice().reverse().map(function (k) {
+          var i = mKeys.indexOf(k), prev = i > 0 ? months[mKeys[i - 1]].rev : 0;
+          var pct = prev ? Math.round((months[k].rev - prev) / prev * 1000) / 10 : null;
+          return '<tr><td class="font-bold">' + k.slice(5) + '/' + k.slice(0, 4) + (k === today.slice(0, 7) ? ' <span class="text-xs text-ink-muted">(đến hôm nay)</span>' : '') + '</td><td class="text-right tabular-nums">' + months[k].done + '</td><td class="text-right tabular-nums font-bold">' + Fmt.money(months[k].rev) + '</td><td class="text-right tabular-nums ' + (pct == null ? 'text-ink-muted' : pct >= 0 ? 'text-mint-strong' : 'text-danger') + '">' + (pct == null ? '-' : (pct > 0 ? '+' : '') + String(pct).replace('.', ',') + '%') + '</td></tr>';
+        }).join('');
+
+        box.innerHTML = '<p class="text-sm font-bold text-ink-muted">' + label + ' · số liệu mẫu</p>' +
+          '<div class="mt-2 grid grid-cols-2 lg:grid-cols-4 gap-3">' +
+          kpi('Doanh thu', Fmt.money(sum.rev), 'Từ đơn hoàn thành', 'ph-coins', 'bg-primary-soft text-primary-strong') +
+          kpi('Số đơn', Fmt.num(total), (days.length > 1 ? (Math.round(total / days.length * 10) / 10).toLocaleString('vi-VN') + ' đơn/ngày' : ''), 'ph-receipt', 'bg-info-soft text-info') +
+          kpi('Đơn hoàn thành', Fmt.num(sum.done), '', 'ph-check-circle', 'bg-mint text-mint-strong') +
+          kpi('Đơn hủy', sum.cancel + ' · ' + String(rate).replace('.', ',') + '%', 'Tỉ lệ trên tổng đơn', 'ph-x-circle', 'bg-stone2 text-stone2-strong') + '</div>' +
+
+          '<section class="mt-4 rounded-2xl bg-white border border-beige p-4 md:p-5"><div class="flex items-center justify-between gap-3"><h2 class="font-extrabold">Doanh thu theo ngày</h2><p id="tip1" class="text-sm font-bold text-primary-strong tabular-nums min-h-[20px]" aria-live="polite"></p></div>' +
+          '<div class="mt-3 overflow-x-auto no-scrollbar"><div class="h-48 flex items-end gap-[3px]" style="min-width:' + Math.max(100, days.length * 13) + 'px">' + revBars + '</div></div>' +
+          '<div class="mt-1 flex justify-between text-xs text-ink-muted tabular-nums"><span>' + Fmt.dateShort(days[0].date) + '</span><span>' + Fmt.dateShort(days[days.length - 1].date) + '</span></div></section>' +
+
+          '<div class="mt-4 grid lg:grid-cols-12 gap-4">' +
+          '<section class="lg:col-span-7 rounded-2xl bg-white border border-beige p-4 md:p-5"><div class="flex items-center justify-between gap-3"><h2 class="font-extrabold">Số đơn mỗi ngày</h2><p id="tip2" class="text-sm font-bold text-primary-strong tabular-nums min-h-[20px]" aria-live="polite"></p></div>' +
+          '<ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs font-semibold text-ink-muted"><li class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-mint-strong"></span>Hoàn thành</li><li class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-primary"></span>Đang xử lý</li><li class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-[#C9B8BC]"></span>Hủy</li><li class="flex items-center gap-1.5"><span class="w-4 border-t-2 border-dashed border-ink"></span>Mốc ~' + MOCK.stats.baselinePerDay + ' đơn/ngày trước khi có web</li></ul>' +
+          '<div class="mt-3 overflow-x-auto no-scrollbar"><div class="relative h-44" style="min-width:' + Math.max(100, days.length * 13) + 'px"><div class="absolute inset-0 flex items-end gap-[3px]">' + ordBars + '</div>' +
+          '<div class="absolute inset-x-0 border-t-2 border-dashed border-ink/60 pointer-events-none" style="bottom:' + base + '%"></div></div></div></section>' +
+          '<section class="lg:col-span-5 rounded-2xl bg-white border border-beige p-4 md:p-5"><h2 class="font-extrabold">Bánh bán chạy</h2><div class="mt-1 flex text-xs font-bold text-ink-muted"><span class="flex-1 pl-9">Tên bánh</span><span class="w-12 text-right">SL</span><span class="w-20 text-right">Doanh thu</span></div><ol class="divide-y divide-beige">' + top + '</ol></section></div>' +
+
+          '<div class="mt-4 grid lg:grid-cols-12 gap-4">' +
+          '<section class="lg:col-span-7 rounded-2xl bg-white border border-beige p-4 md:p-5"><h2 class="font-extrabold">Đơn bị hủy</h2><p class="mt-1 text-sm text-ink-muted">Tổng ' + cancelled.length + ' đơn · Khách hủy ' + byCus + ' · Tiệm hủy ' + (cancelled.length - byCus) + '</p>' +
+          (cancelled.length ? '<div class="mt-3 overflow-x-auto"><table class="admin-table"><thead><tr><th>Mã đơn</th><th>Ngày tạo</th><th>Người hủy</th><th>Lý do</th></tr></thead><tbody>' + cancelled.map(function (o) { return '<tr onclick="location.href=\'qt-chi-tiet-don.html?code=' + o.code + '\'"><td><a class="font-bold text-primary-strong hover:underline tabular-nums" href="qt-chi-tiet-don.html?code=' + o.code + '">' + o.code + '</a></td><td class="tabular-nums">' + Fmt.date(o.createdAt.slice(0, 10)) + '</td><td>' + (o.cancel ? o.cancel.by : '-') + '</td><td>' + Fmt.esc(o.cancel && o.cancel.reason || '-') + '</td></tr>'; }).join('') + '</tbody></table></div>' : '<p class="mt-3 text-ink-muted">Không có đơn hủy.</p>') + '</section>' +
+          '<section class="lg:col-span-5 rounded-2xl bg-white border border-beige p-4 md:p-5"><h2 class="font-extrabold">Doanh thu theo tháng</h2><div class="mt-3 overflow-x-auto"><table class="admin-table"><thead><tr><th>Tháng</th><th class="text-right">Đơn xong</th><th class="text-right">Doanh thu</th><th class="text-right">So tháng trước</th></tr></thead><tbody>' + mRows + '</tbody></table></div>' +
+          '<p class="mt-3 text-xs text-ink-muted">Cách tính doanh thu (theo ngày nhận bánh hay ngày thu tiền) đang chờ tiệm xác nhận.</p></section></div>';
+
+        [['#tip1', 0], ['#tip2', 1]].forEach(function (t) {
+          var sec = $all('section', box)[t[1]], tip = $(t[0]);
+          $all('.bar', sec).forEach(function (b) {
+            var show = function () { tip.textContent = b.dataset.tip; };
+            b.addEventListener('mouseenter', show); b.addEventListener('focus', show); b.addEventListener('click', show);
+          });
+        });
+      }
+
+      setRange('month');
+    });
+  </script>
+</body>
+</html>

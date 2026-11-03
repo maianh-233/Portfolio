@@ -1,0 +1,86 @@
+{
+  "slug": "devnex",
+  "name": "DEVNEX",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website portfolio cá nhân",
+    "brand": "DEVNEX",
+    "purpose": "Thiết kế và triển khai một landing page Portfolio & CV cho lập trình viên mang thương hiệu cá nhân DEVNEX.\n\nWebsite phải thể hiện được năng lực lập trình, tư duy giải quyết vấn đề, kinh nghiệm thực tế và phong cách làm việc chuyên nghiệp.",
+    "audience": "Đối tượng xem website:  Nhà tuyển dụng công nghệ.  HR tuyển dụng IT.  Technical Lead.  Khách hàng cần thuê freelancer.  Các doanh nghiệp tìm kiếm đối tác phát triển phần mềm.",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "Bảng màu:  Background chính: #0B0F14.  Background section: #111820.  Background card: #151D27.  Màu chữ chính: #F3F6FA.  Màu chữ phụ: #9AA7B5.  Màu nhấn xanh neon: #A3FF68.  Border: rgba(255,255,255,0.10).",
+    "font": "Typography:  Tiêu đề: Space Grotesk.  Nội dung: Inter.  Các đoạn code, nhãn kỹ thuật: JetBrains Mono.",
+    "sections": [],
+    "notes": "2. ĐỊNH HƯỚNG THỊ GIÁC\n\nPhong cách chủ đạo: Dark Developer Portfolio.\n\nKết hợp ba ngôn ngữ thiết kế:\n\nGiao diện lập trình viên hiện đại.\n\nTerminal và code editor.\n\nPortfolio cá nhân có tính thẩm mỹ cao.\n\nBảng màu:\n\nBackground chính: #0B0F14.\n\nBackground section: #111820.\n\nBackground card: #151D27.\n\nMàu chữ chính: #F3F6FA.\n\nMàu chữ phụ: #9AA7B5.\n\nMàu nhấn xanh neon: #A3FF68.\n\nBorder: rgba(255,255,255,0.10).\n\nTypography:\n\nTiêu đề: Space Grotesk.\n\nNội dung: Inter.\n\nCác đoạn code, nhãn kỹ thuật: JetBrains Mono.\n\nSử dụng hệ thống khoảng cách nhất quán, lưới bố cục rõ ràng và các đường viền mảnh. Tránh tạo quá nhiều card nhỏ khiến trang giống dashboard quản trị.\n\n3. CẤU TRÚC HEADER\n\nThiết kế header nền tối, chiều cao khoảng 76px trên desktop.\n\nBên trái:\n\nLogo chữ DEVNEX.\n\nCó thể bổ sung ký hiệu nhỏ </> trước logo.\n\nỞ giữa:\n\nAbout.\n\nSkills.\n\nProjects.\n\nExperience.\n\nEducation.\n\nBên phải:\n\nNút Download CV.\n\nChỉ báo trạng thái Available for Opportunities nếu người dùng bật tùy chọn này.\n\nYêu cầu:\n\nHeader cố định khi cuộn trang.\n\nMenu cuộn đến đúng section.\n\nSection đang được xem có trạng thái active.\n\nTrên mobile, chuyển thành menu thu gọn.\n\nKhông để header che tiêu đề section khi điều hướng.\n\n4. HERO SECTION — GIỚI THIỆU NỔI BẬT\n\nChiều cao khoảng 85–100vh trên desktop, nhưng không ép nội dung vượt quá màn hình trên thiết bị nhỏ.\n\nChia bố cục thành hai cột:\n\nCột trái chiếm khoảng 58%.\n\nCột phải chiếm khoảng 42%.\n\nCột trái:\n\nHiển thị nhãn nhỏ:\nSOFTWARE ENGINEER / FULL-STACK DEVELOPER\n\nTiêu đề chính:\n\"Building Digital\nExperiences That Work.\"\n\nTên cá nhân hiển thị nổi bật bên dưới hoặc kết hợp với tiêu đề tùy phương án thiết kế.\n\nĐoạn giới thiệu:\nMột đoạn 2–3 câu mô tả chuyên môn, thế mạnh kỹ thuật và định hướng phát triển.\n\nVí dụ nội dung minh họa:\n\"I build reliable web applications with a focus on clean architecture, thoughtful user experiences, and maintainable code.\"\n\nHai nút:\n\nExplore My Work.\n\nDownload Resume.\n\nBên dưới có các thông tin ngắn:\n\nĐịa điểm làm việc.\n\nChuyên môn chính.\n\nSố năm kinh nghiệm nếu có dữ liệu.\n\nEmail liên hệ.\n\nKhông tự khẳng định số năm kinh nghiệm nếu chưa được cung cấp.\n\nCột phải:\n\nTạo một khối terminal lớn, thiết kế như cửa sổ code editor.\n\nBao gồm:\n\nThanh tiêu đề với ba nút trang trí.\n\nTên tệp profile.ts hoặc developer.json.\n\nSyntax highlighting.\n\nCác trường name, role, skills và availability.\n\nVí dụ:\n\nconst developer = {\nrole: \"Software Engineer\",\nfocus: [\"Web Development\", \"APIs\"],\nmindset: \"Build. Test. Improve.\"\n};\n\nCó hiệu ứng xuất hiện từng dòng khi trang được tải.\n\nĐoạn code chỉ phục vụ trình bày, không cần chạy như ứng dụng thực tế.\n\n5. ABOUT ME — GIỚI THIỆU BẢN THÂN\n\nThiết kế section với bố cục hai cột.\n\nCột trái:\n\nTiêu đề ABOUT ME.\n\nMột câu giới thiệu nổi bật.\n\nNội dung mô tả bản thân dài khoảng 100–150 từ.\n\nCột phải:\n\nPhương pháp làm việc.\n\nCác lĩnh vực quan tâm.\n\nMục tiêu nghề nghiệp.\n\nMột hình ảnh cá nhân hoặc hình minh họa tối giản.\n\nBổ sung ba nhãn:\nPROBLEM SOLVING.\nCONTINUOUS LEARNING.\nCLEAN CODE.\n\nMỗi nhãn có một câu giải thích ngắn.\n\nKhông sử dụng những lời giới thiệu chung chung lặp đi lặp lại. Nội dung phải có khả năng thay thế bằng thông tin cá nhân thật.\n\n6. TECH STACK — NĂNG LỰC KỸ THUẬT\n\nChia thành các nhóm:\n\nFrontend:\n\nHTML.\n\nCSS.\n\nJavaScript.\n\nTypeScript.\n\nReact.\n\nVue hoặc framework phù hợp.\n\nBackend:\n\nNode.js.\n\nExpress.\n\nJava, Python hoặc ngôn ngữ phù hợp với hồ sơ.\n\nDatabase:\n\nMySQL.\n\nPostgreSQL.\n\nMongoDB.\n\nTools:\n\nGit.\n\nGitHub.\n\nDocker.\n\nPostman.\n\nVS Code.\n\nKhông mặc định tất cả công nghệ đều là kỹ năng của nhân vật. Danh sách phải dễ chỉnh sửa.\n\nCách hiển thị:\n\nCác nhóm kỹ năng có tiêu đề riêng.\n\nIcon hoặc logo công nghệ.\n\nNhãn mức độ thành thạo nếu có dữ liệu.\n\nTrạng thái hover đổi border sang màu xanh neon.\n\nKhông dùng thanh kỹ năng 95%, 90% tùy tiện. Nếu không có thang đánh giá đáng tin cậy, hãy dùng nhóm Beginner, Intermediate, Advanced hoặc chỉ liệt kê công nghệ.\n\n7. FEATURED PROJECTS — DỰ ÁN TIÊU BIỂU\n\nHiển thị 3–4 dự án.\n\nKhông trình bày tất cả dự án bằng các card giống nhau.\n\nThiết kế một dự án nổi bật chiếm chiều rộng lớn, các dự án còn lại có bố cục xen kẽ.\n\nMỗi dự án cần có:\n\nTên dự án.\n\nẢnh screenshot hoặc mockup.\n\nLoại dự án.\n\nMô tả vấn đề cần giải quyết.\n\nGiải pháp đã triển khai.\n\nVai trò cá nhân.\n\nCông nghệ sử dụng.\n\nKết quả thực tế nếu có.\n\nLiên kết GitHub.\n\nLiên kết Live Demo nếu tồn tại.\n\nVí dụ dự án minh họa:\nRealtime Chat Application.\n\nMô tả:\nA real-time messaging application designed to support responsive communication between users.\n\nTech stack:\nNode.js, Express, WebSocket hoặc công nghệ thực tế của dự án.\n\nNút tương tác:\n\nView Case Study.\n\nGitHub Repository.\n\nLive Demo.\n\nNếu chưa có URL, không tạo liên kết giả. Có thể ẩn nút hoặc đánh dấu chưa cấu hình.\n\n8. EXPERIENCE — KINH NGHIỆM LÀM VIỆC\n\nSử dụng timeline dọc với đường kẻ mảnh màu xanh neon.\n\nMỗi mục gồm:\n\nChức danh.\n\nCông ty hoặc tổ chức.\n\nThời gian.\n\nTrách nhiệm chính.\n\nCông nghệ sử dụng.\n\nThành tựu có thể kiểm chứng.\n\nCho phép hiển thị cả:\n\nThực tập.\n\nCông việc chính thức.\n\nFreelance.\n\nDự án cá nhân.\n\nKhông tự tạo tên công ty hoặc thành tích.\n\n9. EDUCATION & CERTIFICATIONS\n\nHiển thị học vấn, trường học, chuyên ngành, thời gian học và chứng chỉ nếu có.\n\nBố cục gọn, không chiếm quá nhiều diện tích.\n\nNếu người dùng chưa cung cấp thông tin, hiển thị nội dung mẫu có nhãn PLACEHOLDER.\n\n10. CONTACT SECTION\n\nThiết kế section nổi bật với tiêu đề:\n\n\"Have a Project in Mind?\"\n\nThông tin:\n\nEmail.\n\nGitHub.\n\nLinkedIn.\n\nĐịa điểm.\n\nTrạng thái sẵn sàng làm việc nếu có.\n\nCó thể tạo biểu mẫu liên hệ gồm:\n\nName.\n\nEmail.\n\nSubject.\n\nMessage.\n\nNếu chưa có backend, cần thông báo rõ rằng biểu mẫu chưa được kết nối. Không hiển thị thông báo gửi thành công giả.\n\n11. ANIMATION VÀ MICRO-INTERACTION\n\nTerminal xuất hiện theo từng dòng.\n\nCác section fade-in khi cuộn.\n\nThẻ dự án nâng nhẹ khi hover.\n\nNút bấm có transition 200–300ms.\n\nĐường timeline được làm nổi bật khi section xuất hiện.\n\nCó thể dùng nền lưới kỹ thuật mờ.\n\nKhông tạo hiệu ứng glitch liên tục.\n\nTôn trọng prefers-reduced-motion.\n\n12. RESPONSIVE\n\nDesktop:\n\nBố cục hai cột.\n\nDự án dạng editorial grid.\n\nKhoảng trắng rộng.\n\nTablet:\n\nGiảm khoảng cách.\n\nĐiều chỉnh kích thước terminal.\n\nDự án chuyển thành lưới hai cột.\n\nMobile:\n\nBố cục một cột.\n\nTerminal không vượt chiều rộng màn hình.\n\nMenu thu gọn.\n\nNút bấm dễ chạm.\n\nKhông có cuộn ngang.\n\n13. YÊU CẦU KỸ THUẬT VÀ NGHIỆM THU\n\nChỉ một landing page.\n\nCác mục điều hướng dùng anchor.\n\nKhông tạo trang con.\n\nKhông tạo chức năng thương mại điện tử.\n\nTối ưu ảnh.\n\nĐảm bảo tương phản màu sắc.\n\nCó alt text cho ảnh.\n\nCó focus state cho thành phần tương tác.\n\nKhông để nút giả hoạt động như nút thật.\n\nCó thể thay toàn bộ dữ liệu cá nhân.\n\nKiểm tra các kích thước desktop, tablet và mobile.\n\nKẾT QUẢ MONG MUỐN:\n\nMột portfolio lập trình viên mang tính công nghệ rõ rệt, có chiều sâu thị giác, thể hiện năng lực kỹ thuật và đủ chuyên nghiệp để sử dụng làm CV trực tuyến.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-24T01:34:54.555Z",
+  "updatedAt": "2026-10-24T04:02:53.354Z",
+  "screen": "done",
+  "request": "Website portfolio cá nhân",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\devnex\\web",
+    "builtAt": "2026-10-24T04:02:40.961Z",
+    "pages": [
+      "index.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": []
+    }
+  },
+  "job": {
+    "id": "abd8c8fb-3eb7-444f-a37d-c4556782888e",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\devnex\\web",
+    "feedback": "Bạn ơi các thông tin về portfolio này có thể chi tiết hơn không vì đây là prototype mẫu á . Bịa thông tin giúp tui đi",
+    "page": "index.html",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 28,
+      "outputTokens": 24067,
+      "cacheReadTokens": 1037179,
+      "cacheCreationTokens": 79344,
+      "costUsd": 1.3236397999999998,
+      "numTurns": 32,
+      "durationMs": 224567
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-24T04:02:50.271Z",
+    "critical": 0,
+    "major": 1,
+    "minor": 1,
+    "screenshots": 3
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-24T04:02:40.952Z",
+      "text": "Bạn ơi các thông tin về portfolio này có thể chi tiết hơn không vì đây là prototype mẫu á . Bịa thông tin giúp tui đi"
+    }
+  ]
+}

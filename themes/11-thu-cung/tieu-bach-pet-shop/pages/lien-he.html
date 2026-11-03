@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liên hệ · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-HOME-003" data-module="HOME" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-HOME-003 Liên hệ: StoreInfo + bản đồ nhúng (lỗi → HOME-E01: địa chỉ chữ) + Accordion "Giao hàng & đổi trả" (#doi-tra). */
+  Layout.mount({ title: 'Liên hệ', active: 'contact', breadcrumb: [['Liên hệ']] }, function (main) {
+    var s = MOCK.settings, esc = UI.esc;
+    var q = encodeURIComponent(s.mapQuery);
+    var mapsHref = 'https://www.google.com/maps/dir/?api=1&destination=' + q;
+    var mapFallback = UI.card({ cls: 'h-full flex flex-col justify-center', body: '<p class="flex items-start gap-2 text-base font-bold text-neutral-800">' + UI.icon('map-pin', 'mt-0.5 text-secondary-600') + esc(s.address) + '</p><div class="mt-4">' + UI.button({ label: 'Mở Google Maps', icon: 'external-link', variant: 'outline', href: mapsHref, attrs: { target: '_blank', rel: 'noopener' } }) + '</div>' });
+
+    var policy = UI.accordion([
+      { title: 'Phí giao hàng', open: true, content: '<ul class="flex list-disc flex-col gap-1.5 pl-5"><li>Tự lấy tại cửa hàng: miễn phí.</li><li>Giao trong ' + s.freeDistricts.join(', ') + ': cửa hàng tự giao, miễn phí.</li><li>Đơn từ ' + UI.fmt.money(s.freeShip) + ': miễn phí giao hàng.</li><li>Các khu vực khác: phí theo đơn vị vận chuyển, hiện ở bước thanh toán.</li></ul>' },
+      { title: 'Đổi trả', content: '<ul class="flex list-disc flex-col gap-1.5 pl-5"><li>Áp dụng khi giao nhầm hoặc hàng lỗi.</li><li>Gửi yêu cầu trong vòng 1 ngày kể từ khi nhận hàng.</li><li>Cần video quay lúc mở hàng; hàng còn nguyên, chưa sử dụng.</li><li>Gửi yêu cầu ở trang chi tiết đơn trong mục "Đơn hàng của tôi".</li></ul>' },
+      { title: 'Pate chay tự làm', content: '<p>Pate chay làm theo đơn nên không áp dụng đổi trả. Cửa hàng gọi điện xác nhận trước khi làm, bạn có thể hỏi kỹ khẩu vị của Boss khi được gọi.</p>' }
+    ]);
+
+    main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-4 pt-5 md:px-6 lg:px-8">' +
+      UI.pageHeader({ title: 'Ghé thăm Tiểu Bạch', description: 'Tự đến lấy hàng, nhờ tư vấn hoặc chỉ ghé chơi với các bé. Cửa hàng mở cửa mỗi ngày.' }) +
+      '<div class="grid gap-5 md:grid-cols-2 lg:grid-cols-5">' +
+      '<div class="lg:col-span-2">' + UI.card({ title: 'Thông tin cửa hàng', body: UI.storeInfo(s, 'full') }) + '</div>' +
+      '<div class="lg:col-span-3 flex flex-col gap-3"><div data-map class="h-72 md:h-80 lg:h-96 overflow-hidden rounded-xl border border-neutral-200 bg-white">' + UI.skeletonBlock('h-full w-full') + '</div>' +
+      '<div>' + UI.button({ label: 'Chỉ đường', icon: 'map-pin', variant: 'outline', href: mapsHref, full: true, cls: 'sm:w-auto', attrs: { target: '_blank', rel: 'noopener' } }) + '</div></div></div>' +
+      '<section id="doi-tra" class="mt-12 scroll-mt-24"><h2 class="mb-4 text-2xl font-extrabold text-neutral-800">Giao hàng &amp; đổi trả</h2><div class="rounded-xl bg-white px-4 md:px-6">' + policy + '</div></section></div>');
+
+    // Bản đồ nhúng: nếu không tải được trong 6 giây (mất mạng / bị chặn) → HOME-E01
+    var box = main.querySelector('[data-map]');
+    setTimeout(function () {
+      if (!navigator.onLine) { box.innerHTML = mapFallback; return; }
+      var f = document.createElement('iframe');
+      f.title = 'Bản đồ đường tới Tiểu Bạch Pet Shop'; f.loading = 'lazy'; f.className = 'h-full w-full border-0';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      f.src = 'https://maps.google.com/maps?q=' + q + '&output=embed';
+      var ok = false; f.onload = function () { ok = true; };
+      box.innerHTML = ''; box.appendChild(f);
+      setTimeout(function () { if (!ok) box.innerHTML = mapFallback; }, 6000);
+    }, 400);
+    if (location.hash === '#doi-tra') setTimeout(function () { var d = document.getElementById('doi-tra'); if (d) d.scrollIntoView(); }, 50);
+  });
+  </script>
+</body>
+</html>

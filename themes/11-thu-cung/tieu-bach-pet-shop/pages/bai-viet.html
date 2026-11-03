@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài viết chia sẻ · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-NEWS-001" data-module="NEWS" class="bg-neutral-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/permissions.js"></script>
+  <script src="../assets/js/workflows.js"></script>
+  <script src="../assets/js/mock-data/master.js"></script>
+  <script src="../assets/js/mock-data/book.js"></script>
+  <script src="../assets/js/mock-data/review.js"></script>
+  <script src="../assets/js/mock-data/news.js"></script>
+  <script src="../assets/js/demo-store.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+  /* SCR-NEWS-001 Bài viết chia sẻ: Tabs pill chuyên mục (?chuyen-muc=) + tìm kiếm + bài nổi bật (trang 1, Tất cả) + lưới PostCard, 12 bài / trang. Chỉ bài PUBLISHED. */
+  Layout.mount({ title: 'Bài viết chia sẻ', breadcrumb: [['Bài viết']] }, function (main) {
+    var U = Perm.url, esc = UI.esc, PAGE = 12;
+    var cats = ['Tất cả'].concat(MOCK.postCategories);
+    var st = { cat: App.param('chuyen-muc') || 'Tất cả', q: '', page: 1 };
+    function vm(p) { return { href: U('pages/chi-tiet-bai-viet.html?id=' + p.slug), title: p.tieu_de, img: p.anh_bia, category: p.chuyen_muc, summary: p.tom_tat, date: p.ngay_dang, readMin: p.phut_doc }; }
+    function list() {
+      return DemoStore.list('posts').filter(function (p) { return p.state === 'PUBLISHED' && (st.cat === 'Tất cả' || p.chuyen_muc === st.cat) && (!st.q || UI.norm(p.tieu_de + ' ' + p.tom_tat).indexOf(UI.norm(st.q)) >= 0); })
+        .sort(function (a, b) { return a.ngay_dang < b.ngay_dang ? 1 : -1; });
+    }
+    main.insertAdjacentHTML('beforeend', '<div class="mx-auto max-w-content px-4 pb-6 pt-5 md:px-6 lg:px-8">' +
+      UI.pageHeader({ title: 'Góc chia sẻ của Tiểu Bạch', description: 'Mẹo chăm Boss, công thức pate và tin ưu đãi' }) +
+      '<div class="mb-6 flex flex-col gap-3 md:flex-row md:items-center"><div class="min-w-0 flex-1" data-cats></div>' +
+      '<div class="md:hidden">' + UI.iconButton({ icon: 'search', label: 'Tìm bài viết', variant: 'outline', attrs: { 'data-open-search': '' } }) + '</div>' +
+      '<div class="hidden w-full md:block md:w-72" data-search>' + UI.searchInput({ placeholder: 'Tìm bài viết…', attrs: { 'data-q': '' } }) + '</div></div>' +
+      '<div data-grid>' + UI.skeletonCards(6, 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3') + '</div></div>');
+
+    UI.tabs(main.querySelector('[data-cats]'), { variant: 'pill', panelCls: 'hidden', active: cats.indexOf(st.cat) >= 0 ? 'c' + cats.indexOf(st.cat) : 'c0', tabs: cats.map(function (c, i) { return { id: 'c' + i, label: c }; }),
+      onChange: function (id) { var c = cats[+id.slice(1)]; if (c !== st.cat) { st.cat = c; st.page = 1; App.setParams({ 'chuyen-muc': c === 'Tất cả' ? '' : c }); paint(); } } });
+
+    function paint() {
+      var grid = main.querySelector('[data-grid]');
+      try {
+        var l = list();
+        if (!l.length) {
+          grid.innerHTML = '<div class="rounded-xl border border-neutral-200 bg-white">' + (st.q ? UI.emptyState({ title: 'Không tìm thấy bài viết phù hợp', action: UI.button({ label: 'Xóa tìm kiếm', variant: 'outline', attrs: { 'data-clear-q': '' } }) })
+            : UI.emptyState({ title: 'Chưa có bài viết nào trong chuyên mục này.', action: UI.button({ label: 'Xem tất cả bài viết', variant: 'outline', attrs: { 'data-all': '' } }) })) + '</div>';
+          return;
+        }
+        var pages = Math.ceil(l.length / PAGE), from = (st.page - 1) * PAGE, rows = l.slice(from, from + PAGE), html = '';
+        if (st.page === 1 && st.cat === 'Tất cả' && !st.q) {
+          var f = rows.shift(), s = rows.shift();
+          html += '<div class="mb-6 grid gap-4 lg:grid-cols-3"><div class="lg:col-span-2">' + UI.postCard(vm(f), 'featured') + '</div>' + (s ? '<div>' + UI.postCard(vm(s)) + '</div>' : '') + '</div>';
+        }
+        html += '<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">' + rows.map(function (p) { return UI.postCard(vm(p)); }).join('') + '</div>';
+        if (pages > 1) html += '<nav aria-label="Phân trang" class="mt-8 flex justify-center gap-1">' + Array.apply(null, Array(pages)).map(function (_, i) { var n = i + 1; return '<button type="button" data-page="' + n + '" ' + (n === st.page ? 'aria-current="page"' : '') + ' class="inline-flex size-10 items-center justify-center rounded-full text-sm font-bold ' + (n === st.page ? 'bg-primary-500 text-neutral-800' : 'text-neutral-700 hover:bg-primary-100') + '">' + n + '</button>'; }).join('') + '</nav>';
+        grid.innerHTML = html;
+      } catch (e) { grid.innerHTML = UI.alert({ tone: 'danger', text: 'Không tải được dữ liệu. Vui lòng kiểm tra kết nối và thử lại.' }); }
+    }
+    var tq;
+    main.addEventListener('input', function (e) { if (e.target.matches('[data-q]')) { clearTimeout(tq); var v = e.target.value.trim(); tq = setTimeout(function () { st.q = v; st.page = 1; paint(); }, 250); } });
+    main.addEventListener('click', function (e) {
+      var p = e.target.closest('[data-page]'); if (p) { st.page = +p.getAttribute('data-page'); paint(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+      if (e.target.closest('[data-clear-q]')) { st.q = ''; main.querySelector('[data-q]').value = ''; paint(); return; }
+      if (e.target.closest('[data-all]')) { main.querySelector('[data-tab="c0"]').click(); return; }
+      if (e.target.closest('[data-open-search]')) { var s = main.querySelector('[data-search]'); s.classList.toggle('hidden'); if (!s.classList.contains('hidden')) s.querySelector('input').focus(); }
+    });
+    setTimeout(paint, 400);
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* Minh An — FORM / SPACE */
+:root {
+  --cream: #F3EFE6;
+  --cream-deep: #E8E1D3;
+  --clay: #B96F50;
+  --clay-dark: #8F4F35;
+  --olive: #555B43;
+  --ink: #292923;
+  --ui-accent: #B96F50;
+  --font-display: 'Fraunces', Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: 'Manrope', system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--clay); color: var(--cream); }
+
+/* Hạt giấy rất nhẹ trên toàn trang (lớp cố định, không cuộn) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: .05;
+  background-image: radial-gradient(rgba(41,41,35,.6) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* Tông ảnh ấm, hơi phai */
+.img-warm { filter: saturate(.9) sepia(.08); }
+
+/* Chữ hoa đầu đoạn kiểu tạp chí */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.6em;
+  line-height: .82;
+  padding: .06em .12em 0 0;
+  color: var(--clay);
+}
+
+/* Đường cong địa hình mảnh dưới tiêu đề */
+.contour {
+  display: block;
+  height: 14px;
+  width: 120px;
+  background:
+    radial-gradient(60px 14px at 50% 100%, transparent 58%, var(--clay) 60%, var(--clay) 68%, transparent 70%);
+}
+
+/* Header khi đã cuộn */
+#top.is-scrolled { box-shadow: 0 10px 30px -18px rgba(41,41,35,.35); }
+
+/* Thanh cuộn của dải kéo ngang */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition-duration: .01ms !important; }
+}

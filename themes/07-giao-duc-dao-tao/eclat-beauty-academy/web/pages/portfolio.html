@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio học viên — MAKEUP ÉCLAT BEAUTY ACADEMY</title>
+  <meta name="description" content="Tác phẩm trang điểm của học viên MAKEUP ÉCLAT BEAUTY ACADEMY: soft glam, cô dâu, editorial, sáng tạo và chân dung beauty. Thông tin liên hệ học viện.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/ui.js"></script>
+</head>
+<body class="bg-cream font-sans text-cocoa">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-warm focus:px-4 focus:py-2">Bỏ qua đến nội dung</a>
+
+  <header id="top" data-header="shrink" class="site-header fixed inset-x-0 top-0 z-40">
+    <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <a href="../index.html" class="flex flex-col leading-none text-cocoa focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+        <span class="text-[12px] font-medium tracking-label text-burgundy">MAKEUP</span>
+        <span class="mt-1 font-display text-[1.3rem] font-semibold tracking-[0.06em] sm:text-[1.45rem]"> ÉCLAT BEAUTY ACADEMY</span>
+      </a>
+      <nav aria-label="Điều hướng chính" class="hidden lg:block">
+        <ul class="flex items-center gap-10 text-[15px]">
+          <li><a href="../index.html" class="relative py-2 text-cocoa/75 transition-colors duration-300 hover:text-cocoa after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cocoa aria-[current=page]:after:scale-x-100">Trang chủ</a></li>
+          <li><a href="about.html" class="relative py-2 text-cocoa/75 transition-colors duration-300 hover:text-cocoa after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cocoa aria-[current=page]:after:scale-x-100">Về học viện</a></li>
+          <li><a href="courses.html" class="relative py-2 text-cocoa/75 transition-colors duration-300 hover:text-cocoa after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cocoa aria-[current=page]:after:scale-x-100">Khóa học</a></li>
+          <li><a href="portfolio.html" aria-current="page" class="relative py-2 text-cocoa/75 transition-colors duration-300 hover:text-cocoa after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-burgundy after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-cocoa aria-[current=page]:after:scale-x-100">Portfolio học viên</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="hidden h-11 items-center rounded-full border border-cocoa/70 px-6 text-sm font-medium text-cocoa transition duration-300 hover:border-burgundy hover:bg-burgundy hover:text-warm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burgundy active:scale-[.98] sm:inline-flex">Liên hệ</a>
+        <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="flex h-11 w-11 flex-col items-center justify-center gap-1.5 text-cocoa lg:hidden">
+          <span class="block h-px w-6 bg-current"></span>
+          <span class="block h-px w-6 bg-current"></span>
+          <span class="block h-px w-4 self-end bg-current mr-2.5"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 bg-warm p-6 shadow-[0_24px_60px_rgba(33,30,29,.18)] lg:hidden">
+    <nav aria-label="Điều hướng trên điện thoại">
+      <ul class="divide-y divide-cocoa/10 font-display text-[1.75rem] text-cocoa">
+        <li><a href="../index.html" class="flex min-h-[56px] items-center">Trang chủ</a></li>
+        <li><a href="about.html" class="flex min-h-[56px] items-center">Về học viện</a></li>
+        <li><a href="courses.html" class="flex min-h-[56px] items-center">Khóa học</a></li>
+        <li><a href="portfolio.html" aria-current="page" class="flex min-h-[56px] items-center aria-[current=page]:italic aria-[current=page]:text-burgundy">Portfolio học viên</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="mt-6 flex h-12 items-center justify-center rounded-full bg-burgundy text-sm font-medium text-warm">Liên hệ tư vấn</a>
+  </div>
+
+  <main id="main">
+    <!-- PORTFOLIO HERO -->
+    <section id="portfolio-hero" data-section="page-hero" class="bg-cream">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 pb-16 pt-32 sm:px-6 lg:px-10 lg:pb-20 lg:pt-36 2xl:px-16">
+        <p class="text-[12px] font-medium uppercase tracking-label text-burgundy">Portfolio học viên</p>
+        <h1 data-split="words" class="mt-6 font-display text-[clamp(2.75rem,7.4vw,8.5rem)] font-medium leading-[0.98] tracking-[-0.01em]">Every Face <em class="pb-2 text-burgundy">Tells a Story</em></h1>
+        <p data-reveal="up" class="mt-8 max-w-[56ch] text-[17px] leading-[1.8] text-cocoa/80">Mỗi tác phẩm ghi lại một chặng trong hành trình học viên tìm ra cách nhìn và phong cách của riêng mình.</p>
+        <div data-reveal="clip" class="mt-14 aspect-[4/3] overflow-hidden bg-nude/50 sm:aspect-[16/9] lg:aspect-[21/9]">
+          <img src="../assets/img/courses-hero-model.jpg" alt="Người mẫu nhắm mắt với phấn mắt khói nâu đồng ánh nhũ và son cam san hô" width="4752" height="3168" class="h-full w-full object-cover object-[70%_40%]">
+        </div>
+      </div>
+    </section>
+
+    <!-- MAKEUP GALLERY -->
+    <section id="gallery" data-section="gallery-filter" class="scroll-mt-20 bg-warm">
+      <div data-filter-group class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 md:py-32 lg:px-10 2xl:px-16">
+        <div class="flex flex-col gap-10 xl:flex-row xl:items-end xl:justify-between">
+          <h2 data-reveal="up" class="max-w-2xl font-display text-[clamp(2.25rem,4.2vw,4.25rem)] font-medium leading-[1.05]">Thư viện <em class="text-burgundy">tác phẩm</em></h2>
+          <div role="group" aria-label="Lọc theo phong cách" class="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
+            <button type="button" data-filter="all" class="is-active h-11 shrink-0 rounded-full border border-cocoa/30 px-5 text-sm font-medium transition duration-300 hover:border-cocoa [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-cream">Tất cả</button>
+            <button type="button" data-filter="soft" class="h-11 shrink-0 rounded-full border border-cocoa/30 px-5 text-sm font-medium transition duration-300 hover:border-cocoa [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-cream">Natural &amp; Soft Glam</button>
+            <button type="button" data-filter="bridal" class="h-11 shrink-0 rounded-full border border-cocoa/30 px-5 text-sm font-medium transition duration-300 hover:border-cocoa [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-cream">Bridal Beauty</button>
+            <button type="button" data-filter="creative" class="h-11 shrink-0 rounded-full border border-cocoa/30 px-5 text-sm font-medium transition duration-300 hover:border-cocoa [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-cream">Editorial &amp; Creative</button>
+            <button type="button" data-filter="portrait" class="h-11 shrink-0 rounded-full border border-cocoa/30 px-5 text-sm font-medium transition duration-300 hover:border-cocoa [&.is-active]:border-cocoa [&.is-active]:bg-cocoa [&.is-active]:text-cream">Beauty Portraits</button>
+          </div>
+        </div>
+
+        <div class="mt-14 columns-1 gap-6 sm:columns-2 lg:columns-3 xl:columns-4">
+          <figure data-category="soft" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-soft-glam-1.jpg" data-lightbox="portfolio" data-caption="Mauve Silk. Soft glam tông mận: phấn mắt ánh nhũ hồng tím, môi satin cùng tông." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-soft-glam-1.jpg" alt="Người mẫu với phấn mắt hồng tím ánh nhũ và son màu mận satin" width="3168" height="4752" loading="lazy" class="h-auto w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Mauve Silk</span><span class="text-sm text-cocoa/75">Natural &amp; Soft Glam</span></figcaption>
+          </figure>
+          <figure data-category="creative" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-creative-hoa.jpg" data-lightbox="portfolio" data-caption="Sakura Line. Face painting cành hoa anh đào chạy từ thái dương xuống cổ, nền da trong." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-creative-hoa.jpg" alt="Người mẫu tóc vàng với họa tiết cành hoa anh đào vẽ trên má và cổ" width="3168" height="4752" loading="lazy" class="aspect-[4/5] w-full object-cover object-top transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Sakura Line</span><span class="text-sm text-cocoa/75">Editorial &amp; Creative</span></figcaption>
+          </figure>
+          <figure data-category="bridal" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-chan-dung-1.jpg" data-lightbox="portfolio" data-caption="Morning Vow. Bridal look với lớp nền mỏng, kẻ mắt mảnh và môi nude cam, tóc búi tết." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-chan-dung-1.jpg" alt="Cô dâu tóc búi tết, kẻ mắt mảnh và son nude cam dưới nắng sớm" width="1622" height="2416" loading="lazy" class="h-auto w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Morning Vow</span><span class="text-sm text-cocoa/75">Bridal Beauty</span></figcaption>
+          </figure>
+          <figure data-category="portrait" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-son-moi.jpg" data-lightbox="portfolio" data-caption="Classic Red. Chân dung beauty với son đỏ lì, mắt nâu đồng và chân mày đậm tự nhiên." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-son-moi.jpg" alt="Chân dung người mẫu son đỏ lì, phấn mắt nâu đồng trên nền tối" width="3168" height="4752" loading="lazy" class="h-auto w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Classic Red</span><span class="text-sm text-cocoa/75">Beauty Portraits</span></figcaption>
+          </figure>
+          <figure data-category="soft" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-glam-2.jpg" data-lightbox="portfolio" data-caption="Golden Muse. Natural glow với mí mắt nhũ vàng, môi hồng đất và phụ kiện lá vàng." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-glam-2.jpg" alt="Người mẫu tóc xoăn với phấn mắt nhũ vàng và son hồng đất" width="3168" height="4752" loading="lazy" class="aspect-square w-full object-cover object-[50%_35%] transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Golden Muse</span><span class="text-sm text-cocoa/75">Natural &amp; Soft Glam</span></figcaption>
+          </figure>
+          <figure data-category="creative" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-creative-mau.jpg" data-lightbox="portfolio" data-caption="Pink Ritual. Makeup sáng tạo tông hồng phủ quanh mắt, chấm họa tiết trên chân mày và môi vẽ lệch." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-creative-mau.jpg" alt="Cận cảnh người mẫu với phấn mắt hồng đậm, chấm họa tiết trên chân mày và son hồng" width="1608" height="2448" loading="lazy" class="h-auto w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Pink Ritual</span><span class="text-sm text-cocoa/75">Editorial &amp; Creative</span></figcaption>
+          </figure>
+          <figure data-category="bridal" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-co-dau-1.webp" data-lightbox="portfolio" data-caption="Lace Detail. Chi tiết ngày cưới: móng hồng nude đồng bộ với tông trang điểm của cô dâu." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-co-dau-1.webp" alt="Cô dâu váy ren trắng cầm hộp nhẫn thủy tinh, móng tay hồng nude" width="2974" height="4460" loading="lazy" class="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Lace Detail</span><span class="text-sm text-cocoa/75">Bridal Beauty</span></figcaption>
+          </figure>
+          <figure data-category="soft" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-glam-3.jpg" data-lightbox="portfolio" data-caption="Smoke &amp; Satin. Soft smoky tông xám khói, má tạo khối nhẹ và son hồng gỗ." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-glam-3.jpg" alt="Người mẫu tóc xoăn bạch kim với mắt khói xám và son hồng gỗ trên nền tường đen" width="3168" height="4752" loading="lazy" class="h-auto w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Smoke &amp; Satin</span><span class="text-sm text-cocoa/75">Natural &amp; Soft Glam</span></figcaption>
+          </figure>
+          <figure data-category="creative" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-chan-dung-2.jpg" data-lightbox="portfolio" data-caption="Stardust. Nhũ bạc và chấm màu rải trên gò má, kết hợp son fuchsia ánh kim." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-chan-dung-2.jpg" alt="Người mẫu nhìn xuống với nhũ bạc và chấm màu trên gò má, son fuchsia" width="1365" height="2048" loading="lazy" class="h-auto w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Stardust</span><span class="text-sm text-cocoa/75">Editorial &amp; Creative</span></figcaption>
+          </figure>
+          <figure data-category="portrait" class="masonry-item mb-10">
+            <a href="../assets/img/portfolio-chan-dung-3.jpg" data-lightbox="portfolio" data-caption="Urban Line. Chân dung đen trắng nhấn đường kẻ mắt mèo và môi nude mờ." class="group block overflow-hidden bg-nude/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <img src="../assets/img/portfolio-chan-dung-3.jpg" alt="Chân dung đen trắng người mẫu sau lưới sắt, kẻ mắt mèo và môi nude" width="4000" height="6000" loading="lazy" class="h-auto w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </a>
+            <figcaption class="mt-4"><span class="block font-display text-2xl italic">Urban Line</span><span class="text-sm text-cocoa/75">Beauty Portraits</span></figcaption>
+          </figure>
+        </div>
+        <p class="mt-6 text-sm text-cocoa/70">Bấm vào ảnh để xem lớn kèm mô tả concept. Ảnh trong thư viện là ảnh minh họa, sẽ được thay bằng tác phẩm thực tế của học viên.</p>
+      </div>
+    </section>
+
+    <!-- BEHIND THE LOOK -->
+    <section id="behind" data-section="timeline" class="bg-cream">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 py-24 sm:px-6 md:py-32 lg:px-10 2xl:px-16">
+        <h2 data-reveal="up" class="max-w-3xl font-display text-[clamp(2.25rem,4.2vw,4.25rem)] font-medium leading-[1.05]">Phía sau <em class="text-burgundy">một tác phẩm</em></h2>
+        <p data-reveal="up" class="mt-6 max-w-[56ch] text-[17px] leading-relaxed text-cocoa/80">Bốn chặng mà mỗi học viên đi qua trước khi một look được đưa vào portfolio.</p>
+        <ol data-reveal-stagger="120" class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <li>
+            <div class="arch aspect-[3/4] bg-nude/40">
+              <img src="../assets/img/portfolio-co-dau-2.jpg" alt="Váy ren treo trên móc, ảnh đen trắng dùng làm cảm hứng concept" width="683" height="1024" loading="lazy" class="h-full w-full object-cover">
+            </div>
+            <p class="mt-6 font-display text-xl italic text-burgundy">01</p>
+            <h3 class="mt-1 font-display text-[1.75rem] font-medium">Chuẩn bị concept</h3>
+            <p class="mt-3 max-w-[36ch] leading-relaxed text-cocoa/80">Đọc trang phục, chất liệu và bối cảnh để định hình tinh thần của look.</p>
+          </li>
+          <li class="lg:mt-20">
+            <div class="arch aspect-[3/4] bg-nude/40">
+              <img src="../assets/img/portfolio-behind-son.jpg" alt="Hàng son vỏ vàng xếp trên bậu cửa sổ, một thỏi son đỏ mở nắp" width="3456" height="5184" loading="lazy" class="h-full w-full object-cover">
+            </div>
+            <p class="mt-6 font-display text-xl italic text-burgundy">02</p>
+            <h3 class="mt-1 font-display text-[1.75rem] font-medium">Chọn bảng màu</h3>
+            <p class="mt-3 max-w-[36ch] leading-relaxed text-cocoa/80">Thử sắc độ trên da mẫu, cân giữa tông môi, má và mắt.</p>
+          </li>
+          <li>
+            <div class="arch aspect-[3/4] bg-nude/40">
+              <img src="../assets/img/portfolio-behind-mat.jpg" alt="Cận cảnh mắt xanh với phấn mắt nâu đồng ánh nhũ và mi cong" width="6000" height="4000" loading="lazy" class="h-full w-full object-cover object-[45%_50%]">
+            </div>
+            <p class="mt-6 font-display text-xl italic text-burgundy">03</p>
+            <h3 class="mt-1 font-display text-[1.75rem] font-medium">Thực hiện makeup</h3>
+            <p class="mt-3 max-w-[36ch] leading-relaxed text-cocoa/80">Làm từng lớp dưới sự quan sát của giảng viên, chỉnh ngay tại chỗ.</p>
+          </li>
+          <li class="lg:mt-20">
+            <div class="arch flex aspect-[3/4] flex-col items-center justify-center bg-burgundy px-8 text-center text-warm">
+              <span class="font-display text-[clamp(3rem,5vw,4.5rem)] italic leading-none text-nude">Final</span>
+              <span class="mt-4 max-w-[18ch] font-display text-xl leading-snug">Ảnh hoàn thiện cho portfolio</span>
+            </div>
+            <p class="mt-6 font-display text-xl italic text-burgundy">04</p>
+            <h3 class="mt-1 font-display text-[1.75rem] font-medium">Hoàn thiện ảnh</h3>
+            <p class="mt-3 max-w-[36ch] leading-relaxed text-cocoa/80">Chụp dưới ánh sáng studio, chọn khung hình và ghi lại mô tả concept.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT THE ACADEMY -->
+    <section id="contact" data-section="contact-split" class="scroll-mt-20 bg-nude/35">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-14 px-4 py-24 sm:px-6 md:py-32 lg:grid-cols-12 lg:gap-10 lg:px-10 2xl:px-16">
+        <div class="lg:col-span-5">
+          <h2 data-reveal="up" class="font-display text-[clamp(2.25rem,4.2vw,4.25rem)] font-medium leading-[1.05]">Kết nối với <em class="text-burgundy">học viện</em></h2>
+          <p data-reveal="up" class="mt-6 max-w-[46ch] text-[17px] leading-relaxed text-cocoa/85">Hãy để lại lời nhắn hoặc ghé studio để tìm hiểu môi trường học và chương trình đào tạo phù hợp với bạn.</p>
+          <dl data-reveal="up" class="mt-12 space-y-8">
+            <div>
+              <dt class="text-[12px] font-medium uppercase tracking-label text-burgundy">Địa chỉ</dt>
+              <dd class="mt-2 max-w-[38ch] text-[17px] leading-relaxed">18 Phạm Ngọc Thạch, Phường Võ Thị Sáu, Quận 3, TP. Hồ Chí Minh</dd>
+            </div>
+            <div>
+              <dt class="text-[12px] font-medium uppercase tracking-label text-burgundy">Điện thoại</dt>
+              <dd class="mt-2 flex flex-wrap items-center gap-3 text-[17px]">
+                <a href="tel:02838204517" class="underline decoration-nude decoration-2 underline-offset-4 transition-colors duration-300 hover:text-burgundy hover:decoration-burgundy">028 3820 4517</a>
+                <button type="button" data-copy="028 3820 4517" class="inline-flex h-11 items-center rounded-full border border-cocoa/30 px-4 text-sm font-medium transition duration-300 hover:border-cocoa hover:bg-cocoa hover:text-cream active:scale-[.98]">Sao chép số</button>
+              </dd>
+            </div>
+            <div>
+              <dt class="text-[12px] font-medium uppercase tracking-label text-burgundy">Email</dt>
+              <dd class="mt-2 text-[17px]"><a href="mailto:hello@eclatacademy.vn" class="underline decoration-nude decoration-2 underline-offset-4 transition-colors duration-300 hover:text-burgundy hover:decoration-burgundy">hello@eclatacademy.vn</a></dd>
+            </div>
+            <div>
+              <dt class="text-[12px] font-medium uppercase tracking-label text-burgundy">Giờ mở cửa</dt>
+              <dd class="mt-2 text-[17px]">Thứ Hai đến Thứ Bảy, 9:00 - 20:00</dd>
+            </div>
+            <div>
+              <dt class="text-[12px] font-medium uppercase tracking-label text-burgundy">Mạng xã hội</dt>
+              <dd class="mt-3 flex flex-wrap gap-2">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="inline-flex h-11 items-center rounded-full border border-cocoa/30 px-4 text-sm font-medium transition duration-300 hover:border-burgundy hover:bg-burgundy hover:text-warm">Instagram</a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="inline-flex h-11 items-center rounded-full border border-cocoa/30 px-4 text-sm font-medium transition duration-300 hover:border-burgundy hover:bg-burgundy hover:text-warm">Facebook</a>
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="inline-flex h-11 items-center rounded-full border border-cocoa/30 px-4 text-sm font-medium transition duration-300 hover:border-burgundy hover:bg-burgundy hover:text-warm">TikTok</a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="inline-flex h-11 items-center rounded-full border border-cocoa/30 px-4 text-sm font-medium transition duration-300 hover:border-burgundy hover:bg-burgundy hover:text-warm">YouTube</a>
+              </dd>
+            </div>
+          </dl>
+          <p class="mt-10 text-sm text-cocoa/70">Địa chỉ, số điện thoại và email là dữ liệu mẫu, có thể chỉnh sửa.</p>
+        </div>
+
+        <div data-reveal="up" class="lg:col-span-6 lg:col-start-7">
+          <form data-form="lien-he" novalidate class="bg-warm p-6 sm:p-10 lg:p-12">
+            <p class="font-display text-[1.9rem] leading-snug">Gửi lời nhắn cho học viện</p>
+            <div class="mt-8 space-y-6">
+              <div class="flex flex-col gap-2">
+                <label for="ct-name" class="text-sm font-medium">Họ và tên</label>
+                <input id="ct-name" name="name" type="text" required minlength="2" autocomplete="name" class="h-12 w-full border border-cocoa/30 bg-cream px-4 text-[16px] text-cocoa outline-none transition duration-300 placeholder:text-cocoa/55 focus:border-burgundy focus:ring-2 focus:ring-burgundy/25" placeholder="Nguyễn Thảo Vy">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="ct-reach" class="text-sm font-medium">Email hoặc số điện thoại</label>
+                <input id="ct-reach" name="reach" type="text" required pattern="^([^@\s]+@[^@\s]+\.[^@\s]+|[0-9+ ().\-]{9,})$" title="Nhập email hợp lệ hoặc số điện thoại từ 9 chữ số" autocomplete="email" class="h-12 w-full border border-cocoa/30 bg-cream px-4 text-[16px] text-cocoa outline-none transition duration-300 placeholder:text-cocoa/55 focus:border-burgundy focus:ring-2 focus:ring-burgundy/25" placeholder="ban@email.com hoặc 0901 234 567">
+                <p class="text-sm text-cocoa/70">Học viện sẽ dùng thông tin này để phản hồi bạn.</p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="ct-msg" class="text-sm font-medium">Nội dung liên hệ</label>
+                <textarea id="ct-msg" name="message" required minlength="10" rows="5" class="w-full border border-cocoa/30 bg-cream px-4 py-3 text-[16px] text-cocoa outline-none transition duration-300 placeholder:text-cocoa/55 focus:border-burgundy focus:ring-2 focus:ring-burgundy/25" placeholder="Tôi muốn tìm hiểu chương trình Professional Makeup..."></textarea>
+              </div>
+            </div>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+              <button type="submit" class="inline-flex h-14 shrink-0 whitespace-nowrap items-center justify-center rounded-full bg-burgundy px-8 text-[15px] font-medium text-warm transition duration-300 hover:-translate-y-0.5 hover:bg-burgundy-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy active:scale-[.98]">Gửi lời nhắn</button>
+              <p class="text-sm text-cocoa/75">Bản demo: form chưa kết nối hệ thống, thông tin chưa được gửi đi.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="bg-soot text-cream">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <a href="../index.html" class="inline-flex flex-col leading-none">
+            <span class="text-[12px] font-medium tracking-label text-nude">MAKEUP</span>
+            <span class="mt-1 font-display text-2xl font-semibold tracking-[0.06em]"> ÉCLAT BEAUTY ACADEMY</span>
+          </a>
+          <p class="mt-6 max-w-[40ch] leading-relaxed text-cream/70">Học viện đào tạo nghệ thuật trang điểm chuyên nghiệp. Professional Makeup Education, Beauty Artistry, Creative Excellence.</p>
+        </div>
+        <nav aria-label="Điều hướng chân trang" class="lg:col-span-2 lg:col-start-6">
+          <p class="text-[12px] font-medium uppercase tracking-label text-nude">Trang</p>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="../index.html" class="text-cream/80 transition-colors duration-300 hover:text-cream">Trang chủ</a></li>
+            <li><a href="about.html" class="text-cream/80 transition-colors duration-300 hover:text-cream">Về học viện</a></li>
+            <li><a href="courses.html" class="text-cream/80 transition-colors duration-300 hover:text-cream">Khóa học</a></li>
+            <li><a href="portfolio.html" class="text-cream/80 transition-colors duration-300 hover:text-cream">Portfolio học viên</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <p class="text-[12px] font-medium uppercase tracking-label text-nude">Liên hệ</p>
+          <address class="mt-5 space-y-3 text-[15px] not-italic text-cream/80">
+            <p>18 Phạm Ngọc Thạch, Phường Võ Thị Sáu, Quận 3, TP. Hồ Chí Minh</p>
+            <p><a href="tel:02838204517" class="transition-colors duration-300 hover:text-cream">028 3820 4517</a></p>
+            <p><a href="mailto:hello@eclatacademy.vn" class="transition-colors duration-300 hover:text-cream">hello@eclatacademy.vn</a></p>
+          </address>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="text-[12px] font-medium uppercase tracking-label text-nude">Mạng xã hội</p>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-cream/80 transition-colors duration-300 hover:text-cream">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" class="text-cream/80 transition-colors duration-300 hover:text-cream">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="text-cream/80 transition-colors duration-300 hover:text-cream">TikTok</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" class="text-cream/80 transition-colors duration-300 hover:text-cream">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <p aria-hidden="true" class="mt-16 select-none font-display text-[clamp(4.5rem,19vw,19rem)] italic leading-[0.8] text-cream/10">Éclat</p>
+      <div class="mt-8 flex flex-col gap-3 border-t border-cream/15 pt-6 text-sm text-cream/60 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 MAKEUP ÉCLAT BEAUTY ACADEMY. Thông tin liên hệ là dữ liệu mẫu.</p>
+        <a href="#top" class="transition-colors duration-300 hover:text-cream">Về đầu trang ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/motion.js"></script>
+</body>
+</html>

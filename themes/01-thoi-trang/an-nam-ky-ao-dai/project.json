@@ -1,0 +1,98 @@
+{
+  "slug": "an-nam-ky-test",
+  "name": "An Nam Ký Test",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website thương hiệu thời trang áo dài Việt Nam",
+    "brand": "An Nam Ký Test",
+    "purpose": "Xây dựng nhận diện thương hiệu",
+    "preset": "editorial",
+    "motion": "1",
+    "language": "vi",
+    "colors": "#7A1F2B, kem và xanh rêu",
+    "font": "Playfair Display",
+    "sections": [
+      {
+        "id": "story",
+        "description": "Kể về quá trình hình thành thương hiệu và cảm hứng từ văn hóa Việt Nam."
+      },
+      {
+        "id": "collections",
+        "description": ""
+      },
+      {
+        "id": "contact",
+        "description": ""
+      }
+    ],
+    "notes": "Website chỉ giới thiệu thương hiệu, không có mua hàng.\nƯu tiên nhiều khoảng trắng.\nYÊU CẦU CUỐI: không dùng gradient.",
+    "mood": "",
+    "reference": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-16T04:27:18.958Z",
+  "updatedAt": "2026-10-16T04:52:45.049Z",
+  "screen": "done",
+  "request": "Website thương hiệu thời trang áo dài Việt Nam",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\an-nam-ky-test\\prototype",
+    "builtAt": "2026-10-16T04:52:22.177Z",
+    "pages": [
+      "index.html",
+      "about.html",
+      "article-ao-bung-qua.html",
+      "article-lua-nha-xa.html",
+      "collection-hy-su.html",
+      "collection-sen-ha.html",
+      "collections.html",
+      "contact.html",
+      "journal.html",
+      "may-do.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "about.html": [],
+      "article-ao-bung-qua.html": [],
+      "article-lua-nha-xa.html": [],
+      "collection-hy-su.html": [],
+      "collection-sen-ha.html": [],
+      "collections.html": [],
+      "contact.html": [],
+      "journal.html": [],
+      "may-do.html": []
+    }
+  },
+  "job": {
+    "id": "753bc68f-0e83-415d-8e6e-a09be617b749",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\an-nam-ky-test\\prototype",
+    "feedback": "Tạo tiếp các trang còi lại vơí phong cách cũ đi bạn",
+    "page": "index.html",
+    "status": "done"
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-16T04:52:22.167Z",
+      "text": "Tạo tiếp các trang còi lại vơí phong cách cũ đi bạn"
+    }
+  ],
+  "qa": {
+    "createdAt": "2026-10-16T04:52:45.035Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 1,
+    "screenshots": 30
+  }
+}

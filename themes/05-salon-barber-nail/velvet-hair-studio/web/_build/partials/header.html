@@ -1,0 +1,47 @@
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-gold focus:px-4 focus:py-2 focus:text-velvet" data-i18n="c.skip">Bỏ qua tới nội dung</a>
+<header id="top" data-header="shrink" class="group/h fixed inset-x-0 top-0 z-50 text-ivory has-[button.is-open]:bg-velvet [&.is-scrolled]:bg-velvet/95 [&.is-scrolled]:shadow-[0_1px_0_rgba(197,165,114,.25)]">
+  <div class="mx-auto grid h-[72px] w-full max-w-screen-2xl grid-cols-[1fr_auto] items-center gap-6 px-4 transition-[height] duration-500 group-[.is-scrolled]/h:h-16 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="flex flex-col justify-self-start whitespace-nowrap font-display text-[1.4rem] leading-none tracking-[0.18em] sm:block sm:text-2xl" aria-label="VELVET HAIR STUDIO">
+      <span>VELVET</span> <span class="mt-1 text-xs tracking-[0.34em] text-gold sm:mt-0 sm:text-[0.62em] sm:tracking-[0.32em]">HAIR STUDIO</span>
+    </a>
+    <nav class="hidden lg:block" aria-label="Điều hướng chính" data-i18n-attr="aria-label:c.navlabel">
+      <ul class="flex items-center gap-10 text-[13px] font-medium uppercase tracking-[0.2em]">
+        <li><a href="{{root}}index.html" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ivory aria-[current=page]:after:scale-x-100" data-i18n="n.home">Trang chủ</a></li>
+        <li><a href="{{root}}pages/services.html" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ivory aria-[current=page]:after:scale-x-100" data-i18n="n.services">Dịch vụ</a></li>
+        <li><a href="{{root}}pages/gallery.html" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ivory aria-[current=page]:after:scale-x-100" data-i18n="n.gallery">Bộ sưu tập</a></li>
+        <li><a href="{{root}}pages/about.html" class="relative py-2 text-ivory/80 transition-colors duration-300 hover:text-ivory after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 after:ease-expo hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-ivory aria-[current=page]:after:scale-x-100" data-i18n="n.about">Về chúng tôi</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center justify-self-end gap-3 sm:gap-5">
+      <div class="hidden items-center gap-1 text-xs font-semibold tracking-[0.2em] lg:flex" role="group" aria-label="Ngôn ngữ" data-i18n-attr="aria-label:c.langlabel">
+        <button type="button" data-lang-set="vi" class="px-1.5 py-2 transition-opacity duration-300 hover:opacity-100">VI</button>
+        <span class="h-3 w-px bg-ivory/30" aria-hidden="true"></span>
+        <button type="button" data-lang-set="en" class="px-1.5 py-2 transition-opacity duration-300 hover:opacity-100">EN</button>
+      </div>
+      <button type="button" data-modal-open="book" class="inline-flex h-10 items-center border border-gold bg-gold px-3 text-xs font-bold uppercase tracking-[0.12em] text-velvet transition-colors duration-300 hover:bg-transparent hover:text-gold active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ivory sm:h-11 sm:px-5 sm:tracking-[0.2em]" data-i18n="c.book">Đặt lịch</button>
+      <button type="button" data-menu-toggle="#mnav" class="group/m -mr-2 grid h-11 w-11 place-items-center lg:hidden" aria-label="Mở menu" data-i18n-attr="aria-label:c.menu">
+        <span class="relative block h-3 w-6" aria-hidden="true">
+          <span class="absolute left-0 top-0 h-px w-6 bg-ivory transition-transform duration-500 ease-expo group-[.is-open]/m:translate-y-1.5 group-[.is-open]/m:rotate-45"></span>
+          <span class="absolute bottom-0 left-0 h-px w-6 bg-ivory transition-transform duration-500 ease-expo group-[.is-open]/m:-translate-y-1.5 group-[.is-open]/m:-rotate-45"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+<div id="mnav" class="fixed inset-x-0 bottom-0 top-[72px] z-[45] flex flex-col overflow-y-auto border-t border-gold/25 bg-velvet px-6 pb-10 pt-8 text-ivory lg:hidden">
+  <nav aria-label="Menu điện thoại" data-i18n-attr="aria-label:c.mnavlabel">
+    <ul class="divide-y divide-ivory/10 font-display text-[2.6rem] leading-tight">
+      <li><a href="{{root}}index.html" class="flex items-baseline justify-between py-4 aria-[current=page]:text-gold"><span data-i18n="n.home">Trang chủ</span><span class="font-sans text-xs tracking-[0.2em] text-taupe">01</span></a></li>
+      <li><a href="{{root}}pages/services.html" class="flex items-baseline justify-between py-4 aria-[current=page]:text-gold"><span data-i18n="n.services">Dịch vụ</span><span class="font-sans text-xs tracking-[0.2em] text-taupe">02</span></a></li>
+      <li><a href="{{root}}pages/gallery.html" class="flex items-baseline justify-between py-4 aria-[current=page]:text-gold"><span data-i18n="n.gallery">Bộ sưu tập</span><span class="font-sans text-xs tracking-[0.2em] text-taupe">03</span></a></li>
+      <li><a href="{{root}}pages/about.html" class="flex items-baseline justify-between py-4 aria-[current=page]:text-gold"><span data-i18n="n.about">Về chúng tôi</span><span class="font-sans text-xs tracking-[0.2em] text-taupe">04</span></a></li>
+    </ul>
+  </nav>
+  <div class="mt-auto pt-10">
+    <div class="flex items-center gap-2 text-sm font-semibold tracking-[0.2em]" role="group" aria-label="Ngôn ngữ" data-i18n-attr="aria-label:c.langlabel">
+      <button type="button" data-lang-set="vi" class="h-11 border border-ivory/25 px-5">VI</button>
+      <button type="button" data-lang-set="en" class="h-11 border border-ivory/25 px-5">EN</button>
+    </div>
+    <p class="mt-6 text-sm leading-relaxed text-taupe">123 Nguyen Hue, District 1, Ho Chi Minh City<br><span data-i18n="c.hours">Mở cửa 09:00-20:00 mỗi ngày</span></p>
+  </div>
+</div>

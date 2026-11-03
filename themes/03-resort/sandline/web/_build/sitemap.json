@@ -1,0 +1,16 @@
+{
+  "brand": "SANDLINE",
+  "language": "en",
+  "preset": "industrial",
+  "motionLevel": 2,
+  "visualIdea": "A thin terracotta horizon line that draws itself across every page, the line where sand meets light",
+  "purposeInferred": "",
+  "theme": { "tagline": "Kiến trúc được định hình bởi đất", "description": "Giao diện thương hiệu resort kiến trúc sa mạc đương đại." },
+  "pages": [],
+  "adjustments": [
+    "Công tắc EN/VI chuyển ngôn ngữ thật trên từng trang (assets/js/i18n.js, lưu lựa chọn trong localStorage), thay cho hộp thông báo lang-note trước đó.",
+    "Đổi font display Bodoni Moda → Playfair Display vì Bodoni Moda không có subset tiếng Việt (dấu bị ghép nhầm); Jost đã có subset Việt nên giữ nguyên.",
+    "QA bằng Chromium: 4 trang + menu mobile, bấm EN/VI/xoá/cache, không lỗi JS, tất cả ảnh (kể cả tab ẩn) tải đủ; ảnh QA lưu tại logs/qa_screenshots."
+  ],
+  "limitations": []
+}

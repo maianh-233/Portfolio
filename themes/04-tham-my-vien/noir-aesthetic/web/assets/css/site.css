@@ -1,0 +1,171 @@
+:root {
+  --paper: #f5f3ef;
+  --ink: #111111;
+  --stone: #d9d4cb;
+  --muted: #6b6760;
+  --bronze: #8c6a43;
+  --espresso: #1a1410;
+  --ui-accent: #8c6a43;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+}
+
+.frame {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1536px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .frame {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .frame {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .frame {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+header[data-header].is-scrolled {
+  background: rgba(17, 17, 17, 0.94);
+  border-bottom-color: rgba(245, 243, 239, 0.16);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.35rem;
+  height: 1px;
+  background: var(--bronze);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+html:not([lang="vi"]) [data-lang="vi"] {
+  display: none !important;
+}
+
+html[lang="vi"] [data-lang="en"] {
+  display: none !important;
+}
+
+/* Vietnamese stacked diacritics need room: loosen display line-height */
+html[lang="vi"] .font-display {
+  line-height: 1.14 !important;
+}
+
+/* Language switch: visible segmented control */
+.lang-switch {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid rgba(245, 243, 239, 0.45);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.lang-switch button {
+  min-height: 2.75rem;
+  min-width: 2.6rem;
+  padding: 0 0.6rem;
+  color: var(--stone);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-switch button + button {
+  border-left: 1px solid rgba(245, 243, 239, 0.45);
+}
+
+.lang-switch button:hover {
+  color: var(--paper);
+  background: rgba(245, 243, 239, 0.08);
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.lang-switch button:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 2px;
+}
+
+dialog#consult {
+  background: var(--espresso);
+  color: var(--paper);
+  border: 1px solid rgba(245, 243, 239, 0.16);
+  width: calc(100% - 2rem);
+  max-width: 36rem;
+  padding: 0;
+}
+
+dialog#consult::backdrop {
+  background: rgba(17, 17, 17, 0.78);
+}
+
+.drop-en::first-letter,
+.drop-vi::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 4.4rem;
+  line-height: 0.75;
+  padding-right: 0.55rem;
+  padding-top: 0.2rem;
+  color: var(--bronze);
+}
+
+.img-fallback {
+  background: var(--espresso);
+  border: 1px solid rgba(245, 243, 239, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

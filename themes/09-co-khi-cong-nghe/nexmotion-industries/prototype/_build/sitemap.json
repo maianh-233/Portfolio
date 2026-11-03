@@ -1,0 +1,212 @@
+{
+  "brand": "NEXMOTION INDUSTRIES",
+  "language": "vi",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Ngôn ngữ bản vẽ kỹ thuật xuyên suốt: đường kích thước (dimension line) mảnh trên mỗi tiêu đề, dấu góc định vị trên ảnh, lưới 12 cột kẻ mảnh, góc vuông tuyệt đối; bảng màu navy - trắng băng - mint theo BA",
+  "purposeInferred": "",
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu tổng quan doanh nghiệp và dẫn sang các trang năng lực, công nghệ, quy trình, dự án, ngành phục vụ, liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Tiêu đề nguyên văn ENGINEERING THE NEXT LEVEL OF PRECISION." },
+        { "id": "intro", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Giới thiệu ngắn, link sang about.html" },
+        { "id": "capabilities", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "5 năng lực, link tới từng mục capabilities.html" },
+        { "id": "technology", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Hình ảnh công nghệ và máy móc, link sang technology.html" },
+        { "id": "process", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "6 bước tổng quan, link sang quality-process.html" },
+        { "id": "projects", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "3 dự án minh họa, link sang trang chi tiết" },
+        { "id": "industries", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "5 lĩnh vực, link sang industries.html" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Dẫn tới contact.html" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "cnc milling machine", "file": "assets/img/cap-cnc-machining.webp", "status": "ok" },
+        { "slot": "technology-robot", "query": "industrial robot linear rail", "file": "assets/img/home-tech-robot.jpg", "status": "ok" },
+        { "slot": "technology-machining-center", "query": "machining center technician", "file": "assets/img/home-tech-machining-center.jpg", "status": "ok" },
+        { "slot": "projects-gearbox", "query": "worm gear assembly", "file": "assets/img/project-gearbox.webp", "status": "ok" },
+        { "slot": "projects-robot-base", "query": "industrial robot rail", "file": "assets/img/cap-automation-robot.jpg", "status": "ok" },
+        { "slot": "projects-welded-frame", "query": "welding steel frame", "file": "assets/img/project-welded-frame.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "about.html",
+      "title": "Giới thiệu",
+      "purpose": "Tổng quan, định hướng, sứ mệnh - tầm nhìn - giá trị cốt lõi, triết lý kỹ thuật, đội ngũ và hình ảnh nhà xưởng",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Ảnh nhà xưởng" },
+        { "id": "overview", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Tổng quan và định hướng phát triển" },
+        { "id": "mission", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Sứ mệnh, tầm nhìn, giá trị cốt lõi" },
+        { "id": "philosophy", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Triết lý kỹ thuật và văn hóa chất lượng" },
+        { "id": "team", "catalog": "team", "variant": "features-alternate", "source": "ba", "note": "Đội ngũ kỹ thuật và môi trường làm việc" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Hình ảnh doanh nghiệp và nhà xưởng, lightbox" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "modern factory floor", "file": "assets/img/about-factory.jpg", "status": "ok" },
+        { "slot": "team", "query": "factory workers technicians asia", "file": "assets/img/about-team.jpg", "status": "ok" },
+        { "slot": "gallery-workshop", "query": "welding workshop", "file": "assets/img/about-workshop.webp", "status": "ok" },
+        { "slot": "gallery-equipment", "query": "metalworking equipment", "file": "assets/img/home-hero-cnc.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "capabilities.html",
+      "title": "Năng lực",
+      "purpose": "Trình bày chi tiết 5 nhóm năng lực: ứng dụng, quy trình liên quan, thông tin kỹ thuật cập nhật được",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "cnc", "catalog": "services", "variant": "features-alternate", "source": "ba", "note": "CNC Precision Machining" },
+        { "id": "components", "catalog": "services", "variant": "features-alternate", "source": "ba", "note": "Mechanical Components" },
+        { "id": "fabrication", "catalog": "services", "variant": "quote-full", "source": "ba", "note": "Metal Fabrication, khối ảnh tối tràn viền" },
+        { "id": "automation", "catalog": "services", "variant": "features-bento", "source": "ba", "note": "Industrial Automation" },
+        { "id": "engineering", "catalog": "services", "variant": "features-alternate", "source": "ba", "note": "Technical Engineering" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "cnc", "query": "cnc machine control panel", "file": "assets/img/tech-cnc-controls.jpg", "status": "ok" },
+        { "slot": "components", "query": "metal mechanical parts closeup", "file": "assets/img/cap-mechanical-components.jpg", "status": "ok" },
+        { "slot": "fabrication", "query": "welder sparks", "file": "assets/img/cap-metal-fabrication.webp", "status": "ok" },
+        { "slot": "automation", "query": "cobot programming", "file": "assets/img/cap-automation-cobot.jpg", "status": "ok" },
+        { "slot": "engineering", "query": "engineering mechanism drawing", "file": "assets/img/cap-engineering-drawing.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "technology.html",
+      "title": "Công nghệ",
+      "purpose": "Giới thiệu hệ thống thiết bị: máy CNC, tự động hóa, đo kiểm, vật liệu, quy trình kiểm tra kỹ thuật (không tự tạo thông số máy / chứng nhận)",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "equipment", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Tabs: máy CNC, tự động hóa, đo kiểm" },
+        { "id": "materials", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Vật liệu và công nghệ gia công" },
+        { "id": "flow", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Quy trình sản xuất và kiểm tra kỹ thuật" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "equipment-cnc", "query": "machine tools metal", "file": "assets/img/ind-machinery-tools.webp", "status": "ok" },
+        { "slot": "equipment-automation", "query": "automation conveyor", "file": "assets/img/tech-automation-conveyor.webp", "status": "ok" },
+        { "slot": "equipment-inspection", "query": "coordinate measuring machine", "file": "assets/img/tech-cmm-inspection.jpg", "status": "ok" },
+        { "slot": "materials", "query": "metal chips machining", "file": "assets/img/tech-materials-chips.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "projects.html",
+      "title": "Dự án",
+      "purpose": "Portfolio dự án minh họa, có bộ lọc theo danh mục, dẫn sang trang chi tiết",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "list", "catalog": "projects", "variant": "list-cards", "source": "ba", "note": "Lưới dự án + data-filter-group; 3 dự án có trang chi tiết, 2 dự án ghi Sắp cập nhật" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "gearbox", "query": "worm gear assembly", "file": "assets/img/project-gearbox.webp", "status": "ok" },
+        { "slot": "robot-base", "query": "industrial robot rail", "file": "assets/img/cap-automation-robot.jpg", "status": "ok" },
+        { "slot": "welded-frame", "query": "welding steel frame", "file": "assets/img/project-welded-frame.webp", "status": "ok" },
+        { "slot": "threaded-shaft", "query": "lathe threaded shaft", "file": "assets/img/project-threaded-shaft.jpg", "status": "ok" },
+        { "slot": "machine-repair", "query": "machine mechanical assembly", "file": "assets/img/project-machine-repair.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "project-gearbox.html",
+      "title": "Cụm truyền động trục vít bánh vít",
+      "purpose": "Chi tiết dự án minh họa: bài toán kỹ thuật, phương án, hình ảnh, kết quả",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb Dự án" },
+        { "id": "case", "catalog": "projects", "variant": "detail-article", "source": "ba", "note": "Đánh dấu dữ liệu minh họa" },
+        { "id": "related", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "worm gear assembly", "file": "assets/img/project-gearbox.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "project-robot-base.html",
+      "title": "Đế lắp robot và ray dẫn hướng",
+      "purpose": "Chi tiết dự án minh họa về tự động hóa",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb Dự án" },
+        { "id": "case", "catalog": "projects", "variant": "detail-article", "source": "ba", "note": "Đánh dấu dữ liệu minh họa" },
+        { "id": "related", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "industrial robot rail", "file": "assets/img/cap-automation-robot.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "project-welded-frame.html",
+      "title": "Khung kết cấu thép hàn cho dây chuyền",
+      "purpose": "Chi tiết dự án minh họa về kết cấu kim loại",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Breadcrumb Dự án" },
+        { "id": "case", "catalog": "projects", "variant": "detail-article", "source": "ba", "note": "Đánh dấu dữ liệu minh họa" },
+        { "id": "related", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "welding steel frame", "file": "assets/img/project-welded-frame.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "quality-process.html",
+      "title": "Chất lượng & Quy trình",
+      "purpose": "Timeline 6 bước từ tiếp nhận yêu cầu đến hoàn thiện; cách kiểm soát độ chính xác, tính nhất quán",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "timeline", "catalog": "process", "variant": "timeline", "source": "ba", "note": "6 bước BA liệt kê" },
+        { "id": "control", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Chính xác, nhất quán, kiểm soát sản xuất" },
+        { "id": "faq", "catalog": "faq", "variant": "faq", "source": "ai", "note": "Accordion" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "timeline", "query": "measuring machine inspection", "file": "assets/img/quality-inspection.jpg", "status": "ok" },
+        { "slot": "control", "query": "production line inspection workers", "file": "assets/img/quality-team-check.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "industries.html",
+      "title": "Ngành phục vụ",
+      "purpose": "5 lĩnh vực ứng dụng: nhu cầu kỹ thuật và vai trò của năng lực cơ khí",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "manufacturing", "catalog": "services", "variant": "features-alternate", "source": "ba", "note": "Sản xuất công nghiệp" },
+        { "id": "automation", "catalog": "services", "variant": "features-alternate", "source": "ba", "note": "Tự động hóa nhà máy" },
+        { "id": "machinery", "catalog": "services", "variant": "quote-full", "source": "ba", "note": "Máy móc và thiết bị kỹ thuật" },
+        { "id": "supporting", "catalog": "services", "variant": "features-bento", "source": "ba", "note": "Công nghiệp phụ trợ + Chế tạo và lắp ráp cơ khí" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "manufacturing", "query": "manufacturing production line", "file": "assets/img/ind-manufacturing.jpg", "status": "ok" },
+        { "slot": "automation", "query": "fanuc cobot programming", "file": "assets/img/ind-automation.jpg", "status": "ok" },
+        { "slot": "machinery", "query": "industrial machinery", "file": "assets/img/ind-machinery.webp", "status": "ok" },
+        { "slot": "supporting", "query": "injection molding factory vietnam", "file": "assets/img/ind-supporting.jpg", "status": "ok" },
+        { "slot": "assembly", "query": "mechanical assembly workers", "file": "assets/img/ind-assembly.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "contact.html",
+      "title": "Liên hệ",
+      "purpose": "Địa chỉ, email, điện thoại, giờ làm việc (khung mẫu chờ dữ liệu thật) và form liên hệ bản demo",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "contact", "catalog": "contact", "variant": "contact-page", "source": "ba", "note": "Thông tin để trống 'Đang cập nhật', không bản đồ vì chưa có địa chỉ thật; form data-form" },
+        { "id": "faq", "catalog": "faq", "variant": "faq", "source": "ai", "note": "Câu hỏi về gửi bản vẽ, báo giá" }
+      ],
+      "images": []
+    }
+  ],
+  "adjustments": [
+    "Font display Instrument Serif của preset thiếu ký tự tiếng Việt và BA yêu cầu phong cách Modern Industrial / Swiss → dùng Be Vietnam Pro (display) + Geist (body)",
+    "Màu preset editorial thay bằng bảng màu BA: Deep Navy #102A43, Ice White #F7FAFC, Steel Blue #627D98, Mint Green #5DD6B0, Graphite #243B53",
+    "URL dạng /about, /projects/project-name của BA được dựng thành file .html ở gốc (about.html, project-gearbox.html…) để chạy được bằng file:// và tải lại trực tiếp",
+    "Menu tiếng Việt theo ngôn ngữ đã chọn: Trang chủ, Giới thiệu, Năng lực, Công nghệ, Dự án, Chất lượng & Quy trình, Ngành phục vụ, Liên hệ",
+    "Header dùng menu thu gọn dưới 1280px (xl) để 8 mục menu luôn nằm trên một dòng",
+    "Không tạo thông số máy, chứng nhận, số liệu năng lực vì BA chưa cung cấp"
+  ],
+  "limitations": [
+    "Form liên hệ là bản demo, chưa có backend",
+    "Địa chỉ, email, điện thoại, giờ làm việc, mạng xã hội để 'Đang cập nhật' theo yêu cầu BA không tự tạo thông tin liên hệ giả; chưa nhúng bản đồ vì chưa có địa chỉ thật",
+    "Dự án là dữ liệu minh họa có đánh dấu rõ; 2 dự án trong lưới chưa có trang chi tiết",
+    "Ảnh lấy từ Openverse, một số giấy phép CC BY-NC / ND, cần thay bằng ảnh thật của doanh nghiệp khi đưa lên web thương mại"
+  ]
+}

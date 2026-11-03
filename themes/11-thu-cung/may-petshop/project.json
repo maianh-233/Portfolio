@@ -1,0 +1,34 @@
+{
+  "slug": "web-ban-do-va-dich-vu-cham-soc-thu-cunge",
+  "name": "Web Bán Đồ và Dịch Vụ Chăm Sóc Thú Cunge",
+  "projectType": "website",
+  "flow": "quick",
+  "createdAt": "2026-10-15T01:25:07.200Z",
+  "updatedAt": "2026-10-15T01:59:03.403Z",
+  "screen": "done",
+  "request": "Doanh nghiệp là một Spa thú cưng nhỏ chỉ có 1 tiệm . Chuyên bán đồ và cung cấp dịch vụ cho thú cưng. Bán thức ăn đồ chơi vật dụng cho thú cưng. Dịch vụ tắm cho thú cưng , tỉa lông cho thú cưng ,  giữ thú cưng theo giờ. Khách muốn một Landing Page giới thiệu về tiệm và các dịch vụ trong tiệm , Landing Page giúp khách hàng biết đến tiệm nhiều hơn , có thể mua đồ trong tiệm , có thể đặt lịch các dịch vụ trong tiệm. Khách muốn một trang chuyên nghiệp , đẹp dễ nhìn tông xanh nhạt pastel và trắng.",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\web-ban-do-va-dich-vu-cham-soc-thu-cunge\\prototype",
+    "builtAt": "2026-10-15T01:59:03.403Z",
+    "pages": [
+      "index.html"
+    ]
+  },
+  "job": {
+    "id": "acc9cbfa-3649-4fe1-8b80-1475f29af081",
+    "kind": "quick-prototype",
+    "status": "running",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\web-ban-do-va-dich-vu-cham-soc-thu-cunge\\prototype"
+  }
+}

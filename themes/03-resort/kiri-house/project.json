@@ -1,0 +1,84 @@
+{
+  "slug": "kiri-house",
+  "name": "KIRI HOUSE",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "KIRI HOUSE",
+    "purpose": "Thiết kế website giới thiệu KIRI HOUSE, một resort nghỉ dưỡng cao cấp lấy cảm hứng từ kiến trúc Nhật Bản đương đại, vườn thiền và triết lý sống tối giản.\n\nWebsite cần truyền tải cảm giác tĩnh tại, sâu lắng, riêng tư và giàu tính văn hóa. Vẻ đẹp đến từ sự cân bằng giữa kiến trúc, thiên nhiên, ánh sáng và vật liệu, thay vì những chi tiết trang trí cầu kỳ.\n\nĐịnh hướng: Japanese Zen Minimalism kết hợp Contemporary Ryokan — tối giản Nhật Bản, sang trọng tinh tế và gần gũi với thiên nhiên.\n\nKhông sử dụng hình ảnh anime, manga, đèn lồng trang trí đại trà, hoa anh đào xuất hiện dày đặc hoặc phong cách Nhật Bản thương mại hóa",
+    "audience": "Khách hàng du lịch muốn lưu trú",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. VISUAL IDENTITY\n\nBảng màu:\n\nInk Black #282A28: màu chữ, nền tối và các khu vực tạo chiều sâu.\n\nRice Paper #F3EFE5: màu nền chủ đạo, gợi giấy washi và không gian truyền thống.\n\nCedar #8C6A4F: màu nhấn từ gỗ tự nhiên.\n\nSage #A3AA91: màu phụ lấy cảm hứng từ rêu, vườn và cây xanh.\n\nVermilion #A94A3D: màu nhấn nhỏ, sử dụng có kiểm soát.\n\nRice Paper chiếm phần lớn diện tích website. Ink Black tạo độ tương phản; Cedar và Sage xuất hiện trong các chi tiết và section liên quan đến kiến trúc, thiên nhiên. Vermilion chỉ dùng ở một số điểm nhấn nhỏ.\n\nTypography:\n\nTiêu đề sử dụng serif thanh lịch, nét mảnh và có cảm giác tĩnh tại.\n\nNội dung sử dụng sans-serif hiện đại, dễ đọc.\n\nCó thể sử dụng Cormorant Garamond cho tiêu đề và Be Vietnam Pro cho nội dung, bảo đảm hiển thị tiếng Việt chính xác.\n\nKết hợp tiêu đề lớn, nhãn section nhỏ và chú thích ảnh tối giản.\n\nBố cục:\n\nƯu tiên khoảng trắng rộng, đường kẻ mảnh và bố cục bất đối xứng.\n\nKết hợp ảnh ngang lớn, ảnh dọc và các vùng nội dung ngắn.\n\nSử dụng đường nét hình học đơn giản, gợi khung cửa trượt và tỷ lệ kiến trúc Nhật.\n\nTránh quá nhiều card, bo góc lớn, gradient sặc sỡ hoặc bố cục giống dashboard.\n\nHình ảnh:\nƯu tiên ảnh chụp thực tế về kiến trúc gỗ, cửa trượt shoji, vườn thiền, đá tự nhiên, rêu, hồ nước, hành lang gỗ và ánh sáng xuyên qua rèm hoặc khung cửa.\n\nHình ảnh cần có tông màu tự nhiên, ánh sáng dịu và bố cục có chiều sâu. Không lặp lại cùng một ảnh ở nhiều section nếu có thể.\n\n3. TRANG CHỦ — HOME\n\nHeader\n\nNền Rice Paper, logo KIRI HOUSE đặt bên trái.\n\nMenu ngang gồm: Trang chủ, Giới thiệu, Lưu trú, Trải nghiệm.\n\nCông tắc ngôn ngữ VI / EN ở bên phải.\n\nHeader gọn nhẹ, có thể chuyển sang trạng thái cố định khi cuộn.\n\nMenu sử dụng hiệu ứng hover tinh tế, không có biểu tượng trang trí dư thừa.\n\nHero\nSử dụng ảnh kiến trúc gỗ nhìn ra vườn Nhật, mặt nước hoặc khoảng sân thiền trong ánh sáng buổi sáng.\n\nTiêu đề: “The Art of Quiet Living”.\n\nMô tả ngắn về triết lý nghỉ dưỡng và sự cân bằng giữa con người với thiên nhiên.\n\nNút “Discover KIRI HOUSE” dẫn đến phần giới thiệu.\n\nCó thể đặt chữ lệch về một bên để giữ lại không gian hình ảnh.\n\nSử dụng overlay rất nhẹ nếu cần tăng độ tương phản.\n\nHero cần tạo cảm giác tĩnh lặng ngay từ lần đầu truy cập, không sử dụng quá nhiều chữ hoặc hiệu ứng.\n\nTriết lý nghỉ dưỡng\n\nNền Rice Paper, khoảng trắng rộng.\n\nMột câu giới thiệu thương hiệu bằng typography lớn.\n\nĐoạn mô tả về sự tối giản, tính riêng tư và khả năng tận hưởng những khoảnh khắc chậm rãi.\n\nCó thể bổ sung một ảnh chi tiết về vật liệu gỗ hoặc khu vườn.\n\nKiến trúc và thiên nhiên\n\nSử dụng ảnh kiến trúc lớn kết hợp ảnh chi tiết.\n\nGiới thiệu mối liên hệ giữa ánh sáng, gỗ, đá, nước và cảnh quan.\n\nChú thích ảnh ngắn, đặt gọn bên dưới hoặc cạnh hình ảnh.\n\nBố cục lệch trục để tạo cảm giác như một tạp chí kiến trúc cao cấp.\n\nKhông gian lưu trú\nGiới thiệu ba loại hình:\n\nJapanese Suite.\n\nGarden Villa.\n\nSignature Residence.\n\nMỗi loại có ảnh riêng, tên gọi, mô tả ngắn và liên kết đến trang Lưu trú. Sử dụng bố cục xen kẽ thay vì ba card giống hệt nhau.\n\nTiện ích nghỉ dưỡng\nGiới thiệu:\n\nZen Garden.\n\nTea House.\n\nWellness Spa.\n\nSeasonal Dining.\n\nQuiet Water Garden.\n\nMỗi tiện ích có ảnh và nội dung ngắn, tập trung vào không gian, vật liệu và trải nghiệm. Không sử dụng biểu tượng nhiều màu hoặc cách trình bày như danh sách dịch vụ thương mại.\n\nTriết lý KIRI HOUSE\nMột section có nền Sage rất nhẹ hoặc Rice Paper, trình bày ba giá trị:\n\nStillness — Sự tĩnh tại.\n\nHarmony — Sự hài hòa.\n\nSimplicity — Vẻ đẹp của tối giản.\n\nFooter\nNền Ink Black, chữ Rice Paper.\n\nBao gồm logo, một câu thông điệp thương hiệu, liên kết bốn trang, thông tin liên hệ mẫu và bản quyền. Giữ bố cục thoáng, đường phân cách mảnh và hạn chế chi tiết trang trí.\n\n4. TRANG GIỚI THIỆU — ABOUT\n\nHero\nẢnh hành lang gỗ nhìn ra vườn, với ánh sáng tự nhiên tạo bóng đổ trên sàn.\n\nTiêu đề: “A Philosophy of Space and Stillness”.\n\nCâu chuyện thương hiệu\n\nBố cục hai cột bất đối xứng.\n\nMột bên là nội dung giới thiệu, một bên là ảnh kiến trúc hoặc khu vườn.\n\nTrình bày cảm hứng từ kiến trúc Nhật Bản, sự tối giản và mối liên hệ giữa con người với thiên nhiên.\n\nKhông tự tạo lịch sử thương hiệu, giải thưởng hoặc thành tựu chưa được cung cấp.\n\nKiến trúc và vật liệu\nGiới thiệu những yếu tố tạo nên bản sắc KIRI HOUSE:\n\nGỗ tự nhiên và bề mặt mộc.\n\nCửa trượt và khung cửa có tỷ lệ cân đối.\n\nĐá, rêu và mặt nước.\n\nÁnh sáng tự nhiên.\n\nKhông gian chuyển tiếp giữa trong nhà và ngoài trời.\n\nSử dụng ảnh lớn kết hợp chú thích ngắn, tạo cảm giác của một bài viết chuyên sâu về kiến trúc.\n\nTriết lý hiếu khách\nTrình bày ba giá trị:\n\nThoughtful Hospitality.\n\nRespect for Nature.\n\nThe Beauty of Simplicity.\n\nMỗi giá trị có đoạn giải thích ngắn, tránh sử dụng các khẩu hiệu chung chung hoặc nội dung quảng cáo quá mức.\n\nGallery kiến trúc\nKết hợp ảnh hành lang, phòng nghỉ, vườn thiền và chi tiết vật liệu. Sắp xếp ảnh theo nhịp điệu tự nhiên, không sử dụng lưới ảnh đồng nhất.\n\nSection kết thúc\nTiêu đề: “Find Your Quiet Place”.\n\nNút “Explore Our Stays” dẫn đến trang Lưu trú.\n\n5. TRANG PHÒNG, VILLA & TIỆN ÍCH — STAYS\n\nHero\nẢnh phòng nghỉ có cửa trượt nhìn ra vườn riêng.\n\nTiêu đề: “Spaces for a Slower Rhythm”.\n\nJapanese Suite\n\nẢnh phòng nghỉ với gỗ tự nhiên, nội thất tối giản và ánh sáng dịu.\n\nMô tả về cách bố trí không gian và cảm giác thư thái.\n\nGiới thiệu các tiện nghi nổi bật bằng danh sách ngắn.\n\nBố cục ảnh lớn kết hợp phần nội dung gọn gàng.\n\nGarden Villa\n\nẢnh villa nhìn ra vườn, có thể kết hợp khung cửa trượt và sân riêng.\n\nMô tả về sự riêng tư, kết nối với thiên nhiên và không gian mở.\n\nSử dụng bố cục đảo chiều so với Japanese Suite.\n\nSignature Residence\n\nẢnh kiến trúc hoặc không gian lưu trú rộng.\n\nMô tả về trải nghiệm nghỉ dưỡng riêng tư, vật liệu và thiết kế.\n\nBố cục ảnh ngang lớn kết hợp một ảnh chi tiết dọc.\n\nNếu phù hợp với thiết kế thực tế, có thể giới thiệu Private Onsen Villa như một lựa chọn bổ sung. Không mặc định mọi khu lưu trú đều có onsen riêng.\n\nTiện ích\nGiới thiệu các khu vực:\n\nTea House — trà thất.\n\nZen Garden — vườn thiền.\n\nWellness Spa — không gian chăm sóc và thư giãn.\n\nSeasonal Restaurant — nhà hàng theo mùa.\n\nQuiet Water Garden — khu vườn và mặt nước tĩnh lặng.\n\nMỗi tiện ích cần có ảnh riêng, mô tả ngắn và bố cục phù hợp. Kết hợp các section nền Rice Paper, Sage và những chi tiết Cedar.\n\nChi tiết kiến trúc\nMột section ảnh cận cảnh về gỗ, giấy shoji, đá, vải tự nhiên và ánh sáng. Giúp trang có chiều sâu thị giác thay vì chỉ giới thiệu từng loại phòng.\n\nSection kết thúc\nTiêu đề: “A Space to Simply Be”.\n\nNút điều hướng về trang chủ hoặc trang Giới thiệu.\n\nKhông hiển thị giá phòng, lịch phòng trống hoặc nút đặt phòng.\n\n6. TRANG TRẢI NGHIỆM & KHÁM PHÁ — EXPERIENCES\n\nHero\nẢnh vườn thiền vào sáng sớm, có sương nhẹ nếu phù hợp với ảnh thực tế.\n\nTiêu đề: “Moments of Mindful Living”.\n\nMô tả ngắn về những trải nghiệm kết nối với thiên nhiên, văn hóa và nhịp sống chậm.\n\nTea Ritual\nGiới thiệu trải nghiệm thưởng trà trong không gian yên tĩnh.\n\nSử dụng hình ảnh trà thất, bộ ấm chén và ánh sáng tự nhiên. Nội dung tập trung vào sự tinh tế của không gian và khoảnh khắc thưởng trà, không biến thành trang bán sản phẩm.\n\nMeditation & Zen Garden\n\nẢnh vườn thiền, đá, rêu và lối đi.\n\nMô tả về việc dành thời gian tĩnh tâm và tận hưởng không gian thiên nhiên.\n\nBố cục tối giản, ưu tiên hình ảnh và khoảng trắng.\n\nSeasonal Dining\nGiới thiệu trải nghiệm ẩm thực theo mùa, nguyên liệu và cách trình bày món ăn.\n\nSử dụng ảnh món ăn, bàn gỗ và không gian nhà hàng nhìn ra vườn. Tránh tuyên bố chưa được xác thực về nguồn nguyên liệu hoặc lợi ích sức khỏe.\n\nWellness & Reconnection\nGiới thiệu không gian spa, thư giãn và chăm sóc bản thân. Tập trung vào cảm giác nghỉ ngơi, ánh sáng, vật liệu và sự riêng tư.\n\nCultural Discovery\nGiới thiệu những nét văn hóa địa phương có thể khám phá xung quanh resort. Chỉ đưa thông tin địa điểm cụ thể khi có dữ liệu phù hợp; không tự tạo các hoạt động hoặc địa danh không có thật.\n\nGallery\nBố cục ảnh tự do, kết hợp kiến trúc, trà đạo, thiên nhiên và ẩm thực. Hiệu ứng hover nhẹ, không xoay ảnh hoặc sử dụng chuyển động phô trương.\n\nSection kết thúc\nNền Rice Paper, tiêu đề lớn:\n\n“Return to What Matters.”\n\nMột đoạn văn ngắn về sự tĩnh tại, cân bằng và những khoảnh khắc dành riêng cho bản thân.\n\nNút “Return to KIRI HOUSE” dẫn về trang chủ.\n\n7. MOTION & INTERACTION\n\nSử dụng hiệu ứng vừa đủ:\n\nFade-in nhẹ khi section xuất hiện.\n\nẢnh phóng to rất nhẹ khi hover.\n\nHeader chuyển trạng thái mềm khi cuộn.\n\nĐường kẻ hoặc chữ có hiệu ứng xuất hiện tinh tế.\n\nChuyển tiếp màu nền nhẹ giữa các section.\n\nMenu mobile mở và đóng mượt mà.\n\nKhông sử dụng hiệu ứng bay, xoay, parallax mạnh, neon hoặc hiệu ứng công nghệ không phù hợp với tinh thần Zen.\n\nTôn trọng cài đặt giảm chuyển động của người dùng. Đảm bảo nội dung vẫn dễ đọc và sử dụng khi tắt animation.\n\n8. TECHNICAL REQUIREMENTS\n\nCấu trúc trang:\n\nindex.html — Trang chủ.\n\nabout.html — Giới thiệu.\n\nstays.html — Phòng, villa & tiện ích.\n\nexperiences.html — Trải nghiệm & khám phá.\n\nSử dụng HTML, CSS và JavaScript thuần. Có thể tổ chức CSS, JavaScript và hình ảnh trong thư mục dùng chung để tránh lặp mã giữa các trang.\n\nĐiều hướng:\n\nHeader và footer thống nhất.\n\nLogo dẫn về trang chủ.\n\nCác liên kết điều hướng chính xác.\n\nMenu mobile hoạt động đầy đủ.\n\nKhông để nút giả hoặc liên kết không có mục đích.\n\nChuyển đổi VI / EN:\n\nCó công tắc ngôn ngữ trên cả bốn trang.\n\nDịch đầy đủ menu, tiêu đề, mô tả, nút, chú thích ảnh và footer.\n\nChuyển ngôn ngữ nhưng vẫn giữ nguyên trang đang xem.\n\nLưu lựa chọn ngôn ngữ bằng localStorage.\n\nCó thể sử dụng data-vi, data-en và JavaScript.\n\nCập nhật thuộc tính lang của HTML theo ngôn ngữ đang hiển thị.\n\nĐảm bảo font chữ hỗ trợ tiếng Việt và không lỗi dấu.\n\nResponsive:\n\nDesktop: bố cục rộng, bất đối xứng và nhiều khoảng trắng.\n\nTablet: điều chỉnh kích thước ảnh, khoảng cách và tỷ lệ cột.\n\nMobile: bố cục một cột, menu thu gọn, chữ dễ đọc và ảnh không bị méo.\n\nKhông để nội dung tràn hoặc xuất hiện cuộn ngang ngoài ý muốn.\n\nHình ảnh và hiệu năng:\n\nƯu tiên ảnh thực tế, đúng concept và có URL tải ổn định.\n\nCó ảnh dự phòng khi ảnh chính không tải được.\n\nKhông để ảnh lỗi hoặc khung ảnh trống.\n\nLazy-load ảnh nằm bên dưới hero.\n\nBổ sung alt text phù hợp cho hình ảnh.\n\n9. GIỚI HẠN CHỨC NĂNG\n\nWebsite chỉ dùng để giới thiệu thương hiệu và trải nghiệm nghỉ dưỡng.\n\nKhông triển khai:\n\nĐặt phòng.\n\nĐặt lịch spa, trà đạo hoặc thiền.\n\nĐặt dịch vụ.\n\nGiỏ hàng.\n\nThanh toán.\n\nMua bán trực tuyến.\n\nCác nút CTA chỉ phục vụ việc khám phá nội dung và điều hướng giữa các trang.\n\n10. TIÊU CHÍ HOÀN THÀNH\n\nCó đủ bốn trang HTML riêng biệt.\n\nMỗi trang có bố cục riêng, không lặp lại cùng một template.\n\nPhong cách Japanese Zen Minimalism thể hiện rõ qua hình ảnh, typography và khoảng trắng.\n\nMàu sắc được sử dụng nhất quán, Vermilion chỉ làm điểm nhấn nhỏ.\n\nĐiều hướng hoạt động chính xác.\n\nChuyển đổi VI / EN hoàn chỉnh.\n\nResponsive trên desktop, tablet và mobile.\n\nHiệu ứng nhẹ, không làm giảm trải nghiệm.\n\nKhông có chức năng đặt phòng, đặt dịch vụ hoặc giao dịch.\n\nYêu cầu cuối cùng: Tạo một website giới thiệu resort Nhật Bản đương đại có chiều sâu văn hóa, chất lượng hình ảnh cao và trải nghiệm tinh tế. Ưu tiên kiến trúc, vật liệu, ánh sáng và sự tĩnh tại. Mỗi trang cần có cá tính riêng nhưng vẫn duy trì một hệ thống nhận diện thương hiệu thống nhất.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-29T02:59:54.117Z",
+  "updatedAt": "2026-10-29T03:18:30.482Z",
+  "screen": "done",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\kiri-house\\web",
+    "builtAt": "2026-10-29T03:18:16.575Z",
+    "pages": [
+      "index.html",
+      "pages/about.html",
+      "pages/experiences.html",
+      "pages/stays.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "pages/about.html": [],
+      "pages/experiences.html": [],
+      "pages/stays.html": []
+    }
+  },
+  "job": {
+    "id": "396f8cd0-349f-4363-bfd1-e17c0327c7bd",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\kiri-house\\web",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 214258,
+      "outputTokens": 139978,
+      "cacheReadTokens": 4871876,
+      "cacheCreationTokens": 243324,
+      "costUsd": 4.950295899999999,
+      "numTurns": 105,
+      "durationMs": 995573
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-29T03:18:27.262Z",
+    "critical": 0,
+    "major": 48,
+    "minor": 1,
+    "screenshots": 12
+  }
+}

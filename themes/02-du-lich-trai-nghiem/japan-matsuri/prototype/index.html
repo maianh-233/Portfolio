@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JAPAN MATSURI — Chạm vào văn hóa Nhật Bản qua từng mùa lễ hội</title>
+  <meta name="description" content="JAPAN MATSURI giới thiệu các lễ hội truyền thống Nhật Bản theo mùa và vùng miền: Gion Matsuri, Aomori Nebuta, Awa Odori, Sapporo Snow Festival và gợi ý trải nghiệm cho du khách.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-ivory font-sans text-sumi">
+
+<header id="top" data-header="shrink" class="site-header sticky top-0 z-50 border-b border-sumi/10 bg-ivory/90 backdrop-blur">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="group flex items-center gap-3 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shu" aria-label="JAPAN MATSURI, về trang chủ">
+      <span aria-hidden="true" class="grid h-10 w-10 -rotate-3 place-items-center rounded-md bg-shu text-lg font-bold text-ivory transition-transform duration-300 group-hover:rotate-0">祭</span>
+      <span class="font-display text-lg tracking-[0.08em] text-sumi sm:text-xl">JAPAN MATSURI</span>
+    </a>
+    <nav aria-label="Điều hướng chính" class="hidden lg:block">
+      <ul class="flex items-center gap-10 text-[15px] font-semibold">
+        <li><a href="index.html" aria-current="page" class="relative py-2 text-sumi-soft transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-shu after:transition-transform after:duration-500 after:ease-expo hover:text-shu hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-sumi aria-[current=page]:after:scale-x-100">Trang chủ</a></li>
+        <li><a href="le-hoi.html" class="relative py-2 text-sumi-soft transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-shu after:transition-transform after:duration-500 after:ease-expo hover:text-shu hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-sumi aria-[current=page]:after:scale-x-100">Khám phá lễ hội</a></li>
+        <li><a href="index.html#gioi-thieu" class="relative py-2 text-sumi-soft transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-right after:scale-x-0 after:bg-shu after:transition-transform after:duration-500 after:ease-expo hover:text-shu hover:after:origin-left hover:after:scale-x-100">Giới thiệu</a></li>
+      </ul>
+    </nav>
+    <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center rounded-full text-sumi ring-1 ring-sumi/20 transition hover:bg-washi lg:hidden" aria-label="Mở menu">
+      <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-2xl bg-ivory p-6 shadow-2xl ring-1 ring-sumi/10 lg:hidden">
+    <nav aria-label="Menu điện thoại">
+      <ul class="flex flex-col divide-y divide-sumi/10 font-display text-2xl">
+        <li><a href="index.html" aria-current="page" class="flex min-h-[52px] items-center text-shu">Trang chủ</a></li>
+        <li><a href="le-hoi.html" class="flex min-h-[52px] items-center text-sumi hover:text-shu">Khám phá lễ hội</a></li>
+        <li><a href="index.html#gioi-thieu" class="flex min-h-[52px] items-center text-sumi hover:text-shu">Giới thiệu</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="hero" data-section="hero-split" class="relative overflow-hidden bg-sumi text-ivory">
+    <div class="lantern-line lantern-line--light absolute inset-x-0 top-3 z-10" aria-hidden="true"></div>
+    <div class="grid lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12">
+      <div class="flex flex-col justify-center px-4 pb-14 pt-16 sm:px-6 lg:col-span-6 lg:py-20 lg:pl-[max(2.5rem,calc((100vw-1536px)/2+2.5rem))] lg:pr-12 2xl:pl-[max(4rem,calc((100vw-1536px)/2+4rem))]">
+        <p data-reveal="fade" class="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-[#F08A7E]">Chạm vào văn hóa Nhật Bản qua từng mùa lễ hội</p>
+        <h1 data-reveal="up" class="font-display text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-[4.25rem] 2xl:text-[5.25rem]">Nhật Bản – Nơi mỗi mùa <em class="italic text-[#F08A7E]">đều có một lễ hội</em></h1>
+        <p data-reveal="up" class="mt-7 max-w-[34rem] text-lg leading-relaxed text-ivory/80">Theo dấu đèn lồng, xe rước và pháo hoa qua bốn mùa, từ phố cổ Kyoto đến công viên tuyết Sapporo.</p>
+        <div data-reveal="up" data-reveal-delay="200" class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="le-hoi.html" class="group inline-flex min-h-[52px] items-center justify-center gap-3 rounded-full bg-shu px-8 text-base font-semibold text-ivory transition duration-300 hover:bg-[#C93C33] active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-sumi">
+            Khám phá lễ hội
+            <svg aria-hidden="true" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#theo-mua" class="inline-flex min-h-[52px] items-center justify-center rounded-full px-8 text-base font-semibold text-ivory ring-1 ring-ivory/35 transition duration-300 hover:bg-ivory hover:text-sumi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory">Xem theo mùa</a>
+        </div>
+      </div>
+      <figure class="relative min-h-[64vh] lg:col-span-6 lg:min-h-0">
+        <img src="assets/img/hero-nebuta-dem.jpg" alt="Xe đèn lồng Nebuta hình chiến binh có sừng, sáng rực trong đêm cùng hàng đèn lồng chữ" width="699" height="1024" class="photo-tone absolute inset-0 h-full w-full object-cover object-[50%_30%]">
+        <div class="absolute inset-0 bg-gradient-to-t from-sumi/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-sumi lg:via-sumi/10 lg:to-transparent" aria-hidden="true"></div>
+        <figcaption class="absolute bottom-5 right-5 rounded-full bg-sumi/70 px-4 py-2 text-sm text-ivory/90 backdrop-blur">Xe đèn Nebuta, Aomori</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- LỄ HỘI NỔI BẬT -->
+  <section id="le-hoi-noi-bat" data-section="teaser-row" class="bg-ivory py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div class="max-w-2xl">
+          <h2 data-reveal="up" class="font-display text-4xl leading-tight sm:text-5xl 2xl:text-6xl">Lễ hội nổi bật</h2>
+          <p data-reveal="up" class="mt-4 text-[17px] leading-relaxed text-sumi-muted">Bốn lễ hội mở đầu cho hành trình: rước xe giữa cố đô, đèn lồng khổng lồ, điệu múa Obon và thành phố tuyết.</p>
+        </div>
+        <a href="le-hoi.html" class="group inline-flex min-h-[44px] items-center gap-2 self-start font-semibold text-shu hover:text-shu-deep sm:self-auto">Xem tất cả lễ hội
+          <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-12">
+        <a href="le-hoi-chi-tiet.html?slug=gion-matsuri" data-reveal="up" class="group relative flex min-h-[460px] flex-col justify-end overflow-hidden rounded-2xl bg-washi-deep p-6 text-ivory sm:p-10 lg:col-span-7 lg:min-h-[640px]">
+          <img src="assets/img/le-hoi-gion-matsuri.jpg" alt="Đoàn người mặc áo trắng kéo cỗ xe rước Gion Matsuri qua phố Kyoto" width="1024" height="662" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          <div class="absolute inset-0 bg-gradient-to-t from-sumi via-sumi/60 to-sumi/5" aria-hidden="true"></div>
+          <div class="relative max-w-xl">
+            <p class="flex flex-wrap items-center gap-3 text-sm text-ivory/85"><span class="hanko text-[#F5A097]">Hạ</span> Kyoto, thường suốt tháng 7</p>
+            <h3 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Gion Matsuri</h3>
+            <p class="mt-3 text-[16px] leading-relaxed text-ivory/85">Những cỗ xe Yamahoko phủ thảm dệt rước qua trung tâm cố đô, di sản của các khu phố Kyoto.</p>
+            <span class="mt-5 inline-flex min-h-[44px] items-center gap-2 font-semibold">Xem chi tiết
+              <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <div class="grid gap-6 lg:col-span-5" data-reveal="up">
+          <a href="le-hoi-chi-tiet.html?slug=aomori-nebuta" class="group grid min-w-0 grid-cols-[7.5rem_1fr] items-stretch gap-5 overflow-hidden rounded-2xl bg-washi p-3 transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-30px_rgba(31,28,28,.6)] sm:grid-cols-[11rem_1fr]">
+            <span class="block overflow-hidden rounded-xl bg-washi-deep"><img src="assets/img/le-hoi-aomori-nebuta.jpg" alt="Xe đèn lồng Nebuta hình võ tướng cầm giáo" width="1024" height="768" loading="lazy" class="h-full min-h-[9rem] w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.06]"></span>
+            <span class="flex min-w-0 flex-col justify-center gap-1.5 py-2 pr-3">
+              <span class="text-sm text-sumi-muted">Aomori, đầu tháng 8</span>
+              <span class="font-display text-2xl leading-tight text-sumi group-hover:text-shu">Aomori Nebuta</span>
+              <span class="text-[15px] leading-snug text-sumi-muted">Xe đèn lồng khổng lồ và tiếng hô "Rassera".</span>
+            </span>
+          </a>
+          <a href="le-hoi-chi-tiet.html?slug=awa-odori" class="group grid min-w-0 grid-cols-[7.5rem_1fr] items-stretch gap-5 overflow-hidden rounded-2xl bg-washi p-3 transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-30px_rgba(31,28,28,.6)] sm:grid-cols-[11rem_1fr]">
+            <span class="block overflow-hidden rounded-xl bg-washi-deep"><img src="assets/img/le-hoi-awa-odori.jpg" alt="Vũ công Awa Odori đội nón rơm trên sân khấu" width="1024" height="683" loading="lazy" class="h-full min-h-[9rem] w-full object-cover object-[50%_70%] transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.06]"></span>
+            <span class="flex min-w-0 flex-col justify-center gap-1.5 py-2 pr-3">
+              <span class="text-sm text-sumi-muted">Tokushima, dịp Obon tháng 8</span>
+              <span class="font-display text-2xl leading-tight text-sumi group-hover:text-shu">Awa Odori</span>
+              <span class="text-[15px] leading-snug text-sumi-muted">Điệu múa của những nhóm ren nhảy khắp phố.</span>
+            </span>
+          </a>
+          <a href="le-hoi-chi-tiet.html?slug=sapporo-snow-festival" class="group grid min-w-0 grid-cols-[7.5rem_1fr] items-stretch gap-5 overflow-hidden rounded-2xl bg-washi p-3 transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-30px_rgba(31,28,28,.6)] sm:grid-cols-[11rem_1fr]">
+            <span class="block overflow-hidden rounded-xl bg-washi-deep"><img src="assets/img/le-hoi-sapporo-snow.jpg" alt="Tượng tuyết lớn ở Công viên Odori, Sapporo" width="1024" height="576" loading="lazy" class="h-full min-h-[9rem] w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.06]"></span>
+            <span class="flex min-w-0 flex-col justify-center gap-1.5 py-2 pr-3">
+              <span class="text-sm text-sumi-muted">Hokkaido, đầu tháng 2</span>
+              <span class="font-display text-2xl leading-tight text-sumi group-hover:text-shu">Sapporo Snow Festival</span>
+              <span class="text-[15px] leading-snug text-sumi-muted">Tượng tuyết và băng giữa lòng thành phố.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KHÁM PHÁ THEO MÙA -->
+  <section id="theo-mua" data-section="features-tabs" class="washi-texture py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-tight sm:text-5xl 2xl:text-6xl">Khám phá theo mùa</h2>
+      <p data-reveal="up" class="mt-4 max-w-2xl text-[17px] leading-relaxed text-sumi-muted">Mỗi mùa ở Nhật Bản mang một nhịp lễ hội riêng. Chọn mùa bạn định đi để xem những lễ hội đang chờ.</p>
+
+      <div data-tabs class="mt-12">
+        <div role="tablist" aria-label="Chọn mùa" class="relative flex gap-2 overflow-x-auto border-b border-sumi/15 sm:gap-8">
+          <button type="button" data-tab="xuan" class="min-h-[52px] shrink-0 px-3 font-display text-2xl text-sumi-muted transition-colors duration-300 hover:text-sumi [&.is-active]:text-shu sm:px-1 sm:text-3xl">Xuân</button>
+          <button type="button" data-tab="ha" class="min-h-[52px] shrink-0 px-3 font-display text-2xl text-sumi-muted transition-colors duration-300 hover:text-sumi [&.is-active]:text-shu sm:px-1 sm:text-3xl">Hạ</button>
+          <button type="button" data-tab="thu" class="min-h-[52px] shrink-0 px-3 font-display text-2xl text-sumi-muted transition-colors duration-300 hover:text-sumi [&.is-active]:text-shu sm:px-1 sm:text-3xl">Thu</button>
+          <button type="button" data-tab="dong" class="min-h-[52px] shrink-0 px-3 font-display text-2xl text-sumi-muted transition-colors duration-300 hover:text-sumi [&.is-active]:text-shu sm:px-1 sm:text-3xl">Đông</button>
+          <span data-tab-indicator class="bottom-0 h-0.5 bg-shu" aria-hidden="true"></span>
+        </div>
+
+        <div data-tab-panel="xuan" class="grid items-center gap-10 pt-10 lg:grid-cols-12 lg:gap-14">
+          <div class="overflow-hidden rounded-2xl bg-washi-deep lg:col-span-7"><img src="assets/img/mua-xuan-hanami.jpg" alt="Cây anh đào rủ nở hồng trước tường chùa ở Kyoto" width="1024" height="681" loading="lazy" class="photo-tone aspect-[16/10] w-full object-cover"></div>
+          <div class="lg:col-span-5">
+            <p class="text-sm font-semibold text-shu">Thường từ tháng 3 đến tháng 5</p>
+            <h3 class="mt-3 font-display text-3xl leading-tight sm:text-4xl">Mùa của hoa anh đào</h3>
+            <p class="mt-4 text-[17px] leading-relaxed text-sumi-muted">Người Nhật trải bạt dưới tán hoa, cùng ăn uống và ngắm mùa xuân ngắn ngủi. Ở miền bắc, hoa nở muộn hơn và kéo dài sang đầu tháng 5.</p>
+            <ul class="mt-6 divide-y divide-sumi/10 border-y border-sumi/10">
+              <li><a href="le-hoi-chi-tiet.html?slug=hirosaki-cherry-blossom" class="group flex min-h-[52px] items-center justify-between gap-4 font-semibold hover:text-shu">Hirosaki Cherry Blossom Festival <span class="text-sm font-normal text-sumi-muted">Aomori</span></a></li>
+            </ul>
+            <a href="le-hoi.html?mua=xuan" class="group mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-sumi px-6 font-semibold text-ivory transition duration-300 hover:bg-shu active:scale-[.98]">Lễ hội mùa Xuân
+              <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div data-tab-panel="ha" class="grid items-center gap-10 pt-10 lg:grid-cols-12 lg:gap-14">
+          <div class="overflow-hidden rounded-2xl bg-washi-deep lg:col-span-7"><img src="assets/img/le-hoi-awa-odori-2.jpg" alt="Dây đèn lồng vàng treo giữa tán cây tại lễ hội Bon Odori mùa hè ở Sapporo" width="1024" height="683" loading="lazy" class="photo-tone aspect-[16/10] w-full object-cover"></div>
+          <div class="lg:col-span-5">
+            <p class="text-sm font-semibold text-shu">Thường từ tháng 6 đến tháng 8</p>
+            <h3 class="mt-3 font-display text-3xl leading-tight sm:text-4xl">Mùa cao điểm của Matsuri</h3>
+            <p class="mt-4 text-[17px] leading-relaxed text-sumi-muted">Mùa hè dày đặc lễ hội: xe rước, đèn lồng, điệu múa Obon và những đêm pháo hoa bên sông.</p>
+            <ul class="mt-6 divide-y divide-sumi/10 border-y border-sumi/10">
+              <li><a href="le-hoi-chi-tiet.html?slug=gion-matsuri" class="flex min-h-[52px] items-center justify-between gap-4 font-semibold hover:text-shu">Gion Matsuri <span class="text-sm font-normal text-sumi-muted">Kyoto</span></a></li>
+              <li><a href="le-hoi-chi-tiet.html?slug=aomori-nebuta" class="flex min-h-[52px] items-center justify-between gap-4 font-semibold hover:text-shu">Aomori Nebuta Matsuri <span class="text-sm font-normal text-sumi-muted">Aomori</span></a></li>
+              <li><a href="le-hoi-chi-tiet.html?slug=awa-odori" class="flex min-h-[52px] items-center justify-between gap-4 font-semibold hover:text-shu">Awa Odori <span class="text-sm font-normal text-sumi-muted">Tokushima</span></a></li>
+              <li><a href="le-hoi-chi-tiet.html?slug=sumidagawa-hanabi" class="flex min-h-[52px] items-center justify-between gap-4 font-semibold hover:text-shu">Sumidagawa Fireworks Festival <span class="text-sm font-normal text-sumi-muted">Tokyo</span></a></li>
+            </ul>
+            <a href="le-hoi.html?mua=ha" class="group mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-sumi px-6 font-semibold text-ivory transition duration-300 hover:bg-shu active:scale-[.98]">Lễ hội mùa Hạ
+              <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div data-tab-panel="thu" class="grid items-center gap-10 pt-10 lg:grid-cols-12 lg:gap-14">
+          <div class="overflow-hidden rounded-2xl bg-washi-deep lg:col-span-7"><img src="assets/img/mua-thu-la-do.jpg" alt="Lá phong đỏ bên hồ nước và cây cầu đá trong vườn chùa ở Kyoto" width="1024" height="681" loading="lazy" class="photo-tone aspect-[16/10] w-full object-cover"></div>
+          <div class="lg:col-span-5">
+            <p class="text-sm font-semibold text-shu">Thường từ tháng 9 đến tháng 11</p>
+            <h3 class="mt-3 font-display text-3xl leading-tight sm:text-4xl">Mùa lá đỏ và lễ hội đền</h3>
+            <p class="mt-4 text-[17px] leading-relaxed text-sumi-muted">Trời dịu lại, các đền tổ chức lễ hội mùa thu với xe rước chạm khắc và đoàn trang phục cổ.</p>
+            <ul class="mt-6 divide-y divide-sumi/10 border-y border-sumi/10">
+              <li><a href="le-hoi-chi-tiet.html?slug=takayama-mua-thu" class="flex min-h-[52px] items-center justify-between gap-4 font-semibold hover:text-shu">Takayama Autumn Festival <span class="text-sm font-normal text-sumi-muted">Gifu</span></a></li>
+              <li><a href="le-hoi-chi-tiet.html?slug=jidai-matsuri" class="flex min-h-[52px] items-center justify-between gap-4 font-semibold hover:text-shu">Jidai Matsuri <span class="text-sm font-normal text-sumi-muted">Kyoto</span></a></li>
+            </ul>
+            <a href="le-hoi.html?mua=thu" class="group mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-sumi px-6 font-semibold text-ivory transition duration-300 hover:bg-shu active:scale-[.98]">Lễ hội mùa Thu
+              <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div data-tab-panel="dong" class="grid items-center gap-10 pt-10 lg:grid-cols-12 lg:gap-14">
+          <div class="overflow-hidden rounded-2xl bg-washi-deep lg:col-span-7"><img src="assets/img/mua-dong-tuyet.jpg" alt="Nhà mái tranh phủ tuyết dưới dãy núi trắng ở Shirakawa-go" width="1024" height="683" loading="lazy" class="photo-tone aspect-[16/10] w-full object-cover"></div>
+          <div class="lg:col-span-5">
+            <p class="text-sm font-semibold text-shu">Thường từ tháng 12 đến tháng 2</p>
+            <h3 class="mt-3 font-display text-3xl leading-tight sm:text-4xl">Mùa của tuyết và ánh sáng</h3>
+            <p class="mt-4 text-[17px] leading-relaxed text-sumi-muted">Miền bắc phủ tuyết trắng, các thành phố biến mùa đông dài thành lễ hội tượng tuyết và đèn chiếu.</p>
+            <ul class="mt-6 divide-y divide-sumi/10 border-y border-sumi/10">
+              <li><a href="le-hoi-chi-tiet.html?slug=sapporo-snow-festival" class="flex min-h-[52px] items-center justify-between gap-4 font-semibold hover:text-shu">Sapporo Snow Festival <span class="text-sm font-normal text-sumi-muted">Hokkaido</span></a></li>
+            </ul>
+            <a href="le-hoi.html?mua=dong" class="group mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-sumi px-6 font-semibold text-ivory transition duration-300 hover:bg-shu active:scale-[.98]">Lễ hội mùa Đông
+              <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRẢI NGHIỆM VĂN HÓA -->
+  <section id="trai-nghiem" data-section="features-bento" class="bg-ivory py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-tight sm:text-5xl 2xl:text-6xl">Trải nghiệm văn hóa</h2>
+      <p data-reveal="up" class="mt-4 max-w-2xl text-[17px] leading-relaxed text-sumi-muted">Lễ hội không chỉ để ngắm. Đây là những cách du khách có thể hòa vào không khí cùng người dân địa phương.</p>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:h-[46rem] lg:grid-cols-12 lg:grid-rows-2 2xl:h-[52rem]" data-reveal="fade">
+        <figure class="group relative min-h-[22rem] overflow-hidden rounded-2xl bg-washi-deep sm:col-span-2 lg:col-span-5 lg:row-span-2 lg:min-h-0">
+          <img src="assets/img/trai-nghiem-yukata.webp" alt="Hai người mặc kimono che ô giấy đi trên con hẻm lát đá ở Kyoto" width="1024" height="706" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          <div class="absolute inset-0 bg-gradient-to-t from-sumi/85 via-sumi/10 to-transparent" aria-hidden="true"></div>
+          <figcaption class="absolute inset-x-0 bottom-0 p-6 text-ivory sm:p-8">
+            <h3 class="font-display text-3xl sm:text-4xl">Mặc yukata dạo phố</h3>
+            <p class="mt-2 max-w-md text-[16px] leading-relaxed text-ivory/85">Áo cotton nhẹ mùa hè, thường được mặc khi đi lễ hội hay xem pháo hoa. Nhiều nơi cho thuê theo ngày.</p>
+          </figcaption>
+        </figure>
+        <figure class="group relative min-h-[18rem] overflow-hidden rounded-2xl bg-washi-deep lg:col-span-4 lg:min-h-0">
+          <img src="assets/img/trai-nghiem-am-thuc.jpg" alt="Đầu bếp nướng bánh takoyaki tại quầy hàng" width="1024" height="768" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          <div class="absolute inset-0 bg-gradient-to-t from-sumi/85 via-sumi/10 to-transparent" aria-hidden="true"></div>
+          <figcaption class="absolute inset-x-0 bottom-0 p-6 text-ivory">
+            <h3 class="font-display text-2xl">Món ăn đường phố</h3>
+            <p class="mt-1 text-[15px] text-ivory/85">Takoyaki, yakisoba, kem đá bào ở các quầy yatai.</p>
+          </figcaption>
+        </figure>
+        <figure class="group relative min-h-[18rem] overflow-hidden rounded-2xl bg-washi-deep lg:col-span-3 lg:min-h-0">
+          <img src="assets/img/trai-nghiem-dieu-mua.jpg" alt="Sân khấu Bon Odori treo đèn lồng đỏ trắng ở Công viên Odori, Sapporo" width="1024" height="683" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          <div class="absolute inset-0 bg-gradient-to-t from-sumi/85 via-sumi/10 to-transparent" aria-hidden="true"></div>
+          <figcaption class="absolute inset-x-0 bottom-0 p-6 text-ivory">
+            <h3 class="font-display text-2xl">Điệu múa truyền thống</h3>
+            <p class="mt-1 text-[15px] text-ivory/85">Vòng múa Bon Odori luôn mở cho người mới.</p>
+          </figcaption>
+        </figure>
+        <figure class="group relative min-h-[18rem] overflow-hidden rounded-2xl bg-washi-deep lg:col-span-4 lg:min-h-0">
+          <img src="assets/img/trai-nghiem-dieu-hanh.webp" alt="Những người đàn ông đeo băng đầu trắng khiêng kiệu mikoshi tại lễ hội Sanja, Asakusa" width="1024" height="610" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          <div class="absolute inset-0 bg-gradient-to-t from-sumi/85 via-sumi/10 to-transparent" aria-hidden="true"></div>
+          <figcaption class="absolute inset-x-0 bottom-0 p-6 text-ivory">
+            <h3 class="font-display text-2xl">Xem diễu hành</h3>
+            <p class="mt-1 text-[15px] text-ivory/85">Kiệu thần và xe rước đi qua từng khu phố.</p>
+          </figcaption>
+        </figure>
+        <figure class="group relative min-h-[18rem] overflow-hidden rounded-2xl bg-washi-deep lg:col-span-3 lg:min-h-0">
+          <img src="assets/img/trai-nghiem-phao-hoa.jpg" alt="Một quả pháo hoa vàng bung tròn trên bầu trời đêm" width="1024" height="683" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]">
+          <div class="absolute inset-0 bg-gradient-to-t from-sumi/85 via-sumi/10 to-transparent" aria-hidden="true"></div>
+          <figcaption class="absolute inset-x-0 bottom-0 p-6 text-ivory">
+            <h3 class="font-display text-2xl">Ngắm pháo hoa</h3>
+            <p class="mt-1 text-[15px] text-ivory/85">Hanabi, nét riêng của đêm hè Nhật Bản.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIỚI THIỆU -->
+  <section id="gioi-thieu" data-section="story-editorial" class="bg-shu py-20 text-ivory lg:py-28">
+    <div class="mx-auto grid w-full max-w-screen-2xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-28">
+          <h2 data-reveal="up" class="font-display text-4xl leading-tight sm:text-5xl 2xl:text-6xl">Về JAPAN MATSURI</h2>
+          <blockquote data-reveal="up" class="mt-8 border-l-2 border-ivory/50 pl-6 font-display text-2xl italic leading-snug text-ivory/95 sm:text-3xl">“Chạm vào văn hóa Nhật Bản qua từng mùa lễ hội.”</blockquote>
+        </div>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7">
+        <div class="max-w-prose space-y-6" data-reveal="up">
+          <p class="drop-cap drop-cap--light text-[17px] leading-[1.8] text-ivory/90">JAPAN MATSURI là cẩm nang giới thiệu các lễ hội truyền thống Nhật Bản dành cho du khách Việt. Chúng tôi kể về lễ hội qua con người, nghề thủ công và nhịp sống của từng vùng, thay vì chỉ liệt kê điểm đến.</p>
+          <p class="text-[17px] leading-[1.8] text-ivory/90">Mỗi trang lễ hội gồm câu chuyện, điểm nổi bật, trải nghiệm dành cho du khách và thông tin chuyến đi. Thời gian luôn ghi là "thời gian thường tổ chức"; hãy kiểm tra lịch chính thức của năm bạn đi.</p>
+        </div>
+        <dl class="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-ivory/20 sm:grid-cols-4">
+          <div class="bg-shu p-5"><dt class="text-sm text-ivory/80">Lễ hội đã giới thiệu</dt><dd class="mt-2 font-display text-4xl" data-count-to="8">8</dd></div>
+          <div class="bg-shu p-5"><dt class="text-sm text-ivory/80">Mùa trong năm</dt><dd class="mt-2 font-display text-4xl" data-count-to="4">4</dd></div>
+          <div class="bg-shu p-5"><dt class="text-sm text-ivory/80">Tỉnh, thành</dt><dd class="mt-2 font-display text-4xl" data-count-to="6">6</dd></div>
+          <div class="bg-shu p-5"><dt class="text-sm text-ivory/80">Loại trải nghiệm</dt><dd class="mt-2 font-display text-4xl" data-count-to="6">6</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÙNG MIỀN -->
+  <section id="vung-mien" data-section="gallery-filmstrip" class="washi-texture py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div data-carousel>
+        <div class="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
+            <h2 data-reveal="up" class="font-display text-4xl leading-tight sm:text-5xl 2xl:text-6xl">Khám phá vùng miền</h2>
+            <p data-reveal="up" class="mt-4 text-[17px] leading-relaxed text-sumi-muted">Từ đảo Shikoku ấm áp đến Hokkaido tuyết trắng, mỗi vùng có lễ hội mang dấu ấn riêng.</p>
+          </div>
+          <div class="flex gap-3">
+            <button type="button" data-carousel-prev class="grid h-12 w-12 place-items-center rounded-full bg-ivory text-sumi ring-1 ring-sumi/20 transition duration-300 hover:bg-sumi hover:text-ivory" aria-label="Vùng trước">
+              <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            </button>
+            <button type="button" data-carousel-next class="grid h-12 w-12 place-items-center rounded-full bg-ivory text-sumi ring-1 ring-sumi/20 transition duration-300 hover:bg-sumi hover:text-ivory" aria-label="Vùng tiếp theo">
+              <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div data-carousel-track class="gap-6">
+          <article class="group w-[85%] sm:w-[48%] lg:w-[31.5%] 2xl:w-[23.8%]">
+            <a href="le-hoi.html?q=Kyoto" class="block">
+              <span class="block overflow-hidden rounded-2xl bg-washi-deep"><img src="assets/img/vung-kyoto.jpg" alt="Con dốc phố cổ Kyoto về đêm với tháp chùa Yasaka và đèn lồng" width="1024" height="724" loading="lazy" class="photo-tone aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]"></span>
+              <h3 class="mt-5 font-display text-3xl group-hover:text-shu">Kyoto</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-sumi-muted">Cố đô của Gion Matsuri tháng 7 và đoàn rước Jidai Matsuri mùa thu.</p>
+              <span class="mt-3 inline-flex min-h-[44px] items-center gap-2 font-semibold text-shu">Lễ hội ở Kyoto <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </article>
+          <article class="group w-[85%] sm:w-[48%] lg:w-[31.5%] 2xl:w-[23.8%]">
+            <a href="le-hoi.html?q=Tokyo" class="block">
+              <span class="block overflow-hidden rounded-2xl bg-washi-deep"><img src="assets/img/vung-tokyo.jpg" alt="Hàng đèn lồng giấy sáng dọc lối đi chùa Sensō-ji ở Asakusa, Tokyo" width="1024" height="753" loading="lazy" class="photo-tone aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]"></span>
+              <h3 class="mt-5 font-display text-3xl group-hover:text-shu">Tokyo</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-sumi-muted">Thủ đô sôi động, nơi pháo hoa sông Sumida mở màn mùa hè quanh Asakusa.</p>
+              <span class="mt-3 inline-flex min-h-[44px] items-center gap-2 font-semibold text-shu">Lễ hội ở Tokyo <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </article>
+          <article class="group w-[85%] sm:w-[48%] lg:w-[31.5%] 2xl:w-[23.8%]">
+            <a href="le-hoi.html?q=Aomori" class="block">
+              <span class="block overflow-hidden rounded-2xl bg-washi-deep"><img src="assets/img/vung-aomori.jpg" alt="Hàng anh đào chiếu sáng in bóng xuống hào nước lâu đài Hirosaki về đêm" width="1024" height="683" loading="lazy" class="photo-tone aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]"></span>
+              <h3 class="mt-5 font-display text-3xl group-hover:text-shu">Aomori</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-sumi-muted">Miền bắc Honshu của xe đèn Nebuta và rừng anh đào lâu đài Hirosaki.</p>
+              <span class="mt-3 inline-flex min-h-[44px] items-center gap-2 font-semibold text-shu">Lễ hội ở Aomori <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </article>
+          <article class="group w-[85%] sm:w-[48%] lg:w-[31.5%] 2xl:w-[23.8%]">
+            <a href="le-hoi.html?q=Tokushima" class="block">
+              <span class="block overflow-hidden rounded-2xl bg-washi-deep"><img src="assets/img/vung-tokushima.jpg" alt="Lối đi bộ dưới cầu Ōnaruto nhìn xuống eo biển Naruto, Tokushima" width="768" height="1024" loading="lazy" class="photo-tone aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]"></span>
+              <h3 class="mt-5 font-display text-3xl group-hover:text-shu">Tokushima</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-sumi-muted">Quê hương điệu múa Awa Odori trên đảo Shikoku, gần eo biển Naruto.</p>
+              <span class="mt-3 inline-flex min-h-[44px] items-center gap-2 font-semibold text-shu">Lễ hội ở Tokushima <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </article>
+          <article class="group w-[85%] sm:w-[48%] lg:w-[31.5%] 2xl:w-[23.8%]">
+            <a href="le-hoi.html?q=Hokkaido" class="block">
+              <span class="block overflow-hidden rounded-2xl bg-washi-deep"><img src="assets/img/vung-hokkaido.jpg" alt="Kênh đào Otaru và cây cầu đá phủ tuyết ở Hokkaido" width="1024" height="683" loading="lazy" class="photo-tone aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-expo group-hover:scale-[1.04]"></span>
+              <h3 class="mt-5 font-display text-3xl group-hover:text-shu">Hokkaido</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-sumi-muted">Hòn đảo cực bắc với mùa đông tuyết trắng và lễ hội tuyết Sapporo.</p>
+              <span class="mt-3 inline-flex min-h-[44px] items-center gap-2 font-semibold text-shu">Lễ hội ở Hokkaido <svg aria-hidden="true" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </article>
+        </div>
+        <div data-carousel-dots class="mt-8 text-shu"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CUỐI -->
+  <section id="cta-cuoi" data-section="cta-type" class="relative overflow-hidden bg-sumi py-24 text-ivory lg:py-32">
+    <div class="lantern-line lantern-line--light absolute inset-x-0 top-6" aria-hidden="true"></div>
+    <div class="mx-auto grid w-full max-w-screen-2xl items-end gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-5xl leading-[1.05] sm:text-6xl lg:col-span-9 lg:text-7xl 2xl:text-8xl">Mùa lễ hội tiếp theo <em class="italic text-[#F08A7E]">đang chờ bạn.</em></h2>
+      <div class="lg:col-span-3 lg:justify-self-end">
+        <a href="le-hoi.html" data-reveal="up" class="group inline-flex min-h-[56px] w-full items-center justify-center gap-3 rounded-full bg-shu px-8 text-base font-semibold text-ivory transition duration-300 hover:bg-[#C93C33] active:scale-[.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory sm:w-auto">Khám phá lễ hội
+          <svg aria-hidden="true" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="border-t border-ivory/10 bg-sumi text-ivory">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <a href="index.html" class="inline-flex items-center gap-3">
+          <span aria-hidden="true" class="grid h-10 w-10 -rotate-3 place-items-center rounded-md bg-shu text-lg font-bold text-ivory">祭</span>
+          <span class="font-display text-xl tracking-[0.08em]">JAPAN MATSURI</span>
+        </a>
+        <p class="mt-5 max-w-md text-[15px] leading-relaxed text-ivory/75">Cẩm nang giới thiệu lễ hội truyền thống Nhật Bản theo mùa và vùng miền, giúp du khách Việt chuẩn bị cho chuyến đi đầu tiên tới một Matsuri.</p>
+      </div>
+      <nav aria-label="Điều hướng chân trang" class="lg:col-span-2">
+        <h2 class="text-sm font-semibold text-ivory/60">Điều hướng</h2>
+        <ul class="mt-4 space-y-1 text-[15px]">
+          <li><a href="index.html" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Trang chủ</a></li>
+          <li><a href="le-hoi.html" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Khám phá lễ hội</a></li>
+          <li><a href="index.html#gioi-thieu" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Giới thiệu</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Lễ hội theo mùa" class="lg:col-span-2">
+        <h2 class="text-sm font-semibold text-ivory/60">Lễ hội theo mùa</h2>
+        <ul class="mt-4 space-y-1 text-[15px]">
+          <li><a href="le-hoi.html?mua=xuan" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Mùa Xuân</a></li>
+          <li><a href="le-hoi.html?mua=ha" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Mùa Hạ</a></li>
+          <li><a href="le-hoi.html?mua=thu" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Mùa Thu</a></li>
+          <li><a href="le-hoi.html?mua=dong" class="inline-flex min-h-[40px] items-center hover:text-[#F08A7E]">Mùa Đông</a></li>
+        </ul>
+      </nav>
+      <div class="sm:col-span-2 lg:col-span-3">
+        <h2 class="text-sm font-semibold text-ivory/60">Lưu ý</h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-ivory/75">Nội dung mang tính tham khảo. Ngày tổ chức, giờ rước và quy định thay đổi theo từng năm; hãy kiểm tra thông tin chính thức của ban tổ chức trước khi đi.</p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="mt-16 select-none overflow-hidden whitespace-nowrap font-display text-[clamp(2.25rem,11.8vw,12.5rem)] leading-[0.9] tracking-tight text-ivory/[0.12]">JAPAN MATSURI</p>
+    <div class="flex flex-col gap-3 border-t border-ivory/10 py-6 text-sm text-ivory/60 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 JAPAN MATSURI. Ảnh dùng theo giấy phép mở, ghi nguồn trong assets/img/CREDITS.md.</p>
+      <a href="#top" class="inline-flex min-h-[40px] items-center hover:text-ivory">Về đầu trang ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" data-back-to-top class="fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center rounded-full bg-shu text-ivory shadow-lg transition hover:bg-shu-deep" aria-label="Về đầu trang">
+  <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

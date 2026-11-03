@@ -1,0 +1,68 @@
+{
+  "brand": "VELVET FRAME",
+  "language": "vi",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Portfolio như một số tạp chí kiêm kho lưu trữ vượt thời gian: bìa tối với masthead VELVET FRAME khổng lồ đảo màu khi đè lên ảnh, số năm Bodoni cỡ lớn (1860, 1920, 1960, 1997, 2026) chạy xuyên các trang như dấu thời gian, ảnh tư liệu đơn sắc 'về hiện tại' khi rê chuột; nền kem xen charcoal, một dải đỏ rượu duy nhất cho phần thời đại",
+  "purposeInferred": "Portfolio & hồ sơ năng lực cá nhân của một Fashion Designer / Stylist / Creative Director: thể hiện cái tôi, gu thẩm mỹ lấy cảm hứng từ các thời đại thời trang, dự án tiêu biểu, quy trình, kinh nghiệm và mời hợp tác. Khách truy cập: thương hiệu thời trang, tạp chí, studio, nhà tuyển dụng sáng tạo.",
+  "theme": {
+    "tagline": "Trang phục là một cách biểu đạt",
+    "description": "Giao diện portfolio và hồ sơ năng lực cho nhà thiết kế, stylist thời trang theo phong cách tạp chí lưu trữ vượt thời gian."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Landing page duy nhất: bìa tạp chí, tuyên ngôn cá nhân, 4 dự án tiêu biểu, những thời đại truyền cảm hứng, moodboard thẩm mỹ, quy trình, kỹ năng, kinh nghiệm, giới thiệu và liên hệ hợp tác",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-type", "source": "ba", "note": "Bìa tối: dòng số báo, masthead VELVET FRAME khổng lồ (mix-blend-difference) đè lên ảnh bìa, tagline 'Trang phục là một cách biểu đạt.', CTA XEM TÁC PHẨM -> #work, mục lục 'Trong số này' dẫn tới các section" },
+        { "id": "manifesto", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "Tuyên ngôn cá nhân cỡ lớn có ảnh nhỏ chèn giữa dòng + 3 nguyên tắc i/ii/iii, thể hiện cái tôi theo góp ý" },
+        { "id": "work", "catalog": "projects", "variant": "gallery-lookbook", "source": "ba", "note": "4 dự án mẫu, 4 bố cục khác nhau: ảnh dọc lớn / ảnh ngang tràn / bộ ba ảnh / moodboard + chú thích; số năm lớn làm nền; chi tiết mở bằng accordion" },
+        { "id": "eras", "catalog": "story", "variant": "timeline", "source": "ai", "note": "Nền đỏ rượu: 1860 / 1920 / 1960 / 1997 / 2026, ảnh tư liệu đơn sắc chuyển màu khi rê chuột; điện thoại cuộn ngang có snap. Thể hiện 'phong cách thời gian' theo góp ý" },
+        { "id": "aesthetic", "catalog": "gallery", "variant": "gallery-masonry", "source": "ba", "note": "Moodboard nền charcoal: bảng màu kèm mã, chất liệu, phom dáng, ảnh tham chiếu (lightbox), ghi chú concept" },
+        { "id": "process", "catalog": "process", "variant": "features-numbered", "source": "ba", "note": "5 bước dạng danh mục dọc, số Bodoni lớn, hàng đảo nền tối khi rê chuột" },
+        { "id": "skills", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Nhóm kỹ năng bằng tabs + công cụ; không phần trăm, không chứng chỉ" },
+        { "id": "experience", "catalog": "editorial", "variant": "features-numbered", "source": "ba", "note": "Hồ sơ dạng editorial résumé, nhãn (mẫu); không nút tải CV giả" },
+        { "id": "about", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Tinh tế trong từng chi tiết. Tự do trong cách biểu đạt. + ảnh hậu trường" },
+        { "id": "contact", "catalog": "contact", "variant": "cta-type", "source": "ba", "note": "CÙNG TẠO NÊN ĐIỀU KHÁC BIỆT. + LIÊN HỆ HỢP TÁC mở modal form demo; email / mạng xã hội để trống chờ thông tin thật" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "woman fashion editorial black dress", "file": "assets/img/hero-editorial-portrait.jpg", "status": "ok" },
+        { "slot": "manifesto-inline-1", "query": "sewing stitching closeup", "file": "assets/img/aesthetic-scissors.jpg", "status": "ok" },
+        { "slot": "manifesto-inline-2", "query": "sewing stitching closeup", "file": "assets/img/aesthetic-eyelets.jpg", "status": "ok" },
+        { "slot": "work-01", "query": "haute couture gown runway", "file": "assets/img/work-01-collection.jpg", "status": "ok" },
+        { "slot": "work-02", "query": "fashion photo shoot studio", "file": "assets/img/work-02-editorial.jpg", "status": "ok" },
+        { "slot": "work-03-a", "query": "woman fashion editorial", "file": "assets/img/work-03-campaign-a.jpg", "status": "ok" },
+        { "slot": "work-03-b", "query": "backstage fashion show", "file": "assets/img/work-03-campaign-b.jpg", "status": "ok" },
+        { "slot": "work-03-c", "query": "fashion editorial model portrait", "file": "assets/img/work-03-campaign-c.jpg", "status": "ok" },
+        { "slot": "work-04-sketch", "query": "fashion designer sketch drawing", "file": "assets/img/work-04-concept-sketch.webp", "status": "ok" },
+        { "slot": "work-04-silk", "query": "silk fabric close up", "file": "assets/img/work-04-concept-silk.jpg", "status": "ok" },
+        { "slot": "eras-1860", "query": "1920s fashion vintage photograph", "file": "assets/img/era-1860-empress.webp", "status": "ok" },
+        { "slot": "eras-1920", "query": "1920s fashion vintage photograph", "file": "assets/img/era-1920-portrait.webp", "status": "ok" },
+        { "slot": "eras-1960", "query": "1950s couture fashion model", "file": "assets/img/era-chanel-evening.jpg", "status": "ok" },
+        { "slot": "eras-1997", "query": "1950s couture fashion model", "file": "assets/img/era-1997-galliera.jpg", "status": "ok" },
+        { "slot": "aesthetic-stitch", "query": "sewing stitching closeup", "file": "assets/img/aesthetic-stitch.jpg", "status": "ok" },
+        { "slot": "aesthetic-texture", "query": "silk fabric close up", "file": "assets/img/aesthetic-couture-detail.jpg", "status": "ok" },
+        { "slot": "aesthetic-accessory", "query": "leather gloves accessories", "file": "assets/img/aesthetic-tabi-boots.webp", "status": "ok" },
+        { "slot": "aesthetic-silhouette", "query": "black and white fashion model coat", "file": "assets/img/experience-runway.webp", "status": "ok" },
+        { "slot": "about", "query": "backstage fashion show", "file": "assets/img/about-backstage.jpg", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ dựng một landing page (index.html), không có trang con, theo chú thích của BA ('Chỉ tạo một landing page duy nhất').",
+    "Theo góp ý mới, toàn bộ chữ hiển thị chuyển sang tiếng Việt (lang=\"vi\"), thay cho ngôn ngữ tiếng Anh ghi trong concept.md; tên dự án mẫu (Nocturne Archive, White Silence...) giữ nguyên như tên riêng.",
+    "Bodoni Moda không có đủ dấu tiếng Việt: tiêu đề tiếng Việt dùng Noto Serif Display (serif tương phản cao kiểu Didone, đủ dấu); Bodoni Moda chỉ còn cho wordmark VELVET FRAME và số năm. Nội dung Inter. Màu giữ đúng bảng của BA (Charcoal #151313, Warm Cream #F2EADF, Burgundy #702B3B, Chocolate #513A32, Smoke Grey #A7A09A).",
+    "Theo góp ý 'phong cách chưa ấn tượng, cần thể hiện cái tôi và phong cách thời gian': hero đổi thành bìa tạp chí tối với masthead khổng lồ đè lên ảnh; thêm section Tuyên ngôn (manifesto) và Những thời đại tôi mang theo (eras) với ảnh tư liệu 1860 / 1920 / 1960 / 1997; số năm lớn làm dấu thời gian trong phần dự án; quy trình đổi sang danh mục dọc.",
+    "Tên cá nhân hiển thị là VELVET FRAME (tên dự án do BA cung cấp); dễ thay bằng tên thật.",
+    "Mọi dự án, kinh nghiệm, học vấn là nội dung mẫu có nhãn '(mẫu)' / 'Dự án mẫu'; ảnh là ảnh minh họa có nguồn (CREDITS.md), không phải tác phẩm thật của chủ portfolio.",
+    "Không tạo email / Instagram / LinkedIn / địa điểm giả: hiển thị 'Sẽ bổ sung'; CTA LIÊN HỆ HỢP TÁC mở form liên hệ bản demo.",
+    "Không tạo nút tải CV vì chưa có file CV thật.",
+    "Ảnh assets/img/experience-runway.jpg (có watermark) đã được thay bằng experience-runway.webp; file .jpg cũ không dùng trên trang."
+  ],
+  "limitations": [
+    "Form liên hệ là bản demo, chưa có backend gửi đi.",
+    "Thông tin liên hệ thật (email, mạng xã hội, địa điểm) cần khách cung cấp.",
+    "Ảnh là ảnh minh họa và ảnh tư liệu giấy phép mở, cần thay bằng ảnh dự án thật của nhà thiết kế."
+  ]
+}

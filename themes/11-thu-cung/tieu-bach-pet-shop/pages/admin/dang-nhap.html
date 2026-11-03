@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập trang quản lý · Tiểu Bạch Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/tailwind.tokens.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+</head>
+<body data-screen="SCR-SYS-005" data-module="SYS" class="bg-primary-50 text-neutral-800">
+  <div id="app"></div>
+  <script src="../../assets/js/icons.js"></script>
+  <script src="../../assets/js/permissions.js"></script>
+  <script src="../../assets/js/workflows.js"></script>
+  <script src="../../assets/js/mock-data/master.js"></script>
+  <script src="../../assets/js/mock-data/book.js"></script>
+  <script src="../../assets/js/mock-data/review.js"></script>
+  <script src="../../assets/js/mock-data/news.js"></script>
+  <script src="../../assets/js/demo-store.js"></script>
+  <script src="../../assets/js/components.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script>
+  /* SCR-SYS-005 Đăng nhập trang quản lý + cổng chọn vai trò demo (đủ 3 vai trò từ APP_META.roles).
+   * Tài khoản demo: chu.quan / tieubach123, me.ban / tieubach123; em.trai bị khóa → SYS-E07. Thành công → Perm.home() (SCR-BOOK-008 lọc Mới đặt). */
+  Layout.mount({ area: 'bare', title: 'Đăng nhập trang quản lý' }, function (main) {
+    var U = Perm.url, esc = UI.esc, R = UI.rules;
+    var LOCK = 'demo.admin.lock', FAIL = 'demo.admin.fail';
+    function ss(k, v) { try { if (v === undefined) return sessionStorage.getItem(k); if (v === null) sessionStorage.removeItem(k); else sessionStorage.setItem(k, v); } catch (e) { return null; } }
+    function demoUser(rid) { return MOCK.users.filter(function (u) { return u.roleId === rid; })[0] || { name: '' }; }
+    var cur = Perm.role();
+    var roleCards = APP_META.roles.map(function (r) {
+      var u = demoUser(r.id), on = r.id === cur;
+      return '<button type="button" data-role="' + r.id + '" class="flex w-full items-start gap-3 rounded-lg border-2 ' + (on ? 'border-primary-500 bg-primary-50' : 'border-neutral-200 bg-white hover:border-primary-300') + ' p-3 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600">' +
+        UI.avatar(u.name, 40) + '<span class="min-w-0 flex-1"><span class="flex flex-wrap items-center gap-2"><span class="font-bold text-neutral-800">' + esc(r.name) + '</span>' + (on ? UI.tag('Đang dùng', 'primary') : '') + '</span>' +
+        '<span class="block text-sm text-neutral-600">' + esc(u.name) + '</span><span class="block text-xs text-neutral-600">' + esc(u.desc || '') + '</span></span>' + UI.icon('chevron-right', 'mt-2 text-neutral-400') + '</button>';
+    }).join('');
+    main.innerHTML = '<div class="flex min-h-dvh flex-col items-center justify-center gap-4 px-4 py-10">' +
+      '<div class="w-full max-w-md rounded-2xl border border-neutral-200 bg-white p-5 shadow-md md:p-8">' +
+      '<div class="mb-5 flex flex-col items-center gap-2 text-center">' + UI.logo({ sub: 'Quản lý cửa hàng', size: 44 }) + '<h1 class="mt-2 text-xl font-extrabold text-neutral-800">Trang quản lý cửa hàng</h1></div>' +
+      (App.param('het-phien') ? UI.alert({ tone: 'info', text: 'Phiên làm việc đã hết hạn, vui lòng đăng nhập lại.', cls: 'mb-4' }) : '') +
+      (cur === 'ROLE-03' ? UI.alert({ tone: 'success', text: 'Bạn đang đăng nhập với vai trò Quản trị cửa hàng.', cls: 'mb-4', actions: UI.button({ label: 'Vào trang quản lý', size: 'sm', href: Perm.home('ROLE-03') }) }) : '') +
+      '<form novalidate class="flex flex-col gap-4" data-form><div data-err-box></div>' +
+      UI.field({ name: 'ten_dang_nhap', label: 'Tên đăng nhập', required: true, icon: 'user', autocomplete: 'username', placeholder: 'Ví dụ: chu.quan' }) +
+      UI.field({ name: 'mat_khau', label: 'Mật khẩu', type: 'password', required: true }) +
+      UI.button({ label: 'Đăng nhập', size: 'lg', full: true, type: 'submit', attrs: { 'data-submit': '' } }) +
+      '<p class="text-xs text-neutral-600">Tài khoản demo: <b>chu.quan</b> / <b>tieubach123</b></p></form>' +
+      '<div class="my-5 flex items-center gap-3 text-xs font-bold text-neutral-600"><span class="h-px flex-1 bg-neutral-200"></span>Prototype: đăng nhập nhanh<span class="h-px flex-1 bg-neutral-200"></span></div>' +
+      '<div class="flex flex-col gap-2" role="group" aria-label="Chọn vai trò demo">' + roleCards + '</div></div>' +
+      UI.button({ label: 'Về website', icon: 'arrow-left', variant: 'link', href: U('index.html') }) + '</div>';
+
+    var f = main.querySelector('[data-form]'), btn = f.querySelector('[data-submit]');
+    var rules = { ten_dang_nhap: [R.required('Vui lòng nhập tên đăng nhập')], mat_khau: [R.required('Vui lòng nhập mật khẩu')] };
+    UI.validate.live(f, rules);
+    function lockedUntil() { var t = +ss(LOCK) || 0; return t > Date.now() ? t : 0; }
+    function err(msg) { f.querySelector('[data-err-box]').innerHTML = msg ? UI.alert({ tone: 'danger', text: msg }) : ''; }
+    if (lockedUntil()) { err('Bạn đã nhập sai quá nhiều lần, vui lòng thử lại sau 15 phút'); btn.disabled = true; }
+
+    f.addEventListener('submit', function (e) {
+      e.preventDefault(); err('');
+      if (lockedUntil() || !UI.validate(f, rules)) return;
+      var d = UI.formData(f); UI.setLoading(btn, true);
+      setTimeout(function () {
+        var a = DemoStore.list('adminUsers').filter(function (x) { return x.ten_dang_nhap === d.ten_dang_nhap; })[0];
+        var isCustomer = DemoStore.list('customers').some(function (c) { return c.so_dien_thoai === d.ten_dang_nhap || c.email === d.ten_dang_nhap; });
+        UI.setLoading(btn, false);
+        if ((a && a.trang_thai !== 'HOAT_DONG') || (!a && isCustomer)) { err('Tài khoản không có quyền truy cập trang quản lý'); return; }
+        if (a && d.mat_khau === 'tieubach123') {
+          ss(FAIL, null); Perm.setRole('ROLE-03');
+          DemoStore.update('adminUsers', a.id, { lan_cuoi: new Date().toISOString() });
+          UI.toast('Xin chào ' + a.ho_ten + '!', 'success');
+          setTimeout(function () { location.href = Perm.home('ROLE-03') + '?trang-thai=NEW'; }, 600);
+          return;
+        }
+        var n = (+ss(FAIL) || 0) + 1; ss(FAIL, String(n));
+        if (n >= 5) { ss(LOCK, String(Date.now() + 15 * 60e3)); ss(FAIL, null); err('Bạn đã nhập sai quá nhiều lần, vui lòng thử lại sau 15 phút'); btn.disabled = true; return; }
+        err('Thông tin đăng nhập không đúng');
+      }, 600);
+    });
+    main.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-role]'); if (!b) return;
+      var id = b.getAttribute('data-role');
+      Perm.setRole(id);
+      UI.toast('Đang xem với vai trò ' + Perm.roleName(id), 'info');
+      setTimeout(function () { location.href = Perm.home(id); }, 500);
+    });
+  });
+  </script>
+</body>
+</html>

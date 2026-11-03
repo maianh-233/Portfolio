@@ -1,0 +1,29 @@
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-40 bg-gradient-to-b from-forest/75 to-transparent text-mist [text-shadow:0_1px_14px_rgba(28,46,37,.7)] [&.is-scrolled]:[text-shadow:none] [&.is-scrolled]:bg-none [&.is-scrolled]:bg-mist/95 [&.is-scrolled]:text-charcoal [&.is-scrolled]:shadow-[0_1px_0_rgba(52,58,53,.12)] [&.is-scrolled]:backdrop-blur-sm">
+  <div class="wrap flex h-20 items-center justify-between gap-6">
+    <a href="{{root}}index.html" class="font-display text-lg tracking-[0.22em] sm:text-xl">MOSS &amp; MIST</a>
+    <nav class="hidden items-center gap-10 text-[15px] lg:flex" aria-label="Điều hướng chính">
+      <a href="{{root}}index.html" data-en="Home" class="relative py-2 opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Trang chủ</a>
+      <a href="{{root}}pages/about.html" data-en="About" class="relative py-2 opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Giới thiệu</a>
+      <a href="{{root}}pages/accommodation.html" data-en="Accommodation" class="relative py-2 opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Không gian nghỉ</a>
+      <a href="{{root}}pages/experiences.html" data-en="Experiences" class="relative py-2 opacity-90 transition-opacity duration-300 hover:opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:opacity-100 aria-[current=page]:after:scale-x-100">Trải nghiệm</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="flex items-center text-xs font-medium tracking-[0.16em]" role="group" aria-label="Ngôn ngữ">
+        <button type="button" data-lang-set="vi" class="min-h-[44px] px-2 opacity-60 transition-opacity duration-300 hover:opacity-100 [&.is-active]:opacity-100 [&.is-active]:underline [&.is-active]:underline-offset-4">VI</button>
+        <span class="opacity-40" aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" class="min-h-[44px] px-2 opacity-60 transition-opacity duration-300 hover:opacity-100 [&.is-active]:opacity-100 [&.is-active]:underline [&.is-active]:underline-offset-4">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" data-en-aria="Open menu" class="grid h-11 w-11 place-items-center lg:hidden">
+        <span class="block h-px w-6 bg-current shadow-[0_-6px_0_currentColor,0_6px_0_currentColor]"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-0 top-20 z-50 border-t border-charcoal/10 bg-mist px-6 pb-10 pt-6 text-charcoal shadow-[0_24px_48px_-24px_rgba(38,61,50,.35)] lg:hidden">
+    <nav class="flex flex-col font-display text-3xl" aria-label="Menu điện thoại">
+      <a href="{{root}}index.html" data-en="Home" class="border-b border-charcoal/10 py-4 aria-[current=page]:italic aria-[current=page]:text-forest">Trang chủ</a>
+      <a href="{{root}}pages/about.html" data-en="About" class="border-b border-charcoal/10 py-4 aria-[current=page]:italic aria-[current=page]:text-forest">Giới thiệu</a>
+      <a href="{{root}}pages/accommodation.html" data-en="Accommodation" class="border-b border-charcoal/10 py-4 aria-[current=page]:italic aria-[current=page]:text-forest">Không gian nghỉ</a>
+      <a href="{{root}}pages/experiences.html" data-en="Experiences" class="py-4 aria-[current=page]:italic aria-[current=page]:text-forest">Trải nghiệm</a>
+    </nav>
+  </div>
+</header>

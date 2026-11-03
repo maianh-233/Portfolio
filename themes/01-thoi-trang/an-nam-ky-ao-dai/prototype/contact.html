@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liên hệ — An Nam Ký Test</title>
+  <meta name="description" content="Liên hệ An Nam Ký Test: hẹn lịch đo áo dài tại xưởng ở Huế, địa chỉ, giờ mở cửa, số điện thoại và câu hỏi thường gặp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-cream font-sans text-ink antialiased">
+
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-transparent bg-cream/95">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="font-display text-xl tracking-tight text-ink sm:text-2xl">An Nam Ký <span class="italic text-wine">Test</span></a>
+    <nav aria-label="Điều hướng chính" class="hidden items-center gap-8 text-[15px] lg:flex xl:gap-10">
+      <a href="index.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Trang chủ</a>
+      <a href="about.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Câu chuyện</a>
+      <a href="collections.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Bộ sưu tập</a>
+      <a href="may-do.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">May đo</a>
+      <a href="journal.html" class="link-run py-2 transition-colors duration-300 hover:text-wine">Ghi chép</a>
+      <a href="contact.html" aria-current="page" class="link-run py-2 text-wine">Liên hệ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="contact.html#hen-may" class="hidden h-11 items-center bg-wine px-6 text-sm font-medium text-cream transition-colors duration-300 hover:bg-wine-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine active:scale-[.98] sm:inline-flex">Hẹn may đo</a>
+      <button type="button" data-menu-toggle="#mnav" aria-label="Mở menu" class="grid h-11 w-11 place-items-center border border-line text-ink transition-colors duration-300 hover:border-wine hover:text-wine lg:hidden">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 border border-line bg-cream p-6 lg:hidden">
+    <nav aria-label="Điều hướng trên điện thoại" class="flex flex-col font-display text-2xl">
+      <a href="index.html" class="border-b border-line py-3">Trang chủ</a>
+      <a href="about.html" class="border-b border-line py-3">Câu chuyện</a>
+      <a href="collections.html" class="border-b border-line py-3">Bộ sưu tập</a>
+      <a href="may-do.html" class="border-b border-line py-3">May đo</a>
+      <a href="journal.html" class="border-b border-line py-3">Ghi chép</a>
+      <a href="contact.html" aria-current="page" class="py-3 text-wine">Liên hệ</a>
+    </nav>
+    <a href="contact.html#hen-may" class="mt-6 flex h-12 items-center justify-center bg-wine text-sm font-medium text-cream">Hẹn may đo</a>
+  </div>
+</header>
+
+<main>
+  <section id="page-hero" data-section="page-hero" class="bg-cream">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pb-12 pt-12 sm:px-6 lg:px-10 lg:pb-16 lg:pt-16 2xl:px-16">
+      <h1 data-reveal="up" class="pb-2 font-display text-[clamp(3rem,8vw,9rem)] leading-[1.02] tracking-tight">Ghé <span class="italic text-wine">xưởng may</span></h1>
+      <p data-reveal="up" class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Xưởng nhận khách theo lịch hẹn để mỗi buổi đo đủ thời gian. Để lại thông tin, chúng tôi gọi lại xác nhận giờ.</p>
+    </div>
+  </section>
+
+  <section id="hen-may" data-section="contact-split" class="stitch scroll-mt-20 bg-cream">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-14 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-28 2xl:px-16">
+      <div class="min-w-0 lg:col-span-5">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-[1fr_auto] sm:gap-10 lg:grid-cols-1 xl:grid-cols-[1fr_12rem]">
+          <dl data-reveal="up" class="space-y-7">
+            <div>
+              <dt class="text-sm text-muted">Địa chỉ</dt>
+              <dd class="mt-1 font-display text-2xl leading-snug">68 Chi Lăng, phường Phú Hội, TP. Huế</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-muted">Giờ mở cửa</dt>
+              <dd class="mt-1 leading-relaxed">Thứ Ba đến Chủ Nhật, 9:00 đến 19:00<br>Nghỉ Thứ Hai và mùng 1 đến mùng 5 Tết</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-muted">Điện thoại</dt>
+              <dd class="mt-1"><a href="tel:+842343826517" class="link-run font-display text-2xl text-wine">0234 3826 517</a></dd>
+            </div>
+            <div>
+              <dt class="text-sm text-muted">Email</dt>
+              <dd class="mt-1"><a href="mailto:xinchao@annamky.vn" class="link-run">xinchao@annamky.vn</a></dd>
+            </div>
+          </dl>
+          <figure data-reveal="fade" class="hidden sm:block">
+            <div class="aspect-[3/4] w-full overflow-hidden bg-wine-soft sm:w-48 lg:w-full xl:w-48">
+              <img src="assets/img/contact-boutique.jpg" alt="Hai ma-nơ-canh mặc áo dài xanh cốm và hồng thêu hoa đặt ở cửa tiệm" width="702" height="1024" loading="lazy" class="h-full w-full object-cover">
+            </div>
+            <figcaption class="mt-2 text-sm text-muted">Áo mẫu đặt ở cửa xưởng.</figcaption>
+          </figure>
+        </div>
+        <div data-reveal="fade" class="mt-10 aspect-[4/3] w-full overflow-hidden border border-line bg-moss-soft">
+          <iframe title="Bản đồ đường Chi Lăng, phường Phú Hội, TP. Huế" src="https://www.google.com/maps?q=Chi+L%C4%83ng%2C+Ph%C3%BA+H%E1%BB%99i%2C+Hu%E1%BA%BF&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="h-full w-full border-0"></iframe>
+        </div>
+      </div>
+
+      <div class="min-w-0 lg:col-span-6 lg:col-start-7">
+        <div data-reveal="up" class="bg-cream-deep p-6 sm:p-10 lg:p-12">
+          <h2 class="font-display text-3xl leading-tight sm:text-4xl">Hẹn lịch đo áo</h2>
+          <p class="mt-3 text-muted">Một buổi đo khoảng 60 phút. Bạn có thể đi cùng người thân.</p>
+          <form data-form="hen-may" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2" novalidate>
+            <div class="sm:col-span-2">
+              <label for="ho-ten" class="block text-sm font-medium">Họ và tên</label>
+              <input id="ho-ten" name="ho-ten" type="text" required minlength="2" autocomplete="name" placeholder="Ví dụ: Nguyễn Thị Minh Thư" class="mt-2 h-12 w-full border border-line bg-cream px-4 text-base text-ink placeholder:text-muted/80 focus:border-wine focus:outline-none focus:ring-2 focus:ring-wine/25">
+            </div>
+            <div>
+              <label for="dien-thoai" class="block text-sm font-medium">Số điện thoại</label>
+              <input id="dien-thoai" name="dien-thoai" type="tel" required minlength="9" autocomplete="tel" placeholder="0905 123 456" class="mt-2 h-12 w-full border border-line bg-cream px-4 text-base text-ink placeholder:text-muted/80 focus:border-wine focus:outline-none focus:ring-2 focus:ring-wine/25">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium">Email <span class="font-normal text-muted">(không bắt buộc)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="ban@email.com" class="mt-2 h-12 w-full border border-line bg-cream px-4 text-base text-ink placeholder:text-muted/80 focus:border-wine focus:outline-none focus:ring-2 focus:ring-wine/25">
+            </div>
+            <div>
+              <label for="dip" class="block text-sm font-medium">Dịp mặc</label>
+              <select id="dip" name="dip" required class="mt-2 h-12 w-full border border-line bg-cream px-4 text-base text-ink focus:border-wine focus:outline-none focus:ring-2 focus:ring-wine/25">
+                <option value="">Chọn một dịp</option>
+                <option>Mặc thường ngày</option>
+                <option>Lễ, Tết</option>
+                <option>Cưới hỏi</option>
+                <option>Tốt nghiệp</option>
+                <option>Khác</option>
+              </select>
+            </div>
+            <div>
+              <label for="ngay" class="block text-sm font-medium">Ngày muốn ghé</label>
+              <input id="ngay" name="ngay" type="date" required class="mt-2 h-12 w-full border border-line bg-cream px-4 text-base text-ink focus:border-wine focus:outline-none focus:ring-2 focus:ring-wine/25">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="loi-nhan" class="block text-sm font-medium">Lời nhắn</label>
+              <textarea id="loi-nhan" name="loi-nhan" rows="4" placeholder="Mẫu bạn thích, số người cần may, hoặc điều cần chúng tôi chuẩn bị" class="mt-2 w-full border border-line bg-cream px-4 py-3 text-base text-ink placeholder:text-muted/80 focus:border-wine focus:outline-none focus:ring-2 focus:ring-wine/25"></textarea>
+            </div>
+            <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:gap-6">
+              <button type="submit" class="inline-flex h-14 shrink-0 items-center whitespace-nowrap justify-center bg-wine px-10 text-base font-medium text-cream transition-colors duration-300 hover:bg-wine-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine active:scale-[.98]">Gửi lịch hẹn</button>
+              <p class="text-sm text-muted">Bản demo: biểu mẫu chưa kết nối hệ thống, thông tin chưa được gửi đi.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hoi-dap" data-section="faq" class="bg-cream-deep">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-32 2xl:px-16">
+      <h2 data-reveal="up" class="font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl lg:col-span-4">Trước khi bạn ghé</h2>
+      <div data-accordion="single" data-reveal="up" class="stitch lg:col-span-7 lg:col-start-6">
+        <div data-acc-item data-open class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl sm:text-2xl">May một tà áo mất bao lâu? <span data-acc-icon aria-hidden="true" class="text-2xl text-wine">+</span></button>
+          <div data-acc-panel><div class="max-w-prose pb-6 text-muted">Thường khoảng hai tuần với áo lụa trơn, ba đến năm tuần với áo vẽ tay hoặc thêu. Mùa cưới và trước Tết nên hẹn sớm hơn.</div></div>
+        </div>
+        <div data-acc-item class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl sm:text-2xl">Tôi ở xa Huế, có may được không? <span data-acc-icon aria-hidden="true" class="text-2xl text-wine">+</span></button>
+          <div data-acc-panel><div class="max-w-prose pb-6 text-muted">Được. Chúng tôi gửi bảng hướng dẫn tự đo và gọi video để kiểm tra số đo. Áo được gửi kèm một lần sửa miễn phí tại tiệm may gần bạn.</div></div>
+        </div>
+        <div data-acc-item class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl sm:text-2xl">Tôi có thể mang vải của mình đến không? <span data-acc-icon aria-hidden="true" class="text-2xl text-wine">+</span></button>
+          <div data-acc-panel><div class="max-w-prose pb-6 text-muted">Có, nhất là những tấm lụa gia đình để lại. Thợ sẽ xem khổ vải và độ bền trước khi nhận cắt.</div></div>
+        </div>
+        <div data-acc-item class="border-b border-line">
+          <button type="button" data-acc-trigger class="flex min-h-[64px] w-full items-center justify-between gap-6 py-5 text-left font-display text-xl sm:text-2xl">Website có bán áo may sẵn không? <span data-acc-icon aria-hidden="true" class="text-2xl text-wine">+</span></button>
+          <div data-acc-panel><div class="max-w-prose pb-6 text-muted">Không. Website chỉ giới thiệu thương hiệu và các bộ sưu tập. Mọi tà áo đều được may đo sau buổi hẹn tại xưởng.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" data-section="footer-big" class="bg-moss-dark text-cream">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pt-20 sm:px-6 lg:px-10 2xl:px-16">
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="font-display text-2xl">An Nam Ký Test</p>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-cream/75">Áo dài may đo từ lụa Việt. Xưởng nhỏ ở Huế, may theo lịch hẹn.</p>
+      </div>
+      <nav aria-label="Liên kết cuối trang">
+        <p class="text-sm font-medium text-cream/60">Trang</p>
+        <ul class="mt-4 space-y-3">
+          <li><a href="index.html" class="link-run">Trang chủ</a></li>
+          <li><a href="about.html" class="link-run">Câu chuyện</a></li>
+          <li><a href="collections.html" class="link-run">Bộ sưu tập</a></li>
+          <li><a href="may-do.html" class="link-run">May đo</a></li>
+          <li><a href="journal.html" class="link-run">Ghi chép</a></li>
+          <li><a href="contact.html" class="link-run">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="text-sm font-medium text-cream/60">Ghé xưởng</p>
+        <address class="mt-4 not-italic leading-relaxed">68 Chi Lăng, phường Phú Hội<br>TP. Huế</address>
+        <p class="mt-3 text-sm text-cream/75">9:00 đến 19:00, Thứ Ba đến Chủ Nhật</p>
+      </div>
+      <div>
+        <p class="text-sm font-medium text-cream/60">Liên hệ</p>
+        <p class="mt-4"><a href="tel:+842343826517" class="link-run">0234 3826 517</a></p>
+        <p class="mt-3"><a href="mailto:xinchao@annamky.vn" class="link-run">xinchao@annamky.vn</a></p>
+      </div>
+    </div>
+    <p aria-hidden="true" class="mt-20 whitespace-nowrap font-display text-[11vw] leading-[0.9] tracking-tight text-cream/90 2xl:text-[11.5rem]">An Nam Ký Test</p>
+    <div class="mt-6 flex flex-col gap-2 border-t border-cream/20 py-6 text-sm text-cream/70 sm:flex-row sm:justify-between">
+      <p>&copy; 2026 An Nam Ký Test. Bảo lưu mọi quyền.</p>
+      <a href="#top" class="link-run self-start">Về đầu trang</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

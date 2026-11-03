@@ -1,0 +1,86 @@
+{
+  "slug": "monochrome",
+  "name": "MONOCHROME",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website portfolio cá nhân",
+    "brand": "MONOCHROME",
+    "purpose": "",
+    "audience": "",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "# MASTER PROMPT — MONOCHROME\n## Architectural Portfolio & Professional CV\n\n### 1. PROJECT OVERVIEW\n\nThiết kế một landing page Portfolio & CV cá nhân dành cho kiến trúc sư hoặc nhà thiết kế nội thất.\n\nWebsite phải thể hiện tư duy không gian, khả năng phát triển concept, kỹ năng thiết kế, hiểu biết vật liệu và kinh nghiệm chuyên môn.\n\nĐây là portfolio cá nhân, không phải website công ty kiến trúc, công ty xây dựng hoặc bất động sản.\n\nĐịnh hướng tổng thể: **Architectural Minimalism × Architectural Editorial × Contemporary Swiss Design.**\n\nTham khảo tinh thần của các ấn phẩm kiến trúc quốc tế: tối giản, giàu hình ảnh, bố cục chính xác, typography có hệ thống và khoảng trắng được sử dụng có chủ đích.\n\n### 2. VISUAL IDENTITY\n\n**Bảng màu:**\n- Nền chính: #F5F5F2.\n- Trắng: #FFFFFF.\n- Đen: #191919.\n- Xám bê tông: #B7B7B0.\n- Xám phụ: #666660.\n- Nâu đá: #827B70.\n\nƯu tiên nền sáng, kết hợp hình ảnh vật liệu tự nhiên. Có thể sử dụng một section nền tối để tạo điểm nhấn.\n\nKhông sử dụng gradient sặc sỡ, màu neon, hiệu ứng kính mờ hoặc bóng đổ nặng.\n\n**Typography:**\n- Tiêu đề: Manrope.\n- Nội dung: Inter.\n- Metadata và chú thích kỹ thuật: IBM Plex Mono.\n\nTiêu đề lớn nhưng không lấn át hình ảnh. Nội dung dễ đọc, chú thích nhỏ và có phân cấp rõ ràng.\n\n**Layout:**\n- Desktop sử dụng lưới 12 cột.\n- Container rộng khoảng 90% viewport.\n- Đường kẻ mảnh, góc vuông, khoảng trắng rộng.\n- Bố cục bất đối xứng có chủ đích.\n- Không sử dụng card bo tròn theo phong cách dashboard.\n- Không lặp lại một bố cục cho tất cả section.\n\n### 3. HEADER & NAVIGATION\n\nHeader tối giản gồm:\n- Tên kiến trúc sư.\n- ARCHITECT / INTERIOR DESIGNER.\n- Projects.\n- Approach.\n- Expertise.\n- Resume.\n- Contact.\n\nHeader có thể sticky với chiều cao nhỏ.\n\nCác liên kết phải cuộn đến đúng section. Trên mobile, sử dụng menu thu gọn có thể mở và đóng.\n\n### 4. HERO — ARCHITECTURAL STATEMENT\n\nTạo bố cục hai vùng không đối xứng:\n- Một bên là tên cá nhân, chức danh, tuyên ngôn thiết kế và đoạn giới thiệu.\n- Bên còn lại là hình ảnh kiến trúc nổi bật.\n\nTỷ lệ tham khảo: 40% nội dung và 60% hình ảnh.\n\nTuyên ngôn mẫu:\n\n\"Designing spaces that balance light, material, and human experience.\"\n\nĐoạn giới thiệu ngắn thể hiện cách tiếp cận kiến trúc, vật liệu và trải nghiệm con người.\n\nCTA:\n- VIEW SELECTED PROJECTS.\n- EXPLORE PROFILE.\n- DOWNLOAD CV nếu có file thực tế.\n\nHình ảnh hero phải chất lượng cao, thể hiện chiều sâu không gian, ánh sáng và hình khối. Không để chữ che công trình hoặc sử dụng overlay quá nặng.\n\n### 5. SELECTED PROJECTS\n\nTrình bày 3–4 dự án với bố cục khác nhau.\n\nCó thể bao gồm kiến trúc nhà ở, thiết kế nội thất, không gian hospitality hoặc dự án concept.\n\n**Project 01 — Featured Project**\n- Ảnh ngang lớn.\n- Tên dự án và mô tả concept.\n- Loại công trình, địa điểm, năm và vai trò cá nhân.\n\n**Project 02 — Vertical Composition**\n- Ảnh dọc.\n- Bố cục lệch trục.\n- Kết hợp hình ảnh và metadata.\n\n**Project 03 — Drawing & Spatial Study**\n- Kết hợp phối cảnh với mặt bằng, mặt cắt hoặc sơ đồ.\n- Chú thích kỹ thuật rõ ràng.\n- Không thu nhỏ bản vẽ đến mức khó đọc.\n\n**Project 04 — Editorial Grid**\n- Kết hợp một ảnh lớn với các ảnh chi tiết.\n- Tạo nhịp điệu thị giác khác biệt so với những dự án trước.\n\nMỗi dự án có thể hiển thị:\n- Project name.\n- Project type.\n- Location.\n- Year.\n- Scale.\n- Individual role.\n- Design concept.\n- Main materials.\n\nChỉ hiển thị thông tin thực tế hoặc placeholder rõ ràng.\n\nKhông biến mọi dự án thành các card giống nhau. Không gán công trình tham khảo cho kiến trúc sư như tác phẩm cá nhân.\n\n### 6. PROJECT CASE STUDY\n\nMỗi dự án có nút EXPLORE PROJECT để mở rộng nội dung ngay trong trang bằng accordion.\n\nKhông tạo trang dự án riêng.\n\nNội dung gồm:\n- Context: Bối cảnh và nhu cầu.\n- Design Challenge: Vấn đề cần giải quyết.\n- Concept Development: Quá trình hình thành ý tưởng.\n- Material Strategy: Lý do lựa chọn vật liệu.\n- Design Outcome: Kết quả hoặc mục tiêu thiết kế.\n\nCó thể sử dụng hình ảnh, sơ đồ và bản vẽ minh họa.\n\nAccordion phải hoạt động thực tế, hỗ trợ mobile và bàn phím.\n\n### 7. DESIGN APPROACH\n\nTiêu đề: A Way of Seeing Space.\n\nTrình bày ba nguyên tắc thiết kế:\n\n**LIGHT:** Vai trò của ánh sáng tự nhiên, bóng đổ và chiều sâu không gian.\n\n**MATERIAL:** Cách vật liệu ảnh hưởng đến cảm giác, màu sắc và trải nghiệm kiến trúc.\n\n**SPACE:** Cách tổ chức công năng, luồng di chuyển, tầm nhìn và không gian chuyển tiếp.\n\nMỗi nguyên tắc có hình ảnh riêng, tiêu đề và đoạn mô tả ngắn.\n\nCó thể sử dụng ba cột không đồng đều hoặc một hình ảnh lớn kết hợp hai hình nhỏ.\n\nNội dung cần có ý nghĩa chuyên môn, không chỉ là khẩu hiệu.\n\n### 8. EXPERTISE & TOOLS\n\nTrình bày các nhóm năng lực phù hợp với cá nhân:\n- Architectural Design.\n- Interior Architecture.\n- Spatial Planning.\n- Concept Development.\n- 3D Visualization.\n- Technical Drawing.\n- Material Research.\n\nPhần mềm có thể bao gồm AutoCAD, Revit, SketchUp, Rhino, Blender, V-Ray hoặc Adobe Creative Suite.\n\nChỉ hiển thị công cụ thực sự được sử dụng.\n\nTrình bày bằng typography và danh sách tối giản. Không sử dụng thanh tiến độ kỹ năng giả hoặc tỷ lệ phần trăm thiếu căn cứ.\n\n### 9. PROFESSIONAL RESUME\n\nSử dụng timeline tối giản kết hợp đường kẻ mảnh.\n\nBao gồm:\n- Kinh nghiệm làm việc.\n- Văn phòng kiến trúc.\n- Vai trò và trách nhiệm.\n- Học vấn.\n- Chứng chỉ.\n- Giải thưởng nếu có.\n\nMỗi mục có thời gian, tên đơn vị và mô tả ngắn.\n\nKhông bịa kinh nghiệm, bằng cấp hoặc giải thưởng.\n\nCó nút DOWNLOAD CV nếu tồn tại file PDF thật.\n\n### 10. ABOUT & CONTACT\n\nPhần About giới thiệu quan điểm nghề nghiệp, lĩnh vực quan tâm và cách tiếp cận thiết kế. Không lặp lại nguyên văn phần Hero.\n\nPhần Contact sử dụng hình ảnh kiến trúc có tính biểu tượng hoặc chi tiết vật liệu làm điểm kết thúc.\n\nTiêu đề:\n\n\"Let's Create Meaningful Spaces.\"\n\nHiển thị email, LinkedIn và liên kết CV/Portfolio PDF nếu có tài liệu thực tế.\n\nFooter tối giản, gồm tên cá nhân, chức danh, liên kết điều hướng và thông tin bản quyền phù hợp.\n\nKhông tạo liên kết giả hoặc biểu mẫu gửi thông tin không hoạt động.\n\n### 11. IMAGE ART DIRECTION\n\nHình ảnh là thành phần chủ đạo của website.\n\nƯu tiên:\n- Kiến trúc đương đại.\n- Nội thất tối giản.\n- Ánh sáng tự nhiên.\n- Bê tông, đá, gỗ và kim loại.\n- Chi tiết cấu trúc và vật liệu.\n- Bản vẽ kiến trúc và sơ đồ không gian.\n\nSử dụng ảnh ngang, ảnh dọc, ảnh vuông và hình ảnh chi tiết theo từng dự án.\n\nKhông lặp lại hình ảnh ở nhiều section nếu không có chủ đích.\n\nNếu có công cụ tìm kiếm ảnh, hãy chọn ảnh phù hợp và kiểm tra URL. Không tạo URL ảnh ngẫu nhiên.\n\nNếu chưa có hình ảnh thực tế, dùng placeholder đẹp, đúng tỷ lệ và dễ thay thế.\n\nKhông sử dụng ảnh minh họa để khẳng định kiến trúc sư đã thiết kế hoặc xây dựng công trình đó.\n\n### 12. MOTION DESIGN\n\nAnimation nhẹ, chậm vừa phải và có chủ đích.\n\n- Hero xuất hiện bằng opacity và dịch chuyển nhẹ.\n- Section reveal khi cuộn.\n- Đường kẻ mở rộng khi section xuất hiện.\n- Hình ảnh phóng to nhẹ khi hover.\n- Metadata xuất hiện theo thứ tự.\n- Parallax chỉ sử dụng khi thực sự cần thiết.\n\nKhông sử dụng hiệu ứng xoay, nảy, zoom mạnh hoặc chuyển động liên tục.\n\nTổng thể phải tĩnh tại, tinh tế và tập trung vào kiến trúc.\n\nHỗ trợ `prefers-reduced-motion`. Animation không được gây giật hoặc cản trở thao tác.\n\n### 13. RESPONSIVE DESIGN\n\n**Desktop:** Hình ảnh lớn, lưới nhiều cột, bố cục bất đối xứng và metadata rõ ràng.\n\n**Tablet:** Giảm số cột, điều chỉnh khoảng cách và giữ tỷ lệ hình ảnh.\n\n**Mobile:** Một cột, menu thu gọn, chữ dễ đọc, chú thích đặt dưới ảnh và không có cuộn ngang.\n\nKhông thu nhỏ bản vẽ đến mức không đọc được. Không để chữ, hình ảnh hoặc nút bị tràn màn hình.\n\nKiểm tra giao diện tại các chiều rộng 1440px, 1024px, 768px, 390px và 360px.\n\n### 14. FUNCTIONALITY & PERFORMANCE\n\n- Navigation hoạt động đúng.\n- Accordion mở và đóng chính xác.\n- Tất cả liên kết dẫn đến đích hợp lệ.\n- Email sử dụng `mailto:` khi có địa chỉ thật.\n- CV và Portfolio PDF chỉ tải khi có file.\n- Ảnh có alt text phù hợp.\n- Ảnh ngoài viewport được lazy-load.\n- Ảnh hero không bị trì hoãn không cần thiết.\n- Tối ưu kích thước ảnh và font.\n- Không có lỗi JavaScript nghiêm trọng.\n- Không sử dụng thư viện nặng nếu không cần thiết.\n- Đảm bảo trạng thái focus và khả năng sử dụng bằng bàn phím.\n\nNếu đang làm việc trong dự án có sẵn, hãy kiểm tra cấu trúc hiện tại và tận dụng công nghệ đã được thiết lập. Không tự ý viết lại các phần không liên quan.\n\n### 15. CONTENT ACCURACY\n\nKhông tự bịa tên, dự án, địa điểm, diện tích, kinh nghiệm, chứng chỉ hoặc giải thưởng.\n\nPhân biệt rõ:\n- BUILT PROJECT.\n- CONCEPT DESIGN.\n- ACADEMIC PROJECT.\n- PERSONAL STUDY.\n- UNBUILT PROJECT.\n\nSử dụng placeholder khi thiếu dữ liệu. Nội dung mẫu phải dễ thay thế.\n\n### 16. FINAL QUALITY STANDARD\n\nTrước khi hoàn thành, kiểm tra:\n- Bố cục có thực sự mang tinh thần kiến trúc không?\n- Các section có nhịp điệu khác nhau không?\n- Hình ảnh có đủ chất lượng và liên quan không?\n- Typography và metadata có nhất quán không?\n- Các tương tác có hoạt động không?\n- Giao diện mobile có hoàn chỉnh không?\n- Có liên kết hỏng, ảnh lỗi hoặc nội dung giả không?\n\n**Ưu tiên theo thứ tự:**\n\n1. Chất lượng hình ảnh và Art Direction.\n2. Bố cục editorial có bản sắc.\n3. Typography, khoảng trắng và hệ thống lưới.\n4. Nội dung chuyên nghiệp, có tính xác thực.\n5. Animation tinh tế.\n6. Responsive, accessibility và hiệu năng.\n\n### FINAL GOAL\n\nTạo một landing page Portfolio & CV kiến trúc sư có cảm giác như một ấn phẩm kiến trúc đương đại được thiết kế riêng.\n\nWebsite phải có chiều sâu thị giác, bố cục bất đối xứng có chủ đích, hình ảnh chất lượng cao và nội dung dễ thay thế.\n\nKhông giống website công ty xây dựng. Không giống template CV thông thường. Không lạm dụng hiệu ứng.\n\n**Sản phẩm cuối cùng phải tối giản nhưng không đơn điệu, chuyên nghiệp nhưng có cá tính, giàu hình ảnh nhưng vẫn dễ đọc và sử dụng thực tế.**",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-26T01:45:26.098Z",
+  "updatedAt": "2026-10-26T02:02:35.250Z",
+  "screen": "done",
+  "request": "Website portfolio cá nhân",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\monochrome\\web",
+    "builtAt": "2026-10-26T02:02:23.270Z",
+    "pages": [
+      "index.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": []
+    }
+  },
+  "job": {
+    "id": "ac516b32-9fd7-40db-a432-344095462ce7",
+    "kind": "quick-revise",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\monochrome\\web",
+    "feedback": "Vì đây là prototype nên bạn bịa nội dung vô giúp tui",
+    "page": "index.html",
+    "status": "done",
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 24,
+      "outputTokens": 12050,
+      "cacheReadTokens": 1432375,
+      "cacheCreationTokens": 98802,
+      "costUsd": 1.3179869999999998,
+      "numTurns": 40,
+      "durationMs": 120291
+    }
+  },
+  "qa": {
+    "createdAt": "2026-10-26T02:02:32.353Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 2,
+    "screenshots": 3
+  },
+  "revisions": [
+    {
+      "createdAt": "2026-10-26T02:02:23.262Z",
+      "text": "Vì đây là prototype nên bạn bịa nội dung vô giúp tui"
+    }
+  ]
+}

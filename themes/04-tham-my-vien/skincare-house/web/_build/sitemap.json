@@ -1,0 +1,87 @@
+{
+  "brand": "SKINCARE HOUSE",
+  "language": "en",
+  "preset": "editorial",
+  "motionLevel": 2,
+  "visualIdea": "Tạp chí scrapbook thập niên 90: ảnh lồng khung ảnh lấy liền / khung phim viền mực, nền caro xanh baby – vàng bơ, nhãn dán xoay nghiêng và chữ nghiêng cá tính xuyên suốt mọi trang",
+  "purposeInferred": "Website giới thiệu thẩm mỹ viện chăm sóc da, dẫn khách tới đặt lịch tư vấn",
+  "theme": {
+    "tagline": "Da đẹp, không kịch tính",
+    "description": "Giao diện thẩm mỹ viện chăm sóc da phong cách retro pop thập niên 90, song ngữ Anh – Việt."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Bìa tạp chí retro giới thiệu thương hiệu, không gian và ba nhóm dịch vụ chính, dẫn tới đặt lịch tư vấn",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ai", "note": "Bìa tạp chí retro theo chú thích BA: ảnh bìa + ảnh lấy liền chồng lệch + nhãn dán" },
+        { "id": "ticker", "catalog": "editorial", "variant": "ticker-band", "source": "ai", "note": "Dải chữ chạy (data-marquee) nền đỏ gạch" },
+        { "id": "intro", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Giới thiệu ngắn + ảnh không gian, link sang pages/about.html" },
+        { "id": "services", "catalog": "services", "variant": "features-bento", "source": "ai", "note": "Ba nhóm dịch vụ chính, link sang pages/services.html" },
+        { "id": "promises", "catalog": "features", "variant": "features-numbered", "source": "ai", "note": "4 cam kết tạo độ tin cậy" },
+        { "id": "reviews", "catalog": "testimonials", "variant": "testimonials-carousel", "source": "ai", "note": "data-carousel" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Nút Book a Consultation mở form tư vấn" }
+      ],
+      "images": [
+        { "slot": "hero-cover", "query": "facial treatment spa woman", "file": "assets/img/home-hero-cover.jpg", "status": "ok" },
+        { "slot": "hero-snap", "query": "facial treatment spa woman", "file": "assets/img/home-hero-snap.jpg", "status": "ok" },
+        { "slot": "intro", "query": "spa treatment room", "file": "assets/img/home-intro-space.jpg", "status": "ok" },
+        { "slot": "services-basic", "query": "skin care products", "file": "assets/img/service-basic.jpg", "status": "ok" },
+        { "slot": "services-intensive", "query": "facial massage spa", "file": "assets/img/service-intensive.jpg", "status": "ok" },
+        { "slot": "services-aesthetic", "query": "laser skin treatment", "file": "assets/img/service-aesthetic.jpg", "status": "ok" },
+        { "slot": "reviews", "query": "woman face cream skincare", "file": "assets/img/home-review-glow.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Treatments & Prices",
+      "purpose": "Danh sách dịch vụ theo ba nhóm (cơ bản, chuyên sâu, thẩm mỹ) với nhãn màu, icon, mô tả dễ hiểu và giá tham khảo khi có",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "menu", "catalog": "pricing", "variant": "features-tabs", "source": "ai", "note": "data-tabs 3 nhóm; dịch vụ chưa có giá ghi 'Price after skin check'" },
+        { "id": "pricing-notes", "catalog": "features", "variant": "stats-band", "source": "ai", "note": "Cách tính giá" },
+        { "id": "faq", "catalog": "faq", "variant": "faq-accordion", "source": "ai", "note": "data-accordion" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "skin care products", "file": "assets/img/services-products.jpg", "status": "ok" },
+        { "slot": "menu-basic", "query": "woman face cream skincare", "file": "assets/img/services-basic-cream.jpg", "status": "ok" },
+        { "slot": "menu-intensive", "query": "beauty skincare serum", "file": "assets/img/about-consult.jpg", "status": "ok" },
+        { "slot": "menu-aesthetic", "query": "laser skin treatment", "file": "assets/img/services-laser-forehead.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Câu chuyện hình thành thương hiệu, đội ngũ, không gian và trải nghiệm tư vấn bằng bố cục ảnh ghép scrapbook",
+      "sections": [
+        { "id": "page-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ai", "note": "Lá thư nhà sáng lập + ảnh ghép dán băng keo" },
+        { "id": "team", "catalog": "team", "variant": "team-grid", "source": "ai", "note": "Không có ảnh chân dung phù hợp: khối chữ cái đầu tên trong khung ảnh lấy liền" },
+        { "id": "space", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ai", "note": "data-lightbox" },
+        { "id": "consultation", "catalog": "process", "variant": "process-steps", "source": "ai", "note": "Trải nghiệm tư vấn 4 bước" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "story", "query": "woman skin mirror", "file": "assets/img/about-story-mirror.jpg", "status": "ok" },
+        { "slot": "space-room", "query": "spa treatment room", "file": "assets/img/about-space-room.jpg", "status": "ok" },
+        { "slot": "space-detail", "query": "spa towels candles", "file": "assets/img/about-space-lounge.webp", "status": "ok" },
+        { "slot": "team", "query": "esthetician portrait smiling", "file": null, "status": "none" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Theo chú thích BA: dựng đúng 3 trang chính (Home, Treatments & Prices, About); không có trang Contact riêng, thông tin liên hệ ở footer và form tư vấn dạng cửa sổ.",
+    "Chú thích BA yêu cầu website song ngữ Việt – Anh có công tắc chuyển ngôn ngữ (ghi đè mục 'không tạo bộ chuyển ngôn ngữ' của concept): mặc định tiếng Anh, <html lang=\"en\">; bản tiếng Việt nằm trong thuộc tính data-vi, site.js đổi chữ + lang khi bấm EN/VI và ghi nhớ lựa chọn.",
+    "Mô tả art direction 1990s Retro Pop khác preset Editorial: dùng bảng màu BA mô tả (xanh baby, đỏ gạch, vàng bơ, trắng kem) và font Bricolage Grotesque + Be Vietnam Pro (đủ ký tự tiếng Việt cho bản song ngữ) thay cho Instrument Serif + Geist.",
+    "Theo góp ý BA (retro nhưng đang trẻ con, cần sinh động hơn): nâng lên Level 2 (tách chữ tiêu đề, clip ảnh, marquee dải dịch vụ, parallax, float nhãn/ảnh, magnetic CTA, thanh tiến độ cuộn, atmos.js); làm retro trưởng thành hơn theo hướng film: hạt phim phủ trang, ảnh tông phai, bảng màu dịu hơn, chữ tiêu đề nhẹ nét hơn, bóng đổ ngắn, nhãn dán thành con dấu viền kép; bỏ 'Pinky promise'.",
+    "Góp ý BA lần 2 (vẫn trẻ con, cần sinh động hơn): đổi chữ tiêu đề sang Playfair Display (serif tạp chí thời trang thập niên 90, có nghiêng thật, đủ dấu tiếng Việt) thay Bricolage Grotesque; mọi viền mực còn 1px; bóng đổ cứng lệch thành bóng mềm; caro nhạt và nhỏ hơn; con dấu chữ nhỏ kiểu in. Trang chủ thêm hạt bụi nắng ở hero, parallax ảnh bìa, vòng nét đứt quay chậm quanh con dấu, thẻ dịch vụ nghiêng 3D + vệt sáng theo chuột, ripple cho nút đặt lịch, ảnh lấy liền / khung phim tự thẳng lại và nhấc lên khi rê chuột.",
+    "Giá tham khảo chỉ hiển thị cho dịch vụ có giá mẫu; dịch vụ thẩm mỹ cần bác sĩ khám ghi 'Price after skin check'.",
+    "Tên, địa chỉ, số điện thoại, giá, đánh giá khách là nội dung mẫu cần khách xác nhận."
+  ],
+  "limitations": [
+    "Form 'Book a Consultation' là bản demo, chưa có backend, không gửi dữ liệu đi.",
+    "Chưa có ảnh đội ngũ thật: dùng khối chữ cái đầu tên, cần ảnh chân dung từ khách."
+  ]
+}

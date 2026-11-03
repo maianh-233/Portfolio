@@ -1,0 +1,79 @@
+{
+  "slug": "nexmotion-industries",
+  "name": "NEXMOTION INDUSTRIES",
+  "projectType": "website",
+  "concept": {
+    "topic": "Website Giowis thiệu xưởng cơ khí NEXMOTION INDUSTRIES",
+    "brand": "NEXMOTION INDUSTRIES",
+    "purpose": "Thiết kế website giới thiệu doanh nghiệp NEXMOTION INDUSTRIES, chuyên về cơ khí chính xác, chế tạo linh kiện máy và giải pháp tự động hóa công nghiệp.\n\nSlogan: “Precision Engineered. Progress Delivered.”\n\nWebsite truyền tải hình ảnh một doanh nghiệp cơ khí hiện đại, có năng lực kỹ thuật chuyên nghiệp, quy trình sản xuất bài bản và định hướng phát triển công nghệ.\n\nĐây là website nhiều trang (Multi-page Website), không phải One-page Landing Page. Mỗi mục chính trên thanh điều hướng phải có trang riêng với URL, nội dung và bố cục phù hợp. Không gom toàn bộ nội dung vào một trang cuộn dài.\n\nWebsite chỉ phục vụ mục đích giới thiệu doanh nghiệp, không có thương mại điện tử, giỏ hàng, thanh toán hoặc quản lý đơn hàng.",
+    "preset": "auto",
+    "motion": "auto",
+    "language": "vi",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "2. Phong cách thiết kế\n\nSử dụng phong cách Modern Industrial kết hợp Swiss Engineering và Clean Technology.\n\nBảng màu:\n\nDeep Navy: #102A43 — màu nhận diện chính.\n\nIce White: #F7FAFC — màu nền chủ đạo.\n\nSteel Blue: #627D98 — màu phụ.\n\nMint Green: #5DD6B0 — màu nhấn.\n\nGraphite: #243B53 — màu chữ và các khối nội dung đậm.\n\nGiao diện sáng, hiện đại, chuyên nghiệp; sử dụng typography rõ ràng, khoảng trắng rộng, hình ảnh máy CNC, robot công nghiệp, linh kiện kim loại và nhà xưởng hiện đại.\n\n3. Cấu trúc website nhiều trang\n\nTrang 1 — Home (/)\n\nTrang chủ giới thiệu tổng quan doanh nghiệp và dẫn người dùng đến các nội dung quan trọng.\n\nCác section:\n\nHero với tiêu đề “ENGINEERING THE NEXT LEVEL OF PRECISION.”\n\nGiới thiệu ngắn về NEXMOTION INDUSTRIES.\n\nCác năng lực nổi bật.\n\nHình ảnh công nghệ và máy móc.\n\nQuy trình sản xuất tổng quan.\n\nDự án tiêu biểu.\n\nLĩnh vực phục vụ.\n\nCTA dẫn đến trang liên hệ.\n\nTrang 2 — About Us (/about)\n\nGiới thiệu chi tiết về doanh nghiệp:\n\nTổng quan và định hướng phát triển.\n\nSứ mệnh, tầm nhìn và giá trị cốt lõi.\n\nTriết lý kỹ thuật và văn hóa chất lượng.\n\nĐội ngũ kỹ thuật và môi trường làm việc.\n\nHình ảnh doanh nghiệp và nhà xưởng.\n\nThiết kế theo phong cách corporate editorial, kết hợp hình ảnh lớn với nội dung có chiều sâu.\n\nTrang 3 — Capabilities (/capabilities)\n\nTrình bày chi tiết năng lực chuyên môn:\n\nCNC Precision Machining.\n\nMechanical Components.\n\nMetal Fabrication.\n\nIndustrial Automation.\n\nTechnical Engineering.\n\nMỗi nhóm có hình ảnh riêng, mô tả ứng dụng, quy trình liên quan và các thông tin kỹ thuật có thể cập nhật. Có thể sử dụng layout chia cột hoặc các khối nội dung xen kẽ.\n\nTrang 4 — Technology (/technology)\n\nGiới thiệu hệ thống công nghệ và thiết bị:\n\nMáy CNC và thiết bị gia công.\n\nHệ thống tự động hóa.\n\nThiết bị đo kiểm và kiểm soát chất lượng.\n\nVật liệu và công nghệ gia công.\n\nQuy trình sản xuất và kiểm tra kỹ thuật.\n\nSử dụng hình ảnh cận cảnh, bố cục kỹ thuật, chú thích và sơ đồ minh họa. Không tự tạo thông số máy hoặc chứng nhận chưa có dữ liệu.\n\nTrang 5 — Projects (/projects)\n\nTrang portfolio giới thiệu các dự án và sản phẩm cơ khí tiêu biểu.\n\nBao gồm:\n\nLưới dự án với hình ảnh lớn.\n\nTên dự án và lĩnh vực ứng dụng.\n\nMô tả kỹ thuật ngắn.\n\nBộ lọc danh mục nếu phù hợp.\n\nMỗi dự án có thể mở một trang chi tiết riêng theo cấu trúc /projects/project-name, trình bày bài toán kỹ thuật, phương án thực hiện, hình ảnh và kết quả. Nếu chưa có dự án thật, sử dụng dữ liệu minh họa có đánh dấu rõ ràng.\n\nTrang 6 — Quality & Process (/quality-process)\n\nGiới thiệu quy trình làm việc và định hướng kiểm soát chất lượng:\n\nTiếp nhận yêu cầu kỹ thuật.\n\nPhân tích bản vẽ và vật liệu.\n\nLập phương án gia công.\n\nThực hiện sản xuất.\n\nKiểm tra chất lượng.\n\nHoàn thiện sản phẩm.\n\nTrình bày bằng timeline, sơ đồ quy trình và hình ảnh minh họa. Làm rõ cách doanh nghiệp chú trọng tính chính xác, tính nhất quán và khả năng kiểm soát sản xuất.\n\nTrang 7 — Industries (/industries)\n\nGiới thiệu các ngành nghề và lĩnh vực ứng dụng:\n\nSản xuất công nghiệp.\n\nTự động hóa nhà máy.\n\nMáy móc và thiết bị kỹ thuật.\n\nCông nghiệp phụ trợ.\n\nChế tạo và lắp ráp cơ khí.\n\nMỗi lĩnh vực có hình ảnh, mô tả nhu cầu kỹ thuật và vai trò của năng lực cơ khí.\n\nTrang 8 — Contact (/contact)\n\nTrang thông tin liên hệ riêng:\n\nĐịa chỉ doanh nghiệp hoặc nhà máy.\n\nEmail và số điện thoại.\n\nThời gian làm việc.\n\nBản đồ vị trí nếu có địa chỉ thực tế.\n\nBiểu mẫu liên hệ đơn giản nếu triển khai được.\n\nThông tin mẫu phải dễ chỉnh sửa. Không tự tạo địa chỉ hoặc thông tin liên hệ giả rồi trình bày như dữ liệu thật.\n\n4. Header và Footer\n\nHeader:\n\nLogo NEXMOTION INDUSTRIES.\n\nMenu: Home, About Us, Capabilities, Technology, Projects, Quality & Process, Industries, Contact.\n\nCó trạng thái active cho trang hiện tại.\n\nResponsive với menu mobile.\n\nCó thể dùng header sticky khi cuộn.\n\nFooter:\n\nLogo và mô tả ngắn về doanh nghiệp.\n\nCác liên kết đến tất cả trang chính.\n\nThông tin liên hệ.\n\nLiên kết mạng xã hội nếu có.\n\nBản quyền website.\n\nHeader và footer cần nhất quán trên tất cả các trang.\n\n5. Animation và tương tác\n\nHero có hiệu ứng xuất hiện nội dung và hình ảnh nhẹ nhàng.\n\nCác section sử dụng scroll reveal vừa phải.\n\nHình ảnh dự án có hiệu ứng zoom nhẹ khi hover.\n\nMenu có trạng thái active và chuyển trang rõ ràng.\n\nCard có hiệu ứng chuyển màu tinh tế theo bảng màu mint.\n\nChuyển động mượt nhưng không gây chậm tải trang.\n\nKhông lạm dụng 3D, neon hoặc hiệu ứng công nghiệp quá phức tạp.\n\n6. Yêu cầu kỹ thuật\n\nXây dựng website nhiều trang thực sự, có routing và URL riêng cho từng trang.\n\nMỗi trang phải có nội dung riêng, không chỉ sao chép cùng một layout rồi thay tiêu đề.\n\nCác liên kết điều hướng hoạt động chính xác.\n\nCó thể truy cập trực tiếp từng URL và tải lại trang mà không lỗi.\n\nResponsive trên desktop, tablet và mobile.\n\nTái sử dụng các thành phần chung như Header, Footer, Button và Project Card.\n\nDuy trì nhất quán màu sắc, typography, khoảng cách và phong cách hình ảnh.\n\nSử dụng dữ liệu mẫu có cấu trúc, dễ thay thế.\n\nKhông tạo chức năng thương mại điện tử hoặc quản lý nội bộ.\n\nKiểm tra lỗi giao diện, liên kết hỏng, tràn ngang và khả năng sử dụng trên thiết bị di động.\n\nKết quả mong muốn: Một website doanh nghiệp cơ khí nhiều trang, có kiến trúc điều hướng rõ ràng, mỗi trang đảm nhận một mục đích giới thiệu riêng. Thiết kế mang phong cách công nghiệp hiện đại với bảng màu navy – trắng – mint, hình ảnh kỹ thuật chất lượng cao và trải nghiệm nhất quán trên toàn bộ website.",
+    "mood": "",
+    "reference": ""
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-17T02:32:34.699Z",
+  "updatedAt": "2026-10-17T03:39:47.890Z",
+  "screen": "done",
+  "request": "Website Giowis thiệu xưởng cơ khí NEXMOTION INDUSTRIES",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": "D:\\Layout_Agent\\BA_Tool\\workspace\\nexmotion-industries\\prototype",
+    "builtAt": "2026-10-17T03:39:25.749Z",
+    "pages": [
+      "index.html",
+      "about.html",
+      "capabilities.html",
+      "contact.html",
+      "industries.html",
+      "project-gearbox.html",
+      "project-robot-base.html",
+      "project-welded-frame.html",
+      "projects.html",
+      "quality-process.html",
+      "technology.html"
+    ],
+    "sections": [],
+    "pageSections": {
+      "index.html": [],
+      "about.html": [],
+      "capabilities.html": [],
+      "contact.html": [],
+      "industries.html": [],
+      "project-gearbox.html": [],
+      "project-robot-base.html": [],
+      "project-welded-frame.html": [],
+      "projects.html": [],
+      "quality-process.html": [],
+      "technology.html": []
+    }
+  },
+  "job": {
+    "id": "6e7f518d-6ae6-49bb-b7cb-fe2bfd6c3a3f",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\nexmotion-industries\\prototype",
+    "status": "done"
+  },
+  "qa": {
+    "createdAt": "2026-10-17T03:39:47.819Z",
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "screenshots": 33
+  }
+}

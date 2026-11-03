@@ -1,0 +1,103 @@
+<footer id="footer" class="border-t border-line bg-beige text-cocoa">
+  <div class="mx-auto w-full max-w-screen-2xl px-4 pb-10 pt-20 sm:px-6 lg:px-10 lg:pt-28 2xl:px-16">
+    <div class="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <a href="{{root}}index.html" class="font-display text-2xl font-medium uppercase tracking-[0.22em]">PEARL NAIL ATELIER</a>
+        <p data-i18n="f-msg" class="mt-6 max-w-sm font-display text-2xl italic leading-snug text-cocoa/90">Vẻ đẹp nằm trong những chi tiết được hoàn thiện cẩn thận.</p>
+        <button type="button" data-modal-open="dat-lich" data-i18n="n-book" class="mt-8 inline-flex h-12 items-center rounded-hair bg-cocoa px-8 text-[12px] font-medium uppercase tracking-[0.16em] text-pearl transition-colors duration-300 hover:bg-cocoa-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cocoa">Đặt lịch</button>
+      </div>
+
+      <nav class="lg:col-span-2" aria-label="Chân trang">
+        <p data-i18n="f-pages" class="text-[12px] font-medium uppercase tracking-[0.16em] text-muted">Các trang</p>
+        <ul class="mt-5 space-y-3 text-[15px]">
+          <li><a href="{{root}}index.html" data-i18n="n-home" class="transition-colors duration-300 hover:text-muted">Trang chủ</a></li>
+          <li><a href="{{root}}pages/services.html" data-i18n="n-services" class="transition-colors duration-300 hover:text-muted">Dịch vụ &amp; Bảng giá</a></li>
+          <li><a href="{{root}}pages/gallery.html" data-i18n="n-gallery" class="transition-colors duration-300 hover:text-muted">Bộ sưu tập</a></li>
+          <li><a href="{{root}}pages/about.html" data-i18n="n-about" class="transition-colors duration-300 hover:text-muted">Về Atelier</a></li>
+        </ul>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <p data-i18n="f-visit" class="text-[12px] font-medium uppercase tracking-[0.16em] text-muted">Ghé Atelier</p>
+        <address class="mt-5 space-y-3 text-[15px] not-italic leading-relaxed">
+          <span class="block" data-i18n="f-addr">18 Ngô Văn Năm, phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</span>
+          <a href="tel:+84908612418" class="block transition-colors duration-300 hover:text-muted">0908 612 418</a>
+          <a href="mailto:hello@pearlnailatelier.vn" class="block break-words transition-colors duration-300 hover:text-muted">hello@pearlnailatelier.vn</a>
+        </address>
+      </div>
+
+      <div class="lg:col-span-3">
+        <p data-i18n="f-hours-t" class="text-[12px] font-medium uppercase tracking-[0.16em] text-muted">Giờ mở cửa</p>
+        <dl class="mt-5 space-y-3 text-[15px]">
+          <div class="flex justify-between gap-4 border-b border-champagne/60 pb-3"><dt data-i18n="f-h1">Thứ Ba đến Thứ Sáu</dt><dd>9:30 - 20:00</dd></div>
+          <div class="flex justify-between gap-4 border-b border-champagne/60 pb-3"><dt data-i18n="f-h2">Thứ Bảy, Chủ Nhật</dt><dd>9:00 - 19:00</dd></div>
+          <div class="flex justify-between gap-4"><dt data-i18n="f-h3">Thứ Hai</dt><dd data-i18n="f-closed">Nghỉ</dd></div>
+        </dl>
+        <div class="mt-8 flex gap-6 text-[13px] font-medium tracking-[0.08em]">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-muted">Instagram</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-muted">Facebook</a>
+          <a href="https://zalo.me/" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-muted">Zalo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 flex flex-col gap-3 border-t border-champagne/70 pt-6 text-[13px] text-muted sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 PEARL NAIL ATELIER. <span data-i18n="f-rights">Bảo lưu mọi quyền.</span></p>
+      <p data-i18n="f-sample">Địa chỉ, giờ mở cửa, giá và hình ảnh trên website là dữ liệu minh họa.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="dat-lich" class="m-auto w-[min(94vw,680px)] max-h-[92dvh] overflow-y-auto rounded-hair border border-line bg-pearl p-0 text-cocoa shadow-[0_40px_80px_-30px_rgba(59,49,44,.5)]">
+  <div class="flex items-start justify-between gap-6 border-b border-line px-6 py-6 sm:px-10">
+    <div>
+      <p data-i18n="b-eyebrow" class="text-[12px] font-medium uppercase tracking-[0.16em] text-muted">Đặt lịch hẹn</p>
+      <h2 data-i18n="b-title" class="mt-2 font-display text-3xl leading-tight sm:text-4xl">Chọn thời gian dành cho đôi tay bạn</h2>
+    </div>
+    <button type="button" data-modal-close class="inline-flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-cocoa transition-colors duration-300 hover:text-muted" aria-label="Đóng">×</button>
+  </div>
+  <form data-form="dat-lich" class="grid grid-cols-1 gap-5 px-6 py-8 sm:grid-cols-2 sm:px-10" novalidate>
+    <label class="grid gap-2 text-[13px] font-medium">
+      <span data-i18n="b-name">Họ và tên</span>
+      <input type="text" name="name" required minlength="2" autocomplete="name" class="h-12 rounded-hair border border-champagne bg-white/70 px-4 text-base font-normal text-cocoa outline-none transition-colors duration-300 focus:border-cocoa">
+    </label>
+    <label class="grid gap-2 text-[13px] font-medium">
+      <span data-i18n="b-phone">Số điện thoại</span>
+      <input type="tel" name="phone" required autocomplete="tel" class="h-12 rounded-hair border border-champagne bg-white/70 px-4 text-base font-normal text-cocoa outline-none transition-colors duration-300 focus:border-cocoa">
+    </label>
+    <label class="grid gap-2 text-[13px] font-medium sm:col-span-2">
+      <span data-i18n="b-service">Dịch vụ quan tâm</span>
+      <select name="service" required class="h-12 rounded-hair border border-champagne bg-white/70 px-4 text-base font-normal text-cocoa outline-none transition-colors duration-300 focus:border-cocoa">
+        <option value="" data-i18n="b-opt0">Chọn một dịch vụ</option>
+        <option value="manicure" data-i18n="b-opt1">Manicure</option>
+        <option value="pedicure" data-i18n="b-opt2">Pedicure</option>
+        <option value="gel" data-i18n="b-opt3">Sơn gel</option>
+        <option value="extension" data-i18n="b-opt4">Nối móng</option>
+        <option value="art" data-i18n="b-opt5">Thiết kế nail art riêng</option>
+        <option value="bridal" data-i18n="b-opt6">Móng cô dâu (tư vấn trước)</option>
+        <option value="care" data-i18n="b-opt7">Chăm sóc móng</option>
+      </select>
+    </label>
+    <label class="grid gap-2 text-[13px] font-medium">
+      <span data-i18n="b-date">Ngày mong muốn</span>
+      <input type="date" name="date" required class="h-12 rounded-hair border border-champagne bg-white/70 px-4 text-base font-normal text-cocoa outline-none transition-colors duration-300 focus:border-cocoa">
+    </label>
+    <label class="grid gap-2 text-[13px] font-medium">
+      <span data-i18n="b-time">Khung giờ</span>
+      <select name="time" required class="h-12 rounded-hair border border-champagne bg-white/70 px-4 text-base font-normal text-cocoa outline-none transition-colors duration-300 focus:border-cocoa">
+        <option value="" data-i18n="b-t0">Chọn khung giờ</option>
+        <option value="morning" data-i18n="b-t1">Buổi sáng (9:30 - 12:00)</option>
+        <option value="afternoon" data-i18n="b-t2">Buổi chiều (13:00 - 17:00)</option>
+        <option value="evening" data-i18n="b-t3">Buổi tối (17:00 - 20:00)</option>
+      </select>
+    </label>
+    <label class="grid gap-2 text-[13px] font-medium sm:col-span-2">
+      <span data-i18n="b-note">Ghi chú về thiết kế (không bắt buộc)</span>
+      <textarea name="note" rows="3" class="rounded-hair border border-champagne bg-white/70 px-4 py-3 text-base font-normal text-cocoa outline-none transition-colors duration-300 focus:border-cocoa"></textarea>
+    </label>
+    <div class="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+      <p data-i18n="b-demo" class="max-w-sm text-[13px] leading-relaxed text-muted">Bản demo: form chỉ kiểm tra thông tin, chưa gửi đi và chưa tạo lịch hẹn thật.</p>
+      <button type="submit" data-i18n="b-submit" class="inline-flex h-12 shrink-0 items-center justify-center rounded-hair bg-cocoa px-8 text-[12px] font-medium uppercase tracking-[0.16em] text-pearl transition-colors duration-300 hover:bg-cocoa-deep active:scale-[.98]">Gửi yêu cầu</button>
+    </div>
+  </form>
+</dialog>

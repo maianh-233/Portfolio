@@ -1,0 +1,122 @@
+{
+  "brand": "VELVET HAIR STUDIO",
+  "language": "vi",
+  "preset": "editorial",
+  "motionLevel": 1,
+  "visualIdea": "Trang tạp chí thời trang: chữ Cormorant Garamond rất lớn có một phần in nghiêng vàng champagne, đường kẻ mảnh và số mục 01/02 chạy xuyên các trang; ảnh tóc chân dung lớn đặt lệch, nền Warm Ivory xen Velvet Black, kết trang bằng dải Mocha Brown",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Mái tóc của bạn, dấu ấn của bạn",
+    "description": "Giao diện salon tóc cao cấp phong cách tạp chí, song ngữ Việt – Anh."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu thương hiệu, 3 dịch vụ nổi bật, phong cách tiêu biểu; dẫn sang Services, Gallery, About",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-split", "source": "ba", "note": "Ảnh 60% bên phải, headline Your Hair. Your Signature., 2 CTA tới Services / Gallery" },
+        { "id": "statement", "catalog": "editorial", "variant": "quote-full", "source": "ba", "note": "Brand statement trên nền Warm Ivory" },
+        { "id": "signature", "catalog": "services", "variant": "teaser-row", "source": "ba", "note": "3 dịch vụ bố cục bất đối xứng, link tới pages/services.html#cutting|#coloring|#treatment" },
+        { "id": "looks", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "4 phong cách, ảnh lệch độ cao, hover phóng 1.04, link Gallery" },
+        { "id": "philosophy", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Chia đôi ảnh salon + More Than a Haircut, link About" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Nền Mocha, nút Đặt lịch mở hộp thoại minh họa" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "balayage long wavy hair back", "file": "https://images.unsplash.com/photo-1554519934-e32b1629d9ee?auto=format&fit=crop&w=1600&q=80", "status": "link" },
+        { "slot": "signature-01", "query": "woman getting hair cut", "file": "https://images.unsplash.com/photo-1637308596839-9487d9894028?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "signature-02", "query": "blonde balayage hair", "file": "https://images.unsplash.com/photo-1605980766335-d3a41c7332a1?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "signature-03", "query": "salon hair wash treatment", "file": "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "looks-soft-layers", "query": "long layered hair portrait", "file": "https://images.unsplash.com/photo-1535579710123-3c0f261c474e?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "looks-modern-brunette", "query": "long dark hair woman", "file": "https://images.unsplash.com/photo-1636153279424-cb5d1e00f5a2?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "looks-effortless-waves", "query": "wavy blonde brunette hair", "file": "https://images.unsplash.com/photo-1785456283212-338f5bc44d50?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "looks-signature-balayage", "query": "balayage hair pink wall", "file": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "philosophy", "query": "modern hair salon interior", "file": "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1600&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/services.html",
+      "title": "Dịch vụ & bảng giá",
+      "purpose": "Bảng giá tham khảo 4 nhóm dịch vụ, quy trình 4 bước, CTA đặt lịch",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "OUR SERVICES / The Art of Hair" },
+        { "id": "menu", "catalog": "pricing", "variant": "features-numbered", "source": "ba", "note": "Thanh mục dính + scrollspy; 4 nhóm #cutting #coloring #texture #treatment, mỗi mục tên · mô tả · thời lượng · giá" },
+        { "id": "approach", "catalog": "process", "variant": "process-steps", "source": "ba", "note": "4 bước ngang trên desktop, dọc trên mobile" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Ghi chú giá + Let's Find Your Signature Style + Đặt lịch + về trang chủ" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "hairstylist blow dry round brush", "file": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1600&q=80", "status": "link" },
+        { "slot": "cutting", "query": "hairstylist updo client", "file": "https://images.unsplash.com/photo-1774660810725-fb04e002003d?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "coloring", "query": "hair color foil highlights", "file": "https://images.unsplash.com/photo-1707812343087-c9ff9e5abb43?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "texture", "query": "hair curler styling", "file": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "treatment", "query": "salon shampoo bowl", "file": "https://images.unsplash.com/photo-1787880172059-1c52decb1ca9?auto=format&fit=crop&w=1200&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/gallery.html",
+      "title": "Bộ sưu tập",
+      "purpose": "Tuyển tập kiểu tóc có bộ lọc theo danh mục, lightbox, xu hướng tham khảo; dẫn sang Services",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "THE VELVET EDIT / A Study of Hair" },
+        { "id": "edit", "catalog": "gallery", "variant": "gallery-filter", "source": "ba", "note": "Bộ lọc All/Haircut/Coloring/Styling (ui.js), masonry 9 ảnh tỉ lệ khác nhau, lightbox có tên + mô tả, chỉ chuyển qua ảnh đang lọc" },
+        { "id": "trends", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "3 xu hướng: 1 ảnh lớn + 2 hàng ngang" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Inspired by a Look? → Services" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "black white long hair portrait", "file": "https://images.unsplash.com/photo-1633381521050-26bb467d9d5a?auto=format&fit=crop&w=1600&q=80", "status": "link" },
+        { "slot": "soft-layered-cut", "query": "stylist cutting hair", "file": "https://images.unsplash.com/photo-1647462741351-4e7a5e7317c7?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "modern-brunette", "query": "long brunette hair portrait", "file": "https://images.unsplash.com/photo-1634510979979-4be6881d31bb?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "copper-balayage", "query": "balayage hair", "file": "https://images.unsplash.com/photo-1522664101602-c1e70bcc9996?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "effortless-waves", "query": "styling wavy blonde hair", "file": "https://images.unsplash.com/photo-1785456390070-9960e3997066?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "glossy-dark-hair", "query": "sleek straight brown hair", "file": "https://images.unsplash.com/photo-1779350676620-fde279b1d023?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "sculpted-curls", "query": "short curly hair portrait", "file": "https://images.unsplash.com/photo-1614204424926-196a80bf0be8?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "blonde-dimension", "query": "blonde hair black turtleneck", "file": "https://images.unsplash.com/photo-1779406859387-5d6fd116b3ff?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "signature-styling", "query": "round brush blonde hair", "file": "https://images.unsplash.com/photo-1734111719430-fe4a3973f8af?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "precision-cut", "query": "scissors cutting hair ends", "file": "https://images.unsplash.com/photo-1700760934268-8aa0ef52ce0a?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "trend-natural-dimension", "query": "blonde woman portrait", "file": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "trend-modern-layers", "query": "layered haircut woman", "file": "https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "trend-healthy-gloss", "query": "glossy wavy long hair", "file": "https://images.unsplash.com/photo-1770576568718-6747e3d85de8?auto=format&fit=crop&w=1200&q=80", "status": "link" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Về chúng tôi",
+      "purpose": "Câu chuyện, giá trị, stylist, không gian salon và thông tin liên hệ mẫu",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "THE WORLD OF VELVET, ảnh nội thất tràn viền" },
+        { "id": "story", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Ảnh lớn + cột chữ hẹp có drop cap và trích dẫn" },
+        { "id": "values", "catalog": "features", "variant": "features-numbered", "source": "ba", "note": "3 giá trị bằng typography và đường kẻ mảnh, không thẻ" },
+        { "id": "stylists", "catalog": "team", "variant": "team-grid", "source": "ba", "note": "3 stylist minh họa, ảnh tỉ lệ khác nhau" },
+        { "id": "studio", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "4 khu vực: cắt tóc, gương & ghế, gội đầu, vật liệu & ánh sáng" },
+        { "id": "contact", "catalog": "contact", "variant": "contact-split", "source": "ba", "note": "Thông tin mẫu, sao chép số, không có form" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "modern hair salon interior", "file": "https://images.unsplash.com/photo-1781450090585-1a511b7066d9?auto=format&fit=crop&w=1600&q=80", "status": "link" },
+        { "slot": "story", "query": "stylist cape client salon", "file": "https://images.unsplash.com/photo-1761839256791-6a93f89fb8b0?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "stylist-maya", "query": "woman portrait smiling", "file": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "stylist-linh", "query": "woman black turtleneck portrait", "file": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "stylist-alex", "query": "man portrait black white", "file": "https://images.unsplash.com/photo-1558730234-d8b2281b0d00?auto=format&fit=crop&w=1000&q=80", "status": "link" },
+        { "slot": "studio-cutting", "query": "haircut in front of mirror", "file": "https://images.unsplash.com/photo-1637308596973-231d1a9221f5?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "studio-mirrors", "query": "salon chairs round mirrors", "file": "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "studio-wash", "query": "salon wash sinks", "file": "https://images.unsplash.com/photo-1637777269327-c4d5c7944d7b?auto=format&fit=crop&w=1200&q=80", "status": "link" },
+        { "slot": "studio-detail", "query": "salon counter chandelier", "file": "https://images.unsplash.com/photo-1634449862841-8c6e970117e5?auto=format&fit=crop&w=1600&q=80", "status": "link" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Theo chú thích BA: đúng 4 trang Home / Services / Gallery / About, không thêm trang chi tiết; liên kết 'Xem chi tiết' của dịch vụ trỏ tới mục tương ứng (#cutting, #coloring, #treatment) trên trang Services",
+    "BA yêu cầu song ngữ VI / EN có bộ chuyển trong header — ưu tiên hơn mục 'không tạo bộ chuyển ngôn ngữ' của concept.md. Mặc định tiếng Việt (<html lang=\"vi\">), bấm EN đổi toàn bộ nội dung tại chỗ, không tải lại trang, nhớ lựa chọn bằng localStorage, giữ trạng thái bộ lọc Gallery",
+    "Cơ chế dịch: nội dung VI viết sẵn trong HTML (data-i18n / data-i18n-attr) và được thu thành từ điển VI khi tải; toàn bộ bản EN khai báo tập trung trong một object EN ở assets/js/site.js",
+    "Màu & font theo chú thích BA thay preset: Velvet Black #171615, Warm Ivory #F5F0E8, Mocha Brown #705548, Champagne Gold #C5A572, Soft Taupe #B8AA9A; Cormorant Garamond (tiêu đề) + Manrope (thân), cả hai có đủ dấu tiếng Việt",
+    "Công cụ thư viện ảnh (openverse) quá thời gian chờ → toàn bộ ảnh dùng link Unsplash thật đã kiểm qua link_image (status 'link')",
+    "Gallery: đổi tên vài mục theo đúng nội dung ảnh tìm được (Copper Balayage thay Honey Balayage, Sculpted Curls thay Sculpted Bob) vì không có ảnh bob / balayage mật ong phù hợp",
+    "Header trong suốt trên hero tối ở mọi trang, chuyển nền Velvet Black khi cuộn; menu mobile toàn màn nền Velvet Black chữ Warm Ivory"
+  ],
+  "limitations": [
+    "Nút Đặt lịch / Book a Visit chỉ mở hộp thoại thông tin liên hệ mẫu, chưa có hệ thống đặt lịch trực tuyến",
+    "Địa chỉ, điện thoại, email, giờ mở cửa, hồ sơ stylist và toàn bộ giá là dữ liệu minh họa",
+    "Liên kết Instagram / Facebook / TikTok trỏ tới trang chủ mạng xã hội, chưa gắn tài khoản thật",
+    "Ảnh dùng link ngoài (Unsplash) — cần mạng để hiển thị; nên thay bằng ảnh thật của salon khi triển khai",
+    "Thông báo hệ thống của lightbox / nút sao chép (ui.js) giữ ngôn ngữ lúc tải trang"
+  ]
+}

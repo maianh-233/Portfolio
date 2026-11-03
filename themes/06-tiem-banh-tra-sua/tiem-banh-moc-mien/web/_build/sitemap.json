@@ -1,0 +1,94 @@
+{
+  "brand": "TIỆM BÁNH MỘC MIÊN",
+  "language": "en",
+  "preset": "film",
+  "motionLevel": 2,
+  "visualIdea": "Một tấm bưu thiếp gửi từ tiệm bánh xưa: khung ảnh film viền giấy lệch nhẹ, tem nhãn đánh số, dòng ghi chú viết tay bên lề, và một cành hoa mộc miên nhỏ làm dấu xuyên suốt ba trang",
+  "purposeInferred": "",
+  "theme": {
+    "tagline": "Hương bánh xưa, thương nhớ hôm nay",
+    "description": "Giao diện tiệm bánh Việt hoài cổ, song ngữ Anh – Việt, phong cách bưu thiếp và film."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home",
+      "purpose": "Giới thiệu tiệm bánh như một tấm bưu thiếp, dẫn sang thực đơn và câu chuyện",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-offset", "source": "ba", "note": "Bưu thiếp: ảnh khay bánh một bên, headline + CTA 'Ghé thăm câu chuyện' bên kia" },
+        { "id": "notebook", "catalog": "editorial", "variant": "marquee-band", "source": "ba", "note": "Dải chữ nhỏ như dòng ghi chú sổ tay" },
+        { "id": "favourites", "catalog": "collections", "variant": "teaser-row", "source": "ba", "note": "Món bánh thân quen: 4 khung film không đều, link sang pages/menu.html" },
+        { "id": "story", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "Kể chuyện ngắn với ảnh kệ gỗ, link sang pages/about.html" },
+        { "id": "gallery", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "Ba ảnh có chú thích ngắn, lightbox" },
+        { "id": "visit", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Giờ mở cửa + địa chỉ, CTA xem thực đơn" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "bakery tray pastries", "file": "assets/img/home-hero-khay-banh.jpg", "status": "ok" },
+        { "slot": "favourites-banh-mi", "query": "vietnamese baguette rack", "file": "assets/img/home-banh-mi.jpg", "status": "ok" },
+        { "slot": "favourites-bong-lan", "query": "sponge cake slice", "file": "assets/img/home-bong-lan.webp", "status": "ok" },
+        { "slot": "favourites-banh-quy", "query": "butter cookies bowl", "file": "assets/img/home-banh-quy.webp", "status": "ok" },
+        { "slot": "favourites-banh-mi-ngot", "query": "sweet bread rolls tray", "file": "assets/img/home-banh-mi-ngot.webp", "status": "ok" },
+        { "slot": "story", "query": "wooden bakery counter bread", "file": "assets/img/home-ke-banh-go.webp", "status": "ok" },
+        { "slot": "gallery-1", "query": "pastry paper wrap wooden table", "file": "assets/img/home-giay-goi.webp", "status": "ok" },
+        { "slot": "gallery-2", "query": "bakery counter bread stall", "file": "assets/img/home-quay-banh.jpg", "status": "ok" },
+        { "slot": "gallery-3", "query": "sieve flour wooden board", "file": "assets/img/about-ray-bot.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/menu.html",
+      "title": "Menu",
+      "purpose": "Thực đơn như tờ menu in trên giấy, chia 4 nhóm bánh; không phải catalog thương mại điện tử",
+      "sections": [
+        { "id": "menu-hero", "catalog": "hero", "variant": "page-hero", "source": "ai", "note": "Tiêu đề trang + mục lục 4 nhóm" },
+        { "id": "bread", "catalog": "collections", "variant": "features-numbered", "source": "ba", "note": "Bánh mì: danh sách biên tập có số thứ tự, 2 khung ảnh" },
+        { "id": "pastries", "catalog": "collections", "variant": "gallery-lookbook", "source": "ba", "note": "Bánh ngọt: khung ảnh film lớn + danh sách" },
+        { "id": "traditional", "catalog": "collections", "variant": "features-alternate", "source": "ba", "note": "Bánh truyền thống trên nền xanh rêu" },
+        { "id": "seasonal", "catalog": "collections", "variant": "story-letter", "source": "ba", "note": "Bánh theo mùa: tem nhãn mùa, ghi chú viết tay" },
+        { "id": "menu-note", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Ghé tiệm, không đặt hàng online" }
+      ],
+      "images": [
+        { "slot": "bread-1", "query": "rustic bread wooden board", "file": "assets/img/menu-banh-mi-go.webp", "status": "ok" },
+        { "slot": "bread-2", "query": "vietnamese sandwich baguette", "file": "assets/img/menu-banh-mi-thit.jpg", "status": "ok" },
+        { "slot": "pastries-1", "query": "pandan chiffon cake", "file": "assets/img/menu-bong-lan-la-dua.jpg", "status": "ok" },
+        { "slot": "pastries-2", "query": "egg tart pastry", "file": "assets/img/menu-banh-tart-trung.webp", "status": "ok" },
+        { "slot": "traditional", "query": "steamed rice cake banana leaf", "file": "assets/img/menu-banh-bo.jpg", "status": "ok" },
+        { "slot": "seasonal", "query": "mooncake pastry", "file": "assets/img/menu-banh-trung-thu.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "About",
+      "purpose": "Câu chuyện thương hiệu song ngữ, hành trình, giá trị và không gian làm bánh",
+      "sections": [
+        { "id": "about-hero", "catalog": "hero", "variant": "page-hero", "source": "ba", "note": "Ảnh tiệm màu film ấm" },
+        { "id": "letter", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Câu chuyện thương hiệu tiếng Việt tự nhiên + bản tiếng Anh (theo nút chuyển ngôn ngữ)" },
+        { "id": "journey", "catalog": "editorial", "variant": "timeline", "source": "ba", "note": "Hành trình dạng mẫu, ghi rõ là nội dung minh họa, không khẳng định dữ kiện lịch sử" },
+        { "id": "values", "catalog": "features", "variant": "features-bento", "source": "ba", "note": "Hương vị thân quen, sự chăm chút, tinh thần hiếu khách" },
+        { "id": "workshop", "catalog": "gallery", "variant": "gallery-filmstrip", "source": "ba", "note": "Không gian và chi tiết làm bánh, kéo ngang + lightbox" },
+        { "id": "visit", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "Mời ghé tiệm" }
+      ],
+      "images": [
+        { "slot": "about-hero", "query": "cafe counter pastry dome", "file": "assets/img/about-tiem-hero.jpg", "status": "ok" },
+        { "slot": "workshop-1", "query": "hands kneading dough", "file": "assets/img/about-nhoi-bot.webp", "status": "ok" },
+        { "slot": "workshop-2", "query": "baker dough wooden table", "file": "assets/img/about-ban-lam-banh.webp", "status": "ok" },
+        { "slot": "workshop-3", "query": "bread oven baker", "file": "assets/img/about-lo-nuong.webp", "status": "ok" },
+        { "slot": "workshop-4", "query": "rolling pins wooden", "file": "assets/img/about-cay-can-bot.webp", "status": "ok" },
+        { "slot": "values-care", "query": "rolling pin flour dough table", "file": "assets/img/about-can-bot.webp", "status": "ok" }
+      ]
+    }
+  ],
+  "adjustments": [
+    "Chỉ 3 trang (Home, Menu, About) theo ràng buộc 'Tối đa 3 trang' của BA; thông tin liên hệ / giờ mở cửa đặt ở khối cuối trang và footer dạng cuối thư, không có trang Contact riêng",
+    "BA yêu cầu song ngữ đầy đủ + nút chuyển ngôn ngữ Anh / Việt → mặc định tiếng Anh (<html lang=\"en\">), nút EN / VI đổi lang thành \"vi\" và hiện bản tiếng Việt; lựa chọn lưu trong localStorage. Ghi đè dòng 'không tạo bộ chuyển ngôn ngữ' của brief",
+    "Đổi font tiêu đề Young Serif → Playfair Display và nhãn đánh máy Courier Prime → chữ viết tay Dancing Script, vì cần đủ dấu tiếng Việt cho bản song ngữ; Work Sans giữ nguyên (có tiếng Việt)",
+    "Dùng bảng màu BA chỉ định (vàng giấy #E9D8B5, đỏ gạch #9E4034, xanh rêu #59634B, nâu gỗ #624631) thay bảng màu preset film",
+    "Không dùng parallax (BA: không parallax phức tạp); hover ảnh chỉ sáng lên và phóng nhẹ",
+    "Timeline hành trình ghi rõ là nội dung minh họa chờ tiệm xác nhận, không đưa năm tháng như sự thật lịch sử",
+    "Không có form nào vì BA cấm chức năng đặt bánh / mua hàng"
+  ],
+  "limitations": [
+    "Không có đặt bánh, giỏ hàng, thanh toán hay form mua hàng (theo yêu cầu)",
+    "Giá, địa chỉ, giờ mở cửa, số điện thoại là nội dung mẫu, cần tiệm cung cấp bản thật",
+    "Bản đồ chỉ là liên kết mở Google Maps theo địa chỉ mẫu"
+  ]
+}

@@ -1,0 +1,29 @@
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-moon focus:px-4 focus:py-3 focus:text-midnight" data-en="Skip to content">Bỏ qua tới nội dung</a>
+<header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-mist/25 bg-midnight text-moon transition-colors duration-500 [&.is-scrolled]:bg-midnight/95 [&.is-scrolled]:shadow-[0_10px_40px_rgba(21,60,64,.35)]">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="{{root}}index.html" class="font-display text-[22px] font-normal tracking-[0.38em] text-moon transition-opacity duration-300 hover:opacity-80" aria-label="NOCTURNE, trang chủ" data-en-aria="NOCTURNE, home">NOCTURNE</a>
+    <nav class="hidden items-center gap-10 lg:flex" aria-label="Điều hướng chính" data-en-aria="Main navigation">
+      <a href="{{root}}index.html" class="relative py-2 text-[12px] uppercase tracking-[0.2em] text-mist transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-moon after:transition-transform after:duration-500 after:ease-expo hover:text-moon hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moon aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="{{root}}pages/about.html" class="relative py-2 text-[12px] uppercase tracking-[0.2em] text-mist transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-moon after:transition-transform after:duration-500 after:ease-expo hover:text-moon hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moon aria-[current=page]:after:scale-x-100" data-en="The Philosophy">Triết lý</a>
+      <a href="{{root}}pages/stays.html" class="relative py-2 text-[12px] uppercase tracking-[0.2em] text-mist transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-moon after:transition-transform after:duration-500 after:ease-expo hover:text-moon hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moon aria-[current=page]:after:scale-x-100">Suites &amp; Villas</a>
+      <a href="{{root}}pages/experiences.html" class="relative py-2 text-[12px] uppercase tracking-[0.2em] text-mist transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-moon after:transition-transform after:duration-500 after:ease-expo hover:text-moon hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:text-moon aria-[current=page]:after:scale-x-100" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="flex border border-mist/40" role="group" aria-label="Chọn ngôn ngữ" data-en-aria="Choose language">
+        <button type="button" data-lang-set="vi" aria-pressed="true" class="h-10 min-w-[44px] px-3 text-[12px] font-medium tracking-[0.2em] text-mist transition-colors duration-300 hover:text-moon aria-pressed:bg-moon aria-pressed:text-midnight">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false" class="h-10 min-w-[44px] px-3 text-[12px] font-medium tracking-[0.2em] text-mist transition-colors duration-300 hover:text-moon aria-pressed:bg-moon aria-pressed:text-midnight">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="flex h-11 w-11 items-center justify-center border border-mist/40 text-moon lg:hidden" aria-label="Mở menu" data-en-aria="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div id="mnav" data-menu class="fixed inset-x-0 top-[72px] z-50 border-b border-mist/25 bg-midnight px-6 pb-10 pt-6 text-moon lg:hidden">
+  <nav class="flex flex-col" aria-label="Điều hướng điện thoại" data-en-aria="Mobile navigation">
+    <a href="{{root}}index.html" class="border-b border-mist/20 py-4 font-display text-3xl aria-[current=page]:italic" data-en="Home">Trang chủ</a>
+    <a href="{{root}}pages/about.html" class="border-b border-mist/20 py-4 font-display text-3xl aria-[current=page]:italic" data-en="The Philosophy">Triết lý</a>
+    <a href="{{root}}pages/stays.html" class="border-b border-mist/20 py-4 font-display text-3xl aria-[current=page]:italic">Suites &amp; Villas</a>
+    <a href="{{root}}pages/experiences.html" class="py-4 font-display text-3xl aria-[current=page]:italic" data-en="Experiences">Trải nghiệm</a>
+  </nav>
+</div>

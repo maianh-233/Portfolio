@@ -1,0 +1,164 @@
+{
+  "brand": "Minh An",
+  "language": "vi",
+  "preset": "nature",
+  "motionLevel": 2,
+  "visualIdea": "Vòm và đường cong địa hình: ảnh đặt trong khung vòm / viên sỏi bo hữu cơ, chồng lớp lệch nhau trên nền trắng kem; nhãn nhỏ ghi cao độ, năm, vật liệu như ghi chú bản vẽ; một chữ in nghiêng màu nâu đất trong mỗi tiêu đề lớn",
+  "purposeInferred": "Portfolio cá nhân của kiến trúc sư Minh An (thương hiệu FORM / SPACE): trình bày triết lý kiến trúc hữu cơ, 4 dự án ý tưởng, quy trình và vật liệu, để chủ đầu tư / đối tác tìm hiểu và liên hệ hợp tác. Khách truy cập: chủ nhà muốn xây nhà gắn với thiên nhiên, nhà phát triển resort, đối tác thiết kế.",
+  "theme": {
+    "tagline": "Kiến trúc thuộc về mặt đất",
+    "description": "Giao diện portfolio kiến trúc sư theo phong cách kiến trúc hữu cơ và tạp chí đương đại."
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Trang chủ",
+      "purpose": "Giới thiệu Minh An trong 3 giây, dẫn sang công trình, triết lý, vật liệu và liên hệ",
+      "sections": [
+        { "id": "hero", "catalog": "hero", "variant": "hero-cinematic", "source": "ba", "note": "Ảnh mặt đứng đá cong toàn màn, tiêu đề BA yêu cầu, nút xem công trình" },
+        { "id": "triet-ly", "catalog": "story", "variant": "story-editorial", "source": "ba", "note": "Design Philosophy rút gọn, link sang pages/about.html#triet-ly" },
+        { "id": "cong-trinh", "catalog": "projects", "variant": "teaser-row", "source": "ba", "note": "Selected Works: 4 dự án bố cục bất đối xứng, mỗi dự án kích thước / khung khác nhau, link chi tiết" },
+        { "id": "quy-trinh", "catalog": "process", "variant": "features-numbered", "source": "ba", "note": "Design Process rút gọn trên dải olive, data-particles dust" },
+        { "id": "vat-lieu", "catalog": "gallery", "variant": "marquee-band", "source": "ba", "note": "Material Studies dạng dải chữ chạy, dẫn sang pages/materials.html" },
+        { "id": "lien-he-cta", "catalog": "cta", "variant": "cta-type", "source": "ba", "note": "Lời mời hợp tác, dẫn sang pages/contact.html" }
+      ],
+      "images": [
+        { "slot": "hero", "query": "Casa Mila Gaudi rooftop curves", "file": "assets/img/home-philosophy-curves.webp", "status": "ok" },
+        { "slot": "triet-ly", "query": "Fallingwater Frank Lloyd Wright", "file": "assets/img/home-philosophy-cantilever.jpg", "status": "ok" },
+        { "slot": "cong-trinh / Earth House", "query": "hobbit house hillside", "file": "assets/img/project-earth-house.jpg", "status": "ok" },
+        { "slot": "cong-trinh / The Silent Courtyard", "query": "Geoffrey Bawa courtyard", "file": "assets/img/project-silent-courtyard.jpg", "status": "ok" },
+        { "slot": "cong-trinh / Stone & Tide", "query": "Fallingwater Frank Lloyd Wright", "file": "assets/img/stone-tide-detail.jpg", "status": "ok" },
+        { "slot": "cong-trinh / Moss House", "query": "turf house Iceland grass roof", "file": "assets/img/project-moss-house.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/works.html",
+      "title": "Công trình",
+      "purpose": "Danh sách 4 dự án ý tưởng, lọc theo loại công trình, dẫn sang trang chi tiết",
+      "sections": [
+        { "id": "page-hero", "catalog": "projects", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "danh-sach", "catalog": "projects", "variant": "list-cards", "source": "ba", "note": "data-filter-group, bố cục so le không phải thẻ đều" },
+        { "id": "ghi-chu", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "Nói rõ các dự án là nội dung minh họa" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "danh-sach", "query": "(dùng lại ảnh bìa 4 dự án)", "file": "assets/img/project-earth-house.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/project-earth-house.html",
+      "title": "Earth House",
+      "purpose": "Chi tiết dự án nhà trên đồi tường đất",
+      "sections": [
+        { "id": "page-hero", "catalog": "projects", "variant": "page-hero", "source": "ai", "note": "breadcrumb" },
+        { "id": "noi-dung", "catalog": "projects", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "du-an-khac", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "Dự án tiếp theo" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "hobbit house hillside", "file": "assets/img/project-earth-house.jpg", "status": "ok" },
+        { "slot": "noi-dung", "query": "hobbit house hillside", "file": "assets/img/earth-house-detail.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/project-silent-courtyard.html",
+      "title": "The Silent Courtyard",
+      "purpose": "Chi tiết dự án nhà sân vườn nhiệt đới tại Hội An",
+      "sections": [
+        { "id": "page-hero", "catalog": "projects", "variant": "page-hero", "source": "ai", "note": "breadcrumb" },
+        { "id": "noi-dung", "catalog": "projects", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "du-an-khac", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "Geoffrey Bawa courtyard", "file": "assets/img/project-silent-courtyard.jpg", "status": "ok" },
+        { "slot": "noi-dung / sân trong", "query": "Geoffrey Bawa courtyard", "file": "assets/img/courtyard-detail.jpg", "status": "ok" },
+        { "slot": "noi-dung / bối cảnh Hội An", "query": "Hoi An old house courtyard", "file": "assets/img/courtyard-hoian.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/project-stone-tide.html",
+      "title": "Stone & Tide",
+      "purpose": "Chi tiết dự án công trình ven biển bằng đá và bê tông điêu khắc",
+      "sections": [
+        { "id": "page-hero", "catalog": "projects", "variant": "page-hero", "source": "ai", "note": "breadcrumb" },
+        { "id": "noi-dung", "catalog": "projects", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "du-an-khac", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "Fallingwater Frank Lloyd Wright", "file": "assets/img/stone-tide-detail.jpg", "status": "ok" },
+        { "slot": "noi-dung", "query": "Fallingwater Frank Lloyd Wright", "file": "assets/img/project-stone-tide.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/project-moss-house.html",
+      "title": "Moss House",
+      "purpose": "Chi tiết dự án nhà mái xanh hòa vào cảnh quan",
+      "sections": [
+        { "id": "page-hero", "catalog": "projects", "variant": "page-hero", "source": "ai", "note": "breadcrumb" },
+        { "id": "noi-dung", "catalog": "projects", "variant": "detail-article", "source": "ba", "note": "" },
+        { "id": "du-an-khac", "catalog": "projects", "variant": "teaser-row", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "page-hero", "query": "turf house Iceland grass roof", "file": "assets/img/project-moss-house.jpg", "status": "ok" },
+        { "slot": "noi-dung", "query": "turf house Iceland grass roof", "file": "assets/img/hero-turf-house.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/about.html",
+      "title": "Về Minh An",
+      "purpose": "Giới thiệu kiến trúc sư, triết lý thiết kế đầy đủ và quy trình làm việc",
+      "sections": [
+        { "id": "page-hero", "catalog": "story", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "chan-dung", "catalog": "story", "variant": "story-letter", "source": "ba", "note": "About: ảnh làm việc với mô hình kiến trúc" },
+        { "id": "triet-ly", "catalog": "features", "variant": "features-tabs", "source": "ba", "note": "Design Philosophy: 3 nguyên tắc bằng data-tabs" },
+        { "id": "quy-trinh", "catalog": "process", "variant": "timeline", "source": "ba", "note": "Design Process: khảo sát địa hình, phát triển ý tưởng, thiết kế không gian" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "chan-dung", "query": "architectural model wooden", "file": "assets/img/about-model.jpg", "status": "ok" },
+        { "slot": "quy-trinh", "query": "rolling hills contour landscape", "file": "assets/img/process-site-hills.webp", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/materials.html",
+      "title": "Vật liệu",
+      "purpose": "Material Studies: bộ ảnh đất, đá, gỗ, ánh sáng, cây xanh kèm ghi chú",
+      "sections": [
+        { "id": "page-hero", "catalog": "gallery", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "bo-suu-tap", "catalog": "gallery", "variant": "gallery-lookbook", "source": "ba", "note": "data-lightbox, data-reveal clip" },
+        { "id": "trich-dan", "catalog": "editorial", "variant": "quote-full", "source": "ai", "note": "" },
+        { "id": "cta", "catalog": "cta", "variant": "cta-type", "source": "ai", "note": "" }
+      ],
+      "images": [
+        { "slot": "đất", "query": "cracked clay earth texture", "file": "assets/img/material-earth.jpg", "status": "ok" },
+        { "slot": "đá", "query": "dry stone wall texture", "file": "assets/img/material-stone.webp", "status": "ok" },
+        { "slot": "gỗ", "query": "wood grain texture", "file": "assets/img/material-wood.jpg", "status": "ok" },
+        { "slot": "ánh sáng", "query": "sunlight shadow concrete wall", "file": "assets/img/material-light-shadow.jpg", "status": "ok" },
+        { "slot": "cây xanh", "query": "moss forest floor green", "file": "assets/img/material-moss.jpg", "status": "ok" },
+        { "slot": "bê tông", "query": "curved concrete tropical courtyard", "file": "assets/img/material-concrete-curve.jpg", "status": "ok" }
+      ]
+    },
+    {
+      "file": "pages/contact.html",
+      "title": "Liên hệ",
+      "purpose": "Lời mời hợp tác, thông tin liên hệ, form demo, nút gửi email, câu hỏi thường gặp",
+      "sections": [
+        { "id": "page-hero", "catalog": "contact", "variant": "page-hero", "source": "ai", "note": "" },
+        { "id": "lien-he", "catalog": "contact", "variant": "contact-page", "source": "ba", "note": "mailto + data-copy + form[data-form] + data-accordion" }
+      ],
+      "images": []
+    }
+  ],
+  "adjustments": [
+    "Tiêu đề hero giữ nguyên văn tiếng Anh “Architecture that belongs to the earth.” theo yêu cầu cụ thể của BA (đánh dấu lang=\"en\"); mọi chữ còn lại bằng tiếng Việt",
+    "Tên dự án (Earth House, The Silent Courtyard, Stone & Tide, Moss House) và thương hiệu FORM / SPACE giữ nguyên là tên riêng",
+    "Tách website thành 9 trang: trang chủ chỉ giữ phần rút gọn, triết lý + quy trình + chân dung ở trang Về Minh An, Material Studies thành trang Vật liệu, mỗi dự án có trang chi tiết riêng (BA yêu cầu chức năng xem chi tiết cho cả 4 dự án)",
+    "Bảng màu dùng đúng 4 mã BA đưa (#F3EFE6, #B96F50, #555B43, #292923) thay cho bảng màu preset nature",
+    "Thư viện ảnh mở (Openverse) không có ảnh công trình đúng như mô tả dự án giả lập: dùng ảnh thật gần tinh thần nhất (nhà đất trong đồi, nhà mái cỏ, công trình đá trên suối, sân trong nhiệt đới); trang có ghi rõ ảnh chỉ mang tính minh họa",
+    "Không có ảnh chân dung kiến trúc sư phù hợp: trang Về Minh An dùng ảnh mô hình kiến trúc"
+  ],
+  "limitations": [
+    "Form liên hệ là bản demo, chưa có backend; nút Gửi email mở ứng dụng email bằng mailto",
+    "4 dự án là nội dung giả lập, không phải công trình thực tế của kiến trúc sư; ảnh minh họa lấy từ thư viện ảnh mở",
+    "Cần ảnh chân dung thật của kiến trúc sư và ảnh công trình thật từ khách"
+  ]
+}

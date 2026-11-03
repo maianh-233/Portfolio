@@ -1,0 +1,92 @@
+:root {
+  --paper: #FFFFFF;
+  --mist: #F2F7F7;
+  --line: #D5E1E2;
+  --ink: #0F2A2C;
+  --slate: #55676C;
+  --mint-soft: #E7F6F0;
+  --mint: #CDEDE2;
+  --mint-deep: #97D6C2;
+  --teal: #0E6F6E;
+  --teal-dark: #0A5050;
+  --teal-deep: #073B3C;
+  --ui-accent: #0E6F6E;
+  --font-display: "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Geist, "Be Vietnam Pro", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); color: var(--ink); background: var(--paper); }
+::selection { background: var(--mint); color: var(--teal-deep); }
+
+/* Sơ đồ các lớp da — ý tưởng thị giác xuyên suốt (trang trí trừu tượng, không phải ảnh) */
+.skin-layers { position: relative; overflow: hidden; background: var(--mint-soft); }
+.skin-layers .layer { position: relative; border-top: 1px solid rgba(14, 111, 110, .18); }
+.skin-layers .layer::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(90deg, rgba(14, 111, 110, .14) 0 1px, transparent 1px 28px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0 10px, transparent 10px);
+          mask-image: linear-gradient(to bottom, #000 0 10px, transparent 10px);
+}
+.l-epi { background: #E7F6F0; }
+.l-derm { background: #CDEDE2; }
+.l-sub { background: #97D6C2; }
+.l-deep { background: #0E6F6E; color: #fff; }
+
+/* Tế bào trừu tượng trong lớp biểu bì */
+.cells { background-image: radial-gradient(circle at 50% 50%, rgba(14, 111, 110, .16) 0 5px, transparent 6px); background-size: 34px 22px; }
+
+/* Sợi collagen (trung bì) và tiểu thùy mỡ (hạ bì) — hoa văn trừu tượng */
+.fibers { background-image: repeating-linear-gradient(160deg, rgba(14, 111, 110, .16) 0 1px, transparent 1px 18px), repeating-linear-gradient(20deg, rgba(14, 111, 110, .10) 0 1px, transparent 1px 26px); }
+.lobules { background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .55) 0 15px, rgba(14, 111, 110, .22) 15px 16px, transparent 17px); background-size: 44px 40px; }
+
+/* Thanh vạch đo mảnh dùng làm dải chuyển section */
+.ruler {
+  height: 14px;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(15, 42, 44, .28) 0 1px, transparent 1px 12px),
+    repeating-linear-gradient(90deg, rgba(15, 42, 44, .45) 0 1px, transparent 1px 60px);
+  background-size: 100% 7px, 100% 14px;
+  background-repeat: no-repeat;
+  background-position: left bottom, left bottom;
+}
+
+/* Gạch chân menu chạy */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1.5px; background: var(--teal);
+  transform: scaleX(0); transform-origin: right; transition: transform .5s cubic-bezier(.16, 1, .3, 1);
+}
+.nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
+
+/* Header khi đã cuộn */
+header[data-header].is-scrolled { background: rgba(255, 255, 255, .96); box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(7, 59, 60, .25); }
+
+/* Dialog đặt lịch */
+dialog#booking::backdrop { background: rgba(7, 59, 60, .45); }
+dialog#booking { max-height: 92dvh; }
+
+/* Trường form */
+.field { display: block; }
+.field input, .field select, .field textarea {
+  margin-top: .5rem; width: 100%; border: 1px solid #B9CBCD; border-radius: .75rem; background: #fff;
+  padding: .75rem 1rem; font-size: 1rem; color: var(--ink); transition: border-color .3s, box-shadow .3s;
+}
+.field input::placeholder, .field textarea::placeholder { color: #6B7C80; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(14, 111, 110, .18); }
+.field [aria-invalid="true"] { border-color: #B42318; }
+.ui-error { margin-top: .375rem; font-size: .875rem; color: #B42318; }
+
+/* Accordion: xoay dấu cộng */
+[data-acc-item].is-open [data-acc-icon] { transform: rotate(45deg); }
+
+/* Nút ngôn ngữ đang chọn */
+[data-lang-set][aria-pressed="true"] { background: var(--teal); color: #fff; }
+
+/* Khoảng trống cho thanh đặt lịch nổi trên điện thoại */
+@media (max-width: 1023px) { body { padding-bottom: 5.5rem; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .nav-link::after { transition: none; }
+}

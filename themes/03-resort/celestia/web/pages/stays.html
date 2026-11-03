@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Stays — CELESTIA">Lưu trú — CELESTIA</title>
+<meta name="description" content="Wellness Suite, Garden Villa, Private Pool Villa và hệ thống tiện ích của CELESTIA: riêng tư, vật liệu tự nhiên, tầm nhìn ra vườn và mặt nước." data-en="Wellness Suite, Garden Villa, Private Pool Villa and the facilities of CELESTIA: privacy, natural materials, views of garden and water.">
+<!-- @partial head -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/ui.js"></script>
+<!-- /@partial head -->
+</head>
+<body class="bg-pearl font-sans text-midnight">
+<!-- @partial header -->
+<header id="top" data-header="shrink" class="group fixed inset-x-0 top-0 z-40 text-pearl transition-colors duration-500 [&.is-scrolled]:bg-pearl/90 [&.is-scrolled]:text-midnight [&.is-scrolled]:shadow-[0_1px_0_rgba(32,42,67,0.08)] [&.is-scrolled]:backdrop-blur-md">
+  <div class="wrap flex h-20 items-center justify-between gap-6 transition-[height] duration-500 group-[.is-scrolled]:h-16">
+    <a href="../index.html" class="font-display text-2xl font-medium tracking-[0.32em] sm:text-[1.7rem]" aria-label="CELESTIA, trang chủ" data-en-aria="CELESTIA, home">CELESTIA</a>
+
+    <nav class="hidden items-center gap-10 lg:flex" aria-label="Điều hướng chính" data-en-aria="Main navigation">
+      <a href="../index.html" class="relative py-2 text-sm tracking-wide after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Home">Trang chủ</a>
+      <a href="../pages/about.html" class="relative py-2 text-sm tracking-wide after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="About">Giới thiệu</a>
+      <a aria-current="page" href="../pages/stays.html" class="relative py-2 text-sm tracking-wide after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Stays">Lưu trú</a>
+      <a href="../pages/experiences.html" class="relative py-2 text-sm tracking-wide after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" data-en="Experiences">Trải nghiệm</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <div class="flex items-center text-xs font-medium tracking-[0.2em]" role="group" aria-label="Chọn ngôn ngữ" data-en-aria="Choose language">
+        <button type="button" data-lang-set="vi" class="min-h-11 px-2 opacity-55 transition-opacity duration-300 hover:opacity-100 [&.is-active]:underline [&.is-active]:opacity-100 [&.is-active]:underline-offset-[6px]">VI</button>
+        <span class="opacity-40" aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" class="min-h-11 px-2 opacity-55 transition-opacity duration-300 hover:opacity-100 [&.is-active]:underline [&.is-active]:opacity-100 [&.is-active]:underline-offset-[6px]">EN</button>
+      </div>
+      <button type="button" data-menu-toggle="#mnav" class="grid h-11 w-11 place-items-center lg:hidden" aria-label="Mở menu" data-en-aria="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h18M7 16h14"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mnav" data-menu class="fixed inset-x-4 top-20 z-50 rounded-md bg-pearl p-8 text-midnight shadow-[0_30px_80px_-20px_rgba(22,29,48,0.45)] lg:hidden">
+  <nav class="grid gap-1" aria-label="Điều hướng trên điện thoại" data-en-aria="Mobile navigation">
+    <a href="../index.html" class="flex min-h-12 items-center border-b border-silver/60 font-display text-3xl aria-[current=page]:text-lavender-deep" data-en="Home">Trang chủ</a>
+    <a href="../pages/about.html" class="flex min-h-12 items-center border-b border-silver/60 font-display text-3xl aria-[current=page]:text-lavender-deep" data-en="About">Giới thiệu</a>
+    <a aria-current="page" href="../pages/stays.html" class="flex min-h-12 items-center border-b border-silver/60 font-display text-3xl aria-[current=page]:text-lavender-deep" data-en="Stays">Lưu trú</a>
+    <a href="../pages/experiences.html" class="flex min-h-12 items-center font-display text-3xl aria-[current=page]:text-lavender-deep" data-en="Experiences">Trải nghiệm</a>
+  </nav>
+  <div class="mt-8 flex items-center gap-2 text-sm font-medium tracking-[0.2em]">
+    <button type="button" data-lang-set="vi" class="min-h-11 rounded-full border border-silver px-5 transition-colors duration-300 [&.is-active]:border-midnight [&.is-active]:bg-midnight [&.is-active]:text-pearl">VI</button>
+    <button type="button" data-lang-set="en" class="min-h-11 rounded-full border border-silver px-5 transition-colors duration-300 [&.is-active]:border-midnight [&.is-active]:bg-midnight [&.is-active]:text-pearl">EN</button>
+  </div>
+</div>
+<!-- /@partial header -->
+
+<main>
+  <!-- HERO -->
+  <section id="stays-hero" data-section="page-hero" class="on-dark relative flex min-h-[86vh] items-end overflow-hidden bg-midnight text-pearl">
+    <div data-parallax="0.1" class="absolute inset-x-0 -inset-y-[15%]">
+      <img src="https://images.pexels.com/photos/30835932/pexels-photo-30835932.jpeg?auto=compress&cs=tinysrgb&w=1920" referrerpolicy="no-referrer" width="1920" height="1280" fetchpriority="high"
+        class="photo slow-zoom h-full w-full object-cover"
+        alt="Phòng nghỉ yên tĩnh với cửa kính lớn nhìn ra thiên nhiên" data-en-alt="A serene room with large windows facing the landscape">
+    </div>
+    <div class="hero-shade absolute inset-0" aria-hidden="true"></div>
+    <div class="wrap relative z-10 pb-12 pt-40">
+      <p class="label text-pearl/85" data-en="Stays">Lưu trú</p>
+      <h1 data-split="words" class="mt-6 max-w-4xl pb-2 font-display text-[clamp(2.8rem,6.4vw,6.5rem)] leading-[1.02]" data-en="Spaces Designed for Stillness">Không gian dành cho sự tĩnh lặng</h1>
+      <p class="mt-6 max-w-xl text-base font-light leading-relaxed text-pearl/90 sm:text-lg" data-reveal="up" data-en="Private suites and villas of natural materials, where every window frames the garden or the water.">Suite và villa riêng tư làm từ vật liệu tự nhiên, nơi mỗi ô cửa đều đóng khung khu vườn hoặc mặt nước.</p>
+      <nav class="mt-14 grid border-t border-pearl/25 sm:grid-cols-3" aria-label="Các loại phòng" data-en-aria="Room types" data-reveal="up">
+        <a href="#suite" class="group flex min-h-14 items-center justify-between py-4 pr-6 font-display text-2xl transition-colors duration-300 hover:text-lavender">Wellness Suite <span class="text-base transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true">↓</span></a>
+        <a href="#garden-villa" class="group flex min-h-14 items-center justify-between border-pearl/25 py-4 pr-6 font-display text-2xl transition-colors duration-300 hover:text-lavender sm:border-l sm:pl-6">Garden Villa <span class="text-base transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true">↓</span></a>
+        <a href="#pool-villa" class="group flex min-h-14 items-center justify-between border-pearl/25 py-4 pr-6 font-display text-2xl transition-colors duration-300 hover:text-lavender sm:border-l sm:pl-6">Private Pool Villa <span class="text-base transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true">↓</span></a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- WELLNESS SUITE -->
+  <section id="suite" data-section="features-alternate" class="scroll-mt-16 bg-pearl py-24 lg:py-36">
+    <div class="wrap grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+      <figure class="lg:col-span-7">
+        <div class="ph group aspect-[4/3] overflow-hidden rounded-sm" data-reveal="clip">
+          <img src="https://images.pexels.com/photos/30926942/pexels-photo-30926942.jpeg?auto=compress&cs=tinysrgb&w=1600" referrerpolicy="no-referrer" loading="lazy" width="1600" height="1200"
+            class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]"
+            alt="Phòng ngủ tối giản ngập nắng qua khung cửa sổ lớn" data-en-alt="A minimalist bedroom filled with sunlight through large windows">
+        </div>
+      </figure>
+      <div class="lg:col-span-4 lg:col-start-9">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender-deep" data-en="Garden and lake view">Hướng vườn và hồ</p>
+        <h2 class="mt-4 font-display text-[clamp(2.4rem,4vw,4rem)] leading-[1.04]">Wellness Suite</h2>
+        <p class="mt-6 text-[17px] leading-relaxed text-midnight/75" data-reveal="up" data-en="A calm, pared-back suite where daylight moves slowly across linen and pale oak. Everything you need, nothing that asks for attention.">Một suite tối giản, nơi ánh sáng ban ngày trôi chậm trên vải linen và gỗ sồi sáng màu. Có đủ mọi thứ bạn cần, không có gì đòi hỏi sự chú ý.</p>
+        <ul class="mt-8 grid gap-0 text-[15px] text-midnight/80" data-reveal-stagger="70">
+          <li class="flex items-baseline gap-4 border-t border-silver py-3"><span class="text-lavender-deep" aria-hidden="true">/</span><span data-en="Handcrafted bed with natural linen bedding">Giường thủ công, chăn ga vải linen tự nhiên</span></li>
+          <li class="flex items-baseline gap-4 border-t border-silver py-3"><span class="text-lavender-deep" aria-hidden="true">/</span><span data-en="Floor-to-ceiling glass facing the garden">Cửa kính kịch trần hướng ra khu vườn</span></li>
+          <li class="flex items-baseline gap-4 border-t border-silver py-3"><span class="text-lavender-deep" aria-hidden="true">/</span><span data-en="Private reading nook and tea corner">Góc đọc sách và thưởng trà riêng</span></li>
+          <li class="flex items-baseline gap-4 border-y border-silver py-3"><span class="text-lavender-deep" aria-hidden="true">/</span><span data-en="Stone bathroom with a deep soaking tub">Phòng tắm đá với bồn ngâm sâu</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARDEN VILLA -->
+  <section id="garden-villa" data-section="features-alternate" class="scroll-mt-16 bg-pearl-warm py-24 lg:py-36">
+    <div class="wrap grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+      <div class="order-2 lg:order-1 lg:col-span-4 lg:col-start-2">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender-deep" data-en="Surrounded by greenery">Giữa không gian xanh</p>
+        <h2 class="mt-4 font-display text-[clamp(2.4rem,4vw,4rem)] leading-[1.04]">Garden Villa</h2>
+        <p class="mt-6 text-[17px] leading-relaxed text-midnight/75" data-reveal="up" data-en="A standalone villa hidden among palms and ferns. Morning starts on your own terrace, with the garden as your only neighbour.">Villa riêng biệt ẩn mình giữa hàng cọ và dương xỉ. Buổi sáng bắt đầu trên hiên nhà của riêng bạn, với khu vườn là người hàng xóm duy nhất.</p>
+        <ul class="mt-8 text-[15px] text-midnight/80" data-reveal-stagger="70">
+          <li class="flex items-baseline gap-4 border-t border-silver py-3"><span class="text-lavender-deep" aria-hidden="true">/</span><span data-en="Private walled garden and outdoor shower">Vườn riêng có tường bao và vòi sen ngoài trời</span></li>
+          <li class="flex items-baseline gap-4 border-t border-silver py-3"><span class="text-lavender-deep" aria-hidden="true">/</span><span data-en="Shaded terrace with daybed">Hiên có mái che và giường nằm thư giãn</span></li>
+          <li class="flex items-baseline gap-4 border-y border-silver py-3"><span class="text-lavender-deep" aria-hidden="true">/</span><span data-en="Living area opening fully to the garden">Phòng khách mở hoàn toàn ra vườn</span></li>
+        </ul>
+      </div>
+      <figure class="order-1 lg:order-2 lg:col-span-6 lg:col-start-7">
+        <div class="ph group aspect-[5/4] overflow-hidden rounded-sm" data-reveal="clip">
+          <img src="https://images.pexels.com/photos/15995605/pexels-photo-15995605.jpeg?auto=compress&cs=tinysrgb&w=1600" referrerpolicy="no-referrer" loading="lazy" width="1500" height="1200"
+            class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]"
+            alt="Villa hiện đại nằm giữa hàng cọ và vườn nhiệt đới" data-en-alt="A modern villa among palm trees and a tropical garden">
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PRIVATE POOL VILLA -->
+  <section id="pool-villa" data-section="cta-fullbleed" class="scroll-mt-16 bg-pearl pb-24 pt-24 lg:pb-36 lg:pt-36">
+    <div class="mx-auto w-full max-w-[1800px] sm:px-6 lg:px-10">
+      <div class="ph group aspect-[4/3] overflow-hidden sm:aspect-[21/9] sm:rounded-sm" data-reveal="clip">
+        <img src="https://images.pexels.com/photos/34378030/pexels-photo-34378030.jpeg?auto=compress&cs=tinysrgb&w=1920" referrerpolicy="no-referrer" loading="lazy" width="1920" height="823"
+          class="photo h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]"
+          alt="Villa tối giản với hồ bơi riêng và cảnh quan yên bình" data-en-alt="A minimalist villa with a private pool and calm landscaping">
+      </div>
+    </div>
+    <div class="wrap mt-14 grid gap-10 lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-5">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender-deep" data-en="Complete privacy">Riêng tư trọn vẹn</p>
+        <h2 class="mt-4 font-display text-[clamp(2.4rem,4.6vw,4.75rem)] leading-[1.02]">Private Pool Villa</h2>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7">
+        <p class="text-[17px] leading-relaxed text-midnight/75" data-reveal="up" data-en="The most secluded retreat at CELESTIA. A still pool runs along the living space, so water is the first thing you see in the morning and the last at night.">Nơi lưu trú tách biệt nhất tại CELESTIA. Hồ bơi tĩnh chạy dọc không gian sống, để mặt nước là điều đầu tiên bạn thấy mỗi sáng và điều cuối cùng mỗi tối.</p>
+        <dl class="mt-10 grid grid-cols-2 gap-y-8 border-t border-midnight/20 pt-8 sm:grid-cols-4" data-reveal-stagger="80">
+          <div class="pr-4"><dt class="font-display text-2xl" data-en="Pool">Hồ bơi</dt><dd class="mt-1 text-[14px] text-midnight/65" data-en="private, still water">riêng, mặt nước tĩnh</dd></div>
+          <div class="border-l border-midnight/15 px-4"><dt class="font-display text-2xl" data-en="Garden">Khu vườn</dt><dd class="mt-1 text-[14px] text-midnight/65" data-en="enclosed by trees">bao quanh bởi cây</dd></div>
+          <div class="pr-4 sm:border-l sm:border-midnight/15 sm:px-4"><dt class="font-display text-2xl" data-en="Pavilion">Pavilion</dt><dd class="mt-1 text-[14px] text-midnight/65" data-en="for in-villa yoga">cho yoga tại villa</dd></div>
+          <div class="border-l border-midnight/15 px-4"><dt class="font-display text-2xl" data-en="Bath">Phòng tắm</dt><dd class="mt-1 text-[14px] text-midnight/65" data-en="open to the sky">mở ra bầu trời</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIỆN ÍCH -->
+  <section id="facilities" data-section="features-tabs" class="on-dark bg-midnight py-24 text-pearl lg:py-36">
+    <div class="wrap">
+      <h2 class="max-w-3xl font-display text-[clamp(2.4rem,4.6vw,4.75rem)] leading-[1.04]" data-reveal="up" data-en="Places to rest, move and <em class='text-lavender'>nourish</em>">Những nơi để nghỉ, vận động và <em class="text-lavender">nuôi dưỡng</em></h2>
+
+      <div data-tabs class="mt-14 grid gap-10 lg:grid-cols-12 lg:gap-8">
+        <div class="no-bar -mx-5 flex gap-1 overflow-x-auto px-5 lg:col-span-4 lg:mx-0 lg:flex-col lg:overflow-visible lg:px-0">
+          <button type="button" data-tab="spa" class="shrink-0 border-b border-pearl/15 px-1 py-4 text-left font-display text-2xl text-pearl/55 transition-colors duration-300 hover:text-pearl lg:border-b-0 lg:border-l-2 lg:border-l-transparent lg:py-5 lg:pl-6 lg:text-3xl [&.is-active]:border-b-lavender [&.is-active]:text-pearl lg:[&.is-active]:border-l-lavender">Wellness Spa</button>
+          <button type="button" data-tab="meditation" class="shrink-0 border-b border-pearl/15 px-1 py-4 text-left font-display text-2xl text-pearl/55 transition-colors duration-300 hover:text-pearl lg:border-b-0 lg:border-l-2 lg:border-l-transparent lg:py-5 lg:pl-6 lg:text-3xl [&.is-active]:border-b-lavender [&.is-active]:text-pearl lg:[&.is-active]:border-l-lavender">Meditation Room</button>
+          <button type="button" data-tab="yoga" class="shrink-0 border-b border-pearl/15 px-1 py-4 text-left font-display text-2xl text-pearl/55 transition-colors duration-300 hover:text-pearl lg:border-b-0 lg:border-l-2 lg:border-l-transparent lg:py-5 lg:pl-6 lg:text-3xl [&.is-active]:border-b-lavender [&.is-active]:text-pearl lg:[&.is-active]:border-l-lavender">Yoga Pavilion</button>
+          <button type="button" data-tab="pool" class="shrink-0 border-b border-pearl/15 px-1 py-4 text-left font-display text-2xl text-pearl/55 transition-colors duration-300 hover:text-pearl lg:border-b-0 lg:border-l-2 lg:border-l-transparent lg:py-5 lg:pl-6 lg:text-3xl [&.is-active]:border-b-lavender [&.is-active]:text-pearl lg:[&.is-active]:border-l-lavender">Infinity Pool</button>
+          <button type="button" data-tab="restaurant" class="shrink-0 border-b border-pearl/15 px-1 py-4 text-left font-display text-2xl text-pearl/55 transition-colors duration-300 hover:text-pearl lg:border-b-0 lg:border-l-2 lg:border-l-transparent lg:py-5 lg:pl-6 lg:text-3xl [&.is-active]:border-b-lavender [&.is-active]:text-pearl lg:[&.is-active]:border-l-lavender">Nourishing Restaurant</button>
+        </div>
+
+        <div class="lg:col-span-8">
+          <div data-tab-panel="spa" class="grid gap-8 sm:grid-cols-5">
+            <div class="ph aspect-[4/5] overflow-hidden rounded-sm sm:col-span-3"><img src="https://images.pexels.com/photos/3865773/pexels-photo-3865773.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" loading="lazy" width="960" height="1200" class="photo h-full w-full object-cover" alt="Nến và hương trầm đặt trên ghế gỗ trong phòng spa" data-en-alt="Candles and incense on a wooden stool in the spa"></div>
+            <div class="flex flex-col justify-end sm:col-span-2"><p class="text-[17px] leading-relaxed text-pearl/80" data-en="Treatment rooms of warm stone and timber, scented with herbs from the garden. Quiet, dim and entirely unhurried.">Phòng trị liệu bằng đá ấm và gỗ, thoảng hương thảo mộc từ khu vườn. Yên tĩnh, ánh sáng dịu và hoàn toàn không vội vã.</p></div>
+          </div>
+          <div data-tab-panel="meditation" class="grid gap-8 sm:grid-cols-5">
+            <div class="ph aspect-[4/5] overflow-hidden rounded-sm sm:col-span-3"><img src="https://images.pexels.com/photos/5435242/pexels-photo-5435242.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" loading="lazy" width="960" height="1200" class="photo h-full w-full object-cover" alt="Người ngồi thiền trong tư thế hoa sen" data-en-alt="A person meditating in lotus position"></div>
+            <div class="flex flex-col justify-end sm:col-span-2"><p class="text-[17px] leading-relaxed text-pearl/80" data-en="A softly lit room with cushions, wool and a single window to the trees. Open from dawn for guided or silent sitting.">Căn phòng ánh sáng dịu với đệm ngồi, thảm len và một ô cửa nhìn ra tán cây. Mở từ lúc rạng đông cho thiền có hướng dẫn hoặc ngồi tĩnh.</p></div>
+          </div>
+          <div data-tab-panel="yoga" class="grid gap-8 sm:grid-cols-5">
+            <div class="ph aspect-[4/5] overflow-hidden rounded-sm sm:col-span-3"><img src="https://images.pexels.com/photos/6787218/pexels-photo-6787218.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" loading="lazy" width="960" height="1200" class="photo h-full w-full object-cover" alt="Người phụ nữ tập yoga nhẹ nhàng" data-en-alt="A woman practicing gentle yoga"></div>
+            <div class="flex flex-col justify-end sm:col-span-2"><p class="text-[17px] leading-relaxed text-pearl/80" data-en="An open timber pavilion above the garden, where morning classes move at the pace of your breath.">Pavilion gỗ mở phía trên khu vườn, nơi các buổi tập sáng diễn ra theo nhịp hơi thở của bạn.</p></div>
+          </div>
+          <div data-tab-panel="pool" class="grid gap-8 sm:grid-cols-5">
+            <div class="ph aspect-[4/5] overflow-hidden rounded-sm sm:col-span-3"><img src="https://images.pexels.com/photos/8110136/pexels-photo-8110136.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" loading="lazy" width="960" height="1200" class="photo h-full w-full object-cover" alt="Hồ bơi vô cực dưới bầu trời nhiều mây" data-en-alt="An infinity pool under a cloudy sky"></div>
+            <div class="flex flex-col justify-end sm:col-span-2"><p class="text-[17px] leading-relaxed text-pearl/80" data-en="A long, still pool whose edge disappears into the view. Kept quiet for swimming, floating and watching clouds pass.">Hồ bơi dài, mặt nước tĩnh với mép hồ hòa vào khung cảnh. Giữ yên tĩnh cho bơi, thả mình và ngắm mây trôi.</p></div>
+          </div>
+          <div data-tab-panel="restaurant" class="grid gap-8 sm:grid-cols-5">
+            <div class="ph aspect-[4/5] overflow-hidden rounded-sm sm:col-span-3"><img src="https://images.pexels.com/photos/17584116/pexels-photo-17584116.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" loading="lazy" width="960" height="1200" class="photo h-full w-full object-cover" alt="Nhà hàng với bàn ghế gỗ và ánh sáng tự nhiên" data-en-alt="A restaurant with wooden tables in natural light"></div>
+            <div class="flex flex-col justify-end sm:col-span-2"><p class="text-[17px] leading-relaxed text-pearl/80" data-en="Balanced, seasonal cooking served in a light-filled room of timber and plants. Meals are unhurried, shared or alone.">Ẩm thực cân bằng theo mùa trong không gian gỗ và cây xanh ngập ánh sáng. Bữa ăn thong thả, cùng người thân hoặc một mình.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VẬT LIỆU -->
+  <section id="materials" data-section="gallery-lookbook" class="bg-pearl py-24 lg:py-36">
+    <div class="wrap grid gap-12 lg:grid-cols-12 lg:gap-8">
+      <div class="grid grid-cols-2 gap-4 lg:col-span-6 lg:gap-6">
+        <div class="ph aspect-[3/4] overflow-hidden rounded-sm" data-reveal="clip">
+          <img src="https://images.pexels.com/photos/8774406/pexels-photo-8774406.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" loading="lazy" width="900" height="1200" class="photo h-full w-full object-cover" alt="Cận cảnh nếp gấp của vải linen tự nhiên" data-en-alt="Close-up of natural linen folds">
+        </div>
+        <div class="ph mt-16 aspect-[3/4] overflow-hidden rounded-sm lg:mt-32" data-reveal="clip">
+          <img src="https://images.pexels.com/photos/11901304/pexels-photo-11901304.jpeg?auto=compress&cs=tinysrgb&w=1200" referrerpolicy="no-referrer" loading="lazy" width="900" height="1200" class="photo h-full w-full object-cover" alt="Ánh sáng xuyên qua rèm cửa tạo vùng sáng dịu" data-en-alt="Light filtering softly through curtains">
+        </div>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8">
+        <p class="label text-lavender-deep" data-en="Architecture and materials">Kiến trúc và vật liệu</p>
+        <h2 class="mt-6 font-display text-[clamp(2.3rem,3.8vw,4rem)] leading-[1.04]" data-reveal="up" data-en="Luxury you notice with your hands">Sự sang trọng cảm nhận bằng đôi tay</h2>
+        <dl class="mt-10 grid gap-6" data-reveal-stagger="80">
+          <div class="grid grid-cols-[9rem_1fr] gap-4 sm:grid-cols-[11rem_1fr]"><dt class="font-display text-xl" data-en="Natural stone">Đá tự nhiên</dt><dd class="text-[15px] leading-relaxed text-midnight/70" data-en="Cool underfoot in baths and terraces.">Mát lạnh dưới chân ở phòng tắm và hiên nhà.</dd></div>
+          <div class="grid grid-cols-[9rem_1fr] gap-4 sm:grid-cols-[11rem_1fr]"><dt class="font-display text-xl" data-en="Pale timber">Gỗ sáng màu</dt><dd class="text-[15px] leading-relaxed text-midnight/70" data-en="Oak and ash, oiled rather than lacquered.">Sồi và tần bì, xử lý bằng dầu thay vì sơn bóng.</dd></div>
+          <div class="grid grid-cols-[9rem_1fr] gap-4 sm:grid-cols-[11rem_1fr]"><dt class="font-display text-xl" data-en="Linen">Vải linen</dt><dd class="text-[15px] leading-relaxed text-midnight/70" data-en="Breathable bedding and curtains that move with the wind.">Chăn ga thoáng khí và rèm cửa lay động theo gió.</dd></div>
+          <div class="grid grid-cols-[9rem_1fr] gap-4 sm:grid-cols-[11rem_1fr]"><dt class="font-display text-xl" data-en="Indirect light">Ánh sáng gián tiếp</dt><dd class="text-[15px] leading-relaxed text-midnight/70" data-en="Warm, low lamps after dusk; no harsh overhead glare.">Đèn thấp ấm áp sau hoàng hôn, không có ánh sáng gắt từ trần.</dd></div>
+          <div class="grid grid-cols-[9rem_1fr] gap-4 sm:grid-cols-[11rem_1fr]"><dt class="font-display text-xl" data-en="Wide glass">Cửa kính lớn</dt><dd class="text-[15px] leading-relaxed text-midnight/70" data-en="Framing the landscape as the room’s main artwork.">Đóng khung cảnh quan như tác phẩm chính của căn phòng.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- KẾT -->
+  <section id="stays-cta" data-section="cta-type" class="bg-veil relative overflow-hidden py-28 lg:py-40" data-gradient-shift="26" data-clouds="2" data-clouds-band="0-50" data-clouds-color="#ffffff" data-clouds-speed="0.6">
+    <div class="wrap relative z-10 grid items-end gap-10 lg:grid-cols-12">
+      <h2 class="pb-2 font-display text-[clamp(2.8rem,6.6vw,6.75rem)] leading-[1.02] lg:col-span-8" data-split="words" data-en="Your Own Space to Breathe.">Một khoảng riêng để hít thở.</h2>
+      <div class="lg:col-span-4 lg:pb-6">
+        <a href="about.html" class="group inline-flex min-h-12 items-center gap-3 rounded-full bg-midnight px-8 text-sm font-medium tracking-wide text-pearl transition duration-300 hover:bg-midnight-soft active:scale-[.98]" data-reveal="up">
+          <span data-en="Discover the Resort">Khám phá resort</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @partial footer -->
+<footer id="footer" class="on-dark relative overflow-hidden bg-midnight text-pearl">
+  <div class="halo absolute -right-40 -top-40 h-[34rem] w-[34rem] opacity-25" aria-hidden="true"></div>
+  <div class="wrap relative pt-24 lg:pt-32">
+    <div class="grid gap-14 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-5">
+        <a href="../index.html" class="font-display text-3xl tracking-[0.32em]">CELESTIA</a>
+        <p class="mt-6 max-w-sm font-display text-2xl italic leading-snug text-pearl/85" data-en="A quiet place to slow down, breathe deeply and come back to yourself.">Một nơi tĩnh lặng để chậm lại, thở sâu và trở về với chính mình.</p>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender" data-en="Explore">Khám phá</p>
+        <ul class="mt-6 grid gap-3 text-[15px] text-pearl/80">
+          <li><a href="../index.html" class="transition-colors duration-300 hover:text-pearl" data-en="Home">Trang chủ</a></li>
+          <li><a href="../pages/about.html" class="transition-colors duration-300 hover:text-pearl" data-en="About">Giới thiệu</a></li>
+          <li><a aria-current="page" href="../pages/stays.html" class="transition-colors duration-300 hover:text-pearl" data-en="Stays">Lưu trú</a></li>
+          <li><a href="../pages/experiences.html" class="transition-colors duration-300 hover:text-pearl" data-en="Experiences">Trải nghiệm</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender" data-en="Contact">Liên hệ</p>
+        <ul class="mt-6 grid gap-3 text-[15px] text-pearl/80">
+          <li><a href="tel:+842633829147" class="transition-colors duration-300 hover:text-pearl">+84 263 3829 147</a></li>
+          <li><a href="mailto:hello@celestia-resort.vn" class="transition-colors duration-300 hover:text-pearl">hello@celestia-resort.vn</a></li>
+          <li class="leading-relaxed" data-en="Tuyen Lam Lake, Ward 3,<br>Da Lat, Lam Dong, Vietnam">Hồ Tuyền Lâm, Phường 3,<br>Đà Lạt, Lâm Đồng, Việt Nam</li>
+        </ul>
+        <p class="mt-4 text-[13px] text-pearl/55" data-en="Sample contact details for presentation.">Thông tin liên hệ mang tính minh họa.</p>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="text-xs font-medium uppercase tracking-[0.28em] text-lavender" data-en="Language">Ngôn ngữ</p>
+        <div class="mt-5 flex gap-2 text-sm font-medium tracking-[0.2em]">
+          <button type="button" data-lang-set="vi" class="min-h-11 rounded-full border border-pearl/30 px-5 transition-colors duration-300 hover:border-pearl [&.is-active]:border-lavender [&.is-active]:bg-lavender [&.is-active]:text-midnight">VI</button>
+          <button type="button" data-lang-set="en" class="min-h-11 rounded-full border border-pearl/30 px-5 transition-colors duration-300 hover:border-pearl [&.is-active]:border-lavender [&.is-active]:bg-lavender [&.is-active]:text-midnight">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 flex flex-col gap-3 border-t border-pearl/15 py-8 text-[13px] text-pearl/60 sm:flex-row sm:items-center sm:justify-between">
+      <p data-en="© 2026 CELESTIA. All rights reserved.">© 2026 CELESTIA. Bảo lưu mọi quyền.</p>
+      <p data-en="An introduction website. Online booking is not available.">Website giới thiệu thương hiệu. Không hỗ trợ đặt phòng trực tuyến.</p>
+    </div>
+  </div>
+  <p class="pointer-events-none select-none whitespace-nowrap text-center font-display text-[21vw] leading-[0.72] tracking-[0.06em] text-pearl/[0.06]" aria-hidden="true">CELESTIA</p>
+</footer>
+<!-- /@partial footer -->
+<!-- @partial scripts -->
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/atmos.js"></script>
+<!-- /@partial scripts -->
+</body>
+</html>

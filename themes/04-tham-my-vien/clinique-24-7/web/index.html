@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLINIQUE 24/7 | Doctor-led aesthetics and skin care</title>
+  <meta name="description" content="CLINIQUE 24/7 is a medical aesthetics and skin care clinic. Doctor-led skin treatment, intensive skin care and non-surgical aesthetics, with clear reference pricing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="bg-paper text-ink pb-20 lg:pb-0">
+
+  <header id="top" data-header="shrink" class="sticky top-0 z-40 border-b border-transparent bg-paper/95 transition-colors duration-300">
+    <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-10 2xl:px-16">
+      <a href="index.html" class="shrink-0 text-lg font-semibold tracking-tight" aria-label="CLINIQUE 24/7 home">CLINIQUE <span class="text-cobalt">24/7</span></a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-10 text-[15px]">
+          <li><a href="index.html" aria-current="page" class="relative py-2 font-medium text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-cobalt">Home</a></li>
+          <li><a href="pages/services.html" class="relative py-2 text-muted transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">Services &amp; Pricing</a></li>
+          <li><a href="pages/about.html" class="relative py-2 text-muted transition-colors duration-300 hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-cobalt after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100">About</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center border border-line font-mono text-xs" role="group" aria-label="Language">
+          <span class="flex h-9 items-center bg-ink px-2.5 text-paper" aria-current="true">EN</span>
+          <button type="button" data-lang-vi class="flex h-9 items-center px-2.5 text-muted transition-colors duration-300 hover:text-ink" aria-label="Tiếng Việt">VI</button>
+        </div>
+        <button type="button" data-modal-open="book" class="hidden h-11 items-center bg-cobalt px-5 text-sm font-medium text-white transition-colors duration-300 hover:bg-cobalt-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobalt sm:inline-flex">Book a Consultation</button>
+        <button type="button" data-menu-toggle="#mnav" class="flex h-11 w-11 items-center justify-center border border-line lg:hidden" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mnav" class="fixed inset-x-4 top-20 z-50 border border-line bg-paper p-6 lg:hidden">
+      <ul class="divide-y divide-line text-lg">
+        <li><a href="index.html" aria-current="page" class="flex min-h-[52px] items-center justify-between font-medium text-cobalt">Home <span class="font-mono text-sm text-muted">01</span></a></li>
+        <li><a href="pages/services.html" class="flex min-h-[52px] items-center justify-between">Services &amp; Pricing <span class="font-mono text-sm text-muted">02</span></a></li>
+        <li><a href="pages/about.html" class="flex min-h-[52px] items-center justify-between">About <span class="font-mono text-sm text-muted">03</span></a></li>
+      </ul>
+      <button type="button" data-modal-open="book" class="mt-6 flex h-12 w-full items-center justify-center bg-cobalt text-base font-medium text-white">Book a Consultation</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" data-section="hero-type" class="relative overflow-hidden border-b border-line bg-paper">
+      <div class="grid-rule pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="relative mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:pb-24 lg:pt-20 2xl:px-16">
+        <div class="min-w-0 lg:col-span-8">
+          <h1 class="text-[clamp(2.9rem,7.2vw,7.6rem)] font-semibold leading-[0.95] tracking-[-0.045em]" data-reveal="up">
+            Aesthetic care, <span class="text-cobalt">led by medicine.</span>
+          </h1>
+          <p class="mt-8 max-w-[38ch] text-lg leading-relaxed text-muted sm:text-xl" data-reveal="up">Doctor-led skin treatment and non-surgical aesthetics. Every plan starts with a medical assessment.</p>
+          <div class="mt-10 flex flex-col gap-3 sm:flex-row" data-reveal="up" data-reveal-delay="200">
+            <button type="button" data-modal-open="book" class="inline-flex h-14 items-center justify-center gap-3 bg-cobalt px-7 text-base font-medium text-white transition-colors duration-300 hover:bg-cobalt-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobalt">Book a Consultation</button>
+            <a href="pages/services.html" class="group inline-flex h-14 items-center justify-center gap-3 border border-ink px-7 text-base font-medium transition-colors duration-300 hover:bg-ink hover:text-paper">Services &amp; Pricing
+              <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="min-w-0 lg:col-span-4 lg:pt-28">
+          <div class="relative">
+            <span class="absolute -left-3 -top-8 z-10 font-mono text-6xl font-medium leading-none text-signal lg:-left-10" aria-hidden="true">+</span>
+            <div class="aspect-[4/5] overflow-hidden bg-cobalt-soft">
+              <img src="assets/img/about-intake.jpg" alt="A doctor in a white coat talks with a patient across a consultation desk" width="960" height="640" class="h-full w-full object-cover object-[30%_center]">
+            </div>
+            <p class="mt-3 border-t border-line pt-3 text-sm text-muted">Consultation comes before any treatment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach" data-section="story-editorial" class="bg-paper">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-28 2xl:px-16">
+        <div class="lg:col-span-4">
+          <div class="lg:sticky lg:top-28" data-reveal="up">
+            <h2 class="text-4xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-5xl 2xl:text-6xl">Our medical direction</h2>
+            <p class="mt-6 max-w-[40ch] text-lg leading-relaxed text-muted">We treat the skin as an organ first and a surface second. That shapes how we assess, treat and price.</p>
+          </div>
+        </div>
+        <div class="grid min-w-0 grid-cols-1 gap-10 sm:grid-cols-5 lg:col-span-8">
+          <ol class="sm:col-span-3" data-reveal-stagger="90">
+            <li class="grid grid-cols-[4.5rem_1fr] gap-4 border-t border-ink py-7">
+              <span class="font-mono text-4xl font-medium leading-none text-cobalt">01</span>
+              <div>
+                <h3 class="text-xl font-semibold tracking-tight">Diagnosis before treatment</h3>
+                <p class="mt-2 leading-relaxed text-muted">A doctor reviews your skin, history and current medication before any procedure is suggested.</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-[4.5rem_1fr] gap-4 border-t border-ink py-7">
+              <span class="font-mono text-4xl font-medium leading-none text-cobalt">02</span>
+              <div>
+                <h3 class="text-xl font-semibold tracking-tight">Established protocols</h3>
+                <p class="mt-2 leading-relaxed text-muted">We use recognised techniques with documented settings, products and aftercare for each session.</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-[4.5rem_1fr] gap-4 border-y border-ink py-7">
+              <span class="font-mono text-4xl font-medium leading-none text-cobalt">03</span>
+              <div>
+                <h3 class="text-xl font-semibold tracking-tight">Plain pricing</h3>
+                <p class="mt-2 leading-relaxed text-muted">Reference prices are published. Your written plan lists every session and its cost before you start.</p>
+              </div>
+            </li>
+          </ol>
+          <figure class="sm:col-span-2" data-reveal="fade">
+            <div class="group aspect-[3/4] overflow-hidden bg-stone">
+              <img src="assets/img/home-skin-laser-forehead.jpg" alt="Close-up of a fractional laser handpiece working on the skin of the forehead" width="733" height="1024" loading="lazy" class="h-full w-full object-cover grayscale transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]">
+            </div>
+            <figcaption class="mt-3 text-sm text-muted">Fractional laser, performed under medical supervision.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" data-section="features-numbered" class="border-t border-line bg-stone">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" data-reveal="up">
+          <h2 class="text-4xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-5xl 2xl:text-6xl">Three groups of care</h2>
+          <a href="pages/services.html" class="group inline-flex h-11 items-center gap-2 self-start border-b border-ink text-base font-medium sm:self-auto">Full list and reference prices
+            <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <ul class="mt-12 border-t border-ink" data-reveal-stagger="90">
+          <li>
+            <a href="pages/services.html#skin-treatment" class="group grid grid-cols-1 gap-4 border-b border-ink/20 px-0 py-8 transition-colors duration-300 hover:bg-paper sm:px-4 lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-6">
+              <span class="font-mono text-6xl font-medium leading-none tracking-tight text-cobalt lg:col-span-2 2xl:text-7xl">01</span>
+              <span class="text-2xl font-semibold tracking-tight lg:col-span-3 2xl:text-3xl">Skin treatment</span>
+              <span class="leading-relaxed text-muted lg:col-span-5">Acne and acne scarring, pigmentation, redness and enlarged pores, treated after a medical skin assessment.</span>
+              <span class="flex items-center justify-between gap-4 lg:col-span-2 lg:justify-end">
+                <span class="font-mono text-sm text-muted">4 services</span>
+                <svg class="text-ink transition-transform duration-300 group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/services.html#intensive-care" class="group grid grid-cols-1 gap-4 border-b border-ink/20 px-0 py-8 transition-colors duration-300 hover:bg-paper sm:px-4 lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-6">
+              <span class="font-mono text-6xl font-medium leading-none tracking-tight text-cobalt lg:col-span-2 2xl:text-7xl">02</span>
+              <span class="text-2xl font-semibold tracking-tight lg:col-span-3 2xl:text-3xl">Intensive skin care</span>
+              <span class="leading-relaxed text-muted lg:col-span-5">Medical-grade cleansing, peels and hydration programmes that restore the skin barrier between treatments.</span>
+              <span class="flex items-center justify-between gap-4 lg:col-span-2 lg:justify-end">
+                <span class="font-mono text-sm text-muted">3 services</span>
+                <svg class="text-ink transition-transform duration-300 group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="pages/services.html#non-surgical" class="group grid grid-cols-1 gap-4 border-b border-ink px-0 py-8 transition-colors duration-300 hover:bg-paper sm:px-4 lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-6">
+              <span class="font-mono text-6xl font-medium leading-none tracking-tight text-signal lg:col-span-2 2xl:text-7xl">03</span>
+              <span class="text-2xl font-semibold tracking-tight lg:col-span-3 2xl:text-3xl">Non-surgical aesthetics</span>
+              <span class="leading-relaxed text-muted lg:col-span-5">Injectables, skin boosters and energy-based tightening, performed by doctors with no incisions.</span>
+              <span class="flex items-center justify-between gap-4 lg:col-span-2 lg:justify-end">
+                <span class="font-mono text-sm text-muted">3 services</span>
+                <svg class="text-ink transition-transform duration-300 group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" data-section="process-steps" class="relative overflow-hidden bg-cobalt text-white">
+      <div class="grid-rule-light pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="relative mx-auto w-full max-w-screen-2xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28 2xl:px-16">
+        <h2 class="max-w-[16ch] text-4xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-5xl 2xl:text-6xl" data-reveal="up">How a consultation works</h2>
+        <ol class="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4" data-reveal-stagger="100">
+          <li class="border-t border-white/40 pt-6">
+            <span class="font-mono text-5xl font-medium leading-none 2xl:text-6xl">01</span>
+            <h3 class="mt-8 text-xl font-semibold tracking-tight">Request</h3>
+            <p class="mt-2 leading-relaxed text-white/80">Send the consultation form or call us. A coordinator confirms a time with you.</p>
+          </li>
+          <li class="border-t border-white/40 pt-6">
+            <span class="font-mono text-5xl font-medium leading-none 2xl:text-6xl">02</span>
+            <h3 class="mt-8 text-xl font-semibold tracking-tight">Skin assessment</h3>
+            <p class="mt-2 leading-relaxed text-white/80">A doctor examines your skin, asks about your history and explains what is realistic.</p>
+          </li>
+          <li class="border-t border-white/40 pt-6">
+            <span class="font-mono text-5xl font-medium leading-none 2xl:text-6xl">03</span>
+            <h3 class="mt-8 text-xl font-semibold tracking-tight">Written plan</h3>
+            <p class="mt-2 leading-relaxed text-white/80">You receive a plan with sessions, expected downtime and full cost. No decision is needed on the day.</p>
+          </li>
+          <li class="border-t border-signal pt-6">
+            <span class="font-mono text-5xl font-medium leading-none 2xl:text-6xl">04</span>
+            <h3 class="mt-8 text-xl font-semibold tracking-tight">Treatment and review</h3>
+            <p class="mt-2 leading-relaxed text-white/80">Treatment follows the plan, with a scheduled review to check results and aftercare.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CLINIC INFO -->
+    <section id="clinic" data-section="contact-split" class="bg-paper">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-10 lg:py-28 2xl:px-16">
+        <div class="min-w-0 lg:col-span-5" data-reveal="up">
+          <h2 class="text-4xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-5xl 2xl:text-6xl">Visit the clinic</h2>
+          <dl class="mt-10 grid grid-cols-1 border-t border-ink sm:grid-cols-2">
+            <div class="border-b border-line py-6 sm:pr-6">
+              <dt class="font-mono text-sm text-muted">Address</dt>
+              <dd class="mt-2 text-lg leading-snug">142 Nguyen Thi Minh Khai, Vo Thi Sau Ward, District 3, Ho Chi Minh City</dd>
+            </div>
+            <div class="border-b border-line py-6 sm:pl-6">
+              <dt class="font-mono text-sm text-muted">Opening hours</dt>
+              <dd class="mt-2 text-lg leading-snug tabular">Mon to Sat, 08:00 to 20:00<br>Sun, 08:00 to 17:00</dd>
+            </div>
+            <div class="border-b border-line py-6 sm:pr-6">
+              <dt class="font-mono text-sm text-muted">Phone</dt>
+              <dd class="mt-2 flex flex-wrap items-center gap-3 text-lg">
+                <a href="tel:+842838224710" class="tabular underline decoration-line underline-offset-4 transition-colors duration-300 hover:text-cobalt">028 3822 4710</a>
+                <button type="button" data-copy="028 3822 4710" class="inline-flex h-11 items-center border border-line px-3 font-mono text-xs text-muted transition-colors duration-300 hover:border-ink hover:text-ink">Copy</button>
+              </dd>
+            </div>
+            <div class="border-b border-line py-6 sm:pl-6">
+              <dt class="font-mono text-sm text-muted">Consultation requests</dt>
+              <dd class="mt-2 text-lg leading-snug">Online form open 24/7. We reply within opening hours.</dd>
+            </div>
+          </dl>
+          <p class="mt-4 text-sm text-muted">Contact details shown are sample data for this preview.</p>
+        </div>
+        <div class="min-w-0 lg:col-span-7" data-reveal="fade">
+          <div class="relative aspect-[4/3] w-full border border-line bg-stone lg:aspect-auto lg:h-full lg:min-h-[480px]">
+            <a href="https://www.google.com/maps/search/?api=1&query=Nguyen+Thi+Minh+Khai+District+3+Ho+Chi+Minh+City" target="_blank" rel="noopener" class="absolute inset-0 flex items-center justify-center text-base font-medium text-cobalt underline underline-offset-4">Open the map in Google Maps</a>
+            <iframe title="Map showing the clinic location in District 3, Ho Chi Minh City" src="https://maps.google.com/maps?q=Nguyen%20Thi%20Minh%20Khai%2C%20District%203%2C%20Ho%20Chi%20Minh%20City&z=15&output=embed" class="relative h-full w-full grayscale" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" data-section="cta-type" class="border-t border-ink bg-paper">
+      <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:items-end lg:gap-8 lg:px-10 lg:py-28 2xl:px-16">
+        <h2 class="text-[clamp(2.5rem,6vw,6rem)] font-semibold leading-[0.98] tracking-[-0.045em] lg:col-span-8" data-reveal="up">Start with an assessment, <span class="text-signal">not a sales pitch.</span></h2>
+        <div class="flex flex-col gap-4 lg:col-span-4" data-reveal="up">
+          <button type="button" data-modal-open="book" class="inline-flex h-14 w-full items-center justify-center bg-cobalt px-7 text-base font-medium text-white transition-colors duration-300 hover:bg-cobalt-deep active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobalt">Book a Consultation</button>
+          <a href="tel:+842838224710" class="inline-flex h-14 w-full items-center justify-center border border-ink px-7 text-base font-medium transition-colors duration-300 hover:bg-ink hover:text-paper">Call 028 3822 4710</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" data-section="footer-big" class="border-t border-line bg-stone">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 pt-16 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <p class="font-mono text-sm text-muted">Pages</p>
+          <ul class="mt-4 space-y-1 text-base">
+            <li><a href="index.html" class="inline-flex min-h-[44px] items-center hover:text-cobalt">Home</a></li>
+            <li><a href="pages/services.html" class="inline-flex min-h-[44px] items-center hover:text-cobalt">Services &amp; Pricing</a></li>
+            <li><a href="pages/about.html" class="inline-flex min-h-[44px] items-center hover:text-cobalt">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-mono text-sm text-muted">Visit</p>
+          <p class="mt-4 leading-relaxed">142 Nguyen Thi Minh Khai<br>Vo Thi Sau Ward, District 3<br>Ho Chi Minh City</p>
+        </div>
+        <div>
+          <p class="font-mono text-sm text-muted">Contact</p>
+          <ul class="mt-4 space-y-1">
+            <li><a href="tel:+842838224710" class="inline-flex min-h-[44px] items-center tabular hover:text-cobalt">028 3822 4710</a></li>
+            <li><a href="mailto:care@clinique247.vn" class="inline-flex min-h-[44px] items-center hover:text-cobalt">care@clinique247.vn</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-mono text-sm text-muted">Hours</p>
+          <p class="mt-4 leading-relaxed tabular">Mon to Sat, 08:00 to 20:00<br>Sun, 08:00 to 17:00</p>
+          <button type="button" data-modal-open="book" class="mt-5 inline-flex h-11 items-center bg-cobalt px-5 text-sm font-medium text-white transition-colors duration-300 hover:bg-cobalt-deep">Book a Consultation</button>
+        </div>
+      </div>
+      <p class="mt-16 select-none overflow-hidden whitespace-nowrap pb-2 text-[clamp(3.2rem,13.5vw,15rem)] font-semibold leading-[0.85] tracking-[-0.06em] text-cobalt" aria-hidden="true">CLINIQUE 24/7</p>
+      <div class="flex flex-col gap-2 border-t border-ink/20 py-6 text-sm text-muted sm:flex-row sm:justify-between">
+        <p>© 2026 CLINIQUE 24/7. All rights reserved.</p>
+        <p>Medical information on this site is general and does not replace a consultation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating mobile CTA -->
+  <div class="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-paper/95 p-3 lg:hidden">
+    <button type="button" data-modal-open="book" class="flex h-12 w-full items-center justify-center bg-cobalt text-base font-medium text-white active:scale-[.98]">Book a Consultation</button>
+  </div>
+
+  <!-- Consultation dialog -->
+  <dialog id="book" aria-labelledby="book-title" class="w-[min(640px,calc(100%-2rem))] overflow-y-auto border border-ink/10 bg-paper p-0 text-ink">
+    <div class="flex items-start justify-between gap-6 border-b border-line px-6 py-5 sm:px-8">
+      <div>
+        <h2 id="book-title" class="text-2xl font-semibold tracking-tight">Book a Consultation</h2>
+        <p class="mt-1 text-sm text-muted">A coordinator will confirm the time with you.</p>
+      </div>
+      <button type="button" data-modal-close class="flex h-11 w-11 shrink-0 items-center justify-center border border-line hover:border-ink" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <form data-form="consultation" class="grid grid-cols-1 gap-5 px-6 py-6 sm:grid-cols-2 sm:px-8" novalidate>
+      <label class="block text-sm font-medium sm:col-span-2">Full name
+        <input type="text" name="name" required minlength="2" autocomplete="name" class="mt-2 block h-12 w-full border border-line bg-white px-3 text-base font-normal focus:border-cobalt focus:outline-none focus:ring-2 focus:ring-cobalt/30">
+      </label>
+      <label class="block text-sm font-medium">Phone
+        <input type="tel" name="phone" required autocomplete="tel" class="mt-2 block h-12 w-full border border-line bg-white px-3 text-base font-normal focus:border-cobalt focus:outline-none focus:ring-2 focus:ring-cobalt/30">
+      </label>
+      <label class="block text-sm font-medium">Email (optional)
+        <input type="email" name="email" autocomplete="email" class="mt-2 block h-12 w-full border border-line bg-white px-3 text-base font-normal focus:border-cobalt focus:outline-none focus:ring-2 focus:ring-cobalt/30">
+      </label>
+      <label class="block text-sm font-medium">Area of concern
+        <select name="concern" required class="mt-2 block h-12 w-full border border-line bg-white px-3 text-base font-normal focus:border-cobalt focus:outline-none focus:ring-2 focus:ring-cobalt/30">
+          <option value="">Select one</option>
+          <option>Skin treatment</option>
+          <option>Intensive skin care</option>
+          <option>Non-surgical aesthetics</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+      <label class="block text-sm font-medium">Preferred date
+        <input type="date" name="date" required class="mt-2 block h-12 w-full border border-line bg-white px-3 text-base font-normal focus:border-cobalt focus:outline-none focus:ring-2 focus:ring-cobalt/30">
+      </label>
+      <label class="block text-sm font-medium sm:col-span-2">What would you like to discuss?
+        <textarea name="note" rows="3" class="mt-2 block w-full border border-line bg-white px-3 py-2 text-base font-normal focus:border-cobalt focus:outline-none focus:ring-2 focus:ring-cobalt/30"></textarea>
+      </label>
+      <label class="flex items-start gap-3 text-sm text-muted sm:col-span-2">
+        <input type="checkbox" name="consent" required class="mt-0.5 h-5 w-5 shrink-0 accent-cobalt">
+        <span>I agree that the clinic may contact me about this request.</span>
+      </label>
+      <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
+        <button type="submit" class="inline-flex h-12 items-center justify-center bg-cobalt px-7 text-base font-medium text-white transition-colors duration-300 hover:bg-cobalt-deep active:scale-[.98]">Send request</button>
+        <p class="text-sm text-muted">Demo form. Requests are not sent yet.</p>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

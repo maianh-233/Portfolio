@@ -1,0 +1,68 @@
+{
+  "slug": "sandline",
+  "name": "SANDLINE",
+  "projectType": "website",
+  "concept": {
+    "topic": "website giới thiệu thương hiệu resort",
+    "brand": "SANDLINE",
+    "purpose": "Thiết kế website giới thiệu SANDLINE, một resort kiến trúc đương đại lấy cảm hứng từ sa mạc, địa hình đá và ánh sáng tự nhiên.\n\nGiao diện phải có cá tính kiến trúc rõ rệt, tối giản nhưng mạnh mẽ, không giống website nghỉ dưỡng nhiệt đới thông thường.",
+    "audience": "Khách hàng du lịch muốn lưu trú",
+    "content": "",
+    "assumptions": [],
+    "preset": "auto",
+    "motion": "auto",
+    "language": "en",
+    "colors": "",
+    "font": "",
+    "sections": [],
+    "notes": "# UI DESIGN SPECIFICATION — SANDLINE\n\n## 1. Định hướng giao diện\n\nXây dựng giao diện theo phong cách Contemporary Desert Architecture kết hợp Brutalist Editorial. Thiết kế phải thể hiện rõ tinh thần kiến trúc đương đại, hình khối mạnh mẽ, đường nét dứt khoát và sự tương phản giữa vật liệu thô với ánh sáng tự nhiên.\n\n- **Màu sắc:** Desert Sand `#D7BD96`, Terracotta `#A75F43`, Bone White `#F4EFE5`, Dark Umber `#342B25`, Clay `#C58D69`.\n- **Typography:** kết hợp serif giàu cá tính cho tiêu đề và sans-serif hình học cho nội dung.\n- **Bố cục:** sử dụng lưới bất đối xứng, tiêu đề cỡ lớn, đường kẻ mảnh và khoảng trắng rộng.\n- **Hình ảnh:** ưu tiên kiến trúc bê tông màu cát, villa dạng khối, vách đá, hồ phản chiếu, bề mặt vật liệu và bóng nắng dài.\n- **Ngôn ngữ thị giác:** tối giản, có tính kiến trúc, giàu chiều sâu và tránh phong cách resort nhiệt đới đại trà.\n\nKhông lạm dụng card bo tròn, gradient, icon trang trí hoặc bố cục chia cột đồng đều trên toàn bộ website.\n\n## 2. Giao diện trang chủ — Home\n\n- Header dạng thanh ngang gọn, logo SANDLINE nổi bật, điều hướng rõ ràng và công tắc VI/EN. Có thể sử dụng header nền trong suốt trên hero, sau đó chuyển sang nền đặc khi cuộn.\n- Hero sử dụng ảnh kiến trúc sa mạc toàn chiều rộng hoặc gần toàn màn hình. Tiêu đề lớn “Architecture Shaped by the Land” đặt lệch về một phía, tận dụng vùng trống của ảnh để tạo bố cục có chủ đích.\n- Section giới thiệu thương hiệu sử dụng bố cục hai cột không cân xứng: nội dung ngắn một bên, ảnh kiến trúc dọc bên còn lại.\n- Section công trình nổi bật trình bày theo lưới bất đối xứng, kết hợp ảnh lớn, ảnh nhỏ và các khoảng trống có chủ đích.\n- Section phòng nghỉ và villa được thiết kế như một bộ sưu tập kiến trúc. Mỗi loại không gian có tỷ lệ ảnh, vị trí tiêu đề và cách trình bày khác nhau.\n- Section tiện ích sử dụng hình ảnh lớn kết hợp nhãn nội dung tối giản cho hồ phản chiếu, nhà hàng, lounge và khu thư giãn.\n- Footer nền Dark Umber, chữ Bone White, bố cục gọn và có đường phân cách mảnh.\n\n## 3. Giao diện trang giới thiệu — About\n\n- Hero sử dụng ảnh toàn cảnh kiến trúc trong ánh sáng hoàng hôn, kết hợp tiêu đề lớn và phần mô tả ngắn.\n- Section ý tưởng thiết kế sử dụng bố cục editorial, ưu tiên văn bản có chiều rộng giới hạn và hình ảnh kiến trúc tỷ lệ dọc.\n- Section vật liệu trình bày đá, bê tông, gỗ và kính bằng ảnh cận cảnh. Kết hợp tên vật liệu, mô tả ngắn và số thứ tự lớn.\n- Section nguyên tắc thiết kế sử dụng các khối nội dung độc lập với kích thước không đồng đều, tránh biến mọi nội dung thành những card giống nhau.\n- Gallery kiến trúc kết hợp ảnh ngang, ảnh dọc và ảnh cận cảnh vật liệu, tạo nhịp điệu thị giác như một tạp chí kiến trúc.\n- Phần kết thúc sử dụng một ảnh kiến trúc nổi bật cùng thông điệp ngắn, giữ nhiều khoảng trống xung quanh.\n\n## 4. Giao diện trang phòng nghỉ và tiện ích — Accommodation\n\n- Hero sử dụng ảnh nội thất villa nhìn ra cảnh quan, tiêu đề đặt ở vùng ít chi tiết để bảo đảm khả năng đọc.\n- Ba loại không gian gồm Desert Suite, Courtyard Villa và Horizon Residence phải được trình bày như ba sản phẩm kiến trúc có cá tính riêng, không dùng một mẫu card lặp lại.\n- Desert Suite: bố cục ảnh lớn bên trái, thông tin bên phải.\n- Courtyard Villa: đảo ngược bố cục, ưu tiên hình ảnh sân trong và mối liên hệ giữa nội thất với ngoại thất.\n- Horizon Residence: sử dụng ảnh ngang khổ lớn, tiếp nối bằng phần mô tả nằm trong một cột hẹp.\n- Thông tin từng loại gồm mô tả kiến trúc, đặc điểm không gian và tiện nghi tiêu biểu; không hiển thị giá hoặc tình trạng phòng.\n- Section tiện ích sử dụng lưới hình học có khoảng cách rõ ràng. Có thể kết hợp số thứ tự lớn, nhãn nhỏ và ảnh tỷ lệ khác nhau để tăng tính biên tập.\n- Các khu vực tiện ích cần có sự phân cấp thị giác rõ ràng, không để ảnh, tiêu đề và mô tả cạnh tranh sự chú ý.\n\n## 5. Giao diện trang trải nghiệm — Experiences\n\n- Hero sử dụng ảnh sa mạc lúc bình minh, ưu tiên đường chân trời, bóng đổ và chiều sâu cảnh quan.\n- Các trải nghiệm như ngắm sao, khám phá địa hình, ẩm thực, thư giãn bên hồ và văn hóa địa phương được trình bày theo bố cục editorial.\n- Mỗi trải nghiệm có một ảnh chủ đạo, tiêu đề nổi bật và mô tả ngắn. Luân phiên vị trí ảnh và nội dung để tránh sự đơn điệu.\n- Có thể dùng số thứ tự lớn hoặc đường kẻ mảnh để phân chia từng trải nghiệm.\n- Hạn chế icon minh họa; ưu tiên nhiếp ảnh, typography và bố cục để truyền tải cảm xúc.\n- Phần cuối trang sử dụng ảnh toàn cảnh rộng cùng tiêu đề lớn, tạo điểm kết thúc thị giác rõ ràng.\n\n## 6. Quy tắc nhất quán giao diện\n\n- Duy trì cùng hệ thống màu sắc, typography, header, footer và quy tắc khoảng cách trên cả bốn trang.\n- Mỗi trang phải có bố cục riêng, phù hợp với nội dung, nhưng vẫn nhận diện được là cùng một thương hiệu.\n- Ưu tiên ảnh chất lượng cao, tỷ lệ ảnh có chủ đích và cách cắt ảnh phù hợp với kiến trúc.\n- Không đặt chữ lên vùng ảnh quá nhiều chi tiết hoặc có độ tương phản thấp.\n- Hạn chế sử dụng nhiều thành phần trang trí không phục vụ nội dung.\n- Thiết kế responsive: trên mobile chuyển sang bố cục một cột, giảm kích thước tiêu đề và giữ khoảng cách hợp lý; không thu nhỏ nguyên trạng bố cục desktop.\n- Giao diện phải có đủ nội dung tiếng Việt và tiếng Anh, không vỡ bố cục khi chuyển ngôn ngữ.\n# ANIMATION & MOTION SPECIFICATION — SANDLINE\n\n## 1. Triết lý chuyển động\n\nChuyển động của SANDLINE phải thể hiện sự tĩnh tại, sức nặng của hình khối kiến trúc và nhịp điệu chậm của ánh sáng sa mạc.\n\nƯu tiên hiệu ứng tinh tế, có chủ đích và phục vụ bố cục. Không biến website thành một bản trình diễn animation liên tục.\n\n## 2. Hiệu ứng khi tải trang\n\n- Header xuất hiện bằng fade-in nhẹ.\n- Tiêu đề hero xuất hiện bằng fade-in kết hợp dịch chuyển theo chiều dọc một khoảng ngắn.\n- Phần mô tả và nhãn phụ xuất hiện sau tiêu đề, tạo thứ tự thị giác rõ ràng.\n- Ảnh hero có thể sử dụng hiệu ứng zoom chậm từ khoảng 1.04 về 1.0.\n- Không cho toàn bộ thành phần xuất hiện cùng lúc hoặc sử dụng hiệu ứng nảy mạnh.\n\n## 3. Hiệu ứng khi cuộn trang\n\n- Sử dụng scroll reveal: nội dung xuất hiện bằng fade-in và dịch chuyển nhẹ từ dưới lên khi đi vào vùng nhìn thấy.\n- Các phần tử trong cùng một khu vực có thể xuất hiện lệch thời gian ngắn, nhưng không kéo dài khiến người dùng phải chờ.\n- Ảnh kiến trúc có thể dùng hiệu ứng reveal bằng cách mở dần vùng hiển thị theo chiều dọc.\n- Đường kẻ trang trí có thể mở rộng từ một đầu sang đầu còn lại khi khu vực tương ứng xuất hiện.\n- Chỉ áp dụng parallax nhẹ cho một số ảnh lớn; không sử dụng trên tất cả các section.\n- Các hiệu ứng phải kết thúc nhanh và ổn định, không tiếp tục chuyển động khi người dùng đã cuộn qua khu vực.\n\n## 4. Hiệu ứng hình ảnh\n\n- Ảnh có thể phóng to nhẹ khi hover, với phần ảnh được giới hạn trong khung để không làm vỡ bố cục.\n- Các ảnh kiến trúc lớn có thể sử dụng hiệu ứng dịch chuyển chậm khi cuộn để tạo chiều sâu.\n- Ảnh gallery có thể chuyển trạng thái từ độ sáng hoặc tỷ lệ zoom nhẹ sang bình thường khi hover.\n- Không dùng hiệu ứng lật ảnh, xoay 3D, rung, nảy hoặc chuyển cảnh quá phức tạp.\n- Không áp dụng zoom mạnh cho ảnh chứa nhiều chi tiết kiến trúc vì dễ làm mất cảm giác cân đối.\n\n## 5. Hiệu ứng typography\n\n- Tiêu đề hero có thể xuất hiện theo từng dòng bằng fade-in và dịch chuyển nhẹ.\n- Các tiêu đề section xuất hiện khi cuộn đến khu vực tương ứng.\n- Số thứ tự lớn có thể hiện dần bằng hiệu ứng opacity.\n- Menu điều hướng sử dụng gạch chân mảnh hoặc thay đổi màu chữ khi hover.\n- Không sử dụng chữ nhấp nháy, chữ chạy liên tục hoặc hiệu ứng thay đổi kích thước không cần thiết.\n\n## 6. Hiệu ứng tương tác\n\n- Liên kết và nút điều hướng chuyển màu nhẹ khi hover.\n- Menu mobile mở và đóng bằng chuyển động ngắn, rõ ràng.\n- Nút chuyển ngôn ngữ VI/EN phải phản hồi tức thì và không tạo hiệu ứng gây phân tâm.\n- Các liên kết điều hướng giữa bốn trang hoạt động bình thường; không dùng hiệu ứng chuyển trang khiến người dùng phải chờ.\n- Không tạo hiệu ứng hover bắt buộc để đọc nội dung. Trên thiết bị cảm ứng, toàn bộ thông tin quan trọng phải hiển thị mà không cần hover.\n\n## 7. Thông số và nguyên tắc kỹ thuật\n\n- Hiệu ứng giao diện thông thường: khoảng 250–600 ms.\n- Hiệu ứng reveal theo cuộn: khoảng 400–800 ms.\n- Zoom ảnh nền: chậm và nhẹ, không gây cảm giác ảnh đang liên tục phóng to.\n- Ưu tiên `transform` và `opacity` để chuyển động mượt.\n- Tránh animation gây thay đổi kích thước bố cục hoặc làm nội dung nhảy vị trí.\n- Chỉ kích hoạt scroll reveal khi phần tử đi vào vùng nhìn thấy; tránh khởi tạo lại liên tục khi cuộn.\n- Sử dụng `prefers-reduced-motion` để giảm hoặc tắt các chuyển động không cần thiết theo thiết lập trợ năng.\n- Không để hiệu ứng làm chậm thao tác điều hướng, ảnh hưởng khả năng đọc hoặc cản trở sử dụng trên mobile.\n\n## 8. Tiêu chí đánh giá\n\nGiao diện đạt yêu cầu khi:\n- Chuyển động hỗ trợ cảm giác kiến trúc, không lấn át hình ảnh và nội dung.\n- Các hiệu ứng nhất quán giữa bốn trang.\n- Không có animation quá mạnh hoặc chạy liên tục không cần thiết.\n- Ảnh và nội dung không bị nhảy bố cục trong lúc tải.\n- Website vẫn dễ đọc, dễ thao tác khi tắt animation hoặc sử dụng thiết bị di động.",
+    "mood": "",
+    "reference": "",
+    "tagline": "",
+    "category": "",
+    "description": "",
+    "author": "Đỗ Mai Anh"
+  },
+  "flow": "quick",
+  "createdAt": "2026-10-28T02:49:41.833Z",
+  "updatedAt": "2026-10-28T03:06:29.157Z",
+  "screen": "request",
+  "request": "website giới thiệu thương hiệu resort",
+  "business": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "ui": {
+    "questions": null,
+    "answers": {},
+    "currentIndex": 0
+  },
+  "srsChanges": [],
+  "prototype": {
+    "dir": null,
+    "builtAt": null,
+    "pages": []
+  },
+  "job": {
+    "id": "8fe98884-0ab1-4aff-9aaa-9b18e8f01c83",
+    "kind": "quick-prototype",
+    "targetDir": "D:\\Layout_Agent\\BA_Tool\\workspace\\sandline\\web",
+    "status": "error",
+    "error": "Đã chạm giới hạn sử dụng của tài khoản, vui lòng chờ rồi thử lại. Hạn mức sẽ được làm mới lúc 13:40 28-10.",
+    "errorCode": "usage_limit",
+    "resetsAt": 1793169600,
+    "usage": {
+      "calls": 1,
+      "extraCalls": 0,
+      "missing": 0,
+      "inputTokens": 294121,
+      "outputTokens": 101161,
+      "cacheReadTokens": 6114615,
+      "cacheCreationTokens": 270069,
+      "costUsd": 4.7389977,
+      "numTurns": 103,
+      "durationMs": 921134
+    }
+  }
+}

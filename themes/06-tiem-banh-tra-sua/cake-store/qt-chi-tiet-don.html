@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết đơn | Quản lý tiệm</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<!-- SCR-015 Chi tiết đơn: FR-027 → FR-030, FR-037. ?code=<mã đơn>. Mỗi trạng thái chỉ có 1 nút chính cho bước kế tiếp. -->
+<body data-screen="SCR-015" data-layout="admin" data-nav="orders" data-title="Chi tiết đơn" data-back="qt-don-hang.html" class="admin bg-[#FFFBF6] text-ink font-sans antialiased">
+  <div id="app-header"></div>
+
+  <main id="main" class="lg:pl-60 pb-32 lg:pb-12">
+    <div id="page" class="mx-auto max-w-admin px-4 md:px-6 lg:px-8 pt-4 lg:pt-8">
+      <div class="skeleton h-8 w-72 rounded-full"></div>
+      <div class="mt-6 grid lg:grid-cols-12 gap-6"><div class="lg:col-span-7 space-y-4"><div class="skeleton h-40 rounded-2xl"></div><div class="skeleton h-56 rounded-2xl"></div></div><div class="lg:col-span-5"><div class="skeleton h-72 rounded-2xl"></div></div></div>
+    </div>
+  </main>
+  <!-- Thanh thao tác dính đáy (điện thoại) -->
+  <div id="m-actions" class="lg:hidden fixed bottom-16 inset-x-0 z-20 bg-white/95 backdrop-blur border-t border-beige px-4 py-3 hidden"></div>
+
+  <script>
+    App.onReady(function () {
+      var o = Orders.byCode(App.param('code'));
+      if (!o) {
+        $('#page').innerHTML = '<div class="rounded-2xl bg-white border border-beige mt-4">' + UI.empty({ icon: 'ph-receipt-x', title: 'Không tìm thấy đơn', text: 'Đơn không tồn tại hoặc đã bị xóa.', action: '<a href="qt-don-hang.html" class="btn btn-primary h-10 px-5">Về Đơn hàng</a>' }) + '</div>';
+        return;
+      }
+      var loadedStatus = o.status;
+      if (!o.seen) { o.seen = true; Orders.save(); Layout.refreshBadge(); } // mở chi tiết = đã xem
+
+      var NEXT = {
+        pending: { label: 'Xác nhận đơn', icon: 'ph-check-circle', to: 'confirmed', log: 'Đã xác nhận đơn' },
+        confirmed: { label: 'Bắt đầu làm bánh', icon: 'ph-cooking-pot', to: 'baking', log: 'Bắt đầu làm bánh' },
+        baking: o.delivery.type === 'delivery'
+          ? { label: 'Bánh xong - Đang giao', icon: 'ph-moped', to: 'shipping', log: 'Bánh xong, đang giao' }
+          : { label: 'Bánh xong - Chờ lấy', icon: 'ph-storefront', to: 'ready', log: 'Bánh xong, chờ khách lấy' },
+        shipping: { label: 'Hoàn thành', icon: 'ph-confetti', to: 'done', log: 'Hoàn thành' },
+        ready: { label: 'Hoàn thành', icon: 'ph-confetti', to: 'done', log: 'Hoàn thành' }
+      };
+
+      function moneyInput(inp) {
+        inp.addEventListener('input', function () { var v = inp.value.replace(/\D/g, ''); inp.value = v ? (+v).toLocaleString('vi-VN') : ''; });
+      }
+      function moneyVal(inp) { var v = inp.value.replace(/\D/g, ''); return v === '' ? null : +v; }
+
+      /* E-QD-01: đơn vừa đổi trạng thái ở nơi khác (ví dụ khách hủy) */
+      function conflict() {
+        var saved = (Store.get('db_orders', null) || []).filter(function (x) { return x.code === o.code; })[0];
+        if (saved && saved.status !== loadedStatus) {
+          Modal.open({ title: 'Đơn đã thay đổi trạng thái', body: '<p class="text-ink-muted">Đơn đã thay đổi trạng thái (ví dụ khách đã hủy). Bạn tải lại để xem thông tin mới nhất.</p>', actions: [{ label: 'Tải lại', variant: 'primary', onClick: function () { location.reload(); } }] });
+          return true;
+        }
+        return false;
+      }
+      function commit(text, toast) {
+        Orders.log(o, text); Orders.save(); loadedStatus = o.status;
+        render(); Toast.show(toast || text, 'success');
+      }
+
+      /* ----- Ghi nhận thanh toán ----- */
+      function payment() {
+        if (conflict()) return;
+        var c = Orders.calc(o);
+        Modal.open({
+          title: 'Ghi nhận thanh toán',
+          body: '<div class="space-y-4"><p class="rounded-xl bg-cream px-4 py-3 text-[15px]">Tổng ' + Fmt.money(c.total) + (c.ship == null ? ' (chưa có phí giao)' : '') + ' · Đã thu ' + Fmt.money(c.paid) + ' · <b>Còn ' + Fmt.money(c.remaining) + '</b></p>' +
+            '<fieldset><legend class="field-label mb-2">Loại <span class="text-danger">*</span></legend><div class="grid grid-cols-2 gap-2">' +
+            '<label class="option-card !min-h-[48px] !py-2"><input type="radio" name="ptype" value="deposit" class="sr-only" checked><span class="font-bold">Cọc</span></label>' +
+            '<label class="option-card !min-h-[48px] !py-2"><input type="radio" name="ptype" value="full" class="sr-only"><span class="font-bold">Thanh toán đủ</span></label></div></fieldset>' +
+            '<div class="field"><label class="field-label" for="p-amount">Số tiền (₫) <span class="text-danger">*</span></label><input id="p-amount" inputmode="numeric" class="field-input tabular-nums" value="' + Math.min(c.deposit, c.remaining).toLocaleString('vi-VN') + '" aria-describedby="p-amount-err"><p id="p-amount-err" class="field-error hidden"></p></div>' +
+            '<div class="field"><label class="field-label" for="p-method">Phương thức <span class="text-danger">*</span></label><select id="p-method" class="field-input"><option value="bank">Chuyển khoản</option><option value="wallet">Ví MoMo / ZaloPay</option><option value="cash">Tiền mặt</option></select></div></div>',
+          actions: [{ label: 'Đóng', variant: 'secondary' }, { label: 'Lưu thanh toán', variant: 'primary', onClick: function (close, el) {
+            var amt = $('#p-amount', el), v = moneyVal(amt);
+            if (!v || v <= 0 || v > c.remaining) { FormUI.setError(amt, 'Số tiền không hợp lệ.'); amt.focus(); return false; } // E-QD-03
+            var type = $('input[name=ptype]:checked', el).value, method = $('#p-method', el);
+            o.paid = (o.paid || 0) + v;
+            var after = Orders.calc(o);
+            o.depositStatus = after.ship != null && after.remaining === 0 ? 'paid' : 'deposit';
+            commit((type === 'full' ? 'Ghi nhận thanh toán ' : 'Ghi nhận cọc ') + Fmt.money(v) + ', ' + method.options[method.selectedIndex].text.toLowerCase(), type === 'full' ? 'Đã ghi nhận thanh toán' : 'Đã ghi nhận cọc');
+          } }],
+          onOpen: function (el) {
+            var amt = $('#p-amount', el); moneyInput(amt);
+            $('#p-method', el).value = o.payment.method;
+            $all('input[name=ptype]', el).forEach(function (r) { r.onchange = function () { amt.value = (r.value === 'full' ? c.remaining : Math.min(c.deposit, c.remaining)).toLocaleString('vi-VN'); FormUI.clearError(amt); }; });
+          }
+        });
+      }
+
+      /* ----- Nút chính theo trạng thái ----- */
+      function primary() {
+        if (conflict()) return;
+        var n = NEXT[o.status]; if (!n) return;
+        if (o.status === 'pending' && o.delivery.type === 'delivery') {
+          var fee = $('#m-ship-fee') || $('#ship-fee'), v = fee ? moneyVal(fee) : null;
+          if (v == null || v < 0) {
+            if ($('#ship-fee') && $('#ship-fee').offsetParent) { FormUI.setError($('#ship-fee'), 'Vui lòng nhập phí giao hợp lệ.'); $('#ship-fee').focus(); } // E-QD-02
+            else askFee();
+            return;
+          }
+          o._fee = v;
+        }
+        if (n.to === 'done') {
+          var c = Orders.calc(o);
+          if (c.remaining > 0 || c.ship == null) {
+            Modal.open({ title: 'Đơn chưa thu đủ tiền', body: '<p class="text-ink-muted">Đơn còn <b class="text-ink">' + Fmt.money(c.remaining) + '</b> chưa thu. Bạn ghi nhận thanh toán đủ trước khi hoàn thành đơn nha.</p>', actions: [{ label: 'Đóng', variant: 'secondary' }, { label: 'Ghi nhận thanh toán', variant: 'primary', onClick: function () { setTimeout(payment, 180); } }] });
+            return;
+          }
+        }
+        var warn = o.status === 'confirmed' && o.depositStatus === 'unpaid' ? '<p class="mt-3 rounded-xl bg-butter px-4 py-3 text-sm text-butter-strong font-semibold">Khách chưa cọc. Có bắt buộc cọc trước khi làm bánh hay không đang chờ tiệm xác nhận.</p>' : '';
+        Modal.confirm({ title: n.label + '?', message: 'Đơn ' + o.code + ' sẽ chuyển sang "' + Orders.STATUS[n.to].vi + '".' + warn, confirmLabel: n.label }).then(function (r) {
+          if (!r.ok) return;
+          var text = n.log, toast = 'Đã chuyển sang ' + Orders.STATUS[n.to].vi;
+          if (o.status === 'pending') { o.shippingFee = o.delivery.type === 'pickup' ? 0 : o._fee; delete o._fee; text += o.delivery.type === 'delivery' ? ', phí giao ' + Fmt.money(o.shippingFee) : ''; toast = 'Đã xác nhận đơn'; var note = $('#call-note'); if (note && note.value.trim()) text += '. Ghi chú: ' + note.value.trim(); }
+          o.status = n.to;
+          if (n.to === 'done') {
+            var pts = Math.floor(Orders.calc(o).total / 10000); // [CẦN XÁC NHẬN] quy tắc tích điểm OI-006: tạm 1 điểm / 10.000 ₫
+            Customers.addPoints(o.customer.phone, o.customer.name, pts, o.code, 'Hoàn thành đơn');
+            var cu = Customers.byPhone(o.customer.phone); cu.doneOrders = (cu.doneOrders || 0) + 1; cu.last = MOCK.today; DB.save('customers');
+            text = 'Hoàn thành, cộng ' + pts + ' điểm'; toast = 'Đã hoàn thành đơn, cộng ' + pts + ' điểm cho khách';
+          }
+          commit(text, toast);
+        });
+      }
+      function askFee() {
+        Modal.open({ title: 'Phí giao', body: '<div class="field"><label class="field-label" for="ask-fee">Phí giao (₫) <span class="text-danger">*</span></label><input id="ask-fee" inputmode="numeric" class="field-input" placeholder="Ví dụ 25.000"><p class="field-help">Bảng tham khảo: ' + DB.get('settings').shippingTable.map(function (r) { return r.area + ' ' + Fmt.money(r.fee); }).join(' · ') + '</p></div>',
+          actions: [{ label: 'Đóng', variant: 'secondary' }, { label: 'Tiếp tục', variant: 'primary', onClick: function (c, el) {
+            var inp = $('#ask-fee', el), v = moneyVal(inp);
+            if (v == null) { FormUI.setError(inp, 'Vui lòng nhập phí giao hợp lệ.'); return false; }
+            var hidden = document.createElement('input'); hidden.id = 'm-ship-fee'; hidden.type = 'hidden'; hidden.value = String(v); document.body.appendChild(hidden);
+            setTimeout(function () { primary(); hidden.remove(); }, 180);
+          } }], onOpen: function (el) { moneyInput($('#ask-fee', el)); } });
+      }
+      function noAnswer() {
+        if (conflict()) return;
+        var note = $('#call-note');
+        if (note && note.offsetParent && note.value.trim()) { commit('Gọi chưa được: ' + note.value.trim(), 'Đã lưu ghi chú cuộc gọi'); return; }
+        Modal.confirm({ title: 'Chưa liên lạc được', message: 'Đơn vẫn giữ trạng thái Chờ xác nhận.', confirmLabel: 'Lưu ghi chú', input: { label: 'Ghi chú cuộc gọi', required: true, max: 500, error: 'Vui lòng nhập ghi chú.', placeholder: 'Ví dụ: gọi 2 lần không nghe máy' } })
+          .then(function (r) { if (r.ok) commit('Gọi chưa được: ' + r.value, 'Đã lưu ghi chú cuộc gọi'); });
+      }
+      function reject() {
+        if (conflict()) return;
+        Modal.confirm({ title: 'Từ chối đơn ' + o.code + '?', message: 'Khách sẽ thấy đơn ở trạng thái Đã hủy kèm lý do.', confirmLabel: 'Từ chối đơn', danger: true,
+          input: { label: 'Lý do hủy', required: true, min: 5, max: 255, error: 'Vui lòng nhập lý do hủy.', quick: ['Mẫu quá phức tạp', 'Ngoài khu vực giao', 'Khách không đồng ý phí', 'Hết suất'] } })
+          .then(function (r) {
+            if (!r.ok) return;
+            o.status = 'cancelled'; o.cancel = { by: 'Tiệm', reason: r.value };
+            if (o.pointsUsed) Customers.addPoints(o.customer.phone, o.customer.name, o.pointsUsed, o.code, 'Hoàn điểm do tiệm hủy đơn');
+            commit('Từ chối đơn: ' + r.value, 'Đã từ chối đơn');
+          });
+      }
+
+      /* ----- Vẽ trang ----- */
+      function section(title, body, extra) { return '<section class="rounded-2xl bg-white border border-beige p-4 md:p-5 ' + (extra || '') + '"><h2 class="text-xs font-extrabold tracking-wide text-ink-muted mb-3">' + title + '</h2>' + body + '</section>'; }
+      function render() {
+        var c = Orders.calc(o), n = NEXT[o.status], cu = o.customer;
+        var items = o.items.map(function (it) {
+          return '<li class="flex gap-3"><img src="' + it.image + '" alt="" class="w-16 h-16 rounded-xl object-cover bg-beige shrink-0"><div class="flex-1 min-w-0">' +
+            '<p class="font-bold">' + Fmt.esc(it.cakeName) + ' · ' + it.sizeLabel + ' · x' + it.qty + '</p><p class="text-sm text-ink-muted tabular-nums">' + Fmt.money(it.unitPrice) + ' / bánh · ' + it.servings + ' người</p>' +
+            '<p class="mt-1 text-[15px]">' + (it.message ? 'Lời chúc: <b>“' + Fmt.esc(it.message) + '”</b>' : '<span class="text-ink-muted">Không viết lời chúc</span>') + '</p>' +
+            (it.sampleImages.length ? '<div class="mt-2 flex flex-wrap gap-2">' + it.sampleImages.map(function (src, j) { return '<div class="relative"><button type="button" class="sample block w-16 h-16 rounded-lg overflow-hidden bg-beige" data-src="' + src + '" aria-label="Phóng to ảnh mẫu ' + (j + 1) + '"><img src="' + src + '" alt="Ảnh mẫu khách gửi" class="w-full h-full object-cover"></button><a href="' + src + '" download="anh-mau-' + o.code + '-' + (j + 1) + '.jpg" target="_blank" rel="noopener" class="block text-center text-xs font-bold text-primary-strong mt-1">Tải về</a></div>'; }).join('') + '</div>' : '') +
+            '</div><p class="font-bold tabular-nums">' + Fmt.money(it.unitPrice * it.qty) + '</p></li>';
+        }).join('');
+        function line(l, v, cls) { return '<div class="flex justify-between gap-3 ' + (cls || '') + '"><dt>' + l + '</dt><dd class="tabular-nums text-right">' + v + '</dd></div>'; }
+        var pay = '<dl class="space-y-1.5 text-[15px]">' + line('Tạm tính', Fmt.money(c.subtotal)) + (c.discount ? line('Giảm giá', '-' + Fmt.money(c.discount)) : '') + (c.points ? line('Điểm dùng (' + o.pointsUsed + ')', '-' + Fmt.money(c.points)) : '') +
+          line('Phí giao', c.ship == null ? '<span class="text-warning font-semibold">Chưa nhập</span>' : Fmt.money(c.ship)) + line('<b>Tổng</b>', '<b class="text-lg">' + Fmt.money(c.total) + '</b>', 'pt-2 border-t border-beige') +
+          line('Tiền cọc (' + o.depositRate + '%)', Fmt.money(c.deposit)) + line('Đã thu', Fmt.money(c.paid), 'text-mint-strong font-semibold') + line('<b>Còn lại</b>', '<b>' + Fmt.money(c.remaining) + '</b>') +
+          line('Phương thức', Orders.PAY[o.payment.method]) + '</dl>' +
+          (['cancelled', 'done'].indexOf(o.status) === -1 && c.remaining > 0 ? '<button type="button" class="btn btn-secondary h-10 px-4 mt-4 w-full btn-pay"><i class="ph ph-hand-coins" aria-hidden="true"></i>Ghi nhận thanh toán</button>' : '');
+
+        var actions;
+        if (!n) actions = '<p class="text-ink-muted">' + (o.status === 'done' ? 'Đơn đã hoàn thành.' : 'Đơn đã hủy' + (o.cancel ? ' bởi ' + o.cancel.by + (o.cancel.reason ? ': ' + Fmt.esc(o.cancel.reason) : '') : '') + '.') + ' Chỉ xem.</p>';
+        else {
+          actions = '<p class="text-sm font-bold text-ink-muted mb-3">Bước tiếp theo</p>';
+          if (o.status === 'pending') {
+            actions += (o.delivery.type === 'delivery' ? '<div class="field mb-3"><label class="field-label" for="ship-fee">Phí giao (₫) <span class="text-danger">*</span></label><input id="ship-fee" inputmode="numeric" class="field-input tabular-nums" placeholder="Ví dụ 25.000" aria-describedby="ship-fee-err"><p id="ship-fee-err" class="field-error hidden"></p><p class="field-help">Tham khảo: ' + DB.get('settings').shippingTable.map(function (r) { return r.area + ' ' + Fmt.num(r.fee / 1000) + 'k'; }).join(' · ') + '</p></div>' : '') +
+              '<div class="field mb-4"><label class="field-label" for="call-note">Ghi chú cuộc gọi</label><textarea id="call-note" rows="2" maxlength="500" class="field-input" placeholder="Ví dụ: khách đồng ý phí giao, đổi lời chúc..."></textarea></div>';
+          }
+          actions += '<button type="button" class="btn btn-primary h-11 w-full btn-primary-act"><i class="ph ' + n.icon + '" aria-hidden="true"></i>' + n.label + '</button>';
+          if (o.status === 'pending') actions += '<div class="grid grid-cols-2 gap-2 mt-2"><button type="button" class="btn btn-secondary h-10 text-sm btn-noanswer">Chưa liên lạc được</button><button type="button" class="btn btn-danger-outline h-10 text-sm btn-reject">Từ chối đơn</button></div>';
+        }
+
+        var hist = o.history.slice().reverse().map(function (h) { return '<li class="flex gap-3"><span class="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0"></span><div><p class="text-[15px]">' + Fmt.esc(h.text) + '</p><p class="text-xs text-ink-muted">' + Fmt.dateTime(h.at) + ' · ' + Fmt.esc(h.by) + '</p></div></li>'; }).join('');
+
+        $('#page').innerHTML =
+          '<a href="qt-don-hang.html" class="hidden lg:inline-flex items-center gap-1 text-sm font-bold text-ink-muted hover:text-primary-strong min-h-[32px]"><i class="ph ph-arrow-left" aria-hidden="true"></i>Đơn hàng</a>' +
+          '<div class="mt-1 flex flex-wrap items-center gap-2"><h1 class="text-[20px] lg:text-2xl font-extrabold mr-1">Đơn <span class="tabular-nums">' + o.code + '</span></h1>' + UI.statusBadge(o.status) + UI.depositBadge(o.depositStatus) + '</div>' +
+          '<p class="text-sm text-ink-muted mt-1">Tạo lúc ' + Fmt.dateTime(o.createdAt) + '</p>' +
+          '<div class="mt-5 grid lg:grid-cols-12 gap-5 items-start">' +
+          '<div class="lg:col-span-7 space-y-4">' +
+          section('KHÁCH HÀNG', '<p class="font-extrabold text-lg">' + Fmt.esc(cu.name) + '</p><div class="mt-2 flex flex-wrap gap-2"><a href="tel:' + cu.phone + '" class="btn btn-primary h-10 px-4 text-sm"><i class="ph-fill ph-phone" aria-hidden="true"></i><span class="tabular-nums">' + Fmt.phone(cu.phone) + '</span></a><a href="https://zalo.me/' + cu.phone + '" target="_blank" rel="noopener" class="btn btn-secondary h-10 px-4 text-sm">Zalo</a></div>' +
+            '<dl class="mt-3 text-[15px] space-y-1"><div><dt class="inline text-ink-muted">Email: </dt><dd class="inline">' + (cu.email ? Fmt.esc(cu.email) : '-') + '</dd></div><div><dt class="inline text-ink-muted">Ghi chú khách: </dt><dd class="inline font-semibold">' + (cu.note ? Fmt.esc(cu.note) : '-') + '</dd></div></dl>') +
+          section('BÁNH', '<ul class="space-y-4">' + items + '</ul>') +
+          section('NHẬN BÁNH', '<p class="font-bold">' + Fmt.date(o.delivery.date) + ' (' + Fmt.relDay(o.delivery.date) + ') · ' + o.delivery.slot + '</p><p class="mt-1">' + (o.delivery.type === 'delivery' ? '<i class="ph ph-moped" aria-hidden="true"></i> Giao tận nơi: ' + Fmt.esc(o.delivery.address) + ' <a target="_blank" rel="noopener" class="font-bold text-primary-strong hover:underline" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(o.delivery.address) + '">Mở bản đồ</a>' : '<i class="ph ph-storefront" aria-hidden="true"></i> Khách lấy tại tiệm') + '</p>') +
+          '<div class="lg:hidden">' + section('THANH TOÁN', pay) + '</div>' +
+          section('LỊCH SỬ', '<ul class="space-y-3">' + hist + '</ul>') +
+          section('GHI CHÚ NỘI BỘ', '<label for="inote" class="sr-only">Ghi chú nội bộ (khách không thấy)</label><textarea id="inote" rows="3" maxlength="1000" class="field-input" placeholder="Khách không thấy ghi chú này">' + Fmt.esc(o.internalNote) + '</textarea><button type="button" id="save-note" class="btn btn-secondary h-10 px-5 mt-2 text-sm">Lưu</button>') +
+          '</div>' +
+          '<div class="hidden lg:block lg:col-span-5 space-y-4 lg:sticky lg:top-6">' + section('THAO TÁC', actions, 'shadow-soft') + section('THANH TOÁN', pay) + '</div></div>';
+
+        /* thanh thao tác điện thoại */
+        var mb = $('#m-actions');
+        if (n) {
+          mb.classList.remove('hidden');
+          mb.innerHTML = '<div class="flex gap-2"><button type="button" class="btn btn-primary h-12 flex-1 btn-primary-act"><i class="ph ' + n.icon + '" aria-hidden="true"></i>' + n.label + '</button><button type="button" id="m-more" class="btn btn-secondary h-12 w-12 !px-0" aria-label="Thao tác khác"><i class="ph ph-dots-three text-xl" aria-hidden="true"></i></button></div>';
+          $('#m-more').onclick = function () {
+            var close = Modal.open({ title: 'Thao tác khác', body: '<div class="grid gap-2">' +
+              (o.status === 'pending' ? '<button type="button" class="btn btn-secondary h-12" data-m="noanswer">Chưa liên lạc được</button><button type="button" class="btn btn-danger-outline h-12" data-m="reject">Từ chối đơn</button>' : '') +
+              (c.remaining > 0 ? '<button type="button" class="btn btn-secondary h-12" data-m="pay">Ghi nhận thanh toán</button>' : '') + '</div>',
+              onOpen: function (el) { $all('[data-m]', el).forEach(function (b) { b.onclick = function () { close(); setTimeout({ noanswer: noAnswer, reject: reject, pay: payment }[b.dataset.m], 180); }; }); } });
+          };
+        } else mb.classList.add('hidden');
+
+        $all('.btn-primary-act').forEach(function (b) { b.onclick = primary; });
+        $all('.btn-pay').forEach(function (b) { b.onclick = payment; });
+        var na = $('.btn-noanswer'); if (na) na.onclick = noAnswer;
+        var rj = $('.btn-reject'); if (rj) rj.onclick = reject;
+        var sf = $('#ship-fee'); if (sf) moneyInput(sf);
+        $all('.sample').forEach(function (b) { b.onclick = function () { Lightbox.open([{ src: b.dataset.src, alt: 'Ảnh mẫu khách gửi' }], 0); }; });
+        $('#save-note').onclick = function () { o.internalNote = $('#inote').value.trim(); Orders.save(); Toast.show('Đã lưu ghi chú', 'success'); };
+      }
+      App.fakeLoad(render, 300);
+    });
+  </script>
+</body>
+</html>

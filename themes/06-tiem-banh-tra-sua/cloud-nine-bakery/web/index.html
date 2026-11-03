@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" data-vi-title="CLOUD NINE BAKERY | Một chút mộng mơ trong từng miếng bánh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLOUD NINE BAKERY | A Little Dream in Every Bite</title>
+  <meta name="description" content="CLOUD NINE BAKERY is a dreamy little bakery and milk tea shop: cloud-soft cream cakes, mousse, meringues, pastries and drinks baked fresh every morning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/ui.js"></script>
+</head>
+<body class="min-h-screen text-ink antialiased" data-sky="#C9E4F5,#FFFDFB | #F7DDE6,#DCD2F4 | #DCD2F4,#C9E4F5">
+
+<header id="top" data-header="shrink" class="fixed inset-x-0 top-0 z-50 transition-all duration-500 [&.is-scrolled]:bg-cloud/85 [&.is-scrolled]:shadow-[0_12px_30px_-22px_rgba(78,74,126,.55)] [&.is-scrolled]:backdrop-blur-md">
+  <div class="mx-auto flex h-[72px] w-full max-w-screen-2xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-10 2xl:px-16">
+    <a href="index.html" class="whitespace-nowrap font-display text-base font-semibold tracking-[0.1em] text-ink sm:text-xl sm:tracking-[0.2em]">CLOUD NINE <span class="text-dusk/70">BAKERY</span></a>
+    <nav class="hidden items-center gap-10 text-[15px] font-semibold lg:flex" aria-label="Main">
+      <a href="index.html" aria-current="page" class="relative py-2 text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-100 after:bg-dusk after:transition-transform after:duration-500" data-vi="Trang chủ">Home</a>
+      <a href="pages/menu.html" class="relative py-2 text-ink/80 transition-colors duration-300 hover:text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-dusk after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-vi="Thực đơn">Menu</a>
+      <a href="pages/about.html" class="relative py-2 text-ink/80 transition-colors duration-300 hover:text-dusk after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-dusk after:transition-transform after:duration-500 after:ease-[cubic-bezier(.16,1,.3,1)] hover:after:origin-left hover:after:scale-x-100" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex rounded-full border border-dusk/25 bg-cloud/60 p-1 text-xs font-bold" role="group" aria-label="Language">
+        <button type="button" data-lang-set="en" aria-pressed="true" class="lang-btn min-h-[36px] min-w-[40px] rounded-full px-3 transition-colors duration-300">EN</button>
+        <button type="button" data-lang-set="vi" aria-pressed="false" class="lang-btn min-h-[36px] min-w-[40px] rounded-full px-3 transition-colors duration-300">VI</button>
+      </div>
+      <a href="#visit" class="hidden min-h-[44px] items-center rounded-full bg-dusk px-5 text-sm font-bold text-cloud transition duration-300 hover:-translate-y-0.5 hover:bg-night active:scale-[.98] sm:inline-flex" data-vi="Ghé tiệm">Visit us</a>
+      <button type="button" data-menu-toggle="#mnav" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-dusk/25 bg-cloud/60 lg:hidden" aria-label="Open menu" data-vi-aria="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mnav" class="fixed inset-x-4 top-20 z-50 rounded-[2rem] bg-cloud p-6 shadow-2xl lg:hidden">
+    <nav class="flex flex-col gap-1 font-display text-3xl" aria-label="Mobile">
+      <a href="index.html" aria-current="page" class="rounded-2xl px-3 py-3 text-dusk" data-vi="Trang chủ">Home</a>
+      <a href="pages/menu.html" class="rounded-2xl px-3 py-3 hover:bg-sky/50" data-vi="Thực đơn">Menu</a>
+      <a href="pages/about.html" class="rounded-2xl px-3 py-3 hover:bg-sky/50" data-vi="Về chúng tôi">About</a>
+    </nav>
+    <a href="#visit" class="mt-4 flex min-h-[48px] w-full items-center justify-center rounded-full bg-dusk font-bold text-cloud" data-vi="Ghé tiệm">Visit us</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="hero" data-section="hero-scene" class="relative min-h-[100dvh] overflow-hidden" data-clouds="3" data-clouds-band="0-60" data-clouds-color="#ffffff" data-clouds-speed="0.6" data-particles="dust" data-particles-color="#FFFFFF" data-particles-density="0.7">
+    <div data-layers class="absolute inset-0" aria-hidden="true">
+      <div data-depth="0.06" class="absolute inset-x-0 -inset-y-[8%] bg-gradient-to-b from-sky via-lavender/60 to-transparent"></div>
+      <div data-depth="0.16" class="absolute inset-x-0 -inset-y-[8%]">
+        <div class="puff left-[-10%] top-[62%] h-[40%] w-[60%]"></div>
+        <div class="puff right-[-8%] top-[70%] h-[38%] w-[70%]"></div>
+        <div class="puff left-[30%] top-[78%] h-[34%] w-[55%]"></div>
+      </div>
+    </div>
+
+    <div class="relative z-10 mx-auto grid min-h-[100dvh] w-full max-w-screen-2xl grid-cols-1 items-center gap-6 px-4 pb-14 pt-24 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:pb-16 2xl:px-16">
+      <div class="order-2 lg:order-1 lg:col-span-6 xl:col-span-5">
+        <h1 data-split="words" class="font-display text-[clamp(3rem,6.6vw,6.75rem)] font-medium leading-[0.98] tracking-tight text-ink" data-vi="Một chút mộng mơ trong từng miếng bánh">A Little Dream in Every Bite</h1>
+        <p data-reveal="up" data-reveal-delay="350" class="mt-6 max-w-[34rem] text-lg leading-relaxed text-ink/75 lg:text-xl" data-vi="Bánh kem mềm như mây, meringue nhẹ tênh và trà sữa, nướng mới mỗi sáng trong một tiệm nhỏ như lơ lửng trên thành phố.">Cloud-soft cakes, airy meringues and milk tea, baked each morning in a little shop that floats above the city.</p>
+        <div data-reveal="up" data-reveal-delay="500" class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="pages/menu.html" class="group inline-flex min-h-[52px] items-center justify-center gap-3 rounded-full bg-dusk px-8 font-bold text-cloud shadow-[0_18px_40px_-18px_rgba(78,74,126,.8)] transition duration-300 hover:-translate-y-1 hover:bg-night active:scale-[.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dusk">
+            <span data-vi="Xem thực đơn">Explore the menu</span>
+            <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="pages/about.html" class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-dusk/30 bg-cloud/60 px-8 font-bold text-dusk transition duration-300 hover:-translate-y-1 hover:bg-cloud active:scale-[.98]" data-vi="Câu chuyện của tiệm">Our story</a>
+        </div>
+      </div>
+
+      <div class="relative order-1 h-[44vh] min-h-[300px] lg:order-2 lg:col-span-6 lg:h-[78vh] xl:col-span-7" aria-hidden="false">
+        <div class="absolute left-1/2 top-1/2 w-[72%] max-w-[620px] -translate-x-1/2 -translate-y-1/2 sm:w-[58%] lg:w-[74%]">
+          <div class="drift">
+            <div class="cloud-frame aspect-square bg-cloud">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_Cake_I.jpg?width=1600" referrerpolicy="no-referrer" alt="A slice of layered strawberry cream cake topped with fresh strawberries" data-vi-alt="Lát bánh kem dâu nhiều tầng với dâu tây tươi phía trên" class="dream-img h-full w-full object-cover" width="1600" height="1143">
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-[2%] top-[4%] w-[26%] max-w-[220px] lg:left-[4%] lg:top-[8%]">
+          <div class="drift-slow">
+            <div class="cloud-frame cloud-frame-b aspect-square bg-cloud">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lavender_meringue_%285895316063%29.jpg?width=700" referrerpolicy="no-referrer" alt="White meringue kisses piled together" data-vi-alt="Những viên meringue trắng xếp chồng" class="h-full w-full object-cover" width="700" height="700">
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-[2%] right-[2%] w-[28%] max-w-[240px] lg:bottom-[8%] lg:right-[3%]">
+          <div class="drift">
+            <div class="cloud-frame cloud-frame-c aspect-square bg-blush">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Starbucks_rose_flavored_%26_white_peach_mousse_cake_%281%29.jpg?width=700" referrerpolicy="no-referrer" alt="Pink rose and white peach mousse cake with cream petals" data-vi-alt="Bánh mousse hoa hồng và đào trắng màu hồng phấn" class="h-full w-full object-cover" width="700" height="700">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY LETTER -->
+  <section id="welcome" data-section="story-letter" class="relative py-24 lg:py-40">
+    <div class="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-12 px-4 sm:px-6 md:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="md:col-span-5 md:col-start-2 lg:col-span-4 lg:col-start-2">
+        <div data-reveal="clip" class="cloud-frame cloud-frame-b aspect-[4/5] bg-lavender">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Piping_mini_cream_puffs.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="A baker piping rows of mini cream puffs onto a tray" data-vi-alt="Thợ bánh đang bắt từng hàng bánh su nhỏ lên khay" class="dream-img h-full w-full object-cover" width="1000" height="1250">
+        </div>
+      </div>
+      <div class="md:col-span-6 md:col-start-7 lg:col-span-5 lg:col-start-7">
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-dusk/70" data-vi="Thư từ căn bếp">A note from our kitchen</p>
+        <h2 data-reveal="up" class="mt-5 font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:text-6xl" data-vi="Nướng chậm, phục vụ dịu dàng">Baked slowly, served softly</h2>
+        <div data-reveal="up" class="mt-8 max-w-prose space-y-5 text-[17px] leading-relaxed text-ink/80 lg:text-lg">
+          <p data-vi="Chúng mình mở Cloud Nine vì một điều giản dị: một miếng bánh ngon có thể khiến cả buổi chiều nhẹ đi. Mỗi lớp kem được đánh bằng tay, mỗi chiếc meringue được nướng thật chậm ở nhiệt độ thấp.">We opened Cloud Nine for a simple reason: one good bite can make a whole afternoon feel lighter. Every layer of cream is whipped by hand, every meringue dried slowly at a low heat.</p>
+          <p data-vi="Bánh ít ngọt, nhiều trái cây theo mùa, và luôn có một ly trà sữa ấm hoặc mát đi kèm.">Our cakes are low in sugar, rich in seasonal fruit, and always paired with a warm or iced milk tea.</p>
+        </div>
+        <p data-reveal="fade" class="mt-10 font-display text-2xl italic text-dusk" data-vi="Linh và căn bếp Cloud Nine">Linh and the Cloud Nine kitchen</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PINNED SCENE -->
+  <section id="scene" data-section="story-pinned" data-scene="300" class="relative">
+    <div class="grid place-items-center overflow-hidden">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Meringue_dream_topping.jpg?width=1920" referrerpolicy="no-referrer" loading="lazy" alt="Close-up of toasted meringue swirls that look like clouds" data-vi-alt="Cận cảnh những vòng meringue nướng trông như mây" class="absolute inset-0 h-full w-full object-cover" style="transform: scale(calc(1.14 - var(--sp, 0) * .14))">
+      <div class="absolute inset-0 bg-gradient-to-b from-night/55 via-dusk/45 to-night/60"></div>
+      <div class="relative grid w-full max-w-5xl px-6 text-center text-cloud [&>*]:col-start-1 [&>*]:row-start-1">
+        <p data-step="0-0.34" class="font-display text-4xl font-medium leading-tight sm:text-5xl lg:text-7xl" data-vi="Mọi thứ bắt đầu từ lòng trắng trứng và một buổi sáng yên tĩnh.">It starts with egg whites and a quiet morning.</p>
+        <p data-step="0.34-0.68" class="font-display text-4xl font-medium leading-tight sm:text-5xl lg:text-7xl" data-vi="Đánh bông đến khi giữ được hình dáng một đám mây.">Whisked until they hold the shape of a cloud.</p>
+        <p data-step="0.68-1" class="font-display text-4xl font-medium leading-tight sm:text-5xl lg:text-7xl" data-vi="Rồi hoàn thiện bằng tay, từng vòng kem một.">Then finished by hand, one swirl at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURES FILMSTRIP -->
+  <section id="signatures" data-section="gallery-filmstrip" class="relative py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <h2 data-reveal="up" class="max-w-2xl font-display text-4xl font-medium leading-[1.05] sm:text-5xl lg:text-6xl" data-vi="Món đặc trưng trên mây">Signatures from the clouds</h2>
+        <a href="pages/menu.html" class="group inline-flex min-h-[44px] items-center gap-2 self-start font-bold text-dusk md:self-auto">
+          <span class="border-b border-dusk/40 pb-0.5 transition-colors duration-300 group-hover:border-dusk" data-vi="Xem toàn bộ thực đơn">See the full menu</span>
+          <svg class="transition-transform duration-300 group-hover:translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div data-drag-scroll class="mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-6 sm:px-6 lg:gap-10 lg:px-10 2xl:px-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <article class="group w-[78%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] 2xl:w-[24%]">
+        <a href="pages/menu.html" class="block">
+          <div class="aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-blush">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry_Cream_Cake.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Whole strawberry cream cake on a white stand" data-vi-alt="Bánh kem dâu nguyên ổ trên đế trắng" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250">
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl font-semibold lg:text-3xl">Cloud Strawberry</h3>
+            <p class="shrink-0 font-bold text-dusk">85,000 ₫</p>
+          </div>
+          <p class="mt-1 text-ink/70" data-vi="Bông lan sữa, kem tươi và dâu Đà Lạt.">Milk sponge, fresh cream and Da Lat strawberries.</p>
+        </a>
+      </article>
+      <article class="group w-[78%] shrink-0 snap-start sm:w-[46%] lg:mt-16 lg:w-[30%] 2xl:w-[24%]">
+        <a href="pages/menu.html" class="block">
+          <div class="aspect-square overflow-hidden rounded-[2.5rem] bg-lavender">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cake_Kobo_Raspberry_Mousse_%2831228687021%29.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Glossy raspberry mousse cake" data-vi-alt="Bánh mousse phúc bồn tử bóng mịn" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000">
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl font-semibold lg:text-3xl">Raspberry Rose Mousse</h3>
+            <p class="shrink-0 font-bold text-dusk">78,000 ₫</p>
+          </div>
+          <p class="mt-1 text-ink/70" data-vi="Mousse phúc bồn tử, hương hoa hồng nhẹ.">Raspberry mousse with a whisper of rose.</p>
+        </a>
+      </article>
+      <article class="group w-[78%] shrink-0 snap-start sm:w-[46%] lg:w-[30%] 2xl:w-[24%]">
+        <a href="pages/menu.html" class="block">
+          <div class="aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-sky">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Blueberry_Strawberry_Fruit_Tart_1_2016-05-23.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Fruit tart topped with strawberries and blueberries" data-vi-alt="Bánh tart trái cây phủ dâu tây và việt quất" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1250">
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl font-semibold lg:text-3xl">Morning Berry Tart</h3>
+            <p class="shrink-0 font-bold text-dusk">72,000 ₫</p>
+          </div>
+          <p class="mt-1 text-ink/70" data-vi="Vỏ bơ giòn, kem vani và quả mọng.">Butter crust, vanilla custard and berries.</p>
+        </a>
+      </article>
+      <article class="group w-[78%] shrink-0 snap-start sm:w-[46%] lg:mt-16 lg:w-[30%] 2xl:w-[24%]">
+        <a href="pages/menu.html" class="block">
+          <div class="aspect-square overflow-hidden rounded-[2.5rem] bg-blush">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pearl_Milk_Tea_in_Chun_Shui_Tang.jpg?width=1000" referrerpolicy="no-referrer" loading="lazy" alt="Glass of pearl milk tea with tapioca pearls" data-vi-alt="Ly trà sữa trân châu" class="dream-img h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" width="1000" height="1000">
+          </div>
+          <div class="mt-5 flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl font-semibold lg:text-3xl">Cloud Pearl Milk Tea</h3>
+            <p class="shrink-0 font-bold text-dusk">55,000 ₫</p>
+          </div>
+          <p class="mt-1 text-ink/70" data-vi="Hồng trà Ô Long, sữa tươi, trân châu đường đen.">Oolong black tea, fresh milk, brown sugar pearls.</p>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="voices" data-section="quote-full" class="relative py-24 lg:py-36">
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-10 2xl:px-16">
+      <div class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-lavender via-blush to-sky px-6 py-16 sm:px-12 lg:px-20 lg:py-24" data-gradient-shift="20">
+        <div class="puff -right-[10%] -top-[30%] h-[80%] w-[50%]" aria-hidden="true"></div>
+        <h2 class="relative font-display text-3xl font-medium sm:text-4xl" data-vi="Lời khách gửi">Kind words</h2>
+        <div data-carousel data-autoplay="7000" class="relative mt-10">
+          <div data-carousel-track class="gap-6">
+            <figure class="w-full shrink-0">
+              <blockquote class="max-w-5xl font-display text-3xl font-medium leading-snug sm:text-4xl lg:text-5xl" data-vi="&ldquo;Miếng bánh kem dâu nhẹ đến mức mình suýt quên đang ăn bánh. Cả căn phòng như có mây trôi.&rdquo;">&ldquo;The strawberry cake is so light I almost forgot I was eating cake. The whole room feels like it has clouds drifting through.&rdquo;</blockquote>
+              <figcaption class="mt-8 text-sm font-bold text-ink/70">Ngoc Han <span class="font-normal" data-vi="Khách quen, Thảo Điền">Regular, Thao Dien</span></figcaption>
+            </figure>
+            <figure class="w-full shrink-0">
+              <blockquote class="max-w-5xl font-display text-3xl font-medium leading-snug sm:text-4xl lg:text-5xl" data-vi="&ldquo;Trà sữa không quá ngọt, trân châu dẻo vừa. Mình ghé mỗi chiều thứ Bảy.&rdquo;">&ldquo;The milk tea is not too sweet and the pearls are perfectly chewy. I come by every Saturday afternoon.&rdquo;</blockquote>
+              <figcaption class="mt-8 text-sm font-bold text-ink/70">Daniel Kwon <span class="font-normal" data-vi="Giáo viên, quận 2">Teacher, District 2</span></figcaption>
+            </figure>
+            <figure class="w-full shrink-0">
+              <blockquote class="max-w-5xl font-display text-3xl font-medium leading-snug sm:text-4xl lg:text-5xl" data-vi="&ldquo;Chiếc bánh sinh nhật mousse cho con gái mình đẹp như trong truyện cổ tích.&rdquo;">&ldquo;The mousse birthday cake for my daughter looked like it came out of a fairy tale.&rdquo;</blockquote>
+              <figcaption class="mt-8 text-sm font-bold text-ink/70">Thu Trang <span class="font-normal" data-vi="Mẹ của bé Bông">Mother of a very happy seven year old</span></figcaption>
+            </figure>
+          </div>
+          <div class="mt-10 flex items-center gap-4">
+            <button type="button" data-carousel-prev class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-dusk/30 bg-cloud/70 text-dusk transition duration-300 hover:bg-cloud" aria-label="Previous review" data-vi-aria="Đánh giá trước">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            </button>
+            <button type="button" data-carousel-next class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-dusk/30 bg-cloud/70 text-dusk transition duration-300 hover:bg-cloud" aria-label="Next review" data-vi-aria="Đánh giá tiếp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <div data-carousel-dots class="ml-2 text-dusk"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT / CTA SKY -->
+  <section id="visit" data-section="cta-sky" class="relative overflow-hidden bg-gradient-to-b from-lavender via-dusk to-night pb-24 pt-32 text-cloud lg:pb-32 lg:pt-48" data-particles="stars" data-particles-color="#FFF4E6" data-particles-density="0.8">
+    <div class="relative z-10 mx-auto grid w-full max-w-screen-2xl grid-cols-1 gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-10 2xl:px-16">
+      <div class="lg:col-span-7">
+        <h2 data-split="words" class="font-display text-5xl font-medium leading-[1] sm:text-6xl lg:text-8xl" data-vi="Ghé tiệm, bay cùng chúng mình">Come float with us</h2>
+        <p data-reveal="up" class="mt-6 max-w-xl text-lg leading-relaxed text-cloud/80" data-vi="Bánh ra lò lúc 8 giờ sáng và 3 giờ chiều. Đến sớm để chọn được chiếc bánh mình thích nhất.">Fresh trays leave the oven at 8 am and 3 pm. Come early to find your favourite slice.</p>
+        <div data-reveal="up" class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <a href="https://www.google.com/maps/search/?api=1&query=Thao+Dien+Thu+Duc+Ho+Chi+Minh+City" target="_blank" rel="noopener" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-cloud px-8 font-bold text-dusk transition duration-300 hover:-translate-y-1 hover:bg-blush active:scale-[.98]" data-vi="Mở bản đồ">Open in Maps</a>
+          <a href="tel:+842837449019" class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-cloud/40 px-8 font-bold text-cloud transition duration-300 hover:-translate-y-1 hover:bg-cloud/10 active:scale-[.98]">+84 28 3744 9019</a>
+        </div>
+      </div>
+      <dl data-reveal-stagger="90" class="grid grid-cols-1 gap-8 self-end sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+        <div>
+          <dt class="font-display text-2xl italic text-blush" data-vi="Địa chỉ">Address</dt>
+          <dd class="mt-2 text-cloud/85">18 Ngo Quang Huy, Thao Dien,<br>Thu Duc City, Ho Chi Minh City</dd>
+        </div>
+        <div>
+          <dt class="font-display text-2xl italic text-blush" data-vi="Giờ mở cửa">Opening hours</dt>
+          <dd class="mt-2 text-cloud/85" data-vi="Thứ Ba đến Chủ Nhật, 8:00 - 21:30<br>Nghỉ thứ Hai">Tuesday to Sunday, 8:00 - 21:30<br>Closed on Mondays</dd>
+        </div>
+        <div>
+          <dt class="font-display text-2xl italic text-blush" data-vi="Đặt bánh sinh nhật">Celebration cakes</dt>
+          <dd class="mt-2 text-cloud/85"><span data-vi="Gọi trước 48 giờ hoặc ghé tiệm để trao đổi.">Call 48 hours ahead or drop by to chat.</span>
+            <button type="button" data-copy="+84 28 3744 9019" class="ml-1 inline-flex min-h-[44px] items-center font-bold text-cloud underline decoration-cloud/40 underline-offset-4 hover:decoration-cloud" data-vi="Sao chép số">Copy number</button>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="bg-night text-cloud/80">
+  <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 border-t border-cloud/10 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 2xl:px-16">
+    <a href="index.html" class="font-display text-xl font-semibold tracking-[0.2em] text-cloud">CLOUD NINE BAKERY</a>
+    <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-semibold" aria-label="Footer">
+      <a href="index.html" class="py-2 hover:text-cloud" data-vi="Trang chủ">Home</a>
+      <a href="pages/menu.html" class="py-2 hover:text-cloud" data-vi="Thực đơn">Menu</a>
+      <a href="pages/about.html" class="py-2 hover:text-cloud" data-vi="Về chúng tôi">About</a>
+      <a href="mailto:hello@cloudninebakery.vn" class="py-2 hover:text-cloud">hello@cloudninebakery.vn</a>
+      <a href="tel:+842837449019" class="py-2 hover:text-cloud">+84 28 3744 9019</a>
+    </nav>
+    <p class="text-sm text-cloud/60">&copy; 2026 CLOUD NINE BAKERY</p>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/atmos.js"></script>
+</body>
+</html>

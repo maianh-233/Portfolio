@@ -1,0 +1,51 @@
+/* AZURE HAVEN - biến dùng chung + vài style Tailwind không làm được */
+:root {
+  --ocean: #123B46;
+  --ocean-deep: #0D2C35;
+  --lagoon: #55B9B2;
+  --lagoon-ink: #2A746E;
+  --sand: #E9D9BE;
+  --shell: #FAF8F2;
+  --palm: #667C59;
+  --line: #E2D6C2;
+  --ui-accent: #2A746E;
+  --font-display: "Playfair Display", Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Manrope, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--shell);
+  color: var(--ocean);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--lagoon); color: var(--ocean-deep); }
+
+/* Đường chân trời: vạch mảnh xanh ngọc - ý tưởng thị giác xuyên suốt */
+.horizon { display: block; height: 1px; width: 4.5rem; background: var(--lagoon); }
+.horizon-full { height: 1px; background: linear-gradient(90deg, var(--lagoon), rgba(85,185,178,.15) 60%, transparent); }
+
+/* Chữ hoa đầu đoạn kiểu tạp chí */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.2em;
+  line-height: .82;
+  padding: .08em .12em 0 0;
+  color: var(--lagoon-ink);
+}
+
+/* Hero zoom nhẹ khi tải trang */
+@keyframes azh-zoom { from { transform: scale(1.09); } to { transform: scale(1); } }
+.hero-zoom { animation: azh-zoom 2.6s cubic-bezier(.16,1,.3,1) both; transform-origin: 50% 60%; }
+
+/* Nút chuyển ngôn ngữ */
+[data-lang-opt] { transition: opacity .3s; }
+[data-lang-opt].is-off { opacity: .45; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom { animation: none; }
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,65 @@
+/* VERDANT SANCTUARY — biến màu / font dùng chung */
+:root {
+  --forest: #243D30;
+  --canopy: #42664A;
+  --fern: #819875;
+  --moss: #A1A88A;
+  --mist: #E4E9DD;
+  --ivory: #F5F1E7;
+  --bark: #665443;
+  --ink: #1B2A21;
+  --font-display: "Cormorant Garamond", Georgia, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: Manrope, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --ui-accent: var(--fern);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--canopy); color: var(--ivory); }
+
+/* Khung ảnh: nền dự phòng khi ảnh lỗi / chưa tải */
+.frame { background: linear-gradient(160deg, #A1A88A55, #42664A44); }
+img.is-broken { opacity: 0; }
+
+/* Ảnh: tông rừng tự nhiên, độ tương phản vừa phải */
+.tone { filter: saturate(.92) contrast(.97); }
+
+/* Chữ hoa đầu đoạn */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.2em;
+  line-height: .82;
+  padding: .06em .12em 0 0;
+  color: var(--canopy);
+}
+
+/* Đường kẻ trang trí như gân lá */
+.vein { background: linear-gradient(90deg, transparent, var(--fern) 18%, var(--fern) 82%, transparent); height: 1px; }
+
+/* Focus rõ ràng */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--fern);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Chuyển ngôn ngữ mượt */
+main, #top nav, #footer { transition: opacity .25s ease; }
+body.lang-switching main, body.lang-switching #footer { opacity: .35; }
+
+/* Ẩn thanh cuộn của dải ảnh kéo ngang */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  main, #top nav, #footer { transition: none; }
+  body.lang-switching main, body.lang-switching #footer { opacity: 1; }
+}
